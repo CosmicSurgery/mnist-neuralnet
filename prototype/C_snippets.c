@@ -1,27 +1,24 @@
 
 #include <stdio.h>
-// #include "utils.h"
-#define USE_MNIST_LOADER
-#define MNIST_DOUBLE
-#include "mnist.h"
+#include <stdlib.h>
+
 
 int snippet(){
-        mnist_data *data;
-        unsigned int cnt;
-        int ret;
 
-        if (ret = mnist_load(".\\data\\MNIST\\raw\\train-images-idx3-ubyte", ".\\data\\MNIST\\raw\\train-labels-idx1-ubyte", &data, &cnt)) {
-                printf("An error occured: %d\n", ret);
-        } else {
-                printf("image count: %d\n", cnt);
-        
-                free(data);
-        }
+        char train_file[] = "MNIST_train.txt";
+        char test_file[] = "MNIST_test.txt";
+        // FILE *fp;
 
+        FILE *fp = fopen(test_file, "r");
+        fclose(fp);
         return 0;
 }
 
-void main(){
+
+
+int main(){
     printf("%d",snippet());
+        // unsigned int cnt;
+        // printf("Return code: %d", mnist_load("t10k-images-idx3-ubyte", "t10k-labels-idx1-ubyte", &cnt));
 }
 
