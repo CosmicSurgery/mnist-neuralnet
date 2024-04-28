@@ -1,2 +1,2 @@
-
-        // char test_file = "MNIST_test.txt";
+printf("%s \n", token);
+    
