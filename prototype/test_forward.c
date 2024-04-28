@@ -58,14 +58,19 @@ int release_memory(int ***x, int **y) {
     return 0;
 }
 
+int build_model(char filename) {
+
+}
+
+
 int main(){
-    char filename[] = "debug.txt"; 
+    char filename[] = "MNIST_test.txt"; 
     int **x;
     int *y;
     printf("Status Load: %d \n", read_data(&x, &y, filename));
     for(int loop = 0; loop < IMAGE_SIZE; loop++)
-        printf("%d ", x[0][loop]);
-    printf("\n %d ", y[0]);
+        printf("%d ", x[1][loop]);
+    printf("\n %d \n ", y[1]);
 
-    printf("Status Close: %d \n", release_memory(&x, &y));
+    printf("Status Free: %d \n", release_memory(&x, &y));
 }
