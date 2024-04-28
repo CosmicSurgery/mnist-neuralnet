@@ -1,2 +1,2 @@
-printf("%s \n", token);
-    
+
+    printf("this is a test");
