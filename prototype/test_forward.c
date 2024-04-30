@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #define NUM_IMAGES 60000
 #define IMAGE_SIZE 784
@@ -39,7 +40,7 @@ int read_MNIST(double ***x, int **y, char filename[]){
             (*y)[x_index] = atoi(token);
             token = strtok(NULL, ",");
             while (token != NULL && pixel_index < IMAGE_SIZE) {
-                    (*x)[x_index][pixel_index] = atoi(token);
+                    (*x)[x_index][pixel_index] = (atoi(token)); // Normalize all pixel values to between 0 and 1
                     token = strtok(NULL, ",");
                     pixel_index++;
             }
@@ -140,37 +141,92 @@ struct model build_model() {
 }
 
 
-void gen_z(int LAYER_SIZE, int INPUT_SIZE, double *z,  double (*w)[LAYER_SIZE], double *b, double *x0){
-    // printf("%lf\n",w[0][0]);
+void gen_z(int LAYER_SIZE, int INPUT_SIZE, double *z,  double (*w)[INPUT_SIZE], double *b, double *x0){
+    // printf("%lf\n",w[0][0]); 
+    // for(int i = 0; i < IMAGE_SIZE; i++){
+    //     printf("%d - %lf \n", i+1, w[1][i]);
+    // }
+    // printf("%d,%d\n", LAYER_SIZE, INPUT_SIZE);
     for (int i = 0; i < LAYER_SIZE; i++) {
         double sum = 0.0;
         for (int j = 0; j < INPUT_SIZE; j++) {
-            if (i == 0){
-                printf("%lf ", w[i][j]);
-            }
+            // if (i == 0){
+            //     printf("%lf ", w[i][j]);
+            // }
             sum += w[i][j] * x0[j];
+            // if (i==1){
+            //     printf("%d - %lf, %lf, %lf\n", j+1, sum, x0[j], w[i][j]);
+            // }
         }
-            if (i == 0){
-                for (int j = 0; j < INPUT_SIZE; j++) {
-                    printf("%lf ", x0[j]);
+            // if (i == 0){
+            //     for (int j = 0; j < INPUT_SIZE; j++) {
+            //         printf("%lf ", x0[j]);
 
-                }
-            }
+            //     }
+            // }
         z[i] = sum + b[i];
     }
-    printf("\n %lf \n",b[0]);
 }
 
-void forward(struct model nn, double *x0){
-    for (int i = 0; i < LAYER_ONE_SIZE; i++){
-        printf("%lf ", nn.z0[i]); 
+void relu(double *z, double *a, int LAYER_SIZE){
+    for (int i = 0; i< LAYER_SIZE; i++){
+        if (z[i] <0){
+            a[i] = 0;
+        } else {
+            a[i] = z[i];
+        }
+    }
+}
+
+void softmax(double *z, double *a, int LAYER_SIZE){
+    double sum = 0;
+    int m = 0;
+    for (int i = 0; i < LAYER_SIZE; i++){
+        if (z[i] > z[m]){
+            m = i;
+        }
+        sum += exp(z[i]);
+        a[i] = exp(z[i]);
+        printf("\n%lf,%lf -",a[i],z[i]);
+    }
+    printf("\n%lf",sum);
+    for (int i = 0; i < LAYER_SIZE; i++){
+        a[i] = a[i] / sum;
+    }
+    // return m;
+}
+
+double cross_entropy(int *y, double *a){
+    printf("\n%lf", a[*y]);
+    return -log(a[*y]);
+}
+
+
+int forward(struct model *nn, double *x0){
+    // for (int i = 0; i < LAYER_ONE_SIZE; i++){
+    //     printf("%lf ", nn.z0[i]); 
+    // }
+    // printf("\n");
+    gen_z(LAYER_ONE_SIZE, IMAGE_SIZE, nn->z0, nn->weight0, nn->bias0, x0);
+    // for (int i = 0; i < LAYER_ONE_SIZE; i++){
+    //     printf("%lf ", nn.z0[i]); 
+    // }
+    // printf("\n");
+    relu( nn->z0, nn->a0, LAYER_ONE_SIZE);
+    // for (int i = 0; i < LAYER_ONE_SIZE; i++){
+    //     printf("%lf ", nn.a0[i]); 
+    // }
+    // printf("\n");
+    gen_z(LAYER_TWO_SIZE, LAYER_ONE_SIZE, nn->z2, nn->weight2, nn->bias2, nn->a0);
+    for (int i = 0; i < LAYER_TWO_SIZE; i++){
+        printf("%lf ", nn->z2[i]); 
     }
     printf("\n");
-    gen_z(LAYER_ONE_SIZE, IMAGE_SIZE, nn.z0, nn.weight0, nn.bias0, x0);
-    printf("\n");
-    for (int i = 0; i < LAYER_ONE_SIZE; i++){
-        printf("%lf ", nn.z0[i]); 
+    softmax( nn->z2, nn->a2, LAYER_TWO_SIZE);
+    for (int i = 0; i < LAYER_TWO_SIZE; i++){
+        printf("%lf ", nn->a2[i]); 
     }
+    return 0;
 }
 
 int main_loop(){
@@ -182,11 +238,21 @@ int main_loop(){
     //     printf("%d ", x[1][loop]);
     // printf("\n %d \n ", y[1]);
 	struct model nn = build_model();
+    // for(int i = 0; i < IMAGE_SIZE; i++){
+    //     printf("%d - %lf \n", i+1, nn.weight0[1][i]);
+    // }
+
     // printf("%lf\n",nn.weight0[0][0]);
     // printf("%lf\n",nn.weight2[0][0]);
     // printf("%lf\n",nn.bias0[0]);
     // printf("%lf\n",nn.bias2[0]);
-    forward(nn, x[0]);
+    int yhat = forward(&nn, x[0]);
+    printf("\n");
+    for (int i = 0; i < LAYER_TWO_SIZE; i++){
+        printf("%lf ", nn.z2[i]); 
+    }
+    double loss = cross_entropy(y, nn.a2 );
+    printf("\n loss: %lf", loss);
  
     // printf("Status Free: %d \n", release_memory(&x, &y));
 	return 0;
