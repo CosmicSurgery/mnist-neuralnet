@@ -1,3 +1,4 @@
-_SIZE; i++){
-        printf("%lf ", nn.z2[i]); 
-    }
+
+    
+//         printf("Test Error: \n Accuracy: %lf \%, Avg loss: ", 100*correct)
+// }
