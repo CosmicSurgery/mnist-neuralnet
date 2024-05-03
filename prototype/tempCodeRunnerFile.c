@@ -1,4 +1,3 @@
 
-    
-//         printf("Test Error: \n Accuracy: %lf \%, Avg loss: ", 100*correct)
-// }
+    //     printf("%d - %lf\n", i, x[50000][i]);
+    // }

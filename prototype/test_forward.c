@@ -149,28 +149,11 @@ struct model build_model() {
 
 
 void gen_z(int LAYER_SIZE, int INPUT_SIZE, double *z,  double (*w)[INPUT_SIZE], double *b, double *x0){
-    // printf("%lf\n",w[0][0]); 
-    // for(int i = 0; i < IMAGE_SIZE; i++){
-    //     printf("%d - %lf \n", i+1, w[1][i]);
-    // }
-    // printf("%d,%d\n", LAYER_SIZE, INPUT_SIZE);
     for (int i = 0; i < LAYER_SIZE; i++) {
         double sum = 0.0;
         for (int j = 0; j < INPUT_SIZE; j++) {
-            // if (i == 0){
-            //     printf("%lf ", w[i][j]);
-            // }
             sum += w[i][j] * x0[j];
-            // if (i==1){
-            //     printf("%d - %lf, %lf, %lf\n", j+1, sum, x0[j], w[i][j]);
-            // }
         }
-            // if (i == 0){
-            //     for (int j = 0; j < INPUT_SIZE; j++) {
-            //         printf("%lf ", x0[j]);
-
-            //     }
-            // }
         z[i] = sum + b[i];
     }
 }
@@ -185,7 +168,7 @@ void relu(double *z, double *a, int LAYER_SIZE){
     }
 }
 
-void softmax(double *z, double *a, int LAYER_SIZE){
+int softmax(double *z, double *a, int LAYER_SIZE){
     double sum = 0;
     int m = 0;
     for (int i = 0; i < LAYER_SIZE; i++){
@@ -194,52 +177,31 @@ void softmax(double *z, double *a, int LAYER_SIZE){
         }
         sum += exp(z[i]);
         a[i] = exp(z[i]);
-        // printf("\n%lf,%lf -",a[i],z[i]);
     }
-    // printf("\n%lf",sum);
     for (int i = 0; i < LAYER_SIZE; i++){
         a[i] = a[i] / sum;
     }
-    // return m;
+    return m;
 }
 
 double cross_entropy(int *y, double *a){
-    // printf("\n%lf", a[*y]);
+    printf("%d",*y);
     return -log(a[*y]);
 }
 
 
 int forward(struct model *nn, double *x0){
-    // for (int i = 0; i < LAYER_ONE_SIZE; i++){
-    //     printf("%lf ", nn.z0[i]); 
-    // }
-    // printf("\n");
     gen_z(LAYER_ONE_SIZE, IMAGE_SIZE, nn->z0, nn->weight0, nn->bias0, x0);
-    // for (int i = 0; i < LAYER_ONE_SIZE; i++){
-    //     printf("%lf ", nn.z0[i]); 
-    // }
-    // printf("\n");
     relu( nn->z0, nn->a0, LAYER_ONE_SIZE);
-    // for (int i = 0; i < LAYER_ONE_SIZE; i++){
-    //     printf("%lf ", nn.a0[i]); 
-    // }
-    // printf("\n");
     gen_z(LAYER_TWO_SIZE, LAYER_ONE_SIZE, nn->z2, nn->weight2, nn->bias2, nn->a0);
-    // for (int i = 0; i < LAYER_TWO_SIZE; i++){
-    //     printf("%lf ", nn->z2[i]); 
-    // }
-    // printf("\n");
-    softmax( nn->z2, nn->a2, LAYER_TWO_SIZE);
-    // for (int i = 0; i < LAYER_TWO_SIZE; i++){
-    //     printf("%lf ", nn->a2[i]); 
-    // }
-    return 0;
+    return softmax( nn->z2, nn->a2, LAYER_TWO_SIZE);
 }
 
 void delta_L(double *a2, int *y, double *loss2){
     for (int i = 0; i < LAYER_TWO_SIZE; i++){
         loss2[i] = a2[i];
     }
+    // printf("%d", *y);
     loss2[*y] = loss2[*y]-1;
 }
 
@@ -264,15 +226,7 @@ void delta_l(double *a0, double (*w)[LAYER_ONE_SIZE], double *loss2, double *los
 
 void backward(struct model *nn, double *x0, int *y){
     delta_L(nn->a2,y, nn->loss2);
-    // printf("\n");
-    // for (int i = 0;i < LAYER_TWO_SIZE; i++){
-    //     printf("%lf ", nn->loss2[i]);
-    // }
     delta_l(nn->a0, nn->weight2, nn->loss2, nn->loss0);
-    // printf("\n");
-    // for (int i = 0;i < LAYER_ONE_SIZE; i++){
-    //     printf("%lf ", nn->loss0[i]);
-    // }
     // Backward pass one
     for(int i = 0; i< LAYER_TWO_SIZE; i++){
         nn->bias2[i] = nn->bias2[i] - LEARNING_RATE * nn->loss2[i];
@@ -322,20 +276,27 @@ void backward(struct model *nn, double *x0, int *y){
 
 void train(double **x, int *y, struct model *nn){
     double correct = 0;
-    int limit = 101;
+    int limit = NUM_IMAGES;
     for(int i = 0; i < limit; i++){
+
         int yhat = forward(nn, x[i]);
+
         if (yhat == y[i]){
             correct ++;
         }
         backward(nn, x[i], &(y[i]));
-        if ( i % 100 == 0){
-            double loss = cross_entropy(y, nn->a2 );
-            printf("\nloss: %lf [%d/%d]", loss, i+1, limit);
 
+        if ( i % 100 == 0){
+            double loss = cross_entropy(&(y[i]), nn->a2 );
+            printf("\nloss: %lf [%d/%d] %d --", loss, i+1, limit, y[i]);
+            // printf("\n");
+            // for (int j=0; j< LAYER_ONE_SIZE; j++){
+            //     printf("%lf ", nn->bias0[j]);
+            // }
+            // printf("\n");
         }
     }
-    correct = correct / NUM_IMAGES;
+    correct = correct / limit;
     printf("\nTraining Error: \n Accuracy: %lf\%", 100*correct);
 }
 
@@ -357,8 +318,8 @@ int main(){
     //     printf("%d, %lf\n",i,x[0][i]);
 
     // }
-    // train(x,y, &nn);
-    for(int i = 0; i < IMAGE_SIZE; i++){
-        printf("%d - %lf\n", i, x[50000][i]);
-    }
+    train(x,y, &nn);
+    // for(int i = 0; i < IMAGE_SIZE; i++){
+    //     printf("%d - %lf\n", i, x[50000][i]);
+    // }
 }
