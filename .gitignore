@@ -1,6 +1,6 @@
-prototype/MNIST_test.txt
-prototype/MNIST_train.txt
-prototype/linear_relu_stack.0.bias
-prototype/linear_relu_stack.2.bias
-prototype/linear_relu_stack.0.weight
-prototype/linear_relu_stack.2.weight
+*MNIST_test.txt
+*MNIST_train.txt
+*linear_relu_stack.0.bias
+*linear_relu_stack.2.bias
+*linear_relu_stack.0.weight
+*linear_relu_stack.2.weight
