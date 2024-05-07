@@ -1,0 +1,24 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../test_forward.c 
+
+OBJS += \
+./test_forward.o 
+
+C_DEPS += \
+./test_forward.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+%.o: ../%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM v7 gcc compiler'
+	arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/Zynq_C_PS/export/Zynq_C_PS/sw/Zynq_C_PS/standalone_domain/bspinclude/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

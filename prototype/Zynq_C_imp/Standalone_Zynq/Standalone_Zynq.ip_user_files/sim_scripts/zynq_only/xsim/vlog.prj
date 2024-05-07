@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../../Standalone_Zynq.srcs/sources_1/bd/zynq_only/ipshared/ec67/hdl" --include "../../../../Standalone_Zynq.srcs/sources_1/bd/zynq_only/ipshared/2d50/hdl" --include "../../../../Standalone_Zynq.srcs/sources_1/bd/zynq_only/ip/zynq_only_processing_system7_0_0" \
+"../../../bd/zynq_only/ip/zynq_only_processing_system7_0_0/sim/zynq_only_processing_system7_0_0.v" \
+"../../../bd/zynq_only/sim/zynq_only.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

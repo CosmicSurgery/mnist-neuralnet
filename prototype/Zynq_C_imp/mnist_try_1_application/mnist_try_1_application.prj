@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="mnist_try_1_application" location="C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/mnist_try_1_application" platform="C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/Zynq_C_PS/export/Zynq_C_PS/Zynq_C_PS.xpfm" platformUID="xilinx:zybo::0.0(custom)" systemProject="mnist_try_1_application_system" sysConfig="Zynq_C_PS" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="72744371e69cb332406e77d897657ef6">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.627691554" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.463521593" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>
