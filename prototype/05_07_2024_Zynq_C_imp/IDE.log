@@ -1,0 +1,128 @@
+11:18:07 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\miles\Projects\fpga\mnist_neuralnet\prototype\Zynq_C_imp\temp_xsdb_launch_script.tcl
+11:18:11 INFO  : XSCT server has started successfully.
+11:18:11 INFO  : Successfully done setting XSCT server connection channel  
+11:18:11 INFO  : plnx-install-location is set to ''
+11:18:11 INFO  : Successfully done query RDI_DATADIR 
+11:18:11 INFO  : Successfully done setting workspace for the tool. 
+11:18:13 INFO  : Registering command handlers for Vitis TCF services
+11:19:37 INFO  : Successfully done sdx_reload_mss "C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/Zynq_C_PS/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+11:19:37 INFO  : Successfully done sdx_reload_mss "C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/Zynq_C_PS/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+11:35:04 INFO  : Checking for BSP changes to sync application flags for project 'too_many_directory_names'...
+11:37:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:37:38 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+11:37:38 INFO  : 'jtag frequency' command is executed.
+11:37:38 INFO  : Context for 'APU' is selected.
+11:37:38 INFO  : System reset is completed.
+11:37:41 INFO  : 'after 3000' command is executed.
+11:37:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+11:37:43 INFO  : FPGA configured successfully with bitstream "C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/too_many_directory_names/_ide/bitstream/zynq_only_wrapper.bit"
+11:37:43 INFO  : Context for 'APU' is selected.
+11:37:43 INFO  : Hardware design information is loaded from 'C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/Zynq_C_PS/export/Zynq_C_PS/hw/zynq_only_wrapper.xsa'.
+11:37:43 INFO  : 'configparams force-mem-access 1' command is executed.
+11:37:43 INFO  : Context for 'APU' is selected.
+11:37:43 INFO  : Sourcing of 'C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/too_many_directory_names/_ide/psinit/ps7_init.tcl' is done.
+11:37:43 INFO  : 'ps7_init' command is executed.
+11:37:43 INFO  : 'ps7_post_config' command is executed.
+11:37:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:37:43 INFO  : The application 'C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/too_many_directory_names/Debug/too_many_directory_names.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:37:44 INFO  : 'configparams force-mem-access 0' command is executed.
+11:37:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/too_many_directory_names/_ide/bitstream/zynq_only_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/Zynq_C_PS/export/Zynq_C_PS/hw/zynq_only_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/too_many_directory_names/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/too_many_directory_names/Debug/too_many_directory_names.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:37:44 INFO  : Memory regions updated for context APU
+11:37:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:37:44 INFO  : 'con' command is executed.
+11:37:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:37:44 INFO  : Launch script is exported to file 'C:\Users\miles\Projects\fpga\mnist_neuralnet\prototype\Zynq_C_imp\.sdk\launch_scripts\single_application_debug\debugger_too_many_directory_names-default.tcl'
+11:58:48 INFO  : Successfully done sdx_reload_mss "C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/mnist_try_1/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+11:58:49 INFO  : Successfully done sdx_reload_mss "C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/mnist_try_1/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+12:10:53 INFO  : Removed 'C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/mnist_try_1/export/mnist_try_1' from custom platform repositories.
+12:13:13 INFO  : Checking for BSP changes to sync application flags for project 'too_many_directory_names'...
+12:13:50 INFO  : Checking for BSP changes to sync application flags for project 'too_many_directory_names'...
+12:14:48 INFO  : Checking for BSP changes to sync application flags for project 'too_many_directory_names'...
+12:15:18 INFO  : Checking for BSP changes to sync application flags for project 'too_many_directory_names'...
+12:17:23 ERROR : Failed to openhw "C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/Zynq_C_PS/export/Zynq_C_PS/hw/zynq_only_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+12:17:23 ERROR : Failed to openhw "C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/Zynq_C_PS/export/Zynq_C_PS/hw/zynq_only_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+12:17:23 ERROR : Failed to openhw "C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/Zynq_C_PS/export/Zynq_C_PS/hw/zynq_only_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+12:17:23 ERROR : Failed to openhw "C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/Zynq_C_PS/export/Zynq_C_PS/hw/zynq_only_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+12:18:54 INFO  : Checking for BSP changes to sync application flags for project 'too_many_directory_names'...
+12:20:08 INFO  : Checking for BSP changes to sync application flags for project 'too_many_directory_names'...
+12:23:03 INFO  : Checking for BSP changes to sync application flags for project 'too_many_directory_names'...
+12:24:38 INFO  : Checking for BSP changes to sync application flags for project 'too_many_directory_names'...
+12:39:23 INFO  : Checking for BSP changes to sync application flags for project 'too_many_directory_names'...
+12:40:29 INFO  : Disconnected from the channel tcfchan#3.
+12:40:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:40:30 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+12:40:30 INFO  : 'jtag frequency' command is executed.
+12:40:30 INFO  : Context for 'APU' is selected.
+12:40:30 INFO  : System reset is completed.
+12:40:33 INFO  : 'after 3000' command is executed.
+12:40:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+12:40:35 INFO  : FPGA configured successfully with bitstream "C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/too_many_directory_names/_ide/bitstream/zynq_only_wrapper.bit"
+12:40:35 INFO  : Context for 'APU' is selected.
+12:40:35 INFO  : Hardware design information is loaded from 'C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/Zynq_C_PS/export/Zynq_C_PS/hw/zynq_only_wrapper.xsa'.
+12:40:35 INFO  : 'configparams force-mem-access 1' command is executed.
+12:40:35 INFO  : Context for 'APU' is selected.
+12:40:35 INFO  : Sourcing of 'C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/too_many_directory_names/_ide/psinit/ps7_init.tcl' is done.
+12:40:35 INFO  : 'ps7_init' command is executed.
+12:40:35 INFO  : 'ps7_post_config' command is executed.
+12:40:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:40:36 INFO  : The application 'C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/too_many_directory_names/Debug/too_many_directory_names.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:40:36 INFO  : 'configparams force-mem-access 0' command is executed.
+12:40:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/too_many_directory_names/_ide/bitstream/zynq_only_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/Zynq_C_PS/export/Zynq_C_PS/hw/zynq_only_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/too_many_directory_names/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/Zynq_C_imp/too_many_directory_names/Debug/too_many_directory_names.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:40:36 INFO  : Memory regions updated for context APU
+12:40:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:40:36 INFO  : 'con' command is executed.
+12:40:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:40:36 INFO  : Launch script is exported to file 'C:\Users\miles\Projects\fpga\mnist_neuralnet\prototype\Zynq_C_imp\.sdk\launch_scripts\single_application_debug\systemdebugger_too_many_directory_names_system_standalone.tcl'
+13:00:27 INFO  : Disconnected from the channel tcfchan#19.
