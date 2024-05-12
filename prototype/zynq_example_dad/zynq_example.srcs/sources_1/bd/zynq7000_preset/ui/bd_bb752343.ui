@@ -1,0 +1,36 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.934211",
+   "Default View_TopLeft":"-30,-245",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1460 -y 40 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1460 -y 70 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -x 840 -y 170 -defaultsOSRD
+preplace inst jtag_axi_0 -pg 1 -lvl 1 -x 130 -y 120 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 2 -x 400 -y 120 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 4 -x 1260 -y 230 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 3 -x 840 -y -50 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 2 -x 400 -y -20 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 -10 190 240 -90 550 310 1080
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 3 1 1090 210n
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 5 0 330 NJ 330 NJ 330 NJ 330 1430
+preplace netloc processing_system7_0_S_AXI_HP0_WACOUNT 1 2 1 600 -10n
+preplace netloc processing_system7_0_S_AXI_HP0_RACOUNT 1 2 1 590 -30n
+preplace netloc processing_system7_0_S_AXI_HP0_WCOUNT 1 2 1 580 -50n
+preplace netloc processing_system7_0_S_AXI_HP0_RCOUNT 1 2 1 570 -70n
+preplace netloc vio_0_probe_out1 1 2 1 540 -10n
+preplace netloc vio_0_probe_out0 1 2 1 560 -30n
+preplace netloc processing_system7_0_DDR 1 3 2 NJ 100 1430
+preplace netloc processing_system7_0_FIXED_IO 1 3 2 NJ 120 1440
+preplace netloc smartconnect_0_M00_AXI 1 2 1 530J 120n
+preplace netloc jtag_axi_0_M_AXI 1 1 1 230 100n
+levelinfo -pg 1 -30 130 400 840 1260 1460
+pagesize -pg 1 -db -bbox -sgen -30 -210 1570 1010
+"
+}
+{
+   "da_clkrst_cnt":"2",
+   "da_ps7_cnt":"1"
+}

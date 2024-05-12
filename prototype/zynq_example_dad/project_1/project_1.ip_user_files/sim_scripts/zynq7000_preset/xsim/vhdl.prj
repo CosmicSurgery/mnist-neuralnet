@@ -1,0 +1,8 @@
+vhdl xil_defaultlib  \
+"../../../bd/zynq7000_preset/ip/zynq7000_preset_smartconnect_0_0/bd_0/ip/ip_1/sim/bd_6739_psr_aclk_0.vhd" \
+"../../../bd/zynq7000_preset/ip/zynq7000_preset_rst_ps7_0_50M_0/sim/zynq7000_preset_rst_ps7_0_50M_0.vhd" \
+"../../../bd/zynq7000_preset/ip/zynq7000_preset_ila_0_0/sim/zynq7000_preset_ila_0_0.vhd" \
+"../../../bd/zynq7000_preset/ip/zynq7000_preset_vio_0_0/sim/zynq7000_preset_vio_0_0.vhd" \
+"../../../bd/zynq7000_preset/sim/zynq7000_preset.vhd" \
+
+nosort

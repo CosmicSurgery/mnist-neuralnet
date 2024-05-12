@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="zynq7000_preset_processing_system7_0_0_synth_1" LaunchDir="C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/zynq_example_dad/project_1/project_1.runs/zynq7000_preset_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq7000_preset_jtag_axi_0_0_synth_1" LaunchDir="C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/zynq_example_dad/project_1/project_1.runs/zynq7000_preset_jtag_axi_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq7000_preset_smartconnect_0_0_synth_1" LaunchDir="C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/zynq_example_dad/project_1/project_1.runs/zynq7000_preset_smartconnect_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq7000_preset_rst_ps7_0_50M_0_synth_1" LaunchDir="C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/zynq_example_dad/project_1/project_1.runs/zynq7000_preset_rst_ps7_0_50M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq7000_preset_ila_0_0_synth_1" LaunchDir="C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/zynq_example_dad/project_1/project_1.runs/zynq7000_preset_ila_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq7000_preset_vio_0_0_synth_1" LaunchDir="C:/Users/miles/Projects/fpga/mnist_neuralnet/prototype/zynq_example_dad/project_1/project_1.runs/zynq7000_preset_vio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

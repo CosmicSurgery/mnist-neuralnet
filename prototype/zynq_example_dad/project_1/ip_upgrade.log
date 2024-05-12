@@ -1,0 +1,74 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sat May 11 19:03:32 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z045ffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zynq7000_preset_smartconnect_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zynq7000_preset_smartconnect_0_0 (xilinx.com:ip:smartconnect:1.0) from (Rev. 13) to (Rev. 12)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'zynq7000_preset_smartconnect_0_0'.
+
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'zynq7000_preset_smartconnect_0_0'. These changes may impact your design.
+
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sat May 11 19:03:32 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z045ffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zynq7000_preset_jtag_axi_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zynq7000_preset_jtag_axi_0_0 (xilinx.com:ip:jtag_axi:1.2) from (Rev. 11) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sat May 11 19:03:32 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z045ffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zynq7000_preset_ila_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zynq7000_preset_ila_0_0 (xilinx.com:ip:ila:6.2) from (Rev. 11) to (Rev. 10)
+
