@@ -34,6 +34,7 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_jtag_axi_0_0/sim/design_1_jtag_axi_0_0.v" \
+  "../../../bd/design_1/ip/design_1_smartconnect_0_0/bd_0/sim/bd_48ac.v" \
 -endlib
 -makelib ies_lib/xlconstant_v1_1_6 \
   "../../../../05_011_2024_write_to_ddr.srcs/sources_1/bd/design_1/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v" \
@@ -112,9 +113,6 @@
 -makelib ies_lib/xil_defaultlib -sv \
   "../../../bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_22/sim/bd_48ac_m00e_0.sv" \
 -endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_smartconnect_0_0/bd_0/sim/bd_48ac.v" \
--endlib
 -makelib ies_lib/axi_register_slice_v2_1_20 \
   "../../../../05_011_2024_write_to_ddr.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 -endlib
@@ -126,6 +124,10 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/sim/design_1.v" \
+  "../../../bd/design_1/ip/design_1_ila_0_0/sim/design_1_ila_0_0.v" \
+  "../../../bd/design_1/ip/design_1_ila_1_0/sim/design_1_ila_1_0.v" \
+  "../../../bd/design_1/ip/design_1_vio_0_0/sim/design_1_vio_0_0.v" \
+  "../../../bd/design_1/ip/design_1_ila_2_0/sim/design_1_ila_2_0.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v
