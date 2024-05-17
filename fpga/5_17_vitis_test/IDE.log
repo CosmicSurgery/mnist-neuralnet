@@ -1,0 +1,326 @@
+15:00:30 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\5_17_vitis_test\temp_xsdb_launch_script.tcl
+15:00:33 INFO  : XSCT server has started successfully.
+15:00:33 INFO  : Successfully done setting XSCT server connection channel  
+15:00:33 INFO  : plnx-install-location is set to ''
+15:00:33 INFO  : Successfully done setting workspace for the tool. 
+15:00:33 INFO  : Successfully done query RDI_DATADIR 
+15:00:35 INFO  : Registering command handlers for Vitis TCF services
+15:04:52 INFO  : Checking for BSP changes to sync application flags for project 'helloworld'...
+15:05:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:05:40 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:05:40 INFO  : 'jtag frequency' command is executed.
+15:05:40 INFO  : Context for 'APU' is selected.
+15:05:40 INFO  : System reset is completed.
+15:05:43 INFO  : 'after 3000' command is executed.
+15:05:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:05:45 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit"
+15:05:45 INFO  : Context for 'APU' is selected.
+15:05:45 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:05:45 INFO  : 'configparams force-mem-access 1' command is executed.
+15:05:45 INFO  : Context for 'APU' is selected.
+15:05:45 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl' is done.
+15:05:45 INFO  : 'ps7_init' command is executed.
+15:05:45 INFO  : 'ps7_post_config' command is executed.
+15:05:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:05:46 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/Debug/helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:05:46 INFO  : 'configparams force-mem-access 0' command is executed.
+15:05:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/Debug/helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:05:46 INFO  : Memory regions updated for context APU
+15:05:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:05:46 INFO  : 'con' command is executed.
+15:05:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:05:46 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\5_17_vitis_test\.sdk\launch_scripts\single_application_debug\systemdebugger_helloworld_system_standalone.tcl'
+15:15:51 INFO  : Disconnected from the channel tcfchan#3.
+15:16:09 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\5_17_vitis_test\temp_xsdb_launch_script.tcl
+15:16:15 INFO  : XSCT server has started successfully.
+15:16:15 INFO  : plnx-install-location is set to ''
+15:16:15 INFO  : Successfully done setting XSCT server connection channel  
+15:16:15 INFO  : Successfully done setting workspace for the tool. 
+15:16:20 INFO  : Registering command handlers for Vitis TCF services
+15:16:21 INFO  : Successfully done query RDI_DATADIR 
+15:16:38 INFO  : Checking for BSP changes to sync application flags for project 'helloworld'...
+15:16:48 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa is already opened
+
+15:17:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:17:03 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:17:03 INFO  : 'jtag frequency' command is executed.
+15:17:03 INFO  : Context for 'APU' is selected.
+15:17:03 INFO  : System reset is completed.
+15:17:06 INFO  : 'after 3000' command is executed.
+15:17:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:17:08 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit"
+15:17:08 INFO  : Context for 'APU' is selected.
+15:17:08 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:17:08 INFO  : 'configparams force-mem-access 1' command is executed.
+15:17:08 INFO  : Context for 'APU' is selected.
+15:17:08 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl' is done.
+15:17:08 INFO  : 'ps7_init' command is executed.
+15:17:08 INFO  : 'ps7_post_config' command is executed.
+15:17:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:17:09 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/Debug/helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:17:09 INFO  : 'configparams force-mem-access 0' command is executed.
+15:17:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/Debug/helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:17:09 INFO  : Memory regions updated for context APU
+15:17:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:17:09 INFO  : 'con' command is executed.
+15:17:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:17:09 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\5_17_vitis_test\.sdk\launch_scripts\single_application_debug\systemdebugger_helloworld_system_standalone.tcl'
+15:56:50 INFO  : Disconnected from the channel tcfchan#2.
+15:56:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:56:50 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:56:50 INFO  : 'jtag frequency' command is executed.
+15:56:50 INFO  : Context for 'APU' is selected.
+15:56:50 INFO  : System reset is completed.
+15:56:53 INFO  : 'after 3000' command is executed.
+15:56:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:56:55 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit"
+15:56:55 INFO  : Context for 'APU' is selected.
+15:56:55 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:56:55 INFO  : 'configparams force-mem-access 1' command is executed.
+15:56:55 INFO  : Context for 'APU' is selected.
+15:56:55 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl' is done.
+15:56:55 ERROR : Memory read error at 0xF8006008. AHB Memory access port is disabled
+15:56:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+15:56:55 ERROR : Memory read error at 0xF8006008. AHB Memory access port is disabled
+15:57:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:57:16 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:57:16 INFO  : 'jtag frequency' command is executed.
+15:57:16 INFO  : Context for 'APU' is selected.
+15:57:16 ERROR : Cannot reset APU. AP transaction error, DAP status 0xF0000021
+15:57:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+15:57:16 ERROR : Cannot reset APU. AP transaction error, DAP status 0xF0000021
+15:57:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:57:31 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:57:31 INFO  : 'jtag frequency' command is executed.
+15:57:31 INFO  : Context for 'APU' is selected.
+15:57:31 INFO  : System reset is completed.
+15:57:34 INFO  : 'after 3000' command is executed.
+15:57:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:57:35 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit"
+15:57:36 INFO  : Context for 'APU' is selected.
+15:57:36 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:57:36 INFO  : 'configparams force-mem-access 1' command is executed.
+15:57:36 INFO  : Context for 'APU' is selected.
+15:57:36 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl' is done.
+15:57:36 INFO  : 'ps7_init' command is executed.
+15:57:36 INFO  : 'ps7_post_config' command is executed.
+15:57:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:57:36 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/Debug/helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:57:36 INFO  : 'configparams force-mem-access 0' command is executed.
+15:57:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/Debug/helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:57:36 INFO  : Memory regions updated for context APU
+15:57:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:57:37 INFO  : 'con' command is executed.
+15:57:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:57:37 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\5_17_vitis_test\.sdk\launch_scripts\single_application_debug\systemdebugger_helloworld_system_standalone.tcl'
+16:00:07 INFO  : Disconnected from the channel tcfchan#8.
+16:00:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:00:07 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+16:00:07 INFO  : 'jtag frequency' command is executed.
+16:00:07 INFO  : Context for 'APU' is selected.
+16:00:07 INFO  : System reset is completed.
+16:00:10 INFO  : 'after 3000' command is executed.
+16:00:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+16:00:12 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit"
+16:00:12 INFO  : Context for 'APU' is selected.
+16:00:12 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+16:00:12 INFO  : 'configparams force-mem-access 1' command is executed.
+16:00:12 INFO  : Context for 'APU' is selected.
+16:00:12 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl' is done.
+16:00:12 INFO  : 'ps7_init' command is executed.
+16:00:12 INFO  : 'ps7_post_config' command is executed.
+16:00:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:12 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/Debug/helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:00:13 INFO  : 'configparams force-mem-access 0' command is executed.
+16:00:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/Debug/helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:00:13 INFO  : Memory regions updated for context APU
+16:00:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:13 INFO  : 'con' command is executed.
+16:00:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:00:13 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\5_17_vitis_test\.sdk\launch_scripts\single_application_debug\systemdebugger_helloworld_system_standalone.tcl'
+16:01:48 INFO  : Disconnected from the channel tcfchan#9.
+16:01:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:01:48 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+16:01:48 INFO  : 'jtag frequency' command is executed.
+16:01:48 INFO  : Context for 'APU' is selected.
+16:01:48 INFO  : System reset is completed.
+16:01:51 INFO  : 'after 3000' command is executed.
+16:01:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+16:01:53 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit"
+16:01:53 INFO  : Context for 'APU' is selected.
+16:01:53 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+16:01:53 INFO  : 'configparams force-mem-access 1' command is executed.
+16:01:53 INFO  : Context for 'APU' is selected.
+16:01:53 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl' is done.
+16:01:53 INFO  : 'ps7_init' command is executed.
+16:01:53 INFO  : 'ps7_post_config' command is executed.
+16:01:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:01:53 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/Debug/helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:01:53 INFO  : 'configparams force-mem-access 0' command is executed.
+16:01:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/Debug/helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:01:53 INFO  : Memory regions updated for context APU
+16:01:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:01:54 INFO  : 'con' command is executed.
+16:01:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:01:54 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\5_17_vitis_test\.sdk\launch_scripts\single_application_debug\systemdebugger_helloworld_system_standalone.tcl'
+16:02:25 INFO  : Disconnected from the channel tcfchan#10.
+16:02:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:02:25 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+16:02:25 INFO  : 'jtag frequency' command is executed.
+16:02:25 INFO  : Context for 'APU' is selected.
+16:02:25 INFO  : System reset is completed.
+16:02:28 INFO  : 'after 3000' command is executed.
+16:02:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+16:02:30 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit"
+16:02:30 INFO  : Context for 'APU' is selected.
+16:02:30 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+16:02:30 INFO  : 'configparams force-mem-access 1' command is executed.
+16:02:30 INFO  : Context for 'APU' is selected.
+16:02:30 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl' is done.
+16:02:30 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+16:02:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/5_17_vitis_test/helloworld/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+16:02:30 ERROR : Memory read error at 0xE0001034. AP transaction timeout

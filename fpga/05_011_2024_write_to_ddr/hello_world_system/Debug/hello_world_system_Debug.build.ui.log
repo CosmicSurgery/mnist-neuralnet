@@ -1,0 +1,10 @@
+2024-05-17T14:31:38.380889500255-14:31:38 **** Incremental Build of configuration Debug for project hello_world_system ****
+000-make all 
+000-Generating bif file for the system project
+000-generate_system_bif.bat 65154 C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world_system/Debug/system.bif
+000-sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world_system/Debug/system.bif --bitstream C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/_ide/bitstream/design_1_wrapper.bit --elf C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/Debug/hello_world.elf,ps7_cortexa9_0
+000-ELF does not exist: C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/Debug/hello_world.elf
+000/hello_world_system/Debug0-1-1make: *** [makefile:37: sd_card] Error 12-make: *** [makefile:37: sd_card] Error 1
+00255-
+14:31:41 Build Finished (took 2s.614ms)
+
