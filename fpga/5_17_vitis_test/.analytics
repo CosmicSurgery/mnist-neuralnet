@@ -8,3 +8,7 @@ timestamp=[2024-05-17 15:38:21], mode=PLATFORM_GENERATION, duration=0:00:07.500,
 timestamp=[2024-05-17 15:39:40], mode=PLATFORM_GENERATION, duration=0:01:19.075, duration_ms=79075, data={name=design_1_wrapper}
 timestamp=[2024-05-17 15:55:08], mode=PLATFORM_GENERATION, duration=0:00:04.419, duration_ms=4419, data={name=design_1_wrapper}
 timestamp=[2024-05-17 15:56:16], mode=PLATFORM_GENERATION, duration=0:01:04.244, duration_ms=64244, data={name=design_1_wrapper}
+timestamp=[2024-05-17 19:10:23], mode=WORKBENCH_START, duration=0:00:23.766, duration_ms=23766, data={}
+timestamp=[2024-05-17 19:10:25], mode=WORKBENCH_UI_INIT, duration=0:00:02.754, duration_ms=2754, data={editors_count=4, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,design_1_wrapper,helloworld,helloworld_system}
+timestamp=[2024-05-17 19:12:07], mode=WORKBENCH_START, duration=0:00:10.922, duration_ms=10922, data={}
+timestamp=[2024-05-17 19:12:07], mode=WORKBENCH_UI_INIT, duration=0:00:00.481, duration_ms=481, data={editors_count=0, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,design_1_wrapper,helloworld,helloworld_system}
