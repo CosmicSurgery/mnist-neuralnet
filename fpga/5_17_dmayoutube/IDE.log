@@ -726,3 +726,4 @@ con
 ----------------End of Script----------------
 
 19:29:07 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\5_17_dmayoutube\.sdk\launch_scripts\single_application_debug\systemdebugger_dma_app_system_standalone.tcl'
+11:44:20 INFO  : Disconnected from the channel tcfchan#12.

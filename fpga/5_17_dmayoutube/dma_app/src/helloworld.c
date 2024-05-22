@@ -10,17 +10,18 @@
 #include "xaxidma.h"
 
 #define DMA_DEVICE_ID XPAR_AXI_DMA_0_DEVICE_ID
-#define DMA_TRANSFER_SIZE 16
+#define DMA_TRANSFER_SIZE 16							// Perform DMA transfer of 16 32-bit words in each direction
 
-static XAxiDma dma_ctl;
-static XAxiDma_Config *dma_cfg;
+static XAxiDma dma_ctl;									// AXI DMA driver instance
+static XAxiDma_Config *dma_cfg;							// AXI DMA configuration parameters
 
 int main ()
 {
 	s32 status;
-	u32 data_dma_to_device[DMA_TRANSFER_SIZE];
-	u32 data_device_to_dma[DMA_TRANSFER_SIZE];
+	u32 data_dma_to_device[DMA_TRANSFER_SIZE];			// DMA-read moves this data buffer to AXI-stream FIFO in PL fabric
+	u32 data_device_to_dma[DMA_TRANSFER_SIZE];			// DMA-write moves data from AXI-stream FIFO in PL fabric to this data buffer
 
+	// Disable cache to prevent cache search forcing external memory access in this demonstration
 	Xil_DCacheDisable();
 
 	print("\nFPGA DMA app. \n\n");
@@ -69,15 +70,3 @@ int main ()
 
 	return XST_SUCCESS;
 }
-//#include <stdio.h>
-//#include "platform.h"
-//#include "xil_printf.h"
-//int main()
-//{
-//    init_platform();
-//
-//    print("Hello World\n\r");
-//
-//    cleanup_platform();
-//    return 0;
-//}
