@@ -26,26 +26,23 @@ reg [7:0] w; // weight as an 8 bit integer
 reg [7:0] x; // data val as an 8 bit integer
 reg [7:0] b; // bias as an 8 bit integer
 wire [15:0] z; // weighted output as a 16 bit integer
+wire [7:0] z_trunc;
 perceptron perceptron_1(
     .w(w),
     .x(x),
     .b(b),
+    .z_trunc(z_trunc),
     .z(z)
 );
 
-initial
-begin
-    x = 'd200;
-    w = 'd200;
-    b = 'd100;
-    #10 x = 'd100;
-    #10 w = 'd100;
-    #10 b = 'd200;
+initial begin
+    x = 8'b11_010101;
+    w = 8'b01_101010;
 end
 
 
 endmodule
-
+ 
 
 
 
