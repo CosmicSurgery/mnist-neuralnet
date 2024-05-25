@@ -1,0 +1,4 @@
+Running: xsim.dir/test_percept_z_behav/xsimk.exe -simmode gui -wdb test_percept_z_behav.wdb -simrunnum 0 -socket 57349
+Design successfully loaded
+Design Loading Memory Usage: 5924 KB (Peak: 5924 KB)
+Design Loading CPU Usage: 0 ms

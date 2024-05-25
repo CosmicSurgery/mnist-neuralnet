@@ -21,21 +21,19 @@
 
 
 module perceptron(
-    input [7:0] w, // weight
-    input [7:0] x, // un-weighted input value
-    input [7:0] b, // perceptron bias
+    input clk,
+    input signed [7:0] w, // weight
+    input signed [7:0] x, // un-weighted input value
+    input signed [7:0] b, // perceptron bias
 //    input f, // for activation FUNCTION
 //    output a, // result of the activation function and output of the perceptron
-    output [7:0] z_trunc,
-    output [15:0] z // weighted input value to the activation function
+    output signed [15:0] z // weighted input value to the activation function
     );
     
-    
-    assign z = $signed(w)*$signed(x);
-    assign z_trunc = z[11:4];
-    
-    
-endmodule
+    assign z = w*x + b;
+        
+        
+    endmodule
 
 
 
