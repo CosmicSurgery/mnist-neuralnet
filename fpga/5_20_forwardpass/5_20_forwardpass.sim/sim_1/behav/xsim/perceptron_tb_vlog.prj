@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../5_20_forwardpass.srcs/sources_1/new/perceptron.v" \
+"../../../../5_20_forwardpass.srcs/sim_1/new/test_percept_z.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

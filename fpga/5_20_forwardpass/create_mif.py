@@ -1,3 +1,5 @@
+from fxpmath import Fxp
+
 directory_path = 'C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass'
 sample_img_path = 'MNIST_single_img'
 weight_path_0 = 'linear_relu_stack.0.weight'
@@ -28,14 +30,15 @@ f_write.close()
 # Weight / Bias file generation
 f = open('/'.join((directory_path, weight_path_0)) + '.txt')
 all_lines = f.readlines()
-for k in [all_lines[0]]:
-	name = f'w_0_' + 'i'
+for i,k in enumerate(all_lines):
+	name = f'w_0_' + str(i)
 	w = open('/'.join((directory_path,name)) + '.mif', 'w')
-	[w.write("{0:b}\n".format(float(l))) for l in k[:-1].split(',')]
+	for l in k[:-1].split(','):
+		x = Fxp(l, signed=True, n_word=32, n_frac=27)
+		w.write(x.bin()+'\n')
 	w.close()
 str2 = f.readline()[:-1].split(',') 
 f.close()
-print(len(str1))
 
 
 #weight and bias generation
