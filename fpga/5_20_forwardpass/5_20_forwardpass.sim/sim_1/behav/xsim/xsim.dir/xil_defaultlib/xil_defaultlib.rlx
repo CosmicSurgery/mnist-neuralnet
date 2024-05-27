@@ -3,6 +3,7 @@
 Nov  6 2019
 21:57:16
 C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
-C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v,1716660774,verilog,,,,test_percept_z,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v,1716798943,verilog,,,,test_percept_z,,,,,,,,
 C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/perceptron.v,1716660892,verilog,,C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v,,perceptron,,,,,,,,
 C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/test_arithmetic.v,1716543362,verilog,,C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v,,test_arithmetic,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/test_readmemb.v,1716799100,verilog,,C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v,,test_readmemb,,,,,,,,

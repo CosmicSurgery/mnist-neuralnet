@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module perceptron(
+module perceptron (
     input clk,
     input [7:0] w, // weight
     input [7:0] x, // un-weighted input value
