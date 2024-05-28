@@ -24,22 +24,43 @@ module test_percept_z();
 
 wire ren = 1;
 reg clk;
-reg [10-1:0] radd;
+reg [10-1:0] radd = 32'd0;
 wire[32-1:0] wout;
+wire[32-1:0] xout;
 
 initial clk = 0;
-always #10 clk = ~clk;
+initial radd = 'd0;
+always #1 clk = ~clk;
+
 Weight_Memory wm(
     .clk(clk),
     .ren(ren),
     .radd(radd),
-    .wout(wout)    
+    .wout(wout),
+    .weightValid(weightValid)
 );
 
+test_img img(
+    .clk(clk),
+    .ren(ren),
+    .radd(radd),
+    .out_px(xout),
+    .xValid(xValid)
+);
 
-initial begin
-    radd <= 32'd0;
+reg [63:0] mul = 'd0;
+reg [63:0] sum = 'd0;
+reg [63:0] add = 'd0;
+
+
+always @(posedge clk) begin
+    radd <= radd+1;
+    if (weightValid & xValid) begin
+        mul = $signed(wout) * $signed(xout);
+        sum <= mul + sum;
+    end
 end
+
 
 
 endmodule

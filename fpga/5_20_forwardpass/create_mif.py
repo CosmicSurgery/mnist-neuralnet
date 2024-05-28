@@ -14,7 +14,7 @@ sample_img_data.mif
 sample_img_label.mif
 '''
 # Img file generation
-data_file = 'sample_img_data'
+data_file = 'sample_img_data2'
 label_file = 'sample_img_label'
 f_read = open('/'.join((directory_path, sample_img_path)) + '.txt')
 img_str = f_read.read().split(',')
@@ -24,7 +24,8 @@ f_write.write("{0:b}".format(int(img_str[0])))
 f_write.close()
 f_write = open('/'.join((directory_path, data_file)) + '.mif', 'w')
 for i,k in enumerate(img_str[1:]):
-	f_write.write("{0:b}\n".format(int(img_str[i+1])))
+	x = Fxp(float(k)/255, signed=True, n_word=32, n_frac=27)
+	f_write.write(x.bin()+'\n')
 f_write.close()
 
 # Weight / Bias file generation
