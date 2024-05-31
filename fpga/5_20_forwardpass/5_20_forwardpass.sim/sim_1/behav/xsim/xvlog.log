@@ -1,10 +1,16 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/Weight_Memory.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Weight_Memory
-WARNING: [VRFC 10-3676] redeclaration of ansi port 'weightValid' is not allowed [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/Weight_Memory.v:32]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'weightValid' is not allowed [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/Weight_Memory.v:34]
+WARNING: [VRFC 10-3380] identifier 'addressWidth' is used before its declaration [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/Weight_Memory.v:26]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module perceptron
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'r_addr' is not allowed [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/perceptron.v:42]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'sum' is not allowed [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/perceptron.v:44]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'wout' is not allowed [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/perceptron.v:45]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/test_img.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module test_img
 WARNING: [VRFC 10-3676] redeclaration of ansi port 'xValid' is not allowed [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/test_img.v:32]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module test_percept_z
-INFO: [VRFC 10-2458] undeclared symbol weightValid, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v:40]
-INFO: [VRFC 10-2458] undeclared symbol xValid, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v:48]
+INFO: [VRFC 10-2458] undeclared symbol xValid, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v:52]
+INFO: [VRFC 10-2458] undeclared symbol weightValid, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v:65]

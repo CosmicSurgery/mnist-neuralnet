@@ -20,25 +20,28 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Weight_Memory #(parameter weightFile="C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_0.mif")(
+module Weight_Memory #(parameter weightFile="C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_0.mif", mem_width = 32, mem_depth = 784)(
     input clk,
     input ren,
-    input [10-1:0] radd,
+    input [addressWidth-1:0] r_addr,
     output reg[32-1:0] wout,
     output weightValid
     );
     
-    reg [32-1:0] mem [784-1:0];
+    parameter addressWidth = $clog2(mem_depth);
+    
+    reg [32-1:0] mem [mem_depth-1:0];
     reg weightValid = 1'b0;
     initial
 		begin
 	        $readmemb(weightFile, mem);
 	    end
+	    
 	always @(posedge clk)
     begin
-        if (ren)
+        if (ren & (r_addr < mem_depth))
         begin
-            wout <= mem[radd];
+            wout <= mem[r_addr];
             weightValid <= 1;
         end
         else begin
@@ -46,3 +49,10 @@ module Weight_Memory #(parameter weightFile="C:/git_repos/mnist_neuralnet/fpga/5
         end
     end 
 endmodule
+
+
+
+
+
+
+
