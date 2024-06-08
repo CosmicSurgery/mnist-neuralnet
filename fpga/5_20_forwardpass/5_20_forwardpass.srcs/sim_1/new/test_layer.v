@@ -27,12 +27,12 @@ reg rst = 0;
 reg clk;
 reg [10-1:0] radd = 'd0;
 wire [4:0] r_addr;
-reg [10-1:0] delay_radd = 'd0;
-wire[32-1:0] wout;
 wire[32-1:0] xout;
 wire[63:0] sum;
-wire [31:0] a;
-wire aValid;
+wire [31:0] l_0a;
+wire [31:0] l_2a;
+wire l_0aValid;
+wire l_2aValid;
 initial clk = 0;
 //initial radd = 'd0;
 always #1 clk = ~clk;
@@ -51,20 +51,18 @@ layer_0 #() l_0 (
     .ren(ren),
     .x(xout),
     .xValid(xValid),
-    .r_addr(r_addr),
-    .a(a),
-    .aValid(aValid)
+    .a(l_0a),
+    .aValid(l_0aValid)
 );
 
 layer_2 #() l_2 (
     .clk(clk),
     .rst(rst),
     .ren(ren),
-    .x(xout),
-    .xValid(xValid),
-    .r_addr(r_addr),
-    .a(a),
-    .aValid(aValid)
+    .x(l_0a),
+    .xValid(l_0aValid),
+    .a(l_2a),
+    .aValid(l_2aValid)
 );
 
 initial begin
@@ -76,7 +74,6 @@ end
 always @(posedge clk) begin
 //    if (weightValid) begin
     if (rst) begin
-        delay_radd <=0;
         radd<=0;
     end else begin
         radd <= radd+1;
