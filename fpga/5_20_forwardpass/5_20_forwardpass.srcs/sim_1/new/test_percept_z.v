@@ -23,15 +23,16 @@
 module test_percept_z();
 
 wire ren = 1;
-wire rst = 0;
+reg rst = 0;
 reg clk;
 reg [10-1:0] radd = 'd0;
 wire [9:0] r_addr;
+reg [10-1:0] delay_radd = 'd0;
 wire[32-1:0] wout;
 wire[32-1:0] xout;
 wire[63:0] sum;
-wire [31:0] z;
-
+wire [31:0] a;
+wire aValid;
 initial clk = 0;
 //initial radd = 'd0;
 always #1 clk = ~clk;
@@ -58,12 +59,12 @@ perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0
     .ren(ren),
     .x(xout),
     .xValid(xValid),
-    .r_addr(r_addr),
 //    .outValid,
     .sum(sum),
     .wout(wout),
-    .weightValid(weightValid),
-    .z(z)
+    .r_addr(r_addr),
+    .a(a),
+    .aValid(aValid)
 );
 
 //reg [63:0] mul = 'd0;
@@ -81,17 +82,34 @@ perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0
 
 //reg [63:0] add = 'd0;
 
+//layer_0 #() layer0(
+//    .clk(clk),
+//    .rst(rst),
+//    .ren(ren),
+//    .x(xout),
+//    .xValid(xValid),
+//);
+
+initial begin
+    rst = 1;
+    #5 rst = 0;
+end
+
 
 always @(posedge clk) begin
-    if (weightValid) begin
-    radd <= radd+1;
+//    if (weightValid) begin
+    if (rst) begin
+        delay_radd <=0;
+        radd<=0;
+    end else begin
+        radd <= radd+1;
     end
+//    end
 //    if (weightValid & xValid) begin
 //        mul = $signed(wout) * $signed(xout);
 //        sum <= mul + sum;
 //    end
 end
-
 
 
 endmodule

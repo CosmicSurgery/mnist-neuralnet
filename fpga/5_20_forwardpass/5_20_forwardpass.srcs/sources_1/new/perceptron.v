@@ -30,10 +30,8 @@ module perceptron #(parameter weightFile="", biasFile="", input_size=784, out_si
     output wout,
     output r_addr,
     output sum,
-    output weightValid,
-//    input f, // for activation FUNCTION
-//    output a, // result of the activation function and output of the perceptron
-    output [32-1:0] z // weighted input value to the activation function
+    output aValid,
+    output a // result of the activation function and output of the perceptron
     );
     
     parameter addressWidth = $clog2(input_size);
@@ -43,8 +41,9 @@ module perceptron #(parameter weightFile="", biasFile="", input_size=784, out_si
     reg [2*n_bits-1:0] mul = 'd0;
     reg [2*n_bits-1:0] sum = 'd0;
     wire [n_bits-1:0] wout;
+    reg aValid = 0;
     reg [31:0] bias [0:0];
-    reg [addressWidth:0] px_addr;
+    reg [31:0] a;
     
 //    assign ren = 1;
         
@@ -57,10 +56,10 @@ module perceptron #(parameter weightFile="", biasFile="", input_size=784, out_si
     );  
         
     initial begin
-        $readmemb("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_0.mif", bias);
+        $readmemb(biasFile, bias);
         if (bias[0][31] == 1)
         begin
-            sum[63:59] = {5{1'b1}};    
+            sum[63:59] = {5{1'b1}};   // Formatting with two's compliment 
         end
         sum[58:27] = bias[0];
     end   
@@ -69,42 +68,27 @@ module perceptron #(parameter weightFile="", biasFile="", input_size=784, out_si
         if (weightValid & xValid) begin
             mul = $signed(wout) * $signed(x);
             sum <= mul + sum;
-            r_addr <= r_addr+1;
+            // make sure to come back and check for overflow.
+        end
+        else if (r_addr == 785) begin
+            aValid <= 1;
+            if (sum[63] != 0) begin
+                a = 0;
+            end
+            a = sum[63-5:27];
         end
     end
 
-//    always @(posedge clk)
-//    begin
-//        if(rst | outvalid)
-//            r_addr <= 0;
-//        else if(xValid)
-//            r_addr <= r_addr + 1;
-//    end
+    always @(posedge clk)
+    begin
+        if(rst)
+            r_addr <= 0;
+        else if(r_addr < input_size+2) 
+            r_addr <= r_addr + 1;
+        end
     
         
     endmodule
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

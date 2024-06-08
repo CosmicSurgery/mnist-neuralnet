@@ -36,7 +36,7 @@ module test_img #(parameter imgFile="C:/git_repos/mnist_neuralnet/fpga/5_20_forw
 	    end
 	always @(posedge clk)
     begin
-        if (ren)
+        if (ren & (radd < mem_depth))
         begin
             out_px <= mem[radd];
             xValid <= 'b1;

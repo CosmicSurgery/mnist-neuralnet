@@ -3,8 +3,9 @@
 Nov  6 2019
 21:57:16
 C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
-C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v,1717163916,verilog,,,,test_percept_z,,,,,,,,
-C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/Weight_Memory.v,1717163420,verilog,,C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/perceptron.v,,Weight_Memory,,,,,,,,
-C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/layer_0.v,1716810420,verilog,,,,layer_0,,,,,,,,
-C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/perceptron.v,1717162446,verilog,,C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/test_img.v,,perceptron,,,,,,,,
-C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/test_img.v,1717151082,verilog,,C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v,,test_img,,,,,,,,
+,,,,,,test_layer,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_percept_z.v,1717853460,verilog,,,,test_percept_z,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/Weight_Memory.v,1717163420,verilog,,C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/layer_0.v,,Weight_Memory,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/layer_0.v,1717858022,verilog,,C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/perceptron.v,,layer_0,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/perceptron.v,1717854827,verilog,,C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/test_img.v,,perceptron,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sources_1/new/test_img.v,1717844080,verilog,,C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_layer.v,,test_img,,,,,,,,

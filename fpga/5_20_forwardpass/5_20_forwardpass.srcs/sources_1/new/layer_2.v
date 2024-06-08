@@ -20,7 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module layer_2(
-
+module layer_2 #(parameter out_size = 18, in_size = 784, n_bits=32)(
+    input clk,
+    input rst,
+    input ren,
+    input [n_bits-1:0] x,
+    input xValid,
+    output aValid,
+    output [31:0]a,
+    output r_addr
     );
 endmodule
