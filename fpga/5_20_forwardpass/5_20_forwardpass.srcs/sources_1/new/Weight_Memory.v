@@ -39,7 +39,7 @@ module Weight_Memory #(parameter weightFile="C:/git_repos/mnist_neuralnet/fpga/5
 	    
 	always @(posedge clk)
     begin
-        if (ren & (r_addr < mem_depth))
+        if (ren & (r_addr < mem_depth+1))
         begin
             wout <= mem[r_addr];
             weightValid <= 1;

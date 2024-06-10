@@ -26,9 +26,15 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     input ren,
     input [n_bits-1:0] x,
     input xValid,
+    input radd,
+    output weightValid,
     output aValid,
     output [31:0]a,
-    output r_addr
+    output [63:0]sum,
+    output weight_addr,
+    output r_addr,
+    output [31:0]a0,
+    output [31:0] wout
     );
     
     parameter addressWidth = $clog2(out_size);
@@ -53,42 +59,61 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     wire [31:0] a15;
     wire [31:0] a16;
     wire [31:0] a17;
-    wire aValid0;
-    reg aValid;
+    reg aValid = 1'b0;
+    reg delayValid = 1'b0;
+    wire weightValid;
     reg [addressWidth-1:0]r_addr = 'd0;
+    wire [10-1:0] radd;
+    reg [addressWidth-1:0]delay_addr = 'd0;
+    wire [$clog2(in_size)-1:0]weight_addr = 'd0;
 
+    initial
+		begin
+            aValid = 1'b0;
+		end
     
-    always @(posedge aValid0) begin
-        a_mem[0] <= a0;
-        a_mem[1] <= a1;
-        a_mem[2] <= a2;
-        a_mem[3] <= a3;
-        a_mem[4] <= a4;
-        a_mem[5] <= a5;
-        a_mem[6] <= a6;
-        a_mem[7] <= a7;
-        a_mem[8] <= a8;
-        a_mem[9] <= a9;
-        a_mem[10] <= a10;
-        a_mem[11] <= a11;
-        a_mem[12] <= a12;
-        a_mem[13] <= a13;
-        a_mem[14] <= a14;
-        a_mem[15] <= a15;
-        a_mem[16] <= a16;
-        a_mem[17] <= a17;
-        aValid = aValid0;
-        r_addr = 0;
-        a <= a_mem[r_addr];
+    always @(posedge rst) begin
+        aValid <= 'b0;
     end
     
-    always @(negedge aValid0) begin
-        aValid = aValid0;
+    always @(negedge xValid) begin
+        if (rst) begin
+            #1
+            a_mem[0] <= a0;
+            a_mem[1] <= a1;
+            a_mem[2] <= a2;
+            a_mem[3] <= a3;
+            a_mem[4] <= a4;
+            a_mem[5] <= a5;
+            a_mem[6] <= a6;
+            a_mem[7] <= a7;
+            a_mem[8] <= a8;
+            a_mem[9] <= a9;
+            a_mem[10] <= a10;
+            a_mem[11] <= a11;
+            a_mem[12] <= a12;
+            a_mem[13] <= a13;
+            a_mem[14] <= a14;
+            a_mem[15] <= a15;
+            a_mem[16] <= a16;
+            a_mem[17] <= a17;
+            r_addr <= 0;
+            #1
+            aValid <=1;
+            a <= a_mem[r_addr];
+            r_addr = r_addr+1;
+        end;
     end
     
     always @(posedge clk) begin
-        a <= a_mem[r_addr];
-        r_addr <= r_addr+1;
+        if (aValid) begin
+            a <= a_mem[r_addr];
+            r_addr <= r_addr+1;
+        end
+        
+        if (r_addr > out_size) begin
+            aValid <= 'b0;
+        end
     end
     
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_0.mif"),
@@ -96,10 +121,14 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .clk(clk),
     .rst(rst),
     .ren(ren),
+    .radd(radd),
     .x(x),
     .xValid(xValid),
+    .weightValid(weightValid),
     .a(a0),
-    .aValid(aValid0)  
+    .sum(sum),
+    .wout(wout),
+    .r_addr(weight_addr)
     );
     
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_1.mif"),
@@ -109,7 +138,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a1)
+    .a(a1),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_2.mif"),
@@ -119,7 +149,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a2)
+    .a(a2),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_3.mif"),
@@ -129,7 +160,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a3)
+    .a(a3),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_4.mif"),
@@ -139,7 +171,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a4)
+    .a(a4),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_5.mif"),
@@ -149,7 +182,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a5)
+    .a(a5),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_6.mif"),
@@ -159,7 +193,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a6)  
+    .a(a6)  ,
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_7.mif"),
@@ -169,7 +204,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a7)
+    .a(a7),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_8.mif"),
@@ -179,7 +215,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a8)
+    .a(a8),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_9.mif"),
@@ -189,7 +226,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a9)
+    .a(a9),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_10.mif"),
@@ -199,7 +237,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a10)
+    .a(a10),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_11.mif"),
@@ -209,7 +248,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a11)
+    .a(a11),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_12.mif"),
@@ -219,7 +259,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a12)
+    .a(a12),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_13.mif"),
@@ -229,7 +270,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a13)
+    .a(a13),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_14.mif"),
@@ -239,7 +281,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a14)
+    .a(a14),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_15.mif"),
@@ -249,7 +292,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a15)
+    .a(a15),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_16.mif"),
@@ -259,7 +303,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a16)
+    .a(a16),
+    .radd(radd)
     );
         
     perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_17.mif"),
@@ -269,7 +314,8 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .ren(ren),
     .x(x),
     .xValid(xValid),
-    .a(a17)
+    .a(a17),
+    .radd(radd)
     );
     
     

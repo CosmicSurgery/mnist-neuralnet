@@ -23,6 +23,7 @@
 module test_img #(parameter imgFile="C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/sample_img_data2.mif", mem_width = 32, mem_depth = 784)(
     input clk,
     input ren,
+    input rst,
     input [10-1:0] radd,
     output reg[32-1:0] out_px,
     output xValid
@@ -30,13 +31,19 @@ module test_img #(parameter imgFile="C:/git_repos/mnist_neuralnet/fpga/5_20_forw
     
     reg [32-1:0] mem [784-1:0];
     reg xValid = 1'b0;
+    reg delayValid = 1'b0;
     initial
 		begin
 	        $readmemb(imgFile, mem);
 	    end
+    
+    always @(posedge rst) begin
+        xValid <= 'b0;
+    end
+    
 	always @(posedge clk)
     begin
-        if (ren & (radd < mem_depth))
+        if (ren & (radd < mem_depth-1))
         begin
             out_px <= mem[radd];
             xValid <= 'b1;

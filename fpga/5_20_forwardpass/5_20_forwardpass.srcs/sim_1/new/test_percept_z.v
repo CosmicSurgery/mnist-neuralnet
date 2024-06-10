@@ -22,7 +22,7 @@
 
 module test_percept_z();
 
-wire ren = 1;
+reg ren = 1;
 reg rst = 0;
 reg clk;
 reg [10-1:0] radd = 'd0;
@@ -53,7 +53,8 @@ test_img img(
     .xValid(xValid)
 );
 
-perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_0.mif")) node(
+perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_0.mif"),
+     .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_0.mif")) node(
     .clk(clk),
     .rst(rst),
     .ren(ren),
@@ -91,25 +92,27 @@ perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0
 //);
 
 initial begin
-    rst = 1;
-    #5 rst = 0;
+    ren = 0;
+    rst = 0;
+    #4 rst = 1;
 end
 
+
+always @(posedge rst) begin
+    ren = 1;
+    delay_radd =0; 
+    radd=0;
+end
 
 always @(posedge clk) begin
 //    if (weightValid) begin
-    if (rst) begin
-        delay_radd <=0;
-        radd<=0;
-    end else begin
-        radd <= radd+1;
-    end
-//    end
-//    if (weightValid & xValid) begin
-//        mul = $signed(wout) * $signed(xout);
-//        sum <= mul + sum;
-//    end
+    if (rst) 
+        delay_radd <= delay_radd+1;
+        radd <= delay_radd;
 end
+    
+
+
 
 
 endmodule
