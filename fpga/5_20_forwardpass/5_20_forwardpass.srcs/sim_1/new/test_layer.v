@@ -96,6 +96,25 @@ layer_2 #() l_2 (
     .weight_addr(weight_addr),
     .r_addr(r_addr)
 );
+wire [31:0] maxA;
+wire [3:0] maxElem;
+wire [31:0] compA;
+wire [3:0] compElem;
+
+
+hardmax # () hmax (
+    .clk(clk),
+    .rst(rst),
+    .ren(ren),
+    .aValid(l_2aValid),
+    .a(l_2a),
+    .zValid(zValid),
+    .z(z),
+    .maxA(maxA),
+    .maxElem(maxElem),
+    .compA(compA),
+    .compElem(compElem)
+);
 
 always @(posedge rst) begin
     ren = 1;

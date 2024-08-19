@@ -1,6 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../5_20_forwardpass.srcs/sources_1/new/Weight_Memory.v" \
+"../../../../5_20_forwardpass.srcs/sources_1/new/hardmax.v" \
 "../../../../5_20_forwardpass.srcs/sources_1/new/layer_0.v" \
 "../../../../5_20_forwardpass.srcs/sources_1/new/layer_2.v" \
 "../../../../5_20_forwardpass.srcs/sources_1/new/perceptron.v" \
