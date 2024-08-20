@@ -100,6 +100,7 @@ wire [31:0] maxA;
 wire [3:0] maxElem;
 wire [31:0] compA;
 wire [3:0] compElem;
+wire [3:0] z;
 
 
 hardmax # () hmax (

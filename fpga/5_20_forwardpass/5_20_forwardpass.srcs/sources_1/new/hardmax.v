@@ -57,10 +57,15 @@ module hardmax #(parameter out_size = 1, in_size = 10, n_bits=32, bits_out=4)(
             end
             
             compElem <= compElem + 1;
-            if (compElem == 9) begin
+            if (compElem == 10) begin
                 zValid <= 1;
             end
         end
+    end
+    
+    always @(posedge zValid) begin
+        z <= maxElem;
+        #10 zValid <= 0;
     end
     
     

@@ -1,0 +1,1 @@
+os.getcwd() + "\\data\\MNIST_txt\\MNIST_test.txt"

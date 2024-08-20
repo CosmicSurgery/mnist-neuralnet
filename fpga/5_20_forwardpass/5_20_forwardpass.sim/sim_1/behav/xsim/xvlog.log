@@ -52,5 +52,4 @@ INFO: [VRFC 10-2458] undeclared symbol weightValid1, assumed default net type wi
 INFO: [VRFC 10-2458] undeclared symbol l_2aValid, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_layer.v:91]
 INFO: [VRFC 10-2458] undeclared symbol a0, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_layer.v:92]
 INFO: [VRFC 10-2458] undeclared symbol weightValid, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_layer.v:93]
-INFO: [VRFC 10-2458] undeclared symbol zValid, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_layer.v:111]
-INFO: [VRFC 10-2458] undeclared symbol z, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_layer.v:112]
+INFO: [VRFC 10-2458] undeclared symbol zValid, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_layer.v:112]
