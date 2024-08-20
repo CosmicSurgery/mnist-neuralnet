@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module test_img #(parameter imgFile="C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/sample_img_data2.mif", mem_width = 32, mem_depth = 784)(
+module test_img #(parameter imgFile="C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/test_img_data1.mif", mem_width = 32, mem_depth = 784)(
     input clk,
     input ren,
     input rst,

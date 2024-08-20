@@ -1,7 +1,7 @@
 from fxpmath import Fxp
 
 directory_path = 'C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass'
-sample_img_path = 'MNIST_single_img2'
+sample_img_path = 'MNIST_single_test_img2'
 weight_path_0 = 'linear_relu_stack.0.weight'
 weight_path_2 = 'linear_relu_stack.2.weight'
 bias_path_0 = 'linear_relu_stack.0.bias'
@@ -10,12 +10,12 @@ bias_path_2 = 'linear_relu_stack.2.bias'
 '''
 File naming convention:
 weights/bias: {w/b}_{layer_index}_{node_index}.mif
-sample_img_data.mif
-sample_img_label.mif
+test/train_img_data.mif
+test/train_label.mif
 '''
 # Img file generation
-data_file = 'sample_img_data2'
-label_file = 'sample_img_label2'
+data_file = 'test_img_data2'
+label_file = 'test_img_label2'
 f_read = open('/'.join((directory_path, sample_img_path)) + '.txt')
 img_str = f_read.read().split(',')
 f_read.close()
