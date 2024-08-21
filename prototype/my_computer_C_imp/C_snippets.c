@@ -2,11 +2,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+// #include "test_images.h>
 
 #define NUM_IMAGES 60000
 #define IMAGE_SIZE 784
-#define MAX_TXT_LINE_LENGTH 784*4+1
+#define LAYER_ONE_SIZE 18
+#define LAYER_TWO_SIZE 10
+#define MAX_TXT_LINE_LENGTH 784*4 +1 // 784 pixels, each pixel is max 3 digits, plus one comma. The label is always at the beginning of the line and there are no spaces.
+#define LEARNING_RATE 0.001
+#define NUM_EPOCHS 1
+#define BATCH_SIZE 1
 
+int memtest(){
+        printf("test");
+        // printf("%d", result);
+        // printf("%d", y);
+        // printf("%d", *y);
+        // (*y) = {1,2,3,4,5};
+}
 
 int snippet1(){
         char train_file[] = "MNIST_train.txt";
@@ -84,7 +97,8 @@ int snippet2(){
 
 
 int main(){
-    printf("\n %d",snippet1());
+        memtest();
+//     printf("\n %d",snippet1());
         // unsigned int cnt;
         // printf("Return code: %d", mnist_load("t10k-images-idx3-ubyte", "t10k-labels-idx1-ubyte", &cnt));
 }
