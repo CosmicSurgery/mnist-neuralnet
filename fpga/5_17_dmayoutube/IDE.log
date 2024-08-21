@@ -727,3 +727,10 @@ con
 
 19:29:07 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\5_17_dmayoutube\.sdk\launch_scripts\single_application_debug\systemdebugger_dma_app_system_standalone.tcl'
 11:44:20 INFO  : Disconnected from the channel tcfchan#12.
+09:54:46 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\5_17_dmayoutube\temp_xsdb_launch_script.tcl
+09:54:54 INFO  : XSCT server has started successfully.
+09:54:54 INFO  : plnx-install-location is set to ''
+09:54:54 INFO  : Successfully done setting XSCT server connection channel  
+09:54:55 INFO  : Successfully done setting workspace for the tool. 
+09:54:57 INFO  : Registering command handlers for Vitis TCF services
+09:55:05 INFO  : Successfully done query RDI_DATADIR 

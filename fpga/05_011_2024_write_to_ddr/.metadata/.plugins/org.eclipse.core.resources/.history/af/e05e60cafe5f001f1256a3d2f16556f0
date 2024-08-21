@@ -1,0 +1,25 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+#include "test_images.h"
+
+int snippet1()
+{
+	int x = 0;
+	int y = 5;
+	int z = x + y;
+
+	return z;
+
+}
+
+
+int main () {
+
+    printf("%d", snippet1());
+
+}

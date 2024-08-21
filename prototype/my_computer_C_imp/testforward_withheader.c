@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include "test_images.h"
 
 #define NUM_IMAGES 60000
 #define IMAGE_SIZE 784
@@ -101,7 +102,8 @@ struct model build_model() {
     // Read values from the file and assign them to the arrays
     for (int i = 0; i < LAYER_ONE_SIZE; i++) {
         for (int j = 0; j < IMAGE_SIZE; j++) {
-            fscanf(file1, "%lf,", &nn.weight0[i][j]);
+            nn.weight0[i][j] = weight_0[i][j];
+            // fscanf(file1, "%lf,", &nn.weight0[i][j]);
         }
     }
 
@@ -115,7 +117,8 @@ struct model build_model() {
 
     for (int i = 0; i < LAYER_TWO_SIZE; i++) {
         for (int j = 0; j < LAYER_ONE_SIZE; j++) {
-            fscanf(file2, "%lf,", &nn.weight2[i][j]);
+            nn.weight2[i][j] = weight_2[i][j];
+            // fscanf(file2, "%lf,", &nn.weight2[i][j]);
         }
     }
 
@@ -129,7 +132,8 @@ struct model build_model() {
 
     // Read bias values
     for (int i = 0; i < LAYER_ONE_SIZE; i++) {
-        fscanf(file3, "%lf,", &nn.bias0[i]);
+        nn.bias0[i] = bias_0[i];
+        // fscanf(file3, "%lf,", &nn.bias0[i]);
     }
 
     fclose(file3);
@@ -140,7 +144,8 @@ struct model build_model() {
     }
 
     for (int i = 0; i < LAYER_TWO_SIZE; i++) {
-        fscanf(file4, "%lf,", &nn.bias2[i]);
+        nn.bias2[i] = bias_2[i];
+        // fscanf(file4, "%lf,", &nn.bias2[i]);
     }
 
     fclose(file4);
@@ -168,106 +173,117 @@ void relu(double *z, double *a, int LAYER_SIZE){
     }
 }
 
-int softmax(double *z, double *a, int LAYER_SIZE){
-    double sum = 0;
+int hardmax(double *z, double *a, int LAYER_SIZE){
     int m = 0;
     for (int i = 0; i < LAYER_SIZE; i++){
         if (z[i] > z[m]){
             m = i;
         }
-        sum += exp(z[i]);
-        a[i] = exp(z[i]);
-    }
-    for (int i = 0; i < LAYER_SIZE; i++){
-        a[i] = a[i] / sum;
     }
     return m;
 }
 
-double cross_entropy(int *y, double *a){
-    return -log(a[*y]);
-}
+// int softmax(double *z, double *a, int LAYER_SIZE){
+//     double sum = 0;
+//     int m = 0;
+//     for (int i = 0; i < LAYER_SIZE; i++){
+//         if (z[i] > z[m]){
+//             m = i;
+//         }
+//         sum += exp(z[i]);
+//         a[i] = exp(z[i]);
+//     }
+//     for (int i = 0; i < LAYER_SIZE; i++){
+//         a[i] = a[i] / sum;
+//     }
+//     return m;
+// }
+
+// double cross_entropy(int *y, double *a){
+//     return -log(a[*y]);
+// }
 
 
 int forward(struct model *nn, double *x0){
     gen_z(LAYER_ONE_SIZE, IMAGE_SIZE, nn->z0, nn->weight0, nn->bias0, x0);
     relu( nn->z0, nn->a0, LAYER_ONE_SIZE);
     gen_z(LAYER_TWO_SIZE, LAYER_ONE_SIZE, nn->z2, nn->weight2, nn->bias2, nn->a0);
-    return softmax( nn->z2, nn->a2, LAYER_TWO_SIZE);
+    return hardmax( nn->z2, nn->a2, LAYER_TWO_SIZE);
+    // return softmax( nn->z2, nn->a2, LAYER_TWO_SIZE);
 }
 
-void delta_L(double *a2, int *y, double *loss2){
-    for (int i = 0; i < LAYER_TWO_SIZE; i++){
-        loss2[i] = a2[i];
-    }
-    // printf("%d", *y);
-    loss2[*y] = loss2[*y]-1;
-}
+// void delta_L(double *a2, int *y, double *loss2){
+//     for (int i = 0; i < LAYER_TWO_SIZE; i++){
+//         loss2[i] = a2[i];
+//     }
+//     // printf("%d", *y);
+//     loss2[*y] = loss2[*y]-1;
+// }
 
 // Loss function for any layer preceeding the output layer.
 // Should be the same shape as the the first weight layer, since that's what's being updated 784x18
-void delta_l(double *a0, double (*w)[LAYER_ONE_SIZE], double *loss2, double *loss0){
-    double sum = 0;
-    for(int i =0; i < LAYER_ONE_SIZE; i++){
-        for(int j = 0; j < LAYER_TWO_SIZE; j++){
-            sum += w[j][i] * loss2[j];
-        }
-        // Here we will apply the derivative of the relu function. For generalizability it would make sense to create a function for this but since I don't
-        // know the best way to implement that in C, I'm just going to hard code it in here because d_relu is just a max() implementation.
-        if (a0[i] > 0){
-            loss0[i] = sum;
-        } else {
-            loss0[i] = 0;
-        }
-        sum = 0;
-    }
-}
+// void delta_l(double *a0, double (*w)[LAYER_ONE_SIZE], double *loss2, double *loss0){
+//     double sum = 0;
+//     for(int i =0; i < LAYER_ONE_SIZE; i++){
+//         for(int j = 0; j < LAYER_TWO_SIZE; j++){
+//             sum += w[j][i] * loss2[j];
+//         }
+//         // Here we will apply the derivative of the relu function. For generalizability it would make sense to create a function for this but since I don't
+//         // know the best way to implement that in C, I'm just going to hard code it in here because d_relu is just a max() implementation.
+//         if (a0[i] > 0){
+//             loss0[i] = sum;
+//         } else {
+//             loss0[i] = 0;
+//         }
+//         sum = 0;
+//     }
+// }
 
-void backward(struct model *nn, double *x0, int *y){
-    delta_L(nn->a2,y, nn->loss2);
-    delta_l(nn->a0, nn->weight2, nn->loss2, nn->loss0);
-    // Backward pass one
-    for(int i = 0; i< LAYER_TWO_SIZE; i++){
-        nn->bias2[i] = nn->bias2[i] - LEARNING_RATE * nn->loss2[i];
-        for (int j = 0; j < LAYER_ONE_SIZE; j++){
-            nn->weight2[i][j] = nn->weight2[i][j] - LEARNING_RATE * (nn->a0[j] * nn->loss2[i]);
-        }
-    }
-    // Backward pass two
-    for(int i = 0; i < LAYER_ONE_SIZE; i++){
-        nn->bias0[i] = nn->bias0[i] - LEARNING_RATE * nn->loss0[i];
-        for(int j = 0; j < IMAGE_SIZE; j++){
-            nn->weight0[i][j] = nn->weight0[i][j] - LEARNING_RATE * (x0[j] * nn->loss0[i]);
-        }
-    }
-}
+// void backward(struct model *nn, double *x0, int *y){
+//     delta_L(nn->a2,y, nn->loss2);
+//     delta_l(nn->a0, nn->weight2, nn->loss2, nn->loss0);
+//     // Backward pass one
+//     for(int i = 0; i< LAYER_TWO_SIZE; i++){
+//         nn->bias2[i] = nn->bias2[i] - LEARNING_RATE * nn->loss2[i];
+//         for (int j = 0; j < LAYER_ONE_SIZE; j++){
+//             nn->weight2[i][j] = nn->weight2[i][j] - LEARNING_RATE * (nn->a0[j] * nn->loss2[i]);
+//         }
+//     }
+//     // Backward pass two
+//     for(int i = 0; i < LAYER_ONE_SIZE; i++){
+//         nn->bias0[i] = nn->bias0[i] - LEARNING_RATE * nn->loss0[i];
+//         for(int j = 0; j < IMAGE_SIZE; j++){
+//             nn->weight0[i][j] = nn->weight0[i][j] - LEARNING_RATE * (x0[j] * nn->loss0[i]);
+//         }
+//     }
+// }
 
 
-void train(double **x, int *y, struct model *nn){
-    double correct = 0;
-    int limit = NUM_IMAGES;
-    for(int i = 0; i < limit; i++){
+// void train(double **x, int *y, struct model *nn){
+//     double correct = 0;
+//     int limit = NUM_IMAGES;
+//     for(int i = 0; i < limit; i++){
 
-        int yhat = forward(nn, x[i]);
+//         int yhat = forward(nn, x[i]);
 
-        if (yhat == y[i]){
-            correct ++;
-        }
-        backward(nn, x[i], &(y[i]));
+//         if (yhat == y[i]){
+//             correct ++;
+//         }
+//         backward(nn, x[i], &(y[i]));
 
-        if ( i % 10000 == 0){
-            double loss = cross_entropy(&(y[i]), nn->a2 );
-            printf("\nloss: %lf [%d/%d] ", loss, i+1, limit);
-            // printf("\n");
-            // for (int j=0; j< LAYER_ONE_SIZE; j++){
-            //     printf("%lf ", nn->bias0[j]);
-            // }
-            // printf("\n");
-        }
-    }
-    correct = correct / limit;
-    printf("\nTraining Error: \n Accuracy: %lf\%", 100*correct);
-}
+//         if ( i % 10000 == 0){
+//             double loss = cross_entropy(&(y[i]), nn->a2 );
+//             printf("\nloss: %lf [%d/%d] ", loss, i+1, limit);
+//             // printf("\n");
+//             // for (int j=0; j< LAYER_ONE_SIZE; j++){
+//             //     printf("%lf ", nn->bias0[j]);
+//             // }
+//             // printf("\n");
+//         }
+//     }
+//     correct = correct / limit;
+//     printf("\nTraining Error: \n Accuracy: %lf\%", 100*correct);
+// }
 
 // void test(double **x, int *y, struct model *nn){
     
@@ -275,7 +291,6 @@ void train(double **x, int *y, struct model *nn){
 // }
 
 
-#include "test_images.h"
 
 int main(){
 	// main_loop();

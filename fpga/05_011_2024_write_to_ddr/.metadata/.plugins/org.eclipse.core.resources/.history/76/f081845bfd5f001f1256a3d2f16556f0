@@ -1,0 +1,20 @@
+
+
+#include <stdio.h>
+
+int snippet1()
+{
+	int x = 0;
+	int y = 5;
+	int z = x + y;
+
+	return z;
+
+}
+
+
+int main () {
+
+    printf("%d", snippet1());
+
+}

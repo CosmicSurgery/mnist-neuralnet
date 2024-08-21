@@ -1,0 +1,7 @@
+13:21:02 **** Clean-only build of configuration Debug for project validate_forwardpass_withheader ****
+make clean 
+rm -rf  ./src/testforward_withheader.o  ./src/testforward_withheader.d  validate_forwardpass_withheader.elf.size  validate_forwardpass_withheader.elf
+' '
+
+13:21:02 Build Finished (took 267ms)
+

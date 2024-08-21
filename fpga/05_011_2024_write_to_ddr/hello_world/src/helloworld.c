@@ -49,12 +49,23 @@
 #include "platform.h"
 #include "xil_printf.h"
 
+int snippet1()
+{
+	int x = 0;
+	int y = 5;
+	int z = x + y;
+
+	return z;
+
+}
 
 int main()
 {
     init_platform();
 
     print("Hello World\n\r");
+
+    printf("%d", snippet1());
 
     cleanup_platform();
     return 0;

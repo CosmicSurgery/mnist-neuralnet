@@ -11,5 +11,7 @@ targets -set -nocase -filter {name =~"APU*"}
 source C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/_ide/psinit/ps7_init.tcl
 ps7_init
 ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/Debug/hello_world.elf
 configparams force-mem-access 0
 bpadd -addr &main

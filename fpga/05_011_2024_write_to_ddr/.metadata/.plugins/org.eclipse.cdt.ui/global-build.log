@@ -1,6 +1,6 @@
-14:11:22 **** Build of project design_1_wrapper ****
-buildplatform.bat 65154 design_1_wrapper  
-XSDB Server Channel: tcfchan#1
+15:07:24 **** Build of project design_1_wrapper ****
+buildplatform.bat 52187 design_1_wrapper  
+XSDB Server Channel: tcfchan#2
 Building the zynq_fsbl application.
 make -C zynq_fsbl_bsp
 
@@ -533,9 +533,6 @@ include -I.
 arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c nand.c -o nand.o -Izynq_fsbl_bsp/ps7_cortexa
 9_0/include -I.
 
-arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c nor.c -o nor.o -Izynq_fsbl_bsp/ps7_cortexa9_
-0/include -I.
-
 arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c image_mover.c -o image_mover.o -Izynq_fsbl_b
 sp/ps7_cortexa9_0/include -I.
 
@@ -555,6 +552,9 @@ zynq_fsbl_bsp/ps7_cortexa9_0/include/xtime_l.h:85:9: note: #pragma message: For 
 arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c rsa.c -o rsa.o -Izynq_fsbl_bsp/ps7_cortexa9_
 0/include -I.
 
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c nor.c -o nor.o -Izynq_fsbl_bsp/ps7_cortexa9_
+0/include -I.
+
 arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c qspi.c -o qspi.o -Izynq_fsbl_bsp/ps7_cortexa
 9_0/include -I.
 
@@ -571,7 +571,7 @@ zynq_fsbl_bsp/ps7_cortexa9_0/include/xtime_l.h:85:9: note: #pragma message: For 
 arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c fsbl_handoff.S -o fsbl_handoff.o -Izynq_fsbl
 _bsp/ps7_cortexa9_0/include -I.
 
-arm-none-eabi-gcc -o executable.elf  sd.o  nand.o  nor.o  image_mover.o  md5.o  fsbl_hooks.o  main.o  rsa.o  qspi.o  ps7_init.o
+arm-none-eabi-gcc -o executable.elf  sd.o  nand.o  image_mover.o  md5.o  fsbl_hooks.o  main.o  rsa.o  nor.o  qspi.o  ps7_init.o
   pcap.o  fsbl_handoff.o -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=
 hard -Wl,-build-id=none -specs=Xilinx.spec  -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxi
 l,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group                                    -Wl,--gc-section
@@ -835,36 +835,48 @@ files -g -Wall -Wextra"
 
 'Finished building libraries'
 
-14:21:52 **** Build of configuration Debug for project hello_world_system ****
+15:08:58 **** Build of configuration Debug for project delete ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/delete.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/delete.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/bspinclude/include -MMD -MP -MF"src/delete.d" -MT"src/delete.o" -o "src/delete.o" "../src/delete.c"
+In file included from ../src/delete.c:8:
+../src/test_images.h:27:15: warning: 'weight_2' defined but not used [-Wunused-variable]
+ static double weight_2[10][18] = {
+               ^~~~~~~~
+In file included from ../src/delete.c:8:
+../src/test_images.h:6:15: warning: 'bias_2' defined but not used [-Wunused-variable]
+ static double bias_2[10] = {-0.14217160642147064,-0.06259177625179291,-0.050800859928131104,-0.20560166239738464,-0.09875832498073578,-0.12390799820423126,0.011121481657028198,0.23385493457317352,0.14305533468723297,0.11939801275730133};
+               ^~~~~~
+In file included from ../src/delete.c:8:
+../src/test_images.h:5:15: warning: 'bias_0' defined but not used [-Wunused-variable]
+ static double bias_0[18] = {0.011194322258234024,0.0015970803797245026,0.0016627982258796692,-0.0255124531686306,-0.013787176460027695,-0.010484963655471802,-0.016590438783168793,-0.013576971367001534,0.0041747018694877625,0.034300658851861954,-0.014761606231331825,-0.030927034094929695,0.009796999394893646,0.03201260790228844,-0.03512176498770714,0.03137221559882164,0.025793373584747314,0.01090238243341446};
+               ^~~~~~
+In file included from ../src/delete.c:8:
+../src/test_images.h:2:15: warning: 'img' defined but not used [-Wunused-variable]
+ static double img[784] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84,185,159,151,60,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,222,254,254,254,254,241,198,198,198,198,198,198,198,198,170,52,0,0,0,0,0,0,0,0,0,0,0,0,67,114,72,114,163,227,254,225,254,254,254,250,229,254,254,140,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,66,14,67,67,67,59,21,236,254,106,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,83,253,209,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22,233,255,83,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,129,254,238,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,59,249,254,62,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,133,254,187,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,205,248,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,126,254,182,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,251,240,57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,221,254,166,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,203,254,219,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,254,254,77,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,224,254,115,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,133,254,254,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,242,254,254,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,254,254,219,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,254,207,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+               ^~~
+'Finished building: ../src/delete.c'
+' '
+'Building target: delete.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/bsplib/lib -o "delete.elf"  ./src/delete.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: delete.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size delete.elf  |tee "delete.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56508	 123416	  23328	 203252	  319f4	delete.elf
+'Finished building: delete.elf.size'
+' '
+15:09:01 **** Build of configuration Debug for project delete_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 65154 C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world_system/Debug/system.bif
-sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world_system/Debug/system.bif --bitstream C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/_ide/bitstream/design_1_wrapper.bit --elf C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/Debug/hello_world.elf,ps7_cortexa9_0
-ELF does not exist: C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/Debug/hello_world.elf
-make: *** [makefile:37: sd_card] Error 1
-14:26:29 **** Incremental Build of configuration Debug for project hello_world_system ****
-make all 
-Generating bif file for the system project
-generate_system_bif.bat 65154 C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world_system/Debug/system.bif
-sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world_system/Debug/system.bif --bitstream C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/_ide/bitstream/design_1_wrapper.bit --elf C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/Debug/hello_world.elf,ps7_cortexa9_0
-ELF does not exist: C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/Debug/hello_world.elf
-make: *** [makefile:37: sd_card] Error 1
-14:26:43 **** Clean-only build of configuration Debug for project hello_world_system ****
-make clean 
-rm -rf ./_sds
-rm -rf sd_card
-rm -f system.bif
-14:26:51 **** Build of configuration Debug for project hello_world_system ****
-make all 
-Generating bif file for the system project
-generate_system_bif.bat 65154 C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world_system/Debug/system.bif
-sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world_system/Debug/system.bif --bitstream C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/_ide/bitstream/design_1_wrapper.bit --elf C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/Debug/hello_world.elf,ps7_cortexa9_0
-ELF does not exist: C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/Debug/hello_world.elf
-make: *** [makefile:37: sd_card] Error 1
-14:31:38 **** Incremental Build of configuration Debug for project hello_world_system ****
-make all 
-Generating bif file for the system project
-generate_system_bif.bat 65154 C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world_system/Debug/system.bif
-sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world_system/Debug/system.bif --bitstream C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/_ide/bitstream/design_1_wrapper.bit --elf C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/Debug/hello_world.elf,ps7_cortexa9_0
-ELF does not exist: C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/hello_world/Debug/hello_world.elf
-make: *** [makefile:37: sd_card] Error 1
+generate_system_bif.bat 52187 C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete_system/Debug/system.bif
+sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete_system/Debug/system.bif --bitstream C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete/_ide/bitstream/design_1_wrapper.bit --elf C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete/Debug/delete.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2019.2/bin/bootgen  -image C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

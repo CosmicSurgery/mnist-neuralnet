@@ -1,0 +1,129 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+#include "test_images.h"
+
+#define NUM_IMAGES 60000
+#define IMAGE_SIZE 784
+#define LAYER_ONE_SIZE 18
+#define LAYER_TWO_SIZE 10
+#define MAX_TXT_LINE_LENGTH 784*4 +1 // 784 pixels, each pixel is max 3 digits, plus one comma. The label is always at the beginning of the line and there are no spaces.
+#define LEARNING_RATE 0.001
+#define NUM_EPOCHS 1
+#define BATCH_SIZE 1
+
+//struct model {
+//    // This model has two layers, a 18x784 weight matrix, and a 10x18 weight matrix, with a 18 and 10 node bias vector respectively.
+//    double weight0[LAYER_ONE_SIZE][IMAGE_SIZE];
+//    double weight2[LAYER_TWO_SIZE][LAYER_ONE_SIZE];
+//    double bias0[LAYER_ONE_SIZE];
+//    double bias2[LAYER_TWO_SIZE];
+//    double a0[LAYER_ONE_SIZE];
+//    double a2[LAYER_TWO_SIZE];
+//    double z0[LAYER_ONE_SIZE];
+//    double z2[LAYER_TWO_SIZE];
+//    double loss2[LAYER_TWO_SIZE];
+//    double loss0[LAYER_ONE_SIZE];
+//};
+//
+//struct model build_model() {
+//	struct model nn;
+    // Initialize all arrays to zero
+//    memset(nn.weight0, 0, sizeof(nn.weight0));
+//    memset(nn.weight2, 0, sizeof(nn.weight2));
+//    memset(nn.bias0, 0, sizeof(nn.bias0));
+//    memset(nn.bias2, 0, sizeof(nn.bias2));
+//    memset(nn.a0, 0, sizeof(nn.a0));
+//    memset(nn.a2, 0, sizeof(nn.a2));
+//    memset(nn.z0, 0, sizeof(nn.z0));
+//    memset(nn.z2, 0, sizeof(nn.z2));
+//    memset(nn.loss0, 0, sizeof(nn.loss0));
+//    memset(nn.loss2, 0, sizeof(nn.loss2));
+
+//    FILE *file1 = fopen("linear_relu_stack.0.weight.txt", "r");
+//
+//    if (file1 == NULL) {
+//        printf("Error opening file1\n");
+//    }
+//
+//    // Read values from the file and assign them to the arrays
+//    for (int i = 0; i < LAYER_ONE_SIZE; i++) {
+//        for (int j = 0; j < IMAGE_SIZE; j++) {
+//            nn.weight0[i][j] = weight_0[i][j];
+//            // fscanf(file1, "%lf,", &nn.weight0[i][j]);
+//        }
+//    }
+//
+//
+////    fclose(file1);
+////    FILE *file2 = fopen("linear_relu_stack.2.weight.txt", "r");
+////
+////    if (file2 == NULL) {
+////        printf("Error opening file2\n");
+////    }
+//
+//    for (int i = 0; i < LAYER_TWO_SIZE; i++) {
+//        for (int j = 0; j < LAYER_ONE_SIZE; j++) {
+//            nn.weight2[i][j] = weight_2[i][j];
+//            // fscanf(file2, "%lf,", &nn.weight2[i][j]);
+//        }
+//    }
+//
+//
+////    fclose(file2);
+////    FILE *file3 = fopen("linear_relu_stack.0.bias.txt", "r");
+////
+////    if (file3 == NULL) {
+////        printf("Error opening file3\n");
+////    }
+//
+//    // Read bias values
+//    for (int i = 0; i < LAYER_ONE_SIZE; i++) {
+//        nn.bias0[i] = bias_0[i];
+//        // fscanf(file3, "%lf,", &nn.bias0[i]);
+//    }
+//
+////    fclose(file3);
+////    FILE *file4 = fopen("linear_relu_stack.2.bias.txt", "r");
+////
+////    if (file4 == NULL) {
+////        printf("Error opening file4\n");
+////    }
+//
+//    for (int i = 0; i < LAYER_TWO_SIZE; i++) {
+//        nn.bias2[i] = bias_2[i];
+//        // fscanf(file4, "%lf,", &nn.bias2[i]);
+//    }
+
+//    fclose(file4);
+    return nn;
+}
+
+int snippet1()
+{
+	int x = 0;
+	int y = 5;
+	int z = x + y;
+
+    printf("\n%d", weight_0[0][0]);
+
+	return z;
+
+}
+
+
+int main () {
+
+    printf("%d", snippet1());
+
+    printf("\n%d", weight_0[0][0]);
+
+//	struct model nn = build_model();
+
+	printf("debug");
+
+}
