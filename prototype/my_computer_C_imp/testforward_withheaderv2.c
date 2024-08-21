@@ -75,7 +75,7 @@ int forward(struct model *nn, double *x0){
 
 int main(){
 	// main_loop();
-    // char filename[] = "MNIST_train.txt";
+    // char filename[] = "MNIST_train.txt"; 
     // double **x;
     // int *y;
     // printf("Status Load: %d \n", read_MNIST(&x, &y, filename));

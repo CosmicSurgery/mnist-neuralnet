@@ -1,4 +1,4 @@
-15:09:01 **** Build of configuration Debug for project delete_system ****
+15:35:31 **** Build of configuration Debug for project delete_system ****
 make all 
 Generating bif file for the system project
 generate_system_bif.bat 52187 C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete_system/Debug/system.bif
@@ -6,5 +6,5 @@ sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/des
 creating BOOT.BIN using C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete/_ide/bitstream/design_1_wrapper.bit
 Running C:/Xilinx/Vitis/2019.2/bin/bootgen  -image C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-15:09:09 Build Finished (took 7s.819ms)
+15:35:37 Build Finished (took 6s.24ms)
 

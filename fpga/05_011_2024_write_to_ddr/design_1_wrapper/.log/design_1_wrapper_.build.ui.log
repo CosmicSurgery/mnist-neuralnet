@@ -1,6 +1,6 @@
-2024-08-21T15:07:24.600737400255-15:07:24 **** Build of project design_1_wrapper ****
+2024-08-21T15:34:20.76476700255-15:34:20 **** Build of project design_1_wrapper ****
 000-buildplatform.bat 52187 design_1_wrapper  
-000-XSDB Server Channel: tcfchan#2
+000-XSDB Server Channel: tcfchan#7
 000-Building the zynq_fsbl application.
 000-make -C zynq_fsbl_bsp
 000-
@@ -836,5 +836,5 @@
 000-'Finished building libraries'
 000-
 00255-
-15:08:49 Build Finished (took 1m:24s.678ms)
+15:35:23 Build Finished (took 1m:2s.805ms)
 
