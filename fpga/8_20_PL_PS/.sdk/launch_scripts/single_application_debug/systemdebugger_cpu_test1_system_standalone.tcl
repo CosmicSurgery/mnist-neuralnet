@@ -14,4 +14,5 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow C:/git_repos/mnist_neuralnet/fpga/8_20_PL_PS/cpu_test1/Debug/cpu_test1.elf
 configparams force-mem-access 0
-bpadd -addr &main
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con

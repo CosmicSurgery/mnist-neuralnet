@@ -13,6 +13,6 @@ f_write = open('/'.join((directory_path, data_file)) + '.h', 'w')
 f_write.write("unsigned char img[784] = {")
 for i,k in enumerate(img_str[1:-1]):
 	x = Fxp(float(k)/255, signed=True, n_word=32, n_frac=27)
-	f_write.write('0x'+x.bin()+',')
+	f_write.write('0b'+x.bin()+',')
 f_write.write(x.bin()+'};\n')
 f_write.close() 

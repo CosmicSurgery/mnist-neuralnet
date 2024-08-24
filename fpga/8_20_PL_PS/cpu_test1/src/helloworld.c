@@ -58,33 +58,49 @@ int main()
 
     print("Hello World\n\r");
 
-	UINTPTR bram_baseaddr = 0x40000000;
+	UINTPTR BRAM_BASEADDR = 0x40000000;
+	uint32_t read_value;
 
-    uint32_t value;
+	for (int i=0;i<784;i++){
+	    Xil_Out32(BRAM_BASEADDR, img[i]);
 
-	/* Print initial value */
-	xil_printf("Intial value of addr 0x%08X = 0x%08X\r\n", bram_baseaddr, *(uint32_t*)bram_baseaddr);
+	    // Read back the value from BRAM
+	    read_value = Xil_In32(BRAM_BASEADDR);
 
-	/* Tread pointer as pointer to 32 unsigned integer and assign value */
-	*(uint32_t*)bram_baseaddr = 0xDEADBEEF;
+	    // Print the written and read values
+	    printf("Written value: 0x%08X\n", img[i]);
+	    printf("Read value:    0x%08X\n", read_value);
 
-	/* Print initial value */
-	xil_printf("New value of addr 0x%08X = 0x%08X\r\n", bram_baseaddr, *(uint32_t*)bram_baseaddr);
-
-    for(int i=0; i<10; i++)
-    {
-    	Xil_Out32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 4*i, img[i]);
-    }
-
-    sleep(1);
-
-
-    for(int i=0; i<10; i++)
-    {
-    	value = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 4*i);
-    	xil_printf("Value at addr %x is %x\n", XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 4*i, value);
-
-    }
+	    // Compare the values
+	    if (img[i] != read_value) {
+	        printf("Test failed: Written and read values do not match.\n");
+	    }
+	}
+//    uint8_t value;
+//
+//	/* Print initial value */
+//	xil_printf("Intial value of addr 0x%08X = 0x%08X\r\n", bram_baseaddr, *(uint32_t*)bram_baseaddr);
+//
+//	/* Tread pointer as pointer to 32 unsigned integer and assign value */
+//	*(uint32_t*)bram_baseaddr = img[0];
+//
+//	/* Print initial value */
+//	xil_printf("New value of addr 0x%08X = 0x%08X\r\n", bram_baseaddr, *(uint32_t*)bram_baseaddr);
+//
+//    for(int i=0; i<10; i++)
+//    {
+//    	Xil_Out32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 4*i, img[i]);
+//    }
+//
+//    sleep(1);
+//
+//
+//    for(int i=0; i<10; i++)
+//    {
+//    	value = Xil_In8(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + i);
+//    	xil_printf("Value at addr %x is %8X\n", XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + i, value);
+//
+//    }
 
 //    xil_printf("BREAK: 1\n\r");
 //

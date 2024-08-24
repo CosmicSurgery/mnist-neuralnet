@@ -880,6 +880,7 @@
             <includePath path="#undef __ARM_FEATURE_CRYPTO" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_CMSE" removed="true"/>
             <includePath path="c:\xilinx\vitis\2019.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../arm-none-eabi/libc/usr/include"/>
+            <includePath path="#undef __ARM_ARCH_PROFILE" removed="true"/>
             <includePath path="#undef __ARM_FP16_FORMAT_ALTERNATIVE" removed="true"/>
             <includePath path="#undef __thumb2__" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_UNALIGNED" removed="true"/>
