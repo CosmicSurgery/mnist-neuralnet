@@ -2,7 +2,7 @@ import os
 
 # Set the input and output directories
 input_file = os.getcwd() + "\\data\\MNIST_txt\\MNIST_test.txt"
-output_dir = os.getcwd() + "\\data\\MNIST_txt\\MNIST_single_test_images"
+output_dir = os.getcwd() + "\\data\\MNIST_txt\\MNIST_single_test_images.txt"
 
 # Create the output directory if it doesn't exist
 if not os.path.exists(output_dir):

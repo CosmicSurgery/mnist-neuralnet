@@ -1,7 +1,25 @@
-13:21:02 **** Clean-only build of configuration Debug for project validate_forwardpass_withheader ****
-make clean 
-rm -rf  ./src/testforward_withheader.o  ./src/testforward_withheader.d  validate_forwardpass_withheader.elf.size  validate_forwardpass_withheader.elf
+15:02:28 **** Build of configuration Debug for project validate_forwardpass_withheader ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/testforward_withheader.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testforward_withheader.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/bspinclude/include -MMD -MP -MF"src/testforward_withheader.d" -MT"src/testforward_withheader.o" -o "src/testforward_withheader.o" "../src/testforward_withheader.c"
+'Finished building: ../src/testforward_withheader.c'
+' '
+'Building target: validate_forwardpass_withheader.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/bsplib/lib -o "validate_forwardpass_withheader.elf"  ./src/testforward_withheader.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: validate_forwardpass_withheader.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size validate_forwardpass_withheader.elf  |tee "validate_forwardpass_withheader.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57516	 123416	  23328	 204260	  31de4	validate_forwardpass_withheader.elf
+'Finished building: validate_forwardpass_withheader.elf.size'
 ' '
 
-13:21:02 Build Finished (took 267ms)
+15:02:30 Build Finished (took 1s.996ms)
 

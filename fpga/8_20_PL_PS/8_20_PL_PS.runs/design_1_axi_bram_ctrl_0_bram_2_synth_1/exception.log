@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\git_repos\mnist_neuralnet\fpga\8_20_PL_PS\8_20_PL_PS.runs\design_1_axi_bram_ctrl_0_bram_2_synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission denied

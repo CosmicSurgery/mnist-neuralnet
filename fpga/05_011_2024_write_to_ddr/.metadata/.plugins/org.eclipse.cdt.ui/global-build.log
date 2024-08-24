@@ -1,6 +1,6 @@
-15:34:20 **** Build of project design_1_wrapper ****
-buildplatform.bat 52187 design_1_wrapper  
-XSDB Server Channel: tcfchan#7
+15:01:11 **** Build of project design_1_wrapper ****
+buildplatform.bat 63847 design_1_wrapper  
+XSDB Server Channel: tcfchan#10
 Building the zynq_fsbl application.
 make -C zynq_fsbl_bsp
 
@@ -835,32 +835,32 @@ files -g -Wall -Wextra"
 
 'Finished building libraries'
 
-15:35:28 **** Build of configuration Debug for project delete ****
+15:02:28 **** Build of configuration Debug for project validate_forwardpass_withheader ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/delete.c'
+'Building file: ../src/testforward_withheader.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/delete.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/bspinclude/include -MMD -MP -MF"src/delete.d" -MT"src/delete.o" -o "src/delete.o" "../src/delete.c"
-'Finished building: ../src/delete.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testforward_withheader.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/bspinclude/include -MMD -MP -MF"src/testforward_withheader.d" -MT"src/testforward_withheader.o" -o "src/testforward_withheader.o" "../src/testforward_withheader.c"
+'Finished building: ../src/testforward_withheader.c'
 ' '
-'Building target: delete.elf'
+'Building target: validate_forwardpass_withheader.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/bsplib/lib -o "delete.elf"  ./src/delete.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: delete.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/bsplib/lib -o "validate_forwardpass_withheader.elf"  ./src/testforward_withheader.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: validate_forwardpass_withheader.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size delete.elf  |tee "delete.elf.size"
+arm-none-eabi-size validate_forwardpass_withheader.elf  |tee "validate_forwardpass_withheader.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  57516	 123416	  23328	 204260	  31de4	delete.elf
-'Finished building: delete.elf.size'
+  57516	 123416	  23328	 204260	  31de4	validate_forwardpass_withheader.elf
+'Finished building: validate_forwardpass_withheader.elf.size'
 ' '
-15:35:31 **** Build of configuration Debug for project delete_system ****
+15:02:31 **** Build of configuration Debug for project validate_forwardpass_withheader_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 52187 C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete_system/Debug/system.bif
-sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete_system/Debug/system.bif --bitstream C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete/_ide/bitstream/design_1_wrapper.bit --elf C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete/Debug/delete.elf,ps7_cortexa9_0
-creating BOOT.BIN using C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete/_ide/bitstream/design_1_wrapper.bit
-Running C:/Xilinx/Vitis/2019.2/bin/bootgen  -image C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/delete_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+generate_system_bif.bat 63847 C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/validate_forwardpass_withheader_system/Debug/system.bif
+sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/validate_forwardpass_withheader_system/Debug/system.bif --bitstream C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/validate_forwardpass_withheader/_ide/bitstream/design_1_wrapper.bit --elf C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/validate_forwardpass_withheader/Debug/validate_forwardpass_withheader.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/validate_forwardpass_withheader/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2019.2/bin/bootgen  -image C:/git_repos/mnist_neuralnet/fpga/05_011_2024_write_to_ddr/validate_forwardpass_withheader_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
