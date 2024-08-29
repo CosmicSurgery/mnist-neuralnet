@@ -1,29 +1,94 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x0",
+      "boundary_crc": "0x6F681B4E9C5A4BAB",
       "device": "xc7z010clg400-1",
       "name": "forward_pass_design",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.2"
+      "tool_version": "2019.2",
+      "validated": "true"
     },
     "design_tree": {
-      "processing_system7_0": ""
+      "blk_mem_gen_1": ""
     },
-    "components": {
-      "processing_system7_0": {
-        "vlnv": "xilinx.com:ip:processing_system7:5.5",
-        "xci_name": "forward_pass_design_processing_system7_0_0"
-      }
-    },
-    "addressing": {
-      "/processing_system7_0": {
-        "address_spaces": {
-          "Data": {
-            "range": "4G",
-            "width": "32"
+    "interface_ports": {
+      "BRAM_PORTA": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_ONLY"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
           }
         }
+      }
+    },
+    "components": {
+      "blk_mem_gen_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "forward_pass_design_blk_mem_gen_1_0",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../w_0_0.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Port_B_Clock": {
+            "value": "0"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "785"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "BRAM_PORTA_1": {
+        "interface_ports": [
+          "BRAM_PORTA",
+          "blk_mem_gen_1/BRAM_PORTA"
+        ]
       }
     }
   }

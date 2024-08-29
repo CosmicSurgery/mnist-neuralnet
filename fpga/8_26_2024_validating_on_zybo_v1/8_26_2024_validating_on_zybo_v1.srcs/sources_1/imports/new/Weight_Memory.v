@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Weight_Memory #(parameter weightFile="C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_0.mif", mem_width = 32, mem_depth = 784)(
+module Weight_Memory #(parameter weightFile="C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_0.coe", mem_width = 32, mem_depth = 784)(
     input clk,
     input ren,
     input [addressWidth-1:0] r_addr,
@@ -36,7 +36,7 @@ module Weight_Memory #(parameter weightFile="C:/git_repos/mnist_neuralnet/fpga/5
 		begin
 	        $readmemb(weightFile, mem);
 	    end
-	    
+	    	    
 	always @(posedge clk)
     begin
         if (ren & (r_addr < mem_depth+1))

@@ -1,13 +1,15 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-496,-214",
+   "Default View_TopLeft":"-602,-38",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 3 -x 760 -y -40 -defaultsOSRD
-levelinfo -pg 1 -380 -230 420 760 970
-pagesize -pg 1 -db -bbox -sgen -380 -280 970 200
+preplace port BRAM_PORTA -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 1 -x 430 -y 150 -defaultsOSRD
+preplace netloc BRAM_PORTA_1 1 0 1 20J 110n
+levelinfo -pg 1 0 430 540
+pagesize -pg 1 -db -bbox -sgen -150 0 540 290
 "
 }
-
+0

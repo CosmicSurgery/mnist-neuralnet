@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"forward_pass_design": {
+			"proto_instances": {
+			}
+		}
+	}
+}

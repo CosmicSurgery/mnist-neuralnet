@@ -116,7 +116,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
         end
     end
     
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_0.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_0.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_0.mif")) p_0 (
     .clk(clk),
     .rst(rst),
@@ -131,7 +131,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .r_addr(weight_addr)
     );
     
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_1.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_1.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_1.mif")) p_1 (
     .clk(clk),
     .rst(rst),
@@ -142,7 +142,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_2.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_2.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_2.mif")) p_2 (
     .clk(clk),
     .rst(rst),
@@ -153,7 +153,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_3.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_3.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_3.mif")) p_3 (
     .clk(clk),
     .rst(rst),
@@ -164,7 +164,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_4.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_4.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_4.mif")) p_4 (
     .clk(clk),
     .rst(rst),
@@ -175,7 +175,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_5.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_5.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_5.mif")) p_5 (
     .clk(clk),
     .rst(rst),
@@ -186,7 +186,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_6.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_6.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_6.mif")) p_6 (
     .clk(clk),
     .rst(rst),
@@ -197,7 +197,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_7.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_7.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_7.mif")) p_7 (
     .clk(clk),
     .rst(rst),
@@ -208,7 +208,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_8.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_8.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_8.mif")) p_8 (
     .clk(clk),
     .rst(rst),
@@ -219,7 +219,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_9.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_9.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_9.mif")) p_9 (
     .clk(clk),
     .rst(rst),
@@ -230,7 +230,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_10.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_10.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_10.mif")) p_10 (
     .clk(clk),
     .rst(rst),
@@ -241,7 +241,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_11.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_11.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_11.mif")) p_11 (
     .clk(clk),
     .rst(rst),
@@ -252,7 +252,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_12.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_12.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_12.mif")) p_12 (
     .clk(clk),
     .rst(rst),
@@ -263,7 +263,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_13.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_13.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_13.mif")) p_13 (
     .clk(clk),
     .rst(rst),
@@ -274,7 +274,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_14.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_14.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_14.mif")) p_14 (
     .clk(clk),
     .rst(rst),
@@ -285,7 +285,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_15.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_15.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_15.mif")) p_15 (
     .clk(clk),
     .rst(rst),
@@ -296,7 +296,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_16.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_16.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_16.mif")) p_16 (
     .clk(clk),
     .rst(rst),
@@ -307,7 +307,7 @@ module layer_0 #(parameter out_size = 18, in_size = 784, n_bits=32)(
     .radd(radd)
     );
         
-    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/w_0_17.mif"),
+    perceptron #(.weightFile("C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/w_0_17.coe"),
      .biasFile("C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/b_0_17.mif")) p_17 (
     .clk(clk),
     .rst(rst),
