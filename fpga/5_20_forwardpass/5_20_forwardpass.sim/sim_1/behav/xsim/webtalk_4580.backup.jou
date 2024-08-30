@@ -2,12 +2,11 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu Aug 29 09:00:26 2024
-# Process ID: 4064
+# Start of session at: Thu Aug 22 17:08:24 2024
+# Process ID: 4580
 # Current directory: C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.sim/sim_1/behav/xsim/xsim.dir/test_layer_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source C:/git_repos/mnist_neuralnet/fpga/5_20_forwardpass/5_20_forwardpass.sim/sim_1/behav/xsim/xsim.dir/test_layer_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Thu Aug 29 09:00:28 2024...
