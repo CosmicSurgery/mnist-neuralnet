@@ -72,9 +72,10 @@ module axi4_lite_register_module (
     wire rd_en = s_axil_arvalid & ~axi_rvalid;
     
     // Write logic
+    integer i;
     always @(posedge aclk) begin
         if (~aresetn) begin
-            for (integer i = 0; i < 18; i = i + 1) begin
+            for (i = 0; i < 18; i = i + 1) begin
                 bias_regs[i] <= 32'h0;
             end
             control_reg <= 32'h0;
@@ -164,7 +165,8 @@ module axi4_lite_register_module (
     assign bias_16 = bias_regs[16];
     assign bias_17 = bias_regs[17];
     
-    // Assign control register output
-    assign control = control_reg;
+
+// Assign control register output
+assign control = control_reg;
 
 endmodule

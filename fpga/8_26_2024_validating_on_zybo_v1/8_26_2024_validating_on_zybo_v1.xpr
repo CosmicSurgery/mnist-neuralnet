@@ -32,7 +32,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zybo"/>
-    <Option Name="WTXSimLaunchSim" Val="9"/>
+    <Option Name="WTXSimLaunchSim" Val="16"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -150,6 +150,24 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/bd/bias_register_test/bias_register_test.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/rtl/axi4_lite_register_module.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/axi4_lite_register_module/rtl/axi4_lite_register_module.v"/>
+          <Attr Name="ImportTime" Val="1724971082"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="miles_forward_pass_design_blk_mem_gen_1_0"/>
@@ -162,8 +180,18 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <File Path="$PSRCDIR/sim_1/imports/tb/axi4_lite_register_module_tb.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../source/axi4_lite_register_module/tb/axi4_lite_register_module_tb.v"/>
+          <Attr Name="ImportTime" Val="1724970984"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sim_1/imports/new/test_layer.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../5_20_forwardpass/5_20_forwardpass.srcs/sim_1/new/test_layer.v"/>
           <Attr Name="ImportTime" Val="1724108427"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -173,9 +201,8 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="test_layer"/>
+        <Option Name="TopModule" Val="axi4_lite_register_module_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>

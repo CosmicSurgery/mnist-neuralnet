@@ -108,6 +108,7 @@ module axi4_lite_register_module_tb;
         #20;
 
         // Test bias registers
+        
         for (integer i = 0; i < 18; i = i + 1) begin
             // Write to bias register
             axi_write(i * 4, 32'h12345678 + i);
