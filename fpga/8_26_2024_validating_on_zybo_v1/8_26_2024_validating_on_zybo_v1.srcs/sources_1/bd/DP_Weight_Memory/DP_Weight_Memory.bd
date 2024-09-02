@@ -5,7 +5,8 @@
       "device": "xc7z010clg400-1",
       "name": "DP_Weight_Memory",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.2"
+      "tool_version": "2019.2",
+      "validated": "true"
     },
     "design_tree": {
       "blk_mem_gen_0": "",
@@ -16,8 +17,28 @@
         "mode": "Slave",
         "vlnv": "xilinx.com:interface:bram_rtl:1.0",
         "parameters": {
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
           "READ_WRITE_MODE": {
             "value": "READ_WRITE"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
           }
         }
       },
@@ -30,6 +51,10 @@
           },
           "PROTOCOL": {
             "value": "AXI4LITE"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
           },
           "ID_WIDTH": {
             "value": "0"
@@ -94,6 +119,14 @@
           "MAX_BURST_LENGTH": {
             "value": "1"
           },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "DP_Weight_Memory_s_axi_aclk",
+            "value_src": "default"
+          },
           "NUM_READ_THREADS": {
             "value": "1"
           },
@@ -105,6 +138,10 @@
           },
           "WUSER_BITS_PER_BYTE": {
             "value": "0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           }
         }
       }
@@ -114,14 +151,44 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "S_AXI",
+            "value_src": "default"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "s_axi_aresetn",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "DP_Weight_Memory_s_axi_aclk",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
           }
         }
       },
       "s_axi_aresetn": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {

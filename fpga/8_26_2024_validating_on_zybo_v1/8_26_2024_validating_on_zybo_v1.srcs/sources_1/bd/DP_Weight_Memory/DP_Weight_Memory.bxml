@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="DP_Weight_Memory" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1724710532"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1724710532"/>
-    <Generation Name="SIMULATION" State="STALE" Timestamp="1724710532"/>
-    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1724706691"/>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1725302117"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1725302117"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1725302117"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1725302117"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\DP_Weight_Memory_blk_mem_gen_0_0\DP_Weight_Memory_blk_mem_gen_0_0.xci" Type="IP">
         <Instance HierarchyPath="blk_mem_gen_0"/>
@@ -40,6 +40,26 @@
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="OUT_OF_CONTEXT"/>
+      </File>
+      <File Name="hw_handoff\DP_Weight_Memory.hwh" Type="HwHandoff">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="hw_handoff\DP_Weight_Memory_bd.tcl">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="synth\DP_Weight_Memory.hwdef">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="sim\DP_Weight_Memory.protoinst">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
       </File>
     </FileCollection>
   </CompositeFile>

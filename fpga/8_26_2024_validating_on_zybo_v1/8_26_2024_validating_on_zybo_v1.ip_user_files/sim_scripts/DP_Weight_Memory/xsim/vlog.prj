@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../bd/DP_Weight_Memory/ip/DP_Weight_Memory_blk_mem_gen_0_0/sim/DP_Weight_Memory_blk_mem_gen_0_0.v" \
+"../../../bd/DP_Weight_Memory/sim/DP_Weight_Memory.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

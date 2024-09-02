@@ -42,7 +42,7 @@ module perceptron #(activation="relu")(
   input [3:0]S_AXI_wstrb,
   input S_AXI_wvalid,
   input s_axi_aresetn,   // active low reset
-    input clk,
+    input s_axi_aclk,
     input [31:0] x_tdata, // un-weighted input value
     input x_tvalid,
     output reg x_tready,
@@ -70,7 +70,6 @@ DP_Weight_Memory_wrapper Weight_Memory (
     .BRAM_PORTB_din     (32'd0),
     .BRAM_PORTB_dout     (wout),
     .BRAM_PORTB_en     (1'b1),
-    .BRAM_PORTB_rst     (1'b0),
     .BRAM_PORTB_we     (1'b0),
     .S_AXI_araddr     (S_AXI_araddr),
     .S_AXI_arprot     (S_AXI_arprot),   
