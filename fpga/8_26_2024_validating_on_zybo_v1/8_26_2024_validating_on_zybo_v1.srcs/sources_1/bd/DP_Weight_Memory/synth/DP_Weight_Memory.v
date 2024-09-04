@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Mon Sep  2 11:35:17 2024
+//Date        : Tue Sep  3 20:29:57 2024
 //Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 //Command     : generate_target DP_Weight_Memory.bd
 //Design      : DP_Weight_Memory
@@ -16,6 +16,7 @@ module DP_Weight_Memory
     BRAM_PORTB_din,
     BRAM_PORTB_dout,
     BRAM_PORTB_en,
+    BRAM_PORTB_rst,
     BRAM_PORTB_we,
     S_AXI_araddr,
     S_AXI_arprot,
@@ -38,12 +39,13 @@ module DP_Weight_Memory
     S_AXI_wvalid,
     s_axi_aclk,
     s_axi_aresetn);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1, READ_WRITE_MODE READ_WRITE" *) input [9:0]BRAM_PORTB_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB, MASTER_TYPE BRAM_CTRL, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1, READ_WRITE_MODE READ_WRITE" *) input [31:0]BRAM_PORTB_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK" *) input BRAM_PORTB_clk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB DIN" *) input [31:0]BRAM_PORTB_din;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB DOUT" *) output [31:0]BRAM_PORTB_dout;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB EN" *) input BRAM_PORTB_en;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB WE" *) input [0:0]BRAM_PORTB_we;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB RST" *) input BRAM_PORTB_rst;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB WE" *) input [3:0]BRAM_PORTB_we;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, ADDR_WIDTH 15, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN DP_Weight_Memory_s_axi_aclk, DATA_WIDTH 32, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 1, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [11:0]S_AXI_araddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARPROT" *) input [2:0]S_AXI_arprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *) output S_AXI_arready;
@@ -66,12 +68,13 @@ module DP_Weight_Memory
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, CLK_DOMAIN DP_Weight_Memory_s_axi_aclk, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input s_axi_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.S_AXI_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input s_axi_aresetn;
 
-  wire [9:0]BRAM_PORTB_1_ADDR;
+  wire [31:0]BRAM_PORTB_1_ADDR;
   wire BRAM_PORTB_1_CLK;
   wire [31:0]BRAM_PORTB_1_DIN;
   wire [31:0]BRAM_PORTB_1_DOUT;
   wire BRAM_PORTB_1_EN;
-  wire [0:0]BRAM_PORTB_1_WE;
+  wire BRAM_PORTB_1_RST;
+  wire [3:0]BRAM_PORTB_1_WE;
   wire [11:0]S_AXI_1_ARADDR;
   wire [2:0]S_AXI_1_ARPROT;
   wire S_AXI_1_ARREADY;
@@ -96,15 +99,17 @@ module DP_Weight_Memory
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DOUT;
   wire axi_bram_ctrl_0_BRAM_PORTA_EN;
+  wire axi_bram_ctrl_0_BRAM_PORTA_RST;
   wire [3:0]axi_bram_ctrl_0_BRAM_PORTA_WE;
   wire s_axi_aclk_1;
   wire s_axi_aresetn_1;
 
-  assign BRAM_PORTB_1_ADDR = BRAM_PORTB_addr[9:0];
+  assign BRAM_PORTB_1_ADDR = BRAM_PORTB_addr[31:0];
   assign BRAM_PORTB_1_CLK = BRAM_PORTB_clk;
   assign BRAM_PORTB_1_DIN = BRAM_PORTB_din[31:0];
   assign BRAM_PORTB_1_EN = BRAM_PORTB_en;
-  assign BRAM_PORTB_1_WE = BRAM_PORTB_we[0];
+  assign BRAM_PORTB_1_RST = BRAM_PORTB_rst;
+  assign BRAM_PORTB_1_WE = BRAM_PORTB_we[3:0];
   assign BRAM_PORTB_dout[31:0] = BRAM_PORTB_1_DOUT;
   assign S_AXI_1_ARADDR = S_AXI_araddr[11:0];
   assign S_AXI_1_ARPROT = S_AXI_arprot[2:0];
@@ -132,6 +137,7 @@ module DP_Weight_Memory
         .bram_clk_a(axi_bram_ctrl_0_BRAM_PORTA_CLK),
         .bram_en_a(axi_bram_ctrl_0_BRAM_PORTA_EN),
         .bram_rddata_a(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
+        .bram_rst_a(axi_bram_ctrl_0_BRAM_PORTA_RST),
         .bram_we_a(axi_bram_ctrl_0_BRAM_PORTA_WE),
         .bram_wrdata_a(axi_bram_ctrl_0_BRAM_PORTA_DIN),
         .s_axi_aclk(s_axi_aclk_1),
@@ -156,7 +162,7 @@ module DP_Weight_Memory
         .s_axi_wstrb(S_AXI_1_WSTRB),
         .s_axi_wvalid(S_AXI_1_WVALID));
   DP_Weight_Memory_blk_mem_gen_0_0 blk_mem_gen_0
-       (.addra(axi_bram_ctrl_0_BRAM_PORTA_ADDR[9:0]),
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
         .addrb(BRAM_PORTB_1_ADDR),
         .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
         .clkb(BRAM_PORTB_1_CLK),
@@ -166,6 +172,8 @@ module DP_Weight_Memory
         .doutb(BRAM_PORTB_1_DOUT),
         .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
         .enb(BRAM_PORTB_1_EN),
-        .wea(axi_bram_ctrl_0_BRAM_PORTA_WE[0]),
+        .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
+        .rstb(BRAM_PORTB_1_RST),
+        .wea(axi_bram_ctrl_0_BRAM_PORTA_WE),
         .web(BRAM_PORTB_1_WE));
 endmodule

@@ -4,9 +4,10 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto ffc4ca0781
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'bram_rst_a' is not connected on this instance [C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/8_26_2024_validating_on_zybo_v1.ip_user_files/bd/DP_Weight_Memory/sim/DP_Weight_Memory.v:130]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 32 for port 'BRAM_PORTB_addr' [C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl/image_loader_module.v:42]
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl/image_loader_module.v" Line 2. Module image_loader_module doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard
@@ -23,7 +24,6 @@ Compiling architecture dp_weight_memory_axi_bram_ctrl_0_1_arch of entity xil_def
 Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
 Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
 Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
-Compiling module blk_mem_gen_v8_4_4.blk_mem_axi_regs_fwd_v8_4(C_DATA...
 Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="zyn...
 Compiling module xil_defaultlib.DP_Weight_Memory_blk_mem_gen_0_0
 Compiling module xil_defaultlib.DP_Weight_Memory

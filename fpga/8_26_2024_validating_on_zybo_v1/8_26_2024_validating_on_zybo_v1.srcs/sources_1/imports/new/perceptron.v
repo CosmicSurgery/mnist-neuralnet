@@ -69,8 +69,9 @@ DP_Weight_Memory_wrapper Weight_Memory (
     .BRAM_PORTB_clk     (s_axi_aclk),
     .BRAM_PORTB_din     (32'd0),
     .BRAM_PORTB_dout     (wout),
+    .BRAM_PORTB_rst     (s_axi_aresetn),
     .BRAM_PORTB_en     (1'b1),
-    .BRAM_PORTB_we     (1'b0),
+    .BRAM_PORTB_we     (4'b0000),
     .S_AXI_araddr     (S_AXI_araddr),
     .S_AXI_arprot     (S_AXI_arprot),   
     .S_AXI_arready     (S_AXI_arready),
@@ -163,7 +164,7 @@ DP_Weight_Memory_wrapper Weight_Memory (
         if(!s_axi_aresetn)
             r_addr <= 0;
         else
-        if(x_tvalid & x_tready & r_addr <= 10'd783) begin
+        if(x_tvalid & x_tready & (r_addr <= 10'd783)) begin
             r_addr <= r_addr + 1;
         end
     end

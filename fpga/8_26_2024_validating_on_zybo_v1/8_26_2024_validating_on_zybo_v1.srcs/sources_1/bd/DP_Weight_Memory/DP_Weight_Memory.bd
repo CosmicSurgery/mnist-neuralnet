@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB8F7DC2E72A67FCA",
+      "boundary_crc": "0x470D1E665968B5E8",
       "device": "xc7z010clg400-1",
       "name": "DP_Weight_Memory",
       "synth_flow_mode": "Hierarchical",
@@ -13,35 +13,6 @@
       "axi_bram_ctrl_0": ""
     },
     "interface_ports": {
-      "BRAM_PORTB": {
-        "mode": "Slave",
-        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
-        "parameters": {
-          "MEM_SIZE": {
-            "value": "8192",
-            "value_src": "default"
-          },
-          "MEM_WIDTH": {
-            "value": "32",
-            "value_src": "default"
-          },
-          "MEM_ECC": {
-            "value": "NONE",
-            "value_src": "default"
-          },
-          "MASTER_TYPE": {
-            "value": "OTHER",
-            "value_src": "default"
-          },
-          "READ_WRITE_MODE": {
-            "value": "READ_WRITE"
-          },
-          "READ_LATENCY": {
-            "value": "1",
-            "value_src": "default"
-          }
-        }
-      },
       "S_AXI": {
         "mode": "Slave",
         "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
@@ -144,6 +115,34 @@
             "value_src": "default"
           }
         }
+      },
+      "BRAM_PORTB": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MASTER_TYPE": {
+            "value": "BRAM_CTRL"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        }
       }
     },
     "ports": {
@@ -196,8 +195,11 @@
         "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
         "xci_name": "DP_Weight_Memory_blk_mem_gen_0_0",
         "parameters": {
+          "EN_SAFETY_CKT": {
+            "value": "true"
+          },
           "Enable_32bit_Address": {
-            "value": "false"
+            "value": "true"
           },
           "Enable_B": {
             "value": "Use_ENB_Pin"
@@ -218,25 +220,19 @@
             "value": "50"
           },
           "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "true"
+            "value": "false"
           },
           "Register_PortB_Output_of_Memory_Primitives": {
-            "value": "true"
-          },
-          "Use_Byte_Write_Enable": {
             "value": "false"
           },
           "Use_RSTA_Pin": {
-            "value": "false"
+            "value": "true"
           },
           "Use_RSTB_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "784"
+            "value": "true"
           },
           "use_bram_block": {
-            "value": "Stand_Alone"
+            "value": "BRAM_Controller"
           }
         }
       },
@@ -254,10 +250,10 @@
       }
     },
     "interface_nets": {
-      "axi_bram_ctrl_0_BRAM_PORTA": {
+      "BRAM_PORTB_1": {
         "interface_ports": [
-          "axi_bram_ctrl_0/BRAM_PORTA",
-          "blk_mem_gen_0/BRAM_PORTA"
+          "BRAM_PORTB",
+          "blk_mem_gen_0/BRAM_PORTB"
         ]
       },
       "S_AXI_1": {
@@ -266,10 +262,10 @@
           "axi_bram_ctrl_0/S_AXI"
         ]
       },
-      "BRAM_PORTB_1": {
+      "axi_bram_ctrl_0_BRAM_PORTA": {
         "interface_ports": [
-          "BRAM_PORTB",
-          "blk_mem_gen_0/BRAM_PORTB"
+          "axi_bram_ctrl_0/BRAM_PORTA",
+          "blk_mem_gen_0/BRAM_PORTA"
         ]
       }
     },

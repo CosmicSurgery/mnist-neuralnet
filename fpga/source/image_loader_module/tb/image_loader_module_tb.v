@@ -1,3 +1,7 @@
+`timescale 1ns / 1ps
+
+// test
+
 module tb_image_loader_module();
 
   reg start;
@@ -25,6 +29,9 @@ module tb_image_loader_module();
   wire [31:0] x_tdata;
   wire x_tvalid;
   reg x_tready;
+    
+    wire[9:0] hid_addr;
+    assign hid_addr = uut.r_addr;
 
   // Instantiate the module
   image_loader_module uut (
@@ -74,43 +81,55 @@ module tb_image_loader_module();
     S_AXI_bready = 0;
     S_AXI_rready = 0;
     S_AXI_wdata = 0;
-    S_AXI_wstrb = 0;
+    S_AXI_wstrb = 4'b1111;
     S_AXI_wvalid = 0;
     s_axi_aresetn = 0;
     x_tready = 0;
 
     // Apply reset
-    #20 s_axi_aresetn = 1;
+    repeat (30) @(posedge s_axi_aclk);
+    s_axi_aresetn = 1;
+    x_tready = 1;
+    
+
+
+    // Simulate AXI transactions
+
+    axi_write(12'h000, 32'hdeadbeef);
+    
+    repeat (10) @(posedge s_axi_aclk);
+
+    axi_write(12'h001, 32'hdeadbeff);
+    
+    repeat (10) @(posedge s_axi_aclk);
+
+    axi_write(12'h002, 32'hdeadbfff);
+    
+    repeat (10) @(posedge s_axi_aclk);
+
+    axi_read(12'h000);
+    
+    repeat (10) @(posedge s_axi_aclk);
+
+    axi_read(12'h001);
+    
+    repeat (10) @(posedge s_axi_aclk);
+
+    axi_read(12'h002);
+    
+//    #300
     
     // Provide start signal
     #20 start = 1;
     #10 start = 0;
 
-    // Simulate AXI transactions
-    #10 S_AXI_arvalid = 1;
-    S_AXI_araddr = 12'h001;
-    #10 S_AXI_arvalid = 0;
-
-    #10 S_AXI_awvalid = 1;
-    S_AXI_awaddr = 12'h002;
-    #10 S_AXI_awvalid = 0;
-
-    #10 S_AXI_wvalid = 1;
-    S_AXI_wdata = 32'hDEADBEEF;
-    S_AXI_wstrb = 4'b1111;
-    #10 S_AXI_wvalid = 0;
-
-    #10 S_AXI_rready = 1;
-    S_AXI_bready = 1;
-    x_tready = 1;
-
     // Simulate data read
     while (uut.r_addr < 10'd783) begin
       #10;
-    end
+    end;
 
     // Finish simulation
-//    #100 $finish;
+    #100 $finish;
   end
 
   // Monitor output signals
@@ -118,5 +137,43 @@ module tb_image_loader_module();
     $monitor("Time: %0t | x_tdata: %h | x_tvalid: %b | r_addr: %d", 
              $time, x_tdata, x_tvalid, uut.r_addr);
   end
+  
+    // AXI write task
+    task axi_write;
+        input [31:0] addr;
+        input [31:0] data;
+        begin
+            S_AXI_awaddr <= addr;
+            S_AXI_awvalid <= 1;
+            S_AXI_wdata <= data;
+            S_AXI_wvalid <= 1;
+            S_AXI_bready <= 1;
+            @(posedge s_axi_aclk);
+            while (!S_AXI_awready || !S_AXI_wready) @(posedge s_axi_aclk);
+            S_AXI_awvalid <= 0;
+            while (!S_AXI_bvalid) @(posedge s_axi_aclk);
+            S_AXI_bready <= 0;
+            @(posedge s_axi_aclk);
+            S_AXI_wvalid <= 0;
+        end
+    endtask
+
+    // AXI read task
+    task axi_read;
+        input [31:0] addr;
+        begin
+            @(posedge s_axi_aclk);
+            S_AXI_araddr <= addr;
+            S_AXI_arvalid <= 1;
+            S_AXI_rready <= 1;
+            #1
+            @(posedge s_axi_aclk);
+            while (!S_AXI_arready) @(posedge s_axi_aclk);
+            S_AXI_arvalid <= 0;
+            while (!S_AXI_rvalid) @(posedge s_axi_aclk);
+            S_AXI_rready <= 0;
+            @(posedge s_axi_aclk);
+        end
+    endtask
 
 endmodule

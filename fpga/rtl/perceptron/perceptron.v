@@ -70,6 +70,7 @@ DP_Weight_Memory_wrapper Weight_Memory (
     .BRAM_PORTB_din     (32'd0),
     .BRAM_PORTB_dout     (wout),
     .BRAM_PORTB_en     (1'b1),
+    .BRAM_PORTB_rst     (1'b0),
     .BRAM_PORTB_we     (1'b0),
     .S_AXI_araddr     (S_AXI_araddr),
     .S_AXI_arprot     (S_AXI_arprot),   
@@ -107,6 +108,8 @@ DP_Weight_Memory_wrapper Weight_Memory (
 //    .addra(radd),
 //    .douta(wout)
 //    );
+
+// test
         
     always@(posedge s_axi_aclk) begin
         if (!s_axi_aresetn)
