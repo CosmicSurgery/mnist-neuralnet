@@ -65,7 +65,7 @@ module tb_image_loader_module();
   // Clock generation
   initial begin
     s_axi_aclk = 0;
-    forever #5 s_axi_aclk = ~s_axi_aclk; // 100MHz clock
+    forever #1 s_axi_aclk = ~s_axi_aclk; // 100MHz clock
   end
 
 
@@ -100,6 +100,11 @@ module tb_image_loader_module();
         axi_write(32'h0+i, 32'd0+i);
     end
     
+        // Simulate AXI transactions
+    for(i=3100;i<3136; i= i+4) begin 
+        axi_write(32'h0+i, 32'd0+i);
+    end
+    
 //    #300
     
     // Provide start signal
@@ -109,7 +114,7 @@ module tb_image_loader_module();
     start = 0;
 
     // Simulate data read
-    while (uut.r_addr < 32'd20) begin
+    while (uut.r_addr < 32'd3136) begin
       repeat (30) @(posedge s_axi_aclk);
     end;
 
