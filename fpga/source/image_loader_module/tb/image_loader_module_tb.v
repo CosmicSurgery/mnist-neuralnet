@@ -5,11 +5,11 @@
 module tb_image_loader_module();
 
   reg start;
-  reg [11:0] S_AXI_araddr;
+  reg [31:0] S_AXI_araddr;
   reg [2:0] S_AXI_arprot;
   wire S_AXI_arready;
   reg S_AXI_arvalid;
-  reg [11:0] S_AXI_awaddr;
+  reg [31:0] S_AXI_awaddr;
   reg [2:0] S_AXI_awprot;
   wire S_AXI_awready;
   reg S_AXI_awvalid;
@@ -30,7 +30,7 @@ module tb_image_loader_module();
   wire x_tvalid;
   reg x_tready;
     
-    wire[9:0] hid_addr;
+    wire[31:0] hid_addr;
     assign hid_addr = uut.r_addr;
 
   // Instantiate the module
@@ -68,6 +68,8 @@ module tb_image_loader_module();
     forever #5 s_axi_aclk = ~s_axi_aclk; // 100MHz clock
   end
 
+
+  integer i;
   // Test procedure
   initial begin
     // Initialize inputs
@@ -94,38 +96,21 @@ module tb_image_loader_module();
 
 
     // Simulate AXI transactions
-
-    axi_write(12'h000, 32'hdeadbeef);
-    
-    repeat (10) @(posedge s_axi_aclk);
-
-    axi_write(12'h001, 32'hdeadbeff);
-    
-    repeat (10) @(posedge s_axi_aclk);
-
-    axi_write(12'h002, 32'hdeadbfff);
-    
-    repeat (10) @(posedge s_axi_aclk);
-
-    axi_read(12'h000);
-    
-    repeat (10) @(posedge s_axi_aclk);
-
-    axi_read(12'h001);
-    
-    repeat (10) @(posedge s_axi_aclk);
-
-    axi_read(12'h002);
+    for(i=0;i<20; i= i+4) begin 
+        axi_write(32'h0+i, 32'd0+i);
+    end
     
 //    #300
     
     // Provide start signal
-    #20 start = 1;
-    #10 start = 0;
+    @(negedge s_axi_aclk);
+    start = 1;
+    repeat (10) @(posedge s_axi_aclk);
+    start = 0;
 
     // Simulate data read
-    while (uut.r_addr < 10'd783) begin
-      #10;
+    while (uut.r_addr < 32'd20) begin
+      repeat (30) @(posedge s_axi_aclk);
     end;
 
     // Finish simulation

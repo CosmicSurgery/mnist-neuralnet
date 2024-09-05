@@ -1,11 +1,11 @@
 
 module image_loader_module (
     input start, 
-    input [11:0]S_AXI_araddr ,
+    input [31:0]S_AXI_araddr ,
     input [2:0]S_AXI_arprot,
     output S_AXI_arready,
     input S_AXI_arvalid,
-    input [11:0]S_AXI_awaddr,
+    input [31:0]S_AXI_awaddr,
     input [2:0]S_AXI_awprot,
     output S_AXI_awready,
     input S_AXI_awvalid,
@@ -28,10 +28,11 @@ module image_loader_module (
     
 );
 
-    parameter addressWidth = 10;
+    parameter addressWidth = 32;
     parameter n_bits = 32;
     reg [addressWidth-1:0] r_addr;
     reg start_reg;
+    reg x_tvalid_del;
     wire pos_edge_start;
     
     assign pos_edge_start = start & !start_reg;
@@ -43,7 +44,7 @@ DP_Weight_Memory_wrapper IMG_LOADER (
     .BRAM_PORTB_clk     (s_axi_aclk),
     .BRAM_PORTB_din     (32'd0),
     .BRAM_PORTB_dout     (x_tdata),
-    .BRAM_PORTB_rst     (s_axi_aresetn),
+    .BRAM_PORTB_rst     (!s_axi_aresetn),
     .BRAM_PORTB_en     (1'b1),
     .BRAM_PORTB_we     (4'b0000),
     .S_AXI_araddr     (S_AXI_araddr),
@@ -75,26 +76,25 @@ DP_Weight_Memory_wrapper IMG_LOADER (
         start_reg <= start;
     end
     
-    reg [9:0] miles;
     always @(posedge s_axi_aclk) begin
+        x_tvalid <= x_tvalid_del;
         if(!s_axi_aresetn) begin
-            r_addr <= 10'd0;
+            r_addr <= 32'd0;
             x_tvalid <= 0;
-            miles <= 10'd0;
+            x_tvalid_del <=0;
         end
         else
             if (pos_edge_start) begin
-                r_addr <= 10'd0;
-                x_tvalid <= 1;
+                r_addr <= 32'd0;
+                x_tvalid_del <= 1; // x_tvalid should go high after a number of clock cycles equal to the BRAM's delay (which is 1).
             end
             else
-            if(x_tvalid & x_tready & (r_addr <= 10'd783)) begin
-                if (miles < 10'd2)
-                    miles <= miles +1;
-                else begin
-                    r_addr <= r_addr + 1;
-                    miles <= 10'd0;
-                end
+            if(x_tvalid_del & x_tready & (r_addr <= 32'd3132)) begin
+                x_tvalid <= x_tvalid_del;
+                r_addr <= r_addr + 4;
+            end
+            else if (r_addr == 32'd3136) begin
+                x_tvalid <= 0;
             end
     end
 

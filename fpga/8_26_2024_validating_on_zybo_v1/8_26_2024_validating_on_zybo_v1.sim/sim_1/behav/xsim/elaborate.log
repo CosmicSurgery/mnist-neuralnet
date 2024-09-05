@@ -4,10 +4,10 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto ffc4ca0781
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 32 for port 'BRAM_PORTB_addr' [C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl/image_loader_module.v:42]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'S_AXI_araddr' [C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl/image_loader_module.v:50]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'S_AXI_awaddr' [C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl/image_loader_module.v:54]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl/image_loader_module.v" Line 2. Module image_loader_module doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard
