@@ -22,11 +22,11 @@
 
 module perceptron #(activation="relu")(
   input start,
-  input [11:0]S_AXI_araddr ,
+  input [31:0]S_AXI_araddr ,
   input [2:0]S_AXI_arprot,
   output S_AXI_arready,
   input S_AXI_arvalid,
-  input [11:0]S_AXI_awaddr,
+  input [31:0]S_AXI_awaddr,
   input [2:0]S_AXI_awprot,
   output S_AXI_awready,
   input S_AXI_awvalid,
@@ -51,7 +51,7 @@ module perceptron #(activation="relu")(
     output reg done
     );
     
-    parameter addressWidth = 10;
+    parameter addressWidth = 32;
     parameter n_bits = 32;
     
 //    reg [n_bits-1:0] w;
@@ -70,8 +70,8 @@ DP_Weight_Memory_wrapper Weight_Memory (
     .BRAM_PORTB_din     (32'd0),
     .BRAM_PORTB_dout     (wout),
     .BRAM_PORTB_en     (1'b1),
-    .BRAM_PORTB_rst     (1'b0),
-    .BRAM_PORTB_we     (1'b0),
+    .BRAM_PORTB_rst     (!s_axi_aresetn),
+    .BRAM_PORTB_we     (4'b0000),
     .S_AXI_araddr     (S_AXI_araddr),
     .S_AXI_arprot     (S_AXI_arprot),   
     .S_AXI_arready     (S_AXI_arready),
@@ -135,7 +135,7 @@ DP_Weight_Memory_wrapper Weight_Memory (
                 x_tready <=1;
             end
             else 
-            if (x_tvalid & x_tready) begin
+            if (x_tvalid & x_tready & r_addr < 32'd3136) begin
                 mul <= $signed(wout) * $signed(x_tdata); // come back and see if I need to instantiate a DSP48
                 sum <= mul + sum;
                 // make sure to come back and check for overflow.
@@ -144,16 +144,16 @@ DP_Weight_Memory_wrapper Weight_Memory (
     end
     
     always @(posedge s_axi_aclk) begin
-        r_addr <= 0;
+        r_addr <= 32'd0;
     end
     
-    always @(negedge s_axi_aclk)
+    always @(posedge s_axi_aclk)
     begin
         if (!s_axi_aresetn) 
             done <=0;
         else if (pos_edge_start) 
             done <=0;
-        else if (r_addr == 10'd783) begin
+        else if (r_addr == 32'd3136) begin
             a_tdata <= sum[63-5:27];
             done <=1;
             if (activation == "relu") begin
@@ -169,8 +169,8 @@ DP_Weight_Memory_wrapper Weight_Memory (
         if(!s_axi_aresetn)
             r_addr <= 0;
         else
-        if(x_tvalid & x_tready & r_addr <= 10'd783) begin
-            r_addr <= r_addr + 1;
+        if(x_tvalid & x_tready & r_addr <= 32'd3132) begin
+            r_addr <= r_addr + 4;
         end
     end
     

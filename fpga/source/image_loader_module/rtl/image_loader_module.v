@@ -84,7 +84,7 @@ DP_Weight_Memory_wrapper IMG_LOADER (
             x_tvalid_del <=0;
         end
         else
-            if (pos_edge_start) begin
+            if (pos_edge_start & x_tready) begin
                 r_addr <= 32'd0;
                 x_tvalid_del <= 1; // x_tvalid should go high after a number of clock cycles equal to the BRAM's delay (which is 1).
             end
