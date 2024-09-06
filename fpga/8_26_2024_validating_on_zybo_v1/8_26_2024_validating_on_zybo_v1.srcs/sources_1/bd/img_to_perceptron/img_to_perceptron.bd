@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x0",
+      "boundary_crc": "0x358489689E66B4C5",
       "device": "xc7z010clg400-1",
       "name": "img_to_perceptron",
       "synth_flow_mode": "Hierarchical",
@@ -10,7 +10,9 @@
     "design_tree": {
       "axi_interconnect_0": {
         "xbar": "",
-        "s00_couplers": {},
+        "s00_couplers": {
+          "auto_pc": ""
+        },
         "m00_couplers": {},
         "m01_couplers": {}
       },
@@ -128,6 +130,18 @@
         "direction": "I",
         "left": "31",
         "right": "0"
+      },
+      "RESETN": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "start": {
+        "direction": "I"
       }
     },
     "components": {
@@ -272,11 +286,45 @@
                 "direction": "I"
               }
             },
+            "components": {
+              "auto_pc": {
+                "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
+                "xci_name": "img_to_perceptron_auto_pc_0",
+                "parameters": {
+                  "MI_PROTOCOL": {
+                    "value": "AXI4LITE"
+                  },
+                  "SI_PROTOCOL": {
+                    "value": "AXI4"
+                  }
+                }
+              }
+            },
             "interface_nets": {
-              "s00_couplers_to_s00_couplers": {
+              "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
-                  "M_AXI"
+                  "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
+                ]
+              }
+            },
+            "nets": {
+              "S_ACLK_1": {
+                "ports": [
+                  "S_ACLK",
+                  "auto_pc/aclk"
+                ]
+              },
+              "S_ARESETN_1": {
+                "ports": [
+                  "S_ARESETN",
+                  "auto_pc/aresetn"
                 ]
               }
             }
@@ -391,22 +439,16 @@
           }
         },
         "interface_nets": {
-          "m01_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
-            ]
-          },
           "xbar_to_m01_couplers": {
             "interface_ports": [
               "xbar/M01_AXI",
               "m01_couplers/S_AXI"
             ]
           },
-          "s00_couplers_to_xbar": {
+          "m01_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           },
           "axi_interconnect_0_to_s00_couplers": {
@@ -415,16 +457,22 @@
               "s00_couplers/S_AXI"
             ]
           },
+          "m00_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
+            ]
+          },
           "xbar_to_m00_couplers": {
             "interface_ports": [
               "xbar/M00_AXI",
               "m00_couplers/S_AXI"
             ]
           },
-          "m00_couplers_to_axi_interconnect_0": {
+          "s00_couplers_to_xbar": {
             "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
             ]
           }
         },
@@ -460,7 +508,7 @@
         "xci_name": "img_to_perceptron_image_loader_module_0_0",
         "parameters": {
           "addressWidth": {
-            "value": "10"
+            "value": "32"
           }
         }
       },
@@ -470,16 +518,16 @@
       }
     },
     "interface_nets": {
+      "S00_AXI_1": {
+        "interface_ports": [
+          "S00_AXI",
+          "axi_interconnect_0/S00_AXI"
+        ]
+      },
       "image_loader_module_0_x": {
         "interface_ports": [
           "image_loader_module_0/x",
           "perceptron_0/x"
-        ]
-      },
-      "axi_interconnect_0_M00_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M00_AXI",
-          "image_loader_module_0/S_AXI"
         ]
       },
       "axi_interconnect_0_M01_AXI": {
@@ -488,30 +536,14 @@
           "perceptron_0/S_AXI"
         ]
       },
-      "S00_AXI_1": {
+      "axi_interconnect_0_M00_AXI": {
         "interface_ports": [
-          "S00_AXI",
-          "axi_interconnect_0/S00_AXI"
+          "axi_interconnect_0/M00_AXI",
+          "image_loader_module_0/S_AXI"
         ]
       }
     },
     "nets": {
-      "Net": {
-        "ports": [
-          "image_loader_module_0/start",
-          "perceptron_0/start"
-        ]
-      },
-      "Net2": {
-        "ports": [
-          "axi_interconnect_0/S00_ARESETN",
-          "axi_interconnect_0/M00_ARESETN",
-          "axi_interconnect_0/M01_ARESETN",
-          "axi_interconnect_0/ARESETN",
-          "image_loader_module_0/s_axi_aresetn",
-          "perceptron_0/s_axi_aresetn"
-        ]
-      },
       "perceptron_0_done": {
         "ports": [
           "perceptron_0/done",
@@ -531,14 +563,32 @@
           "axi_interconnect_0/M01_ACLK",
           "axi_interconnect_0/M00_ACLK",
           "axi_interconnect_0/ACLK",
-          "perceptron_0/s_axi_aclk",
-          "image_loader_module_0/s_axi_aclk"
+          "image_loader_module_0/s_axi_aclk",
+          "perceptron_0/s_axi_aclk"
         ]
       },
       "bias_1": {
         "ports": [
           "bias",
           "perceptron_0/bias"
+        ]
+      },
+      "M01_ARESETN_1": {
+        "ports": [
+          "RESETN",
+          "axi_interconnect_0/M01_ARESETN",
+          "axi_interconnect_0/S00_ARESETN",
+          "axi_interconnect_0/M00_ARESETN",
+          "axi_interconnect_0/ARESETN",
+          "image_loader_module_0/s_axi_aresetn",
+          "perceptron_0/s_axi_aresetn"
+        ]
+      },
+      "start_1": {
+        "ports": [
+          "start",
+          "image_loader_module_0/start",
+          "perceptron_0/start"
         ]
       }
     },
@@ -547,7 +597,19 @@
         "address_spaces": {
           "S00_AXI": {
             "range": "4G",
-            "width": "32"
+            "width": "32",
+            "segments": {
+              "SEG_image_loader_module_0_reg0": {
+                "address_block": "/image_loader_module_0/S_AXI/reg0",
+                "offset": "0x00000000",
+                "range": "1G"
+              },
+              "SEG_perceptron_0_reg0": {
+                "address_block": "/perceptron_0/S_AXI/reg0",
+                "offset": "0x40000000",
+                "range": "1G"
+              }
+            }
           }
         }
       }

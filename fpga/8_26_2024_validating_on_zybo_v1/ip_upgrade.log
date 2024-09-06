@@ -1,6 +1,174 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Sep  5 09:44:24 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'layer_0_perceptron_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of layer_0_perceptron_0_2 (xilinx.com:user:perceptron:1.0 (Rev. 3)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Sep  5 09:44:24 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'layer_0_perceptron_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of layer_0_perceptron_0_1 (xilinx.com:user:perceptron:1.0 (Rev. 3)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Sep  5 09:44:24 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'layer_0_perceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of layer_0_perceptron_0_0 (xilinx.com:user:perceptron:1.0 (Rev. 3)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Sep  5 09:44:21 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'img_to_perceptron_perceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of img_to_perceptron_perceptron_0_0 (xilinx.com:user:perceptron:1.0 (Rev. 3)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Sep  5 08:42:19 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'layer_0_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of layer_0_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Sep  5 08:42:16 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'img_to_perceptron_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of img_to_perceptron_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Sep  5 08:41:06 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'layer_0_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of layer_0_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0) from (Rev. 1) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Sep  5 08:40:57 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'img_to_perceptron_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of img_to_perceptron_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0) from (Rev. 1) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
 | Date         : Wed Sep  4 21:04:41 2024
 | Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

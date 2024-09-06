@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../8_26_2024_validating_on_zybo_v1.srcs/sources_1/bd/layer_0/ipshared/ec67/hdl" --include "../../../../8_26_2024_validating_on_zybo_v1.srcs/sources_1/bd/layer_0/ipshared/8713/hdl" \
+"../../../../../source/perceptron/tb/perceptron_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

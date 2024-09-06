@@ -2,7 +2,7 @@
 
 // test
 
-module perceptron_tb();
+module img_to_perceptron_tb();
 
   reg start;
   reg [31:0] S_AXI_araddr;
@@ -26,8 +26,7 @@ module perceptron_tb();
   reg S_AXI_wvalid;
   reg s_axi_aresetn;
   reg s_axi_aclk;
-  reg [31:0] x_tdata;
-  reg [31:0] a_tdata;
+  wire [31:0] x_tdata;
   wire x_tvalid;
   reg x_tready;
     
@@ -48,9 +47,6 @@ module perceptron_tb();
   assign expected_values[3] = 32'd16+bias;
   assign expected_values[4] = 32'd25+bias;
   
-  wire[31:0] expected_a_tdata;
-  assign expected_a_tdata = expected_values[0] + expected_values[1] + expected_values[2] + expected_values[3] + expected_values[4];
-  
   reg [31:0] axi_addr;
   reg [31:0] read_data;
   integer ErrorCount;
@@ -58,7 +54,7 @@ module perceptron_tb();
   integer delay; // used to set N clock delays between AXI read / write transactions
   
   wire[9:0] hid_addr;
-  assign hid_addr = uut.r_addr;
+  assign hid_addr = uut.r_addr;;
   
   
   wire [31:0] a_tdata;
@@ -129,7 +125,7 @@ initial begin
     s_axi_aresetn = 1;
     x_tready = 1;
     
-    // Simulate AXI transactions to BRAM
+    // Simulate AXI transactions
     
     for (i = 0; i<5; i = i +1)
     begin
@@ -152,25 +148,6 @@ initial begin
             ErrorCount = ErrorCount + 1;
         end
     end     
-    
-    // Provide start signal
-    repeat (20) @(posedge s_axi_aclk) start = 1;
-    @(posedge s_axi_aclk);
-    // Test perceptron inner-logic.
-    for (i = 1; i<6; i = i +1)
-    begin    
-        x_tdata = 32'd0 + i;
-        @(posedge s_axi_aclk);
-    end
-    @(posedge s_axi_aclk) start = 0;
-    
-    if (a_tdata != expected_a_tdata) begin
-            $display("Error read value %x does not equal expected value %x", a_tdata, expected_tdata);
-            ErrorCount = ErrorCount + 1;    
-    end
-    
-    
-    
   end
   
   

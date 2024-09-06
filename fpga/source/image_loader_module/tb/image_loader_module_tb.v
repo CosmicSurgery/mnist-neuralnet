@@ -2,7 +2,7 @@
 
 // test
 
-module tb_image_loader_module();
+module image_loader_module_tb();
 
   reg start;
   reg [31:0] S_AXI_araddr;
