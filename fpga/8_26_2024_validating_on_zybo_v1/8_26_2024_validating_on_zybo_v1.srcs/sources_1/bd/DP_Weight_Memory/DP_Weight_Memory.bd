@@ -250,16 +250,16 @@
       }
     },
     "interface_nets": {
-      "BRAM_PORTB_1": {
-        "interface_ports": [
-          "BRAM_PORTB",
-          "blk_mem_gen_0/BRAM_PORTB"
-        ]
-      },
       "S_AXI_1": {
         "interface_ports": [
           "S_AXI",
           "axi_bram_ctrl_0/S_AXI"
+        ]
+      },
+      "BRAM_PORTB_1": {
+        "interface_ports": [
+          "BRAM_PORTB",
+          "blk_mem_gen_0/BRAM_PORTB"
         ]
       },
       "axi_bram_ctrl_0_BRAM_PORTA": {

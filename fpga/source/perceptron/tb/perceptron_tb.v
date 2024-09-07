@@ -30,7 +30,7 @@ module perceptron_tb();
   reg [31:0] a_tdata;
   wire x_tvalid;
   reg x_tready;
-    
+  
   wire [31:0] write_values [4:0];
   assign write_values[0] = 32'd1;
   assign write_values[1] = 32'd2;
@@ -165,13 +165,60 @@ initial begin
     @(posedge s_axi_aclk) start = 0;
     
     if (a_tdata != expected_a_tdata) begin
-            $display("Error read value %x does not equal expected value %x", a_tdata, expected_tdata);
+            $display("Error read value %x does not equal expected value %x", a_tdata, expected_a_tdata);
             ErrorCount = ErrorCount + 1;    
     end
     
+        // Finish simulation
+    $display("");
+    if(ErrorCount == 0)
+        $display("Simulation: PASSED");
+    else
+        $display("Simulation: FAILED");
+    $display("");
     
     
   end
+  
+      // AXI write task
+    task axi_write;
+        input [31:0] addr;
+        input [31:0] data;
+        begin
+            S_AXI_awaddr <= addr;
+            S_AXI_awvalid <= 1;
+            S_AXI_wdata <= data;
+            S_AXI_wvalid <= 1;
+            S_AXI_bready <= 1;
+            @(posedge s_axi_aclk);
+            while (!S_AXI_awready || !S_AXI_wready) @(posedge s_axi_aclk);
+            S_AXI_awvalid <= 0;
+            while (!S_AXI_bvalid) @(posedge s_axi_aclk);
+            S_AXI_bready <= 0;
+            @(posedge s_axi_aclk);
+            S_AXI_wvalid <= 0;
+        end
+    endtask
+
+    // AXI read task
+    task axi_read;
+        input [31:0] addr;
+        output [31:0] read_data;
+        begin
+            @(posedge s_axi_aclk);
+            S_AXI_araddr <= addr;
+            S_AXI_arvalid <= 1;
+            S_AXI_rready <= 1;
+            #1
+            @(posedge s_axi_aclk);
+            while (!S_AXI_arready) @(posedge s_axi_aclk);
+            S_AXI_arvalid <= 0;
+            while (!S_AXI_rvalid) @(posedge s_axi_aclk);
+            S_AXI_rready <= 0;
+            read_data <= S_AXI_rdata; // get read data value when rvalid and rready are high
+            @(posedge s_axi_aclk);
+        end
+    endtask
   
   
   endmodule

@@ -1,27 +1,11 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto ffc4ca0781584222b88257bdc1792280 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot perceptron_tb_behav xil_defaultlib.perceptron_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto ffc4ca0781584222b88257bdc1792280 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L axi_bram_ctrl_v4_1_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot perceptron_tb_behav xil_defaultlib.perceptron_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-3180] cannot find port 'done' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:96]
-ERROR: [VRFC 10-3180] cannot find port 'a_tdata' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:95]
-ERROR: [VRFC 10-3180] cannot find port 'bias' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:94]
-ERROR: [VRFC 10-3180] cannot find port 'x_tready' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:93]
-ERROR: [VRFC 10-3180] cannot find port 'x_tvalid' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:92]
-ERROR: [VRFC 10-3180] cannot find port 'x_tdata' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:91]
-ERROR: [VRFC 10-3180] cannot find port 's_axi_aclk' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:90]
-ERROR: [VRFC 10-3180] cannot find port 's_axi_aresetn' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:89]
-ERROR: [VRFC 10-3180] cannot find port 'S_AXI_wvalid' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:88]
-ERROR: [VRFC 10-3180] cannot find port 'S_AXI_wstrb' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:87]
-ERROR: [VRFC 10-3180] cannot find port 'S_AXI_wready' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:86]
-ERROR: [VRFC 10-3180] cannot find port 'S_AXI_wdata' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:85]
-ERROR: [VRFC 10-3180] cannot find port 'S_AXI_rvalid' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:84]
-ERROR: [VRFC 10-3180] cannot find port 'S_AXI_rresp' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:83]
-ERROR: [VRFC 10-3180] cannot find port 'S_AXI_rready' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:82]
-ERROR: [VRFC 10-3180] cannot find port 'S_AXI_rdata' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:81]
-ERROR: [VRFC 10-3180] cannot find port 'S_AXI_bvalid' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:80]
-ERROR: [VRFC 10-3180] cannot find port 'S_AXI_bresp' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:79]
-ERROR: [VRFC 10-3180] cannot find port 'S_AXI_bready' on this module [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:78]
-INFO: [#UNDEF] Sorry, too many errors..
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'S_AXI_araddr' [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:75]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'S_AXI_awaddr' [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:79]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'x_tready' is not permitted [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:93]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'a_tdata' is not permitted [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:95]
 ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
