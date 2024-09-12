@@ -1,11 +1,11 @@
 
 module image_loader_module (
     input start, 
-    input [31:0]S_AXI_araddr ,
+    input [11:0]S_AXI_araddr ,
     input [2:0]S_AXI_arprot,
     output S_AXI_arready,
     input S_AXI_arvalid,
-    input [31:0]S_AXI_awaddr,
+    input [11:0]S_AXI_awaddr,
     input [2:0]S_AXI_awprot,
     output S_AXI_awready,
     input S_AXI_awvalid,
@@ -28,7 +28,7 @@ module image_loader_module (
     
 );
 
-    parameter addressWidth = 32;
+    parameter addressWidth = 10;
     parameter n_bits = 32;
     reg [addressWidth-1:0] r_addr;
     reg start_reg;
@@ -39,9 +39,8 @@ module image_loader_module (
 
 
 
-DP_Weight_Memory_wrapper IMG_LOADER (
+dual_port_AXI_Native_bram IMG_LOADER (
     .BRAM_PORTB_addr    (r_addr),
-    .BRAM_PORTB_clk     (s_axi_aclk),
     .BRAM_PORTB_din     (32'd0),
     .BRAM_PORTB_dout     (x_tdata),
     .BRAM_PORTB_rst     (!s_axi_aresetn),

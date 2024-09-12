@@ -1,11 +1,34 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto ffc4ca0781584222b88257bdc1792280 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L axi_bram_ctrl_v4_1_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot perceptron_tb_behav xil_defaultlib.perceptron_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto ffc4ca0781584222b88257bdc1792280 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L axi_bram_ctrl_v4_1_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot image_loader_module_dad_behav xil_defaultlib.image_loader_module_dad xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'S_AXI_araddr' [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:75]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'S_AXI_awaddr' [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:79]
-ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'x_tready' is not permitted [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:93]
-ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'a_tdata' is not permitted [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:95]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package xpm.vcomponents
+Compiling package axi_bram_ctrl_v4_1_2.axi_bram_ctrl_funcs
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_2.axi_lite [\axi_lite(c_s_axi_addr_width=12,...]
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_2.axi_bram_ctrl_top [\axi_bram_ctrl_top(c_bram_addr_w...]
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_2.axi_bram_ctrl [\axi_bram_ctrl(c_memory_depth=10...]
+Compiling architecture dp_pl_ps_bram_axi_bram_ctrl_0_0_arch of entity xil_defaultlib.DP_PL_PS_BRAM_axi_bram_ctrl_0_0 [dp_pl_ps_bram_axi_bram_ctrl_0_0_...]
+Compiling module xil_defaultlib.DP_PL_PS_BRAM
+Compiling module xil_defaultlib.DP_PL_PS_BRAM_wrapper
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_axi_regs_fwd_v8_4(C_DATA...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="zyn...
+Compiling module xil_defaultlib.blk_mem_gen_0
+Compiling module xil_defaultlib.dual_port_AXI_Native_bram
+Compiling module xil_defaultlib.image_loader_module
+Compiling module xil_defaultlib.image_loader_module_dad
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot image_loader_module_dad_behav

@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../8_26_2024_validating_on_zybo_v1.ip_user_files/bd/DP_PL_PS_BRAM/ip/DP_PL_PS_BRAM_axi_bram_ctrl_0_0/sim/DP_PL_PS_BRAM_axi_bram_ctrl_0_0.vhd" \
+
+# Do not sort compile order
+nosort

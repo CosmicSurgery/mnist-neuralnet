@@ -209,8 +209,7 @@ initial begin
             S_AXI_araddr <= addr;
             S_AXI_arvalid <= 1;
             S_AXI_rready <= 1;
-            #1
-            @(posedge s_axi_aclk);
+            repeat (2) @(posedge s_axi_aclk);
             while (!S_AXI_arready) @(posedge s_axi_aclk);
             S_AXI_arvalid <= 0;
             while (!S_AXI_rvalid) @(posedge s_axi_aclk);

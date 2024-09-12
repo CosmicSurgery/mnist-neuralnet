@@ -64,13 +64,12 @@ module perceptron #(activation="relu")(
     
     assign pos_edge_start = start & !start_reg;
     
-DP_Weight_Memory_wrapper Weight_Memory (
+    dual_port_AXI_Native_bram IMG_LOADER (
     .BRAM_PORTB_addr    (r_addr),
-    .BRAM_PORTB_clk     (s_axi_aclk),
     .BRAM_PORTB_din     (32'd0),
     .BRAM_PORTB_dout     (wout),
-    .BRAM_PORTB_en     (1'b1),
     .BRAM_PORTB_rst     (!s_axi_aresetn),
+    .BRAM_PORTB_en     (1'b1),
     .BRAM_PORTB_we     (4'b0000),
     .S_AXI_araddr     (S_AXI_araddr),
     .S_AXI_arprot     (S_AXI_arprot),   
@@ -90,10 +89,11 @@ DP_Weight_Memory_wrapper Weight_Memory (
     .S_AXI_wdata     (S_AXI_wdata),
     .S_AXI_wready     (S_AXI_wready),
     .S_AXI_wstrb     (S_AXI_wstrb),
-    .S_AXI_wvalid     (S_AXI_wvalid),
+    .S_AXI_wvalid     (S_AXI_wvalid),   
     .s_axi_aclk     (s_axi_aclk),
     .s_axi_aresetn      (s_axi_aresetn)
-    );        
+    ); 
+          
     
 //    Weight_Memory #(.weightFile(weightFile), .mem_depth(input_size)) WM (
 //    .clk(clk),
