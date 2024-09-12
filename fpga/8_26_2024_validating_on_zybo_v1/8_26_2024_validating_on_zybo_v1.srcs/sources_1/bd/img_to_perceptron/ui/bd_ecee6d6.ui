@@ -6,11 +6,11 @@
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
 preplace port S00_AXI -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
-preplace port done -pg 1 -lvl 4 -x 880 -y 350 -defaultsOSRD
+preplace port done -pg 1 -lvl 4 -x 870 -y 350 -defaultsOSRD
 preplace port clk -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
 preplace port RESETN -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
 preplace port start -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
-preplace portBus a_tdata -pg 1 -lvl 4 -x 880 -y 330 -defaultsOSRD
+preplace portBus a_tdata -pg 1 -lvl 4 -x 870 -y 330 -defaultsOSRD
 preplace portBus bias -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
 preplace inst axi_interconnect_0 -pg 1 -lvl 1 -x 180 -y 180 -defaultsOSRD
 preplace inst image_loader_module_0 -pg 1 -lvl 2 -x 470 -y 200 -defaultsOSRD
@@ -23,10 +23,10 @@ preplace netloc M01_ARESETN_1 1 0 3 30 40 330 90 610
 preplace netloc start_1 1 0 3 NJ 20 350 100 600
 preplace netloc axi_interconnect_0_M01_AXI 1 1 2 340 110 590J
 preplace netloc axi_interconnect_0_M00_AXI 1 1 1 N 170
-preplace netloc image_loader_module_0_x 1 2 1 580 200n
 preplace netloc S00_AXI_1 1 0 1 NJ 100
-levelinfo -pg 1 0 180 470 730 880
-pagesize -pg 1 -db -bbox -sgen -120 0 1020 450
+preplace netloc image_loader_module_0_x 1 2 1 580 200n
+levelinfo -pg 1 0 180 470 730 870
+pagesize -pg 1 -db -bbox -sgen -120 0 1010 450
 "
 }
 0

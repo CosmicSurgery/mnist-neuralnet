@@ -35,7 +35,7 @@ module image_loader_module (
     reg x_tvalid_del;
     wire pos_edge_start;
     
-    assign pos_edge_start = start & !start_reg;
+    assign pos_edge_start = start & !start_reg & x_tready;
 
 
 
@@ -72,27 +72,28 @@ dual_port_AXI_Native_bram IMG_LOADER (
     always @(posedge s_axi_aclk) begin
         if (!s_axi_aresetn)
             start_reg <= 0;
-        start_reg <= start;
+        if (start & x_tready)
+            start_reg <= start;
     end
     
     always @(posedge s_axi_aclk) begin
         x_tvalid <= x_tvalid_del;
         if(!s_axi_aresetn) begin
-            r_addr <= 32'd0;
+            r_addr <= 10'd0;
             x_tvalid <= 0;
             x_tvalid_del <=0;
         end
         else
-            if (pos_edge_start & x_tready) begin
-                r_addr <= 32'd0;
+            if (pos_edge_start) begin
+                r_addr <= 10'd0;
                 x_tvalid_del <= 1; // x_tvalid should go high after a number of clock cycles equal to the BRAM's delay (which is 1).
             end
             else
-            if(x_tvalid_del & x_tready & (r_addr <= 32'd3132)) begin
+            if(x_tvalid_del & x_tready & (r_addr <= 10'd783)) begin
                 x_tvalid <= x_tvalid_del;
-                r_addr <= r_addr + 4;
+                r_addr <= r_addr + 1;
             end
-            else if (r_addr == 32'd3136) begin
+            else if (r_addr == 10'd784) begin
                 x_tvalid <= 0;
             end
     end

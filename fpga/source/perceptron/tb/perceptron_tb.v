@@ -5,11 +5,11 @@
 module perceptron_tb();
 
   reg start;
-  reg [31:0] S_AXI_araddr;
+  reg [11:0] S_AXI_araddr;
   reg [2:0] S_AXI_arprot;
   wire S_AXI_arready;
   reg S_AXI_arvalid;
-  reg [31:0] S_AXI_awaddr;
+  reg [11:0] S_AXI_awaddr;
   reg [2:0] S_AXI_awprot;
   wire S_AXI_awready;
   reg S_AXI_awvalid;
@@ -27,9 +27,9 @@ module perceptron_tb();
   reg s_axi_aresetn;
   reg s_axi_aclk;
   reg [31:0] x_tdata;
-  reg [31:0] a_tdata;
+  wire [31:0] a_tdata;
   wire x_tvalid;
-  reg x_tready;
+  wire x_tready;
   
   wire [31:0] write_values [4:0];
   assign write_values[0] = 32'd1;
@@ -51,7 +51,7 @@ module perceptron_tb();
   wire[31:0] expected_a_tdata;
   assign expected_a_tdata = expected_values[0] + expected_values[1] + expected_values[2] + expected_values[3] + expected_values[4];
   
-  reg [31:0] axi_addr;
+  reg [11:0] axi_addr;
   reg [31:0] read_data;
   integer ErrorCount;
   
@@ -61,7 +61,6 @@ module perceptron_tb();
   assign hid_addr = uut.r_addr;
   
   
-  wire [31:0] a_tdata;
   wire done;
   
     // Instantiate the module
@@ -121,13 +120,11 @@ initial begin
     S_AXI_wstrb = 4'b1111;
     S_AXI_wvalid = 0;
     s_axi_aresetn = 0;
-    x_tready = 0;
     axi_addr = 32'd0;
   
       // Apply reset
     repeat (30) @(posedge s_axi_aclk);
     s_axi_aresetn = 1;
-    x_tready = 1;
     
     // Simulate AXI transactions to BRAM
     

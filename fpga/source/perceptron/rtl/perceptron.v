@@ -22,11 +22,11 @@
 
 module perceptron #(activation="relu")(
     input start,
-    input [31:0]S_AXI_araddr ,
+    input [11:0]S_AXI_araddr ,
     input [2:0]S_AXI_arprot,
     output S_AXI_arready,
     input S_AXI_arvalid,
-    input [31:0]S_AXI_awaddr,
+    input [11:0]S_AXI_awaddr,
     input [2:0]S_AXI_awprot,
     output S_AXI_awready,
     input S_AXI_awvalid,
@@ -51,7 +51,7 @@ module perceptron #(activation="relu")(
     output reg done
     );
     
-    parameter addressWidth = 32;
+    parameter addressWidth = 10;
     parameter n_bits = 32;
     
 //    reg [n_bits-1:0] w;
@@ -62,9 +62,9 @@ module perceptron #(activation="relu")(
     reg start_reg;
     wire pos_edge_start;
     
-    assign pos_edge_start = start & !start_reg;
+    assign pos_edge_start = start & !start_reg & x_tready;
     
-    dual_port_AXI_Native_bram IMG_LOADER (
+    dual_port_AXI_Native_bram WEIGHT_MEMORY (
     .BRAM_PORTB_addr    (r_addr),
     .BRAM_PORTB_din     (32'd0),
     .BRAM_PORTB_dout     (wout),
@@ -114,7 +114,8 @@ module perceptron #(activation="relu")(
     always@(posedge s_axi_aclk) begin
         if (!s_axi_aresetn)
             start_reg <= 0;
-        start_reg <= start;
+        if (start & x_tready) 
+            start_reg <= start;
     end
     
     
@@ -124,6 +125,9 @@ module perceptron #(activation="relu")(
             x_tready <=0;
             done <=0;
         end
+        else if (start) begin
+            x_tready <=1;
+        end
         else begin
             if (pos_edge_start) begin
                 done <=0;
@@ -132,7 +136,6 @@ module perceptron #(activation="relu")(
                     sum[63:59] <= {5{1'b1}};   // Formatting with two's compliment 
                 end
                 sum[58:27] <= bias;
-                x_tready <=1;
             end
             else 
             if (x_tvalid & x_tready & r_addr < 32'd3136) begin

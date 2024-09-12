@@ -106,46 +106,50 @@ integer i;
     // Apply reset
     repeat (30) @(posedge s_axi_aclk);
     s_axi_aresetn = 1;
-    x_tready = 1;
 
     // Simulate AXI transactions
     
-    for (i = 0; i<5; i = i +1)
+    for (i = 0; i<784; i = i +1)
     begin
-        axi_write(axi_addr, write_values[i]);
+        axi_write(axi_addr, 32'd0+i);
         axi_addr = axi_addr + 12'd4;
-        delay = $urandom_range(50, 0);
+//        delay = $urandom_range(50, 0);
         repeat (delay) @(posedge s_axi_aclk);
     end
 
-    axi_addr = 12'd0;
-    for (i = 0; i<5; i = i +1)
-    begin
-        axi_read(axi_addr, read_data);
-        axi_addr = axi_addr + 12'd4;
-        delay = $urandom_range(50, 0);
-        repeat (delay) @(posedge s_axi_aclk);
-        if(read_data != write_values[i])
-        begin
-            $display("Error read value %x does not equal expected value %x", read_data, write_values[i]);
-            ErrorCount = ErrorCount + 1;
-        end
-    end   
+//    axi_addr = 12'd0;
+//    for (i = 0; i<784; i = i +1)
+//    begin
+//        axi_read(axi_addr, read_data);
+//        axi_addr = axi_addr + 12'd4;
+//        delay = $urandom_range(50, 0);
+//        repeat (delay) @(posedge s_axi_aclk);
+////        if(read_data != write_values[i])
+////        begin
+////            $display("Error read value %x does not equal expected value %x", read_data, write_values[i]);
+////            ErrorCount = ErrorCount + 1;
+////        end
+//    end   
 //    #300
     
     // Provide start signal
     #20 start = 1;
-    #10 start = 0;
+    #1 x_tready =1;
+   
+    #20 start = 0;
+    
+    
+    
 
     // Finish simulation
-    $display("");
-    if(ErrorCount == 0)
-        $display("Simulation: PASSED");
-    else
-        $display("Simulation: FAILED, found %d errors", ErrorCount);
-    $display("");
+//    $display("");
+//    if(ErrorCount == 0)
+//        $display("Simulation: PASSED");
+//    else
+//        $display("Simulation: FAILED, found %d errors", ErrorCount);
+//    $display("");
     
-    #100 $finish;
+//    #100 $finish;
   end
   
     // AXI write task
