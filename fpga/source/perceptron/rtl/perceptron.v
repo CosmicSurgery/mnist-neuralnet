@@ -47,6 +47,7 @@ module perceptron #(activation="relu")(
     input x_tvalid,
     output reg x_tready,
     input [31:0] bias,
+    input biasValid,
     output reg [31:0] a_tdata, // result of the activation function and output of the perceptron
     output reg done
     );
@@ -61,8 +62,10 @@ module perceptron #(activation="relu")(
     wire [n_bits-1:0] wout;
     reg start_reg;
     wire pos_edge_start;
+    reg [31:0] x_tdata_del;
+    reg x_tvalid_del;
     
-    assign pos_edge_start = start & !start_reg & x_tready;
+    assign pos_edge_start = start & !start_reg;
     
     dual_port_AXI_Native_bram WEIGHT_MEMORY (
     .BRAM_PORTB_addr    (r_addr),
@@ -124,12 +127,11 @@ module perceptron #(activation="relu")(
             sum <= 64'd0;
             x_tready <=0;
             done <=0;
-        end
-        else if (start) begin
-            x_tready <=1;
+            mul <=0;
         end
         else begin
             if (pos_edge_start) begin
+                x_tready <=1;
                 done <=0;
                 if (bias[31] == 1)
                 begin
@@ -138,8 +140,8 @@ module perceptron #(activation="relu")(
                 sum[58:27] <= bias;
             end
             else 
-            if (x_tvalid & x_tready & r_addr < 32'd3136) begin
-                mul <= $signed(wout) * $signed(x_tdata); // come back and see if I need to instantiate a DSP48
+            if (x_tvalid_del & x_tready & r_addr < 10'd784) begin
+                mul <= $signed(wout) * $signed(x_tdata_del); // come back and see if I need to instantiate a DSP48
                 sum <= mul + sum;
                 // make sure to come back and check for overflow.
             end
@@ -147,7 +149,8 @@ module perceptron #(activation="relu")(
     end
     
     always @(posedge s_axi_aclk) begin
-        r_addr <= 32'd0;
+        x_tdata_del <= x_tdata;
+        x_tvalid_del <= x_tvalid;
     end
     
     always @(posedge s_axi_aclk)
@@ -156,7 +159,7 @@ module perceptron #(activation="relu")(
             done <=0;
         else if (pos_edge_start) 
             done <=0;
-        else if (r_addr == 32'd3136) begin
+        else if (r_addr == 10'd784) begin
             a_tdata <= sum[63-5:27];
             done <=1;
             if (activation == "relu") begin
@@ -172,8 +175,8 @@ module perceptron #(activation="relu")(
         if(!s_axi_aresetn)
             r_addr <= 0;
         else
-        if(x_tvalid & x_tready & r_addr <= 32'd3132) begin
-            r_addr <= r_addr + 4;
+        if(x_tvalid & x_tready & r_addr <= 10'd783) begin
+            r_addr <= r_addr + 1;
         end
     end
     
