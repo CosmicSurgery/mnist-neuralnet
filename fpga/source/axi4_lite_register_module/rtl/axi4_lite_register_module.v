@@ -45,10 +45,10 @@ module axi4_lite_register_module (
     output wire [31:0] bias_17,
     
     // Control register output
-    output wire [31:0] control,
+    output wire control,
     
     // Status register input
-    input wire [31:0] status
+    input wire status
 );
 
     // Internal registers
@@ -72,18 +72,17 @@ module axi4_lite_register_module (
     wire rd_en = s_axil_arvalid & ~axi_rvalid;
     
     // Write logic
+    integer i;
     always @(posedge aclk) begin
         if (~aresetn) begin
-            for (integer i = 0; i < 18; i = i + 1) begin
+            for (i = 0; i < 18; i = i + 1) begin
                 bias_regs[i] <= 32'h0;
             end
-            control_reg <= 32'h0;
+            control_reg <= 0;
         end else if (wr_en) begin
             if (wr_addr < 5'd18) begin
                 bias_regs[wr_addr] <= s_axil_wdata;
-            end else if (wr_addr == 5'd18) begin
-                control_reg <= s_axil_wdata;
-            end
+            end 
         end
     end
     
@@ -94,8 +93,6 @@ module axi4_lite_register_module (
         end else if (rd_en) begin
             if (rd_addr < 5'd18) begin
                 axi_rdata <= bias_regs[rd_addr];
-            end else if (rd_addr == 5'd18) begin
-                axi_rdata <= control_reg;
             end else if (rd_addr == 5'd19) begin
                 axi_rdata <= status;
             end else begin
@@ -164,7 +161,8 @@ module axi4_lite_register_module (
     assign bias_16 = bias_regs[16];
     assign bias_17 = bias_regs[17];
     
-    // Assign control register output
-    assign control = control_reg;
+
+// Assign control register output
+assign control = control_reg;
 
 endmodule
