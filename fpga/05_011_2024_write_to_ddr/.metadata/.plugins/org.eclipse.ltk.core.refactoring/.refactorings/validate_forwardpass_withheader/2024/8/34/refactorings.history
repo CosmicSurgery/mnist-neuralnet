@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;validate_forwardpass_withheader/src/testforward_withheader&apos; to &apos;testforward_withheader.c&apos;" description="Rename resource &apos;testforward_withheader&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/testforward_withheader" name="testforward_withheader.c" stamp="1724260039775" updateReferences="true"/>
-</session>

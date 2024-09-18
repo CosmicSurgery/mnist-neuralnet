@@ -1,0 +1,252 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x911A3E278AD15AF4",
+      "device": "xc7z010clg400-1",
+      "name": "DP_PL_PS_BRAM",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "axi_bram_ctrl_0": ""
+    },
+    "interface_ports": {
+      "BRAM_PORTA": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MEM_SIZE": {
+            "value": "4096",
+            "value_src": "ip_prop"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "ip_prop"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "user_prop"
+          },
+          "MASTER_TYPE": {
+            "value": "BRAM_CTRL"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "user_prop"
+          }
+        }
+      },
+      "S_AXI": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+        "parameters": {
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "ID_WIDTH": {
+            "value": "0"
+          },
+          "ADDR_WIDTH": {
+            "value": "12"
+          },
+          "AWUSER_WIDTH": {
+            "value": "0"
+          },
+          "ARUSER_WIDTH": {
+            "value": "0"
+          },
+          "WUSER_WIDTH": {
+            "value": "0"
+          },
+          "RUSER_WIDTH": {
+            "value": "0"
+          },
+          "BUSER_WIDTH": {
+            "value": "0"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          },
+          "HAS_BURST": {
+            "value": "0"
+          },
+          "HAS_LOCK": {
+            "value": "0"
+          },
+          "HAS_PROT": {
+            "value": "1"
+          },
+          "HAS_CACHE": {
+            "value": "0"
+          },
+          "HAS_QOS": {
+            "value": "0"
+          },
+          "HAS_REGION": {
+            "value": "0"
+          },
+          "HAS_WSTRB": {
+            "value": "1"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "SUPPORTS_NARROW_BURST": {
+            "value": "0"
+          },
+          "NUM_READ_OUTSTANDING": {
+            "value": "2"
+          },
+          "NUM_WRITE_OUTSTANDING": {
+            "value": "2"
+          },
+          "MAX_BURST_LENGTH": {
+            "value": "1"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "DP_PL_PS_BRAM_s_axi_aclk",
+            "value_src": "default"
+          },
+          "NUM_READ_THREADS": {
+            "value": "1"
+          },
+          "NUM_WRITE_THREADS": {
+            "value": "1"
+          },
+          "RUSER_BITS_PER_BYTE": {
+            "value": "0"
+          },
+          "WUSER_BITS_PER_BYTE": {
+            "value": "0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "ports": {
+      "s_axi_aclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "S_AXI",
+            "value_src": "default"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "s_axi_aresetn",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "DP_PL_PS_BRAM_s_axi_aclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "s_axi_aresetn": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "axi_bram_ctrl_0": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "xci_name": "DP_PL_PS_BRAM_axi_bram_ctrl_0_0",
+        "parameters": {
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "SINGLE_PORT_BRAM": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "S_AXI_1": {
+        "interface_ports": [
+          "S_AXI",
+          "axi_bram_ctrl_0/S_AXI"
+        ]
+      },
+      "axi_bram_ctrl_0_BRAM_PORTA": {
+        "interface_ports": [
+          "BRAM_PORTA",
+          "axi_bram_ctrl_0/BRAM_PORTA"
+        ]
+      }
+    },
+    "nets": {
+      "s_axi_aclk_1": {
+        "ports": [
+          "s_axi_aclk",
+          "axi_bram_ctrl_0/s_axi_aclk"
+        ]
+      },
+      "s_axi_aresetn_1": {
+        "ports": [
+          "s_axi_aresetn",
+          "axi_bram_ctrl_0/s_axi_aresetn"
+        ]
+      }
+    },
+    "addressing": {
+      "/": {
+        "address_spaces": {
+          "S_AXI": {
+            "range": "4K",
+            "width": "32",
+            "segments": {
+              "SEG_axi_bram_ctrl_0_Mem0": {
+                "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
+                "offset": "0x000",
+                "range": "4K"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,0 @@
-12:52:23 **** Clean-only build of configuration Debug for project hello_world ****
-make clean 
-rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  hello_world.elf.size  hello_world.elf
-' '
-
-12:52:24 Build Finished (took 182ms)
-
