@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log miles_forward_pass_design_blk_mem_gen_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source miles_forward_pass_design_blk_mem_gen_1_0.tcl" );
+         "-log layer_0_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source layer_0_wrapper.tcl" );
 
 
 

@@ -1,15 +1,8 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto ffc4ca0781584222b88257bdc1792280 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot axi4_lite_layer_connector_tb_behav xil_defaultlib.axi4_lite_layer_connector_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto ffc4ca0781584222b88257bdc1792280 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_20 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_19 -L axi_crossbar_v2_1_21 -L axis_infrastructure_v1_1_0 -L axis_broadcaster_v1_1_19 -L axi_protocol_converter_v2_1_20 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot layer_0_wrapper_tb_behav xil_defaultlib.layer_0_wrapper_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "C:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl/axi4_lite_layer_connector.v" Line 2. Module axi4_lite_layer_connector doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.axi4_lite_layer_connector
-Compiling module xil_defaultlib.axi4_lite_layer_connector_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot axi4_lite_layer_connector_tb_behav
+ERROR: [VRFC 10-2063] Module <blk_mem_gen_v8_4_4> not found while processing module instance <inst> [C:/git_repos/mnist_neuralnet/fpga/8_26_2024_validating_on_zybo_v1/8_26_2024_validating_on_zybo_v1.ip_user_files/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v:98]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Mon Sep  2 11:33:32 2024
+//Date        : Tue Sep 17 14:37:31 2024
 //Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 //Command     : generate_target layer_0_wrapper.bd
 //Design      : layer_0_wrapper
@@ -45,14 +45,11 @@ module layer_0_wrapper
     S00_AXI_0_wready,
     S00_AXI_0_wstrb,
     S00_AXI_0_wvalid,
-    a_tdata_0,
-    a_tdata_1,
-    a_tdata_2,
-    done_0,
-    done_1,
-    done_2,
-    reset,
-    start_0,
+    a_tdata,
+    a_tready,
+    a_tvalid,
+    resetn,
+    start,
     sys_clock);
   input [31:0]S00_AXI_0_araddr;
   input [1:0]S00_AXI_0_arburst;
@@ -89,14 +86,11 @@ module layer_0_wrapper
   output S00_AXI_0_wready;
   input [3:0]S00_AXI_0_wstrb;
   input S00_AXI_0_wvalid;
-  output [31:0]a_tdata_0;
-  output [31:0]a_tdata_1;
-  output [31:0]a_tdata_2;
-  output done_0;
-  output done_1;
-  output done_2;
-  input reset;
-  input start_0;
+  output [31:0]a_tdata;
+  input a_tready;
+  output a_tvalid;
+  input resetn;
+  input start;
   input sys_clock;
 
   wire [31:0]S00_AXI_0_araddr;
@@ -134,14 +128,11 @@ module layer_0_wrapper
   wire S00_AXI_0_wready;
   wire [3:0]S00_AXI_0_wstrb;
   wire S00_AXI_0_wvalid;
-  wire [31:0]a_tdata_0;
-  wire [31:0]a_tdata_1;
-  wire [31:0]a_tdata_2;
-  wire done_0;
-  wire done_1;
-  wire done_2;
-  wire reset;
-  wire start_0;
+  wire [31:0]a_tdata;
+  wire a_tready;
+  wire a_tvalid;
+  wire resetn;
+  wire start;
   wire sys_clock;
 
   layer_0 layer_0_i
@@ -180,13 +171,10 @@ module layer_0_wrapper
         .S00_AXI_0_wready(S00_AXI_0_wready),
         .S00_AXI_0_wstrb(S00_AXI_0_wstrb),
         .S00_AXI_0_wvalid(S00_AXI_0_wvalid),
-        .a_tdata_0(a_tdata_0),
-        .a_tdata_1(a_tdata_1),
-        .a_tdata_2(a_tdata_2),
-        .done_0(done_0),
-        .done_1(done_1),
-        .done_2(done_2),
-        .reset(reset),
-        .start_0(start_0),
+        .a_tdata(a_tdata),
+        .a_tready(a_tready),
+        .a_tvalid(a_tvalid),
+        .resetn(resetn),
+        .start(start),
         .sys_clock(sys_clock));
 endmodule

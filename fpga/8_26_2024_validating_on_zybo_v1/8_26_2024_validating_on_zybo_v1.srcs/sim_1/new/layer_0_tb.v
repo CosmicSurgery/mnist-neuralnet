@@ -20,8 +20,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-`timescale 1ns / 1ps
-
 module layer_0_wrapper_tb;
 
   // Parameters
@@ -65,9 +63,10 @@ module layer_0_wrapper_tb;
   reg [31:0] S_AXI_0_wdata;
   reg [3:0] S_AXI_0_wstrb;
   reg S_AXI_0_wvalid;
-  reg reset;
-  reg start_0;
+  reg resetn;
+  reg start;
   reg sys_clock;
+  reg a_tready;
 
   // Outputs
   wire S00_AXI_0_arready;
@@ -87,12 +86,8 @@ module layer_0_wrapper_tb;
   wire [1:0] S_AXI_0_rresp;
   wire S_AXI_0_rvalid;
   wire S_AXI_0_wready;
-  wire [31:0] a_tdata_0;
-  wire [31:0] a_tdata_1;
-  wire [31:0] a_tdata_2;
-  wire done_0;
-  wire done_1;
-  wire done_2;
+  wire [31:0] a_tdata;
+  wire a_tvalid;
 
   // Instantiate the Unit Under Test (UUT)
   layer_0_wrapper uut (
@@ -131,14 +126,11 @@ module layer_0_wrapper_tb;
     .S00_AXI_0_wready(S00_AXI_0_wready),
     .S00_AXI_0_wstrb(S00_AXI_0_wstrb),
     .S00_AXI_0_wvalid(S00_AXI_0_wvalid),
-    .a_tdata_0(a_tdata_0),
-    .a_tdata_1(a_tdata_1),
-    .a_tdata_2(a_tdata_2),
-    .done_0(done_0),
-    .done_1(done_1),
-    .done_2(done_2),
-    .reset(reset),                          // active low reset
-    .start_0(start_0),
+    .a_tdata(a_tdata),
+    .a_tready(a_tready),
+    .a_tvalid(a_tvalid),
+    .resetn(resetn),
+    .start(start),
     .sys_clock(sys_clock)
   );
 
@@ -153,7 +145,7 @@ module layer_0_wrapper_tb;
     // Test procedure
     initial begin
         // Initialize inputs
-        reset = 0;
+        resetn = 0;
         S00_AXI_0_awaddr = 0;
         S00_AXI_0_awprot = 0;
         S00_AXI_0_awvalid = 0;
@@ -168,104 +160,108 @@ module layer_0_wrapper_tb;
 
     // Wait for 100 ns for global reset
     #100;
-    reset = 1;
+    resetn = 1;
     #100;
     
     // Write Weight, Bias and Image data.
     $display("Test case 1: Read/Write test");
     //write bias
-    axi_write(32'h00000000, 32'h12345678);
-    axi_write(32'h00000004, 32'h12345678);
-    axi_write(32'h00000008, 32'h12345678);
+    axi_write(32'h00000000, 32'd0);
+    axi_write(32'h00000004, 32'h1);
+    axi_write(32'h00000008, 32'h2);
     
     //write weight1
-    axi_write(32'h80000000, 32'h12345678);
-    axi_write(32'h80000004, 32'h12345678);
-    axi_write(32'h80000008, 32'h12345678);
+    axi_write(32'h80000000, 32'd0);
+    axi_write(32'h80000004, 32'h1);
+    axi_write(32'h80000008, 32'h2);
     
     //write weight2
-    axi_write(32'h80001000, 32'h12345678);
-    axi_write(32'h80001004, 32'h12345678);
-    axi_write(32'h80001008, 32'h12345678);
+    axi_write(32'h80001000, 32'h1);
+    axi_write(32'h80001004, 32'h1);
+    axi_write(32'h80001008, 32'h1);
     
     //write weight3
-    axi_write(32'h80002000, 32'h12345678);
-    axi_write(32'h80002004, 32'h12345678);
-    axi_write(32'h80002008, 32'h12345678);
+    axi_write(32'h80002000, 32'h0);
+    axi_write(32'h80002004, 32'h0);
+    axi_write(32'h80002008, 32'h0);
     
     //write img
-    axi_write(32'h80003000, 32'h12345678);
-    axi_write(32'h80003004, 32'h12345678);
-    axi_write(32'h80003008, 32'h12345678);
+    axi_write(32'h80003000, 32'h1);
+    axi_write(32'h80003004, 32'h2);
+    axi_write(32'h80003008, 32'h3);
     
-    axi_read(32'h00000000);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
-    axi_read(32'h00000004);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
-    axi_read(32'h00000008);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
+    repeat (10) @(posedge sys_clock);
+    start <= 1;
+    a_tready <=1;
     
-    //write weight1
-    axi_read(32'h80000000);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
-    axi_read(32'h80000004);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
-    axi_read(32'h80000008);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
+//    axi_read(32'h00000000);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
+//    axi_read(32'h00000004);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
+//    axi_read(32'h00000008);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
     
-    //write weight2
-    axi_read(32'h80001000);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
-    axi_read(32'h80001004);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
-    axi_read(32'h80001008);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
+//    //write weight1
+//    axi_read(32'h80000000);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
+//    axi_read(32'h80000004);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
+//    axi_read(32'h80000008);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
     
-    //write weight3
-    axi_read(32'h80002000);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
-    axi_read(32'h80002004);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
-    axi_read(32'h80002008);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
+//    //write weight2
+//    axi_read(32'h80001000);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
+//    axi_read(32'h80001004);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
+//    axi_read(32'h80001008);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
     
-    //write img
-    axi_read(32'h80003000);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
-    axi_read(32'h80003004);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
-    axi_read(32'h80003008);
-    if (S00_AXI_0_rdata !== 32'h12345678) begin
-        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
-    end
+//    //write weight3
+//    axi_read(32'h80002000);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
+//    axi_read(32'h80002004);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
+//    axi_read(32'h80002008);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
+    
+//    //write img
+//    axi_read(32'h80003000);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
+//    axi_read(32'h80003004);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
+//    axi_read(32'h80003008);
+//    if (S00_AXI_0_rdata !== 32'h12345678) begin
+//        $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h12345678, S00_AXI_0_rdata);
+//    end
     
    
   
