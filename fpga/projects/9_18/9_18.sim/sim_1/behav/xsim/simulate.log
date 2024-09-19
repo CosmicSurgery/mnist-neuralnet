@@ -1,0 +1,6 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Block Memory Generator module PL_NN_tb.uut.PL_NN_i.image_loader_module_0.inst.IMG_LOADER.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module PL_NN_tb.uut.PL_NN_i.perceptron_0.inst.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module PL_NN_tb.uut.PL_NN_i.perceptron_1.inst.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module PL_NN_tb.uut.PL_NN_i.perceptron_2.inst.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.

@@ -1,4 +1,5 @@
 
+
 module image_loader_module (
     input start, 
     input [11:0]S_AXI_araddr ,
@@ -30,7 +31,7 @@ module image_loader_module (
 
     parameter addressWidth = 10;
     parameter n_bits = 32;
-    reg [addressWidth-1:0] r_addr;
+    reg [9:0] r_addr;
     reg start_reg;
     reg x_tvalid_del;
     wire pos_edge_start;
