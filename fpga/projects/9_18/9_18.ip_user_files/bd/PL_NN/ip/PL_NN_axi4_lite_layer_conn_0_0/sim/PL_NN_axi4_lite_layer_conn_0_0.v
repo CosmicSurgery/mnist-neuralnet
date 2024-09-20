@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:axi4_lite_layer_connector:1.0
-// IP Revision: 2
+// IP Revision: 3
 
 `timescale 1ns/1ps
 
@@ -103,24 +103,24 @@ input wire start;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF a, ASSOCIATED_RESET resetn:rstn, FREQ_HZ 10000000, PHASE 0.000, CLK_DOMAIN PL_NN_ACLK_0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-input wire a0;
-input wire a1;
-input wire a2;
-input wire a3;
-input wire a4;
-input wire a5;
-input wire a6;
-input wire a7;
-input wire a8;
-input wire a9;
-input wire a10;
-input wire a11;
-input wire a12;
-input wire a13;
-input wire a14;
-input wire a15;
-input wire a16;
-input wire a17;
+input wire [31 : 0] a0;
+input wire [31 : 0] a1;
+input wire [31 : 0] a2;
+input wire [31 : 0] a3;
+input wire [31 : 0] a4;
+input wire [31 : 0] a5;
+input wire [31 : 0] a6;
+input wire [31 : 0] a7;
+input wire [31 : 0] a8;
+input wire [31 : 0] a9;
+input wire [31 : 0] a10;
+input wire [31 : 0] a11;
+input wire [31 : 0] a12;
+input wire [31 : 0] a13;
+input wire [31 : 0] a14;
+input wire [31 : 0] a15;
+input wire [31 : 0] a16;
+input wire [31 : 0] a17;
 input wire a0done;
 input wire a1done;
 input wire a2done;

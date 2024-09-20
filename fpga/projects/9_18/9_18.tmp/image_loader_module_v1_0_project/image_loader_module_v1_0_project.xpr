@@ -6,7 +6,7 @@
 <Project Version="7" Minor="44" Path="c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.tmp/image_loader_module_v1_0_project/image_loader_module_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="ecd4f52eb53b4ef9963767b646ff905b"/>
+    <Option Name="Id" Val="d559678944024541b92b92bf25e89891"/>
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -60,7 +60,7 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../source/dual_port_AXI_Native_bram/rtl/src/blk_mem_gen_0/blk_mem_gen_0.xci">
+      <File Path="$PPRDIR/../../../../source/image_loader_module/rtl/src/blk_mem_gen_0/blk_mem_gen_0.xci">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -68,30 +68,12 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../source/dual_port_AXI_Native_bram/rtl/src/axi_bram_ctrl_0/axi_bram_ctrl_0.xci">
+      <File Path="$PPRDIR/../../../../source/image_loader_module/rtl/src/axi_bram_ctrl_0/axi_bram_ctrl_0.xci">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../source/image_loader_module/rtl/src/blk_mem_gen_0/sim/blk_mem_gen_0.v">
-        <FileInfo>
-          <Attr Name="Library" Val="xil_defaultlib"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-          <Attr Name="UsedIn" Val="ipstatic"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../source/image_loader_module/rtl/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v">
-        <FileInfo>
-          <Attr Name="Library" Val="xil_defaultlib"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-          <Attr Name="UsedIn" Val="ipstatic"/>
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../../source/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v">
@@ -100,14 +82,6 @@
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../source/image_loader_module/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd">
-        <FileInfo>
-          <Attr Name="Library" Val="xil_defaultlib"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-          <Attr Name="UsedIn" Val="ipstatic"/>
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../../source/image_loader_module/rtl/image_loader_module.v">

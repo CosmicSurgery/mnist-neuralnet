@@ -280,7 +280,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b3753d1b</spirit:value>
+            <spirit:value>10594a16</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -302,7 +302,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>99b1691b</spirit:value>
+            <spirit:value>10594a16</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -316,7 +316,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b231033f</spirit:value>
+            <spirit:value>f64a5dae</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -340,7 +340,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:left spirit:format="long">11</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -400,7 +400,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:left spirit:format="long">11</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -688,18 +688,6 @@
         </spirit:wire>
       </spirit:port>
     </spirit:ports>
-    <spirit:modelParameters>
-      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
-        <spirit:name>addressWidth</spirit:name>
-        <spirit:displayName>Addresswidth</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.addressWidth">32</spirit:value>
-      </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>n_bits</spirit:name>
-        <spirit:displayName>N Bits</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.n_bits">32</spirit:value>
-      </spirit:modelParameter>
-    </spirit:modelParameters>
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
@@ -712,11 +700,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../dual_port_AXI_Native_bram/rtl/src/axi_bram_ctrl_0/axi_bram_ctrl_0.xci</spirit:name>
+        <spirit:name>src/axi_bram_ctrl_0/axi_bram_ctrl_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../dual_port_AXI_Native_bram/rtl/src/blk_mem_gen_0/blk_mem_gen_0.xci</spirit:name>
+        <spirit:name>src/blk_mem_gen_0/blk_mem_gen_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -726,14 +714,14 @@
       <spirit:file>
         <spirit:name>image_loader_module.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_980a4dc6</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_45bea843</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_axi_bram_ctrl_4_1__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axi_bram_ctrl" xilinx:version="4.1">
+          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axi_bram_ctrl" xilinx:version="4.1">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -752,11 +740,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../dual_port_AXI_Native_bram/rtl/src/axi_bram_ctrl_0/axi_bram_ctrl_0.xci</spirit:name>
+        <spirit:name>src/axi_bram_ctrl_0/axi_bram_ctrl_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../dual_port_AXI_Native_bram/rtl/src/blk_mem_gen_0/blk_mem_gen_0.xci</spirit:name>
+        <spirit:name>src/blk_mem_gen_0/blk_mem_gen_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -766,24 +754,6 @@
       <spirit:file>
         <spirit:name>image_loader_module.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/blk_mem_gen_0/sim/blk_mem_gen_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -811,23 +781,13 @@
       <spirit:file>
         <spirit:name>xgui/image_loader_module_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_b231033f</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
   <spirit:description>image_loader_module_v1_0</spirit:description>
   <spirit:parameters>
-    <spirit:parameter>
-      <spirit:name>addressWidth</spirit:name>
-      <spirit:displayName>Addresswidth</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.addressWidth">32</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
-      <spirit:name>n_bits</spirit:name>
-      <spirit:displayName>N Bits</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.n_bits">32</spirit:value>
-    </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">image_loader_module_v1_0</spirit:value>
@@ -862,8 +822,8 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>5</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-09-19T17:43:57Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>9</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-09-19T21:23:37Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@47e63a8a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
@@ -937,16 +897,76 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7cd436c6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3f747abc_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@27be113b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c5e9790_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10dbfce_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74d9a451_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7929f5a9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4517f73a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@339b3c49_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c3bb1f7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dd2f8ad_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@862b322_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b9e0687_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10d0fd12_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42f25962_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6250122b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ad2c881_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b2f5b0c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@285ed872_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ce2689f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@333d1a4e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c305f7e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f3cd608_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bbe9758_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7844aee7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f3a9efa_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4010932f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@478f2ae8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34d47f84_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71694de9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@226ca723_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75e057f1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71985945_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f77db11_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d4b16a5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41c043c2_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21b8e216_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2110e54e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46facc77_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d73915a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40aa396d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b0f5b72_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f19fba7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e3baea5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5194f9b1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@567c0285_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bfdc4a8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f6a7fe7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32bc2062_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b3dff63_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@574f194c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f0e657c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74e9db47_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54db5969_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7edb4135_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f52af4c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57d51428_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ecefdb3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@465cac0b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18831b4b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1184b35e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a58019b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@282ad4d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34d7ad01_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="0375822e"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="f2afdf52"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="91d0d313"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="8a0a4799"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e963b128"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="20bd2d48"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="12ba8ac0"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="8dbff3f6"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="75869171"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

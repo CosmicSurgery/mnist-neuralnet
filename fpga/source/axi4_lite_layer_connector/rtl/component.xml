@@ -100,7 +100,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6e3747f3</spirit:value>
+            <spirit:value>baf1c275</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -116,7 +116,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6e3747f3</spirit:value>
+            <spirit:value>baf1c275</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -166,6 +166,10 @@
         <spirit:name>a0</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -179,6 +183,10 @@
         <spirit:name>a1</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -192,6 +200,10 @@
         <spirit:name>a2</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -205,6 +217,10 @@
         <spirit:name>a3</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -218,6 +234,10 @@
         <spirit:name>a4</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -231,6 +251,10 @@
         <spirit:name>a5</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -244,6 +268,10 @@
         <spirit:name>a6</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -257,6 +285,10 @@
         <spirit:name>a7</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -270,6 +302,10 @@
         <spirit:name>a8</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -283,6 +319,10 @@
         <spirit:name>a9</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -296,6 +336,10 @@
         <spirit:name>a10</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -309,6 +353,10 @@
         <spirit:name>a11</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -322,6 +370,10 @@
         <spirit:name>a12</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -335,6 +387,10 @@
         <spirit:name>a13</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -348,6 +404,10 @@
         <spirit:name>a14</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -361,6 +421,10 @@
         <spirit:name>a15</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -374,6 +438,10 @@
         <spirit:name>a16</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -387,6 +455,10 @@
         <spirit:name>a17</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -666,7 +738,7 @@
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
+              <spirit:typeName>reg</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
@@ -704,7 +776,7 @@
       <spirit:file>
         <spirit:name>axi4_lite_layer_connector.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_6e3747f3</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_baf1c275</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -756,8 +828,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>axi4_lite_layer_connector_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-09-17T18:12:42Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-09-19T21:17:12Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@c2c089_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
@@ -767,13 +839,24 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7926bed6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@308fd4f9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@63a13b4e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ef8ab98_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11393f15_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42aff260_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e4b4103_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@545ee8b8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ca703b2_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18a1fe4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16690697_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63763145_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54528cab_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66b6336e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/rtl</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5eedc37b"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="dbac1413"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="6f2956af"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2495b25f"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="5a22229d"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="6fe3de06"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
