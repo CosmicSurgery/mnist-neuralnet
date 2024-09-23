@@ -43,53 +43,82 @@ reg [31:0] read_data;
 integer ErrorCount;
   
 integer delay; // used to set N clock delays between AXI read / write transactions
-  
-  
-axi_bram_ctrl_0 ctrl (
-  .s_axi_aclk(s_axi_aclk),        // input wire s_axi_aclk
-  .s_axi_aresetn(s_axi_aresetn),  // input wire s_axi_aresetn
-  .s_axi_awaddr(s_axi_awaddr),    // input wire [11 : 0] s_axi_awaddr
-  .s_axi_awprot(s_axi_awprot),    // input wire [2 : 0] s_axi_awprot
-  .s_axi_awvalid(s_axi_awvalid),  // input wire s_axi_awvalid
-  .s_axi_awready(s_axi_awready),  // output wire s_axi_awready
-  .s_axi_wdata(s_axi_wdata),      // input wire [31 : 0] s_axi_wdata
-  .s_axi_wstrb(s_axi_wstrb),      // input wire [3 : 0] s_axi_wstrb
-  .s_axi_wvalid(s_axi_wvalid),    // input wire s_axi_wvalid
-  .s_axi_wready(s_axi_wready),    // output wire s_axi_wready
-  .s_axi_bresp(s_axi_bresp),      // output wire [1 : 0] s_axi_bresp
-  .s_axi_bvalid(s_axi_bvalid),    // output wire s_axi_bvalid
-  .s_axi_bready(s_axi_bready),    // input wire s_axi_bready
-  .s_axi_araddr(s_axi_araddr),    // input wire [11 : 0] s_axi_araddr
-  .s_axi_arprot(s_axi_arprot),    // input wire [2 : 0] s_axi_arprot
-  .s_axi_arvalid(s_axi_arvalid),  // input wire s_axi_arvalid
-  .s_axi_arready(s_axi_arready),  // output wire s_axi_arready
-  .s_axi_rdata(s_axi_rdata),      // output wire [31 : 0] s_axi_rdata
-  .s_axi_rresp(s_axi_rresp),      // output wire [1 : 0] s_axi_rresp
-  .s_axi_rvalid(s_axi_rvalid),    // output wire s_axi_rvalid
-  .s_axi_rready(s_axi_rready),    // input wire s_axi_rready
-  .bram_rst_a(bram_rst_a),        // output wire bram_rst_a
-  .bram_clk_a(bram_clk_a),        // output wire bram_clk_a
-  .bram_en_a(bram_en_a),          // output wire bram_en_a
-  .bram_we_a(bram_we_a),          // output wire [3 : 0] bram_we_a
-  .bram_addr_a(bram_addr_a),      // output wire [11 : 0] bram_addr_a
-  .bram_wrdata_a(bram_wrdata_a),  // output wire [31 : 0] bram_wrdata_a
-  .bram_rddata_a(bram_rddata_a)  // input wire [31 : 0] bram_rddata_a
-);
 
-blk_mem_gen_0 bram (
-  .clka(bram_clk_a),    // input wire clka
-  .ena(bram_en_a),      // input wire ena
-  .wea(bram_we_a[3]),      // input wire [0 : 0] wea
-  .addra(bram_addr_a[11:2]),  // input wire [9 : 0] addra
-  .dina(bram_wrdata_a),    // input wire [31 : 0] dina
-  .douta(bram_rddata_a),  // output wire [31 : 0] douta
-  .clkb(bram_clk_a),    // input wire clkb
-  .enb('b0),      // input wire enb
-  .web('b0),      // input wire [0 : 0] web
-  .addrb(10'd0),  // input wire [9 : 0] addrb
-  .dinb(32'd0),    // input wire [31 : 0] dinb
-  .doutb()  // output wire [31 : 0] doutb
+dual_port_AXI_Native_bram uut (
+    .BRAM_PORTB_addr(10'd0),
+    .BRAM_PORTB_din(32'd0),
+    .BRAM_PORTB_dout(),
+    .BRAM_PORTB_en('b0),
+    .BRAM_PORTB_rst('b0),
+    .BRAM_PORTB_we('b0),
+    .s_axi_araddr(s_axi_araddr),
+    .s_axi_arprot(s_axi_arprot),
+    .s_axi_arready(s_axi_arready),
+    .s_axi_arvalid(s_axi_arvalid),
+    .s_axi_awaddr(s_axi_awaddr),
+    .s_axi_awprot(s_axi_awprot),
+    .s_axi_awready(s_axi_awready),
+    .s_axi_awvalid(s_axi_awvalid),
+    .s_axi_bready(s_axi_bready),
+    .s_axi_bresp(s_axi_bresp),
+    .s_axi_bvalid(s_axi_bvalid),
+    .s_axi_rdata(s_axi_rdata),
+    .s_axi_rready(s_axi_rready),
+    .s_axi_rresp(s_axi_rresp),
+    .s_axi_rvalid(s_axi_rvalid),
+    .s_axi_wdata(s_axi_wdata),
+    .s_axi_wready(s_axi_wready),
+    .s_axi_wstrb(s_axi_wstrb),
+    .s_axi_wvalid(s_axi_wvalid),
+    .s_axi_aclk(s_axi_aclk),
+    .s_axi_aresetn(s_axi_aresetn)
 );
+  
+//axi_bram_ctrl_0 ctrl (
+//  .s_axi_aclk(s_axi_aclk),        // input wire s_axi_aclk
+//  .s_axi_aresetn(s_axi_aresetn),  // input wire s_axi_aresetn
+//  .s_axi_awaddr(s_axi_awaddr),    // input wire [11 : 0] s_axi_awaddr
+//  .s_axi_awprot(s_axi_awprot),    // input wire [2 : 0] s_axi_awprot
+//  .s_axi_awvalid(s_axi_awvalid),  // input wire s_axi_awvalid
+//  .s_axi_awready(s_axi_awready),  // output wire s_axi_awready
+//  .s_axi_wdata(s_axi_wdata),      // input wire [31 : 0] s_axi_wdata
+//  .s_axi_wstrb(s_axi_wstrb),      // input wire [3 : 0] s_axi_wstrb
+//  .s_axi_wvalid(s_axi_wvalid),    // input wire s_axi_wvalid
+//  .s_axi_wready(s_axi_wready),    // output wire s_axi_wready
+//  .s_axi_bresp(s_axi_bresp),      // output wire [1 : 0] s_axi_bresp
+//  .s_axi_bvalid(s_axi_bvalid),    // output wire s_axi_bvalid
+//  .s_axi_bready(s_axi_bready),    // input wire s_axi_bready
+//  .s_axi_araddr(s_axi_araddr),    // input wire [11 : 0] s_axi_araddr
+//  .s_axi_arprot(s_axi_arprot),    // input wire [2 : 0] s_axi_arprot
+//  .s_axi_arvalid(s_axi_arvalid),  // input wire s_axi_arvalid
+//  .s_axi_arready(s_axi_arready),  // output wire s_axi_arready
+//  .s_axi_rdata(s_axi_rdata),      // output wire [31 : 0] s_axi_rdata
+//  .s_axi_rresp(s_axi_rresp),      // output wire [1 : 0] s_axi_rresp
+//  .s_axi_rvalid(s_axi_rvalid),    // output wire s_axi_rvalid
+//  .s_axi_rready(s_axi_rready),    // input wire s_axi_rready
+//  .bram_rst_a(bram_rst_a),        // output wire bram_rst_a
+//  .bram_clk_a(bram_clk_a),        // output wire bram_clk_a
+//  .bram_en_a(bram_en_a),          // output wire bram_en_a
+//  .bram_we_a(bram_we_a),          // output wire [3 : 0] bram_we_a
+//  .bram_addr_a(bram_addr_a),      // output wire [11 : 0] bram_addr_a
+//  .bram_wrdata_a(bram_wrdata_a),  // output wire [31 : 0] bram_wrdata_a
+//  .bram_rddata_a(bram_rddata_a)  // input wire [31 : 0] bram_rddata_a
+//);
+
+//blk_mem_gen_0 bram (
+//  .clka(bram_clk_a),    // input wire clka
+//  .ena(bram_en_a),      // input wire ena
+//  .wea(bram_we_a[3]),      // input wire [0 : 0] wea
+//  .addra(bram_addr_a[11:2]),  // input wire [9 : 0] addra
+//  .dina(bram_wrdata_a),    // input wire [31 : 0] dina
+//  .douta(bram_rddata_a),  // output wire [31 : 0] douta
+//  .clkb(bram_clk_a),    // input wire clkb
+//  .enb('b0),      // input wire enb
+//  .web('b0),      // input wire [0 : 0] web
+//  .addrb(10'd0),  // input wire [9 : 0] addrb
+//  .dinb(32'd0),    // input wire [31 : 0] dinb
+//  .doutb()  // output wire [31 : 0] doutb
+//);
 
 // Clock generation
 initial begin
@@ -125,7 +154,7 @@ initial begin
         repeat (delay) @(posedge s_axi_aclk);
     end
     
-    repeat (100) @(posedge s_axi_aclk)
+    repeat (20) @(posedge s_axi_aclk)
     
     axi_addr = 12'd0;
     for (i = 0; i<5; i = i +1)

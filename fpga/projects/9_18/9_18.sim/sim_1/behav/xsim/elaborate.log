@@ -1,6 +1,6 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 555bf5019cc9431495c7b0933ab7c7e2 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L axi_bram_ctrl_v4_1_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dual_port_AXI_Native_bram_tb_behav xil_defaultlib.dual_port_AXI_Native_bram_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 555bf5019cc9431495c7b0933ab7c7e2 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L axi_bram_ctrl_v4_1_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot image_loader_module_dad_behav xil_defaultlib.image_loader_module_dad xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -25,6 +25,8 @@ Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
 Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
 Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="zyn...
 Compiling module xil_defaultlib.blk_mem_gen_0
-Compiling module xil_defaultlib.dual_port_AXI_Native_bram_tb
+Compiling module xil_defaultlib.dual_port_AXI_Native_bram
+Compiling module xil_defaultlib.image_loader_module
+Compiling module xil_defaultlib.image_loader_module_dad
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot dual_port_AXI_Native_bram_tb_behav
+Built simulation snapshot image_loader_module_dad_behav

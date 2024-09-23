@@ -5,25 +5,25 @@
 module image_loader_module_dad();
 
   reg start;
-  reg [11:0] S_AXI_araddr;
-  reg [2:0] S_AXI_arprot;
-  wire S_AXI_arready;
-  reg S_AXI_arvalid;
-  reg [11:0] S_AXI_awaddr;
-  reg [2:0] S_AXI_awprot;
-  wire S_AXI_awready;
-  reg S_AXI_awvalid;
-  reg S_AXI_bready;
-  wire [1:0] S_AXI_bresp;
-  wire S_AXI_bvalid;
-  wire [31:0] S_AXI_rdata;
-  reg S_AXI_rready;
-  wire [1:0] S_AXI_rresp;
-  wire S_AXI_rvalid;
-  reg [31:0] S_AXI_wdata;
-  wire S_AXI_wready;
-  reg [3:0] S_AXI_wstrb;
-  reg S_AXI_wvalid;
+  reg [11:0] s_axi_araddr;
+  reg [2:0] s_axi_arprot;
+  wire s_axi_arready;
+  reg s_axi_arvalid;
+  reg [11:0] s_axi_awaddr;
+  reg [2:0] s_axi_awprot;
+  wire s_axi_awready;
+  reg s_axi_awvalid;
+  reg s_axi_bready;
+  wire [1:0] s_axi_bresp;
+  wire s_axi_bvalid;
+  wire [31:0] s_axi_rdata;
+  reg s_axi_rready;
+  wire [1:0] s_axi_rresp;
+  wire s_axi_rvalid;
+  reg [31:0] s_axi_wdata;
+  wire s_axi_wready;
+  reg [3:0] s_axi_wstrb;
+  reg s_axi_wvalid;
   reg s_axi_aresetn;
   reg s_axi_aclk;
   wire [31:0] x_tdata;
@@ -49,25 +49,25 @@ module image_loader_module_dad();
   // Instantiate the module
   image_loader_module uut (
     .start(start),
-    .S_AXI_araddr(S_AXI_araddr),
-    .S_AXI_arprot(S_AXI_arprot),
-    .S_AXI_arready(S_AXI_arready),
-    .S_AXI_arvalid(S_AXI_arvalid),
-    .S_AXI_awaddr(S_AXI_awaddr),
-    .S_AXI_awprot(S_AXI_awprot),
-    .S_AXI_awready(S_AXI_awready),
-    .S_AXI_awvalid(S_AXI_awvalid),
-    .S_AXI_bready(S_AXI_bready),
-    .S_AXI_bresp(S_AXI_bresp),
-    .S_AXI_bvalid(S_AXI_bvalid),
-    .S_AXI_rdata(S_AXI_rdata),
-    .S_AXI_rready(S_AXI_rready),
-    .S_AXI_rresp(S_AXI_rresp),
-    .S_AXI_rvalid(S_AXI_rvalid),
-    .S_AXI_wdata(S_AXI_wdata),
-    .S_AXI_wready(S_AXI_wready),
-    .S_AXI_wstrb(S_AXI_wstrb),
-    .S_AXI_wvalid(S_AXI_wvalid),
+    .s_axi_araddr(s_axi_araddr),
+    .s_axi_arprot(s_axi_arprot),
+    .s_axi_arready(s_axi_arready),
+    .s_axi_arvalid(s_axi_arvalid),
+    .s_axi_awaddr(s_axi_awaddr),
+    .s_axi_awprot(s_axi_awprot),
+    .s_axi_awready(s_axi_awready),
+    .s_axi_awvalid(s_axi_awvalid),
+    .s_axi_bready(s_axi_bready),
+    .s_axi_bresp(s_axi_bresp),
+    .s_axi_bvalid(s_axi_bvalid),
+    .s_axi_rdata(s_axi_rdata),
+    .s_axi_rready(s_axi_rready),
+    .s_axi_rresp(s_axi_rresp),
+    .s_axi_rvalid(s_axi_rvalid),
+    .s_axi_wdata(s_axi_wdata),
+    .s_axi_wready(s_axi_wready),
+    .s_axi_wstrb(s_axi_wstrb),
+    .s_axi_wvalid(s_axi_wvalid),
     .s_axi_aresetn(s_axi_aresetn),
     .s_axi_aclk(s_axi_aclk),
     .x_tdata(x_tdata),
@@ -88,17 +88,17 @@ integer i;
     ErrorCount = 0;
     // Initialize inputs
     start = 0;
-    S_AXI_araddr = 12'd4;
-    S_AXI_arprot = 0;
-    S_AXI_arvalid = 0;
-    S_AXI_awaddr = 12'd4;
-    S_AXI_awprot = 0;
-    S_AXI_awvalid = 0;
-    S_AXI_bready = 0;
-    S_AXI_rready = 0;
-    S_AXI_wdata = 0;
-    S_AXI_wstrb = 4'b1111;
-    S_AXI_wvalid = 0;
+    s_axi_awaddr = 11'd0;
+    s_axi_awprot = 3'b000;
+    s_axi_awvalid = 0;
+    s_axi_wdata = 32'h0;
+    s_axi_wstrb = 4'b1111;
+    s_axi_wvalid = 0;
+    s_axi_bready = 0;
+    s_axi_araddr = 11'd0;
+    s_axi_arprot = 3'b000;
+    s_axi_arvalid = 0;
+    s_axi_rready = 0;
     s_axi_aresetn = 0;
     x_tready = 0;
     axi_addr = 12'd0;
@@ -157,18 +157,18 @@ integer i;
         input [11:0] addr;
         input [31:0] data;
         begin
-            S_AXI_awaddr <= addr;
-            S_AXI_awvalid <= 1;
-            S_AXI_wdata <= data;
-            S_AXI_wvalid <= 1;
-            S_AXI_bready <= 1;
+            s_axi_awaddr <= addr;
+            s_axi_awvalid <= 1;
+            s_axi_wdata <= data;
+            s_axi_wvalid <= 1;
+            s_axi_bready <= 1;
             @(posedge s_axi_aclk);
-            while (!S_AXI_awready || !S_AXI_wready) @(posedge s_axi_aclk);
-            S_AXI_awvalid <= 0;
-            while (!S_AXI_bvalid) @(posedge s_axi_aclk);
-            S_AXI_bready <= 0;
+            while (!s_axi_awready || !s_axi_wready) @(posedge s_axi_aclk);
+            s_axi_awvalid <= 0;
+            while (!s_axi_bvalid) @(posedge s_axi_aclk);
+            s_axi_bready <= 0;
             @(posedge s_axi_aclk);
-            S_AXI_wvalid <= 0;
+            s_axi_wvalid <= 0;
         end
     endtask
 
@@ -178,15 +178,15 @@ integer i;
         output [31:0] read_data;
         begin
             @(posedge s_axi_aclk);
-            S_AXI_araddr <= addr;
-            S_AXI_arvalid <= 1;
-            S_AXI_rready <= 1;
+            s_axi_araddr <= addr;
+            s_axi_arvalid <= 1;
+            s_axi_rready <= 1;
             repeat (2) @(posedge s_axi_aclk);
-            while (!S_AXI_arready) @(posedge s_axi_aclk);
-            S_AXI_arvalid <= 0;
-            while (!S_AXI_rvalid) @(posedge s_axi_aclk);
-            S_AXI_rready <= 0;
-            read_data <= S_AXI_rdata; // get read data value when rvalid and rready are high
+            while (!s_axi_arready) @(posedge s_axi_aclk);
+            s_axi_arvalid <= 0;
+            while (!s_axi_rvalid) @(posedge s_axi_aclk);
+            s_axi_rready <= 0;
+            read_data <= s_axi_rdata; // get read data value when rvalid and rready are high
             @(posedge s_axi_aclk);
         end
     endtask

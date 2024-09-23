@@ -13,25 +13,25 @@ module dual_port_AXI_Native_bram
     BRAM_PORTB_en,
     BRAM_PORTB_rst,
     BRAM_PORTB_we,
-    S_AXI_araddr,
-    S_AXI_arprot,
-    S_AXI_arready,
-    S_AXI_arvalid,
-    S_AXI_awaddr,
-    S_AXI_awprot,
-    S_AXI_awready,
-    S_AXI_awvalid,
-    S_AXI_bready,
-    S_AXI_bresp,
-    S_AXI_bvalid,
-    S_AXI_rdata,
-    S_AXI_rready,
-    S_AXI_rresp,
-    S_AXI_rvalid,
-    S_AXI_wdata,
-    S_AXI_wready,
-    S_AXI_wstrb,
-    S_AXI_wvalid,
+    s_axi_araddr,
+    s_axi_arprot,
+    s_axi_arready,
+    s_axi_arvalid,
+    s_axi_awaddr,
+    s_axi_awprot,
+    s_axi_awready,
+    s_axi_awvalid,
+    s_axi_bready,
+    s_axi_bresp,
+    s_axi_bvalid,
+    s_axi_rdata,
+    s_axi_rready,
+    s_axi_rresp,
+    s_axi_rvalid,
+    s_axi_wdata,
+    s_axi_wready,
+    s_axi_wstrb,
+    s_axi_wvalid,
     s_axi_aclk,
     s_axi_aresetn);
     
@@ -41,25 +41,25 @@ module dual_port_AXI_Native_bram
   input BRAM_PORTB_en;        //input
   input BRAM_PORTB_rst;       //input
   input BRAM_PORTB_we; 
-  input wire [11:0]S_AXI_araddr;
-  input wire [2:0]S_AXI_arprot;
-  output wire S_AXI_arready;
-  input wire S_AXI_arvalid;
-  input wire [11:0]S_AXI_awaddr;
-  input wire [2:0]S_AXI_awprot;
-  output wire S_AXI_awready;
-  input wire S_AXI_awvalid;
-  input wire S_AXI_bready;
-  output wire [1:0]S_AXI_bresp;
-  output wire S_AXI_bvalid;
-  output wire [31:0]S_AXI_rdata;
-  input wire S_AXI_rready;
-  output wire [1:0]S_AXI_rresp;
-  output wire S_AXI_rvalid;
-  input wire [31:0]S_AXI_wdata;
-  output wire S_AXI_wready;
-  input wire [3:0]S_AXI_wstrb;
-  input wire S_AXI_wvalid;
+  input wire [11:0]s_axi_araddr;
+  input wire [2:0]s_axi_arprot;
+  output wire s_axi_arready;
+  input wire s_axi_arvalid;
+  input wire [11:0]s_axi_awaddr;
+  input wire [2:0]s_axi_awprot;
+  output wire s_axi_awready;
+  input wire s_axi_awvalid;
+  input wire s_axi_bready;
+  output wire [1:0]s_axi_bresp;
+  output wire s_axi_bvalid;
+  output wire [31:0]s_axi_rdata;
+  input wire s_axi_rready;
+  output wire [1:0]s_axi_rresp;
+  output wire s_axi_rvalid;
+  input wire [31:0]s_axi_wdata;
+  output wire s_axi_wready;
+  input wire [3:0]s_axi_wstrb;
+  input wire s_axi_wvalid;
   input wire s_axi_aclk;
   input wire s_axi_aresetn;
 
@@ -110,16 +110,14 @@ axi_bram_ctrl_0 BRAM_CONTROLLER (
   .bram_rddata_a(BRAM_PORTA_dout)  // input wire [31 : 0] bram_rddata_a
 );
 
-reg [9:0] debug = 9'd16;
-reg [31:0] debug1 = 32'hdeadbeef;
 
 
  blk_mem_gen_0 bram (
     .clka(BRAM_PORTA_clk),    // input wire clka
     .ena(BRAM_PORTA_en),      // input wire ena
     .wea(BRAM_PORTA_we[3]),      // input wire [3 : 0] wea
-    .addra(debug),  // input wire [9 : 0] addra
-    .dina(debug1),    // input wire [31 : 0] dina
+    .addra(BRAM_PORTA_addr[11:2]),  // input wire [9 : 0] addra
+    .dina(BRAM_PORTA_din),    // input wire [31 : 0] dina
     .douta(BRAM_PORTA_dout),  // output wire [31 : 0] douta
     
     .clkb(BRAM_PORTA_clk),    // input wire clkb
