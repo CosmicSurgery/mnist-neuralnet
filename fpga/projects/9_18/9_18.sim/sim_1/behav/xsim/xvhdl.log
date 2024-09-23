@@ -1,2 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/PL_NN/ip/PL_NN_image_loader_module_0_1/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'axi_bram_ctrl_0'

@@ -40,7 +40,7 @@ module dual_port_AXI_Native_bram
   output [31:0] BRAM_PORTB_dout;      //output
   input BRAM_PORTB_en;        //input
   input BRAM_PORTB_rst;       //input
-  input [3:0] BRAM_PORTB_we; 
+  input BRAM_PORTB_we; 
   input wire [11:0]S_AXI_araddr;
   input wire [2:0]S_AXI_arprot;
   output wire S_AXI_arready;
@@ -77,7 +77,7 @@ wire [31:0] BRAM_PORTB_din;
 wire [31:0] BRAM_PORTB_dout;
 wire BRAM_PORTB_en;
 wire BRAM_PORTB_rst;
-wire [3:0] BRAM_PORTB_we;
+wire BRAM_PORTB_we;
 
 axi_bram_ctrl_0 BRAM_CONTROLLER (
   .s_axi_aclk(s_axi_aclk),        // input wire s_axi_aclk
@@ -107,15 +107,19 @@ axi_bram_ctrl_0 BRAM_CONTROLLER (
   .bram_we_a(BRAM_PORTA_we),          // output wire [3 : 0] bram_we_a
   .bram_addr_a(BRAM_PORTA_addr),      // output wire [11 : 0] bram_addr_a
   .bram_wrdata_a(BRAM_PORTA_din),  // output wire [31 : 0] bram_wrdata_a
-  .bram_rddata_a(BRAM_PORTB_dout)  // input wire [31 : 0] bram_rddata_a
+  .bram_rddata_a(BRAM_PORTA_dout)  // input wire [31 : 0] bram_rddata_a
 );
-    
+
+reg [9:0] debug = 9'd16;
+reg [31:0] debug1 = 32'hdeadbeef;
+
+
  blk_mem_gen_0 bram (
     .clka(BRAM_PORTA_clk),    // input wire clka
     .ena(BRAM_PORTA_en),      // input wire ena
-    .wea(BRAM_PORTA_we),      // input wire [3 : 0] wea
-    .addra(BRAM_PORTA_addr[11:2]),  // input wire [9 : 0] addra
-    .dina(BRAM_PORTA_din),    // input wire [31 : 0] dina
+    .wea(BRAM_PORTA_we[3]),      // input wire [3 : 0] wea
+    .addra(debug),  // input wire [9 : 0] addra
+    .dina(debug1),    // input wire [31 : 0] dina
     .douta(BRAM_PORTA_dout),  // output wire [31 : 0] douta
     
     .clkb(BRAM_PORTA_clk),    // input wire clkb

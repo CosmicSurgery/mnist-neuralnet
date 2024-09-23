@@ -1,31 +1,31 @@
 
 
 module image_loader_module (
-    input start, 
-    input [11:0]S_AXI_araddr ,
-    input [2:0]S_AXI_arprot,
-    output S_AXI_arready,
-    input S_AXI_arvalid,
-    input [11:0]S_AXI_awaddr,
-    input [2:0]S_AXI_awprot,
-    output S_AXI_awready,
-    input S_AXI_awvalid,
-    input S_AXI_bready,
-    output [1:0]S_AXI_bresp,
-    output S_AXI_bvalid,
-    output [31:0]S_AXI_rdata,
-    input S_AXI_rready,
-    output [1:0]S_AXI_rresp,
-    output S_AXI_rvalid,
-    input [31:0]S_AXI_wdata,
-    output S_AXI_wready,
-    input [3:0]S_AXI_wstrb,
-    input S_AXI_wvalid,
-    input s_axi_aresetn,   // active low reset
-    input s_axi_aclk,
-    output [31:0] x_tdata, // un-weighted input value
+    input wire start, 
+    input wire [11:0]S_AXI_araddr ,
+    input wire [2:0]S_AXI_arprot,
+    output wire S_AXI_arready,
+    input wire S_AXI_arvalid,
+    input wire [11:0]S_AXI_awaddr,
+    input wire [2:0]S_AXI_awprot,
+    output wire S_AXI_awready,
+    input wire S_AXI_awvalid,
+    input wire S_AXI_bready,
+    output wire [1:0]S_AXI_bresp,
+    output wire S_AXI_bvalid,
+    output wire [31:0]S_AXI_rdata,
+    input wire S_AXI_rready,
+    output wire [1:0]S_AXI_rresp,
+    output wire S_AXI_rvalid,
+    input wire [31:0]S_AXI_wdata,
+    output wire S_AXI_wready,
+    input wire [3:0]S_AXI_wstrb,
+    input wire S_AXI_wvalid,
+    input wire s_axi_aresetn,   // active low reset
+    input wire s_axi_aclk,
+    output wire [31:0] x_tdata, // un-weighted input value
     output reg x_tvalid,
-    input x_tready
+    input wire x_tready
     
 );
 
@@ -44,7 +44,7 @@ dual_port_AXI_Native_bram IMG_LOADER (
     .BRAM_PORTB_dout     (x_tdata),
     .BRAM_PORTB_rst     (!s_axi_aresetn),
     .BRAM_PORTB_en     (1'b1),
-    .BRAM_PORTB_we     (4'b0000),
+    .BRAM_PORTB_we     (1'b0),
     .S_AXI_araddr     (S_AXI_araddr),
     .S_AXI_arprot     (S_AXI_arprot),   
     .S_AXI_arready     (S_AXI_arready),

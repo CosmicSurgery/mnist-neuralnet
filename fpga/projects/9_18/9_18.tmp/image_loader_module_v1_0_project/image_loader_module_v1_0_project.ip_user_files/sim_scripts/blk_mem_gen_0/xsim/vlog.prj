@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../../../../../source/image_loader_module/rtl/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

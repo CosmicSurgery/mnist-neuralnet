@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../9_18.srcs/sources_1/bd/PL_NN/ipshared/8713/hdl" --include "../../../../9_18.srcs/sources_1/bd/PL_NN/ipshared/ec67/hdl" \
+"../../../../../../source/perceptron/rtl/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../../../source/dual_port_AXI_Native_bram/tb/dual_port_AXI_Native_bram_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

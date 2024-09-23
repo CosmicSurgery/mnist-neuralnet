@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../../../source/image_loader_module/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" \
+
+# Do not sort compile order
+nosort
