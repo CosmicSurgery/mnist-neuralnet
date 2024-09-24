@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Thu Sep 19 14:49:15 2024
+//Date        : Mon Sep 23 17:49:23 2024
 //Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 //Command     : generate_target PL_NN_wrapper.bd
 //Design      : PL_NN_wrapper
@@ -37,11 +37,11 @@ module PL_NN_wrapper
     start_0);
   input ACLK_0;
   input ARESETN_0;
-  input [31:0]S00_AXI_0_araddr;
+  input [13:0]S00_AXI_0_araddr;
   input [2:0]S00_AXI_0_arprot;
   output [0:0]S00_AXI_0_arready;
   input [0:0]S00_AXI_0_arvalid;
-  input [31:0]S00_AXI_0_awaddr;
+  input [13:0]S00_AXI_0_awaddr;
   input [2:0]S00_AXI_0_awprot;
   output [0:0]S00_AXI_0_awready;
   input [0:0]S00_AXI_0_awvalid;
@@ -63,11 +63,11 @@ module PL_NN_wrapper
 
   wire ACLK_0;
   wire ARESETN_0;
-  wire [31:0]S00_AXI_0_araddr;
+  wire [13:0]S00_AXI_0_araddr;
   wire [2:0]S00_AXI_0_arprot;
   wire [0:0]S00_AXI_0_arready;
   wire [0:0]S00_AXI_0_arvalid;
-  wire [31:0]S00_AXI_0_awaddr;
+  wire [13:0]S00_AXI_0_awaddr;
   wire [2:0]S00_AXI_0_awprot;
   wire [0:0]S00_AXI_0_awready;
   wire [0:0]S00_AXI_0_awvalid;

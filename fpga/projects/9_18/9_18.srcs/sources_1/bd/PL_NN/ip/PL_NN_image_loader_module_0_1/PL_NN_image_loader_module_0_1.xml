@@ -157,7 +157,7 @@
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>S_AXI</spirit:name>
+      <spirit:name>s_axi</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
       <spirit:slave>
@@ -166,18 +166,26 @@
       <spirit:portMaps>
         <spirit:portMap>
           <spirit:logicalPort>
-            <spirit:name>AWADDR</spirit:name>
+            <spirit:name>BVALID</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>S_AXI_awaddr</spirit:name>
+            <spirit:name>S_AXI_bvalid</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
         <spirit:portMap>
           <spirit:logicalPort>
-            <spirit:name>AWPROT</spirit:name>
+            <spirit:name>RREADY</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>S_AXI_awprot</spirit:name>
+            <spirit:name>S_AXI_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_bready</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
         <spirit:portMap>
@@ -198,6 +206,14 @@
         </spirit:portMap>
         <spirit:portMap>
           <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
             <spirit:name>WDATA</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
@@ -206,10 +222,50 @@
         </spirit:portMap>
         <spirit:portMap>
           <spirit:logicalPort>
-            <spirit:name>WSTRB</spirit:name>
+            <spirit:name>RRESP</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>S_AXI_wstrb</spirit:name>
+            <spirit:name>S_AXI_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_arready</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
         <spirit:portMap>
@@ -230,46 +286,6 @@
         </spirit:portMap>
         <spirit:portMap>
           <spirit:logicalPort>
-            <spirit:name>BRESP</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>S_AXI_bresp</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>BVALID</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>S_AXI_bvalid</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>BREADY</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>S_AXI_bready</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>ARADDR</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>S_AXI_araddr</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>ARPROT</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>S_AXI_arprot</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
             <spirit:name>ARVALID</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
@@ -278,10 +294,18 @@
         </spirit:portMap>
         <spirit:portMap>
           <spirit:logicalPort>
-            <spirit:name>ARREADY</spirit:name>
+            <spirit:name>WSTRB</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>S_AXI_arready</spirit:name>
+            <spirit:name>S_AXI_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_bresp</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
         <spirit:portMap>
@@ -290,30 +314,6 @@
           </spirit:logicalPort>
           <spirit:physicalPort>
             <spirit:name>S_AXI_rdata</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>RRESP</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>S_AXI_rresp</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>RVALID</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>S_AXI_rvalid</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>RREADY</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>S_AXI_rready</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
@@ -648,7 +648,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_BUSIF">S_AXI:x</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_BUSIF">S_AXI:x:s_axi</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_RESET</spirit:name>
@@ -713,14 +713,14 @@
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_araddr</spirit:name>
+        <spirit:name>s_axi_araddr</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -729,14 +729,14 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_arprot</spirit:name>
+        <spirit:name>s_axi_arprot</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -745,38 +745,38 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_arready</spirit:name>
+        <spirit:name>s_axi_arready</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_arvalid</spirit:name>
+        <spirit:name>s_axi_arvalid</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_awaddr</spirit:name>
+        <spirit:name>s_axi_awaddr</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -785,14 +785,14 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_awprot</spirit:name>
+        <spirit:name>s_axi_awprot</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -801,50 +801,50 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_awready</spirit:name>
+        <spirit:name>s_axi_awready</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_awvalid</spirit:name>
+        <spirit:name>s_axi_awvalid</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_bready</spirit:name>
+        <spirit:name>s_axi_bready</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_bresp</spirit:name>
+        <spirit:name>s_axi_bresp</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -853,26 +853,26 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_bvalid</spirit:name>
+        <spirit:name>s_axi_bvalid</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_rdata</spirit:name>
+        <spirit:name>s_axi_rdata</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -881,26 +881,26 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_rready</spirit:name>
+        <spirit:name>s_axi_rready</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_rresp</spirit:name>
+        <spirit:name>s_axi_rresp</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -909,26 +909,26 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_rvalid</spirit:name>
+        <spirit:name>s_axi_rvalid</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_wdata</spirit:name>
+        <spirit:name>s_axi_wdata</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -937,26 +937,26 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_wready</spirit:name>
+        <spirit:name>s_axi_wready</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_wstrb</spirit:name>
+        <spirit:name>s_axi_wstrb</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -965,19 +965,19 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>S_AXI_wvalid</spirit:name>
+        <spirit:name>s_axi_wvalid</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -989,7 +989,7 @@
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1001,7 +1001,7 @@
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1017,7 +1017,7 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1041,7 +1041,7 @@
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1071,7 +1071,7 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>9</xilinx:coreRevision>
+      <xilinx:coreRevision>14</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@47e63a8a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
@@ -1206,6 +1206,58 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7a58019b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@282ad4d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@34d7ad01_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64bc9bac_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@248bd7e3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3492410f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15d63638_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a1a84ff_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c2890b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39989da1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@565dbf9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d2ab5a3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ccccdc3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c4b2b03_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b31079e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1df49bea_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41cb95f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5081d693_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61ab5b0c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71e56a22_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d892e9a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a652885_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5046d756_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22d3da4e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ea802a6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e26ba7f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fd566_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fa9b3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4002d674_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@478a38bf_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c8ccba6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@489e5ea5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cd0c329_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e20dfdc_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63190a96_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2390ded9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bcb87d5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75f8faef_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@216f423e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5748a3be_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dd44a7f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6892a7b3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@584792c0_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a63351d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dc89b83_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c4d28cc_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ac959df_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77f0f950_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@838e8f9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c1d0e69_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53ba93fe_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fc333b3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6053c87a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6369b63b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3af29498_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
@@ -1260,10 +1312,10 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="0375822e"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="0114b155"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="f2afdf52"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="12ba8ac0"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="8dbff3f6"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="7fe654c1"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="da11bc38"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="75869171"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

@@ -1,6 +1,552 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 22:09:13 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'debug_interconnect_image_loader_module_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of debug_interconnect_image_loader_module_1_0 (xilinx.com:user:image_loader_module:1.0 (Rev. 14)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 22:09:13 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'debug_interconnect_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of debug_interconnect_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0 (Rev. 14)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 22:09:08 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of PL_NN_perceptron_0_2 (xilinx.com:user:perceptron:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 22:09:08 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of PL_NN_perceptron_0_1 (xilinx.com:user:perceptron:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 22:09:08 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of PL_NN_perceptron_0_0 (xilinx.com:user:perceptron:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 22:09:08 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_image_loader_module_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of PL_NN_image_loader_module_0_1 (xilinx.com:user:image_loader_module:1.0 (Rev. 14)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 21:50:55 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of PL_NN_perceptron_0_2 (xilinx.com:user:perceptron:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 21:50:55 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of PL_NN_perceptron_0_1 (xilinx.com:user:perceptron:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 21:50:55 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of PL_NN_perceptron_0_0 (xilinx.com:user:perceptron:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 21:37:58 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'debug_interconnect_image_loader_module_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of debug_interconnect_image_loader_module_1_0 (xilinx.com:user:image_loader_module:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 21:37:58 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'debug_interconnect_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of debug_interconnect_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 21:37:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_image_loader_module_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of PL_NN_image_loader_module_0_1 (xilinx.com:user:image_loader_module:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 18:11:38 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'debug_interconnect_image_loader_module_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of debug_interconnect_image_loader_module_1_0 (xilinx.com:user:image_loader_module:1.0) from (Rev. 11) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 18:11:38 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'debug_interconnect_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of debug_interconnect_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0) from (Rev. 11) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 18:11:37 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_image_loader_module_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of PL_NN_image_loader_module_0_1 (xilinx.com:user:image_loader_module:1.0) from (Rev. 11) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 18:01:59 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'debug_interconnect_image_loader_module_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of debug_interconnect_image_loader_module_1_0 (xilinx.com:user:image_loader_module:1.0) from (Rev. 9) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 18:01:59 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'debug_interconnect_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of debug_interconnect_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0) from (Rev. 9) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 18:01:58 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of PL_NN_perceptron_0_2 (xilinx.com:user:perceptron:1.0 (Rev. 7)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 18:01:58 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of PL_NN_perceptron_0_1 (xilinx.com:user:perceptron:1.0 (Rev. 7)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 18:01:58 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of PL_NN_perceptron_0_0 (xilinx.com:user:perceptron:1.0 (Rev. 7)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 18:01:58 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_image_loader_module_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of PL_NN_image_loader_module_0_1 (xilinx.com:user:image_loader_module:1.0) from (Rev. 9) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 17:44:29 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'debug_interconnect_image_loader_module_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of debug_interconnect_image_loader_module_1_0 (xilinx.com:user:image_loader_module:1.0 (Rev. 9)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 17:44:29 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'debug_interconnect_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of debug_interconnect_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0 (Rev. 9)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 17:44:28 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_image_loader_module_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of PL_NN_image_loader_module_0_1 (xilinx.com:user:image_loader_module:1.0 (Rev. 9)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 17:41:28 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'debug_interconnect_image_loader_module_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of debug_interconnect_image_loader_module_1_0 (xilinx.com:user:image_loader_module:1.0 (Rev. 9)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Sep 23 17:41:28 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'debug_interconnect_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of debug_interconnect_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0 (Rev. 9)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
 | Date         : Mon Sep 23 12:02:54 2024
 | Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

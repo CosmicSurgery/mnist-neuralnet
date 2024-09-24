@@ -375,7 +375,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9e5c3f74</spirit:value>
+            <spirit:value>0a8617b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1216,7 +1216,7 @@
       <spirit:file>
         <spirit:name>../../dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_a6686918</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_e90cee81</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
@@ -1459,7 +1459,7 @@
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
       <xilinx:coreRevision>4</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-09-19T21:39:41Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-09-24T00:53:21Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@78f4c0e0_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/PL_NN/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3e4fecb5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/PL_NN/rtl</xilinx:tag>
@@ -1491,13 +1491,18 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1424e172_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/PL_NN/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1b208ac9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/PL_NN/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@18ea11e4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/PL_NN/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@368d6bd2_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/PL_NN/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9f5f55a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/PL_NN/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3af7532e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/PL_NN/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@539fc829_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/PL_NN/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74942f8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/PL_NN/rtl</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="cb2395bc"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="9d0e9ae2"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="7388caf6"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="75fe8a95"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="fdecdb77"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="457c8846"/>
     </xilinx:packagingInfo>

@@ -14,6 +14,7 @@ verilog xil_defaultlib  --include "../../../../9_18.srcs/sources_1/bd/PL_NN/ipsh
 "../../../../9_18.ip_user_files/bd/PL_NN/ipshared/7767/axi4_lite_register_module.v" \
 "../../../../9_18.ip_user_files/bd/PL_NN/ip/PL_NN_axi4_lite_register_m_0_0/sim/PL_NN_axi4_lite_register_m_0_0.v" \
 "../../../../9_18.ip_user_files/bd/PL_NN/ip/PL_NN_xbar_0/sim/PL_NN_xbar_0.v" \
+"../../../../9_18.ip_user_files/bd/PL_NN/ip/PL_NN_image_loader_module_0_1/src/blk_mem_gen_0/blk_mem_gen_0_sim_netlist.v" \
 "../../../../9_18.ip_user_files/bd/PL_NN/ip/PL_NN_image_loader_module_0_1/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
 "../../../../9_18.ip_user_files/bd/PL_NN/ipshared/8687/image_loader_module.v" \
 "../../../../9_18.ip_user_files/bd/PL_NN/ip/PL_NN_image_loader_module_0_1/sim/PL_NN_image_loader_module_0_1.v" \

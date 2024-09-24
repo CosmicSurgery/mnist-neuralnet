@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Fri Sep 20 18:15:59 2024
+// Date        : Mon Sep 23 22:10:12 2024
 // Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/axi_bram_ctrl_0_stub.v

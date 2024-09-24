@@ -109,27 +109,27 @@ integer i;
 
     // Simulate AXI transactions
     
-    for (i = 0; i<784; i = i +1)
+    for (i = 0; i<5; i = i +1)
     begin
-        axi_write(axi_addr, 32'd0+i);
+        axi_write(axi_addr, write_values[i]);
         axi_addr = axi_addr + 12'd4;
 //        delay = $urandom_range(50, 0);
         repeat (delay) @(posedge s_axi_aclk);
     end
 
-//    axi_addr = 12'd0;
-//    for (i = 0; i<784; i = i +1)
-//    begin
-//        axi_read(axi_addr, read_data);
-//        axi_addr = axi_addr + 12'd4;
-//        delay = $urandom_range(50, 0);
-//        repeat (delay) @(posedge s_axi_aclk);
-////        if(read_data != write_values[i])
-////        begin
-////            $display("Error read value %x does not equal expected value %x", read_data, write_values[i]);
-////            ErrorCount = ErrorCount + 1;
-////        end
-//    end   
+    axi_addr = 12'd16;
+    for (i = 0; i<5; i = i +1)
+    begin
+        axi_read(axi_addr, read_data);
+        axi_addr = axi_addr - 12'd4;
+        delay = $urandom_range(50, 0);
+        repeat (delay) @(posedge s_axi_aclk);
+        if(read_data != write_values[4-i])
+        begin
+            $display("Error read value %x does not equal expected value %x", read_data, write_values[4-i]);
+            ErrorCount = ErrorCount + 1;
+        end
+    end   
 //    #300
     
     // Provide start signal
@@ -142,12 +142,12 @@ integer i;
     
 
     // Finish simulation
-//    $display("");
-//    if(ErrorCount == 0)
-//        $display("Simulation: PASSED");
-//    else
-//        $display("Simulation: FAILED, found %d errors", ErrorCount);
-//    $display("");
+    $display("");
+    if(ErrorCount == 0)
+        $display("Simulation: PASSED");
+    else
+        $display("Simulation: FAILED, found %d errors", ErrorCount);
+    $display("");
     
 //    #100 $finish;
   end
@@ -181,7 +181,7 @@ integer i;
             s_axi_araddr <= addr;
             s_axi_arvalid <= 1;
             s_axi_rready <= 1;
-            repeat (2) @(posedge s_axi_aclk);
+            repeat (1) @(posedge s_axi_aclk);
             while (!s_axi_arready) @(posedge s_axi_aclk);
             s_axi_arvalid <= 0;
             while (!s_axi_rvalid) @(posedge s_axi_aclk);

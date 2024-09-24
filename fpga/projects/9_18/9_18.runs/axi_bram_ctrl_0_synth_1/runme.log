@@ -18,9 +18,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 22096 
+INFO: Helper process launched with PID 12332 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 823.000 ; gain = 233.559
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 823.355 ; gain = 233.875
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_0' [c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/synth/axi_bram_ctrl_0.vhd:92]
 	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
@@ -33,7 +33,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_0' [c:/git_repos/mnist_ne
 	Parameter C_S_AXI_SUPPORTS_NARROW_BURST bound to: 0 - type: integer 
 	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_READ_LATENCY bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY bound to: 2 - type: integer 
 	Parameter C_RD_CMD_OPTIMIZATION bound to: 0 - type: integer 
 	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
@@ -53,7 +53,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl' [c:/git_repos/mnist_neur
 	Parameter C_S_AXI_SUPPORTS_NARROW_BURST bound to: 0 - type: integer 
 	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_READ_LATENCY bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY bound to: 2 - type: integer 
 	Parameter C_RD_CMD_OPTIMIZATION bound to: 0 - type: integer 
 	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
@@ -72,7 +72,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_top' [c:/git_repos/mnist_
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_READ_LATENCY bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY bound to: 2 - type: integer 
 	Parameter C_RD_CMD_OPTIMIZATION bound to: 0 - type: integer 
 	Parameter C_ECC bound to: 0 - type: integer 
 	Parameter C_ECC_TYPE bound to: 0 - type: integer 
@@ -85,7 +85,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_lite' [c:/git_repos/mnist_neuralnet
 	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
 	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_READ_LATENCY bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY bound to: 2 - type: integer 
 	Parameter C_RD_CMD_OPTIMIZATION bound to: 0 - type: integer 
 	Parameter C_ECC bound to: 0 - type: integer 
 	Parameter C_ECC_TYPE bound to: 0 - type: integer 
@@ -98,6 +98,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_lite' [c:/git_repos/mnist_neuralnet
 	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
 	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
 	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/hdl/axi_bram_ctrl_v4_1_rfs.vhd:7959]
 WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_arready_reg_reg was removed.  [c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/hdl/axi_bram_ctrl_v4_1_rfs.vhd:8429]
 WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_rvalid_set_r_reg was removed.  [c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/hdl/axi_bram_ctrl_v4_1_rfs.vhd:8430]
 WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_rlast_set_r_reg was removed.  [c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/hdl/axi_bram_ctrl_v4_1_rfs.vhd:8431]
@@ -207,7 +208,7 @@ WARNING: [Synth 8-3331] design axi_lite has unconnected port AXI_CTRL_ARADDR[4]
 WARNING: [Synth 8-3331] design axi_lite has unconnected port AXI_CTRL_ARADDR[3]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 906.402 ; gain = 316.961
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 906.633 ; gain = 317.152
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -220,12 +221,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 906.402 ; gain = 316.961
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 906.633 ; gain = 317.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 906.402 ; gain = 316.961
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 906.633 ; gain = 317.152
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 906.402 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 906.633 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -236,40 +237,41 @@ Parsing XDC File [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/axi_
 Finished Parsing XDC File [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/axi_bram_ctrl_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 988.227 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 991.270 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1000.215 ; gain = 11.988
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1001.953 ; gain = 10.684
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1000.215 ; gain = 410.773
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:35 . Memory (MB): peak = 1001.953 ; gain = 412.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1000.215 ; gain = 410.773
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:35 . Memory (MB): peak = 1001.953 ; gain = 412.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/axi_bram_ctrl_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1000.215 ; gain = 410.773
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:35 . Memory (MB): peak = 1001.953 ; gain = 412.473
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'GEN_NO_RD_CMD_OPT.GEN_R.axi_rlast_int_reg' into 'GEN_NO_RD_CMD_OPT.GEN_R.axi_rvalid_int_reg' [c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/hdl/axi_bram_ctrl_v4_1_rfs.vhd:7279]
 INFO: [Synth 8-802] inferred FSM for state register 'GEN_NO_RD_CMD_OPT.lite_sm_cs_reg' in module 'axi_lite'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                           000001 |                              000
-             sng_wr_data |                           100000 |                              011
-                 rd_data |                           010000 |                              100
+                    idle |                         00000010 |                              000
+             sng_wr_data |                         00100000 |                              011
+              rd_latency |                         01000000 |                              001
+                 rd_data |                         00010000 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'GEN_NO_RD_CMD_OPT.lite_sm_cs_reg' using encoding 'one-hot' in module 'axi_lite'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1000.215 ; gain = 410.773
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:36 . Memory (MB): peak = 1001.953 ; gain = 412.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -282,18 +284,20 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     11 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
+	               11 Bit    Registers := 2     
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 8     
 +---Muxes : 
-	   3 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
 	   2 Input      4 Bit        Muxes := 2     
-	   3 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 13    
-	   3 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -304,18 +308,20 @@ Hierarchical RTL Component report
 Module axi_lite 
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     11 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
+	               11 Bit    Registers := 2     
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 6     
 +---Muxes : 
-	   3 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
 	   2 Input      4 Bit        Muxes := 2     
-	   3 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 13    
-	   3 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 4     
 Module axi_bram_ctrl_top 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -336,11 +342,12 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3332] Sequential element (gext_inst.abcv4_0_ext_inst/GEN_AXI4LITE.I_AXI_LITE/FSM_onehot_GEN_NO_RD_CMD_OPT.lite_sm_cs_reg[7]) is unused and will be removed from module axi_bram_ctrl.
 INFO: [Synth 8-3332] Sequential element (gext_inst.abcv4_0_ext_inst/GEN_AXI4LITE.I_AXI_LITE/FSM_onehot_GEN_NO_RD_CMD_OPT.lite_sm_cs_reg[3]) is unused and will be removed from module axi_bram_ctrl.
 INFO: [Synth 8-3332] Sequential element (gext_inst.abcv4_0_ext_inst/GEN_AXI4LITE.I_AXI_LITE/FSM_onehot_GEN_NO_RD_CMD_OPT.lite_sm_cs_reg[2]) is unused and will be removed from module axi_bram_ctrl.
-INFO: [Synth 8-3332] Sequential element (gext_inst.abcv4_0_ext_inst/GEN_AXI4LITE.I_AXI_LITE/FSM_onehot_GEN_NO_RD_CMD_OPT.lite_sm_cs_reg[1]) is unused and will be removed from module axi_bram_ctrl.
+INFO: [Synth 8-3332] Sequential element (gext_inst.abcv4_0_ext_inst/GEN_AXI4LITE.I_AXI_LITE/FSM_onehot_GEN_NO_RD_CMD_OPT.lite_sm_cs_reg[0]) is unused and will be removed from module axi_bram_ctrl.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1000.215 ; gain = 410.773
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:39 . Memory (MB): peak = 1001.953 ; gain = 412.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -352,13 +359,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1000.215 ; gain = 410.773
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:01:02 . Memory (MB): peak = 1001.953 ; gain = 412.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1000.215 ; gain = 410.773
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:01:02 . Memory (MB): peak = 1002.773 ; gain = 413.293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -370,7 +377,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1000.215 ; gain = 410.773
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:01:02 . Memory (MB): peak = 1004.023 ; gain = 414.543
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -394,13 +401,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1006.547 ; gain = 417.105
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:01:12 . Memory (MB): peak = 1008.859 ; gain = 419.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1006.547 ; gain = 417.105
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:01:12 . Memory (MB): peak = 1008.859 ; gain = 419.379
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -419,25 +426,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1006.547 ; gain = 417.105
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:01:12 . Memory (MB): peak = 1008.859 ; gain = 419.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1006.547 ; gain = 417.105
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:01:12 . Memory (MB): peak = 1008.859 ; gain = 419.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1006.547 ; gain = 417.105
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:01:12 . Memory (MB): peak = 1008.859 ; gain = 419.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1006.547 ; gain = 417.105
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:01:12 . Memory (MB): peak = 1008.859 ; gain = 419.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -453,13 +460,13 @@ Report Cell Usage:
 +------+-----+------+
 |      |Cell |Count |
 +------+-----+------+
-|1     |LUT1 |     1|
-|2     |LUT2 |     1|
-|3     |LUT3 |     5|
-|4     |LUT4 |     1|
-|5     |LUT5 |     5|
-|6     |LUT6 |    18|
-|7     |FDRE |    13|
+|1     |LUT1 |     3|
+|2     |LUT2 |    12|
+|3     |LUT3 |     3|
+|4     |LUT4 |     5|
+|5     |LUT5 |    11|
+|6     |LUT6 |    20|
+|7     |FDRE |    25|
 |8     |FDSE |     1|
 +------+-----+------+
 
@@ -467,39 +474,39 @@ Report Instance Areas:
 +------+---------------------------------+------------------+------+
 |      |Instance                         |Module            |Cells |
 +------+---------------------------------+------------------+------+
-|1     |top                              |                  |    45|
-|2     |  U0                             |axi_bram_ctrl     |    45|
-|3     |    \gext_inst.abcv4_0_ext_inst  |axi_bram_ctrl_top |    45|
-|4     |      \GEN_AXI4LITE.I_AXI_LITE   |axi_lite          |    43|
+|1     |top                              |                  |    80|
+|2     |  U0                             |axi_bram_ctrl     |    80|
+|3     |    \gext_inst.abcv4_0_ext_inst  |axi_bram_ctrl_top |    80|
+|4     |      \GEN_AXI4LITE.I_AXI_LITE   |axi_lite          |    78|
 +------+---------------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1006.547 ; gain = 417.105
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:01:12 . Memory (MB): peak = 1008.859 ; gain = 419.379
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 180 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1006.547 ; gain = 323.293
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1006.547 ; gain = 417.105
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:01:07 . Memory (MB): peak = 1008.859 ; gain = 324.059
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:01:12 . Memory (MB): peak = 1008.859 ; gain = 419.379
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1018.625 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1020.914 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1021.605 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1028.664 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-28 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+30 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1021.605 ; gain = 710.145
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1021.605 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:01:31 . Memory (MB): peak = 1028.664 ; gain = 717.211
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1028.664 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/axi_bram_ctrl_0_synth_1/axi_bram_ctrl_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP axi_bram_ctrl_0, cache-ID = c81d91d8e134e20f
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP axi_bram_ctrl_0, cache-ID = ff7e7a6b99ccd8d3
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1021.605 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1028.664 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/axi_bram_ctrl_0_synth_1/axi_bram_ctrl_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file axi_bram_ctrl_0_utilization_synth.rpt -pb axi_bram_ctrl_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Sep 20 18:15:59 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 23 22:10:12 2024...

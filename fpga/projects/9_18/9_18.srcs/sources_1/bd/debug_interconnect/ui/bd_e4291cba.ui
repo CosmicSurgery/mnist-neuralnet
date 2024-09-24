@@ -1,0 +1,29 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-539,-44",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port x_0 -pg 1 -lvl 3 -x 600 -y 90 -defaultsOSRD
+preplace port S00_AXI_0 -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace port x_1 -pg 1 -lvl 3 -x 600 -y 250 -defaultsOSRD
+preplace port start -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port rstn -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -x 180 -y 210 -defaultsOSRD
+preplace inst image_loader_module_0 -pg 1 -lvl 2 -x 470 -y 90 -defaultsOSRD
+preplace inst image_loader_module_1 -pg 1 -lvl 2 -x 470 -y 250 -defaultsOSRD
+preplace netloc start_0_1 1 0 2 NJ 50 360
+preplace netloc s_axi_aclk_0_1 1 0 2 30 70 330
+preplace netloc s_axi_aresetn_0_1 1 0 2 20 60 340
+preplace netloc S00_AXI_0_1 1 0 1 NJ 130
+preplace netloc axi_interconnect_0_M00_AXI 1 1 1 350 60n
+preplace netloc image_loader_module_0_x 1 2 1 NJ 90
+preplace netloc image_loader_module_1_x 1 2 1 NJ 250
+preplace netloc axi_interconnect_0_M01_AXI 1 1 1 N 220
+levelinfo -pg 1 0 180 470 600
+pagesize -pg 1 -db -bbox -sgen -130 0 680 350
+"
+}
+0

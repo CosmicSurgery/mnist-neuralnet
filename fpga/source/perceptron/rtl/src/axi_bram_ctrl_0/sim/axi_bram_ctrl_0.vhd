@@ -233,7 +233,7 @@ BEGIN
       C_S_AXI_SUPPORTS_NARROW_BURST => 0,
       C_SINGLE_PORT_BRAM => 1,
       C_FAMILY => "zynq",
-      C_READ_LATENCY => 1,
+      C_READ_LATENCY => 2,
       C_RD_CMD_OPTIMIZATION => 0,
       C_S_AXI_CTRL_ADDR_WIDTH => 32,
       C_S_AXI_CTRL_DATA_WIDTH => 32,
