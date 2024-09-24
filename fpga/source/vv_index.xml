@@ -9,7 +9,7 @@
 		</DisplayName>
 		<Description value="axi4_lite_layer_connector_v1_0">
 		</Description>
-		<CoreRevision value="3">
+		<CoreRevision value="4">
 		</CoreRevision>
 		<ComponentPath value="axi4_lite_layer_connector/rtl/component.xml">
 		</ComponentPath>
@@ -181,7 +181,7 @@
 		</DisplayName>
 		<Description value="image_loader_module_v1_0">
 		</Description>
-		<CoreRevision value="14">
+		<CoreRevision value="16">
 		</CoreRevision>
 		<ComponentPath value="image_loader_module/rtl/component.xml">
 		</ComponentPath>
@@ -275,7 +275,7 @@
 		</DisplayName>
 		<Description value="perceptron_v1_0">
 		</Description>
-		<CoreRevision value="9">
+		<CoreRevision value="10">
 		</CoreRevision>
 		<ComponentPath value="perceptron/rtl/component.xml">
 		</ComponentPath>

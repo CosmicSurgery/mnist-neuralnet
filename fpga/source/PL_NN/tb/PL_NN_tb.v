@@ -7,11 +7,11 @@ module PL_NN_tb ();
 
     reg ACLK_0;
     reg ARESETN_0;
-    reg [31:0]S00_AXI_0_araddr;
+    reg [13:0]S00_AXI_0_araddr;
     reg [2:0]S00_AXI_0_arprot;
     wire S00_AXI_0_arready;
     reg S00_AXI_0_arvalid;
-    reg [31:0]S00_AXI_0_awaddr;
+    reg [13:0]S00_AXI_0_awaddr;
     reg [2:0]S00_AXI_0_awprot;
     wire S00_AXI_0_awready;
     reg S00_AXI_0_awvalid;
@@ -30,6 +30,7 @@ module PL_NN_tb ();
     reg a_0_tready;
     wire a_0_tvalid;
     reg start_0;
+    reg adone;
   
     wire [31:0] write_values [4:0];
     assign write_values[0] = 32'd0;
@@ -39,7 +40,7 @@ module PL_NN_tb ();
     assign write_values[4] = 32'd4;
 
     reg [31:0] read_data;
-    reg [31:0] axi_addr;
+    reg [13:0] axi_addr;
     integer ErrorCount;    
     reg start;
     
@@ -68,6 +69,7 @@ module PL_NN_tb ();
         .S00_AXI_0_wready(S00_AXI_0_wready),
         .S00_AXI_0_wstrb(S00_AXI_0_wstrb),
         .S00_AXI_0_wvalid(S00_AXI_0_wvalid),
+        .adone(adone),
         .a_0_tdata(a_0_tdata),
         .a_0_tready(a_0_tready),
         .a_0_tvalid(a_0_tvalid),
@@ -84,11 +86,11 @@ module PL_NN_tb ();
     //test procedure
     initial begin
         ErrorCount = 0;
-        start = 0;
-        S00_AXI_0_araddr = 32'd0;
+        start_0 = 0;
+        S00_AXI_0_araddr = 14'd0;
         S00_AXI_0_arprot = 0;
         S00_AXI_0_arvalid = 0;
-        S00_AXI_0_awaddr = 32'd0;
+        S00_AXI_0_awaddr = 14'd0;
         S00_AXI_0_awprot = 0;
         S00_AXI_0_bready = 0;
         S00_AXI_0_rready = 0;
@@ -97,7 +99,8 @@ module PL_NN_tb ();
         S00_AXI_0_wvalid = 0;
         ARESETN_0 = 0;
         a_0_tready = 0;
-        axi_addr = 32'd0;
+        axi_addr = 14'd0;
+        adone = 1;
         
         // Apply reset
         repeat (30) @(posedge ACLK_0);
@@ -107,70 +110,72 @@ module PL_NN_tb ();
         
         // Write to bias registers
         // there is an issue here...
-//        axi_addr = 32'h00000000;
+//        axi_addr = 14'h00000000;
 //        for (i = 0; i<5; i = i +1)
 //        begin
-//            axi_write(axi_addr, 32'd0+4*i);
-//            axi_addr = axi_addr + 32'd4;
+//            axi_write(axi_addr, 14'd0+4*i);
+//            axi_addr = axi_addr + 14'd4;
 ////          delay = $urandom_range(50, 0);
 //            repeat (5) @(posedge ACLK_0);
 //        end
         
         // Write to image bram
-        axi_addr = 32'h40000000;
-        for (i = 0; i<5; i = i +1)
+        axi_addr = 14'h0000;
+        for (i = 0; i<784; i = i +1)
         begin
-            axi_write(axi_addr, 32'd0+4*i);
-            axi_addr = axi_addr + 32'd4;
+            axi_write(axi_addr, i);
+            axi_addr = axi_addr + 14'd4;
 //          delay = $urandom_range(50, 0);
-            repeat (5) @(posedge ACLK_0);
+//            repeat (5) @(posedge ACLK_0);
         end
         
         // Write to perceptron0
-        axi_addr = 32'h80000000;
-        for (i = 0; i<5; i = i +1)
+        axi_addr = 14'h1000;
+        for (i = 0; i<784; i = i +1)
         begin
-            axi_write(axi_addr, 32'd0+4*i);
-            axi_addr = axi_addr + 32'd4;
+            axi_write(axi_addr, i);
+            axi_addr = axi_addr + 14'd4;
 //          delay = $urandom_range(50, 0);
-            repeat (5) @(posedge ACLK_0);
+//            repeat (5) @(posedge ACLK_0);
         end
         
-        // Write to perceptron1
-        axi_addr = 32'h80010000;
-        for (i = 0; i<5; i = i +1)
-        begin
-            axi_write(axi_addr, 32'd0+4*i);
-            axi_addr = axi_addr + 32'd4;
-//          delay = $urandom_range(50, 0);
-            repeat (5) @(posedge ACLK_0);
-        end
+//        // Write to perceptron1
+//        axi_addr = 14'h80010000;
+//        for (i = 0; i<5; i = i +1)
+//        begin
+//            axi_write(axi_addr, 14'd0+4*i);
+//            axi_addr = axi_addr + 14'd4;
+////          delay = $urandom_range(50, 0);
+//            repeat (5) @(posedge ACLK_0);
+//        end
         
-        // Write to perceptron2
-        axi_addr = 32'h80020000;
-        for (i = 0; i<5; i = i +1)
-        begin
-            axi_write(axi_addr, 32'd0+4*i);
-            axi_addr = axi_addr + 32'd4;
-//          delay = $urandom_range(50, 0);
-            repeat (5) @(posedge ACLK_0);
-        end
+//        // Write to perceptron2
+//        axi_addr = 14'h80020000;
+//        for (i = 0; i<5; i = i +1)
+//        begin
+//            axi_write(axi_addr, 14'd0+4*i);
+//            axi_addr = axi_addr + 14'd4;
+////          delay = $urandom_range(50, 0);
+//            repeat (5) @(posedge ACLK_0);
+//        end
         
         // provide start signal
         repeat (5) @(posedge ACLK_0);
-        start = 1;
+        start_0 = 1;
         @(posedge ACLK_0);
         a_0_tready = 1;
         
         repeat (20) @(posedge ACLK_0);
-        start = 0;
-        
+        start_0 = 0;
+
+//        while (!uut.PL_NN_i.perceptron_0.inst.a_0_tvalid) @(posedge ACLK_0);
+//        $finish;
     end
         
 
     // AXI write task
     task axi_write;
-        input [31:0] addr;
+        input [13:0] addr;
         input [31:0] data;
         begin
             S00_AXI_0_awaddr <= addr;
@@ -179,18 +184,25 @@ module PL_NN_tb ();
             S00_AXI_0_wvalid <= 1;
             S00_AXI_0_bready <= 1;
             @(posedge ACLK_0);
-            while (!S00_AXI_0_awready || !S00_AXI_0_wready) @(posedge ACLK_0); // when both awready and wready the loop exits
-            S00_AXI_0_awvalid <= 0;
+            fork
+                begin
+                    while (!S00_AXI_0_wready) @ (posedge ACLK_0);
+                    S00_AXI_0_wvalid <= 0;
+                end
+                begin
+                    while (!S00_AXI_0_awready) @(posedge ACLK_0);
+                    S00_AXI_0_awvalid <= 0;
+                end
+            join
             while (!S00_AXI_0_bvalid) @(posedge ACLK_0);
             S00_AXI_0_bready <= 0;
             @(posedge ACLK_0);
-            S00_AXI_0_wvalid <= 0;
         end
     endtask
 
     // AXI read task
     task axi_read;
-        input [31:0] addr;
+        input [13:0] addr;
         output [31:0] read_data;
         begin
             @(posedge ACLK_0);

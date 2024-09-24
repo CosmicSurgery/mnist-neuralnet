@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:axi4_lite_layer_connector:1.0
-// IP Revision: 3
+// IP Revision: 4
 
 `timescale 1ns/1ps
 
@@ -100,7 +100,7 @@ module PL_NN_axi4_lite_layer_conn_0_0 (
 );
 
 input wire start;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF a, ASSOCIATED_RESET resetn:rstn, FREQ_HZ 10000000, PHASE 0.000, CLK_DOMAIN PL_NN_ACLK_0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF a, FREQ_HZ 10000000, PHASE 0.000, CLK_DOMAIN PL_NN_ACLK_0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire [31 : 0] a0;

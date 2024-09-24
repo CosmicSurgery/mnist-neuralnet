@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../bd/PL_NN/ip/PL_NN_perceptron_0_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" \
+
+nosort

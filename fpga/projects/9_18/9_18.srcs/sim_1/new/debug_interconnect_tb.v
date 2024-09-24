@@ -148,6 +148,15 @@ module debug_interconnect_tb();
             end
         end   
         
+        repeat (30) @(posedge clk);
+        
+            // Provide start signal
+        @(negedge clk);
+        start = 1;
+        repeat (10) @(posedge clk);
+        start = 0;
+        
+        #100 $finish;
     end
         
     // AXI write task

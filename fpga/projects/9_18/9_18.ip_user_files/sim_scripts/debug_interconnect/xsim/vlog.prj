@@ -1,0 +1,12 @@
+verilog xil_defaultlib --include "../../../../9_18.srcs/sources_1/bd/debug_interconnect/ipshared/ec67/hdl" \
+"../../../bd/debug_interconnect/perceptron/rtl/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../bd/debug_interconnect/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v" \
+"../../../bd/debug_interconnect/ipshared/db16/image_loader_module.v" \
+"../../../bd/debug_interconnect/ip/debug_interconnect_image_loader_module_0_0/sim/debug_interconnect_image_loader_module_0_0.v" \
+"../../../bd/debug_interconnect/ip/debug_interconnect_xbar_0/sim/debug_interconnect_xbar_0.v" \
+"../../../bd/debug_interconnect/ip/debug_interconnect_image_loader_module_1_0/sim/debug_interconnect_image_loader_module_1_0.v" \
+"../../../bd/debug_interconnect/sim/debug_interconnect.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
