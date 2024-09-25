@@ -64,6 +64,7 @@ module perceptron #(activation="relu")(
     wire pos_edge_start;
     reg [31:0] x_tdata_del;
     reg x_tvalid_del;
+    wire [63:0]P;
     
     assign pos_edge_start = start & !start_reg;
     
@@ -96,21 +97,14 @@ module perceptron #(activation="relu")(
     .s_axi_aclk     (s_axi_aclk),
     .s_axi_aresetn      (s_axi_aresetn)
     ); 
+    
+    mult_gen_0 mult(
+      .CLK(s_axi_aclk),  // input wire CLK
+      .A(wout),      // input wire [31 : 0] A
+      .B(x_tdata_del),      // input wire [31 : 0] B
+      .P(P)      // output wire [63 : 0] P
+    );
           
-    
-//    Weight_Memory #(.weightFile(weightFile), .mem_depth(input_size)) WM (
-//    .clk(clk),
-//    .ren(ren),
-//    .r_addr(radd),
-//    .wout(wout),
-//    .weightValid(weightValid)
-//    );  
-    
-//    blk_mem_gen_0 test_mem (
-//    .clka(clk),
-//    .addra(radd),
-//    .douta(wout)
-//    );
 
 // test
         
@@ -139,8 +133,9 @@ module perceptron #(activation="relu")(
             end
             else 
             if (x_tvalid_del & x_tready & r_addr < 10'd784) begin
-                mul <= $signed(wout) * $signed(x_tdata_del); // come back and see if I need to instantiate a DSP48
-                sum <= mul + sum;
+//                mul <= $signed(wout) * $signed(x_tdata_del); // come back and see if I need to instantiate a DSP48
+//                sum <= mul + sum;
+                sum <= P +sum;
                 // make sure to come back and check for overflow.
             end
         end

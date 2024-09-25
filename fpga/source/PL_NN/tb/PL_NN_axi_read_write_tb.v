@@ -192,7 +192,7 @@ module PL_NN_axi_read_write_tb ();
 
     // AXI write task
     task axi_write;
-        input [31:0] addr;
+        input [13:0] addr;
         input [31:0] data;
         begin
             S00_AXI_0_awaddr <= addr;
@@ -201,18 +201,25 @@ module PL_NN_axi_read_write_tb ();
             S00_AXI_0_wvalid <= 1;
             S00_AXI_0_bready <= 1;
             @(posedge ACLK_0);
-            while (!S00_AXI_0_awready || !S00_AXI_0_wready) @(posedge ACLK_0); // when both awready and wready the loop exits
-            S00_AXI_0_awvalid <= 0;
+            fork
+                begin
+                    while (!S00_AXI_0_wready) @ (posedge ACLK_0);
+                    S00_AXI_0_wvalid <= 0;
+                end
+                begin
+                    while (!S00_AXI_0_awready) @(posedge ACLK_0);
+                    S00_AXI_0_awvalid <= 0;
+                end
+            join
             while (!S00_AXI_0_bvalid) @(posedge ACLK_0);
             S00_AXI_0_bready <= 0;
             @(posedge ACLK_0);
-            S00_AXI_0_wvalid <= 0;
         end
     endtask
 
     // AXI read task
     task axi_read;
-        input [31:0] addr;
+        input [13:0] addr;
         output [31:0] read_data;
         begin
             @(posedge ACLK_0);

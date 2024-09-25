@@ -4,7 +4,7 @@ module axi4_lite_register_module (
     input wire aresetn,
     
     // AXI4-Lite slave interface
-    input wire [31:0] s_axil_awaddr,
+    input wire [4:0] s_axil_awaddr,
     input wire [2:0] s_axil_awprot,
     input wire s_axil_awvalid,
     output wire s_axil_awready,
@@ -15,7 +15,7 @@ module axi4_lite_register_module (
     output wire [1:0] s_axil_bresp,
     output wire s_axil_bvalid,
     input wire s_axil_bready,
-    input wire [31:0] s_axil_araddr,
+    input wire [4:0] s_axil_araddr,
     input wire [2:0] s_axil_arprot,
     input wire s_axil_arvalid,
     output wire s_axil_arready,
@@ -63,13 +63,17 @@ module axi4_lite_register_module (
     reg axi_wready;
     reg axi_bvalid;
     
+    // AXI4-Lite other interface registers
+    reg [4:0] addr;
+    reg addr_curr;
+    reg [31:0] axi_wdata;
+    reg data_curr;
+    
     // Write address decoding
-    wire [4:0] wr_addr = s_axil_awaddr[6:2];
-    wire wr_en = s_axil_awvalid & s_axil_wvalid & ~axi_bvalid;
+    wire wr_en = addr_curr & data_curr;
     
     // Read address decoding
-    wire [4:0] rd_addr = s_axil_araddr[6:2];
-    wire rd_en = s_axil_arvalid & ~axi_rvalid;
+    wire rd_en = s_axil_arvalid & axi_arready & ~axi_rvalid;
     
     // Write logic
     integer i;
@@ -77,12 +81,35 @@ module axi4_lite_register_module (
         if (~aresetn) begin
             for (i = 0; i < 18; i = i + 1) begin
                 bias_regs[i] <= 32'h0;
+                addr_curr <=0;
+                data_curr <=0;
             end
             control_reg <= 0;
-        end else if (wr_en) begin
-            if (wr_addr < 5'd18) begin
-                bias_regs[wr_addr] <= s_axil_wdata;
+        end 
+        if (s_axil_awvalid & axi_awready) begin
+            addr <= s_axil_awaddr;
+            addr_curr <= 1;
+        end
+        if (s_axil_wvalid & axi_wready) begin
+            axi_wdata <= s_axil_wdata;
+            data_curr <=1;
+        end
+        if (wr_en) begin
+            if (addr < 5'd18) begin
+                bias_regs[addr] <= axi_wdata;
+                addr_curr <= 0;
+                data_curr <= 0;
             end 
+        end 
+        //come back tothis
+        
+        if (s_axil_awvalid & axi_awready) begin
+            addr <= s_axil_awaddr;
+            addr_curr <= 1;
+        end
+        if (s_axil_wvalid & axi_wready) begin
+            axi_wdata <= s_axil_wdata;
+            data_curr <=1;
         end
     end
     
@@ -91,14 +118,15 @@ module axi4_lite_register_module (
         if (~aresetn) begin
             axi_rdata <= 32'h0;
         end else if (rd_en) begin
-            if (rd_addr < 5'd18) begin
-                axi_rdata <= bias_regs[rd_addr];
-            end else if (rd_addr == 5'd19) begin
+            if (s_axil_araddr < 5'd18) begin
+                axi_rdata <= bias_regs[s_axil_araddr];
+            end else if (s_axil_araddr == 5'd19) begin
                 axi_rdata <= status;
             end else begin
                 axi_rdata <= 32'h0;
             end
         end
+        
     end
     
     // AXI4-Lite interface logic
@@ -124,9 +152,10 @@ module axi4_lite_register_module (
                 axi_rvalid <= 1'b0;
             end
             
-            // Ready signals
-            axi_awready <= ~axi_awready & s_axil_awvalid & s_axil_wvalid & ~axi_bvalid;
-            axi_wready <= ~axi_wready & s_axil_awvalid & s_axil_wvalid & ~axi_bvalid;
+            // Address Ready signals
+            
+            axi_awready <= ~axi_awready & s_axil_awvalid &  ~axi_bvalid;
+            axi_wready <= ~axi_wready & s_axil_wvalid & ~axi_bvalid;
             axi_arready <= ~axi_arready & s_axil_arvalid & ~axi_rvalid;
         end
     end
