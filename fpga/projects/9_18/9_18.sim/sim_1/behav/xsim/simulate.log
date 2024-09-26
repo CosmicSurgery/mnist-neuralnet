@@ -1,16 +1,12 @@
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-Block Memory Generator module perceptron_tb.uut.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_4_4 collision detected at time: 305000, Instance: perceptron_tb.uut.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
-Error read value 00000005 does not equal expected value 00000001
-Block Memory Generator module perceptron_tb.uut.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_4_4 collision detected at time: 305000, Instance: perceptron_tb.uut.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
-Error read value 00000005 does not equal expected value 00000001
-Error read value 00000001 does not equal expected value 00000002
-Error read value 00000002 does not equal expected value 00000003
-Error read value 00000003 does not equal expected value 00000004
-Error read value 00000004 does not equal expected value 00000005
-Error read value x does not equal expected value 0000003c
-
-Simulation: FAILED
-
+Error: Control register read mismatch. Expected: 18, Got: 0000abcd
+Error: Control register read mismatch. Expected: 18, Got: 1111babe
+Error: Control register read mismatch. Expected: 18, Got: 2222cafe
+Error: Control register read mismatch. Expected: 18, Got: 3333dead
+Error: Control register read mismatch. Expected: 18, Got: 4444efed
+Error: Control register read mismatch. Expected: 18, Got: 5555fade
+Error: Control register read mismatch. Expected: 18, Got: 6666abcd
+Error: Control register read mismatch. Expected: 18, Got: 7777babe
+Error: Control register read mismatch. Expected: 18, Got: 8888cafe
+Error: Control register read mismatch. Expected: 18, Got: 9999dead

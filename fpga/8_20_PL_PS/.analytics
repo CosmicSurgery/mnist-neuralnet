@@ -1,0 +1,2 @@
+timestamp=[2024-09-26 13:15:22], mode=WORKBENCH_START, duration=0:00:09.801, duration_ms=9801, data={}
+timestamp=[2024-09-26 13:15:23], mode=WORKBENCH_UI_INIT, duration=0:00:01.568, duration_ms=1568, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/git_repos/mnist_neuralnet/fpga/8_20_PL_PS/8_20_PL_PS.runs/design_1_xbar_0_synth_1'
+HD_PWD='C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.runs/design_1_xbar_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

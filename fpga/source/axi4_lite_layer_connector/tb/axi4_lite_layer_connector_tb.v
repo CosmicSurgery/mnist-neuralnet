@@ -80,15 +80,15 @@ module axi4_lite_layer_connector_tb ();
     end
     
     initial begin
-    resetn <= 0;
-    done <= 0;
-    a_tready <=1;
-    start <=1;
-    
-    repeat (10) @(posedge clk);
-    resetn <=1;
-    repeat (10) @(posedge clk);
-    done <=1;
+        resetn <= 0;
+        done <= 0;
+        a_tready <=1;
+        start <=1;
+        
+        repeat (10) @(posedge clk);
+        resetn <=1;
+        repeat (10) @(posedge clk);
+        done <=1;
     
     end
         

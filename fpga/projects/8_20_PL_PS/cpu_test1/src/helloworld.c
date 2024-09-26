@@ -50,13 +50,43 @@
 #include "xil_printf.h"
 #include "xil_io.h"
 #include "img.h"
+#include "xgpio.h"
+#include "sleep.h"
+#include "xparameters.h"
 
+#define GPIO_BASE 0x41200000;
+
+XGpio gpio;
+
+#define BIT0 0x01
+#define BIT1 0x02
+#define BIT2 0x04
+#define BIT3 0x08
 
 int main()
 {
     init_platform();
+    XGpio gpio;
+
+    XGpio_Initialize(&gpio, XPAR_GPIO_0_DEVICE_ID);
+
+    XGpio_SetDataDirection(&gpio, 1, 0x00000000);
 
     print("Hello World\n\r");
+
+    for (int i=0;i<784;i++){
+    	XGpio_DiscreteWrite(&gpio, 1, BIT0);
+    	usleep(100000);
+
+    	XGpio_DiscreteWrite(&gpio, 1, BIT1);
+    	usleep(100000);
+
+    	XGpio_DiscreteWrite(&gpio, 1, BIT2);
+    	usleep(100000);
+
+    	XGpio_DiscreteWrite(&gpio, 1, BIT3);
+    	usleep(100000);
+    }
 
 	UINTPTR BRAM_BASEADDR = 0x40000000;
 	uint32_t read_value;

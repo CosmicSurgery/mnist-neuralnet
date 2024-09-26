@@ -1,0 +1,64 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.463551",
+   "Default View_TopLeft":"-664,-41",
+   "ExpandedHierarchyInLayout":"/axi_interconnect_0|/axi_interconnect_0/s00_couplers|/axi_interconnect_0/m00_couplers|/axi_interconnect_0/m01_couplers|/axi_interconnect_0/m02_couplers",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 4 -x 2140 -y 300 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 2140 -y 460 -defaultsOSRD
+preplace port led -pg 1 -lvl 4 -x 2140 -y 570 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 3 -x 1962 -y 50 -defaultsOSRD
+preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 3 -x 1962 -y 970 -defaultsOSRD
+preplace inst axi_bram_ctrl_0_bram1 -pg 1 -lvl 3 -x 1962 -y 180 -defaultsOSRD
+preplace inst axi_bram_ctrl_1 -pg 1 -lvl 3 -x 1962 -y 850 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -x 1962 -y 570 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 2 -x 720 -y 522 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 100 -y 640 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 100 -y 350 -defaultsOSRD
+preplace inst axi_interconnect_0|xbar -pg 1 -lvl 2 -x 1130 -y 632 -defaultsOSRD
+preplace inst axi_interconnect_0|s00_couplers -pg 1 -lvl 1 -x 830 -y 652 -defaultsOSRD
+preplace inst axi_interconnect_0|m00_couplers -pg 1 -lvl 3 -x 1480 -y 492 -defaultsOSRD
+preplace inst axi_interconnect_0|m01_couplers -pg 1 -lvl 3 -x 1480 -y 672 -defaultsOSRD
+preplace inst axi_interconnect_0|m02_couplers -pg 1 -lvl 3 -x 1480 -y 852 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 -120 450 360 360 1780
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 -110 460 310
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 340 340 1790
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 2 2 1810 -30 2110
+preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 2 2 1820 240 2110
+preplace netloc axi_gpio_0_GPIO 1 3 1 2120 560n
+preplace netloc axi_interconnect_0_M00_AXI 1 2 1 1770 452n
+preplace netloc axi_interconnect_0_M01_AXI 1 2 1 1750 632n
+preplace netloc axi_interconnect_0_M02_AXI 1 2 1 1760 30n
+preplace netloc processing_system7_0_DDR 1 1 3 320 300 N 300 N
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 330 350 1800 460 N
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 350 612n
+preplace netloc axi_interconnect_0|axi_interconnect_0_ACLK_net 1 0 3 640 742 980 742 1280
+preplace netloc axi_interconnect_0|axi_interconnect_0_ARESETN_net 1 0 3 630 752 990 752 1290
+preplace netloc axi_interconnect_0|axi_interconnect_0_to_s00_couplers 1 0 1 N 612
+preplace netloc axi_interconnect_0|s00_couplers_to_xbar 1 1 1 N 612
+preplace netloc axi_interconnect_0|m00_couplers_to_axi_interconnect_0 1 3 1 N 452
+preplace netloc axi_interconnect_0|xbar_to_m00_couplers 1 2 1 1270 452n
+preplace netloc axi_interconnect_0|m01_couplers_to_axi_interconnect_0 1 3 1 N 632
+preplace netloc axi_interconnect_0|xbar_to_m01_couplers 1 2 1 N 632
+preplace netloc axi_interconnect_0|m02_couplers_to_axi_interconnect_0 1 3 1 N 812
+preplace netloc axi_interconnect_0|xbar_to_m02_couplers 1 2 1 1270 652n
+preplace netloc axi_interconnect_0|m00_couplers|m00_couplers_to_m00_couplers 1 0 1 N 452
+preplace netloc axi_interconnect_0|m01_couplers|m01_couplers_to_m01_couplers 1 0 1 N 632
+preplace netloc axi_interconnect_0|m02_couplers|m02_couplers_to_m02_couplers 1 0 1 N 812
+preplace netloc axi_interconnect_0|s00_couplers|s00_couplers_to_s00_couplers 1 0 1 N 612
+levelinfo -pg 1 -140 100 720 1962 2140
+levelinfo -hier axi_interconnect_0 * 830 1130 1480 *
+levelinfo -hier axi_interconnect_0|s00_couplers * *
+levelinfo -hier axi_interconnect_0|m00_couplers * *
+levelinfo -hier axi_interconnect_0|m01_couplers * *
+levelinfo -hier axi_interconnect_0|m02_couplers * *
+pagesize -pg 1 -db -bbox -sgen -140 -300 2260 1730
+pagesize -hier axi_interconnect_0 -db -bbox -sgen 600 392 1660 942
+pagesize -hier axi_interconnect_0|s00_couplers -db -bbox -sgen 750 582 910 722
+pagesize -hier axi_interconnect_0|m00_couplers -db -bbox -sgen 1400 422 1560 562
+pagesize -hier axi_interconnect_0|m01_couplers -db -bbox -sgen 1400 602 1560 742
+pagesize -hier axi_interconnect_0|m02_couplers -db -bbox -sgen 1400 782 1560 922
+"
+}
+

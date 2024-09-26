@@ -1508,3 +1508,111 @@ con
 
 20:42:06 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\8_20_PL_PS\.sdk\launch_scripts\single_application_debug\systemdebugger_cpu_test1_system_standalone.tcl'
 20:44:38 INFO  : Disconnected from the channel tcfchan#97.
+13:18:02 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\projects\8_20_PL_PS\temp_xsdb_launch_script.tcl
+13:18:05 INFO  : XSCT server has started successfully.
+13:18:05 INFO  : plnx-install-location is set to ''
+13:18:05 INFO  : Successfully done setting XSCT server connection channel  
+13:18:05 INFO  : Successfully done setting workspace for the tool. 
+13:18:09 INFO  : Registering command handlers for Vitis TCF services
+13:18:09 INFO  : Successfully done query RDI_DATADIR 
+13:44:41 INFO  : Checking for BSP changes to sync application flags for project 'cpu_test1'...
+13:44:41 ERROR : Failed to get platform details for the project 'cpu_test1'. Cannot sync application flags.
+13:45:41 INFO  : Hardware specification for platform project 'cpu_test' is updated.
+13:45:58 INFO  : Checking for BSP changes to sync application flags for project 'cpu_test1'...
+13:50:08 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+13:50:08 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+13:59:04 ERROR : Failed to openhw "C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test/export/cpu_test/hw/design_1_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+14:05:18 ERROR : Failed to openhw "C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test/export/cpu_test/hw/design_1_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+14:06:20 INFO  : Checking for BSP changes to sync application flags for project 'cpu_test1'...
+14:18:26 ERROR : Failed to openhw "C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test/export/cpu_test/hw/design_1_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+14:18:41 ERROR : Failed to openhw "C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test/export/cpu_test/hw/design_1_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+14:19:41 INFO  : Checking for BSP changes to sync application flags for project 'cpu_test1'...
+14:20:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:20:17 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+14:20:17 INFO  : 'jtag frequency' command is executed.
+14:20:17 INFO  : Context for 'APU' is selected.
+14:20:17 INFO  : System reset is completed.
+14:20:20 INFO  : 'after 3000' command is executed.
+14:20:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+14:20:21 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test1/_ide/bitstream/design_1_wrapper.bit"
+14:20:21 INFO  : Context for 'APU' is selected.
+14:20:22 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test/export/cpu_test/hw/design_1_wrapper.xsa'.
+14:20:22 INFO  : 'configparams force-mem-access 1' command is executed.
+14:20:22 INFO  : Context for 'APU' is selected.
+14:20:22 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test1/_ide/psinit/ps7_init.tcl' is done.
+14:20:22 ERROR : Memory read error at 0xF800602C. AHB Memory access port is disabled
+14:20:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test1/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test/export/cpu_test/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test1/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+14:20:22 ERROR : Memory read error at 0xF800602C. AHB Memory access port is disabled
+14:20:53 ERROR : Failed to openhw "C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test/export/cpu_test/hw/design_1_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+14:22:02 INFO  : Checking for BSP changes to sync application flags for project 'cpu_test1'...
+14:22:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:22:47 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+14:22:47 INFO  : 'jtag frequency' command is executed.
+14:22:47 INFO  : Context for 'APU' is selected.
+14:22:47 INFO  : System reset is completed.
+14:22:50 INFO  : 'after 3000' command is executed.
+14:22:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+14:22:51 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test1/_ide/bitstream/design_1_wrapper.bit"
+14:22:51 INFO  : Context for 'APU' is selected.
+14:22:51 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test/export/cpu_test/hw/design_1_wrapper.xsa'.
+14:22:52 INFO  : 'configparams force-mem-access 1' command is executed.
+14:22:52 INFO  : Context for 'APU' is selected.
+14:22:52 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test1/_ide/psinit/ps7_init.tcl' is done.
+14:22:52 INFO  : 'ps7_init' command is executed.
+14:22:52 INFO  : 'ps7_post_config' command is executed.
+14:22:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:22:52 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test1/Debug/cpu_test1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:22:52 INFO  : 'configparams force-mem-access 0' command is executed.
+14:22:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test1/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test/export/cpu_test/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/cpu_test1/Debug/cpu_test1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:22:52 INFO  : Memory regions updated for context APU
+14:22:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:22:52 INFO  : 'con' command is executed.
+14:22:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:22:52 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\8_20_PL_PS\.sdk\launch_scripts\single_application_debug\systemdebugger_cpu_test1_system_standalone.tcl'
+14:29:12 INFO  : Disconnected from the channel tcfchan#15.
