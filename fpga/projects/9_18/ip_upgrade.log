@@ -1,6 +1,248 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Sep 27 10:47:10 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_hardmax_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_hardmax_0_0 (xilinx.com:user:hardmax:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_hardmax_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'a_tready'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Sep 27 10:44:24 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_hardmax_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_hardmax_0_0 (xilinx.com:user:hardmax:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_hardmax_0_0'.
+
+
+-Upgrade has removed interface 'rst'
+
+-Upgrade has added interface 'rstn' (xilinx.com:signal:reset:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_hardmax_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'a'
+
+-Upgrade has removed port 'aValid'
+
+-Upgrade has removed port 'rst'
+
+-Upgrade has removed port 'z'
+
+-Upgrade has removed port 'zValid'
+
+-Upgrade has added port 'a_tValid'
+
+-Upgrade has added port 'a_tdata'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'rstn'
+
+-Upgrade has added port 'z_tValid'
+
+-Upgrade has added port 'z_tdata'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Sep 27 10:07:53 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'axi4_lite_register_module_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of axi4_lite_register_module_0 (xilinx.com:user:axi4_lite_register_module:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Sep 27 10:07:53 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_prototype_axi4_lite_register_m_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of PL_NN_prototype_axi4_lite_register_m_0_0 (xilinx.com:user:axi4_lite_register_module:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Sep 27 10:07:52 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_axi4_lite_register_m_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of PL_NN_axi4_lite_register_m_0_1 (xilinx.com:user:axi4_lite_register_module:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Sep 27 10:07:52 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_axi4_lite_register_m_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of PL_NN_axi4_lite_register_m_0_0 (xilinx.com:user:axi4_lite_register_module:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Sep 27 09:05:46 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of PL_NN_perceptron_0_2 (xilinx.com:user:perceptron:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Sep 27 09:05:46 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of PL_NN_perceptron_0_1 (xilinx.com:user:perceptron:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Sep 27 09:05:46 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of PL_NN_perceptron_0_0 (xilinx.com:user:perceptron:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
 | Date         : Tue Sep 24 18:12:47 2024
 | Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

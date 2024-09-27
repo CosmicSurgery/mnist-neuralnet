@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>PL_NN_perceptron_7_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>x</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>x_tdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>x_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>x_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.X.TDATA_NUM_BYTES">4</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.X.TDEST_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.X.TID_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.X.TUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TREADY</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.X.HAS_TREADY">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TSTRB</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.X.HAS_TSTRB">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TKEEP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.X.HAS_TKEEP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TLAST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.X.HAS_TLAST">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.X.FREQ_HZ">10000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.X.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.X.CLK_DOMAIN">PL_NN_ACLK_0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.X.LAYERED_METADATA">undef</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.X.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>s_axi</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:slave>
+        <spirit:memoryMapRef spirit:memoryMapRef="s_axi"/>
+      </spirit:slave>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_awvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_awready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_wdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_wvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_wready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_bresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_bvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_bready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXI_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.DATA_WIDTH">32</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PROTOCOL</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.PROTOCOL">AXI4LITE</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">10000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ADDR_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH">12</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>AWUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.AWUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ARUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.ARUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.WUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>RUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.RUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>BUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.BUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>READ_WRITE_MODE</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.READ_WRITE_MODE">READ_WRITE</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_BURST">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_LOCK</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_LOCK">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_PROT</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_PROT">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_CACHE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_CACHE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_QOS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_QOS">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_REGION</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_REGION">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_WSTRB</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_WSTRB">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BRESP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_BRESP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_RRESP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_RRESP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.SUPPORTS_NARROW_BURST">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>MAX_BURST_LENGTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN">PL_NN_ACLK_0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_READ_THREADS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.NUM_READ_THREADS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_WRITE_THREADS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_THREADS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>RUSER_BITS_PER_BYTE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.RUSER_BITS_PER_BYTE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WUSER_BITS_PER_BYTE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.WUSER_BITS_PER_BYTE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S_AXI.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>s_axi_aresetn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ARESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S_AXI_ARESETN.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>s_axi_aclk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_BUSIF">x:s_axi</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_RESET">s_axi_aresetn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_HZ">10000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.CLK_DOMAIN">PL_NN_ACLK_0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:memoryMaps>
+    <spirit:memoryMap>
+      <spirit:name>s_axi</spirit:name>
+      <spirit:addressBlock>
+        <spirit:name>reg0</spirit:name>
+        <spirit:baseAddress spirit:format="bitString" spirit:resolve="user" spirit:bitStringLength="32">0</spirit:baseAddress>
+        <spirit:range spirit:format="long" spirit:resolve="user" spirit:minimum="4096" spirit:rangeType="long">4096</spirit:range>
+        <spirit:width spirit:format="long" spirit:resolve="user">32</spirit:width>
+        <spirit:usage>register</spirit:usage>
+      </spirit:addressBlock>
+    </spirit:memoryMap>
+  </spirit:memoryMaps>
+  <spirit:model>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>start</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_arready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_awaddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_awprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_awready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_awvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_bready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_bresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_bvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_rdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_rresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_rvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_wdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_wready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_wstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">1</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_wvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>x_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>x_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>x_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>bias</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>biasValid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>done</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="string">
+        <spirit:name>activation</spirit:name>
+        <spirit:displayName>Activation</spirit:displayName>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.activation">relu</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:description>perceptron_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>activation</spirit:name>
+      <spirit:displayName>Activation</spirit:displayName>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.activation">relu</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">PL_NN_perceptron_7_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>perceptron_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:xpmLibraries>
+        <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
+        <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
+      </xilinx:xpmLibraries>
+      <xilinx:coreRevision>11</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="nopcore"/>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76bb79a9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f1a3e1e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@781badaa_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19858157_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2aafa8c7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bfcd968_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f5ba910_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ef4ac95_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b0988a2_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bbc4128_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@691f1058_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19514130_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bb62825_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e36198a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15c13eb7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f5d3bb3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dee4151_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2566714e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75bee1f9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b81bb18_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e08b4a4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f216f06_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22b4976d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4677e244_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33f499a4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59e8d634_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ce15b1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66ef3b15_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@553afb7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d1bc147_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@436cfd52_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40ab6cfc_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@394e03ce_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37c23160_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39de566b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c7725e1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15825b37_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ac70d04_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f31f8b5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2785363d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dcfe6cb_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fa458d5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11929c0b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f1a5b52_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@739965ed_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@562ccf12_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66f8ce0f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e2c1067_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@222a911_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fbdca0d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d35931c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59b15b25_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71172621_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@437b672b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13ef5627_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7db210bb_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@284257d1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b80f921_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@604d8bef_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ce5337e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e228adc_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b3f2b21_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9b656f8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@500f722e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71e06c96_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45bfe6c3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@643684c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@191b4a77_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22bc092f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61017bd5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@675e5db8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@622203aa_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56704beb_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6da350dd_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b9cf8f1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@610c6916_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@687e5c98_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7446eeb3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b18b422_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17b0f292_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f773f92_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71fc6ffa_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71e8a4bf_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63e32d64_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50c6e363_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ec59af9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75184c2d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7354989b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a1c5d6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77a78433_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dc124bf_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b36ac3e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10676980_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e8c9eed_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58f3087b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74727aa4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21a2cf9d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43ad4dd6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33657f94_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66450765_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1723d446_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@426b0b53_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dd7a010_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20775c10_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71e15b95_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@267fcbc2_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45fef6df_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c6e75f8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bd1da7b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4816faf2_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67e923f5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@781c25cf_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6958c29d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25cde39b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@504cd7f9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@642a6fec_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76bbdc80_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fb78c1d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aba8b2c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70334c28_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a2bb554_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21f6ca0a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21c03989_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cefeb2a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@81658de_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@266cd1bc_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fbff7ef_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b99e594_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@106b81c3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ca89e15_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7633b217_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4570d3f2_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@513cf820_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c01bd17_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43962f3a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71bf3896_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@240684ee_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e9fb938_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bcb09b4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2371145e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39a181b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dead5e7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ac1b777_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b55b7d0_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46229257_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ca2da28_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@483064c3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@248cec48_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39f787e8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17f3e03a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22b542b1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69d440ee_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b86c4c2_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@254112dd_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d733699_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cd1cda3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7039b7d4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6338e453_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e5cf3e9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fb1fee1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e6e4696_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dddd2d6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@784c6074_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70f28ec1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27d0694e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64e00032_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4093347e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61eabd0e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f5f929c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bdb8568_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@328d2c75_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@322dda6b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70e5955f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2829284b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@104978cf_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@679306e1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e488d81_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52360e8e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3253068b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cd5ce0d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13dad2f9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75e8a40f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9556132_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10c6813f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e32e075_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f299e8f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f0e4cbc_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b83e380_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@708fdd2_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f4306c3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73647692_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@da233a3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79f12ac1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52f9364d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1986188f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29a2e3ab_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e2f14d5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@241fad5e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b597996_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60aae7e6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ef402d3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d1d02f1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e6a99a7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c895ec8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78abb366_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11e30a68_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45fbfeed_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dd467c6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33fa7545_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c2a39a1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4261c7c8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bf8314b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48e13700_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f2e7cc6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31dbbccb_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73170175_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67d24d16_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f5e822a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dc12110_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f908072_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@609c9b1a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21ff5d1d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cfd139b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fae83a3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44dec898_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@229d81d8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cdac29d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23d2e7a0_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bc651b5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f3787f6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16791622_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bce754c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a63b205_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65edcf8d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1959dde8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53c7173c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36ce890c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25b2e10b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7aa9fafd_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54980c05_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a14cd54_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74c97c71_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f29c1db_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a1f22ae_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2451c42e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23967d41_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@950bea5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f2ad57d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d7d9dc1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12def51e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2235db58_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3acb18bb_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@528ae9c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4174c03d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b1ce640_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@285e1c8b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7faceb9a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2be97020_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fe03751_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bcabb9b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fac9d62_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19fabf47_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@322224f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25b0029e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6027d9e0_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40b96708_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37c6db6a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@219ba283_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f6c4ed4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d7bbdc4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ce152c4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2342475a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13430971_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cae5b2f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fdce600_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40c19565_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44d96bc4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@307a13b5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d8cfb19_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.DATA_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_THREADS" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_THREADS" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PHASE" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.SUPPORTS_NARROW_BURST" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.PHASE" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ARESETN.POLARITY" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.X.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.X.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.X.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.X.HAS_TLAST" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.X.HAS_TREADY" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.X.HAS_TSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.X.LAYERED_METADATA" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.X.PHASE" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.X.TDATA_NUM_BYTES" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.X.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.X.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.X.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7799b0f6"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="fa7d8b6e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6ab520d7"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="3801e9e3"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="b42f1512"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="098856ee"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

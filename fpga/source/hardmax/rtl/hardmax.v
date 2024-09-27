@@ -20,52 +20,44 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module hardmax #(parameter out_size = 1, in_size = 10, n_bits=32, bits_out=4)(
+module hardmax (
     input clk,
-    input rst,
-    input ren,
-    input aValid,
-    input [31:0]a,
-    output zValid,
-    output z,
-    output maxA,
-    output maxElem,
-    output compA,
-    output compElem
+    input rstn,
+    input a_tValid,
+    input [31:0]a_tdata,
+    output reg z_tValid,
+    output [3:0]z_tdata
     );
     
     reg [31:0]maxA;
     reg [31:0]compA;
     reg [3:0]maxElem = 0;
     reg [3:0]compElem = 0;
-    reg [3:0]z;
-    reg zValid;
+    reg z_tdata;
     
-    initial begin
-            zValid = 1'b0;
+    always @(posedge clk) begin
+        if (rstn ==0) begin 
+            z_tValid = 1'b0;
+        end
     end
         
     always @(posedge clk) begin
-        if (aValid & !zValid) begin
+        if (a_tValid & !z_tValid) begin
             if (compElem == 0) begin
-                maxA <= a;
+                maxA <= a_tdata;
             end else begin
-                if ($signed(a) > $signed(maxA)) begin
-                    maxA <= a;
+                if ($signed(a_tdata) > $signed(maxA)) begin
+                    maxA <= a_tdata;
                     maxElem <= compElem;
                 end
             end
             
             compElem <= compElem + 1;
             if (compElem == 10) begin
-                zValid <= 1;
+                z_tValid <= 1;
+                z_tdata <= maxElem;
             end
         end
-    end
-    
-    always @(posedge zValid) begin
-        z <= maxElem;
-        #10 zValid <= 0;
     end
     
     

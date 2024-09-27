@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="XGpio_DiscreteWrite" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="XGpio_DiscreteWrite"/>
+			<item value="Xil_Out32"/>
+			<item value="led"/>
 			<item value="uint32"/>
 			<item value="Xil_Out"/>
 			<item value="Xil_out"/>
