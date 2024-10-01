@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Thu Sep 26 16:35:38 2024
+-- Date        : Thu Sep 26 16:35:37 2024
 -- Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_blk_mem_gen_0_0/design_2_blk_mem_gen_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_2_blk_mem_gen_0_0 -prefix
+--               design_2_blk_mem_gen_0_0_ design_2_blk_mem_gen_0_0_sim_netlist.vhdl
 -- Design      : design_2_blk_mem_gen_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -31,8 +31,6 @@ entity design_2_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper is
     wea : in STD_LOGIC_VECTOR ( 1 downto 0 );
     web : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end design_2_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of design_2_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper is
@@ -629,8 +627,6 @@ entity design_2_blk_mem_gen_0_0_blk_mem_gen_prim_width is
     wea : in STD_LOGIC_VECTOR ( 1 downto 0 );
     web : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_blk_mem_gen_0_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end design_2_blk_mem_gen_0_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of design_2_blk_mem_gen_0_0_blk_mem_gen_prim_width is
@@ -955,8 +951,6 @@ entity design_2_blk_mem_gen_0_0_blk_mem_gen_generic_cstr is
     rstb : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_blk_mem_gen_0_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end design_2_blk_mem_gen_0_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of design_2_blk_mem_gen_0_0_blk_mem_gen_generic_cstr is
@@ -1029,8 +1023,6 @@ entity design_2_blk_mem_gen_0_0_blk_mem_gen_top is
     rstb : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_blk_mem_gen_0_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end design_2_blk_mem_gen_0_0_blk_mem_gen_top;
 
 architecture STRUCTURE of design_2_blk_mem_gen_0_0_blk_mem_gen_top is
@@ -1078,8 +1070,6 @@ entity design_2_blk_mem_gen_0_0_blk_mem_gen_v8_4_4_synth is
     rstb : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_blk_mem_gen_0_0_blk_mem_gen_v8_4_4_synth : entity is "blk_mem_gen_v8_4_4_synth";
 end design_2_blk_mem_gen_0_0_blk_mem_gen_v8_4_4_synth;
 
 architecture STRUCTURE of design_2_blk_mem_gen_0_0_blk_mem_gen_v8_4_4_synth is
@@ -1324,8 +1314,6 @@ entity design_2_blk_mem_gen_0_0_blk_mem_gen_v8_4_4 is
   attribute C_WRITE_WIDTH_B of design_2_blk_mem_gen_0_0_blk_mem_gen_v8_4_4 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of design_2_blk_mem_gen_0_0_blk_mem_gen_v8_4_4 : entity is "zynq";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_blk_mem_gen_0_0_blk_mem_gen_v8_4_4 : entity is "blk_mem_gen_v8_4_4";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_2_blk_mem_gen_0_0_blk_mem_gen_v8_4_4 : entity is "yes";
 end design_2_blk_mem_gen_0_0_blk_mem_gen_v8_4_4;

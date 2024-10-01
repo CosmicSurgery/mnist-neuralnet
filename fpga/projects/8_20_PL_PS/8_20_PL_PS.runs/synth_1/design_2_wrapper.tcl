@@ -17,9 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 2
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -46,8 +43,28 @@ set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neu
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_rst_ps7_0_100M_0/design_2_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_rst_ps7_0_100M_0/design_2_rst_ps7_0_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_blk_mem_gen_0_0/design_2_blk_mem_gen_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_1/design_2_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_1_0/design_2_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_1_0/design_2_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_1_0/design_2_axi_gpio_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_2_0/design_2_axi_gpio_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_2_0/design_2_axi_gpio_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_2_0/design_2_axi_gpio_2_0.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_3_0/design_2_axi_gpio_3_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_3_0/design_2_axi_gpio_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_3_0/design_2_axi_gpio_3_0.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_4_0/design_2_axi_gpio_4_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_4_0/design_2_axi_gpio_4_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_4_0/design_2_axi_gpio_4_0.xdc]
+set_property used_in_synthesis false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_ila_0_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_ila_0_0/design_2_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_5/design_2_auto_pc_5_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_1/design_2_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_2/design_2_auto_pc_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_3/design_2_auto_pc_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_4/design_2_auto_pc_4_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/8_20_PL_PS.srcs/sources_1/bd/design_2/design_2_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

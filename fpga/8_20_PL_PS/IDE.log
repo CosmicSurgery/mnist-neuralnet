@@ -1,7 +1,0 @@
-13:15:24 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\8_20_PL_PS\temp_xsdb_launch_script.tcl
-13:15:29 INFO  : XSCT server has started successfully.
-13:15:32 INFO  : Registering command handlers for Vitis TCF services
-13:15:36 INFO  : plnx-install-location is set to ''
-13:15:36 INFO  : Successfully done setting XSCT server connection channel  
-13:15:36 INFO  : Successfully done query RDI_DATADIR 
-13:15:36 INFO  : Successfully done setting workspace for the tool. 

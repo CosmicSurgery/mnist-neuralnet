@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7z010clg400-1
@@ -37,7 +36,6 @@ update_ip_catalog
 set_property ip_output_repo c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/axi_bram_ctrl_0.xci
-set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/axi_bram_ctrl_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -47,8 +45,6 @@ set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neu
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 set cached_ip [config_ip_cache -export -no_bom  -dir C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/axi_bram_ctrl_0_synth_1 -new_name axi_bram_ctrl_0 -ip [get_ips axi_bram_ctrl_0]]

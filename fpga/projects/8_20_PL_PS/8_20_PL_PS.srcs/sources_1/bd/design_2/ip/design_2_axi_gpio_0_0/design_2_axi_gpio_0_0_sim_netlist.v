@@ -1,11 +1,11 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Fri Aug 23 14:32:38 2024
+// Date        : Mon Sep 30 11:21:57 2024
 // Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top design_2_axi_gpio_0_0 -prefix
-//               design_2_axi_gpio_0_0_ design_1_axi_gpio_0_0_sim_netlist.v
-// Design      : design_1_axi_gpio_0_0
+//               design_2_axi_gpio_0_0_ design_2_axi_gpio_0_0_sim_netlist.v
+// Design      : design_2_axi_gpio_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z010clg400-1
@@ -173,7 +173,7 @@ module design_2_axi_gpio_0_0_GPIO_Core
         .D(GPIO_xferAck_i),
         .Q(gpio_xferAck_Reg),
         .R(SS));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'h02)) 
     iGPIO_xferAck
@@ -242,7 +242,7 @@ module design_2_axi_gpio_0_0_GPIO_Core
        (.I0(GPIO_xferAck_i),
         .I1(bus2ip_rnw),
         .O(ip2bus_rdack_i));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h2)) 
     ip2bus_wrack_i_D1_i_1
@@ -295,7 +295,7 @@ module design_2_axi_gpio_0_0_address_decoder
   input [3:0]s_axi_arready_0;
   input ip2bus_wrack_i_D1;
   input s_axi_wready;
-  input [7:0]s_axi_wdata;
+  input [3:0]s_axi_wdata;
 
   wire Bus_RNW_reg;
   wire Bus_RNW_reg_i_1_n_0;
@@ -324,7 +324,7 @@ module design_2_axi_gpio_0_0_address_decoder
   wire s_axi_aresetn;
   wire s_axi_arready;
   wire [3:0]s_axi_arready_0;
-  wire [7:0]s_axi_wdata;
+  wire [3:0]s_axi_wdata;
   wire s_axi_wready;
 
   LUT3 #(
@@ -346,7 +346,7 @@ module design_2_axi_gpio_0_0_address_decoder
         .D(ce_expnd_i_3),
         .Q(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i[1]_i_1 
@@ -372,7 +372,7 @@ module design_2_axi_gpio_0_0_address_decoder
         .I1(ip2bus_rdack_i_D1_reg),
         .I2(s_axi_aresetn),
         .O(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i[3]_i_2 
@@ -423,32 +423,31 @@ module design_2_axi_gpio_0_0_address_decoder
        (.I0(s_axi_wdata[3]),
         .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I2(\Not_Dual.gpio_Data_Out_reg[0] [1]),
-        .I3(s_axi_wdata[7]),
+        .I3(s_axi_wdata[0]),
         .O(D[3]));
-  LUT4 #(
-    .INIT(16'hFB08)) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
     \Not_Dual.gpio_Data_Out[1]_i_1 
-       (.I0(s_axi_wdata[2]),
+       (.I0(\Not_Dual.gpio_Data_Out_reg[0] [1]),
         .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I2(\Not_Dual.gpio_Data_Out_reg[0] [1]),
-        .I3(s_axi_wdata[6]),
+        .I2(s_axi_wdata[2]),
         .O(D[2]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT4 #(
-    .INIT(16'hFB08)) 
+  LUT3 #(
+    .INIT(8'h40)) 
     \Not_Dual.gpio_Data_Out[2]_i_1 
-       (.I0(s_axi_wdata[1]),
+       (.I0(\Not_Dual.gpio_Data_Out_reg[0] [1]),
         .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I2(\Not_Dual.gpio_Data_Out_reg[0] [1]),
-        .I3(s_axi_wdata[5]),
+        .I2(s_axi_wdata[1]),
         .O(D[1]));
-  LUT4 #(
-    .INIT(16'hFB08)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
     \Not_Dual.gpio_Data_Out[3]_i_1 
-       (.I0(s_axi_wdata[0]),
+       (.I0(\Not_Dual.gpio_Data_Out_reg[0] [1]),
         .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I2(\Not_Dual.gpio_Data_Out_reg[0] [1]),
-        .I3(s_axi_wdata[4]),
+        .I2(s_axi_wdata[0]),
         .O(D[0]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
@@ -483,8 +482,8 @@ module design_2_axi_gpio_0_0_address_decoder
 endmodule
 
 (* C_ALL_INPUTS = "0" *) (* C_ALL_INPUTS_2 = "0" *) (* C_ALL_OUTPUTS = "1" *) 
-(* C_ALL_OUTPUTS_2 = "0" *) (* C_DOUT_DEFAULT = "0" *) (* C_DOUT_DEFAULT_2 = "0" *) 
-(* C_FAMILY = "zynq" *) (* C_GPIO2_WIDTH = "32" *) (* C_GPIO_WIDTH = "4" *) 
+(* C_ALL_OUTPUTS_2 = "1" *) (* C_DOUT_DEFAULT = "0" *) (* C_DOUT_DEFAULT_2 = "0" *) 
+(* C_FAMILY = "zynq" *) (* C_GPIO2_WIDTH = "1" *) (* C_GPIO_WIDTH = "4" *) 
 (* C_INTERRUPT_PRESENT = "0" *) (* C_IS_DUAL = "0" *) (* C_S_AXI_ADDR_WIDTH = "9" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRI_DEFAULT = "-1" *) (* C_TRI_DEFAULT_2 = "-1" *) 
 (* downgradeipidentifiedwarnings = "yes" *) (* ip_group = "LOGICORE" *) 
@@ -538,9 +537,9 @@ module design_2_axi_gpio_0_0_axi_gpio
   input [3:0]gpio_io_i;
   output [3:0]gpio_io_o;
   output [3:0]gpio_io_t;
-  input [31:0]gpio2_io_i;
-  output [31:0]gpio2_io_o;
-  output [31:0]gpio2_io_t;
+  input [0:0]gpio2_io_i;
+  output [0:0]gpio2_io_o;
+  output [0:0]gpio2_io_t;
 
   wire \<const0> ;
   wire \<const1> ;
@@ -579,69 +578,7 @@ module design_2_axi_gpio_0_0_axi_gpio
   wire s_axi_wready;
   wire s_axi_wvalid;
 
-  assign gpio2_io_o[31] = \<const0> ;
-  assign gpio2_io_o[30] = \<const0> ;
-  assign gpio2_io_o[29] = \<const0> ;
-  assign gpio2_io_o[28] = \<const0> ;
-  assign gpio2_io_o[27] = \<const0> ;
-  assign gpio2_io_o[26] = \<const0> ;
-  assign gpio2_io_o[25] = \<const0> ;
-  assign gpio2_io_o[24] = \<const0> ;
-  assign gpio2_io_o[23] = \<const0> ;
-  assign gpio2_io_o[22] = \<const0> ;
-  assign gpio2_io_o[21] = \<const0> ;
-  assign gpio2_io_o[20] = \<const0> ;
-  assign gpio2_io_o[19] = \<const0> ;
-  assign gpio2_io_o[18] = \<const0> ;
-  assign gpio2_io_o[17] = \<const0> ;
-  assign gpio2_io_o[16] = \<const0> ;
-  assign gpio2_io_o[15] = \<const0> ;
-  assign gpio2_io_o[14] = \<const0> ;
-  assign gpio2_io_o[13] = \<const0> ;
-  assign gpio2_io_o[12] = \<const0> ;
-  assign gpio2_io_o[11] = \<const0> ;
-  assign gpio2_io_o[10] = \<const0> ;
-  assign gpio2_io_o[9] = \<const0> ;
-  assign gpio2_io_o[8] = \<const0> ;
-  assign gpio2_io_o[7] = \<const0> ;
-  assign gpio2_io_o[6] = \<const0> ;
-  assign gpio2_io_o[5] = \<const0> ;
-  assign gpio2_io_o[4] = \<const0> ;
-  assign gpio2_io_o[3] = \<const0> ;
-  assign gpio2_io_o[2] = \<const0> ;
-  assign gpio2_io_o[1] = \<const0> ;
   assign gpio2_io_o[0] = \<const0> ;
-  assign gpio2_io_t[31] = \<const1> ;
-  assign gpio2_io_t[30] = \<const1> ;
-  assign gpio2_io_t[29] = \<const1> ;
-  assign gpio2_io_t[28] = \<const1> ;
-  assign gpio2_io_t[27] = \<const1> ;
-  assign gpio2_io_t[26] = \<const1> ;
-  assign gpio2_io_t[25] = \<const1> ;
-  assign gpio2_io_t[24] = \<const1> ;
-  assign gpio2_io_t[23] = \<const1> ;
-  assign gpio2_io_t[22] = \<const1> ;
-  assign gpio2_io_t[21] = \<const1> ;
-  assign gpio2_io_t[20] = \<const1> ;
-  assign gpio2_io_t[19] = \<const1> ;
-  assign gpio2_io_t[18] = \<const1> ;
-  assign gpio2_io_t[17] = \<const1> ;
-  assign gpio2_io_t[16] = \<const1> ;
-  assign gpio2_io_t[15] = \<const1> ;
-  assign gpio2_io_t[14] = \<const1> ;
-  assign gpio2_io_t[13] = \<const1> ;
-  assign gpio2_io_t[12] = \<const1> ;
-  assign gpio2_io_t[11] = \<const1> ;
-  assign gpio2_io_t[10] = \<const1> ;
-  assign gpio2_io_t[9] = \<const1> ;
-  assign gpio2_io_t[8] = \<const1> ;
-  assign gpio2_io_t[7] = \<const1> ;
-  assign gpio2_io_t[6] = \<const1> ;
-  assign gpio2_io_t[5] = \<const1> ;
-  assign gpio2_io_t[4] = \<const1> ;
-  assign gpio2_io_t[3] = \<const1> ;
-  assign gpio2_io_t[2] = \<const1> ;
-  assign gpio2_io_t[1] = \<const1> ;
   assign gpio2_io_t[0] = \<const1> ;
   assign ip2intc_irpt = \<const0> ;
   assign s_axi_awready = s_axi_wready;
@@ -706,7 +643,7 @@ module design_2_axi_gpio_0_0_axi_gpio
         .s_axi_rdata({\^s_axi_rdata [30],\^s_axi_rdata [3:0]}),
         .s_axi_rready(s_axi_rready),
         .s_axi_rvalid_i_reg(s_axi_rvalid),
-        .s_axi_wdata({s_axi_wdata[31:28],s_axi_wdata[3:0]}),
+        .s_axi_wdata(s_axi_wdata[3:0]),
         .s_axi_wvalid(s_axi_wvalid));
   GND GND
        (.G(\<const0> ));
@@ -828,7 +765,7 @@ module design_2_axi_gpio_0_0_axi_lite_ipif
   input s_axi_awvalid;
   input s_axi_wvalid;
   input [4:0]Q;
-  input [7:0]s_axi_wdata;
+  input [3:0]s_axi_wdata;
   input ip2bus_rdack_i_D1;
   input ip2bus_wrack_i_D1;
   input [2:0]s_axi_araddr;
@@ -861,7 +798,7 @@ module design_2_axi_gpio_0_0_axi_lite_ipif
   wire [4:0]s_axi_rdata;
   wire s_axi_rready;
   wire s_axi_rvalid_i_reg;
-  wire [7:0]s_axi_wdata;
+  wire [3:0]s_axi_wdata;
   wire s_axi_wvalid;
 
   design_2_axi_gpio_0_0_slave_attachment I_SLAVE_ATTACHMENT
@@ -896,7 +833,7 @@ module design_2_axi_gpio_0_0_axi_lite_ipif
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "design_1_axi_gpio_0_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2019.2" *) 
+(* CHECK_LICENSE_TYPE = "design_2_axi_gpio_0_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2019.2" *) 
 (* NotValidForBitStream *)
 module design_2_axi_gpio_0_0
    (s_axi_aclk,
@@ -919,9 +856,9 @@ module design_2_axi_gpio_0_0
     s_axi_rvalid,
     s_axi_rready,
     gpio_io_o);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s_axi_aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
@@ -961,18 +898,18 @@ module design_2_axi_gpio_0_0
   wire [3:0]s_axi_wstrb;
   wire s_axi_wvalid;
   wire NLW_U0_ip2intc_irpt_UNCONNECTED;
-  wire [31:0]NLW_U0_gpio2_io_o_UNCONNECTED;
-  wire [31:0]NLW_U0_gpio2_io_t_UNCONNECTED;
+  wire [0:0]NLW_U0_gpio2_io_o_UNCONNECTED;
+  wire [0:0]NLW_U0_gpio2_io_t_UNCONNECTED;
   wire [3:0]NLW_U0_gpio_io_t_UNCONNECTED;
 
   (* C_ALL_INPUTS = "0" *) 
   (* C_ALL_INPUTS_2 = "0" *) 
   (* C_ALL_OUTPUTS = "1" *) 
-  (* C_ALL_OUTPUTS_2 = "0" *) 
+  (* C_ALL_OUTPUTS_2 = "1" *) 
   (* C_DOUT_DEFAULT = "0" *) 
   (* C_DOUT_DEFAULT_2 = "0" *) 
   (* C_FAMILY = "zynq" *) 
-  (* C_GPIO2_WIDTH = "32" *) 
+  (* C_GPIO2_WIDTH = "1" *) 
   (* C_GPIO_WIDTH = "4" *) 
   (* C_INTERRUPT_PRESENT = "0" *) 
   (* C_IS_DUAL = "0" *) 
@@ -983,9 +920,9 @@ module design_2_axi_gpio_0_0
   (* downgradeipidentifiedwarnings = "yes" *) 
   (* ip_group = "LOGICORE" *) 
   design_2_axi_gpio_0_0_axi_gpio U0
-       (.gpio2_io_i({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .gpio2_io_o(NLW_U0_gpio2_io_o_UNCONNECTED[31:0]),
-        .gpio2_io_t(NLW_U0_gpio2_io_t_UNCONNECTED[31:0]),
+       (.gpio2_io_i(1'b0),
+        .gpio2_io_o(NLW_U0_gpio2_io_o_UNCONNECTED[0]),
+        .gpio2_io_t(NLW_U0_gpio2_io_t_UNCONNECTED[0]),
         .gpio_io_i({1'b0,1'b0,1'b0,1'b0}),
         .gpio_io_o(gpio_io_o),
         .gpio_io_t(NLW_U0_gpio_io_t_UNCONNECTED[3:0]),
@@ -1100,7 +1037,7 @@ module design_2_axi_gpio_0_0_slave_attachment
   input s_axi_awvalid;
   input s_axi_wvalid;
   input [4:0]Q;
-  input [7:0]s_axi_wdata;
+  input [3:0]s_axi_wdata;
   input ip2bus_rdack_i_D1;
   input ip2bus_wrack_i_D1;
   input [2:0]s_axi_araddr;
@@ -1159,7 +1096,7 @@ module design_2_axi_gpio_0_0_slave_attachment
   wire s_axi_rresp_i;
   wire s_axi_rvalid_i_i_1_n_0;
   wire s_axi_rvalid_i_reg_0;
-  wire [7:0]s_axi_wdata;
+  wire [3:0]s_axi_wdata;
   wire s_axi_wvalid;
   wire start2;
   wire start2_i_1_n_0;
@@ -1248,20 +1185,20 @@ module design_2_axi_gpio_0_0_slave_attachment
         .D(\FSM_onehot_state[3]_i_1_n_0 ),
         .Q(\FSM_onehot_state_reg_n_0_[3] ),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[0]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [0]),
         .O(plusOp[0]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [0]),
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [1]),
         .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1 
@@ -1275,7 +1212,7 @@ module design_2_axi_gpio_0_0_slave_attachment
        (.I0(state[0]),
         .I1(state[1]),
         .O(clear));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[3]_i_2 
@@ -1331,7 +1268,7 @@ module design_2_axi_gpio_0_0_slave_attachment
         .s_axi_arready_0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg ),
         .s_axi_wdata(s_axi_wdata),
         .s_axi_wready(is_write_reg_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \bus2ip_addr_i[2]_i_1 
@@ -1355,7 +1292,7 @@ module design_2_axi_gpio_0_0_slave_attachment
         .I3(state[1]),
         .I4(state[0]),
         .O(\bus2ip_addr_i[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \bus2ip_addr_i[8]_i_2 
@@ -1513,7 +1450,7 @@ module design_2_axi_gpio_0_0_slave_attachment
         .D(s_axi_rvalid_i_i_1_n_0),
         .Q(s_axi_rvalid_i_reg_0),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'h000000F8)) 
     start2_i_1
@@ -1548,7 +1485,7 @@ module design_2_axi_gpio_0_0_slave_attachment
         .I4(state[0]),
         .I5(ip2bus_rdack_i_D1_reg),
         .O(p_0_out[1]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \state[1]_i_2 

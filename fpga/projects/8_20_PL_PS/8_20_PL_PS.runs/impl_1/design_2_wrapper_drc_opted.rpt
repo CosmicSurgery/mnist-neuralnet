@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Sep 26 19:06:38 2024
+| Date         : Mon Sep 30 22:03:09 2024
 | Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 | Command      : report_drc -file design_2_wrapper_drc_opted.rpt -pb design_2_wrapper_drc_opted.pb -rpx design_2_wrapper_drc_opted.rpx
 | Design       : design_2_wrapper

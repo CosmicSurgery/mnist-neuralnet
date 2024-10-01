@@ -60,7 +60,8 @@ module design_3_delay_module_0_0 (
   dataout,
   addr,
   enb,
-  web
+  web,
+  debug
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_3_clk_0, INSERT_VIP 0" *)
@@ -71,6 +72,7 @@ output wire [31 : 0] dataout;
 output wire [31 : 0] addr;
 output wire enb;
 output wire [3 : 0] web;
+input wire debug;
 
   delay_module inst (
     .clk(clk),
@@ -78,6 +80,7 @@ output wire [3 : 0] web;
     .dataout(dataout),
     .addr(addr),
     .enb(enb),
-    .web(web)
+    .web(web),
+    .debug(debug)
   );
 endmodule

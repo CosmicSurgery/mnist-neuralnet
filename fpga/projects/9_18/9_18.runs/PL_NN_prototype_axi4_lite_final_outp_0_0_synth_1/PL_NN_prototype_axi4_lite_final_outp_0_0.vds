@@ -1,0 +1,491 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Sep 30 14:42:44 2024
+# Process ID: 13184
+# Current directory: C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_prototype_axi4_lite_final_outp_0_0_synth_1
+# Command line: vivado.exe -log PL_NN_prototype_axi4_lite_final_outp_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PL_NN_prototype_axi4_lite_final_outp_0_0.tcl
+# Log file: C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_prototype_axi4_lite_final_outp_0_0_synth_1/PL_NN_prototype_axi4_lite_final_outp_0_0.vds
+# Journal file: C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_prototype_axi4_lite_final_outp_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source PL_NN_prototype_axi4_lite_final_outp_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/git_repos/mnist_neuralnet/fpga/source'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top PL_NN_prototype_axi4_lite_final_outp_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3560 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 822.785 ; gain = 234.238
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_prototype_axi4_lite_final_outp_0_0' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ip/PL_NN_prototype_axi4_lite_final_outp_0_0/synth/PL_NN_prototype_axi4_lite_final_outp_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'axi4_lite_final_output' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'axi4_lite_final_output' (1#1) [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_prototype_axi4_lite_final_outp_0_0' (2#1) [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ip/PL_NN_prototype_axi4_lite_final_outp_0_0/synth/PL_NN_prototype_axi4_lite_final_outp_0_0.v:58]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_awaddr[3]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_awaddr[2]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_awaddr[1]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_awaddr[0]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_awprot[2]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_awprot[1]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_awprot[0]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_awvalid
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[31]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[30]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[29]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[28]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[27]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[26]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[25]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[24]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[23]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[22]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[21]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[20]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[19]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[18]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[17]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[16]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[15]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[14]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[13]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[12]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[11]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[10]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[9]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[8]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[7]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[6]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[5]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[4]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[3]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[2]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[1]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wdata[0]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wstrb[3]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wstrb[2]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wstrb[1]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wstrb[0]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_wvalid
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_arprot[2]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_arprot[1]
+WARNING: [Synth 8-3331] design axi4_lite_final_output has unconnected port s_axil_arprot[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 898.641 ; gain = 310.094
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 898.641 ; gain = 310.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 898.641 ; gain = 310.094
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 898.641 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 958.754 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 959.789 ; gain = 1.035
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 959.789 ; gain = 371.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 959.789 ; gain = 371.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 959.789 ; gain = 371.242
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'axi_wready_reg' into 'axi_awready_reg' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:100]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 959.789 ; gain = 371.242
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module axi4_lite_final_output 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3917] design PL_NN_prototype_axi4_lite_final_outp_0_0 has port s_axil_bresp[1] driven by constant 0
+INFO: [Synth 8-3917] design PL_NN_prototype_axi4_lite_final_outp_0_0 has port s_axil_bresp[0] driven by constant 0
+INFO: [Synth 8-3917] design PL_NN_prototype_axi4_lite_final_outp_0_0 has port s_axil_rresp[1] driven by constant 0
+INFO: [Synth 8-3917] design PL_NN_prototype_axi4_lite_final_outp_0_0 has port s_axil_rresp[0] driven by constant 0
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_awaddr[3]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_awaddr[2]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_awaddr[1]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_awaddr[0]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_awprot[2]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_awprot[1]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_awprot[0]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_awvalid
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[31]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[30]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[29]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[28]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[27]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[26]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[25]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[24]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[23]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[22]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[21]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[20]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[19]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[18]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[17]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[16]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[15]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[14]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[13]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[12]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[11]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[10]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[9]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[8]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[7]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[6]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[5]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[4]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[3]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[2]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[1]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wdata[0]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wstrb[3]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wstrb[2]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wstrb[1]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wstrb[0]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_wvalid
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_arprot[2]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_arprot[1]
+WARNING: [Synth 8-3331] design PL_NN_prototype_axi4_lite_final_outp_0_0 has unconnected port s_axil_arprot[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/axi_bvalid_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/axi_awready_reg )
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[31]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[30]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[29]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[28]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[27]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[26]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[25]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[24]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[23]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[22]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[21]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[20]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[19]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[18]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[17]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[16]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[15]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[14]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[13]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[12]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[11]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[10]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[9]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[8]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[7]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[6]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[5]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[4]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[3]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[2]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[1]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/a_tdata_reg[0]__0/Q' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ipshared/b8c9/axi4_lite_final_output.v:134]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 959.789 ; gain = 371.242
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 972.008 ; gain = 383.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 972.230 ; gain = 383.684
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 982.562 ; gain = 394.016
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 998.367 ; gain = 409.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 998.367 ; gain = 409.820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 998.367 ; gain = 409.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 998.367 ; gain = 409.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 998.367 ; gain = 409.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 998.367 ; gain = 409.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |     1|
+|3     |LUT3 |     4|
+|4     |LUT4 |     3|
+|5     |LUT5 |     2|
+|6     |LUT6 |    98|
+|7     |FDRE |    39|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-----------------------+------+
+|      |Instance |Module                 |Cells |
++------+---------+-----------------------+------+
+|1     |top      |                       |   149|
+|2     |  inst   |axi4_lite_final_output |   149|
++------+---------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 998.367 ; gain = 409.820
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 96 critical warnings and 48 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:28 . Memory (MB): peak = 998.367 ; gain = 348.672
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 998.367 ; gain = 409.820
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1010.391 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1013.699 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 97 Warnings, 96 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 1013.699 ; gain = 704.141
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1013.699 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_prototype_axi4_lite_final_outp_0_0_synth_1/PL_NN_prototype_axi4_lite_final_outp_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP PL_NN_prototype_axi4_lite_final_outp_0_0, cache-ID = a89b32b2cd5b3cb4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1013.699 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_prototype_axi4_lite_final_outp_0_0_synth_1/PL_NN_prototype_axi4_lite_final_outp_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file PL_NN_prototype_axi4_lite_final_outp_0_0_utilization_synth.rpt -pb PL_NN_prototype_axi4_lite_final_outp_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 30 14:43:25 2024...

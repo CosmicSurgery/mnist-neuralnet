@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Fri Sep 27 14:15:38 2024
+//Date        : Mon Sep 30 14:42:36 2024
 //Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 //Command     : generate_target PL_NN_prototype_wrapper.bd
 //Design      : PL_NN_prototype_wrapper
@@ -10,111 +10,91 @@
 `timescale 1 ps / 1 ps
 
 module PL_NN_prototype_wrapper
-   (ACLK_0,
-    ARESETN_0,
-    S00_AXI_0_araddr,
-    S00_AXI_0_arprot,
-    S00_AXI_0_arready,
-    S00_AXI_0_arvalid,
-    S00_AXI_0_awaddr,
-    S00_AXI_0_awprot,
-    S00_AXI_0_awready,
-    S00_AXI_0_awvalid,
-    S00_AXI_0_bready,
-    S00_AXI_0_bresp,
-    S00_AXI_0_bvalid,
-    S00_AXI_0_rdata,
-    S00_AXI_0_rready,
-    S00_AXI_0_rresp,
-    S00_AXI_0_rvalid,
-    S00_AXI_0_wdata,
-    S00_AXI_0_wready,
-    S00_AXI_0_wstrb,
-    S00_AXI_0_wvalid,
-    a_0_tdata,
-    a_0_tready,
-    a_0_tvalid,
-    adone,
-    start_0);
-  input ACLK_0;
-  input ARESETN_0;
-  input [14:0]S00_AXI_0_araddr;
-  input [2:0]S00_AXI_0_arprot;
-  output [0:0]S00_AXI_0_arready;
-  input [0:0]S00_AXI_0_arvalid;
-  input [14:0]S00_AXI_0_awaddr;
-  input [2:0]S00_AXI_0_awprot;
-  output [0:0]S00_AXI_0_awready;
-  input [0:0]S00_AXI_0_awvalid;
-  input [0:0]S00_AXI_0_bready;
-  output [1:0]S00_AXI_0_bresp;
-  output [0:0]S00_AXI_0_bvalid;
-  output [31:0]S00_AXI_0_rdata;
-  input [0:0]S00_AXI_0_rready;
-  output [1:0]S00_AXI_0_rresp;
-  output [0:0]S00_AXI_0_rvalid;
-  input [31:0]S00_AXI_0_wdata;
-  output [0:0]S00_AXI_0_wready;
-  input [3:0]S00_AXI_0_wstrb;
-  input [0:0]S00_AXI_0_wvalid;
-  output [31:0]a_0_tdata;
-  input a_0_tready;
-  output a_0_tvalid;
-  input adone;
-  input start_0;
+   (DDR_addr,
+    DDR_ba,
+    DDR_cas_n,
+    DDR_ck_n,
+    DDR_ck_p,
+    DDR_cke,
+    DDR_cs_n,
+    DDR_dm,
+    DDR_dq,
+    DDR_dqs_n,
+    DDR_dqs_p,
+    DDR_odt,
+    DDR_ras_n,
+    DDR_reset_n,
+    DDR_we_n,
+    FIXED_IO_ddr_vrn,
+    FIXED_IO_ddr_vrp,
+    FIXED_IO_mio,
+    FIXED_IO_ps_clk,
+    FIXED_IO_ps_porb,
+    FIXED_IO_ps_srstb);
+  inout [14:0]DDR_addr;
+  inout [2:0]DDR_ba;
+  inout DDR_cas_n;
+  inout DDR_ck_n;
+  inout DDR_ck_p;
+  inout DDR_cke;
+  inout DDR_cs_n;
+  inout [3:0]DDR_dm;
+  inout [31:0]DDR_dq;
+  inout [3:0]DDR_dqs_n;
+  inout [3:0]DDR_dqs_p;
+  inout DDR_odt;
+  inout DDR_ras_n;
+  inout DDR_reset_n;
+  inout DDR_we_n;
+  inout FIXED_IO_ddr_vrn;
+  inout FIXED_IO_ddr_vrp;
+  inout [53:0]FIXED_IO_mio;
+  inout FIXED_IO_ps_clk;
+  inout FIXED_IO_ps_porb;
+  inout FIXED_IO_ps_srstb;
 
-  wire ACLK_0;
-  wire ARESETN_0;
-  wire [14:0]S00_AXI_0_araddr;
-  wire [2:0]S00_AXI_0_arprot;
-  wire [0:0]S00_AXI_0_arready;
-  wire [0:0]S00_AXI_0_arvalid;
-  wire [14:0]S00_AXI_0_awaddr;
-  wire [2:0]S00_AXI_0_awprot;
-  wire [0:0]S00_AXI_0_awready;
-  wire [0:0]S00_AXI_0_awvalid;
-  wire [0:0]S00_AXI_0_bready;
-  wire [1:0]S00_AXI_0_bresp;
-  wire [0:0]S00_AXI_0_bvalid;
-  wire [31:0]S00_AXI_0_rdata;
-  wire [0:0]S00_AXI_0_rready;
-  wire [1:0]S00_AXI_0_rresp;
-  wire [0:0]S00_AXI_0_rvalid;
-  wire [31:0]S00_AXI_0_wdata;
-  wire [0:0]S00_AXI_0_wready;
-  wire [3:0]S00_AXI_0_wstrb;
-  wire [0:0]S00_AXI_0_wvalid;
-  wire [31:0]a_0_tdata;
-  wire a_0_tready;
-  wire a_0_tvalid;
-  wire adone;
-  wire start_0;
+  wire [14:0]DDR_addr;
+  wire [2:0]DDR_ba;
+  wire DDR_cas_n;
+  wire DDR_ck_n;
+  wire DDR_ck_p;
+  wire DDR_cke;
+  wire DDR_cs_n;
+  wire [3:0]DDR_dm;
+  wire [31:0]DDR_dq;
+  wire [3:0]DDR_dqs_n;
+  wire [3:0]DDR_dqs_p;
+  wire DDR_odt;
+  wire DDR_ras_n;
+  wire DDR_reset_n;
+  wire DDR_we_n;
+  wire FIXED_IO_ddr_vrn;
+  wire FIXED_IO_ddr_vrp;
+  wire [53:0]FIXED_IO_mio;
+  wire FIXED_IO_ps_clk;
+  wire FIXED_IO_ps_porb;
+  wire FIXED_IO_ps_srstb;
 
   PL_NN_prototype PL_NN_prototype_i
-       (.ACLK_0(ACLK_0),
-        .ARESETN_0(ARESETN_0),
-        .S00_AXI_0_araddr(S00_AXI_0_araddr),
-        .S00_AXI_0_arprot(S00_AXI_0_arprot),
-        .S00_AXI_0_arready(S00_AXI_0_arready),
-        .S00_AXI_0_arvalid(S00_AXI_0_arvalid),
-        .S00_AXI_0_awaddr(S00_AXI_0_awaddr),
-        .S00_AXI_0_awprot(S00_AXI_0_awprot),
-        .S00_AXI_0_awready(S00_AXI_0_awready),
-        .S00_AXI_0_awvalid(S00_AXI_0_awvalid),
-        .S00_AXI_0_bready(S00_AXI_0_bready),
-        .S00_AXI_0_bresp(S00_AXI_0_bresp),
-        .S00_AXI_0_bvalid(S00_AXI_0_bvalid),
-        .S00_AXI_0_rdata(S00_AXI_0_rdata),
-        .S00_AXI_0_rready(S00_AXI_0_rready),
-        .S00_AXI_0_rresp(S00_AXI_0_rresp),
-        .S00_AXI_0_rvalid(S00_AXI_0_rvalid),
-        .S00_AXI_0_wdata(S00_AXI_0_wdata),
-        .S00_AXI_0_wready(S00_AXI_0_wready),
-        .S00_AXI_0_wstrb(S00_AXI_0_wstrb),
-        .S00_AXI_0_wvalid(S00_AXI_0_wvalid),
-        .a_0_tdata(a_0_tdata),
-        .a_0_tready(a_0_tready),
-        .a_0_tvalid(a_0_tvalid),
-        .adone(adone),
-        .start_0(start_0));
+       (.DDR_addr(DDR_addr),
+        .DDR_ba(DDR_ba),
+        .DDR_cas_n(DDR_cas_n),
+        .DDR_ck_n(DDR_ck_n),
+        .DDR_ck_p(DDR_ck_p),
+        .DDR_cke(DDR_cke),
+        .DDR_cs_n(DDR_cs_n),
+        .DDR_dm(DDR_dm),
+        .DDR_dq(DDR_dq),
+        .DDR_dqs_n(DDR_dqs_n),
+        .DDR_dqs_p(DDR_dqs_p),
+        .DDR_odt(DDR_odt),
+        .DDR_ras_n(DDR_ras_n),
+        .DDR_reset_n(DDR_reset_n),
+        .DDR_we_n(DDR_we_n),
+        .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
+        .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
+        .FIXED_IO_mio(FIXED_IO_mio),
+        .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
+        .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
+        .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb));
 endmodule

@@ -172,6 +172,7 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set clk_0 [ create_bd_port -dir I -type clk clk_0 ]
+  set debug_0 [ create_bd_port -dir I debug_0 ]
 
   # Create instance: blk_mem_gen_0, and set properties
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
@@ -201,6 +202,8 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net blk_mem_gen_0_doutb [get_bd_pins blk_mem_gen_0/doutb] [get_bd_pins delay_module_0/datain]
   connect_bd_net -net clk_0_1 [get_bd_ports clk_0] [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins delay_module_0/clk]
+  connect_bd_net -net debug_0_1 [get_bd_ports debug_0] [get_bd_pins delay_module_0/debug]
+  connect_bd_net -net delay_module_0_addr [get_bd_pins blk_mem_gen_0/addrb] [get_bd_pins delay_module_0/addr]
   connect_bd_net -net delay_module_0_dataout [get_bd_pins blk_mem_gen_0/dinb] [get_bd_pins delay_module_0/dataout]
   connect_bd_net -net delay_module_0_enb [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins delay_module_0/enb]
   connect_bd_net -net delay_module_0_web [get_bd_pins blk_mem_gen_0/web] [get_bd_pins delay_module_0/web]

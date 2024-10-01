@@ -129,12 +129,18 @@ vlog -work xil_defaultlib -64 "+incdir+../../../../8_20_PL_PS.srcs/sources_1/bd/
 "../../../bd/design_2/ip/design_2_blk_mem_gen_0_0/sim/design_2_blk_mem_gen_0_0.v" \
 "../../../bd/design_2/ip/design_2_delay_module_0_0/sim/design_2_delay_module_0_0.v" \
 
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/design_2/ip/design_2_axi_gpio_1_0/sim/design_2_axi_gpio_1_0.vhd" \
+"../../../bd/design_2/ip/design_2_axi_gpio_2_0/sim/design_2_axi_gpio_2_0.vhd" \
+
 vlog -work axi_protocol_converter_v2_1_20 -64 "+incdir+../../../../8_20_PL_PS.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../8_20_PL_PS.srcs/sources_1/bd/design_2/ipshared/2d50/hdl" "+incdir+../../../../8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.2/data/xilinx_vip/include" \
 "../../../../8_20_PL_PS.srcs/sources_1/bd/design_2/ipshared/c4a6/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../8_20_PL_PS.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../8_20_PL_PS.srcs/sources_1/bd/design_2/ipshared/2d50/hdl" "+incdir+../../../../8_20_PL_PS.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.2/data/xilinx_vip/include" \
-"../../../bd/design_2/ip/design_2_auto_pc_1/sim/design_2_auto_pc_1.v" \
+"../../../bd/design_2/ip/design_2_auto_pc_3/sim/design_2_auto_pc_3.v" \
 "../../../bd/design_2/ip/design_2_auto_pc_0/sim/design_2_auto_pc_0.v" \
+"../../../bd/design_2/ip/design_2_auto_pc_1/sim/design_2_auto_pc_1.v" \
+"../../../bd/design_2/ip/design_2_auto_pc_2/sim/design_2_auto_pc_2.v" \
 "../../../bd/design_2/sim/design_2.v" \
 
 vlog -work xil_defaultlib \

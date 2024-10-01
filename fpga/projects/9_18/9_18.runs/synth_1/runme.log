@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log perceptron.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source perceptron.tcl
+    with args -log axi4_lite_final_output.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi4_lite_final_output.tcl
 
 
 ****** Vivado v2019.2 (64-bit)
@@ -8,34 +8,27 @@
   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source perceptron.tcl -notrace
+source axi4_lite_final_output.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/git_repos/mnist_neuralnet/fpga/source'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:dual_port_AXI_Native_bram:1.0'. The one found in IP location 'c:/git_repos/mnist_neuralnet/fpga/source/dual_port_AXI_Native_bram/rtl' will take precedence over the same IP in location c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src
-Command: synth_design -top perceptron -part xc7z010clg400-1
+Command: synth_design -top axi4_lite_final_output -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14932 
-WARNING: [Synth 8-2507] parameter declaration becomes local in perceptron with formal parameter declaration list [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:55]
-WARNING: [Synth 8-2507] parameter declaration becomes local in perceptron with formal parameter declaration list [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:56]
+INFO: Helper process launched with PID 19264 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 561.699 ; gain = 250.195
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 842.453 ; gain = 233.684
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'perceptron' [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:23]
-	Parameter activation bound to: relu - type: string 
-	Parameter addressWidth bound to: 10 - type: integer 
-	Parameter n_bits bound to: 32 - type: integer 
-ERROR: [Synth 8-439] module 'dual_port_AXI_Native_bram' not found [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:70]
-ERROR: [Synth 8-6156] failed synthesizing module 'perceptron' [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:23]
+ERROR: [Synth 8-439] module 'axi4_lite_final_output' not found
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 608.945 ; gain = 297.441
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1015.410 ; gain = 406.641
 ---------------------------------------------------------------------------------
-synthesize failed
+RTL Elaboration failed
 INFO: [Common 17-83] Releasing license: Synthesis
-6 Infos, 3 Warnings, 0 Critical Warnings and 3 Errors encountered.
+6 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
 synth_design failed
-ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
-INFO: [Common 17-206] Exiting Vivado at Wed Sep 18 19:14:13 2024...
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 30 14:57:56 2024...

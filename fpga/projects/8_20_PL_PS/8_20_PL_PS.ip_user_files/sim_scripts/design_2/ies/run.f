@@ -86,12 +86,18 @@
   "../../../bd/design_2/ip/design_2_blk_mem_gen_0_0/sim/design_2_blk_mem_gen_0_0.v" \
   "../../../bd/design_2/ip/design_2_delay_module_0_0/sim/design_2_delay_module_0_0.v" \
 -endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/design_2/ip/design_2_axi_gpio_1_0/sim/design_2_axi_gpio_1_0.vhd" \
+  "../../../bd/design_2/ip/design_2_axi_gpio_2_0/sim/design_2_axi_gpio_2_0.vhd" \
+-endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_20 \
   "../../../../8_20_PL_PS.srcs/sources_1/bd/design_2/ipshared/c4a6/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_2/ip/design_2_auto_pc_1/sim/design_2_auto_pc_1.v" \
+  "../../../bd/design_2/ip/design_2_auto_pc_3/sim/design_2_auto_pc_3.v" \
   "../../../bd/design_2/ip/design_2_auto_pc_0/sim/design_2_auto_pc_0.v" \
+  "../../../bd/design_2/ip/design_2_auto_pc_1/sim/design_2_auto_pc_1.v" \
+  "../../../bd/design_2/ip/design_2_auto_pc_2/sim/design_2_auto_pc_2.v" \
   "../../../bd/design_2/sim/design_2.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \

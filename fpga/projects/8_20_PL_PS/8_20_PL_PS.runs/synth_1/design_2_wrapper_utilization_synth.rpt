@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Sep 26 19:05:35 2024
+| Date         : Mon Sep 30 22:01:12 2024
 | Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_2_wrapper_utilization_synth.rpt -pb design_2_wrapper_utilization_synth.pb
 | Design       : design_2_wrapper
@@ -159,10 +159,19 @@ Table of Contents
 | design_2_xbar_0                 |    1 |
 | design_2_rst_ps7_0_100M_0       |    1 |
 | design_2_processing_system7_0_0 |    1 |
+| design_2_ila_0_0                |    1 |
 | design_2_delay_module_0_0       |    1 |
 | design_2_blk_mem_gen_0_0        |    1 |
+| design_2_axi_gpio_4_0           |    1 |
+| design_2_axi_gpio_3_0           |    1 |
+| design_2_axi_gpio_2_0           |    1 |
+| design_2_axi_gpio_1_0           |    1 |
 | design_2_axi_gpio_0_0           |    1 |
 | design_2_axi_bram_ctrl_0_0      |    1 |
+| design_2_auto_pc_5              |    1 |
+| design_2_auto_pc_4              |    1 |
+| design_2_auto_pc_3              |    1 |
+| design_2_auto_pc_2              |    1 |
 | design_2_auto_pc_1              |    1 |
 | design_2_auto_pc_0              |    1 |
 +---------------------------------+------+

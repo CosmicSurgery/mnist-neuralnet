@@ -54,9 +54,16 @@
 #include "sleep.h"
 #include "xparameters.h"
 
-#define GPIO_BASE 0x41200000;
+#define GPIO_BASE_0 0x41200000;
+#define GPIO_BASE_1 0x41210000;
+#define GPIO_BASE_2 0x41220000;
+#define GPIO_BASE_3 0x41230000;
 
-XGpio gpio;
+XGpio gpio0;
+XGpio gpio1;
+XGpio gpio2;
+XGpio gpio3;
+XGpio gpio4;
 
 #define BIT0 0x01
 #define BIT1 0x02
@@ -66,48 +73,149 @@ XGpio gpio;
 int main()
 {
     init_platform();
-    XGpio gpio;
+    XGpio gpio0;
+    XGpio gpio1;
+    XGpio gpio2;
+    XGpio gpio3;
+    XGpio gpio4;
 
-    XGpio_Initialize(&gpio, XPAR_GPIO_0_DEVICE_ID);
+    XGpio_Initialize(&gpio0, XPAR_GPIO_0_DEVICE_ID);
+    XGpio_Initialize(&gpio1, XPAR_GPIO_1_DEVICE_ID);
+    XGpio_Initialize(&gpio2, XPAR_GPIO_2_DEVICE_ID);
+    XGpio_Initialize(&gpio3, XPAR_GPIO_3_DEVICE_ID);
+    XGpio_Initialize(&gpio4, XPAR_GPIO_4_DEVICE_ID);
 
-    XGpio_SetDataDirection(&gpio, 1, 0x00000000);
+    XGpio_SetDataDirection(&gpio0, 1, 0x00000000);			// LED
+    XGpio_SetDataDirection(&gpio1, 1, 0xFFFFFFFF);			// 1 bit enable
+    XGpio_SetDataDirection(&gpio1, 2, 0xFFFFFFFF);			// 32 bit datain
+    XGpio_SetDataDirection(&gpio2, 1, 0xFFFFFFFF);			// 32 bit dataout
+    XGpio_SetDataDirection(&gpio2, 2, 0xFFFFFFFF);			// 4 bit web
+    XGpio_SetDataDirection(&gpio3, 1, 0x00000000);			// debug driver
+    XGpio_SetDataDirection(&gpio3, 2, 0xFFFFFFFF);			// addr
+    XGpio_SetDataDirection(&gpio4, 1, 0xFFFFFFFF);			// addr
+    XGpio_SetDataDirection(&gpio4, 2, 0xFFFFFFFF);			// debug checker
 
     print("Hello World\n\r");
 
 
 	UINTPTR BRAM_BASEADDR = 0x40000000;
 	uint32_t read_value;
+	uint32_t gpio_read0;
+	uint32_t gpio_read1;
+	uint32_t gpio_read2;
+	uint32_t gpio_read3;
+	uint32_t gpio_read5;
+	uint32_t gpio_read6;
+	uint32_t gpio_read7;
 
 	uint32_t write_value = 0b11111111111111111111111111111111;
+
+
 	printf("Written value: 0x%08X\n", write_value);
 
 	read_value = Xil_In32(BRAM_BASEADDR);
+
+	gpio_read0 = XGpio_DiscreteRead(&gpio1, 1);
+	gpio_read1 = XGpio_DiscreteRead(&gpio1, 2);
+	gpio_read2 = XGpio_DiscreteRead(&gpio2, 1);
+	gpio_read3 = XGpio_DiscreteRead(&gpio2, 2);
+	gpio_read5 = XGpio_DiscreteRead(&gpio3, 2);
+	gpio_read6 = XGpio_DiscreteRead(&gpio4, 1);
+	gpio_read7 = XGpio_DiscreteRead(&gpio4, 2);
+
 	// Print the written and read values
 	printf("Read value 1:    0x%08X\n", read_value);
+	printf("Read value enable:    0x%08X\n", gpio_read0);
+	printf("Read value datain:    0x%08X\n", gpio_read1);
+	printf("Read value dataout:    0x%08X\n", gpio_read2);
+	printf("Read value web:    0x%08X\n", gpio_read3);
+	printf("Read value addr:    0x%08X\n", gpio_read5);
+	printf("Read value addr:    0x%08X\n", gpio_read6);
+	printf("Read value debug:    0x%08X\n", gpio_read7);
+
 
 	Xil_Out32(BRAM_BASEADDR, write_value);
 
 	read_value = Xil_In32(BRAM_BASEADDR);
+
+	gpio_read0 = XGpio_DiscreteRead(&gpio1, 1);
+	gpio_read1 = XGpio_DiscreteRead(&gpio1, 2);
+	gpio_read2 = XGpio_DiscreteRead(&gpio2, 1);
+	gpio_read3 = XGpio_DiscreteRead(&gpio2, 2);
+	gpio_read5 = XGpio_DiscreteRead(&gpio3, 2);
+	gpio_read6 = XGpio_DiscreteRead(&gpio4, 1);
+	gpio_read7 = XGpio_DiscreteRead(&gpio4, 2);
+
 	// Print the written and read values
 	printf("Read value 2:    0x%08X\n", read_value);
+	printf("Read value enable:    0x%08X\n", gpio_read0);
+	printf("Read value datain:    0x%08X\n", gpio_read1);
+	printf("Read value dataout:    0x%08X\n", gpio_read2);
+	printf("Read value web:    0x%08X\n", gpio_read3);
+	printf("Read value addr:    0x%08X\n", gpio_read5);
+	printf("Read value addr:    0x%08X\n", gpio_read6);
+	printf("Read value debug:    0x%08X\n", gpio_read7);
 
     for (int i=0;i<10;i++){
-    	XGpio_DiscreteWrite(&gpio, 1, BIT0);
+    	XGpio_DiscreteWrite(&gpio0, 1, BIT0);
     	usleep(100000);
 
-    	XGpio_DiscreteWrite(&gpio, 1, BIT1);
+    	XGpio_DiscreteWrite(&gpio0, 1, BIT1);
     	usleep(100000);
 
-    	XGpio_DiscreteWrite(&gpio, 1, BIT2);
+    	XGpio_DiscreteWrite(&gpio0, 1, BIT2);
     	usleep(100000);
 
-    	XGpio_DiscreteWrite(&gpio, 1, BIT3);
+    	XGpio_DiscreteWrite(&gpio0, 1, BIT3);
     	usleep(100000);
     }
 
 	read_value = Xil_In32(BRAM_BASEADDR);
+
+	gpio_read0 = XGpio_DiscreteRead(&gpio1, 1);
+	gpio_read1 = XGpio_DiscreteRead(&gpio1, 2);
+	gpio_read2 = XGpio_DiscreteRead(&gpio2, 1);
+	gpio_read3 = XGpio_DiscreteRead(&gpio2, 2);
+	gpio_read5 = XGpio_DiscreteRead(&gpio3, 2);
+	gpio_read6 = XGpio_DiscreteRead(&gpio4, 1);
+	gpio_read7 = XGpio_DiscreteRead(&gpio4, 2);
+
 	// Print the written and read values
 	printf("Read value 1:    0x%08X\n", read_value);
+	printf("Read value enable:    0x%08X\n", gpio_read0);
+	printf("Read value datain:    0x%08X\n", gpio_read1);
+	printf("Read value dataout:    0x%08X\n", gpio_read2);
+	printf("Read value web:    0x%08X\n", gpio_read3);
+	printf("Read value addr:    0x%08X\n", gpio_read5);
+	printf("Read value addr:    0x%08X\n", gpio_read6);
+	printf("Read value debug:    0x%08X\n", gpio_read7);
+
+
+	XGpio_DiscreteWrite(&gpio3, 1, 0x1);
+
+
+	usleep(100000);
+
+	read_value = Xil_In32(BRAM_BASEADDR);
+
+	gpio_read0 = XGpio_DiscreteRead(&gpio1, 1);
+	gpio_read1 = XGpio_DiscreteRead(&gpio1, 2);
+	gpio_read2 = XGpio_DiscreteRead(&gpio2, 1);
+	gpio_read3 = XGpio_DiscreteRead(&gpio2, 2);
+	gpio_read5 = XGpio_DiscreteRead(&gpio3, 2);
+	gpio_read6 = XGpio_DiscreteRead(&gpio4, 1);
+	gpio_read7 = XGpio_DiscreteRead(&gpio4, 2);
+
+	// Print the written and read values
+	printf("Read value 1:    0x%08X\n", read_value);
+	printf("Read value enable:    0x%08X\n", gpio_read0);
+	printf("Read value datain:    0x%08X\n", gpio_read1);
+	printf("Read value dataout:    0x%08X\n", gpio_read2);
+	printf("Read value web:    0x%08X\n", gpio_read3);
+	printf("Read value addr:    0x%08X\n", gpio_read5);
+	printf("Read value addr:    0x%08X\n", gpio_read6);
+	printf("Read value debug:    0x%08X\n", gpio_read7);
+
 
 	if (write_value != read_value) {
 		printf("Test passed: Written and read values do not match.\n");

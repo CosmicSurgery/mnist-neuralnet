@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="pl_ps_app1" location="C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/pl_ps_app1" platform="C:/git_repos/mnist_neuralnet/fpga/projects/8_20_PL_PS/pl_ps_write_to_bram/export/pl_ps_write_to_bram/pl_ps_write_to_bram.xpfm" platformUID="xilinx:zybo::0.0(custom)" systemProject="pl_ps_app1_system" sysConfig="pl_ps_write_to_bram" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" dimmRepoPath="" mssSignature="6fd940f18f173df38bf1dddcb4d3c251">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.36759485" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.24986081" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

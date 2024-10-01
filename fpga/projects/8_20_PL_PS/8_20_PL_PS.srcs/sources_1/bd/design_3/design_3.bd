@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xFA23AB5B6E1ED9D2",
+      "boundary_crc": "0x2F57DA0444976A3A",
       "device": "xc7z010clg400-1",
       "name": "design_3",
       "synth_flow_mode": "Hierarchical",
@@ -64,6 +64,9 @@
             "value_src": "default"
           }
         }
+      },
+      "debug_0": {
+        "direction": "I"
       }
     },
     "components": {
@@ -132,6 +135,9 @@
             "direction": "O",
             "left": "3",
             "right": "0"
+          },
+          "debug": {
+            "direction": "I"
           }
         }
       }
@@ -175,6 +181,18 @@
         "ports": [
           "delay_module_0/web",
           "blk_mem_gen_0/web"
+        ]
+      },
+      "delay_module_0_addr": {
+        "ports": [
+          "delay_module_0/addr",
+          "blk_mem_gen_0/addrb"
+        ]
+      },
+      "debug_0_1": {
+        "ports": [
+          "debug_0",
+          "delay_module_0/debug"
         ]
       }
     }
