@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Sep 30 14:36:55 2024
-# Process ID: 5992
+# Start of session at: Wed Oct  2 09:44:03 2024
+# Process ID: 17028
 # Current directory: C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_prototype_xbar_0_synth_1
 # Command line: vivado.exe -log PL_NN_prototype_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PL_NN_prototype_xbar_0.tcl
 # Log file: C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_prototype_xbar_0_synth_1/PL_NN_prototype_xbar_0.vds

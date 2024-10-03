@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Mon Sep 30 14:42:36 2024
+//Date        : Wed Oct  2 10:38:23 2024
 //Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 //Command     : generate_target PL_NN_prototype.bd
 //Design      : PL_NN_prototype
@@ -240,7 +240,7 @@ module PL_NN_prototype
   wire [1:0]processing_system7_0_M_AXI_GP0_ARLOCK;
   wire [2:0]processing_system7_0_M_AXI_GP0_ARPROT;
   wire [3:0]processing_system7_0_M_AXI_GP0_ARQOS;
-  wire [0:0]processing_system7_0_M_AXI_GP0_ARREADY;
+  wire processing_system7_0_M_AXI_GP0_ARREADY;
   wire [2:0]processing_system7_0_M_AXI_GP0_ARSIZE;
   wire processing_system7_0_M_AXI_GP0_ARVALID;
   wire [31:0]processing_system7_0_M_AXI_GP0_AWADDR;
@@ -251,29 +251,29 @@ module PL_NN_prototype
   wire [1:0]processing_system7_0_M_AXI_GP0_AWLOCK;
   wire [2:0]processing_system7_0_M_AXI_GP0_AWPROT;
   wire [3:0]processing_system7_0_M_AXI_GP0_AWQOS;
-  wire [0:0]processing_system7_0_M_AXI_GP0_AWREADY;
+  wire processing_system7_0_M_AXI_GP0_AWREADY;
   wire [2:0]processing_system7_0_M_AXI_GP0_AWSIZE;
   wire processing_system7_0_M_AXI_GP0_AWVALID;
   wire [11:0]processing_system7_0_M_AXI_GP0_BID;
   wire processing_system7_0_M_AXI_GP0_BREADY;
   wire [1:0]processing_system7_0_M_AXI_GP0_BRESP;
-  wire [0:0]processing_system7_0_M_AXI_GP0_BVALID;
+  wire processing_system7_0_M_AXI_GP0_BVALID;
   wire [31:0]processing_system7_0_M_AXI_GP0_RDATA;
   wire [11:0]processing_system7_0_M_AXI_GP0_RID;
   wire processing_system7_0_M_AXI_GP0_RLAST;
   wire processing_system7_0_M_AXI_GP0_RREADY;
   wire [1:0]processing_system7_0_M_AXI_GP0_RRESP;
-  wire [0:0]processing_system7_0_M_AXI_GP0_RVALID;
+  wire processing_system7_0_M_AXI_GP0_RVALID;
   wire [31:0]processing_system7_0_M_AXI_GP0_WDATA;
   wire [11:0]processing_system7_0_M_AXI_GP0_WID;
   wire processing_system7_0_M_AXI_GP0_WLAST;
-  wire [0:0]processing_system7_0_M_AXI_GP0_WREADY;
+  wire processing_system7_0_M_AXI_GP0_WREADY;
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire [0:0]start_0_1;
 
-  PL_NN_prototype_axi4_lite_final_outp_0_0 axi4_lite_final_outp_0
+  PL_NN_prototype_axi4_lite_final_outp_1_0 axi4_lite_final_output
        (.a0done(perceptron_0_done),
         .a1done(perceptron_1_done),
         .a2done(perceptron_2_done),
@@ -322,11 +322,11 @@ module PL_NN_prototype
         .bias_1(axi4_lite_register_m_0_bias_1),
         .bias_2(axi4_lite_register_m_0_bias_2),
         .control(axi4_lite_register_m_0_control),
-        .s_axil_araddr(axi_interconnect_0_M04_AXI_ARADDR),
+        .s_axil_araddr(axi_interconnect_0_M04_AXI_ARADDR[4:0]),
         .s_axil_arprot(axi_interconnect_0_M04_AXI_ARPROT),
         .s_axil_arready(axi_interconnect_0_M04_AXI_ARREADY),
         .s_axil_arvalid(axi_interconnect_0_M04_AXI_ARVALID),
-        .s_axil_awaddr(axi_interconnect_0_M04_AXI_AWADDR),
+        .s_axil_awaddr(axi_interconnect_0_M04_AXI_AWADDR[4:0]),
         .s_axil_awprot(axi_interconnect_0_M04_AXI_AWPROT),
         .s_axil_awready(axi_interconnect_0_M04_AXI_AWREADY),
         .s_axil_awvalid(axi_interconnect_0_M04_AXI_AWVALID),
@@ -1097,9 +1097,9 @@ module PL_NN_prototype_axi_interconnect_0_0
   input [1:0]S00_AXI_arlock;
   input [2:0]S00_AXI_arprot;
   input [3:0]S00_AXI_arqos;
-  output [0:0]S00_AXI_arready;
+  output S00_AXI_arready;
   input [2:0]S00_AXI_arsize;
-  input [0:0]S00_AXI_arvalid;
+  input S00_AXI_arvalid;
   input [31:0]S00_AXI_awaddr;
   input [1:0]S00_AXI_awburst;
   input [3:0]S00_AXI_awcache;
@@ -1108,25 +1108,25 @@ module PL_NN_prototype_axi_interconnect_0_0
   input [1:0]S00_AXI_awlock;
   input [2:0]S00_AXI_awprot;
   input [3:0]S00_AXI_awqos;
-  output [0:0]S00_AXI_awready;
+  output S00_AXI_awready;
   input [2:0]S00_AXI_awsize;
-  input [0:0]S00_AXI_awvalid;
+  input S00_AXI_awvalid;
   output [11:0]S00_AXI_bid;
-  input [0:0]S00_AXI_bready;
+  input S00_AXI_bready;
   output [1:0]S00_AXI_bresp;
-  output [0:0]S00_AXI_bvalid;
+  output S00_AXI_bvalid;
   output [31:0]S00_AXI_rdata;
   output [11:0]S00_AXI_rid;
   output S00_AXI_rlast;
-  input [0:0]S00_AXI_rready;
+  input S00_AXI_rready;
   output [1:0]S00_AXI_rresp;
-  output [0:0]S00_AXI_rvalid;
+  output S00_AXI_rvalid;
   input [31:0]S00_AXI_wdata;
   input [11:0]S00_AXI_wid;
   input S00_AXI_wlast;
-  output [0:0]S00_AXI_wready;
+  output S00_AXI_wready;
   input [3:0]S00_AXI_wstrb;
-  input [0:0]S00_AXI_wvalid;
+  input S00_AXI_wvalid;
 
   wire axi_interconnect_0_ACLK_net;
   wire axi_interconnect_0_ARESETN_net;
@@ -1140,7 +1140,7 @@ module PL_NN_prototype_axi_interconnect_0_0
   wire [3:0]axi_interconnect_0_to_s00_couplers_ARQOS;
   wire axi_interconnect_0_to_s00_couplers_ARREADY;
   wire [2:0]axi_interconnect_0_to_s00_couplers_ARSIZE;
-  wire [0:0]axi_interconnect_0_to_s00_couplers_ARVALID;
+  wire axi_interconnect_0_to_s00_couplers_ARVALID;
   wire [31:0]axi_interconnect_0_to_s00_couplers_AWADDR;
   wire [1:0]axi_interconnect_0_to_s00_couplers_AWBURST;
   wire [3:0]axi_interconnect_0_to_s00_couplers_AWCACHE;
@@ -1151,15 +1151,15 @@ module PL_NN_prototype_axi_interconnect_0_0
   wire [3:0]axi_interconnect_0_to_s00_couplers_AWQOS;
   wire axi_interconnect_0_to_s00_couplers_AWREADY;
   wire [2:0]axi_interconnect_0_to_s00_couplers_AWSIZE;
-  wire [0:0]axi_interconnect_0_to_s00_couplers_AWVALID;
+  wire axi_interconnect_0_to_s00_couplers_AWVALID;
   wire [11:0]axi_interconnect_0_to_s00_couplers_BID;
-  wire [0:0]axi_interconnect_0_to_s00_couplers_BREADY;
+  wire axi_interconnect_0_to_s00_couplers_BREADY;
   wire [1:0]axi_interconnect_0_to_s00_couplers_BRESP;
   wire axi_interconnect_0_to_s00_couplers_BVALID;
   wire [31:0]axi_interconnect_0_to_s00_couplers_RDATA;
   wire [11:0]axi_interconnect_0_to_s00_couplers_RID;
   wire axi_interconnect_0_to_s00_couplers_RLAST;
-  wire [0:0]axi_interconnect_0_to_s00_couplers_RREADY;
+  wire axi_interconnect_0_to_s00_couplers_RREADY;
   wire [1:0]axi_interconnect_0_to_s00_couplers_RRESP;
   wire axi_interconnect_0_to_s00_couplers_RVALID;
   wire [31:0]axi_interconnect_0_to_s00_couplers_WDATA;
@@ -1167,7 +1167,7 @@ module PL_NN_prototype_axi_interconnect_0_0
   wire axi_interconnect_0_to_s00_couplers_WLAST;
   wire axi_interconnect_0_to_s00_couplers_WREADY;
   wire [3:0]axi_interconnect_0_to_s00_couplers_WSTRB;
-  wire [0:0]axi_interconnect_0_to_s00_couplers_WVALID;
+  wire axi_interconnect_0_to_s00_couplers_WVALID;
   wire [31:0]m00_couplers_to_axi_interconnect_0_ARADDR;
   wire [2:0]m00_couplers_to_axi_interconnect_0_ARPROT;
   wire m00_couplers_to_axi_interconnect_0_ARREADY;
@@ -1525,17 +1525,17 @@ module PL_NN_prototype_axi_interconnect_0_0
   assign M06_AXI_wdata[31:0] = m06_couplers_to_axi_interconnect_0_WDATA;
   assign M06_AXI_wstrb[3:0] = m06_couplers_to_axi_interconnect_0_WSTRB;
   assign M06_AXI_wvalid = m06_couplers_to_axi_interconnect_0_WVALID;
-  assign S00_AXI_arready[0] = axi_interconnect_0_to_s00_couplers_ARREADY;
-  assign S00_AXI_awready[0] = axi_interconnect_0_to_s00_couplers_AWREADY;
+  assign S00_AXI_arready = axi_interconnect_0_to_s00_couplers_ARREADY;
+  assign S00_AXI_awready = axi_interconnect_0_to_s00_couplers_AWREADY;
   assign S00_AXI_bid[11:0] = axi_interconnect_0_to_s00_couplers_BID;
   assign S00_AXI_bresp[1:0] = axi_interconnect_0_to_s00_couplers_BRESP;
-  assign S00_AXI_bvalid[0] = axi_interconnect_0_to_s00_couplers_BVALID;
+  assign S00_AXI_bvalid = axi_interconnect_0_to_s00_couplers_BVALID;
   assign S00_AXI_rdata[31:0] = axi_interconnect_0_to_s00_couplers_RDATA;
   assign S00_AXI_rid[11:0] = axi_interconnect_0_to_s00_couplers_RID;
   assign S00_AXI_rlast = axi_interconnect_0_to_s00_couplers_RLAST;
   assign S00_AXI_rresp[1:0] = axi_interconnect_0_to_s00_couplers_RRESP;
-  assign S00_AXI_rvalid[0] = axi_interconnect_0_to_s00_couplers_RVALID;
-  assign S00_AXI_wready[0] = axi_interconnect_0_to_s00_couplers_WREADY;
+  assign S00_AXI_rvalid = axi_interconnect_0_to_s00_couplers_RVALID;
+  assign S00_AXI_wready = axi_interconnect_0_to_s00_couplers_WREADY;
   assign axi_interconnect_0_ACLK_net = ACLK;
   assign axi_interconnect_0_ARESETN_net = ARESETN;
   assign axi_interconnect_0_to_s00_couplers_ARADDR = S00_AXI_araddr[31:0];
@@ -1547,7 +1547,7 @@ module PL_NN_prototype_axi_interconnect_0_0
   assign axi_interconnect_0_to_s00_couplers_ARPROT = S00_AXI_arprot[2:0];
   assign axi_interconnect_0_to_s00_couplers_ARQOS = S00_AXI_arqos[3:0];
   assign axi_interconnect_0_to_s00_couplers_ARSIZE = S00_AXI_arsize[2:0];
-  assign axi_interconnect_0_to_s00_couplers_ARVALID = S00_AXI_arvalid[0];
+  assign axi_interconnect_0_to_s00_couplers_ARVALID = S00_AXI_arvalid;
   assign axi_interconnect_0_to_s00_couplers_AWADDR = S00_AXI_awaddr[31:0];
   assign axi_interconnect_0_to_s00_couplers_AWBURST = S00_AXI_awburst[1:0];
   assign axi_interconnect_0_to_s00_couplers_AWCACHE = S00_AXI_awcache[3:0];
@@ -1557,14 +1557,14 @@ module PL_NN_prototype_axi_interconnect_0_0
   assign axi_interconnect_0_to_s00_couplers_AWPROT = S00_AXI_awprot[2:0];
   assign axi_interconnect_0_to_s00_couplers_AWQOS = S00_AXI_awqos[3:0];
   assign axi_interconnect_0_to_s00_couplers_AWSIZE = S00_AXI_awsize[2:0];
-  assign axi_interconnect_0_to_s00_couplers_AWVALID = S00_AXI_awvalid[0];
-  assign axi_interconnect_0_to_s00_couplers_BREADY = S00_AXI_bready[0];
-  assign axi_interconnect_0_to_s00_couplers_RREADY = S00_AXI_rready[0];
+  assign axi_interconnect_0_to_s00_couplers_AWVALID = S00_AXI_awvalid;
+  assign axi_interconnect_0_to_s00_couplers_BREADY = S00_AXI_bready;
+  assign axi_interconnect_0_to_s00_couplers_RREADY = S00_AXI_rready;
   assign axi_interconnect_0_to_s00_couplers_WDATA = S00_AXI_wdata[31:0];
   assign axi_interconnect_0_to_s00_couplers_WID = S00_AXI_wid[11:0];
   assign axi_interconnect_0_to_s00_couplers_WLAST = S00_AXI_wlast;
   assign axi_interconnect_0_to_s00_couplers_WSTRB = S00_AXI_wstrb[3:0];
-  assign axi_interconnect_0_to_s00_couplers_WVALID = S00_AXI_wvalid[0];
+  assign axi_interconnect_0_to_s00_couplers_WVALID = S00_AXI_wvalid;
   assign m00_couplers_to_axi_interconnect_0_ARREADY = M00_AXI_arready;
   assign m00_couplers_to_axi_interconnect_0_AWREADY = M00_AXI_awready;
   assign m00_couplers_to_axi_interconnect_0_BRESP = M00_AXI_bresp[1:0];

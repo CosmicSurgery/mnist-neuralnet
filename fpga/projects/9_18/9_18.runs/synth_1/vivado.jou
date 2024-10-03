@@ -2,11 +2,11 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Sep 30 14:57:30 2024
-# Process ID: 11084
+# Start of session at: Wed Oct  2 14:39:48 2024
+# Process ID: 5056
 # Current directory: C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1
-# Command line: vivado.exe -log axi4_lite_final_output.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi4_lite_final_output.tcl
-# Log file: C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/axi4_lite_final_output.vds
+# Command line: vivado.exe -log design_2_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_2_wrapper.tcl
+# Log file: C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/design_2_wrapper.vds
 # Journal file: C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source axi4_lite_final_output.tcl -notrace
+source design_2_wrapper.tcl -notrace

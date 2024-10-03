@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log axi4_lite_final_output.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi4_lite_final_output.tcl
+EAStep vivado -log design_2_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_2_wrapper.tcl

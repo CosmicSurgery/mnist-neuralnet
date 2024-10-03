@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Mon Sep 30 14:39:14 2024
+-- Date        : Mon Sep 30 14:39:13 2024
 -- Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ip/PL_NN_prototype_xbar_0/PL_NN_prototype_xbar_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top PL_NN_prototype_xbar_0 -prefix
+--               PL_NN_prototype_xbar_0_ PL_NN_prototype_xbar_0_sim_netlist.vhdl
 -- Design      : PL_NN_prototype_xbar_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -90,8 +90,6 @@ entity PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_addr_arbiter_sasd is
     mi_wready : in STD_LOGIC_VECTOR ( 0 to 0 );
     mi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_21_addr_arbiter_sasd";
 end PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_addr_arbiter_sasd;
 
 architecture STRUCTURE of PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_addr_arbiter_sasd is
@@ -2025,8 +2023,6 @@ entity PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_decerr_slave is
     mi_awvalid_en : in STD_LOGIC;
     p_4_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_decerr_slave : entity is "axi_crossbar_v2_1_21_decerr_slave";
 end PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_decerr_slave;
 
 architecture STRUCTURE of PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_decerr_slave is
@@ -2258,8 +2254,6 @@ entity PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_splitter is
     \m_ready_d_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_splitter : entity is "axi_crossbar_v2_1_21_splitter";
 end PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_splitter;
 
 architecture STRUCTURE of PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_splitter is
@@ -2565,8 +2559,6 @@ entity PL_NN_prototype_xbar_0_axi_register_slice_v2_1_20_axic_register_slice is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of PL_NN_prototype_xbar_0_axi_register_slice_v2_1_20_axic_register_slice : entity is "axi_register_slice_v2_1_20_axic_register_slice";
 end PL_NN_prototype_xbar_0_axi_register_slice_v2_1_20_axic_register_slice;
 
 architecture STRUCTURE of PL_NN_prototype_xbar_0_axi_register_slice_v2_1_20_axic_register_slice is
@@ -5162,8 +5154,6 @@ entity PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_crossbar_sasd is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_crossbar_sasd : entity is "axi_crossbar_v2_1_21_crossbar_sasd";
 end PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_crossbar_sasd;
 
 architecture STRUCTURE of PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_crossbar_sasd is
@@ -5814,8 +5804,6 @@ entity PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_axi_crossbar : entity is "axi_crossbar_v2_1_21_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of PL_NN_prototype_xbar_0_axi_crossbar_v2_1_21_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;

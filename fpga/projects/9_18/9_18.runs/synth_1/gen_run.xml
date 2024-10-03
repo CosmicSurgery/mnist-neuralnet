@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1727733447">
-  <File Type="PA-TCL" Name="axi4_lite_final_output.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="axi4_lite_final_output_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="axi4_lite_final_output_reports.tcl"/>
-  <File Type="RDS-RDS" Name="axi4_lite_final_output.vds"/>
-  <File Type="RDS-UTIL" Name="axi4_lite_final_output_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="axi4_lite_final_output_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="axi4_lite_final_output.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="axi4_lite_final_output_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="axi4_lite_final_output_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1727905184">
+  <File Type="PA-TCL" Name="design_2_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="design_2_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="design_2_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="design_2_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="design_2_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="design_2_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="design_2_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="design_2_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="design_2_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../source/perceptron/rtl/src/blk_mem_gen_0/blk_mem_gen_0.xci">
@@ -139,9 +139,37 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_2/hdl/design_2_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="axi4_lite_final_output"/>
+      <Option Name="TopModule" Val="design_2_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -170,5 +198,9 @@
   <BlockFileSet Type="BlockSrcs" Name="PL_NN_prototype_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="PL_NN_prototype_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="PL_NN_prototype_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_prototype_axi4_lite_final_outp_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_broadcaster_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_prototype_axi4_lite_register_m_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi4_lite_register_m_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
 </GenRun>

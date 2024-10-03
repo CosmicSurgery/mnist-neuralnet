@@ -1,0 +1,51 @@
+13:23:23 **** Incremental Build of configuration Debug for project design_1_app ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_1/export/design_1/sw/design_1/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:90:30: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  printf("Written value: 0x%08X\n", write_value);
+                           ~~~^     ~~~~~~~~~~~
+                           %08lX
+../src/main.c:86:11: warning: unused variable 'gpio_read0' [-Wunused-variable]
+  uint32_t gpio_read0;
+           ^~~~~~~~~~
+../src/main.c:83:10: warning: unused variable 'AXI4_LITE_FINAL_OUTPUT' [-Wunused-variable]
+  UINTPTR AXI4_LITE_FINAL_OUTPUT = 0x43000000;
+          ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:81:10: warning: unused variable 'PERCEPTRON_1' [-Wunused-variable]
+  UINTPTR PERCEPTRON_1 = 0x40001000;
+          ^~~~~~~~~~~~
+../src/main.c:80:10: warning: unused variable 'IMAGE_LOADER_MODULE' [-Wunused-variable]
+  UINTPTR IMAGE_LOADER_MODULE = 0x50000000;
+          ^~~~~~~~~~~~~~~~~~~
+../src/main.c:90:2: warning: 'write_value' is used uninitialized in this function [-Wuninitialized]
+  printf("Written value: 0x%08X\n", write_value);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/memory_config_g.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/memory_config_g.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_1/export/design_1/sw/design_1/standalone_domain/bspinclude/include -MMD -MP -MF"src/memory_config_g.d" -MT"src/memory_config_g.o" -o "src/memory_config_g.o" "../src/memory_config_g.c"
+'Finished building: ../src/memory_config_g.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_1/export/design_1/sw/design_1/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: design_1_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -o "design_1_app.elf"  ./src/main.o ./src/memory_config_g.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/vitis/2019.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: cannot find -lxil
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [makefile:43: design_1_app.elf] Error 1
+make: *** [makefile:34: all] Error 2
+
+13:23:24 Build Finished (took 1s.488ms)
+

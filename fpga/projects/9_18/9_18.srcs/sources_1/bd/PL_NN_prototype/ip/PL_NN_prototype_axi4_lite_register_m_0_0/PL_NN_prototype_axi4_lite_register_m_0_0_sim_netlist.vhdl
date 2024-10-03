@@ -1,11 +1,11 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Tue Sep 24 21:23:41 2024
+-- Date        : Wed Oct  2 10:40:11 2024
 -- Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top PL_NN_prototype_axi4_lite_register_m_0_0 -prefix
---               PL_NN_prototype_axi4_lite_register_m_0_0_ axi4_lite_register_module_0_sim_netlist.vhdl
--- Design      : axi4_lite_register_module_0
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/PL_NN_prototype/ip/PL_NN_prototype_axi4_lite_register_m_0_0/PL_NN_prototype_axi4_lite_register_m_0_0_sim_netlist.vhdl
+-- Design      : PL_NN_prototype_axi4_lite_register_m_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z010clg400-1
@@ -18,7 +18,6 @@ entity PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_register_module is
   port (
     axi_rvalid_reg_0 : out STD_LOGIC;
     s_axil_arready : out STD_LOGIC;
-    bias_16 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axil_wready : out STD_LOGIC;
     s_axil_awready : out STD_LOGIC;
     bias_0 : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -37,45 +36,58 @@ entity PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_register_module is
     bias_13 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bias_14 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bias_15 : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    bias_16 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bias_17 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axil_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     axi_bvalid_reg_0 : out STD_LOGIC;
+    control : out STD_LOGIC;
     aresetn : in STD_LOGIC;
     s_axil_arvalid : in STD_LOGIC;
-    s_axil_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_axil_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     aclk : in STD_LOGIC;
     s_axil_wvalid : in STD_LOGIC;
     s_axil_awvalid : in STD_LOGIC;
     s_axil_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axil_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     status : in STD_LOGIC;
     s_axil_bready : in STD_LOGIC;
     s_axil_rready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_register_module : entity is "axi4_lite_register_module";
 end PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_register_module;
 
 architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_register_module is
   signal addr : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal addr_curr : STD_LOGIC;
   signal addr_curr1 : STD_LOGIC;
   signal addr_curr_i_1_n_0 : STD_LOGIC;
   signal addr_curr_reg_n_0 : STD_LOGIC;
   signal \addr_reg[0]_rep__0_n_0\ : STD_LOGIC;
+  signal \addr_reg[0]_rep__1_n_0\ : STD_LOGIC;
   signal \addr_reg[0]_rep_n_0\ : STD_LOGIC;
   signal \addr_reg[1]_rep__0_n_0\ : STD_LOGIC;
+  signal \addr_reg[1]_rep__1_n_0\ : STD_LOGIC;
   signal \addr_reg[1]_rep_n_0\ : STD_LOGIC;
   signal \addr_reg[2]_rep__0_n_0\ : STD_LOGIC;
+  signal \addr_reg[2]_rep__1_n_0\ : STD_LOGIC;
   signal \addr_reg[2]_rep_n_0\ : STD_LOGIC;
+  signal \addr_reg[3]_rep__0_n_0\ : STD_LOGIC;
+  signal \addr_reg[3]_rep_n_0\ : STD_LOGIC;
+  signal \addr_reg[4]_rep__0_n_0\ : STD_LOGIC;
+  signal \addr_reg[4]_rep_n_0\ : STD_LOGIC;
   signal axi_arready0 : STD_LOGIC;
   signal axi_awready0 : STD_LOGIC;
   signal axi_awready_i_1_n_0 : STD_LOGIC;
   signal axi_bvalid_i_1_n_0 : STD_LOGIC;
+  signal axi_bvalid_i_2_n_0 : STD_LOGIC;
   signal \^axi_bvalid_reg_0\ : STD_LOGIC;
   signal \axi_rdata[0]_i_10_n_0\ : STD_LOGIC;
   signal \axi_rdata[0]_i_11_n_0\ : STD_LOGIC;
+  signal \axi_rdata[0]_i_12_n_0\ : STD_LOGIC;
   signal \axi_rdata[0]_i_1_n_0\ : STD_LOGIC;
   signal \axi_rdata[0]_i_2_n_0\ : STD_LOGIC;
-  signal \axi_rdata[0]_i_4_n_0\ : STD_LOGIC;
-  signal \axi_rdata[0]_i_5_n_0\ : STD_LOGIC;
+  signal \axi_rdata[0]_i_3_n_0\ : STD_LOGIC;
   signal \axi_rdata[0]_i_6_n_0\ : STD_LOGIC;
   signal \axi_rdata[0]_i_7_n_0\ : STD_LOGIC;
   signal \axi_rdata[0]_i_8_n_0\ : STD_LOGIC;
@@ -237,7 +249,8 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \axi_rdata[9]_i_6_n_0\ : STD_LOGIC;
   signal \axi_rdata[9]_i_7_n_0\ : STD_LOGIC;
   signal \axi_rdata[9]_i_8_n_0\ : STD_LOGIC;
-  signal \axi_rdata_reg[0]_i_3_n_0\ : STD_LOGIC;
+  signal \axi_rdata_reg[0]_i_4_n_0\ : STD_LOGIC;
+  signal \axi_rdata_reg[0]_i_5_n_0\ : STD_LOGIC;
   signal \axi_rdata_reg[10]_i_2_n_0\ : STD_LOGIC;
   signal \axi_rdata_reg[10]_i_3_n_0\ : STD_LOGIC;
   signal \axi_rdata_reg[10]_i_4_n_0\ : STD_LOGIC;
@@ -353,16 +366,40 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \^bias_7\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^bias_8\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^bias_9\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \bias_regs[0][0]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][10]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][11]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][12]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][13]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][14]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][15]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][16]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[0][17]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][18]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][19]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][1]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][20]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][21]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][22]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][23]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][24]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[0][25]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][26]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][27]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[0][28]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[0][29]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][2]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[0][30]_i_1_n_0\ : STD_LOGIC;
-  signal \bias_regs[0][30]_i_2_n_0\ : STD_LOGIC;
-  signal \bias_regs[0][30]_i_3_n_0\ : STD_LOGIC;
-  signal \bias_regs[0][30]_i_4_n_0\ : STD_LOGIC;
   signal \bias_regs[0][31]_i_1_n_0\ : STD_LOGIC;
-  signal \bias_regs[0][31]_i_3_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][31]_i_2_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][31]_i_4_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][3]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][4]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][5]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][6]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][7]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][8]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[0][9]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[10][0]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[10][10]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[10][11]_i_1_n_0\ : STD_LOGIC;
@@ -383,6 +420,7 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[10][25]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[10][26]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[10][27]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[10][27]_i_2_n_0\ : STD_LOGIC;
   signal \bias_regs[10][28]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[10][29]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[10][2]_i_1_n_0\ : STD_LOGIC;
@@ -415,6 +453,7 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[11][24]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[11][25]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[11][26]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[11][26]_i_2_n_0\ : STD_LOGIC;
   signal \bias_regs[11][27]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[11][28]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[11][29]_i_1_n_0\ : STD_LOGIC;
@@ -489,6 +528,8 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[13][30]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[13][31]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[13][31]_i_2_n_0\ : STD_LOGIC;
+  signal \bias_regs[13][31]_i_3_n_0\ : STD_LOGIC;
+  signal \bias_regs[13][31]_i_4_n_0\ : STD_LOGIC;
   signal \bias_regs[13][3]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[13][4]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[13][5]_i_1_n_0\ : STD_LOGIC;
@@ -522,6 +563,7 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[14][30]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[14][31]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[14][31]_i_2_n_0\ : STD_LOGIC;
+  signal \bias_regs[14][31]_i_3_n_0\ : STD_LOGIC;
   signal \bias_regs[14][3]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[14][4]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[14][5]_i_1_n_0\ : STD_LOGIC;
@@ -555,9 +597,11 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[15][30]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[15][31]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[15][31]_i_2_n_0\ : STD_LOGIC;
+  signal \bias_regs[15][31]_i_3_n_0\ : STD_LOGIC;
   signal \bias_regs[15][3]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[15][4]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[15][5]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[15][5]_i_2_n_0\ : STD_LOGIC;
   signal \bias_regs[15][6]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[15][7]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[15][8]_i_1_n_0\ : STD_LOGIC;
@@ -644,10 +688,10 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[17][2]_i_2_n_0\ : STD_LOGIC;
   signal \bias_regs[17][30]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[17][30]_i_2_n_0\ : STD_LOGIC;
-  signal \bias_regs[17][30]_i_3_n_0\ : STD_LOGIC;
-  signal \bias_regs[17][30]_i_4_n_0\ : STD_LOGIC;
   signal \bias_regs[17][31]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[17][31]_i_2_n_0\ : STD_LOGIC;
+  signal \bias_regs[17][31]_i_3_n_0\ : STD_LOGIC;
+  signal \bias_regs[17][31]_i_4_n_0\ : STD_LOGIC;
   signal \bias_regs[17][3]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[17][3]_i_2_n_0\ : STD_LOGIC;
   signal \bias_regs[17][4]_i_1_n_0\ : STD_LOGIC;
@@ -688,7 +732,6 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[1][30]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[1][31]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[1][31]_i_2_n_0\ : STD_LOGIC;
-  signal \bias_regs[1][31]_i_3_n_0\ : STD_LOGIC;
   signal \bias_regs[1][3]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[1][4]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[1][5]_i_1_n_0\ : STD_LOGIC;
@@ -749,6 +792,7 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[3][24]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[3][25]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[3][26]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[3][26]_i_2_n_0\ : STD_LOGIC;
   signal \bias_regs[3][27]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[3][28]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[3][29]_i_1_n_0\ : STD_LOGIC;
@@ -757,7 +801,6 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[3][31]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[3][31]_i_2_n_0\ : STD_LOGIC;
   signal \bias_regs[3][31]_i_3_n_0\ : STD_LOGIC;
-  signal \bias_regs[3][31]_i_4_n_0\ : STD_LOGIC;
   signal \bias_regs[3][3]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[3][4]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[3][5]_i_1_n_0\ : STD_LOGIC;
@@ -826,6 +869,7 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[5][31]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[5][31]_i_2_n_0\ : STD_LOGIC;
   signal \bias_regs[5][31]_i_3_n_0\ : STD_LOGIC;
+  signal \bias_regs[5][31]_i_4_n_0\ : STD_LOGIC;
   signal \bias_regs[5][3]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[5][4]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[5][5]_i_1_n_0\ : STD_LOGIC;
@@ -895,6 +939,7 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[7][31]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[7][31]_i_2_n_0\ : STD_LOGIC;
   signal \bias_regs[7][31]_i_3_n_0\ : STD_LOGIC;
+  signal \bias_regs[7][31]_i_4_n_0\ : STD_LOGIC;
   signal \bias_regs[7][3]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[7][4]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[7][5]_i_1_n_0\ : STD_LOGIC;
@@ -929,6 +974,8 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[8][31]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[8][31]_i_2_n_0\ : STD_LOGIC;
   signal \bias_regs[8][31]_i_3_n_0\ : STD_LOGIC;
+  signal \bias_regs[8][31]_i_4_n_0\ : STD_LOGIC;
+  signal \bias_regs[8][31]_i_5_n_0\ : STD_LOGIC;
   signal \bias_regs[8][3]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[8][4]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[8][5]_i_1_n_0\ : STD_LOGIC;
@@ -960,6 +1007,9 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[9][29]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[9][2]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[9][30]_i_1_n_0\ : STD_LOGIC;
+  signal \bias_regs[9][30]_i_2_n_0\ : STD_LOGIC;
+  signal \bias_regs[9][30]_i_3_n_0\ : STD_LOGIC;
+  signal \bias_regs[9][30]_i_4_n_0\ : STD_LOGIC;
   signal \bias_regs[9][31]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[9][31]_i_2_n_0\ : STD_LOGIC;
   signal \bias_regs[9][31]_i_3_n_0\ : STD_LOGIC;
@@ -970,10 +1020,14 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   signal \bias_regs[9][7]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[9][8]_i_1_n_0\ : STD_LOGIC;
   signal \bias_regs[9][9]_i_1_n_0\ : STD_LOGIC;
+  signal \^control\ : STD_LOGIC;
+  signal \control_reg[0]_i_1_n_0\ : STD_LOGIC;
+  signal \control_reg[0]_i_2_n_0\ : STD_LOGIC;
+  signal \control_reg[0]_i_3_n_0\ : STD_LOGIC;
+  signal \control_reg[0]_i_4_n_0\ : STD_LOGIC;
   signal data_curr : STD_LOGIC;
   signal data_curr1 : STD_LOGIC;
   signal data_curr_i_1_n_0 : STD_LOGIC;
-  signal p_1_in : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^s_axil_arready\ : STD_LOGIC;
   signal \^s_axil_awready\ : STD_LOGIC;
   signal \^s_axil_rdata\ : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -983,237 +1037,160 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_reg
   attribute ORIG_CELL_NAME of \addr_reg[0]\ : label is "addr_reg[0]";
   attribute ORIG_CELL_NAME of \addr_reg[0]_rep\ : label is "addr_reg[0]";
   attribute ORIG_CELL_NAME of \addr_reg[0]_rep__0\ : label is "addr_reg[0]";
+  attribute ORIG_CELL_NAME of \addr_reg[0]_rep__1\ : label is "addr_reg[0]";
   attribute ORIG_CELL_NAME of \addr_reg[1]\ : label is "addr_reg[1]";
   attribute ORIG_CELL_NAME of \addr_reg[1]_rep\ : label is "addr_reg[1]";
   attribute ORIG_CELL_NAME of \addr_reg[1]_rep__0\ : label is "addr_reg[1]";
+  attribute ORIG_CELL_NAME of \addr_reg[1]_rep__1\ : label is "addr_reg[1]";
   attribute ORIG_CELL_NAME of \addr_reg[2]\ : label is "addr_reg[2]";
   attribute ORIG_CELL_NAME of \addr_reg[2]_rep\ : label is "addr_reg[2]";
   attribute ORIG_CELL_NAME of \addr_reg[2]_rep__0\ : label is "addr_reg[2]";
+  attribute ORIG_CELL_NAME of \addr_reg[2]_rep__1\ : label is "addr_reg[2]";
+  attribute ORIG_CELL_NAME of \addr_reg[3]\ : label is "addr_reg[3]";
+  attribute ORIG_CELL_NAME of \addr_reg[3]_rep\ : label is "addr_reg[3]";
+  attribute ORIG_CELL_NAME of \addr_reg[3]_rep__0\ : label is "addr_reg[3]";
+  attribute ORIG_CELL_NAME of \addr_reg[4]\ : label is "addr_reg[4]";
+  attribute ORIG_CELL_NAME of \addr_reg[4]_rep\ : label is "addr_reg[4]";
+  attribute ORIG_CELL_NAME of \addr_reg[4]_rep__0\ : label is "addr_reg[4]";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of axi_awready_i_2 : label is "soft_lutpair102";
-  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair102";
-  attribute SOFT_HLUTNM of \bias_regs[0][0]_i_1\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \bias_regs[0][10]_i_1\ : label is "soft_lutpair80";
-  attribute SOFT_HLUTNM of \bias_regs[0][11]_i_1\ : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of \bias_regs[0][12]_i_1\ : label is "soft_lutpair82";
-  attribute SOFT_HLUTNM of \bias_regs[0][14]_i_1\ : label is "soft_lutpair82";
-  attribute SOFT_HLUTNM of \bias_regs[0][15]_i_1\ : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of \bias_regs[0][16]_i_1\ : label is "soft_lutpair80";
-  attribute SOFT_HLUTNM of \bias_regs[0][18]_i_1\ : label is "soft_lutpair79";
-  attribute SOFT_HLUTNM of \bias_regs[0][19]_i_1\ : label is "soft_lutpair78";
-  attribute SOFT_HLUTNM of \bias_regs[0][1]_i_1\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \bias_regs[0][20]_i_1\ : label is "soft_lutpair77";
-  attribute SOFT_HLUTNM of \bias_regs[0][21]_i_1\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \bias_regs[0][22]_i_1\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \bias_regs[0][23]_i_1\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \bias_regs[0][24]_i_1\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \bias_regs[0][26]_i_1\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \bias_regs[0][27]_i_1\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \bias_regs[0][2]_i_1\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \bias_regs[0][30]_i_4\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \bias_regs[0][31]_i_2\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \bias_regs[0][3]_i_1\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \bias_regs[0][4]_i_1\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \bias_regs[0][5]_i_1\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \bias_regs[0][6]_i_1\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \bias_regs[0][7]_i_1\ : label is "soft_lutpair77";
-  attribute SOFT_HLUTNM of \bias_regs[0][8]_i_1\ : label is "soft_lutpair78";
-  attribute SOFT_HLUTNM of \bias_regs[0][9]_i_1\ : label is "soft_lutpair79";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of axi_awready_i_2 : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \axi_rdata[0]_i_7\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \axi_rdata[0]_i_8\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \bias_regs[10][27]_i_2\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \bias_regs[12][0]_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \bias_regs[12][10]_i_1\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \bias_regs[12][11]_i_1\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \bias_regs[12][12]_i_1\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \bias_regs[12][13]_i_1\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \bias_regs[12][14]_i_1\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \bias_regs[12][15]_i_1\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \bias_regs[12][16]_i_1\ : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of \bias_regs[12][17]_i_1\ : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of \bias_regs[12][18]_i_1\ : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of \bias_regs[12][19]_i_1\ : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of \bias_regs[12][1]_i_1\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \bias_regs[12][20]_i_1\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \bias_regs[12][21]_i_1\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \bias_regs[12][22]_i_1\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \bias_regs[12][23]_i_1\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \bias_regs[12][24]_i_1\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \bias_regs[12][25]_i_1\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \bias_regs[12][26]_i_1\ : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \bias_regs[12][27]_i_1\ : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \bias_regs[12][28]_i_1\ : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of \bias_regs[12][29]_i_1\ : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of \bias_regs[12][2]_i_1\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \bias_regs[12][30]_i_1\ : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of \bias_regs[12][31]_i_2\ : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of \bias_regs[12][3]_i_1\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \bias_regs[12][4]_i_1\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \bias_regs[12][5]_i_1\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \bias_regs[12][6]_i_1\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \bias_regs[12][7]_i_1\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \bias_regs[12][8]_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \bias_regs[12][9]_i_1\ : label is "soft_lutpair57";
   attribute SOFT_HLUTNM of \bias_regs[16][0]_i_1\ : label is "soft_lutpair17";
   attribute SOFT_HLUTNM of \bias_regs[16][10]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \bias_regs[16][11]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \bias_regs[16][12]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \bias_regs[16][13]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \bias_regs[16][14]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \bias_regs[16][15]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \bias_regs[16][16]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \bias_regs[16][17]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \bias_regs[16][18]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \bias_regs[16][19]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \bias_regs[16][1]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \bias_regs[16][20]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \bias_regs[16][21]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \bias_regs[16][22]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \bias_regs[16][23]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \bias_regs[16][24]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \bias_regs[16][25]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \bias_regs[16][26]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \bias_regs[16][27]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \bias_regs[16][28]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \bias_regs[16][29]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \bias_regs[16][2]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \bias_regs[16][30]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \bias_regs[16][31]_i_2\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \bias_regs[16][3]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \bias_regs[16][4]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \bias_regs[16][5]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \bias_regs[16][6]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \bias_regs[16][7]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \bias_regs[16][8]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \bias_regs[16][9]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \bias_regs[17][0]_i_1\ : label is "soft_lutpair85";
-  attribute SOFT_HLUTNM of \bias_regs[17][10]_i_1\ : label is "soft_lutpair95";
-  attribute SOFT_HLUTNM of \bias_regs[17][11]_i_1\ : label is "soft_lutpair96";
-  attribute SOFT_HLUTNM of \bias_regs[17][12]_i_1\ : label is "soft_lutpair97";
-  attribute SOFT_HLUTNM of \bias_regs[17][13]_i_1\ : label is "soft_lutpair98";
-  attribute SOFT_HLUTNM of \bias_regs[17][14]_i_1\ : label is "soft_lutpair99";
-  attribute SOFT_HLUTNM of \bias_regs[17][16]_i_1\ : label is "soft_lutpair99";
-  attribute SOFT_HLUTNM of \bias_regs[17][17]_i_1\ : label is "soft_lutpair98";
-  attribute SOFT_HLUTNM of \bias_regs[17][18]_i_1\ : label is "soft_lutpair97";
-  attribute SOFT_HLUTNM of \bias_regs[17][19]_i_1\ : label is "soft_lutpair96";
-  attribute SOFT_HLUTNM of \bias_regs[17][1]_i_1\ : label is "soft_lutpair86";
-  attribute SOFT_HLUTNM of \bias_regs[17][20]_i_1\ : label is "soft_lutpair95";
-  attribute SOFT_HLUTNM of \bias_regs[17][21]_i_1\ : label is "soft_lutpair94";
-  attribute SOFT_HLUTNM of \bias_regs[17][22]_i_1\ : label is "soft_lutpair93";
-  attribute SOFT_HLUTNM of \bias_regs[17][23]_i_1\ : label is "soft_lutpair92";
-  attribute SOFT_HLUTNM of \bias_regs[17][24]_i_1\ : label is "soft_lutpair91";
-  attribute SOFT_HLUTNM of \bias_regs[17][25]_i_1\ : label is "soft_lutpair90";
-  attribute SOFT_HLUTNM of \bias_regs[17][26]_i_1\ : label is "soft_lutpair89";
-  attribute SOFT_HLUTNM of \bias_regs[17][27]_i_1\ : label is "soft_lutpair88";
-  attribute SOFT_HLUTNM of \bias_regs[17][28]_i_1\ : label is "soft_lutpair87";
-  attribute SOFT_HLUTNM of \bias_regs[17][29]_i_1\ : label is "soft_lutpair86";
-  attribute SOFT_HLUTNM of \bias_regs[17][2]_i_1\ : label is "soft_lutpair87";
-  attribute SOFT_HLUTNM of \bias_regs[17][30]_i_2\ : label is "soft_lutpair85";
-  attribute SOFT_HLUTNM of \bias_regs[17][30]_i_3\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \bias_regs[17][3]_i_1\ : label is "soft_lutpair88";
-  attribute SOFT_HLUTNM of \bias_regs[17][4]_i_1\ : label is "soft_lutpair89";
-  attribute SOFT_HLUTNM of \bias_regs[17][5]_i_1\ : label is "soft_lutpair90";
-  attribute SOFT_HLUTNM of \bias_regs[17][6]_i_1\ : label is "soft_lutpair91";
-  attribute SOFT_HLUTNM of \bias_regs[17][7]_i_1\ : label is "soft_lutpair92";
-  attribute SOFT_HLUTNM of \bias_regs[17][8]_i_1\ : label is "soft_lutpair93";
-  attribute SOFT_HLUTNM of \bias_regs[17][9]_i_1\ : label is "soft_lutpair94";
-  attribute SOFT_HLUTNM of \bias_regs[1][0]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \bias_regs[1][10]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \bias_regs[1][11]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \bias_regs[1][12]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \bias_regs[1][13]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \bias_regs[1][14]_i_1\ : label is "soft_lutpair100";
-  attribute SOFT_HLUTNM of \bias_regs[1][15]_i_1\ : label is "soft_lutpair101";
-  attribute SOFT_HLUTNM of \bias_regs[1][16]_i_1\ : label is "soft_lutpair101";
-  attribute SOFT_HLUTNM of \bias_regs[1][17]_i_1\ : label is "soft_lutpair100";
-  attribute SOFT_HLUTNM of \bias_regs[1][18]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \bias_regs[1][19]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \bias_regs[1][1]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \bias_regs[1][20]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \bias_regs[1][21]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \bias_regs[1][22]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \bias_regs[1][23]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \bias_regs[1][24]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \bias_regs[1][25]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \bias_regs[1][26]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \bias_regs[1][27]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \bias_regs[1][28]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \bias_regs[1][29]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \bias_regs[1][2]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \bias_regs[1][30]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \bias_regs[1][31]_i_2\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \bias_regs[1][3]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \bias_regs[1][4]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \bias_regs[1][5]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \bias_regs[1][6]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \bias_regs[1][7]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \bias_regs[1][8]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \bias_regs[1][9]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \bias_regs[2][0]_i_1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \bias_regs[2][10]_i_1\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \bias_regs[2][11]_i_1\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \bias_regs[2][12]_i_1\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \bias_regs[2][13]_i_1\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \bias_regs[2][14]_i_1\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \bias_regs[2][15]_i_1\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \bias_regs[2][16]_i_1\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \bias_regs[2][17]_i_1\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \bias_regs[2][18]_i_1\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \bias_regs[2][19]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \bias_regs[2][1]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \bias_regs[2][20]_i_1\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \bias_regs[2][21]_i_1\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \bias_regs[2][22]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \bias_regs[2][23]_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \bias_regs[2][24]_i_1\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \bias_regs[2][25]_i_1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \bias_regs[2][26]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \bias_regs[2][27]_i_1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \bias_regs[2][28]_i_1\ : label is "soft_lutpair83";
-  attribute SOFT_HLUTNM of \bias_regs[2][29]_i_1\ : label is "soft_lutpair84";
-  attribute SOFT_HLUTNM of \bias_regs[2][2]_i_1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \bias_regs[2][30]_i_1\ : label is "soft_lutpair84";
-  attribute SOFT_HLUTNM of \bias_regs[2][31]_i_2\ : label is "soft_lutpair83";
-  attribute SOFT_HLUTNM of \bias_regs[2][3]_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \bias_regs[2][4]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \bias_regs[2][5]_i_1\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \bias_regs[2][6]_i_1\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \bias_regs[2][7]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \bias_regs[2][8]_i_1\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \bias_regs[2][9]_i_1\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \bias_regs[3][31]_i_3\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \bias_regs[4][0]_i_1\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of \bias_regs[4][10]_i_1\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \bias_regs[4][11]_i_1\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \bias_regs[4][12]_i_1\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \bias_regs[4][13]_i_1\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \bias_regs[4][14]_i_1\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \bias_regs[4][15]_i_1\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \bias_regs[4][16]_i_1\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \bias_regs[4][17]_i_1\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \bias_regs[4][18]_i_1\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \bias_regs[4][19]_i_1\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \bias_regs[4][1]_i_1\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \bias_regs[4][20]_i_1\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \bias_regs[4][21]_i_1\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \bias_regs[4][22]_i_1\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \bias_regs[4][23]_i_1\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \bias_regs[4][24]_i_1\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \bias_regs[4][25]_i_1\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \bias_regs[4][26]_i_1\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \bias_regs[4][27]_i_1\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \bias_regs[4][28]_i_1\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \bias_regs[4][29]_i_1\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \bias_regs[4][2]_i_1\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \bias_regs[4][30]_i_1\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \bias_regs[4][31]_i_2\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of \bias_regs[4][3]_i_1\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \bias_regs[4][4]_i_1\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \bias_regs[4][5]_i_1\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \bias_regs[4][6]_i_1\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \bias_regs[4][7]_i_1\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \bias_regs[4][8]_i_1\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \bias_regs[4][9]_i_1\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \bias_regs[6][31]_i_3\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \bias_regs[8][0]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \bias_regs[8][10]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \bias_regs[8][11]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \bias_regs[8][12]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \bias_regs[8][13]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \bias_regs[8][14]_i_1\ : label is "soft_lutpair103";
-  attribute SOFT_HLUTNM of \bias_regs[8][15]_i_1\ : label is "soft_lutpair104";
-  attribute SOFT_HLUTNM of \bias_regs[8][16]_i_1\ : label is "soft_lutpair105";
-  attribute SOFT_HLUTNM of \bias_regs[8][17]_i_1\ : label is "soft_lutpair106";
-  attribute SOFT_HLUTNM of \bias_regs[8][18]_i_1\ : label is "soft_lutpair107";
-  attribute SOFT_HLUTNM of \bias_regs[8][19]_i_1\ : label is "soft_lutpair108";
-  attribute SOFT_HLUTNM of \bias_regs[8][1]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \bias_regs[8][20]_i_1\ : label is "soft_lutpair109";
-  attribute SOFT_HLUTNM of \bias_regs[8][21]_i_1\ : label is "soft_lutpair105";
-  attribute SOFT_HLUTNM of \bias_regs[8][22]_i_1\ : label is "soft_lutpair110";
-  attribute SOFT_HLUTNM of \bias_regs[8][23]_i_1\ : label is "soft_lutpair111";
-  attribute SOFT_HLUTNM of \bias_regs[8][24]_i_1\ : label is "soft_lutpair111";
-  attribute SOFT_HLUTNM of \bias_regs[8][25]_i_1\ : label is "soft_lutpair110";
-  attribute SOFT_HLUTNM of \bias_regs[8][26]_i_1\ : label is "soft_lutpair109";
-  attribute SOFT_HLUTNM of \bias_regs[8][27]_i_1\ : label is "soft_lutpair108";
-  attribute SOFT_HLUTNM of \bias_regs[8][28]_i_1\ : label is "soft_lutpair107";
-  attribute SOFT_HLUTNM of \bias_regs[8][29]_i_1\ : label is "soft_lutpair106";
-  attribute SOFT_HLUTNM of \bias_regs[8][2]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \bias_regs[8][30]_i_1\ : label is "soft_lutpair103";
-  attribute SOFT_HLUTNM of \bias_regs[8][31]_i_2\ : label is "soft_lutpair104";
-  attribute SOFT_HLUTNM of \bias_regs[8][3]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \bias_regs[8][4]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \bias_regs[8][5]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \bias_regs[8][6]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \bias_regs[8][7]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \bias_regs[8][8]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \bias_regs[8][9]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \bias_regs[16][11]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \bias_regs[16][12]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \bias_regs[16][13]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \bias_regs[16][14]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \bias_regs[16][15]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \bias_regs[16][16]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \bias_regs[16][17]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \bias_regs[16][18]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \bias_regs[16][19]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \bias_regs[16][1]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \bias_regs[16][20]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \bias_regs[16][21]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \bias_regs[16][22]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \bias_regs[16][23]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \bias_regs[16][24]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \bias_regs[16][25]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \bias_regs[16][26]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \bias_regs[16][27]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \bias_regs[16][28]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \bias_regs[16][29]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \bias_regs[16][2]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \bias_regs[16][30]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \bias_regs[16][31]_i_2\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \bias_regs[16][3]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \bias_regs[16][4]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \bias_regs[16][5]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \bias_regs[16][6]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \bias_regs[16][7]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \bias_regs[16][8]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \bias_regs[16][9]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \bias_regs[17][0]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \bias_regs[17][11]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \bias_regs[17][12]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \bias_regs[17][13]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \bias_regs[17][14]_i_1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \bias_regs[17][15]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \bias_regs[17][16]_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \bias_regs[17][17]_i_1\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \bias_regs[17][18]_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \bias_regs[17][19]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \bias_regs[17][1]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \bias_regs[17][20]_i_1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \bias_regs[17][21]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \bias_regs[17][22]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \bias_regs[17][23]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \bias_regs[17][24]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \bias_regs[17][25]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \bias_regs[17][26]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \bias_regs[17][27]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \bias_regs[17][28]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \bias_regs[17][29]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \bias_regs[17][30]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \bias_regs[17][31]_i_2\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \bias_regs[17][3]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \bias_regs[17][4]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \bias_regs[17][5]_i_1\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \bias_regs[17][6]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \bias_regs[17][7]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \bias_regs[17][8]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \bias_regs[17][9]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \bias_regs[3][26]_i_2\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \bias_regs[3][31]_i_3\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \bias_regs[4][0]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \bias_regs[4][10]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \bias_regs[4][11]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \bias_regs[4][12]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \bias_regs[4][13]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \bias_regs[4][14]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \bias_regs[4][15]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \bias_regs[4][16]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \bias_regs[4][17]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \bias_regs[4][18]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \bias_regs[4][19]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \bias_regs[4][1]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \bias_regs[4][20]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \bias_regs[4][21]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \bias_regs[4][22]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \bias_regs[4][23]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \bias_regs[4][24]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \bias_regs[4][25]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \bias_regs[4][26]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \bias_regs[4][27]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \bias_regs[4][28]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \bias_regs[4][29]_i_1\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \bias_regs[4][2]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \bias_regs[4][30]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \bias_regs[4][31]_i_2\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \bias_regs[4][3]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \bias_regs[4][4]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \bias_regs[4][5]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \bias_regs[4][6]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \bias_regs[4][7]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \bias_regs[4][8]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \bias_regs[4][9]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \bias_regs[6][31]_i_3\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \bias_regs[7][31]_i_3\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \bias_regs[9][30]_i_4\ : label is "soft_lutpair50";
 begin
   axi_bvalid_reg_0 <= \^axi_bvalid_reg_0\;
   axi_rvalid_reg_0 <= \^axi_rvalid_reg_0\;
@@ -1235,6 +1212,7 @@ begin
   bias_7(31 downto 0) <= \^bias_7\(31 downto 0);
   bias_8(31 downto 0) <= \^bias_8\(31 downto 0);
   bias_9(31 downto 0) <= \^bias_9\(31 downto 0);
+  control <= \^control\;
   s_axil_arready <= \^s_axil_arready\;
   s_axil_awready <= \^s_axil_awready\;
   s_axil_rdata(31 downto 0) <= \^s_axil_rdata\(31 downto 0);
@@ -1254,7 +1232,7 @@ addr_curr_i_1: unisim.vcomponents.LUT5
     )
         port map (
       I0 => addr_curr_reg_n_0,
-      I1 => \bias_regs[3][31]_i_3_n_0\,
+      I1 => addr_curr,
       I2 => aresetn,
       I3 => s_axil_awvalid,
       I4 => \^s_axil_awready\,
@@ -1292,6 +1270,14 @@ addr_curr_reg: unisim.vcomponents.FDRE
       Q => \addr_reg[0]_rep__0_n_0\,
       R => '0'
     );
+\addr_reg[0]_rep__1\: unisim.vcomponents.FDRE
+     port map (
+      C => aclk,
+      CE => addr_curr1,
+      D => s_axil_awaddr(0),
+      Q => \addr_reg[0]_rep__1_n_0\,
+      R => '0'
+    );
 \addr_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
@@ -1314,6 +1300,14 @@ addr_curr_reg: unisim.vcomponents.FDRE
       CE => addr_curr1,
       D => s_axil_awaddr(1),
       Q => \addr_reg[1]_rep__0_n_0\,
+      R => '0'
+    );
+\addr_reg[1]_rep__1\: unisim.vcomponents.FDRE
+     port map (
+      C => aclk,
+      CE => addr_curr1,
+      D => s_axil_awaddr(1),
+      Q => \addr_reg[1]_rep__1_n_0\,
       R => '0'
     );
 \addr_reg[2]\: unisim.vcomponents.FDRE
@@ -1340,6 +1334,14 @@ addr_curr_reg: unisim.vcomponents.FDRE
       Q => \addr_reg[2]_rep__0_n_0\,
       R => '0'
     );
+\addr_reg[2]_rep__1\: unisim.vcomponents.FDRE
+     port map (
+      C => aclk,
+      CE => addr_curr1,
+      D => s_axil_awaddr(2),
+      Q => \addr_reg[2]_rep__1_n_0\,
+      R => '0'
+    );
 \addr_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
@@ -1348,12 +1350,44 @@ addr_curr_reg: unisim.vcomponents.FDRE
       Q => addr(3),
       R => '0'
     );
+\addr_reg[3]_rep\: unisim.vcomponents.FDRE
+     port map (
+      C => aclk,
+      CE => addr_curr1,
+      D => s_axil_awaddr(3),
+      Q => \addr_reg[3]_rep_n_0\,
+      R => '0'
+    );
+\addr_reg[3]_rep__0\: unisim.vcomponents.FDRE
+     port map (
+      C => aclk,
+      CE => addr_curr1,
+      D => s_axil_awaddr(3),
+      Q => \addr_reg[3]_rep__0_n_0\,
+      R => '0'
+    );
 \addr_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => addr_curr1,
       D => s_axil_awaddr(4),
       Q => addr(4),
+      R => '0'
+    );
+\addr_reg[4]_rep\: unisim.vcomponents.FDRE
+     port map (
+      C => aclk,
+      CE => addr_curr1,
+      D => s_axil_awaddr(4),
+      Q => \addr_reg[4]_rep_n_0\,
+      R => '0'
+    );
+\addr_reg[4]_rep__0\: unisim.vcomponents.FDRE
+     port map (
+      C => aclk,
+      CE => addr_curr1,
+      D => s_axil_awaddr(4),
+      Q => \addr_reg[4]_rep__0_n_0\,
       R => '0'
     );
 axi_arready_i_1: unisim.vcomponents.LUT3
@@ -1405,7 +1439,7 @@ axi_bvalid_i_1: unisim.vcomponents.LUT3
       INIT => X"BA"
     )
         port map (
-      I0 => wr_en,
+      I0 => axi_bvalid_i_2_n_0,
       I1 => s_axil_bready,
       I2 => \^axi_bvalid_reg_0\,
       O => axi_bvalid_i_1_n_0
@@ -1417,7 +1451,7 @@ axi_bvalid_i_2: unisim.vcomponents.LUT2
         port map (
       I0 => data_curr,
       I1 => addr_curr_reg_n_0,
-      O => wr_en
+      O => axi_bvalid_i_2_n_0
     );
 axi_bvalid_reg: unisim.vcomponents.FDRE
      port map (
@@ -1427,69 +1461,18 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       Q => \^axi_bvalid_reg_0\,
       R => axi_awready_i_1_n_0
     );
-\axi_rdata[0]_i_1\: unisim.vcomponents.LUT6
+\axi_rdata[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00EAFFFF00EA0000"
+      INIT => X"EFE0"
     )
         port map (
       I0 => \axi_rdata[0]_i_2_n_0\,
-      I1 => s_axil_araddr(3),
-      I2 => \axi_rdata_reg[0]_i_3_n_0\,
-      I3 => \axi_rdata[0]_i_4_n_0\,
-      I4 => \axi_rdata[31]_i_2_n_0\,
-      I5 => \^s_axil_rdata\(0),
+      I1 => \axi_rdata[0]_i_3_n_0\,
+      I2 => \axi_rdata[31]_i_2_n_0\,
+      I3 => \^s_axil_rdata\(0),
       O => \axi_rdata[0]_i_1_n_0\
     );
-\axi_rdata[0]_i_10\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"FE"
-    )
-        port map (
-      I0 => s_axil_araddr(1),
-      I1 => s_axil_araddr(2),
-      I2 => s_axil_araddr(3),
-      O => \axi_rdata[0]_i_10_n_0\
-    );
-\axi_rdata[0]_i_11\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFF0FFF2FFFFFFF2"
-    )
-        port map (
-      I0 => s_axil_araddr(0),
-      I1 => \^bias_17\(0),
-      I2 => s_axil_araddr(2),
-      I3 => s_axil_araddr(3),
-      I4 => s_axil_araddr(1),
-      I5 => status,
-      O => \axi_rdata[0]_i_11_n_0\
-    );
-\axi_rdata[0]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFF40"
-    )
-        port map (
-      I0 => s_axil_araddr(3),
-      I1 => s_axil_araddr(2),
-      I2 => \axi_rdata[0]_i_5_n_0\,
-      I3 => s_axil_araddr(4),
-      I4 => \axi_rdata[0]_i_6_n_0\,
-      I5 => \axi_rdata[0]_i_7_n_0\,
-      O => \axi_rdata[0]_i_2_n_0\
-    );
-\axi_rdata[0]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FF0D0000FFFFFFFF"
-    )
-        port map (
-      I0 => \^bias_16\(0),
-      I1 => \axi_rdata[0]_i_10_n_0\,
-      I2 => s_axil_araddr(0),
-      I3 => \axi_rdata[0]_i_11_n_0\,
-      I4 => s_axil_araddr(4),
-      I5 => aresetn,
-      O => \axi_rdata[0]_i_4_n_0\
-    );
-\axi_rdata[0]_i_5\: unisim.vcomponents.LUT6
+\axi_rdata[0]_i_10\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1500,35 +1483,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I3 => \^bias_5\(0),
       I4 => s_axil_araddr(0),
       I5 => \^bias_4\(0),
-      O => \axi_rdata[0]_i_5_n_0\
+      O => \axi_rdata[0]_i_10_n_0\
     );
-\axi_rdata[0]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000000000000E2"
-    )
-        port map (
-      I0 => \^bias_0\(0),
-      I1 => s_axil_araddr(0),
-      I2 => \^bias_1\(0),
-      I3 => s_axil_araddr(3),
-      I4 => s_axil_araddr(2),
-      I5 => s_axil_araddr(1),
-      O => \axi_rdata[0]_i_6_n_0\
-    );
-\axi_rdata[0]_i_7\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"000000000000E200"
-    )
-        port map (
-      I0 => \^bias_2\(0),
-      I1 => s_axil_araddr(0),
-      I2 => \^bias_3\(0),
-      I3 => s_axil_araddr(1),
-      I4 => s_axil_araddr(3),
-      I5 => s_axil_araddr(2),
-      O => \axi_rdata[0]_i_7_n_0\
-    );
-\axi_rdata[0]_i_8\: unisim.vcomponents.LUT6
+\axi_rdata[0]_i_11\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1539,9 +1496,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I3 => \^bias_9\(0),
       I4 => s_axil_araddr(0),
       I5 => \^bias_8\(0),
-      O => \axi_rdata[0]_i_8_n_0\
+      O => \axi_rdata[0]_i_11_n_0\
     );
-\axi_rdata[0]_i_9\: unisim.vcomponents.LUT6
+\axi_rdata[0]_i_12\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1552,6 +1509,76 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       I3 => \^bias_13\(0),
       I4 => s_axil_araddr(0),
       I5 => \^bias_12\(0),
+      O => \axi_rdata[0]_i_12_n_0\
+    );
+\axi_rdata[0]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000000FFE200E2"
+    )
+        port map (
+      I0 => \axi_rdata_reg[0]_i_4_n_0\,
+      I1 => s_axil_araddr(3),
+      I2 => \axi_rdata_reg[0]_i_5_n_0\,
+      I3 => s_axil_araddr(4),
+      I4 => \axi_rdata[0]_i_6_n_0\,
+      I5 => \axi_rdata[0]_i_7_n_0\,
+      O => \axi_rdata[0]_i_2_n_0\
+    );
+\axi_rdata[0]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000080"
+    )
+        port map (
+      I0 => s_axil_araddr(0),
+      I1 => status,
+      I2 => aresetn,
+      I3 => \axi_rdata[0]_i_8_n_0\,
+      I4 => s_axil_araddr(3),
+      I5 => s_axil_araddr(2),
+      O => \axi_rdata[0]_i_3_n_0\
+    );
+\axi_rdata[0]_i_6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => \^bias_17\(0),
+      I1 => s_axil_araddr(0),
+      I2 => \^bias_16\(0),
+      O => \axi_rdata[0]_i_6_n_0\
+    );
+\axi_rdata[0]_i_7\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FE00FFFF"
+    )
+        port map (
+      I0 => s_axil_araddr(3),
+      I1 => s_axil_araddr(2),
+      I2 => s_axil_araddr(1),
+      I3 => s_axil_araddr(4),
+      I4 => aresetn,
+      O => \axi_rdata[0]_i_7_n_0\
+    );
+\axi_rdata[0]_i_8\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => s_axil_araddr(1),
+      I1 => s_axil_araddr(4),
+      O => \axi_rdata[0]_i_8_n_0\
+    );
+\axi_rdata[0]_i_9\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \^bias_3\(0),
+      I1 => \^bias_2\(0),
+      I2 => s_axil_araddr(1),
+      I3 => \^bias_1\(0),
+      I4 => s_axil_araddr(0),
+      I5 => \^bias_0\(0),
       O => \axi_rdata[0]_i_9_n_0\
     );
 \axi_rdata[10]_i_1\: unisim.vcomponents.LUT5
@@ -3028,14 +3055,14 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
     );
 \axi_rdata[31]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFD555500000000"
+      INIT => X"DDDDDDD500000000"
     )
         port map (
       I0 => aresetn,
-      I1 => s_axil_araddr(3),
-      I2 => s_axil_araddr(2),
-      I3 => s_axil_araddr(1),
-      I4 => s_axil_araddr(4),
+      I1 => s_axil_araddr(4),
+      I2 => s_axil_araddr(1),
+      I3 => s_axil_araddr(2),
+      I4 => s_axil_araddr(3),
       I5 => \axi_rdata[31]_i_2_n_0\,
       O => \axi_rdata[31]_i_1_n_0\
     );
@@ -3570,11 +3597,18 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       Q => \^s_axil_rdata\(0),
       R => '0'
     );
-\axi_rdata_reg[0]_i_3\: unisim.vcomponents.MUXF7
+\axi_rdata_reg[0]_i_4\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \axi_rdata[0]_i_8_n_0\,
-      I1 => \axi_rdata[0]_i_9_n_0\,
-      O => \axi_rdata_reg[0]_i_3_n_0\,
+      I0 => \axi_rdata[0]_i_9_n_0\,
+      I1 => \axi_rdata[0]_i_10_n_0\,
+      O => \axi_rdata_reg[0]_i_4_n_0\,
+      S => s_axil_araddr(2)
+    );
+\axi_rdata_reg[0]_i_5\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \axi_rdata[0]_i_11_n_0\,
+      I1 => \axi_rdata[0]_i_12_n_0\,
+      O => \axi_rdata_reg[0]_i_5_n_0\,
       S => s_axil_araddr(2)
     );
 \axi_rdata_reg[10]\: unisim.vcomponents.FDRE
@@ -4778,5113 +4812,5479 @@ axi_wready_reg: unisim.vcomponents.FDRE
       Q => \^s_axil_wready\,
       R => axi_awready_i_1_n_0
     );
-\bias_regs[0][0]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[0][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
       I2 => axi_wdata(0),
-      O => p_1_in(0)
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][0]_i_1_n_0\
     );
-\bias_regs[0][10]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[0][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(10),
-      O => p_1_in(10)
+      I0 => axi_wdata(10),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][10]_i_1_n_0\
     );
-\bias_regs[0][11]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[0][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
       I2 => axi_wdata(11),
-      O => p_1_in(11)
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][11]_i_1_n_0\
     );
-\bias_regs[0][12]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[0][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
       I2 => axi_wdata(12),
-      O => p_1_in(12)
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][12]_i_1_n_0\
     );
-\bias_regs[0][13]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[0][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
       I2 => axi_wdata(13),
-      O => p_1_in(13)
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][13]_i_1_n_0\
     );
-\bias_regs[0][14]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[0][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
       I2 => axi_wdata(14),
-      O => p_1_in(14)
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][14]_i_1_n_0\
     );
-\bias_regs[0][15]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[0][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
       I2 => axi_wdata(15),
-      O => p_1_in(15)
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][15]_i_1_n_0\
     );
-\bias_regs[0][16]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[0][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
       I2 => axi_wdata(16),
-      O => p_1_in(16)
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][16]_i_1_n_0\
     );
-\bias_regs[0][17]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[0][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"44400040"
+      INIT => X"0000000000000040"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[0][31]_i_4_n_0\,
       I1 => wr_en,
       I2 => axi_wdata(17),
-      I3 => \bias_regs[0][30]_i_4_n_0\,
-      I4 => aresetn,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
       O => \bias_regs[0][17]_i_1_n_0\
     );
-\bias_regs[0][18]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[0][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(18),
-      O => p_1_in(18)
-    );
-\bias_regs[0][19]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(19),
-      O => p_1_in(19)
-    );
-\bias_regs[0][1]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(1),
-      O => p_1_in(1)
-    );
-\bias_regs[0][20]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(20),
-      O => p_1_in(20)
-    );
-\bias_regs[0][21]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(21),
-      O => p_1_in(21)
-    );
-\bias_regs[0][22]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(22),
-      O => p_1_in(22)
-    );
-\bias_regs[0][23]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(23),
-      O => p_1_in(23)
-    );
-\bias_regs[0][24]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(24),
-      O => p_1_in(24)
-    );
-\bias_regs[0][25]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"44400040"
-    )
-        port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => axi_wdata(18),
       I1 => wr_en,
-      I2 => axi_wdata(25),
-      I3 => \bias_regs[0][30]_i_4_n_0\,
-      I4 => aresetn,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][18]_i_1_n_0\
+    );
+\bias_regs[0][19]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000040"
+    )
+        port map (
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
+      I2 => axi_wdata(19),
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][19]_i_1_n_0\
+    );
+\bias_regs[0][1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000040"
+    )
+        port map (
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
+      I2 => axi_wdata(1),
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][1]_i_1_n_0\
+    );
+\bias_regs[0][20]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000040"
+    )
+        port map (
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
+      I2 => axi_wdata(20),
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][20]_i_1_n_0\
+    );
+\bias_regs[0][21]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000008"
+    )
+        port map (
+      I0 => axi_wdata(21),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][21]_i_1_n_0\
+    );
+\bias_regs[0][22]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000008"
+    )
+        port map (
+      I0 => axi_wdata(22),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][22]_i_1_n_0\
+    );
+\bias_regs[0][23]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000008"
+    )
+        port map (
+      I0 => axi_wdata(23),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][23]_i_1_n_0\
+    );
+\bias_regs[0][24]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000008"
+    )
+        port map (
+      I0 => axi_wdata(24),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][24]_i_1_n_0\
+    );
+\bias_regs[0][25]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000008"
+    )
+        port map (
+      I0 => axi_wdata(25),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
       O => \bias_regs[0][25]_i_1_n_0\
     );
-\bias_regs[0][26]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[0][26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(26),
-      O => p_1_in(26)
-    );
-\bias_regs[0][27]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(27),
-      O => p_1_in(27)
-    );
-\bias_regs[0][28]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"44400040"
-    )
-        port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => axi_wdata(26),
       I1 => wr_en,
-      I2 => axi_wdata(28),
-      I3 => \bias_regs[0][30]_i_4_n_0\,
-      I4 => aresetn,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][26]_i_1_n_0\
+    );
+\bias_regs[0][27]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000008"
+    )
+        port map (
+      I0 => axi_wdata(27),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][27]_i_1_n_0\
+    );
+\bias_regs[0][28]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000008"
+    )
+        port map (
+      I0 => axi_wdata(28),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
       O => \bias_regs[0][28]_i_1_n_0\
     );
-\bias_regs[0][29]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[0][29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"44400040"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => axi_wdata(29),
       I1 => wr_en,
-      I2 => axi_wdata(29),
-      I3 => \bias_regs[0][30]_i_4_n_0\,
-      I4 => aresetn,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
       O => \bias_regs[0][29]_i_1_n_0\
     );
-\bias_regs[0][2]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[0][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(2),
-      O => p_1_in(2)
-    );
-\bias_regs[0][30]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0B00"
-    )
-        port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => axi_wdata(2),
       I1 => wr_en,
-      I2 => \bias_regs[0][31]_i_3_n_0\,
-      I3 => aresetn,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][2]_i_1_n_0\
+    );
+\bias_regs[0][30]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000008"
+    )
+        port map (
+      I0 => axi_wdata(30),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
       O => \bias_regs[0][30]_i_1_n_0\
     );
-\bias_regs[0][30]_i_2\: unisim.vcomponents.LUT5
+\bias_regs[0][31]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000B800"
+      INIT => X"00000100FFFFFFFF"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][30]_i_4_n_0\,
-      I2 => axi_wdata(30),
+      I0 => \addr_reg[0]_rep__1_n_0\,
+      I1 => \addr_reg[1]_rep__1_n_0\,
+      I2 => \addr_reg[2]_rep__1_n_0\,
       I3 => wr_en,
-      I4 => \bias_regs[0][30]_i_3_n_0\,
-      O => \bias_regs[0][30]_i_2_n_0\
+      I4 => \bias_regs[0][31]_i_4_n_0\,
+      I5 => aresetn,
+      O => \bias_regs[0][31]_i_1_n_0\
     );
-\bias_regs[0][30]_i_3\: unisim.vcomponents.LUT2
+\bias_regs[0][31]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000008"
+    )
+        port map (
+      I0 => axi_wdata(31),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][31]_i_2_n_0\
+    );
+\bias_regs[0][31]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => data_curr,
+      I1 => addr_curr_reg_n_0,
+      O => wr_en
+    );
+\bias_regs[0][31]_i_4\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
-      I0 => addr(3),
-      I1 => addr(4),
-      O => \bias_regs[0][30]_i_3_n_0\
+      I0 => \addr_reg[3]_rep_n_0\,
+      I1 => \addr_reg[4]_rep_n_0\,
+      O => \bias_regs[0][31]_i_4_n_0\
     );
-\bias_regs[0][30]_i_4\: unisim.vcomponents.LUT3
+\bias_regs[0][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FE"
+      INIT => X"0000000000000040"
     )
         port map (
-      I0 => \addr_reg[0]_rep__0_n_0\,
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
+      I2 => axi_wdata(3),
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][3]_i_1_n_0\
+    );
+\bias_regs[0][4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000040"
+    )
+        port map (
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
+      I2 => axi_wdata(4),
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][4]_i_1_n_0\
+    );
+\bias_regs[0][5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000040"
+    )
+        port map (
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
+      I2 => axi_wdata(5),
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][5]_i_1_n_0\
+    );
+\bias_regs[0][6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000040"
+    )
+        port map (
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
+      I2 => axi_wdata(6),
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][6]_i_1_n_0\
+    );
+\bias_regs[0][7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000040"
+    )
+        port map (
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
+      I2 => axi_wdata(7),
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][7]_i_1_n_0\
+    );
+\bias_regs[0][8]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000040"
+    )
+        port map (
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
+      I2 => axi_wdata(8),
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][8]_i_1_n_0\
+    );
+\bias_regs[0][9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000040"
+    )
+        port map (
+      I0 => \bias_regs[0][31]_i_4_n_0\,
+      I1 => wr_en,
+      I2 => axi_wdata(9),
+      I3 => \addr_reg[0]_rep__1_n_0\,
+      I4 => \addr_reg[1]_rep__1_n_0\,
+      I5 => \addr_reg[2]_rep__1_n_0\,
+      O => \bias_regs[0][9]_i_1_n_0\
+    );
+\bias_regs[10][0]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(0),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][0]_i_1_n_0\
+    );
+\bias_regs[10][10]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(10),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][10]_i_1_n_0\
+    );
+\bias_regs[10][11]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(11),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][11]_i_1_n_0\
+    );
+\bias_regs[10][12]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(12),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][12]_i_1_n_0\
+    );
+\bias_regs[10][13]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(13),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][13]_i_1_n_0\
+    );
+\bias_regs[10][14]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(14),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][14]_i_1_n_0\
+    );
+\bias_regs[10][15]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(15),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][15]_i_1_n_0\
+    );
+\bias_regs[10][16]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(16),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][16]_i_1_n_0\
+    );
+\bias_regs[10][17]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(17),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][17]_i_1_n_0\
+    );
+\bias_regs[10][18]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(18),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][18]_i_1_n_0\
+    );
+\bias_regs[10][19]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => axi_wdata(19),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \addr_reg[2]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_5_n_0\,
+      O => \bias_regs[10][19]_i_1_n_0\
+    );
+\bias_regs[10][1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(1),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][1]_i_1_n_0\
+    );
+\bias_regs[10][20]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => axi_wdata(20),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \addr_reg[2]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_5_n_0\,
+      O => \bias_regs[10][20]_i_1_n_0\
+    );
+\bias_regs[10][21]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => axi_wdata(21),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \addr_reg[2]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_5_n_0\,
+      O => \bias_regs[10][21]_i_1_n_0\
+    );
+\bias_regs[10][22]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => axi_wdata(22),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \addr_reg[2]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_5_n_0\,
+      O => \bias_regs[10][22]_i_1_n_0\
+    );
+\bias_regs[10][23]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => axi_wdata(23),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \addr_reg[2]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_5_n_0\,
+      O => \bias_regs[10][23]_i_1_n_0\
+    );
+\bias_regs[10][24]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => axi_wdata(24),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \addr_reg[2]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_5_n_0\,
+      O => \bias_regs[10][24]_i_1_n_0\
+    );
+\bias_regs[10][25]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => axi_wdata(25),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \addr_reg[2]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_5_n_0\,
+      O => \bias_regs[10][25]_i_1_n_0\
+    );
+\bias_regs[10][26]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => axi_wdata(26),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \addr_reg[2]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_5_n_0\,
+      O => \bias_regs[10][26]_i_1_n_0\
+    );
+\bias_regs[10][27]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(27),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][27]_i_1_n_0\
+    );
+\bias_regs[10][27]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FB"
+    )
+        port map (
+      I0 => \addr_reg[0]_rep_n_0\,
       I1 => \addr_reg[1]_rep__0_n_0\,
       I2 => \addr_reg[2]_rep__0_n_0\,
-      O => \bias_regs[0][30]_i_4_n_0\
+      O => \bias_regs[10][27]_i_2_n_0\
     );
-\bias_regs[0][31]_i_1\: unisim.vcomponents.LUT2
+\bias_regs[10][28]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => axi_wdata(28),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \addr_reg[2]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_5_n_0\,
+      O => \bias_regs[10][28]_i_1_n_0\
+    );
+\bias_regs[10][29]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => axi_wdata(29),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \addr_reg[2]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_5_n_0\,
+      O => \bias_regs[10][29]_i_1_n_0\
+    );
+\bias_regs[10][2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(2),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][2]_i_1_n_0\
+    );
+\bias_regs[10][30]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => axi_wdata(30),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \addr_reg[2]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_5_n_0\,
+      O => \bias_regs[10][30]_i_1_n_0\
+    );
+\bias_regs[10][31]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0010FFFF0000FFFF"
+    )
+        port map (
+      I0 => \bias_regs[8][31]_i_5_n_0\,
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[1]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[8][31]_i_4_n_0\,
+      O => \bias_regs[10][31]_i_1_n_0\
+    );
+\bias_regs[10][31]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => axi_wdata(31),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \addr_reg[2]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_5_n_0\,
+      O => \bias_regs[10][31]_i_2_n_0\
+    );
+\bias_regs[10][3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(3),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][3]_i_1_n_0\
+    );
+\bias_regs[10][4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(4),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][4]_i_1_n_0\
+    );
+\bias_regs[10][5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(5),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][5]_i_1_n_0\
+    );
+\bias_regs[10][6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(6),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][6]_i_1_n_0\
+    );
+\bias_regs[10][7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(7),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][7]_i_1_n_0\
+    );
+\bias_regs[10][8]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(8),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][8]_i_1_n_0\
+    );
+\bias_regs[10][9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000200030000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(4),
+      I2 => addr(3),
+      I3 => \bias_regs[8][31]_i_4_n_0\,
+      I4 => axi_wdata(9),
+      I5 => \bias_regs[10][27]_i_2_n_0\,
+      O => \bias_regs[10][9]_i_1_n_0\
+    );
+\bias_regs[11][0]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(0),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][0]_i_1_n_0\
+    );
+\bias_regs[11][10]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFEF0040FFFF0040"
+    )
+        port map (
+      I0 => \bias_regs[3][26]_i_2_n_0\,
+      I1 => axi_wdata(10),
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[8][31]_i_4_n_0\,
+      O => \bias_regs[11][10]_i_1_n_0\
+    );
+\bias_regs[11][11]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(11),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][11]_i_1_n_0\
+    );
+\bias_regs[11][12]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(12),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][12]_i_1_n_0\
+    );
+\bias_regs[11][13]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(13),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][13]_i_1_n_0\
+    );
+\bias_regs[11][14]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(14),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][14]_i_1_n_0\
+    );
+\bias_regs[11][15]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(15),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][15]_i_1_n_0\
+    );
+\bias_regs[11][16]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(16),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][16]_i_1_n_0\
+    );
+\bias_regs[11][17]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(17),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][17]_i_1_n_0\
+    );
+\bias_regs[11][18]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFEF0040FFFF0040"
+    )
+        port map (
+      I0 => \bias_regs[3][26]_i_2_n_0\,
+      I1 => axi_wdata(18),
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[8][31]_i_4_n_0\,
+      O => \bias_regs[11][18]_i_1_n_0\
+    );
+\bias_regs[11][19]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(19),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][19]_i_1_n_0\
+    );
+\bias_regs[11][1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(1),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][1]_i_1_n_0\
+    );
+\bias_regs[11][20]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(20),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][20]_i_1_n_0\
+    );
+\bias_regs[11][21]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(21),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][21]_i_1_n_0\
+    );
+\bias_regs[11][22]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(22),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][22]_i_1_n_0\
+    );
+\bias_regs[11][23]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(23),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][23]_i_1_n_0\
+    );
+\bias_regs[11][24]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(24),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][24]_i_1_n_0\
+    );
+\bias_regs[11][25]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(25),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][25]_i_1_n_0\
+    );
+\bias_regs[11][26]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"31"
+    )
+        port map (
+      I0 => \bias_regs[8][31]_i_4_n_0\,
+      I1 => aresetn,
+      I2 => \bias_regs[3][31]_i_3_n_0\,
+      O => \bias_regs[11][26]_i_1_n_0\
+    );
+\bias_regs[11][26]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFEF0040FFFF0040"
+    )
+        port map (
+      I0 => \bias_regs[3][26]_i_2_n_0\,
+      I1 => axi_wdata(26),
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[8][31]_i_4_n_0\,
+      O => \bias_regs[11][26]_i_2_n_0\
+    );
+\bias_regs[11][27]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(27),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][27]_i_1_n_0\
+    );
+\bias_regs[11][28]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(28),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][28]_i_1_n_0\
+    );
+\bias_regs[11][29]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(29),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][29]_i_1_n_0\
+    );
+\bias_regs[11][2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFEF0040FFFF0040"
+    )
+        port map (
+      I0 => \bias_regs[3][26]_i_2_n_0\,
+      I1 => axi_wdata(2),
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[8][31]_i_4_n_0\,
+      O => \bias_regs[11][2]_i_1_n_0\
+    );
+\bias_regs[11][30]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(30),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][30]_i_1_n_0\
+    );
+\bias_regs[11][31]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5555755500000000"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[3][31]_i_3_n_0\,
+      I2 => \addr_reg[1]_rep_n_0\,
+      I3 => \addr_reg[0]_rep_n_0\,
+      I4 => \addr_reg[2]_rep_n_0\,
+      I5 => \bias_regs[8][31]_i_3_n_0\,
+      O => \bias_regs[11][31]_i_1_n_0\
+    );
+\bias_regs[11][31]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(31),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][31]_i_2_n_0\
+    );
+\bias_regs[11][3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(3),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][3]_i_1_n_0\
+    );
+\bias_regs[11][4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(4),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][4]_i_1_n_0\
+    );
+\bias_regs[11][5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(5),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][5]_i_1_n_0\
+    );
+\bias_regs[11][6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(6),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][6]_i_1_n_0\
+    );
+\bias_regs[11][7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(7),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][7]_i_1_n_0\
+    );
+\bias_regs[11][8]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(8),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][8]_i_1_n_0\
+    );
+\bias_regs[11][9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBF008000000000"
+    )
+        port map (
+      I0 => axi_wdata(9),
+      I1 => \addr_reg[1]_rep__0_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
+      O => \bias_regs[11][9]_i_1_n_0\
+    );
+\bias_regs[12][0]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(0),
+      O => \bias_regs[12][0]_i_1_n_0\
+    );
+\bias_regs[12][10]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(10),
+      O => \bias_regs[12][10]_i_1_n_0\
+    );
+\bias_regs[12][11]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(11),
+      O => \bias_regs[12][11]_i_1_n_0\
+    );
+\bias_regs[12][12]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(12),
+      O => \bias_regs[12][12]_i_1_n_0\
+    );
+\bias_regs[12][13]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(13),
+      O => \bias_regs[12][13]_i_1_n_0\
+    );
+\bias_regs[12][14]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(14),
+      O => \bias_regs[12][14]_i_1_n_0\
+    );
+\bias_regs[12][15]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(15),
+      O => \bias_regs[12][15]_i_1_n_0\
+    );
+\bias_regs[12][16]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(16),
+      O => \bias_regs[12][16]_i_1_n_0\
+    );
+\bias_regs[12][17]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(17),
+      O => \bias_regs[12][17]_i_1_n_0\
+    );
+\bias_regs[12][18]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(18),
+      O => \bias_regs[12][18]_i_1_n_0\
+    );
+\bias_regs[12][19]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(19),
+      O => \bias_regs[12][19]_i_1_n_0\
+    );
+\bias_regs[12][1]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(1),
+      O => \bias_regs[12][1]_i_1_n_0\
+    );
+\bias_regs[12][20]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(20),
+      O => \bias_regs[12][20]_i_1_n_0\
+    );
+\bias_regs[12][21]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(21),
+      O => \bias_regs[12][21]_i_1_n_0\
+    );
+\bias_regs[12][22]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(22),
+      O => \bias_regs[12][22]_i_1_n_0\
+    );
+\bias_regs[12][23]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(23),
+      O => \bias_regs[12][23]_i_1_n_0\
+    );
+\bias_regs[12][24]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(24),
+      O => \bias_regs[12][24]_i_1_n_0\
+    );
+\bias_regs[12][25]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(25),
+      O => \bias_regs[12][25]_i_1_n_0\
+    );
+\bias_regs[12][26]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(26),
+      O => \bias_regs[12][26]_i_1_n_0\
+    );
+\bias_regs[12][27]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(27),
+      O => \bias_regs[12][27]_i_1_n_0\
+    );
+\bias_regs[12][28]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(28),
+      O => \bias_regs[12][28]_i_1_n_0\
+    );
+\bias_regs[12][29]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(29),
+      O => \bias_regs[12][29]_i_1_n_0\
+    );
+\bias_regs[12][2]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(2),
+      O => \bias_regs[12][2]_i_1_n_0\
+    );
+\bias_regs[12][30]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(30),
+      O => \bias_regs[12][30]_i_1_n_0\
+    );
+\bias_regs[12][31]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"7"
     )
         port map (
       I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      O => \bias_regs[0][31]_i_1_n_0\
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      O => \bias_regs[12][31]_i_1_n_0\
     );
-\bias_regs[0][31]_i_2\: unisim.vcomponents.LUT3
+\bias_regs[12][31]_i_2\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(31),
-      O => p_1_in(31)
-    );
-\bias_regs[0][31]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFFD"
-    )
-        port map (
-      I0 => wr_en,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => addr(4),
-      I3 => \addr_reg[2]_rep__0_n_0\,
-      I4 => \addr_reg[1]_rep__0_n_0\,
-      I5 => addr(3),
-      O => \bias_regs[0][31]_i_3_n_0\
-    );
-\bias_regs[0][3]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(3),
-      O => p_1_in(3)
-    );
-\bias_regs[0][4]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(4),
-      O => p_1_in(4)
-    );
-\bias_regs[0][5]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(5),
-      O => p_1_in(5)
-    );
-\bias_regs[0][6]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(6),
-      O => p_1_in(6)
-    );
-\bias_regs[0][7]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(7),
-      O => p_1_in(7)
-    );
-\bias_regs[0][8]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(8),
-      O => p_1_in(8)
-    );
-\bias_regs[0][9]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][31]_i_3_n_0\,
-      I2 => axi_wdata(9),
-      O => p_1_in(9)
-    );
-\bias_regs[10][0]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(0),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][0]_i_1_n_0\
-    );
-\bias_regs[10][10]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(10),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][10]_i_1_n_0\
-    );
-\bias_regs[10][11]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(11),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][11]_i_1_n_0\
-    );
-\bias_regs[10][12]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(12),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][12]_i_1_n_0\
-    );
-\bias_regs[10][13]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(13),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][13]_i_1_n_0\
-    );
-\bias_regs[10][14]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(14),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][14]_i_1_n_0\
-    );
-\bias_regs[10][15]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(15),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][15]_i_1_n_0\
-    );
-\bias_regs[10][16]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(16),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][16]_i_1_n_0\
-    );
-\bias_regs[10][17]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(17),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][17]_i_1_n_0\
-    );
-\bias_regs[10][18]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(18),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][18]_i_1_n_0\
-    );
-\bias_regs[10][19]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(19),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][19]_i_1_n_0\
-    );
-\bias_regs[10][1]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(1),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][1]_i_1_n_0\
-    );
-\bias_regs[10][20]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(20),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][20]_i_1_n_0\
-    );
-\bias_regs[10][21]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(21),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][21]_i_1_n_0\
-    );
-\bias_regs[10][22]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(22),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][22]_i_1_n_0\
-    );
-\bias_regs[10][23]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(23),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][23]_i_1_n_0\
-    );
-\bias_regs[10][24]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(24),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][24]_i_1_n_0\
-    );
-\bias_regs[10][25]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(25),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][25]_i_1_n_0\
-    );
-\bias_regs[10][26]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(26),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][26]_i_1_n_0\
-    );
-\bias_regs[10][27]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(27),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][27]_i_1_n_0\
-    );
-\bias_regs[10][28]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(28),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][28]_i_1_n_0\
-    );
-\bias_regs[10][29]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(29),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][29]_i_1_n_0\
-    );
-\bias_regs[10][2]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(2),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][2]_i_1_n_0\
-    );
-\bias_regs[10][30]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(30),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][30]_i_1_n_0\
-    );
-\bias_regs[10][31]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"33333B33"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => aresetn,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][31]_i_1_n_0\
-    );
-\bias_regs[10][31]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(31),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][31]_i_2_n_0\
-    );
-\bias_regs[10][3]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(3),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][3]_i_1_n_0\
-    );
-\bias_regs[10][4]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(4),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][4]_i_1_n_0\
-    );
-\bias_regs[10][5]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(5),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][5]_i_1_n_0\
-    );
-\bias_regs[10][6]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(6),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][6]_i_1_n_0\
-    );
-\bias_regs[10][7]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(7),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][7]_i_1_n_0\
-    );
-\bias_regs[10][8]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(8),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][8]_i_1_n_0\
-    );
-\bias_regs[10][9]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000800"
-    )
-        port map (
-      I0 => axi_wdata(9),
-      I1 => \bias_regs[9][31]_i_3_n_0\,
-      I2 => addr(0),
-      I3 => addr(1),
-      I4 => addr(2),
-      O => \bias_regs[10][9]_i_1_n_0\
-    );
-\bias_regs[11][0]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(0),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][0]_i_1_n_0\
-    );
-\bias_regs[11][10]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(10),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][10]_i_1_n_0\
-    );
-\bias_regs[11][11]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(11),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][11]_i_1_n_0\
-    );
-\bias_regs[11][12]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(12),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][12]_i_1_n_0\
-    );
-\bias_regs[11][13]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(13),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][13]_i_1_n_0\
-    );
-\bias_regs[11][14]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(14),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][14]_i_1_n_0\
-    );
-\bias_regs[11][15]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(15),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][15]_i_1_n_0\
-    );
-\bias_regs[11][16]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(16),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][16]_i_1_n_0\
-    );
-\bias_regs[11][17]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(17),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][17]_i_1_n_0\
-    );
-\bias_regs[11][18]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(18),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][18]_i_1_n_0\
-    );
-\bias_regs[11][19]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(19),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][19]_i_1_n_0\
-    );
-\bias_regs[11][1]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(1),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][1]_i_1_n_0\
-    );
-\bias_regs[11][20]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(20),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][20]_i_1_n_0\
-    );
-\bias_regs[11][21]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(21),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][21]_i_1_n_0\
-    );
-\bias_regs[11][22]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(22),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][22]_i_1_n_0\
-    );
-\bias_regs[11][23]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(23),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][23]_i_1_n_0\
-    );
-\bias_regs[11][24]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(24),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][24]_i_1_n_0\
-    );
-\bias_regs[11][25]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(25),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][25]_i_1_n_0\
-    );
-\bias_regs[11][26]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(26),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][26]_i_1_n_0\
-    );
-\bias_regs[11][27]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(27),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][27]_i_1_n_0\
-    );
-\bias_regs[11][28]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(28),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][28]_i_1_n_0\
-    );
-\bias_regs[11][29]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(29),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][29]_i_1_n_0\
-    );
-\bias_regs[11][2]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(2),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][2]_i_1_n_0\
-    );
-\bias_regs[11][30]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(30),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][30]_i_1_n_0\
-    );
-\bias_regs[11][31]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"3B333333"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => aresetn,
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][31]_i_1_n_0\
-    );
-\bias_regs[11][31]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(31),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][31]_i_2_n_0\
-    );
-\bias_regs[11][3]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(3),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][3]_i_1_n_0\
-    );
-\bias_regs[11][4]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(4),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][4]_i_1_n_0\
-    );
-\bias_regs[11][5]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(5),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][5]_i_1_n_0\
-    );
-\bias_regs[11][6]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(6),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][6]_i_1_n_0\
-    );
-\bias_regs[11][7]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(7),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][7]_i_1_n_0\
-    );
-\bias_regs[11][8]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(8),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][8]_i_1_n_0\
-    );
-\bias_regs[11][9]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08000000"
-    )
-        port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => axi_wdata(9),
-      I2 => addr(2),
-      I3 => addr(0),
-      I4 => addr(1),
-      O => \bias_regs[11][9]_i_1_n_0\
-    );
-\bias_regs[12][0]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(0),
-      O => \bias_regs[12][0]_i_1_n_0\
-    );
-\bias_regs[12][10]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(10),
-      O => \bias_regs[12][10]_i_1_n_0\
-    );
-\bias_regs[12][11]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(11),
-      O => \bias_regs[12][11]_i_1_n_0\
-    );
-\bias_regs[12][12]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(12),
-      O => \bias_regs[12][12]_i_1_n_0\
-    );
-\bias_regs[12][13]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(13),
-      O => \bias_regs[12][13]_i_1_n_0\
-    );
-\bias_regs[12][14]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(14),
-      O => \bias_regs[12][14]_i_1_n_0\
-    );
-\bias_regs[12][15]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(15),
-      O => \bias_regs[12][15]_i_1_n_0\
-    );
-\bias_regs[12][16]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(16),
-      O => \bias_regs[12][16]_i_1_n_0\
-    );
-\bias_regs[12][17]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(17),
-      O => \bias_regs[12][17]_i_1_n_0\
-    );
-\bias_regs[12][18]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(18),
-      O => \bias_regs[12][18]_i_1_n_0\
-    );
-\bias_regs[12][19]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(19),
-      O => \bias_regs[12][19]_i_1_n_0\
-    );
-\bias_regs[12][1]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(1),
-      O => \bias_regs[12][1]_i_1_n_0\
-    );
-\bias_regs[12][20]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(20),
-      O => \bias_regs[12][20]_i_1_n_0\
-    );
-\bias_regs[12][21]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(21),
-      O => \bias_regs[12][21]_i_1_n_0\
-    );
-\bias_regs[12][22]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(22),
-      O => \bias_regs[12][22]_i_1_n_0\
-    );
-\bias_regs[12][23]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(23),
-      O => \bias_regs[12][23]_i_1_n_0\
-    );
-\bias_regs[12][24]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(24),
-      O => \bias_regs[12][24]_i_1_n_0\
-    );
-\bias_regs[12][25]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(25),
-      O => \bias_regs[12][25]_i_1_n_0\
-    );
-\bias_regs[12][26]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(26),
-      O => \bias_regs[12][26]_i_1_n_0\
-    );
-\bias_regs[12][27]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(27),
-      O => \bias_regs[12][27]_i_1_n_0\
-    );
-\bias_regs[12][28]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(28),
-      O => \bias_regs[12][28]_i_1_n_0\
-    );
-\bias_regs[12][29]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(29),
-      O => \bias_regs[12][29]_i_1_n_0\
-    );
-\bias_regs[12][2]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(2),
-      O => \bias_regs[12][2]_i_1_n_0\
-    );
-\bias_regs[12][30]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(30),
-      O => \bias_regs[12][30]_i_1_n_0\
-    );
-\bias_regs[12][31]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"55555D55"
     )
         port map (
       I0 => aresetn,
       I1 => \bias_regs[12][31]_i_3_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
-      I3 => \addr_reg[2]_rep_n_0\,
-      I4 => \addr_reg[1]_rep_n_0\,
-      O => \bias_regs[12][31]_i_1_n_0\
-    );
-\bias_regs[12][31]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(31),
+      I2 => axi_wdata(31),
       O => \bias_regs[12][31]_i_2_n_0\
     );
-\bias_regs[12][31]_i_3\: unisim.vcomponents.LUT3
+\bias_regs[12][31]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"08"
+      INIT => X"FFFFFFDFFFFFFFFF"
     )
         port map (
-      I0 => wr_en,
-      I1 => addr(3),
-      I2 => addr(4),
+      I0 => \bias_regs[13][31]_i_4_n_0\,
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => addr(2),
+      I3 => addr(1),
+      I4 => \addr_reg[4]_rep__0_n_0\,
+      I5 => \addr_reg[3]_rep__0_n_0\,
       O => \bias_regs[12][31]_i_3_n_0\
     );
-\bias_regs[12][3]_i_1\: unisim.vcomponents.LUT6
+\bias_regs[12][3]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
+      INIT => X"B8"
     )
         port map (
       I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(3),
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(3),
       O => \bias_regs[12][3]_i_1_n_0\
     );
-\bias_regs[12][4]_i_1\: unisim.vcomponents.LUT6
+\bias_regs[12][4]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
+      INIT => X"B8"
     )
         port map (
       I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(4),
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(4),
       O => \bias_regs[12][4]_i_1_n_0\
     );
-\bias_regs[12][5]_i_1\: unisim.vcomponents.LUT6
+\bias_regs[12][5]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
+      INIT => X"B8"
     )
         port map (
       I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(5),
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(5),
       O => \bias_regs[12][5]_i_1_n_0\
     );
-\bias_regs[12][6]_i_1\: unisim.vcomponents.LUT6
+\bias_regs[12][6]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
+      INIT => X"B8"
     )
         port map (
       I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(6),
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(6),
       O => \bias_regs[12][6]_i_1_n_0\
     );
-\bias_regs[12][7]_i_1\: unisim.vcomponents.LUT6
+\bias_regs[12][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
+      INIT => X"B8"
     )
         port map (
       I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(7),
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(7),
       O => \bias_regs[12][7]_i_1_n_0\
     );
-\bias_regs[12][8]_i_1\: unisim.vcomponents.LUT6
+\bias_regs[12][8]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
+      INIT => X"B8"
     )
         port map (
       I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(8),
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(8),
       O => \bias_regs[12][8]_i_1_n_0\
     );
-\bias_regs[12][9]_i_1\: unisim.vcomponents.LUT6
+\bias_regs[12][9]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AABAAAAAAA8AAAAA"
+      INIT => X"B8"
     )
         port map (
       I0 => aresetn,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(9),
+      I1 => \bias_regs[12][31]_i_3_n_0\,
+      I2 => axi_wdata(9),
       O => \bias_regs[12][9]_i_1_n_0\
     );
 \bias_regs[13][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFDFFFFF20000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[2]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
-      I3 => axi_wdata(0),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
+      I1 => axi_wdata(0),
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][0]_i_1_n_0\
     );
-\bias_regs[13][10]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(10),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][10]_i_1_n_0\
     );
-\bias_regs[13][11]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(11),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][11]_i_1_n_0\
     );
-\bias_regs[13][12]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(12),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][12]_i_1_n_0\
     );
-\bias_regs[13][13]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(13),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][13]_i_1_n_0\
     );
-\bias_regs[13][14]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(14),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][14]_i_1_n_0\
     );
-\bias_regs[13][15]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(15),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][15]_i_1_n_0\
     );
-\bias_regs[13][16]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(16),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][16]_i_1_n_0\
     );
-\bias_regs[13][17]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(17),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][17]_i_1_n_0\
     );
-\bias_regs[13][18]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(18),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][18]_i_1_n_0\
     );
-\bias_regs[13][19]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(19),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][19]_i_1_n_0\
     );
-\bias_regs[13][1]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(1),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][1]_i_1_n_0\
     );
-\bias_regs[13][20]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(20),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][20]_i_1_n_0\
     );
-\bias_regs[13][21]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(21),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][21]_i_1_n_0\
     );
-\bias_regs[13][22]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(22),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][22]_i_1_n_0\
     );
-\bias_regs[13][23]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(23),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][23]_i_1_n_0\
     );
-\bias_regs[13][24]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(24),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][24]_i_1_n_0\
     );
-\bias_regs[13][25]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(25),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][25]_i_1_n_0\
     );
-\bias_regs[13][26]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(26),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][26]_i_1_n_0\
     );
-\bias_regs[13][27]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(27),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][27]_i_1_n_0\
     );
-\bias_regs[13][28]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][28]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(28),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][28]_i_1_n_0\
     );
-\bias_regs[13][29]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(29),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][29]_i_1_n_0\
     );
-\bias_regs[13][2]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(2),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][2]_i_1_n_0\
     );
-\bias_regs[13][30]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(30),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][30]_i_1_n_0\
     );
-\bias_regs[13][31]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][31]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2000FFFF"
+      INIT => X"0000000020FF0000"
     )
         port map (
-      I0 => \addr_reg[2]_rep_n_0\,
+      I0 => \addr_reg[0]_rep_n_0\,
       I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
-      I3 => \bias_regs[12][31]_i_3_n_0\,
-      I4 => aresetn,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => aresetn,
+      I4 => \bias_regs[8][31]_i_3_n_0\,
+      I5 => \bias_regs[9][30]_i_3_n_0\,
       O => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs[13][31]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00800000"
+      INIT => X"22A22222"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
-      I1 => axi_wdata(31),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
+      I0 => \bias_regs[8][31]_i_3_n_0\,
+      I1 => aresetn,
+      I2 => addr(2),
+      I3 => addr(1),
       I4 => \addr_reg[0]_rep_n_0\,
       O => \bias_regs[13][31]_i_2_n_0\
     );
-\bias_regs[13][3]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][31]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
+      I1 => axi_wdata(31),
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
+      O => \bias_regs[13][31]_i_3_n_0\
+    );
+\bias_regs[13][31]_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => data_curr,
+      I1 => addr_curr_reg_n_0,
+      O => \bias_regs[13][31]_i_4_n_0\
+    );
+\bias_regs[13][3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFEF0040FFFF0040"
+    )
+        port map (
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(3),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][3]_i_1_n_0\
     );
 \bias_regs[13][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFDFFFFF20000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[2]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
-      I3 => axi_wdata(4),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
+      I1 => axi_wdata(4),
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][4]_i_1_n_0\
     );
-\bias_regs[13][5]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(5),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][5]_i_1_n_0\
     );
-\bias_regs[13][6]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(6),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][6]_i_1_n_0\
     );
-\bias_regs[13][7]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(7),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][7]_i_1_n_0\
     );
-\bias_regs[13][8]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(8),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][8]_i_1_n_0\
     );
-\bias_regs[13][9]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[13][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(9),
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[13][31]_i_4_n_0\,
       O => \bias_regs[13][9]_i_1_n_0\
     );
 \bias_regs[14][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(0),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(0),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][0]_i_1_n_0\
     );
 \bias_regs[14][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(10),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(10),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][10]_i_1_n_0\
     );
 \bias_regs[14][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(11),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(11),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][11]_i_1_n_0\
     );
 \bias_regs[14][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(12),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(12),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][12]_i_1_n_0\
     );
 \bias_regs[14][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(13),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(13),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][13]_i_1_n_0\
     );
 \bias_regs[14][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(14),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(14),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][14]_i_1_n_0\
     );
 \bias_regs[14][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(15),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(15),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][15]_i_1_n_0\
     );
 \bias_regs[14][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(16),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(16),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][16]_i_1_n_0\
     );
 \bias_regs[14][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(17),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(17),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][17]_i_1_n_0\
     );
 \bias_regs[14][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(18),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(18),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][18]_i_1_n_0\
     );
 \bias_regs[14][19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(19),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(19),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][19]_i_1_n_0\
     );
 \bias_regs[14][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(1),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(1),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][1]_i_1_n_0\
     );
 \bias_regs[14][20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(20),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(20),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][20]_i_1_n_0\
     );
 \bias_regs[14][21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(21),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(21),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][21]_i_1_n_0\
     );
 \bias_regs[14][22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(22),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(22),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][22]_i_1_n_0\
     );
 \bias_regs[14][23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(23),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(23),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][23]_i_1_n_0\
     );
 \bias_regs[14][24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(24),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(24),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][24]_i_1_n_0\
     );
 \bias_regs[14][25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(25),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(25),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][25]_i_1_n_0\
     );
 \bias_regs[14][26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(26),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(26),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][26]_i_1_n_0\
     );
 \bias_regs[14][27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(27),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(27),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][27]_i_1_n_0\
     );
 \bias_regs[14][28]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(28),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(28),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][28]_i_1_n_0\
     );
 \bias_regs[14][29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(29),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(29),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][29]_i_1_n_0\
     );
 \bias_regs[14][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(2),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(2),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][2]_i_1_n_0\
     );
 \bias_regs[14][30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(30),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(30),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][30]_i_1_n_0\
     );
-\bias_regs[14][31]_i_1\: unisim.vcomponents.LUT6
+\bias_regs[14][31]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"00000008FFFFFFFF"
+      INIT => X"2"
     )
         port map (
-      I0 => \bias_regs[3][31]_i_3_n_0\,
-      I1 => addr(3),
-      I2 => \bias_regs[6][31]_i_3_n_0\,
-      I3 => \addr_reg[0]_rep_n_0\,
-      I4 => addr(4),
-      I5 => aresetn,
+      I0 => \bias_regs[14][31]_i_2_n_0\,
+      I1 => \bias_regs[9][30]_i_3_n_0\,
       O => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs[14][31]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"00004000FFFFFFFF"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(31),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
+      I0 => \bias_regs[8][31]_i_5_n_0\,
+      I1 => \addr_reg[2]_rep_n_0\,
+      I2 => axi_bvalid_i_2_n_0,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
       I5 => aresetn,
       O => \bias_regs[14][31]_i_2_n_0\
     );
-\bias_regs[14][3]_i_1\: unisim.vcomponents.LUT6
+\bias_regs[14][31]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(3),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(31),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
+      O => \bias_regs[14][31]_i_3_n_0\
+    );
+\bias_regs[14][3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFEF0040FFFF0040"
+    )
+        port map (
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(3),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][3]_i_1_n_0\
     );
 \bias_regs[14][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(4),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(4),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][4]_i_1_n_0\
     );
 \bias_regs[14][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(5),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(5),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][5]_i_1_n_0\
     );
 \bias_regs[14][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(6),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(6),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][6]_i_1_n_0\
     );
 \bias_regs[14][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(7),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(7),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][7]_i_1_n_0\
     );
 \bias_regs[14][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(8),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(8),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][8]_i_1_n_0\
     );
 \bias_regs[14][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF40000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[0]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => axi_wdata(9),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(9),
+      I2 => addr(3),
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[14][9]_i_1_n_0\
     );
 \bias_regs[15][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF7FFFFF80000000"
+      INIT => X"BFFF800000000000"
     )
         port map (
-      I0 => \addr_reg[1]_rep_n_0\,
-      I1 => \addr_reg[2]_rep_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
-      I3 => axi_wdata(0),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => axi_wdata(0),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => addr(2),
+      I3 => addr(1),
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
       O => \bias_regs[15][0]_i_1_n_0\
     );
 \bias_regs[15][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF7FFFFF80000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[1]_rep_n_0\,
-      I1 => \addr_reg[2]_rep_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
-      I3 => axi_wdata(10),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(10),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][10]_i_1_n_0\
     );
 \bias_regs[15][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF7FFFFF80000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[1]_rep_n_0\,
-      I1 => \addr_reg[2]_rep_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
-      I3 => axi_wdata(11),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(11),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][11]_i_1_n_0\
     );
 \bias_regs[15][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(12),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(12),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][12]_i_1_n_0\
     );
 \bias_regs[15][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(13),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(13),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][13]_i_1_n_0\
     );
 \bias_regs[15][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(14),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(14),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][14]_i_1_n_0\
     );
 \bias_regs[15][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(15),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(15),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][15]_i_1_n_0\
     );
 \bias_regs[15][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(16),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(16),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][16]_i_1_n_0\
     );
 \bias_regs[15][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(17),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(17),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][17]_i_1_n_0\
     );
 \bias_regs[15][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(18),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(18),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][18]_i_1_n_0\
     );
 \bias_regs[15][19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF7FFFFF80000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[1]_rep_n_0\,
-      I1 => \addr_reg[2]_rep_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
-      I3 => axi_wdata(19),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(19),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][19]_i_1_n_0\
     );
 \bias_regs[15][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"BFFF800000000000"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(1),
       I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(1),
+      I2 => addr(2),
+      I3 => addr(1),
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
       O => \bias_regs[15][1]_i_1_n_0\
     );
 \bias_regs[15][20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(20),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(20),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][20]_i_1_n_0\
     );
 \bias_regs[15][21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(21),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(21),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][21]_i_1_n_0\
     );
 \bias_regs[15][22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(22),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(22),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][22]_i_1_n_0\
     );
 \bias_regs[15][23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(23),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(23),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][23]_i_1_n_0\
     );
 \bias_regs[15][24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(24),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(24),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][24]_i_1_n_0\
     );
 \bias_regs[15][25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(25),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(25),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][25]_i_1_n_0\
     );
 \bias_regs[15][26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF7FFFFF80000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[1]_rep_n_0\,
-      I1 => \addr_reg[2]_rep_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
-      I3 => axi_wdata(26),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(26),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][26]_i_1_n_0\
     );
 \bias_regs[15][27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(27),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(27),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][27]_i_1_n_0\
     );
 \bias_regs[15][28]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(28),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(28),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][28]_i_1_n_0\
     );
 \bias_regs[15][29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(29),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(29),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][29]_i_1_n_0\
     );
 \bias_regs[15][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"BFFF800000000000"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(2),
       I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(2),
+      I2 => addr(2),
+      I3 => addr(1),
+      I4 => aresetn,
+      I5 => \bias_regs[9][31]_i_3_n_0\,
       O => \bias_regs[15][2]_i_1_n_0\
     );
 \bias_regs[15][30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(30),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(30),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][30]_i_1_n_0\
     );
-\bias_regs[15][31]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[15][31]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D5555555"
+      INIT => X"000000000040FFFF"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[12][31]_i_3_n_0\,
-      I2 => \addr_reg[1]_rep_n_0\,
-      I3 => \addr_reg[2]_rep_n_0\,
-      I4 => \addr_reg[0]_rep_n_0\,
+      I0 => \bias_regs[3][31]_i_3_n_0\,
+      I1 => axi_bvalid_i_2_n_0,
+      I2 => addr(3),
+      I3 => \bias_regs[7][31]_i_3_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[9][30]_i_3_n_0\,
       O => \bias_regs[15][31]_i_1_n_0\
     );
-\bias_regs[15][31]_i_2\: unisim.vcomponents.LUT6
+\bias_regs[15][31]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FF7FFFFF80000000"
+      INIT => X"0040FFFF"
     )
         port map (
-      I0 => \addr_reg[1]_rep_n_0\,
-      I1 => \addr_reg[2]_rep_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
-      I3 => axi_wdata(31),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[3][31]_i_3_n_0\,
+      I1 => axi_bvalid_i_2_n_0,
+      I2 => addr(3),
+      I3 => \bias_regs[7][31]_i_3_n_0\,
+      I4 => aresetn,
       O => \bias_regs[15][31]_i_2_n_0\
+    );
+\bias_regs[15][31]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFEF0040FFFF0040"
+    )
+        port map (
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(31),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
+      O => \bias_regs[15][31]_i_3_n_0\
     );
 \bias_regs[15][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"00008A8000000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(3),
+      I0 => addr_curr,
+      I1 => aresetn,
+      I2 => \bias_regs[7][31]_i_4_n_0\,
+      I3 => axi_wdata(3),
+      I4 => addr(4),
+      I5 => addr(3),
       O => \bias_regs[15][3]_i_1_n_0\
     );
 \bias_regs[15][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF7FFFFF80000000"
+      INIT => X"00008A8000000000"
     )
         port map (
-      I0 => \addr_reg[1]_rep_n_0\,
-      I1 => \addr_reg[2]_rep_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
+      I0 => addr_curr,
+      I1 => aresetn,
+      I2 => \bias_regs[7][31]_i_4_n_0\,
       I3 => axi_wdata(4),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I4 => addr(4),
+      I5 => addr(3),
       O => \bias_regs[15][4]_i_1_n_0\
     );
 \bias_regs[15][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF7FFFFF80000000"
+      INIT => X"0040000000000000"
     )
         port map (
-      I0 => \addr_reg[1]_rep_n_0\,
-      I1 => \addr_reg[2]_rep_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
-      I3 => axi_wdata(5),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[3][31]_i_3_n_0\,
+      I1 => axi_bvalid_i_2_n_0,
+      I2 => addr(3),
+      I3 => \bias_regs[7][31]_i_3_n_0\,
+      I4 => aresetn,
+      I5 => addr(4),
       O => \bias_regs[15][5]_i_1_n_0\
+    );
+\bias_regs[15][5]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00008A8000000000"
+    )
+        port map (
+      I0 => addr_curr,
+      I1 => aresetn,
+      I2 => \bias_regs[7][31]_i_4_n_0\,
+      I3 => axi_wdata(5),
+      I4 => addr(4),
+      I5 => addr(3),
+      O => \bias_regs[15][5]_i_2_n_0\
+    );
+\bias_regs[15][5]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0002AAAA"
+    )
+        port map (
+      I0 => axi_bvalid_i_2_n_0,
+      I1 => addr(3),
+      I2 => addr(1),
+      I3 => addr(2),
+      I4 => addr(4),
+      O => addr_curr
     );
 \bias_regs[15][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(6),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(6),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][6]_i_1_n_0\
     );
 \bias_regs[15][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(7),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(7),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][7]_i_1_n_0\
     );
 \bias_regs[15][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAAAAAAA2AAAAAAA"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep_n_0\,
-      I2 => \addr_reg[2]_rep_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => axi_wdata(8),
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(8),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][8]_i_1_n_0\
     );
 \bias_regs[15][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF7FFFFF80000000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \addr_reg[1]_rep_n_0\,
-      I1 => \addr_reg[2]_rep_n_0\,
-      I2 => \addr_reg[0]_rep_n_0\,
-      I3 => axi_wdata(9),
-      I4 => \bias_regs[12][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(9),
+      I2 => addr(3),
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
       O => \bias_regs[15][9]_i_1_n_0\
     );
 \bias_regs[16][0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(0),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(0),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][0]_i_1_n_0\
     );
 \bias_regs[16][10]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(10),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(10),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][10]_i_1_n_0\
     );
 \bias_regs[16][11]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(11),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(11),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][11]_i_1_n_0\
     );
 \bias_regs[16][12]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(12),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(12),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][12]_i_1_n_0\
     );
 \bias_regs[16][13]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(13),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(13),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][13]_i_1_n_0\
     );
 \bias_regs[16][14]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(14),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(14),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][14]_i_1_n_0\
     );
 \bias_regs[16][15]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(15),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(15),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][15]_i_1_n_0\
     );
 \bias_regs[16][16]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(16),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(16),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][16]_i_1_n_0\
     );
 \bias_regs[16][17]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(17),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(17),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][17]_i_1_n_0\
     );
 \bias_regs[16][18]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(18),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(18),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][18]_i_1_n_0\
     );
 \bias_regs[16][19]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(19),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(19),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][19]_i_1_n_0\
     );
 \bias_regs[16][1]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(1),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(1),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][1]_i_1_n_0\
     );
 \bias_regs[16][20]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(20),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(20),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][20]_i_1_n_0\
     );
 \bias_regs[16][21]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(21),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(21),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][21]_i_1_n_0\
     );
 \bias_regs[16][22]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(22),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(22),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][22]_i_1_n_0\
     );
 \bias_regs[16][23]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(23),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(23),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][23]_i_1_n_0\
     );
 \bias_regs[16][24]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(24),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(24),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][24]_i_1_n_0\
     );
 \bias_regs[16][25]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(25),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(25),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][25]_i_1_n_0\
     );
 \bias_regs[16][26]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(26),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(26),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][26]_i_1_n_0\
     );
 \bias_regs[16][27]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(27),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(27),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][27]_i_1_n_0\
     );
 \bias_regs[16][28]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(28),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(28),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][28]_i_1_n_0\
     );
 \bias_regs[16][29]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(29),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(29),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][29]_i_1_n_0\
     );
 \bias_regs[16][2]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(2),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(2),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][2]_i_1_n_0\
     );
 \bias_regs[16][30]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(30),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(30),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][30]_i_1_n_0\
     );
 \bias_regs[16][31]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"5D"
+      INIT => X"3B"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[16][31]_i_3_n_0\,
-      I2 => \addr_reg[0]_rep__0_n_0\,
+      I0 => \bias_regs[13][31]_i_4_n_0\,
+      I1 => aresetn,
+      I2 => \bias_regs[16][31]_i_3_n_0\,
       O => \bias_regs[16][31]_i_1_n_0\
     );
 \bias_regs[16][31]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(31),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(31),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][31]_i_2_n_0\
     );
 \bias_regs[16][31]_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00100000"
+      INIT => X"FFFEFFFF"
     )
         port map (
-      I0 => \addr_reg[1]_rep__0_n_0\,
-      I1 => \addr_reg[2]_rep__0_n_0\,
-      I2 => addr(4),
-      I3 => addr(3),
-      I4 => wr_en,
+      I0 => addr(2),
+      I1 => addr(1),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[3]_rep__0_n_0\,
+      I4 => addr(4),
       O => \bias_regs[16][31]_i_3_n_0\
     );
 \bias_regs[16][3]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(3),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(3),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][3]_i_1_n_0\
     );
 \bias_regs[16][4]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(4),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(4),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][4]_i_1_n_0\
     );
 \bias_regs[16][5]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(5),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(5),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][5]_i_1_n_0\
     );
 \bias_regs[16][6]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(6),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(6),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][6]_i_1_n_0\
     );
 \bias_regs[16][7]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(7),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(7),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][7]_i_1_n_0\
     );
 \bias_regs[16][8]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(8),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(8),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][8]_i_1_n_0\
     );
 \bias_regs[16][9]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA8A"
+      INIT => X"EF40"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => axi_wdata(9),
+      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I1 => axi_wdata(9),
+      I2 => \bias_regs[13][31]_i_4_n_0\,
+      I3 => aresetn,
       O => \bias_regs[16][9]_i_1_n_0\
     );
 \bias_regs[17][0]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][0]_i_2_n_0\,
       O => \bias_regs[17][0]_i_1_n_0\
     );
 \bias_regs[17][0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(0),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(0),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][0]_i_2_n_0\
     );
-\bias_regs[17][10]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[17][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F4"
+      INIT => X"A888FFFFA8880000"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
-      I1 => aresetn,
-      I2 => \bias_regs[17][10]_i_2_n_0\,
+      I0 => \bias_regs[9][30]_i_3_n_0\,
+      I1 => \bias_regs[17][10]_i_2_n_0\,
+      I2 => aresetn,
+      I3 => \bias_regs[17][31]_i_3_n_0\,
+      I4 => \bias_regs[17][31]_i_1_n_0\,
+      I5 => \^bias_17\(10),
       O => \bias_regs[17][10]_i_1_n_0\
     );
-\bias_regs[17][10]_i_2\: unisim.vcomponents.LUT6
+\bias_regs[17][10]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"44400040"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(10),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => addr(3),
+      I1 => addr(4),
+      I2 => axi_wdata(10),
+      I3 => \bias_regs[9][30]_i_4_n_0\,
+      I4 => aresetn,
       O => \bias_regs[17][10]_i_2_n_0\
     );
 \bias_regs[17][11]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][11]_i_2_n_0\,
       O => \bias_regs[17][11]_i_1_n_0\
     );
 \bias_regs[17][11]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(11),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(11),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][11]_i_2_n_0\
     );
 \bias_regs[17][12]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][12]_i_2_n_0\,
       O => \bias_regs[17][12]_i_1_n_0\
     );
 \bias_regs[17][12]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(12),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(12),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][12]_i_2_n_0\
     );
 \bias_regs[17][13]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][13]_i_2_n_0\,
       O => \bias_regs[17][13]_i_1_n_0\
     );
 \bias_regs[17][13]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(13),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(13),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][13]_i_2_n_0\
     );
 \bias_regs[17][14]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][14]_i_2_n_0\,
       O => \bias_regs[17][14]_i_1_n_0\
     );
 \bias_regs[17][14]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(14),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(14),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][14]_i_2_n_0\
     );
 \bias_regs[17][15]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][15]_i_2_n_0\,
       O => \bias_regs[17][15]_i_1_n_0\
     );
 \bias_regs[17][15]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(15),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(15),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][15]_i_2_n_0\
     );
 \bias_regs[17][16]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][16]_i_2_n_0\,
       O => \bias_regs[17][16]_i_1_n_0\
     );
 \bias_regs[17][16]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(16),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(16),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][16]_i_2_n_0\
     );
 \bias_regs[17][17]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][17]_i_2_n_0\,
       O => \bias_regs[17][17]_i_1_n_0\
     );
 \bias_regs[17][17]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(17),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(17),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][17]_i_2_n_0\
     );
 \bias_regs[17][18]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][18]_i_2_n_0\,
       O => \bias_regs[17][18]_i_1_n_0\
     );
 \bias_regs[17][18]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(18),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(18),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][18]_i_2_n_0\
     );
 \bias_regs[17][19]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][19]_i_2_n_0\,
       O => \bias_regs[17][19]_i_1_n_0\
     );
 \bias_regs[17][19]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(19),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(19),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][19]_i_2_n_0\
     );
 \bias_regs[17][1]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][1]_i_2_n_0\,
       O => \bias_regs[17][1]_i_1_n_0\
     );
 \bias_regs[17][1]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(1),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(1),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][1]_i_2_n_0\
     );
 \bias_regs[17][20]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][20]_i_2_n_0\,
       O => \bias_regs[17][20]_i_1_n_0\
     );
 \bias_regs[17][20]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(20),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(20),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][20]_i_2_n_0\
     );
 \bias_regs[17][21]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][21]_i_2_n_0\,
       O => \bias_regs[17][21]_i_1_n_0\
     );
 \bias_regs[17][21]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(21),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(21),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][21]_i_2_n_0\
     );
 \bias_regs[17][22]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][22]_i_2_n_0\,
       O => \bias_regs[17][22]_i_1_n_0\
     );
 \bias_regs[17][22]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(22),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(22),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][22]_i_2_n_0\
     );
 \bias_regs[17][23]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][23]_i_2_n_0\,
       O => \bias_regs[17][23]_i_1_n_0\
     );
 \bias_regs[17][23]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(23),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(23),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][23]_i_2_n_0\
     );
 \bias_regs[17][24]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][24]_i_2_n_0\,
       O => \bias_regs[17][24]_i_1_n_0\
     );
 \bias_regs[17][24]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(24),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(24),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][24]_i_2_n_0\
     );
 \bias_regs[17][25]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][25]_i_2_n_0\,
       O => \bias_regs[17][25]_i_1_n_0\
     );
 \bias_regs[17][25]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(25),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(25),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][25]_i_2_n_0\
     );
 \bias_regs[17][26]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][26]_i_2_n_0\,
       O => \bias_regs[17][26]_i_1_n_0\
     );
 \bias_regs[17][26]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(26),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(26),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][26]_i_2_n_0\
     );
 \bias_regs[17][27]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][27]_i_2_n_0\,
       O => \bias_regs[17][27]_i_1_n_0\
     );
 \bias_regs[17][27]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(27),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(27),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][27]_i_2_n_0\
     );
 \bias_regs[17][28]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][28]_i_2_n_0\,
       O => \bias_regs[17][28]_i_1_n_0\
     );
 \bias_regs[17][28]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(28),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(28),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][28]_i_2_n_0\
     );
 \bias_regs[17][29]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][29]_i_2_n_0\,
       O => \bias_regs[17][29]_i_1_n_0\
     );
 \bias_regs[17][29]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(29),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(29),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][29]_i_2_n_0\
     );
 \bias_regs[17][2]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][2]_i_2_n_0\,
       O => \bias_regs[17][2]_i_1_n_0\
     );
 \bias_regs[17][2]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(2),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(2),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][2]_i_2_n_0\
     );
-\bias_regs[17][30]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[17][30]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"000020FF"
+      INIT => X"F8"
     )
         port map (
-      I0 => wr_en,
-      I1 => addr(3),
-      I2 => addr(4),
-      I3 => aresetn,
-      I4 => \bias_regs[17][30]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
+      I1 => aresetn,
+      I2 => \bias_regs[17][30]_i_2_n_0\,
       O => \bias_regs[17][30]_i_1_n_0\
     );
-\bias_regs[17][30]_i_2\: unisim.vcomponents.LUT3
+\bias_regs[17][30]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F4"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
-      I1 => aresetn,
-      I2 => \bias_regs[17][30]_i_4_n_0\,
+      I0 => axi_wdata(30),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][30]_i_2_n_0\
     );
-\bias_regs[17][30]_i_3\: unisim.vcomponents.LUT4
+\bias_regs[17][31]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A8AA"
+      INIT => X"0080FFFF"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[2]_rep__0_n_0\,
-      I2 => \addr_reg[1]_rep__0_n_0\,
-      I3 => \addr_reg[0]_rep__0_n_0\,
-      O => \bias_regs[17][30]_i_3_n_0\
-    );
-\bias_regs[17][30]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => axi_wdata(30),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
-      O => \bias_regs[17][30]_i_4_n_0\
-    );
-\bias_regs[17][31]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BF80FFFFBF800000"
-    )
-        port map (
-      I0 => axi_wdata(31),
-      I1 => \bias_regs[17][31]_i_2_n_0\,
-      I2 => \bias_regs[16][31]_i_3_n_0\,
-      I3 => aresetn,
-      I4 => \bias_regs[17][30]_i_1_n_0\,
-      I5 => \^bias_17\(31),
+      I0 => \addr_reg[0]_rep_n_0\,
+      I1 => addr(4),
+      I2 => axi_bvalid_i_2_n_0,
+      I3 => \bias_regs[3][31]_i_3_n_0\,
+      I4 => aresetn,
       O => \bias_regs[17][31]_i_1_n_0\
     );
 \bias_regs[17][31]_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"02"
+      INIT => X"F8"
     )
         port map (
-      I0 => \addr_reg[0]_rep__0_n_0\,
-      I1 => \addr_reg[1]_rep__0_n_0\,
-      I2 => \addr_reg[2]_rep__0_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
+      I1 => aresetn,
+      I2 => \bias_regs[17][31]_i_4_n_0\,
       O => \bias_regs[17][31]_i_2_n_0\
+    );
+\bias_regs[17][31]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFEFFFFF"
+    )
+        port map (
+      I0 => \addr_reg[2]_rep_n_0\,
+      I1 => \addr_reg[1]_rep_n_0\,
+      I2 => axi_bvalid_i_2_n_0,
+      I3 => addr(3),
+      I4 => addr(4),
+      O => \bias_regs[17][31]_i_3_n_0\
+    );
+\bias_regs[17][31]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000000FFFB0008"
+    )
+        port map (
+      I0 => axi_wdata(31),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
+      O => \bias_regs[17][31]_i_4_n_0\
     );
 \bias_regs[17][3]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][3]_i_2_n_0\,
       O => \bias_regs[17][3]_i_1_n_0\
     );
 \bias_regs[17][3]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(3),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(3),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][3]_i_2_n_0\
     );
 \bias_regs[17][4]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][4]_i_2_n_0\,
       O => \bias_regs[17][4]_i_1_n_0\
     );
 \bias_regs[17][4]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(4),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(4),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][4]_i_2_n_0\
     );
 \bias_regs[17][5]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][5]_i_2_n_0\,
       O => \bias_regs[17][5]_i_1_n_0\
     );
 \bias_regs[17][5]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(5),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(5),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][5]_i_2_n_0\
     );
 \bias_regs[17][6]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][6]_i_2_n_0\,
       O => \bias_regs[17][6]_i_1_n_0\
     );
 \bias_regs[17][6]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(6),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(6),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][6]_i_2_n_0\
     );
 \bias_regs[17][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][7]_i_2_n_0\,
       O => \bias_regs[17][7]_i_1_n_0\
     );
 \bias_regs[17][7]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(7),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(7),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][7]_i_2_n_0\
     );
 \bias_regs[17][8]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][8]_i_2_n_0\,
       O => \bias_regs[17][8]_i_1_n_0\
     );
 \bias_regs[17][8]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(8),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(8),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][8]_i_2_n_0\
     );
 \bias_regs[17][9]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F4"
+      INIT => X"F8"
     )
         port map (
-      I0 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => \bias_regs[17][31]_i_3_n_0\,
       I1 => aresetn,
       I2 => \bias_regs[17][9]_i_2_n_0\,
       O => \bias_regs[17][9]_i_1_n_0\
     );
 \bias_regs[17][9]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAACAAAAAAA0AAAA"
+      INIT => X"00000000FFFB0008"
     )
         port map (
-      I0 => aresetn,
-      I1 => axi_wdata(9),
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \addr_reg[1]_rep__0_n_0\,
-      I4 => \addr_reg[0]_rep__0_n_0\,
-      I5 => \bias_regs[16][31]_i_3_n_0\,
+      I0 => axi_wdata(9),
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => \addr_reg[1]_rep_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[17][31]_i_3_n_0\,
       O => \bias_regs[17][9]_i_2_n_0\
     );
-\bias_regs[1][0]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(0),
+      I0 => axi_wdata(0),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__0_n_0\,
       O => \bias_regs[1][0]_i_1_n_0\
     );
-\bias_regs[1][10]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(10),
+      I0 => axi_wdata(10),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][10]_i_1_n_0\
     );
-\bias_regs[1][11]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(11),
+      I0 => axi_wdata(11),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][11]_i_1_n_0\
     );
-\bias_regs[1][12]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(12),
+      I0 => axi_wdata(12),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][12]_i_1_n_0\
     );
-\bias_regs[1][13]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(13),
+      I0 => axi_wdata(13),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][13]_i_1_n_0\
     );
-\bias_regs[1][14]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(14),
+      I0 => axi_wdata(14),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][14]_i_1_n_0\
     );
-\bias_regs[1][15]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(15),
+      I0 => axi_wdata(15),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][15]_i_1_n_0\
     );
-\bias_regs[1][16]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(16),
+      I0 => axi_wdata(16),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][16]_i_1_n_0\
     );
-\bias_regs[1][17]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(17),
+      I0 => axi_wdata(17),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][17]_i_1_n_0\
     );
-\bias_regs[1][18]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(18),
+      I0 => axi_wdata(18),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][18]_i_1_n_0\
     );
-\bias_regs[1][19]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(19),
+      I0 => axi_wdata(19),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][19]_i_1_n_0\
     );
-\bias_regs[1][1]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(1),
+      I0 => axi_wdata(1),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__0_n_0\,
       O => \bias_regs[1][1]_i_1_n_0\
     );
-\bias_regs[1][20]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(20),
+      I0 => axi_wdata(20),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][20]_i_1_n_0\
     );
-\bias_regs[1][21]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(21),
+      I0 => axi_wdata(21),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][21]_i_1_n_0\
     );
-\bias_regs[1][22]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(22),
+      I0 => axi_wdata(22),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][22]_i_1_n_0\
     );
-\bias_regs[1][23]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(23),
+      I0 => axi_wdata(23),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][23]_i_1_n_0\
     );
-\bias_regs[1][24]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(24),
+      I0 => axi_wdata(24),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][24]_i_1_n_0\
     );
-\bias_regs[1][25]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(25),
+      I0 => axi_wdata(25),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[2]_rep__1_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][25]_i_1_n_0\
     );
-\bias_regs[1][26]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(26),
+      I0 => axi_wdata(26),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[2]_rep__1_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][26]_i_1_n_0\
     );
-\bias_regs[1][27]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(27),
+      I0 => axi_wdata(27),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[2]_rep__1_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][27]_i_1_n_0\
     );
-\bias_regs[1][28]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][28]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(28),
+      I0 => axi_wdata(28),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[2]_rep__1_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][28]_i_1_n_0\
     );
-\bias_regs[1][29]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(29),
+      I0 => axi_wdata(29),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[2]_rep__1_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][29]_i_1_n_0\
     );
-\bias_regs[1][2]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(2),
+      I0 => axi_wdata(2),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__0_n_0\,
       O => \bias_regs[1][2]_i_1_n_0\
     );
-\bias_regs[1][30]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(30),
+      I0 => axi_wdata(30),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[2]_rep__1_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][30]_i_1_n_0\
     );
 \bias_regs[1][31]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5555575555555555"
+      INIT => X"0F0F0F2F0F0F0F0F"
     )
         port map (
-      I0 => aresetn,
-      I1 => \addr_reg[1]_rep__0_n_0\,
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => wr_en,
-      I4 => \bias_regs[0][30]_i_3_n_0\,
-      I5 => \addr_reg[0]_rep__0_n_0\,
+      I0 => wr_en,
+      I1 => \bias_regs[0][31]_i_4_n_0\,
+      I2 => aresetn,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[2]_rep__1_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][31]_i_1_n_0\
     );
-\bias_regs[1][31]_i_2\: unisim.vcomponents.LUT3
+\bias_regs[1][31]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(31),
+      I0 => axi_wdata(31),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[2]_rep__1_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][31]_i_2_n_0\
     );
-\bias_regs[1][31]_i_3\: unisim.vcomponents.LUT5
+\bias_regs[1][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFDF"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => \addr_reg[0]_rep__0_n_0\,
-      I1 => \bias_regs[0][30]_i_3_n_0\,
-      I2 => wr_en,
-      I3 => \addr_reg[2]_rep__0_n_0\,
-      I4 => \addr_reg[1]_rep__0_n_0\,
-      O => \bias_regs[1][31]_i_3_n_0\
-    );
-\bias_regs[1][3]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(3),
+      I0 => axi_wdata(3),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__0_n_0\,
       O => \bias_regs[1][3]_i_1_n_0\
     );
-\bias_regs[1][4]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(4),
+      I0 => axi_wdata(4),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][4]_i_1_n_0\
     );
-\bias_regs[1][5]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(5),
+      I0 => axi_wdata(5),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][5]_i_1_n_0\
     );
-\bias_regs[1][6]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(6),
+      I0 => axi_wdata(6),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][6]_i_1_n_0\
     );
-\bias_regs[1][7]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(7),
+      I0 => axi_wdata(7),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][7]_i_1_n_0\
     );
-\bias_regs[1][8]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(8),
+      I0 => axi_wdata(8),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][8]_i_1_n_0\
     );
-\bias_regs[1][9]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[1][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000800000000"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[1][31]_i_3_n_0\,
-      I2 => axi_wdata(9),
+      I0 => axi_wdata(9),
+      I1 => wr_en,
+      I2 => \bias_regs[0][31]_i_4_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
+      I5 => \addr_reg[0]_rep__1_n_0\,
       O => \bias_regs[1][9]_i_1_n_0\
     );
-\bias_regs[2][0]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(0),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(0),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => addr(0),
+      I5 => aresetn,
       O => \bias_regs[2][0]_i_1_n_0\
     );
-\bias_regs[2][10]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(10),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(10),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][10]_i_1_n_0\
     );
-\bias_regs[2][11]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(11),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(11),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][11]_i_1_n_0\
     );
-\bias_regs[2][12]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(12),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(12),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][12]_i_1_n_0\
     );
-\bias_regs[2][13]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(13),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(13),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][13]_i_1_n_0\
     );
-\bias_regs[2][14]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(14),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(14),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][14]_i_1_n_0\
     );
-\bias_regs[2][15]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(15),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(15),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][15]_i_1_n_0\
     );
-\bias_regs[2][16]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(16),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(16),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][16]_i_1_n_0\
     );
-\bias_regs[2][17]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(17),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(17),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][17]_i_1_n_0\
     );
-\bias_regs[2][18]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(18),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(18),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][18]_i_1_n_0\
     );
-\bias_regs[2][19]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(19),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(19),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][19]_i_1_n_0\
     );
-\bias_regs[2][1]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(1),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(1),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => addr(0),
+      I5 => aresetn,
       O => \bias_regs[2][1]_i_1_n_0\
     );
-\bias_regs[2][20]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(20),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(20),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][20]_i_1_n_0\
     );
-\bias_regs[2][21]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(21),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(21),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][21]_i_1_n_0\
     );
-\bias_regs[2][22]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(22),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(22),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][22]_i_1_n_0\
     );
-\bias_regs[2][23]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(23),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(23),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][23]_i_1_n_0\
     );
-\bias_regs[2][24]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(24),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(24),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][24]_i_1_n_0\
     );
-\bias_regs[2][25]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(25),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(25),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][25]_i_1_n_0\
     );
-\bias_regs[2][26]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(26),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(26),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][26]_i_1_n_0\
     );
-\bias_regs[2][27]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(27),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(27),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][27]_i_1_n_0\
     );
-\bias_regs[2][28]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][28]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(28),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(28),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][28]_i_1_n_0\
     );
-\bias_regs[2][29]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(29),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(29),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][29]_i_1_n_0\
     );
-\bias_regs[2][2]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(2),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(2),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][2]_i_1_n_0\
     );
-\bias_regs[2][30]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(30),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(30),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][30]_i_1_n_0\
     );
 \bias_regs[2][31]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5555557555555555"
+      INIT => X"00000400FFFFFFFF"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[0][30]_i_3_n_0\,
-      I2 => wr_en,
-      I3 => \addr_reg[0]_rep__0_n_0\,
-      I4 => \addr_reg[2]_rep__0_n_0\,
-      I5 => \addr_reg[1]_rep__0_n_0\,
+      I0 => \addr_reg[0]_rep__1_n_0\,
+      I1 => \addr_reg[1]_rep__1_n_0\,
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => wr_en,
+      I4 => \bias_regs[0][31]_i_4_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][31]_i_1_n_0\
     );
-\bias_regs[2][31]_i_2\: unisim.vcomponents.LUT3
+\bias_regs[2][31]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(31),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(31),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][31]_i_2_n_0\
     );
-\bias_regs[2][31]_i_3\: unisim.vcomponents.LUT5
+\bias_regs[2][31]_i_3\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"FFFFFDFF"
+      INIT => X"02"
     )
         port map (
-      I0 => \addr_reg[1]_rep__0_n_0\,
-      I1 => \addr_reg[2]_rep__0_n_0\,
-      I2 => \addr_reg[0]_rep__0_n_0\,
-      I3 => wr_en,
-      I4 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => wr_en,
+      I1 => addr(4),
+      I2 => addr(3),
       O => \bias_regs[2][31]_i_3_n_0\
     );
-\bias_regs[2][3]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(3),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(3),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][3]_i_1_n_0\
     );
-\bias_regs[2][4]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(4),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(4),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][4]_i_1_n_0\
     );
-\bias_regs[2][5]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(5),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(5),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][5]_i_1_n_0\
     );
-\bias_regs[2][6]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(6),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(6),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][6]_i_1_n_0\
     );
-\bias_regs[2][7]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(7),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(7),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][7]_i_1_n_0\
     );
-\bias_regs[2][8]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(8),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(8),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][8]_i_1_n_0\
     );
-\bias_regs[2][9]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[2][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"FFFFFBFF00000800"
     )
         port map (
-      I0 => aresetn,
+      I0 => axi_wdata(9),
       I1 => \bias_regs[2][31]_i_3_n_0\,
-      I2 => axi_wdata(9),
+      I2 => \addr_reg[2]_rep__1_n_0\,
+      I3 => \addr_reg[1]_rep__1_n_0\,
+      I4 => \addr_reg[0]_rep__1_n_0\,
+      I5 => aresetn,
       O => \bias_regs[2][9]_i_1_n_0\
     );
-\bias_regs[3][0]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF01000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(0),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[3]_rep_n_0\,
+      I1 => \addr_reg[4]_rep_n_0\,
+      I2 => \bias_regs[3][26]_i_2_n_0\,
+      I3 => axi_wdata(0),
+      I4 => wr_en,
+      I5 => aresetn,
       O => \bias_regs[3][0]_i_1_n_0\
     );
-\bias_regs[3][10]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[3][26]_i_2_n_0\,
       I1 => axi_wdata(10),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => wr_en,
+      I5 => aresetn,
       O => \bias_regs[3][10]_i_1_n_0\
     );
-\bias_regs[3][11]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(11),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(11),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][11]_i_1_n_0\
     );
-\bias_regs[3][12]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(12),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(12),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][12]_i_1_n_0\
     );
-\bias_regs[3][13]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(13),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(13),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][13]_i_1_n_0\
     );
-\bias_regs[3][14]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(14),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(14),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][14]_i_1_n_0\
     );
-\bias_regs[3][15]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(15),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(15),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][15]_i_1_n_0\
     );
-\bias_regs[3][16]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(16),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(16),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][16]_i_1_n_0\
     );
-\bias_regs[3][17]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(17),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(17),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][17]_i_1_n_0\
     );
-\bias_regs[3][18]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[3][26]_i_2_n_0\,
       I1 => axi_wdata(18),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => wr_en,
+      I5 => aresetn,
       O => \bias_regs[3][18]_i_1_n_0\
     );
-\bias_regs[3][19]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(19),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(19),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][19]_i_1_n_0\
     );
-\bias_regs[3][1]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(1),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(1),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][1]_i_1_n_0\
     );
-\bias_regs[3][20]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(20),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(20),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][20]_i_1_n_0\
     );
-\bias_regs[3][21]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(21),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(21),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][21]_i_1_n_0\
     );
-\bias_regs[3][22]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(22),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(22),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][22]_i_1_n_0\
     );
-\bias_regs[3][23]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(23),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(23),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][23]_i_1_n_0\
     );
-\bias_regs[3][24]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(24),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(24),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][24]_i_1_n_0\
     );
-\bias_regs[3][25]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(25),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(25),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][25]_i_1_n_0\
     );
-\bias_regs[3][26]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[3][26]_i_2_n_0\,
       I1 => axi_wdata(26),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => wr_en,
+      I5 => aresetn,
       O => \bias_regs[3][26]_i_1_n_0\
     );
-\bias_regs[3][27]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FEFF0400"
-    )
-        port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(27),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
-      O => \bias_regs[3][27]_i_1_n_0\
-    );
-\bias_regs[3][28]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FEFF0400"
-    )
-        port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(28),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
-      O => \bias_regs[3][28]_i_1_n_0\
-    );
-\bias_regs[3][29]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FEFF0400"
-    )
-        port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(29),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
-      O => \bias_regs[3][29]_i_1_n_0\
-    );
-\bias_regs[3][2]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FEFF0400"
-    )
-        port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(2),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
-      O => \bias_regs[3][2]_i_1_n_0\
-    );
-\bias_regs[3][30]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FEFF0400"
-    )
-        port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(30),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
-      O => \bias_regs[3][30]_i_1_n_0\
-    );
-\bias_regs[3][31]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000800FFFFFFFF"
-    )
-        port map (
-      I0 => \bias_regs[3][31]_i_3_n_0\,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \bias_regs[0][30]_i_3_n_0\,
-      I3 => \addr_reg[1]_rep_n_0\,
-      I4 => \addr_reg[2]_rep_n_0\,
-      I5 => aresetn,
-      O => \bias_regs[3][31]_i_1_n_0\
-    );
-\bias_regs[3][31]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FEFF0400"
-    )
-        port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(31),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
-      O => \bias_regs[3][31]_i_2_n_0\
-    );
-\bias_regs[3][31]_i_3\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"55570000"
-    )
-        port map (
-      I0 => addr(4),
-      I1 => addr(3),
-      I2 => \addr_reg[1]_rep_n_0\,
-      I3 => \addr_reg[2]_rep_n_0\,
-      I4 => wr_en,
-      O => \bias_regs[3][31]_i_3_n_0\
-    );
-\bias_regs[3][31]_i_4\: unisim.vcomponents.LUT3
+\bias_regs[3][26]_i_2\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"BF"
     )
         port map (
-      I0 => \addr_reg[2]_rep_n_0\,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \addr_reg[1]_rep_n_0\,
-      O => \bias_regs[3][31]_i_4_n_0\
+      I0 => \addr_reg[2]_rep__0_n_0\,
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => \addr_reg[1]_rep__0_n_0\,
+      O => \bias_regs[3][26]_i_2_n_0\
     );
-\bias_regs[3][3]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(3),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(27),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
+      O => \bias_regs[3][27]_i_1_n_0\
+    );
+\bias_regs[3][28]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBFFFFF40000000"
+    )
+        port map (
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(28),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
+      O => \bias_regs[3][28]_i_1_n_0\
+    );
+\bias_regs[3][29]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBFFFFF40000000"
+    )
+        port map (
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(29),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
+      O => \bias_regs[3][29]_i_1_n_0\
+    );
+\bias_regs[3][2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFEFFFF00040000"
+    )
+        port map (
+      I0 => \bias_regs[3][26]_i_2_n_0\,
+      I1 => axi_wdata(2),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => wr_en,
+      I5 => aresetn,
+      O => \bias_regs[3][2]_i_1_n_0\
+    );
+\bias_regs[3][30]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBFFFFF40000000"
+    )
+        port map (
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(30),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
+      O => \bias_regs[3][30]_i_1_n_0\
+    );
+\bias_regs[3][31]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00400000FFFFFFFF"
+    )
+        port map (
+      I0 => \bias_regs[3][31]_i_3_n_0\,
+      I1 => \addr_reg[1]_rep_n_0\,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
+      O => \bias_regs[3][31]_i_1_n_0\
+    );
+\bias_regs[3][31]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBFFFFF40000000"
+    )
+        port map (
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(31),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
+      O => \bias_regs[3][31]_i_2_n_0\
+    );
+\bias_regs[3][31]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"AAA8"
+    )
+        port map (
+      I0 => addr(4),
+      I1 => \addr_reg[2]_rep_n_0\,
+      I2 => \addr_reg[1]_rep_n_0\,
+      I3 => addr(3),
+      O => \bias_regs[3][31]_i_3_n_0\
+    );
+\bias_regs[3][3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBFFFFF40000000"
+    )
+        port map (
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(3),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][3]_i_1_n_0\
     );
-\bias_regs[3][4]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(4),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(4),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][4]_i_1_n_0\
     );
-\bias_regs[3][5]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(5),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(5),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][5]_i_1_n_0\
     );
-\bias_regs[3][6]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(6),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(6),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][6]_i_1_n_0\
     );
-\bias_regs[3][7]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(7),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(7),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][7]_i_1_n_0\
     );
-\bias_regs[3][8]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(8),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(8),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][8]_i_1_n_0\
     );
-\bias_regs[3][9]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[3][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFBFFFFF40000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => axi_wdata(9),
-      I2 => \bias_regs[3][31]_i_4_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[2]_rep__1_n_0\,
+      I1 => \addr_reg[0]_rep__0_n_0\,
+      I2 => \addr_reg[1]_rep__1_n_0\,
+      I3 => axi_wdata(9),
+      I4 => \bias_regs[2][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[3][9]_i_1_n_0\
     );
 \bias_regs[4][0]_i_1\: unisim.vcomponents.LUT3
@@ -10127,17 +10527,13 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I2 => axi_wdata(30),
       O => \bias_regs[4][30]_i_1_n_0\
     );
-\bias_regs[4][31]_i_1\: unisim.vcomponents.LUT6
+\bias_regs[4][31]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"5555555555755555"
+      INIT => X"7"
     )
         port map (
       I0 => aresetn,
-      I1 => \addr_reg[1]_rep__0_n_0\,
-      I2 => \addr_reg[2]_rep__0_n_0\,
-      I3 => \bias_regs[0][30]_i_3_n_0\,
-      I4 => wr_en,
-      I5 => \addr_reg[0]_rep__0_n_0\,
+      I1 => \bias_regs[4][31]_i_3_n_0\,
       O => \bias_regs[4][31]_i_1_n_0\
     );
 \bias_regs[4][31]_i_2\: unisim.vcomponents.LUT3
@@ -10150,16 +10546,17 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I2 => axi_wdata(31),
       O => \bias_regs[4][31]_i_2_n_0\
     );
-\bias_regs[4][31]_i_3\: unisim.vcomponents.LUT5
+\bias_regs[4][31]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFBFF"
+      INIT => X"FFFFFFFFFFFFFFDF"
     )
         port map (
-      I0 => \addr_reg[0]_rep__0_n_0\,
-      I1 => wr_en,
-      I2 => \bias_regs[0][30]_i_3_n_0\,
-      I3 => \addr_reg[2]_rep__0_n_0\,
-      I4 => \addr_reg[1]_rep__0_n_0\,
+      I0 => \bias_regs[5][31]_i_3_n_0\,
+      I1 => \addr_reg[0]_rep_n_0\,
+      I2 => addr(2),
+      I3 => addr(1),
+      I4 => \addr_reg[3]_rep_n_0\,
+      I5 => \addr_reg[4]_rep_n_0\,
       O => \bias_regs[4][31]_i_3_n_0\
     );
 \bias_regs[4][3]_i_1\: unisim.vcomponents.LUT3
@@ -10232,733 +10629,799 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I2 => axi_wdata(9),
       O => \bias_regs[4][9]_i_1_n_0\
     );
-\bias_regs[5][0]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[5][31]_i_3_n_0\,
-      I2 => axi_wdata(0),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
+      I1 => axi_wdata(0),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][0]_i_1_n_0\
     );
-\bias_regs[5][10]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(10),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][10]_i_1_n_0\
     );
-\bias_regs[5][11]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(11),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][11]_i_1_n_0\
     );
-\bias_regs[5][12]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(12),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][12]_i_1_n_0\
     );
-\bias_regs[5][13]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(13),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][13]_i_1_n_0\
     );
-\bias_regs[5][14]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(14),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][14]_i_1_n_0\
     );
-\bias_regs[5][15]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(15),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][15]_i_1_n_0\
     );
-\bias_regs[5][16]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(16),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][16]_i_1_n_0\
     );
-\bias_regs[5][17]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(17),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][17]_i_1_n_0\
     );
-\bias_regs[5][18]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(18),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][18]_i_1_n_0\
     );
-\bias_regs[5][19]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(19),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][19]_i_1_n_0\
     );
-\bias_regs[5][1]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(1),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][1]_i_1_n_0\
     );
-\bias_regs[5][20]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(20),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][20]_i_1_n_0\
     );
-\bias_regs[5][21]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(21),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][21]_i_1_n_0\
     );
-\bias_regs[5][22]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(22),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][22]_i_1_n_0\
     );
-\bias_regs[5][23]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(23),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][23]_i_1_n_0\
     );
-\bias_regs[5][24]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(24),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][24]_i_1_n_0\
     );
-\bias_regs[5][25]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(25),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][25]_i_1_n_0\
     );
-\bias_regs[5][26]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(26),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][26]_i_1_n_0\
     );
-\bias_regs[5][27]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(27),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][27]_i_1_n_0\
     );
-\bias_regs[5][28]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][28]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(28),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][28]_i_1_n_0\
     );
-\bias_regs[5][29]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(29),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][29]_i_1_n_0\
     );
-\bias_regs[5][2]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(2),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][2]_i_1_n_0\
     );
-\bias_regs[5][30]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(30),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][30]_i_1_n_0\
     );
 \bias_regs[5][31]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000FFFF0800FFFF"
+      INIT => X"00002000FFFFFFFF"
     )
         port map (
-      I0 => \bias_regs[3][31]_i_3_n_0\,
-      I1 => \addr_reg[0]_rep__0_n_0\,
-      I2 => \addr_reg[1]_rep_n_0\,
-      I3 => \addr_reg[2]_rep_n_0\,
-      I4 => aresetn,
-      I5 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => addr(2),
+      I1 => addr(1),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \bias_regs[5][31]_i_3_n_0\,
+      I4 => \bias_regs[0][31]_i_4_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][31]_i_1_n_0\
     );
-\bias_regs[5][31]_i_2\: unisim.vcomponents.LUT5
+\bias_regs[5][31]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(31),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][31]_i_2_n_0\
     );
-\bias_regs[5][31]_i_3\: unisim.vcomponents.LUT3
+\bias_regs[5][31]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => data_curr,
+      I1 => addr_curr_reg_n_0,
+      O => \bias_regs[5][31]_i_3_n_0\
+    );
+\bias_regs[5][31]_i_4\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"DF"
     )
         port map (
-      I0 => \addr_reg[2]_rep_n_0\,
-      I1 => \addr_reg[1]_rep_n_0\,
-      I2 => \addr_reg[0]_rep__0_n_0\,
-      O => \bias_regs[5][31]_i_3_n_0\
+      I0 => addr(2),
+      I1 => addr(1),
+      I2 => \addr_reg[0]_rep_n_0\,
+      O => \bias_regs[5][31]_i_4_n_0\
     );
-\bias_regs[5][3]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(3),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][3]_i_1_n_0\
     );
-\bias_regs[5][4]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[5][31]_i_3_n_0\,
-      I2 => axi_wdata(4),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
+      I1 => axi_wdata(4),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][4]_i_1_n_0\
     );
-\bias_regs[5][5]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(5),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][5]_i_1_n_0\
     );
-\bias_regs[5][6]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(6),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][6]_i_1_n_0\
     );
-\bias_regs[5][7]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(7),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][7]_i_1_n_0\
     );
-\bias_regs[5][8]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(8),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][8]_i_1_n_0\
     );
-\bias_regs[5][9]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[5][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF0400"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
+      I0 => \bias_regs[5][31]_i_4_n_0\,
       I1 => axi_wdata(9),
-      I2 => \bias_regs[5][31]_i_3_n_0\,
-      I3 => wr_en,
-      I4 => aresetn,
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[5][9]_i_1_n_0\
     );
-\bias_regs[6][0]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(0),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(0),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][0]_i_1_n_0\
     );
-\bias_regs[6][10]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(10),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(10),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][10]_i_1_n_0\
     );
-\bias_regs[6][11]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(11),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(11),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][11]_i_1_n_0\
     );
-\bias_regs[6][12]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(12),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(12),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][12]_i_1_n_0\
     );
-\bias_regs[6][13]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(13),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(13),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][13]_i_1_n_0\
     );
-\bias_regs[6][14]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(14),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(14),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][14]_i_1_n_0\
     );
-\bias_regs[6][15]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(15),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(15),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][15]_i_1_n_0\
     );
-\bias_regs[6][16]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(16),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(16),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][16]_i_1_n_0\
     );
-\bias_regs[6][17]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(17),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(17),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][17]_i_1_n_0\
     );
-\bias_regs[6][18]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(18),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(18),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][18]_i_1_n_0\
     );
-\bias_regs[6][19]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(19),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(19),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][19]_i_1_n_0\
     );
-\bias_regs[6][1]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(1),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(1),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][1]_i_1_n_0\
     );
-\bias_regs[6][20]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(20),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(20),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][20]_i_1_n_0\
     );
-\bias_regs[6][21]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(21),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(21),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][21]_i_1_n_0\
     );
-\bias_regs[6][22]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(22),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(22),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][22]_i_1_n_0\
     );
-\bias_regs[6][23]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(23),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(23),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][23]_i_1_n_0\
     );
-\bias_regs[6][24]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(24),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(24),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][24]_i_1_n_0\
     );
-\bias_regs[6][25]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(25),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(25),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][25]_i_1_n_0\
     );
-\bias_regs[6][26]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(26),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(26),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][26]_i_1_n_0\
     );
-\bias_regs[6][27]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(27),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(27),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][27]_i_1_n_0\
     );
-\bias_regs[6][28]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][28]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(28),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(28),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][28]_i_1_n_0\
     );
-\bias_regs[6][29]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(29),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(29),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][29]_i_1_n_0\
     );
-\bias_regs[6][2]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(2),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(2),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][2]_i_1_n_0\
     );
-\bias_regs[6][30]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(30),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(30),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][30]_i_1_n_0\
     );
-\bias_regs[6][31]_i_1\: unisim.vcomponents.LUT6
+\bias_regs[6][31]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00010000FFFFFFFF"
+      INIT => X"0400FFFF"
     )
         port map (
-      I0 => addr(3),
-      I1 => \bias_regs[6][31]_i_3_n_0\,
-      I2 => \addr_reg[0]_rep__0_n_0\,
-      I3 => addr(4),
-      I4 => \bias_regs[3][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \addr_reg[3]_rep_n_0\,
+      I1 => \addr_reg[2]_rep_n_0\,
+      I2 => \addr_reg[4]_rep_n_0\,
+      I3 => \bias_regs[6][31]_i_3_n_0\,
+      I4 => aresetn,
       O => \bias_regs[6][31]_i_1_n_0\
     );
-\bias_regs[6][31]_i_2\: unisim.vcomponents.LUT5
+\bias_regs[6][31]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(31),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(31),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][31]_i_2_n_0\
     );
-\bias_regs[6][31]_i_3\: unisim.vcomponents.LUT2
+\bias_regs[6][31]_i_3\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"7"
+      INIT => X"08"
     )
         port map (
-      I0 => \addr_reg[2]_rep_n_0\,
+      I0 => \bias_regs[5][31]_i_3_n_0\,
       I1 => \addr_reg[1]_rep_n_0\,
+      I2 => \addr_reg[0]_rep_n_0\,
       O => \bias_regs[6][31]_i_3_n_0\
     );
 \bias_regs[6][31]_i_4\: unisim.vcomponents.LUT3
@@ -10966,1154 +11429,1378 @@ axi_wready_reg: unisim.vcomponents.FDRE
       INIT => X"BF"
     )
         port map (
-      I0 => \addr_reg[0]_rep__0_n_0\,
+      I0 => \addr_reg[0]_rep_n_0\,
       I1 => \addr_reg[1]_rep_n_0\,
       I2 => \addr_reg[2]_rep_n_0\,
       O => \bias_regs[6][31]_i_4_n_0\
     );
-\bias_regs[6][3]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(3),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(3),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][3]_i_1_n_0\
     );
-\bias_regs[6][4]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(4),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(4),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][4]_i_1_n_0\
     );
-\bias_regs[6][5]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(5),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(5),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][5]_i_1_n_0\
     );
-\bias_regs[6][6]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(6),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(6),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][6]_i_1_n_0\
     );
-\bias_regs[6][7]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(7),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(7),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][7]_i_1_n_0\
     );
-\bias_regs[6][8]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(8),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(8),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][8]_i_1_n_0\
     );
-\bias_regs[6][9]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[6][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[6][31]_i_4_n_0\,
-      I2 => axi_wdata(9),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[6][31]_i_4_n_0\,
+      I1 => axi_wdata(9),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[6][9]_i_1_n_0\
     );
-\bias_regs[7][0]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF01000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(0),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[3]_rep_n_0\,
+      I1 => \addr_reg[4]_rep_n_0\,
+      I2 => \bias_regs[7][31]_i_4_n_0\,
+      I3 => axi_wdata(0),
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][0]_i_1_n_0\
     );
-\bias_regs[7][10]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(10),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(10),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][10]_i_1_n_0\
     );
-\bias_regs[7][11]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(11),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(11),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][11]_i_1_n_0\
     );
-\bias_regs[7][12]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(12),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(12),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][12]_i_1_n_0\
     );
-\bias_regs[7][13]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(13),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(13),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][13]_i_1_n_0\
     );
-\bias_regs[7][14]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(14),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(14),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][14]_i_1_n_0\
     );
-\bias_regs[7][15]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(15),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(15),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][15]_i_1_n_0\
     );
-\bias_regs[7][16]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(16),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(16),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][16]_i_1_n_0\
     );
-\bias_regs[7][17]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(17),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(17),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][17]_i_1_n_0\
     );
-\bias_regs[7][18]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(18),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(18),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][18]_i_1_n_0\
     );
-\bias_regs[7][19]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(19),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(19),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][19]_i_1_n_0\
     );
-\bias_regs[7][1]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF01000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(1),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[3]_rep_n_0\,
+      I1 => \addr_reg[4]_rep_n_0\,
+      I2 => \bias_regs[7][31]_i_4_n_0\,
+      I3 => axi_wdata(1),
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][1]_i_1_n_0\
     );
-\bias_regs[7][20]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(20),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(20),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][20]_i_1_n_0\
     );
-\bias_regs[7][21]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(21),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(21),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][21]_i_1_n_0\
     );
-\bias_regs[7][22]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(22),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(22),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][22]_i_1_n_0\
     );
-\bias_regs[7][23]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(23),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(23),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][23]_i_1_n_0\
     );
-\bias_regs[7][24]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(24),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(24),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][24]_i_1_n_0\
     );
-\bias_regs[7][25]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(25),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(25),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][25]_i_1_n_0\
     );
-\bias_regs[7][26]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(26),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(26),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][26]_i_1_n_0\
     );
-\bias_regs[7][27]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(27),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(27),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][27]_i_1_n_0\
     );
-\bias_regs[7][28]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][28]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(28),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(28),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][28]_i_1_n_0\
     );
-\bias_regs[7][29]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(29),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(29),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][29]_i_1_n_0\
     );
-\bias_regs[7][2]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF01000000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(2),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \addr_reg[3]_rep_n_0\,
+      I1 => \addr_reg[4]_rep_n_0\,
+      I2 => \bias_regs[7][31]_i_4_n_0\,
+      I3 => axi_wdata(2),
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][2]_i_1_n_0\
     );
-\bias_regs[7][30]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(30),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(30),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][30]_i_1_n_0\
     );
-\bias_regs[7][31]_i_1\: unisim.vcomponents.LUT6
+\bias_regs[7][31]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"20000000FFFFFFFF"
+      INIT => X"0004FFFF"
     )
         port map (
-      I0 => \addr_reg[0]_rep__0_n_0\,
-      I1 => \bias_regs[0][30]_i_3_n_0\,
-      I2 => \addr_reg[1]_rep_n_0\,
-      I3 => \addr_reg[2]_rep_n_0\,
-      I4 => \bias_regs[3][31]_i_3_n_0\,
-      I5 => aresetn,
+      I0 => \bias_regs[3][31]_i_3_n_0\,
+      I1 => \bias_regs[5][31]_i_3_n_0\,
+      I2 => addr(3),
+      I3 => \bias_regs[7][31]_i_3_n_0\,
+      I4 => aresetn,
       O => \bias_regs[7][31]_i_1_n_0\
     );
-\bias_regs[7][31]_i_2\: unisim.vcomponents.LUT5
+\bias_regs[7][31]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(31),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(31),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][31]_i_2_n_0\
     );
-\bias_regs[7][31]_i_3\: unisim.vcomponents.LUT3
+\bias_regs[7][31]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FF7F"
+    )
+        port map (
+      I0 => \addr_reg[0]_rep_n_0\,
+      I1 => \addr_reg[1]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => addr(4),
+      O => \bias_regs[7][31]_i_3_n_0\
+    );
+\bias_regs[7][31]_i_4\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"7F"
     )
         port map (
-      I0 => \addr_reg[1]_rep_n_0\,
-      I1 => \addr_reg[2]_rep_n_0\,
-      I2 => \addr_reg[0]_rep__0_n_0\,
-      O => \bias_regs[7][31]_i_3_n_0\
+      I0 => addr(1),
+      I1 => addr(2),
+      I2 => \addr_reg[0]_rep_n_0\,
+      O => \bias_regs[7][31]_i_4_n_0\
     );
-\bias_regs[7][3]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(3),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(3),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][3]_i_1_n_0\
     );
-\bias_regs[7][4]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(4),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(4),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][4]_i_1_n_0\
     );
-\bias_regs[7][5]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(5),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(5),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][5]_i_1_n_0\
     );
-\bias_regs[7][6]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(6),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(6),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][6]_i_1_n_0\
     );
-\bias_regs[7][7]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(7),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(7),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][7]_i_1_n_0\
     );
-\bias_regs[7][8]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(8),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(8),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][8]_i_1_n_0\
     );
-\bias_regs[7][9]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[7][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFF1000"
+      INIT => X"FFFEFFFF00040000"
     )
         port map (
-      I0 => \bias_regs[0][30]_i_3_n_0\,
-      I1 => \bias_regs[7][31]_i_3_n_0\,
-      I2 => axi_wdata(9),
-      I3 => wr_en,
-      I4 => aresetn,
+      I0 => \bias_regs[7][31]_i_4_n_0\,
+      I1 => axi_wdata(9),
+      I2 => \addr_reg[3]_rep_n_0\,
+      I3 => \addr_reg[4]_rep_n_0\,
+      I4 => \bias_regs[5][31]_i_3_n_0\,
+      I5 => aresetn,
       O => \bias_regs[7][9]_i_1_n_0\
     );
-\bias_regs[8][0]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(0),
+      I0 => axi_wdata(0),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][0]_i_1_n_0\
     );
-\bias_regs[8][10]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(10),
+      I0 => axi_wdata(10),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][10]_i_1_n_0\
     );
-\bias_regs[8][11]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(11),
+      I0 => axi_wdata(11),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][11]_i_1_n_0\
     );
-\bias_regs[8][12]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(12),
+      I0 => axi_wdata(12),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][12]_i_1_n_0\
     );
-\bias_regs[8][13]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(13),
+      I0 => axi_wdata(13),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][13]_i_1_n_0\
     );
-\bias_regs[8][14]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(14),
+      I0 => axi_wdata(14),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][14]_i_1_n_0\
     );
-\bias_regs[8][15]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(15),
+      I0 => axi_wdata(15),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][15]_i_1_n_0\
     );
-\bias_regs[8][16]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(16),
+      I0 => axi_wdata(16),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][16]_i_1_n_0\
     );
-\bias_regs[8][17]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(17),
+      I0 => axi_wdata(17),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][17]_i_1_n_0\
     );
-\bias_regs[8][18]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(18),
+      I0 => axi_wdata(18),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][18]_i_1_n_0\
     );
-\bias_regs[8][19]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(19),
+      I0 => axi_wdata(19),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][19]_i_1_n_0\
     );
-\bias_regs[8][1]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(1),
+      I0 => axi_wdata(1),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][1]_i_1_n_0\
     );
-\bias_regs[8][20]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(20),
+      I0 => axi_wdata(20),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][20]_i_1_n_0\
     );
-\bias_regs[8][21]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(21),
+      I0 => axi_wdata(21),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][21]_i_1_n_0\
     );
-\bias_regs[8][22]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(22),
+      I0 => axi_wdata(22),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][22]_i_1_n_0\
     );
-\bias_regs[8][23]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(23),
+      I0 => axi_wdata(23),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][23]_i_1_n_0\
     );
-\bias_regs[8][24]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(24),
+      I0 => axi_wdata(24),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][24]_i_1_n_0\
     );
-\bias_regs[8][25]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(25),
+      I0 => axi_wdata(25),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][25]_i_1_n_0\
     );
-\bias_regs[8][26]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(26),
+      I0 => axi_wdata(26),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][26]_i_1_n_0\
     );
-\bias_regs[8][27]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(27),
+      I0 => axi_wdata(27),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][27]_i_1_n_0\
     );
-\bias_regs[8][28]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][28]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(28),
+      I0 => axi_wdata(28),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][28]_i_1_n_0\
     );
-\bias_regs[8][29]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(29),
+      I0 => axi_wdata(29),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][29]_i_1_n_0\
     );
-\bias_regs[8][2]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(2),
+      I0 => axi_wdata(2),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][2]_i_1_n_0\
     );
-\bias_regs[8][30]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(30),
+      I0 => axi_wdata(30),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][30]_i_1_n_0\
     );
-\bias_regs[8][31]_i_1\: unisim.vcomponents.LUT2
+\bias_regs[8][31]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7"
+      INIT => X"2222222A"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
+      I0 => \bias_regs[8][31]_i_3_n_0\,
+      I1 => aresetn,
+      I2 => \addr_reg[0]_rep__0_n_0\,
+      I3 => \addr_reg[1]_rep__0_n_0\,
+      I4 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][31]_i_1_n_0\
     );
-\bias_regs[8][31]_i_2\: unisim.vcomponents.LUT3
+\bias_regs[8][31]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(31),
+      I0 => axi_wdata(31),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][31]_i_2_n_0\
     );
-\bias_regs[8][31]_i_3\: unisim.vcomponents.LUT6
+\bias_regs[8][31]_i_3\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFFFFFFFFDFF"
+      INIT => X"3B33"
     )
         port map (
-      I0 => wr_en,
-      I1 => addr(2),
-      I2 => addr(1),
+      I0 => axi_bvalid_i_2_n_0,
+      I1 => aresetn,
+      I2 => addr(4),
       I3 => addr(3),
-      I4 => addr(0),
-      I5 => addr(4),
       O => \bias_regs[8][31]_i_3_n_0\
     );
-\bias_regs[8][3]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][31]_i_4\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"B8"
+      INIT => X"8"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(3),
+      I0 => data_curr,
+      I1 => addr_curr_reg_n_0,
+      O => \bias_regs[8][31]_i_4_n_0\
+    );
+\bias_regs[8][31]_i_5\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => addr(4),
+      I1 => addr(3),
+      O => \bias_regs[8][31]_i_5_n_0\
+    );
+\bias_regs[8][3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000008"
+    )
+        port map (
+      I0 => axi_wdata(3),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][3]_i_1_n_0\
     );
-\bias_regs[8][4]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(4),
+      I0 => axi_wdata(4),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][4]_i_1_n_0\
     );
-\bias_regs[8][5]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(5),
+      I0 => axi_wdata(5),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][5]_i_1_n_0\
     );
-\bias_regs[8][6]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(6),
+      I0 => axi_wdata(6),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][6]_i_1_n_0\
     );
-\bias_regs[8][7]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(7),
+      I0 => axi_wdata(7),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][7]_i_1_n_0\
     );
-\bias_regs[8][8]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(8),
+      I0 => axi_wdata(8),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][8]_i_1_n_0\
     );
-\bias_regs[8][9]_i_1\: unisim.vcomponents.LUT3
+\bias_regs[8][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8"
+      INIT => X"0000000000000008"
     )
         port map (
-      I0 => aresetn,
-      I1 => \bias_regs[8][31]_i_3_n_0\,
-      I2 => axi_wdata(9),
+      I0 => axi_wdata(9),
+      I1 => \bias_regs[8][31]_i_4_n_0\,
+      I2 => \bias_regs[8][31]_i_5_n_0\,
+      I3 => \addr_reg[0]_rep__0_n_0\,
+      I4 => \addr_reg[1]_rep__0_n_0\,
+      I5 => \addr_reg[2]_rep__0_n_0\,
       O => \bias_regs[8][9]_i_1_n_0\
     );
-\bias_regs[9][0]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(0),
+      I1 => axi_wdata(0),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][0]_i_1_n_0\
     );
-\bias_regs[9][10]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(10),
+      I1 => axi_wdata(10),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][10]_i_1_n_0\
     );
-\bias_regs[9][11]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(11),
+      I1 => axi_wdata(11),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][11]_i_1_n_0\
     );
-\bias_regs[9][12]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(12),
+      I1 => axi_wdata(12),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][12]_i_1_n_0\
     );
-\bias_regs[9][13]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(13),
+      I0 => \bias_regs[9][30]_i_4_n_0\,
+      I1 => axi_wdata(13),
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[8][31]_i_4_n_0\,
       O => \bias_regs[9][13]_i_1_n_0\
     );
-\bias_regs[9][14]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(14),
+      I1 => axi_wdata(14),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][14]_i_1_n_0\
     );
-\bias_regs[9][15]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(15),
+      I1 => axi_wdata(15),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][15]_i_1_n_0\
     );
-\bias_regs[9][16]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(16),
+      I1 => axi_wdata(16),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][16]_i_1_n_0\
     );
-\bias_regs[9][17]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(17),
+      I1 => axi_wdata(17),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][17]_i_1_n_0\
     );
-\bias_regs[9][18]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(18),
+      I1 => axi_wdata(18),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][18]_i_1_n_0\
     );
-\bias_regs[9][19]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(19),
+      I1 => axi_wdata(19),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][19]_i_1_n_0\
     );
-\bias_regs[9][1]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(1),
+      I1 => axi_wdata(1),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][1]_i_1_n_0\
     );
-\bias_regs[9][20]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(20),
+      I1 => axi_wdata(20),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][20]_i_1_n_0\
     );
-\bias_regs[9][21]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(21),
+      I0 => \bias_regs[9][30]_i_4_n_0\,
+      I1 => axi_wdata(21),
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[8][31]_i_4_n_0\,
       O => \bias_regs[9][21]_i_1_n_0\
     );
-\bias_regs[9][22]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(22),
+      I1 => axi_wdata(22),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][22]_i_1_n_0\
     );
-\bias_regs[9][23]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(23),
+      I1 => axi_wdata(23),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][23]_i_1_n_0\
     );
-\bias_regs[9][24]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(24),
+      I1 => axi_wdata(24),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][24]_i_1_n_0\
     );
-\bias_regs[9][25]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(25),
+      I1 => axi_wdata(25),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][25]_i_1_n_0\
     );
-\bias_regs[9][26]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(26),
+      I1 => axi_wdata(26),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][26]_i_1_n_0\
     );
-\bias_regs[9][27]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(27),
+      I1 => axi_wdata(27),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][27]_i_1_n_0\
     );
-\bias_regs[9][28]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][28]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(28),
+      I1 => axi_wdata(28),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][28]_i_1_n_0\
     );
-\bias_regs[9][29]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(29),
+      I0 => \bias_regs[9][30]_i_4_n_0\,
+      I1 => axi_wdata(29),
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[8][31]_i_4_n_0\,
       O => \bias_regs[9][29]_i_1_n_0\
     );
-\bias_regs[9][2]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(2),
+      I1 => axi_wdata(2),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][2]_i_1_n_0\
     );
-\bias_regs[9][30]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"0000000002FF0000"
     )
         port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(30),
+      I0 => \addr_reg[0]_rep_n_0\,
+      I1 => \addr_reg[2]_rep_n_0\,
+      I2 => \addr_reg[1]_rep_n_0\,
+      I3 => aresetn,
+      I4 => \bias_regs[8][31]_i_3_n_0\,
+      I5 => \bias_regs[9][30]_i_3_n_0\,
       O => \bias_regs[9][30]_i_1_n_0\
+    );
+\bias_regs[9][30]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFEF0040FFFF0040"
+    )
+        port map (
+      I0 => \bias_regs[9][30]_i_4_n_0\,
+      I1 => axi_wdata(30),
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[8][31]_i_4_n_0\,
+      O => \bias_regs[9][30]_i_2_n_0\
+    );
+\bias_regs[9][30]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF01FFFFFF0000"
+    )
+        port map (
+      I0 => addr(3),
+      I1 => \addr_reg[1]_rep_n_0\,
+      I2 => \addr_reg[2]_rep_n_0\,
+      I3 => addr(4),
+      I4 => aresetn,
+      I5 => axi_bvalid_i_2_n_0,
+      O => \bias_regs[9][30]_i_3_n_0\
+    );
+\bias_regs[9][30]_i_4\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"EF"
+    )
+        port map (
+      I0 => \addr_reg[1]_rep_n_0\,
+      I1 => \addr_reg[2]_rep_n_0\,
+      I2 => \addr_reg[0]_rep_n_0\,
+      O => \bias_regs[9][30]_i_4_n_0\
     );
 \bias_regs[9][31]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0200FFFF"
+      INIT => X"222A2222"
     )
         port map (
-      I0 => addr(0),
-      I1 => addr(1),
-      I2 => addr(2),
-      I3 => \bias_regs[9][31]_i_3_n_0\,
-      I4 => aresetn,
+      I0 => \bias_regs[8][31]_i_3_n_0\,
+      I1 => aresetn,
+      I2 => \addr_reg[1]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[0]_rep_n_0\,
       O => \bias_regs[9][31]_i_1_n_0\
     );
 \bias_regs[9][31]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFBFFFF00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
-      I0 => axi_wdata(31),
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => \bias_regs[9][31]_i_3_n_0\,
+      I0 => \bias_regs[9][31]_i_3_n_0\,
+      I1 => axi_wdata(31),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
       I5 => aresetn,
       O => \bias_regs[9][31]_i_2_n_0\
     );
@@ -12122,100 +12809,107 @@ axi_wready_reg: unisim.vcomponents.FDRE
       INIT => X"08"
     )
         port map (
-      I0 => wr_en,
+      I0 => axi_bvalid_i_2_n_0,
       I1 => addr(3),
       I2 => addr(4),
       O => \bias_regs[9][31]_i_3_n_0\
     );
-\bias_regs[9][3]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(3),
+      I1 => axi_wdata(3),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][3]_i_1_n_0\
     );
-\bias_regs[9][4]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(4),
+      I1 => axi_wdata(4),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][4]_i_1_n_0\
     );
-\bias_regs[9][5]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"FFEF0040FFFF0040"
     )
         port map (
-      I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(5),
+      I0 => \bias_regs[9][30]_i_4_n_0\,
+      I1 => axi_wdata(5),
+      I2 => \addr_reg[3]_rep__0_n_0\,
+      I3 => \addr_reg[4]_rep__0_n_0\,
+      I4 => aresetn,
+      I5 => \bias_regs[8][31]_i_4_n_0\,
       O => \bias_regs[9][5]_i_1_n_0\
     );
-\bias_regs[9][6]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(6),
+      I1 => axi_wdata(6),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][6]_i_1_n_0\
     );
-\bias_regs[9][7]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(7),
+      I1 => axi_wdata(7),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][7]_i_1_n_0\
     );
-\bias_regs[9][8]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(8),
+      I1 => axi_wdata(8),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][8]_i_1_n_0\
     );
-\bias_regs[9][9]_i_1\: unisim.vcomponents.LUT5
+\bias_regs[9][9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00080000"
+      INIT => X"AAAAAA8A00000080"
     )
         port map (
       I0 => \bias_regs[9][31]_i_3_n_0\,
-      I1 => addr(0),
-      I2 => addr(1),
-      I3 => addr(2),
-      I4 => axi_wdata(9),
+      I1 => axi_wdata(9),
+      I2 => \addr_reg[0]_rep_n_0\,
+      I3 => \addr_reg[2]_rep_n_0\,
+      I4 => \addr_reg[1]_rep_n_0\,
+      I5 => aresetn,
       O => \bias_regs[9][9]_i_1_n_0\
     );
 \bias_regs_reg[0][0]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(0),
+      D => \bias_regs[0][0]_i_1_n_0\,
       Q => \^bias_0\(0),
       R => '0'
     );
@@ -12223,7 +12917,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(10),
+      D => \bias_regs[0][10]_i_1_n_0\,
       Q => \^bias_0\(10),
       R => '0'
     );
@@ -12231,7 +12925,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(11),
+      D => \bias_regs[0][11]_i_1_n_0\,
       Q => \^bias_0\(11),
       R => '0'
     );
@@ -12239,7 +12933,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(12),
+      D => \bias_regs[0][12]_i_1_n_0\,
       Q => \^bias_0\(12),
       R => '0'
     );
@@ -12247,7 +12941,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(13),
+      D => \bias_regs[0][13]_i_1_n_0\,
       Q => \^bias_0\(13),
       R => '0'
     );
@@ -12255,7 +12949,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(14),
+      D => \bias_regs[0][14]_i_1_n_0\,
       Q => \^bias_0\(14),
       R => '0'
     );
@@ -12263,7 +12957,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(15),
+      D => \bias_regs[0][15]_i_1_n_0\,
       Q => \^bias_0\(15),
       R => '0'
     );
@@ -12271,23 +12965,23 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(16),
+      D => \bias_regs[0][16]_i_1_n_0\,
       Q => \^bias_0\(16),
       R => '0'
     );
-\bias_regs_reg[0][17]\: unisim.vcomponents.FDSE
+\bias_regs_reg[0][17]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
       D => \bias_regs[0][17]_i_1_n_0\,
       Q => \^bias_0\(17),
-      S => \bias_regs[0][30]_i_1_n_0\
+      R => '0'
     );
 \bias_regs_reg[0][18]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(18),
+      D => \bias_regs[0][18]_i_1_n_0\,
       Q => \^bias_0\(18),
       R => '0'
     );
@@ -12295,7 +12989,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(19),
+      D => \bias_regs[0][19]_i_1_n_0\,
       Q => \^bias_0\(19),
       R => '0'
     );
@@ -12303,7 +12997,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(1),
+      D => \bias_regs[0][1]_i_1_n_0\,
       Q => \^bias_0\(1),
       R => '0'
     );
@@ -12311,7 +13005,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(20),
+      D => \bias_regs[0][20]_i_1_n_0\,
       Q => \^bias_0\(20),
       R => '0'
     );
@@ -12319,7 +13013,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(21),
+      D => \bias_regs[0][21]_i_1_n_0\,
       Q => \^bias_0\(21),
       R => '0'
     );
@@ -12327,7 +13021,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(22),
+      D => \bias_regs[0][22]_i_1_n_0\,
       Q => \^bias_0\(22),
       R => '0'
     );
@@ -12335,7 +13029,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(23),
+      D => \bias_regs[0][23]_i_1_n_0\,
       Q => \^bias_0\(23),
       R => '0'
     );
@@ -12343,23 +13037,23 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(24),
+      D => \bias_regs[0][24]_i_1_n_0\,
       Q => \^bias_0\(24),
       R => '0'
     );
-\bias_regs_reg[0][25]\: unisim.vcomponents.FDSE
+\bias_regs_reg[0][25]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
       D => \bias_regs[0][25]_i_1_n_0\,
       Q => \^bias_0\(25),
-      S => \bias_regs[0][30]_i_1_n_0\
+      R => '0'
     );
 \bias_regs_reg[0][26]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(26),
+      D => \bias_regs[0][26]_i_1_n_0\,
       Q => \^bias_0\(26),
       R => '0'
     );
@@ -12367,47 +13061,47 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(27),
+      D => \bias_regs[0][27]_i_1_n_0\,
       Q => \^bias_0\(27),
       R => '0'
     );
-\bias_regs_reg[0][28]\: unisim.vcomponents.FDSE
+\bias_regs_reg[0][28]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
       D => \bias_regs[0][28]_i_1_n_0\,
       Q => \^bias_0\(28),
-      S => \bias_regs[0][30]_i_1_n_0\
+      R => '0'
     );
-\bias_regs_reg[0][29]\: unisim.vcomponents.FDSE
+\bias_regs_reg[0][29]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
       D => \bias_regs[0][29]_i_1_n_0\,
       Q => \^bias_0\(29),
-      S => \bias_regs[0][30]_i_1_n_0\
+      R => '0'
     );
 \bias_regs_reg[0][2]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(2),
+      D => \bias_regs[0][2]_i_1_n_0\,
       Q => \^bias_0\(2),
       R => '0'
     );
-\bias_regs_reg[0][30]\: unisim.vcomponents.FDSE
+\bias_regs_reg[0][30]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => \bias_regs[0][30]_i_2_n_0\,
+      D => \bias_regs[0][30]_i_1_n_0\,
       Q => \^bias_0\(30),
-      S => \bias_regs[0][30]_i_1_n_0\
+      R => '0'
     );
 \bias_regs_reg[0][31]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(31),
+      D => \bias_regs[0][31]_i_2_n_0\,
       Q => \^bias_0\(31),
       R => '0'
     );
@@ -12415,7 +13109,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(3),
+      D => \bias_regs[0][3]_i_1_n_0\,
       Q => \^bias_0\(3),
       R => '0'
     );
@@ -12423,7 +13117,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(4),
+      D => \bias_regs[0][4]_i_1_n_0\,
       Q => \^bias_0\(4),
       R => '0'
     );
@@ -12431,7 +13125,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(5),
+      D => \bias_regs[0][5]_i_1_n_0\,
       Q => \^bias_0\(5),
       R => '0'
     );
@@ -12439,7 +13133,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(6),
+      D => \bias_regs[0][6]_i_1_n_0\,
       Q => \^bias_0\(6),
       R => '0'
     );
@@ -12447,7 +13141,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(7),
+      D => \bias_regs[0][7]_i_1_n_0\,
       Q => \^bias_0\(7),
       R => '0'
     );
@@ -12455,7 +13149,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(8),
+      D => \bias_regs[0][8]_i_1_n_0\,
       Q => \^bias_0\(8),
       R => '0'
     );
@@ -12463,7 +13157,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[0][31]_i_1_n_0\,
-      D => p_1_in(9),
+      D => \bias_regs[0][9]_i_1_n_0\,
       Q => \^bias_0\(9),
       R => '0'
     );
@@ -12737,7 +13431,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => \bias_regs[11][31]_i_1_n_0\,
       D => \bias_regs[11][10]_i_1_n_0\,
       Q => \^bias_11\(10),
-      R => '0'
+      R => \bias_regs[11][26]_i_1_n_0\
     );
 \bias_regs_reg[11][11]\: unisim.vcomponents.FDRE
      port map (
@@ -12801,7 +13495,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => \bias_regs[11][31]_i_1_n_0\,
       D => \bias_regs[11][18]_i_1_n_0\,
       Q => \^bias_11\(18),
-      R => '0'
+      R => \bias_regs[11][26]_i_1_n_0\
     );
 \bias_regs_reg[11][19]\: unisim.vcomponents.FDRE
      port map (
@@ -12871,9 +13565,9 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[11][31]_i_1_n_0\,
-      D => \bias_regs[11][26]_i_1_n_0\,
+      D => \bias_regs[11][26]_i_2_n_0\,
       Q => \^bias_11\(26),
-      R => '0'
+      R => \bias_regs[11][26]_i_1_n_0\
     );
 \bias_regs_reg[11][27]\: unisim.vcomponents.FDRE
      port map (
@@ -12905,7 +13599,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => \bias_regs[11][31]_i_1_n_0\,
       D => \bias_regs[11][2]_i_1_n_0\,
       Q => \^bias_11\(2),
-      R => '0'
+      R => \bias_regs[11][26]_i_1_n_0\
     );
 \bias_regs_reg[11][30]\: unisim.vcomponents.FDRE
      port map (
@@ -13238,770 +13932,770 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[13][0]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][0]_i_1_n_0\,
       Q => \^bias_13\(0),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][10]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][10]_i_1_n_0\,
       Q => \^bias_13\(10),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][11]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][11]_i_1_n_0\,
       Q => \^bias_13\(11),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][12]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][12]_i_1_n_0\,
       Q => \^bias_13\(12),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][13]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][13]_i_1_n_0\,
       Q => \^bias_13\(13),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][14]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][14]_i_1_n_0\,
       Q => \^bias_13\(14),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][15]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][15]_i_1_n_0\,
       Q => \^bias_13\(15),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][16]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][16]_i_1_n_0\,
       Q => \^bias_13\(16),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][17]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][17]_i_1_n_0\,
       Q => \^bias_13\(17),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][18]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][18]_i_1_n_0\,
       Q => \^bias_13\(18),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][19]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][19]_i_1_n_0\,
       Q => \^bias_13\(19),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][1]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][1]_i_1_n_0\,
       Q => \^bias_13\(1),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][20]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][20]_i_1_n_0\,
       Q => \^bias_13\(20),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][21]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][21]_i_1_n_0\,
       Q => \^bias_13\(21),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][22]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][22]_i_1_n_0\,
       Q => \^bias_13\(22),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][23]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][23]_i_1_n_0\,
       Q => \^bias_13\(23),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][24]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][24]_i_1_n_0\,
       Q => \^bias_13\(24),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][25]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][25]_i_1_n_0\,
       Q => \^bias_13\(25),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][26]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][26]_i_1_n_0\,
       Q => \^bias_13\(26),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][27]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][27]_i_1_n_0\,
       Q => \^bias_13\(27),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][28]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][28]_i_1_n_0\,
       Q => \^bias_13\(28),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][29]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][29]_i_1_n_0\,
       Q => \^bias_13\(29),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][2]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][2]_i_1_n_0\,
       Q => \^bias_13\(2),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][30]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][30]_i_1_n_0\,
       Q => \^bias_13\(30),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][31]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
-      D => \bias_regs[13][31]_i_2_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
+      D => \bias_regs[13][31]_i_3_n_0\,
       Q => \^bias_13\(31),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][3]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][3]_i_1_n_0\,
       Q => \^bias_13\(3),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][4]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][4]_i_1_n_0\,
       Q => \^bias_13\(4),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][5]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][5]_i_1_n_0\,
       Q => \^bias_13\(5),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][6]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][6]_i_1_n_0\,
       Q => \^bias_13\(6),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][7]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][7]_i_1_n_0\,
       Q => \^bias_13\(7),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][8]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][8]_i_1_n_0\,
       Q => \^bias_13\(8),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[13][9]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[13][31]_i_1_n_0\,
+      CE => \bias_regs[13][31]_i_2_n_0\,
       D => \bias_regs[13][9]_i_1_n_0\,
       Q => \^bias_13\(9),
-      R => '0'
+      R => \bias_regs[13][31]_i_1_n_0\
     );
 \bias_regs_reg[14][0]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][0]_i_1_n_0\,
       Q => \^bias_14\(0),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][10]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][10]_i_1_n_0\,
       Q => \^bias_14\(10),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][11]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][11]_i_1_n_0\,
       Q => \^bias_14\(11),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][12]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][12]_i_1_n_0\,
       Q => \^bias_14\(12),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][13]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][13]_i_1_n_0\,
       Q => \^bias_14\(13),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][14]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][14]_i_1_n_0\,
       Q => \^bias_14\(14),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][15]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][15]_i_1_n_0\,
       Q => \^bias_14\(15),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][16]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][16]_i_1_n_0\,
       Q => \^bias_14\(16),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][17]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][17]_i_1_n_0\,
       Q => \^bias_14\(17),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][18]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][18]_i_1_n_0\,
       Q => \^bias_14\(18),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][19]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][19]_i_1_n_0\,
       Q => \^bias_14\(19),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][1]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][1]_i_1_n_0\,
       Q => \^bias_14\(1),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][20]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][20]_i_1_n_0\,
       Q => \^bias_14\(20),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][21]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][21]_i_1_n_0\,
       Q => \^bias_14\(21),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][22]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][22]_i_1_n_0\,
       Q => \^bias_14\(22),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][23]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][23]_i_1_n_0\,
       Q => \^bias_14\(23),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][24]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][24]_i_1_n_0\,
       Q => \^bias_14\(24),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][25]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][25]_i_1_n_0\,
       Q => \^bias_14\(25),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][26]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][26]_i_1_n_0\,
       Q => \^bias_14\(26),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][27]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][27]_i_1_n_0\,
       Q => \^bias_14\(27),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][28]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][28]_i_1_n_0\,
       Q => \^bias_14\(28),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][29]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][29]_i_1_n_0\,
       Q => \^bias_14\(29),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][2]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][2]_i_1_n_0\,
       Q => \^bias_14\(2),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][30]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][30]_i_1_n_0\,
       Q => \^bias_14\(30),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][31]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
-      D => \bias_regs[14][31]_i_2_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
+      D => \bias_regs[14][31]_i_3_n_0\,
       Q => \^bias_14\(31),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][3]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][3]_i_1_n_0\,
       Q => \^bias_14\(3),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][4]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][4]_i_1_n_0\,
       Q => \^bias_14\(4),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][5]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][5]_i_1_n_0\,
       Q => \^bias_14\(5),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][6]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][6]_i_1_n_0\,
       Q => \^bias_14\(6),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][7]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][7]_i_1_n_0\,
       Q => \^bias_14\(7),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][8]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][8]_i_1_n_0\,
       Q => \^bias_14\(8),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
 \bias_regs_reg[14][9]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[14][31]_i_1_n_0\,
+      CE => \bias_regs[14][31]_i_2_n_0\,
       D => \bias_regs[14][9]_i_1_n_0\,
       Q => \^bias_14\(9),
-      R => '0'
+      R => \bias_regs[14][31]_i_1_n_0\
     );
-\bias_regs_reg[15][0]\: unisim.vcomponents.FDRE
+\bias_regs_reg[15][0]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][0]_i_1_n_0\,
       Q => \^bias_15\(0),
-      R => '0'
+      S => \bias_regs[15][5]_i_1_n_0\
     );
 \bias_regs_reg[15][10]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][10]_i_1_n_0\,
       Q => \^bias_15\(10),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][11]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][11]_i_1_n_0\,
       Q => \^bias_15\(11),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][12]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][12]_i_1_n_0\,
       Q => \^bias_15\(12),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][13]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][13]_i_1_n_0\,
       Q => \^bias_15\(13),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][14]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][14]_i_1_n_0\,
       Q => \^bias_15\(14),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][15]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][15]_i_1_n_0\,
       Q => \^bias_15\(15),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][16]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][16]_i_1_n_0\,
       Q => \^bias_15\(16),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][17]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][17]_i_1_n_0\,
       Q => \^bias_15\(17),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][18]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][18]_i_1_n_0\,
       Q => \^bias_15\(18),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][19]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][19]_i_1_n_0\,
       Q => \^bias_15\(19),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
-\bias_regs_reg[15][1]\: unisim.vcomponents.FDRE
+\bias_regs_reg[15][1]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][1]_i_1_n_0\,
       Q => \^bias_15\(1),
-      R => '0'
+      S => \bias_regs[15][5]_i_1_n_0\
     );
 \bias_regs_reg[15][20]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][20]_i_1_n_0\,
       Q => \^bias_15\(20),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][21]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][21]_i_1_n_0\,
       Q => \^bias_15\(21),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][22]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][22]_i_1_n_0\,
       Q => \^bias_15\(22),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][23]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][23]_i_1_n_0\,
       Q => \^bias_15\(23),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][24]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][24]_i_1_n_0\,
       Q => \^bias_15\(24),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][25]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][25]_i_1_n_0\,
       Q => \^bias_15\(25),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][26]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][26]_i_1_n_0\,
       Q => \^bias_15\(26),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][27]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][27]_i_1_n_0\,
       Q => \^bias_15\(27),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][28]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][28]_i_1_n_0\,
       Q => \^bias_15\(28),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][29]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][29]_i_1_n_0\,
       Q => \^bias_15\(29),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
-\bias_regs_reg[15][2]\: unisim.vcomponents.FDRE
+\bias_regs_reg[15][2]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][2]_i_1_n_0\,
       Q => \^bias_15\(2),
-      R => '0'
+      S => \bias_regs[15][5]_i_1_n_0\
     );
 \bias_regs_reg[15][30]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][30]_i_1_n_0\,
       Q => \^bias_15\(30),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][31]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
-      D => \bias_regs[15][31]_i_2_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
+      D => \bias_regs[15][31]_i_3_n_0\,
       Q => \^bias_15\(31),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
-\bias_regs_reg[15][3]\: unisim.vcomponents.FDRE
+\bias_regs_reg[15][3]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][3]_i_1_n_0\,
       Q => \^bias_15\(3),
-      R => '0'
+      S => \bias_regs[15][5]_i_1_n_0\
     );
-\bias_regs_reg[15][4]\: unisim.vcomponents.FDRE
+\bias_regs_reg[15][4]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][4]_i_1_n_0\,
       Q => \^bias_15\(4),
-      R => '0'
+      S => \bias_regs[15][5]_i_1_n_0\
     );
-\bias_regs_reg[15][5]\: unisim.vcomponents.FDRE
+\bias_regs_reg[15][5]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
-      D => \bias_regs[15][5]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
+      D => \bias_regs[15][5]_i_2_n_0\,
       Q => \^bias_15\(5),
-      R => '0'
+      S => \bias_regs[15][5]_i_1_n_0\
     );
 \bias_regs_reg[15][6]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][6]_i_1_n_0\,
       Q => \^bias_15\(6),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][7]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][7]_i_1_n_0\,
       Q => \^bias_15\(7),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][8]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][8]_i_1_n_0\,
       Q => \^bias_15\(8),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[15][9]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[15][31]_i_1_n_0\,
+      CE => \bias_regs[15][31]_i_2_n_0\,
       D => \bias_regs[15][9]_i_1_n_0\,
       Q => \^bias_15\(9),
-      R => '0'
+      R => \bias_regs[15][31]_i_1_n_0\
     );
 \bias_regs_reg[16][0]\: unisim.vcomponents.FDRE
      port map (
@@ -14262,23 +14956,23 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][0]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][0]_i_1_n_0\,
       Q => \^bias_17\(0),
       S => '0'
     );
-\bias_regs_reg[17][10]\: unisim.vcomponents.FDSE
+\bias_regs_reg[17][10]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => '1',
       D => \bias_regs[17][10]_i_1_n_0\,
       Q => \^bias_17\(10),
-      S => '0'
+      R => '0'
     );
 \bias_regs_reg[17][11]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][11]_i_1_n_0\,
       Q => \^bias_17\(11),
       S => '0'
@@ -14286,7 +14980,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][12]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][12]_i_1_n_0\,
       Q => \^bias_17\(12),
       S => '0'
@@ -14294,7 +14988,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][13]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][13]_i_1_n_0\,
       Q => \^bias_17\(13),
       S => '0'
@@ -14302,7 +14996,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][14]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][14]_i_1_n_0\,
       Q => \^bias_17\(14),
       S => '0'
@@ -14310,7 +15004,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][15]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][15]_i_1_n_0\,
       Q => \^bias_17\(15),
       S => '0'
@@ -14318,7 +15012,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][16]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][16]_i_1_n_0\,
       Q => \^bias_17\(16),
       S => '0'
@@ -14326,7 +15020,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][17]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][17]_i_1_n_0\,
       Q => \^bias_17\(17),
       S => '0'
@@ -14334,7 +15028,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][18]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][18]_i_1_n_0\,
       Q => \^bias_17\(18),
       S => '0'
@@ -14342,7 +15036,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][19]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][19]_i_1_n_0\,
       Q => \^bias_17\(19),
       S => '0'
@@ -14350,7 +15044,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][1]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][1]_i_1_n_0\,
       Q => \^bias_17\(1),
       S => '0'
@@ -14358,7 +15052,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][20]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][20]_i_1_n_0\,
       Q => \^bias_17\(20),
       S => '0'
@@ -14366,7 +15060,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][21]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][21]_i_1_n_0\,
       Q => \^bias_17\(21),
       S => '0'
@@ -14374,7 +15068,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][22]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][22]_i_1_n_0\,
       Q => \^bias_17\(22),
       S => '0'
@@ -14382,7 +15076,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][23]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][23]_i_1_n_0\,
       Q => \^bias_17\(23),
       S => '0'
@@ -14390,7 +15084,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][24]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][24]_i_1_n_0\,
       Q => \^bias_17\(24),
       S => '0'
@@ -14398,7 +15092,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][25]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][25]_i_1_n_0\,
       Q => \^bias_17\(25),
       S => '0'
@@ -14406,7 +15100,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][26]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][26]_i_1_n_0\,
       Q => \^bias_17\(26),
       S => '0'
@@ -14414,7 +15108,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][27]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][27]_i_1_n_0\,
       Q => \^bias_17\(27),
       S => '0'
@@ -14422,7 +15116,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][28]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][28]_i_1_n_0\,
       Q => \^bias_17\(28),
       S => '0'
@@ -14430,7 +15124,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][29]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][29]_i_1_n_0\,
       Q => \^bias_17\(29),
       S => '0'
@@ -14438,7 +15132,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][2]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][2]_i_1_n_0\,
       Q => \^bias_17\(2),
       S => '0'
@@ -14446,23 +15140,23 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][30]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
-      D => \bias_regs[17][30]_i_2_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
+      D => \bias_regs[17][30]_i_1_n_0\,
       Q => \^bias_17\(30),
       S => '0'
     );
-\bias_regs_reg[17][31]\: unisim.vcomponents.FDRE
+\bias_regs_reg[17][31]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => '1',
-      D => \bias_regs[17][31]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
+      D => \bias_regs[17][31]_i_2_n_0\,
       Q => \^bias_17\(31),
-      R => '0'
+      S => '0'
     );
 \bias_regs_reg[17][3]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][3]_i_1_n_0\,
       Q => \^bias_17\(3),
       S => '0'
@@ -14470,7 +15164,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][4]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][4]_i_1_n_0\,
       Q => \^bias_17\(4),
       S => '0'
@@ -14478,7 +15172,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][5]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][5]_i_1_n_0\,
       Q => \^bias_17\(5),
       S => '0'
@@ -14486,7 +15180,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][6]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][6]_i_1_n_0\,
       Q => \^bias_17\(6),
       S => '0'
@@ -14494,7 +15188,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][7]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][7]_i_1_n_0\,
       Q => \^bias_17\(7),
       S => '0'
@@ -14502,7 +15196,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][8]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][8]_i_1_n_0\,
       Q => \^bias_17\(8),
       S => '0'
@@ -14510,7 +15204,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \bias_regs_reg[17][9]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
-      CE => \bias_regs[17][30]_i_1_n_0\,
+      CE => \bias_regs[17][31]_i_1_n_0\,
       D => \bias_regs[17][9]_i_1_n_0\,
       Q => \^bias_17\(9),
       S => '0'
@@ -16601,7 +17295,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => \bias_regs[9][31]_i_1_n_0\,
       D => \bias_regs[9][13]_i_1_n_0\,
       Q => \^bias_9\(13),
-      R => '0'
+      R => \bias_regs[9][30]_i_1_n_0\
     );
 \bias_regs_reg[9][14]\: unisim.vcomponents.FDRE
      port map (
@@ -16673,7 +17367,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => \bias_regs[9][31]_i_1_n_0\,
       D => \bias_regs[9][21]_i_1_n_0\,
       Q => \^bias_9\(21),
-      R => '0'
+      R => \bias_regs[9][30]_i_1_n_0\
     );
 \bias_regs_reg[9][22]\: unisim.vcomponents.FDRE
      port map (
@@ -16737,7 +17431,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => \bias_regs[9][31]_i_1_n_0\,
       D => \bias_regs[9][29]_i_1_n_0\,
       Q => \^bias_9\(29),
-      R => '0'
+      R => \bias_regs[9][30]_i_1_n_0\
     );
 \bias_regs_reg[9][2]\: unisim.vcomponents.FDRE
      port map (
@@ -16751,9 +17445,9 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => \bias_regs[9][31]_i_1_n_0\,
-      D => \bias_regs[9][30]_i_1_n_0\,
+      D => \bias_regs[9][30]_i_2_n_0\,
       Q => \^bias_9\(30),
-      R => '0'
+      R => \bias_regs[9][30]_i_1_n_0\
     );
 \bias_regs_reg[9][31]\: unisim.vcomponents.FDRE
      port map (
@@ -16785,7 +17479,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => \bias_regs[9][31]_i_1_n_0\,
       D => \bias_regs[9][5]_i_1_n_0\,
       Q => \^bias_9\(5),
-      R => '0'
+      R => \bias_regs[9][30]_i_1_n_0\
     );
 \bias_regs_reg[9][6]\: unisim.vcomponents.FDRE
      port map (
@@ -16819,13 +17513,71 @@ axi_wready_reg: unisim.vcomponents.FDRE
       Q => \^bias_9\(9),
       R => '0'
     );
+\control_reg[0]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF0FEF2F0000E020"
+    )
+        port map (
+      I0 => \control_reg[0]_i_2_n_0\,
+      I1 => \addr_reg[3]_rep__0_n_0\,
+      I2 => \control_reg[0]_i_3_n_0\,
+      I3 => aresetn,
+      I4 => \control_reg[0]_i_4_n_0\,
+      I5 => \^control\,
+      O => \control_reg[0]_i_1_n_0\
+    );
+\control_reg[0]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"BAAA8AAA"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => addr(2),
+      I2 => addr(0),
+      I3 => addr(1),
+      I4 => axi_wdata(0),
+      O => \control_reg[0]_i_2_n_0\
+    );
+\control_reg[0]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00004000FFFFFFFF"
+    )
+        port map (
+      I0 => addr(2),
+      I1 => addr(0),
+      I2 => addr(1),
+      I3 => addr(4),
+      I4 => \addr_reg[3]_rep__0_n_0\,
+      I5 => aresetn,
+      O => \control_reg[0]_i_3_n_0\
+    );
+\control_reg[0]_i_4\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"01FFFFFF"
+    )
+        port map (
+      I0 => \addr_reg[3]_rep__0_n_0\,
+      I1 => addr(1),
+      I2 => addr(2),
+      I3 => addr(4),
+      I4 => \bias_regs[13][31]_i_4_n_0\,
+      O => \control_reg[0]_i_4_n_0\
+    );
+\control_reg_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => aclk,
+      CE => '1',
+      D => \control_reg[0]_i_1_n_0\,
+      Q => \^control\,
+      R => '0'
+    );
 data_curr_i_1: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FF202020"
     )
         port map (
       I0 => data_curr,
-      I1 => \bias_regs[3][31]_i_3_n_0\,
+      I1 => addr_curr,
       I2 => aresetn,
       I3 => s_axil_wvalid,
       I4 => \^s_axil_wready\,
@@ -16848,7 +17600,7 @@ entity PL_NN_prototype_axi4_lite_register_m_0_0 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
-    s_axil_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axil_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_axil_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axil_awvalid : in STD_LOGIC;
     s_axil_awready : out STD_LOGIC;
@@ -16859,7 +17611,7 @@ entity PL_NN_prototype_axi4_lite_register_m_0_0 is
     s_axil_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axil_bvalid : out STD_LOGIC;
     s_axil_bready : in STD_LOGIC;
-    s_axil_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axil_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_axil_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axil_arvalid : in STD_LOGIC;
     s_axil_arready : out STD_LOGIC;
@@ -16891,7 +17643,7 @@ entity PL_NN_prototype_axi4_lite_register_m_0_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of PL_NN_prototype_axi4_lite_register_m_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of PL_NN_prototype_axi4_lite_register_m_0_0 : entity is "axi4_lite_register_module_0,axi4_lite_register_module,{}";
+  attribute CHECK_LICENSE_TYPE of PL_NN_prototype_axi4_lite_register_m_0_0 : entity is "PL_NN_prototype_axi4_lite_register_m_0_0,axi4_lite_register_module,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of PL_NN_prototype_axi4_lite_register_m_0_0 : entity is "yes";
   attribute IP_DEFINITION_SOURCE : string;
@@ -16905,7 +17657,7 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of aclk : signal is "xilinx.com:signal:clock:1.0 aclk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF s_axil, ASSOCIATED_RESET aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF s_axil, ASSOCIATED_RESET aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN PL_NN_prototype_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 aresetn RST";
   attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axil_arready : signal is "xilinx.com:interface:aximm:1.0 s_axil ARREADY";
@@ -16915,7 +17667,7 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0 is
   attribute X_INTERFACE_INFO of s_axil_bready : signal is "xilinx.com:interface:aximm:1.0 s_axil BREADY";
   attribute X_INTERFACE_INFO of s_axil_bvalid : signal is "xilinx.com:interface:aximm:1.0 s_axil BVALID";
   attribute X_INTERFACE_INFO of s_axil_rready : signal is "xilinx.com:interface:aximm:1.0 s_axil RREADY";
-  attribute X_INTERFACE_PARAMETER of s_axil_rready : signal is "XIL_INTERFACENAME s_axil, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axil_rready : signal is "XIL_INTERFACENAME s_axil, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN PL_NN_prototype_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axil_rvalid : signal is "xilinx.com:interface:aximm:1.0 s_axil RVALID";
   attribute X_INTERFACE_INFO of s_axil_wready : signal is "xilinx.com:interface:aximm:1.0 s_axil WREADY";
   attribute X_INTERFACE_INFO of s_axil_wvalid : signal is "xilinx.com:interface:aximm:1.0 s_axil WVALID";
@@ -16929,7 +17681,6 @@ architecture STRUCTURE of PL_NN_prototype_axi4_lite_register_m_0_0 is
   attribute X_INTERFACE_INFO of s_axil_wdata : signal is "xilinx.com:interface:aximm:1.0 s_axil WDATA";
   attribute X_INTERFACE_INFO of s_axil_wstrb : signal is "xilinx.com:interface:aximm:1.0 s_axil WSTRB";
 begin
-  control <= \<const0>\;
   s_axil_bresp(1) <= \<const0>\;
   s_axil_bresp(0) <= \<const0>\;
   s_axil_rresp(1) <= \<const0>\;
@@ -16962,6 +17713,7 @@ inst: entity work.PL_NN_prototype_axi4_lite_register_m_0_0_axi4_lite_register_mo
       bias_7(31 downto 0) => bias_7(31 downto 0),
       bias_8(31 downto 0) => bias_8(31 downto 0),
       bias_9(31 downto 0) => bias_9(31 downto 0),
+      control => control,
       s_axil_araddr(4 downto 0) => s_axil_araddr(4 downto 0),
       s_axil_arready => s_axil_arready,
       s_axil_arvalid => s_axil_arvalid,

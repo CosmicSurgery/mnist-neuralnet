@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="PL_NN_prototype" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1727732557"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1727732557"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1727732557"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1727732557"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1727890704"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1727890704"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1727890704"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1727890704"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\PL_NN_prototype_axi4_lite_register_m_0_0\PL_NN_prototype_axi4_lite_register_m_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi4_lite_register_m_0"/>
@@ -71,14 +71,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\PL_NN_prototype_axi4_lite_final_outp_0_0\PL_NN_prototype_axi4_lite_final_outp_0_0.xci" Type="IP">
-        <Instance HierarchyPath="axi4_lite_final_outp_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\PL_NN_prototype_xlconstant_0_0\PL_NN_prototype_xlconstant_0_0.xci" Type="IP">
         <Instance HierarchyPath="xlconstant_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -113,6 +105,14 @@
       </File>
       <File Name="ip\PL_NN_prototype_rst_ps7_0_100M_0\PL_NN_prototype_rst_ps7_0_100M_0.xci" Type="IP">
         <Instance HierarchyPath="rst_ps7_0_100M"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\PL_NN_prototype_axi4_lite_final_outp_1_0\PL_NN_prototype_axi4_lite_final_outp_1_0.xci" Type="IP">
+        <Instance HierarchyPath="axi4_lite_final_output"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

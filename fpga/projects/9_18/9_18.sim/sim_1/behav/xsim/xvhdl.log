@@ -1,2 +1,20 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/debug_interconnect/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'axi_bram_ctrl_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/PL_NN_prototype/ip/PL_NN_prototype_perceptron_2_0/src/mult_gen_0/sim/mult_gen_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mult_gen_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/PL_NN_prototype/ip/PL_NN_prototype_perceptron_2_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axi_bram_ctrl_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/PL_NN_prototype/ip/PL_NN_prototype_perceptron_0_0/src/mult_gen_0/sim/mult_gen_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mult_gen_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/PL_NN_prototype/ip/PL_NN_prototype_perceptron_0_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axi_bram_ctrl_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/PL_NN_prototype/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axi_bram_ctrl_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/PL_NN_prototype/ip/PL_NN_prototype_perceptron_1_0/src/mult_gen_0/sim/mult_gen_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mult_gen_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/PL_NN_prototype/ip/PL_NN_prototype_perceptron_1_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axi_bram_ctrl_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/PL_NN_prototype/ip/PL_NN_prototype_axi_gpio_0_0/sim/PL_NN_prototype_axi_gpio_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PL_NN_prototype_axi_gpio_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/PL_NN_prototype/ip/PL_NN_prototype_rst_ps7_0_100M_0/sim/PL_NN_prototype_rst_ps7_0_100M_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PL_NN_prototype_rst_ps7_0_100M_0'
