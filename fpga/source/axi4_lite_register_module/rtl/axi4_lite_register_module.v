@@ -4,7 +4,7 @@ module axi4_lite_register_module (
     input wire aresetn,
     
     // AXI4-Lite slave interface
-    input wire [4:0] s_axil_awaddr,
+    input wire [6:0] s_axil_awaddr,
     input wire [2:0] s_axil_awprot,
     input wire s_axil_awvalid,
     output wire s_axil_awready,
@@ -15,7 +15,7 @@ module axi4_lite_register_module (
     output wire [1:0] s_axil_bresp,
     output wire s_axil_bvalid,
     input wire s_axil_bready,
-    input wire [4:0] s_axil_araddr,
+    input wire [6:0] s_axil_araddr,
     input wire [2:0] s_axil_arprot,
     input wire s_axil_arvalid,
     output wire s_axil_arready,
@@ -45,10 +45,10 @@ module axi4_lite_register_module (
     output wire [31:0] bias_17,
     
     // Control register output
-    output wire control,
+    output wire [31:0] control,
     
     // Status register input
-    input wire status
+    input wire [31:0]status
 );
 
     // Internal registers
@@ -87,7 +87,7 @@ module axi4_lite_register_module (
             control_reg <= 0;
         end 
         if (s_axil_awvalid & axi_awready) begin
-            addr <= s_axil_awaddr;
+            addr <= s_axil_awaddr[6:2];
             addr_curr <= 1;
         end
         if (s_axil_wvalid & axi_wready) begin
@@ -96,17 +96,17 @@ module axi4_lite_register_module (
         end
         if (wr_en) begin
             if (addr < 5'd18) begin
+            addr_curr <= 0;
+            data_curr <= 0;
                 bias_regs[addr] <= axi_wdata;
-                addr_curr <= 0;
-                data_curr <= 0;
-            end else if (addr == 5'd19) begin
+            end else if (addr == 5'd18) begin
                 control_reg <= axi_wdata;
             end
         end 
         //come back tothis
         
         if (s_axil_awvalid & axi_awready) begin
-            addr <= s_axil_awaddr;
+            addr <= s_axil_awaddr[6:2];
             addr_curr <= 1;
         end
         if (s_axil_wvalid & axi_wready) begin
@@ -120,9 +120,11 @@ module axi4_lite_register_module (
         if (~aresetn) begin
             axi_rdata <= 32'h0;
         end else if (rd_en) begin
-            if (s_axil_araddr < 5'd18) begin
-                axi_rdata <= bias_regs[s_axil_araddr];
-            end else if (s_axil_araddr == 5'd19) begin
+            if (s_axil_araddr[6:2] < 5'd18) begin
+                axi_rdata <= bias_regs[s_axil_araddr[6:2]];
+            end else if (s_axil_araddr[6:2] == 7'd18) begin
+                axi_rdata <= control_reg;
+            end else if (s_axil_araddr[6:2] == 5'd19) begin
                 axi_rdata <= status;
             end else begin
                 axi_rdata <= 32'h0;
@@ -143,7 +145,7 @@ module axi4_lite_register_module (
             // Write response
             if (wr_en) begin
                 axi_bvalid <= 1'b1;
-            end else if (s_axil_bready & axi_bvalid) begin
+            end else if (~wr_en & axi_bvalid) begin
                 axi_bvalid <= 1'b0;
             end
             

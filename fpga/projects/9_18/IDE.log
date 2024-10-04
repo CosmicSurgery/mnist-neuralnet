@@ -896,3 +896,2389 @@ con
 
 14:57:42 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_2_app_system_standalone.tcl'
 14:58:21 INFO  : Disconnected from the channel tcfchan#3.
+09:27:43 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\projects\9_18\temp_xsdb_launch_script.tcl
+09:27:51 INFO  : XSCT server has started successfully.
+09:27:51 INFO  : plnx-install-location is set to ''
+09:27:51 INFO  : Successfully done setting XSCT server connection channel  
+09:27:51 INFO  : Successfully done setting workspace for the tool. 
+09:27:58 INFO  : Registering command handlers for Vitis TCF services
+09:28:08 INFO  : Successfully done query RDI_DATADIR 
+09:30:24 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+09:30:24 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+09:33:34 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+09:36:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:36:00 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+09:36:00 INFO  : 'jtag frequency' command is executed.
+09:36:00 INFO  : Context for 'APU' is selected.
+09:36:00 INFO  : System reset is completed.
+09:36:04 INFO  : 'after 3000' command is executed.
+09:36:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+09:36:05 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+09:36:05 INFO  : Context for 'APU' is selected.
+09:36:05 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+09:36:05 INFO  : 'configparams force-mem-access 1' command is executed.
+09:36:05 INFO  : Context for 'APU' is selected.
+09:36:05 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+09:36:06 ERROR : Memory read error at 0xF8F00208. AP transaction timeout
+09:36:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+09:36:06 ERROR : Memory read error at 0xF8F00208. AP transaction timeout
+09:36:12 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+09:36:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:36:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+09:36:41 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+09:36:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:36:48 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+09:36:48 INFO  : 'jtag frequency' command is executed.
+09:36:48 INFO  : Context for 'APU' is selected.
+09:36:48 INFO  : System reset is completed.
+09:36:51 INFO  : 'after 3000' command is executed.
+09:36:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+09:36:53 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+09:36:53 INFO  : Context for 'APU' is selected.
+09:36:53 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+09:36:53 INFO  : 'configparams force-mem-access 1' command is executed.
+09:36:53 INFO  : Context for 'APU' is selected.
+09:36:53 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+09:36:54 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+09:36:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+09:36:54 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+09:37:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:37:07 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+09:37:07 INFO  : 'jtag frequency' command is executed.
+09:37:07 INFO  : Context for 'APU' is selected.
+09:37:08 INFO  : System reset is completed.
+09:37:11 INFO  : 'after 3000' command is executed.
+09:37:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+09:37:12 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+09:37:12 INFO  : Context for 'APU' is selected.
+09:37:12 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+09:37:12 INFO  : 'configparams force-mem-access 1' command is executed.
+09:37:12 INFO  : Context for 'APU' is selected.
+09:37:12 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+09:37:12 INFO  : 'ps7_init' command is executed.
+09:37:12 INFO  : 'ps7_post_config' command is executed.
+09:37:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:37:13 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:37:13 INFO  : 'configparams force-mem-access 0' command is executed.
+09:37:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:37:13 INFO  : Memory regions updated for context APU
+09:37:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:37:13 INFO  : 'con' command is executed.
+09:37:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:37:13 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+10:06:44 ERROR : Failed to read platform from project 'design_3_app_system'.
+Reason: Failed to execute command 'platform read {C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app_system/platform.spr}'. Click on details for more information.
+10:07:00 ERROR : Failed to read platform from project 'design_3_app_system'.
+Reason: Failed to execute command 'platform read {C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app_system/platform.spr}'. Click on details for more information.
+10:07:57 ERROR : Failed to read platform from project 'design_3_app_system'.
+Reason: Failed to execute command 'platform read {C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app_system/platform.spr}'. Click on details for more information.
+10:08:56 INFO  : Hardware specification for platform project 'design_3' is updated.
+10:09:19 INFO  : Hardware specification for platform project 'design_3' is updated.
+10:10:49 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:10:49 INFO  : Updating application flags with new BSP settings...
+10:10:49 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:10:52 INFO  : The hardware specfication used by project 'design_3_app' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+10:10:52 INFO  : The file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\design_3_app\_ide\bitstream\design_3_wrapper.bit' stored in project is removed.
+10:10:52 INFO  : The updated bitstream files are copied from platform to folder 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\design_3_app\_ide\bitstream' in project 'design_3_app'.
+10:10:52 INFO  : The file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\design_3_app\_ide\psinit\ps7_init.tcl' stored in project is removed.
+10:11:00 INFO  : The updated ps init files are copied from platform to folder 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\design_3_app\_ide\psinit' in project 'design_3_app'.
+10:12:18 INFO  : Disconnected from the channel tcfchan#4.
+10:12:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:12:18 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:12:18 INFO  : 'jtag frequency' command is executed.
+10:12:18 INFO  : Context for 'APU' is selected.
+10:12:18 INFO  : System reset is completed.
+10:12:21 INFO  : 'after 3000' command is executed.
+10:12:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:12:22 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:12:22 INFO  : Context for 'APU' is selected.
+10:12:23 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:12:23 INFO  : 'configparams force-mem-access 1' command is executed.
+10:12:23 INFO  : Context for 'APU' is selected.
+10:12:23 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:12:23 INFO  : 'ps7_init' command is executed.
+10:12:23 INFO  : 'ps7_post_config' command is executed.
+10:12:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:12:23 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:12:23 INFO  : 'configparams force-mem-access 0' command is executed.
+10:12:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:12:23 INFO  : Memory regions updated for context APU
+10:12:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:12:23 INFO  : 'con' command is executed.
+10:12:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:12:23 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+10:16:12 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:16:12 INFO  : Updating application flags with new BSP settings...
+10:16:12 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:26:51 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:26:51 INFO  : Updating application flags with new BSP settings...
+10:26:51 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:27:04 INFO  : Disconnected from the channel tcfchan#8.
+10:27:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:27:05 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:27:05 INFO  : 'jtag frequency' command is executed.
+10:27:05 INFO  : Context for 'APU' is selected.
+10:27:05 INFO  : System reset is completed.
+10:27:08 INFO  : 'after 3000' command is executed.
+10:27:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:27:09 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:27:09 INFO  : Context for 'APU' is selected.
+10:27:09 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:27:09 INFO  : 'configparams force-mem-access 1' command is executed.
+10:27:09 INFO  : Context for 'APU' is selected.
+10:27:09 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:27:10 INFO  : 'ps7_init' command is executed.
+10:27:10 INFO  : 'ps7_post_config' command is executed.
+10:27:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:27:10 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:27:10 INFO  : 'configparams force-mem-access 0' command is executed.
+10:27:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:27:10 INFO  : Memory regions updated for context APU
+10:27:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:27:10 INFO  : 'con' command is executed.
+10:27:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:27:10 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+10:32:10 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:32:10 INFO  : Updating application flags with new BSP settings...
+10:32:10 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:32:56 INFO  : Disconnected from the channel tcfchan#11.
+10:32:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:32:57 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:32:57 INFO  : 'jtag frequency' command is executed.
+10:32:57 INFO  : Context for 'APU' is selected.
+10:32:57 INFO  : System reset is completed.
+10:33:00 INFO  : 'after 3000' command is executed.
+10:33:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:33:01 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:33:01 INFO  : Context for 'APU' is selected.
+10:33:01 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:33:01 INFO  : 'configparams force-mem-access 1' command is executed.
+10:33:01 INFO  : Context for 'APU' is selected.
+10:33:01 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:33:02 INFO  : 'ps7_init' command is executed.
+10:33:02 INFO  : 'ps7_post_config' command is executed.
+10:33:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:33:02 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:33:02 INFO  : 'configparams force-mem-access 0' command is executed.
+10:33:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:33:02 INFO  : Memory regions updated for context APU
+10:33:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:33:02 INFO  : 'con' command is executed.
+10:33:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:33:02 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+10:34:24 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:34:24 INFO  : Updating application flags with new BSP settings...
+10:34:24 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:34:36 INFO  : Disconnected from the channel tcfchan#13.
+10:34:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:34:36 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:34:36 INFO  : 'jtag frequency' command is executed.
+10:34:36 INFO  : Context for 'APU' is selected.
+10:34:36 INFO  : System reset is completed.
+10:34:39 INFO  : 'after 3000' command is executed.
+10:34:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:34:40 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:34:40 INFO  : Context for 'APU' is selected.
+10:34:40 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:34:40 INFO  : 'configparams force-mem-access 1' command is executed.
+10:34:40 INFO  : Context for 'APU' is selected.
+10:34:40 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:34:41 INFO  : 'ps7_init' command is executed.
+10:34:41 INFO  : 'ps7_post_config' command is executed.
+10:34:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:34:41 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:34:41 INFO  : 'configparams force-mem-access 0' command is executed.
+10:34:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:34:41 INFO  : Memory regions updated for context APU
+10:34:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:34:42 INFO  : 'con' command is executed.
+10:34:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:34:42 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+10:36:44 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:36:44 INFO  : Updating application flags with new BSP settings...
+10:36:44 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:37:03 INFO  : Disconnected from the channel tcfchan#15.
+10:37:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:37:04 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:37:04 INFO  : 'jtag frequency' command is executed.
+10:37:04 INFO  : Context for 'APU' is selected.
+10:37:04 INFO  : System reset is completed.
+10:37:07 INFO  : 'after 3000' command is executed.
+10:37:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:37:08 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:37:08 INFO  : Context for 'APU' is selected.
+10:37:08 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:37:08 INFO  : 'configparams force-mem-access 1' command is executed.
+10:37:08 INFO  : Context for 'APU' is selected.
+10:37:08 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:37:09 ERROR : Memory write error at 0xF8006008. AHB Memory access port is disabled
+10:37:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+10:37:09 ERROR : Memory write error at 0xF8006008. AHB Memory access port is disabled
+10:37:15 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:37:15 INFO  : Updating application flags with new BSP settings...
+10:37:15 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:37:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:37:28 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:37:28 INFO  : 'jtag frequency' command is executed.
+10:37:28 INFO  : Context for 'APU' is selected.
+10:37:28 INFO  : System reset is completed.
+10:37:32 INFO  : 'after 3000' command is executed.
+10:37:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:37:33 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:37:33 INFO  : Context for 'APU' is selected.
+10:37:33 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:37:33 INFO  : 'configparams force-mem-access 1' command is executed.
+10:37:33 INFO  : Context for 'APU' is selected.
+10:37:33 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:37:34 INFO  : 'ps7_init' command is executed.
+10:37:34 INFO  : 'ps7_post_config' command is executed.
+10:37:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:37:34 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:37:34 INFO  : 'configparams force-mem-access 0' command is executed.
+10:37:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:37:34 INFO  : Memory regions updated for context APU
+10:37:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:37:34 INFO  : 'con' command is executed.
+10:37:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:37:34 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+10:38:22 INFO  : Disconnected from the channel tcfchan#17.
+10:38:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:38:23 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:38:23 INFO  : 'jtag frequency' command is executed.
+10:38:23 INFO  : Context for 'APU' is selected.
+10:38:23 INFO  : System reset is completed.
+10:38:26 INFO  : 'after 3000' command is executed.
+10:38:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:38:28 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:38:28 INFO  : Context for 'APU' is selected.
+10:38:28 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:38:28 INFO  : 'configparams force-mem-access 1' command is executed.
+10:38:28 INFO  : Context for 'APU' is selected.
+10:38:28 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:38:28 INFO  : 'ps7_init' command is executed.
+10:38:28 INFO  : 'ps7_post_config' command is executed.
+10:38:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:38:28 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:38:28 INFO  : 'configparams force-mem-access 0' command is executed.
+10:38:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:38:28 INFO  : Memory regions updated for context APU
+10:38:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:38:29 INFO  : 'con' command is executed.
+10:38:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:38:29 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+10:39:07 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:39:08 INFO  : Updating application flags with new BSP settings...
+10:39:08 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:39:22 INFO  : Disconnected from the channel tcfchan#19.
+10:39:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:39:23 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:39:23 INFO  : 'jtag frequency' command is executed.
+10:39:23 INFO  : Context for 'APU' is selected.
+10:39:23 INFO  : System reset is completed.
+10:39:26 INFO  : 'after 3000' command is executed.
+10:39:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:39:27 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:39:27 INFO  : Context for 'APU' is selected.
+10:39:27 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:39:27 INFO  : 'configparams force-mem-access 1' command is executed.
+10:39:27 INFO  : Context for 'APU' is selected.
+10:39:27 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:39:28 ERROR : Memory read error at 0xF8F00208. Cannot halt processor core, timeout
+10:39:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+10:39:28 ERROR : Memory read error at 0xF8F00208. Cannot halt processor core, timeout
+10:39:33 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:39:33 INFO  : Updating application flags with new BSP settings...
+10:39:33 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:39:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:39:53 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:39:53 INFO  : 'jtag frequency' command is executed.
+10:39:53 INFO  : Context for 'APU' is selected.
+10:39:53 INFO  : System reset is completed.
+10:39:56 INFO  : 'after 3000' command is executed.
+10:39:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:39:57 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:39:58 INFO  : Context for 'APU' is selected.
+10:39:58 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:39:58 INFO  : 'configparams force-mem-access 1' command is executed.
+10:39:58 INFO  : Context for 'APU' is selected.
+10:39:58 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:39:58 INFO  : 'ps7_init' command is executed.
+10:39:58 INFO  : 'ps7_post_config' command is executed.
+10:39:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:39:59 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:39:59 INFO  : 'configparams force-mem-access 0' command is executed.
+10:39:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:39:59 INFO  : Memory regions updated for context APU
+10:39:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:39:59 INFO  : 'con' command is executed.
+10:39:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:39:59 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+10:40:35 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:40:36 INFO  : Updating application flags with new BSP settings...
+10:40:36 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:40:51 INFO  : Disconnected from the channel tcfchan#21.
+10:40:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:40:52 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:40:52 INFO  : 'jtag frequency' command is executed.
+10:40:52 INFO  : Context for 'APU' is selected.
+10:40:52 INFO  : System reset is completed.
+10:40:55 INFO  : 'after 3000' command is executed.
+10:40:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:40:56 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:40:56 INFO  : Context for 'APU' is selected.
+10:40:56 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:40:56 INFO  : 'configparams force-mem-access 1' command is executed.
+10:40:56 INFO  : Context for 'APU' is selected.
+10:40:56 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:40:57 ERROR : Memory read error at 0xF800603C. AHB Memory access port is disabled
+10:40:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+10:40:57 ERROR : Memory read error at 0xF800603C. AHB Memory access port is disabled
+10:41:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:41:10 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:41:10 INFO  : 'jtag frequency' command is executed.
+10:41:10 INFO  : Context for 'APU' is selected.
+10:41:10 INFO  : System reset is completed.
+10:41:13 INFO  : 'after 3000' command is executed.
+10:41:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:41:14 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:41:14 INFO  : Context for 'APU' is selected.
+10:41:14 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:41:14 INFO  : 'configparams force-mem-access 1' command is executed.
+10:41:14 INFO  : Context for 'APU' is selected.
+10:41:15 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:41:15 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+10:41:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+10:41:15 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+10:41:22 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:41:22 INFO  : Updating application flags with new BSP settings...
+10:41:22 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:41:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:42:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+10:42:05 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+10:42:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:42:13 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:42:13 INFO  : 'jtag frequency' command is executed.
+10:42:13 INFO  : Context for 'APU' is selected.
+10:42:13 INFO  : System reset is completed.
+10:42:16 INFO  : 'after 3000' command is executed.
+10:42:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:42:17 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:42:18 INFO  : Context for 'APU' is selected.
+10:42:18 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:42:18 INFO  : 'configparams force-mem-access 1' command is executed.
+10:42:18 INFO  : Context for 'APU' is selected.
+10:42:18 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:42:18 INFO  : 'ps7_init' command is executed.
+10:42:18 INFO  : 'ps7_post_config' command is executed.
+10:42:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:42:19 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:42:19 INFO  : 'configparams force-mem-access 0' command is executed.
+10:42:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:42:19 INFO  : Memory regions updated for context APU
+10:42:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:42:19 INFO  : 'con' command is executed.
+10:42:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:42:19 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+10:44:21 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:44:21 INFO  : Updating application flags with new BSP settings...
+10:44:21 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:44:48 INFO  : Disconnected from the channel tcfchan#24.
+10:44:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:44:49 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:44:49 INFO  : 'jtag frequency' command is executed.
+10:44:49 INFO  : Context for 'APU' is selected.
+10:44:49 INFO  : System reset is completed.
+10:44:52 INFO  : 'after 3000' command is executed.
+10:44:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:44:54 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:44:54 INFO  : Context for 'APU' is selected.
+10:44:54 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:44:54 INFO  : 'configparams force-mem-access 1' command is executed.
+10:44:55 INFO  : Context for 'APU' is selected.
+10:44:55 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:44:55 ERROR : Memory read error at 0xF8F00208. Cannot halt processor core, timeout
+10:44:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+10:44:55 ERROR : Memory read error at 0xF8F00208. Cannot halt processor core, timeout
+10:45:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:45:18 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:45:18 INFO  : 'jtag frequency' command is executed.
+10:45:18 INFO  : Context for 'APU' is selected.
+10:45:18 INFO  : System reset is completed.
+10:45:21 INFO  : 'after 3000' command is executed.
+10:45:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:45:22 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:45:23 INFO  : Context for 'APU' is selected.
+10:45:23 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:45:23 INFO  : 'configparams force-mem-access 1' command is executed.
+10:45:23 INFO  : Context for 'APU' is selected.
+10:45:23 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:45:23 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+10:45:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+10:45:23 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+10:45:32 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+10:45:32 INFO  : Updating application flags with new BSP settings...
+10:45:32 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+10:45:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:46:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+10:46:15 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+10:46:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:46:23 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+10:46:23 INFO  : 'jtag frequency' command is executed.
+10:46:23 INFO  : Context for 'APU' is selected.
+10:46:23 INFO  : System reset is completed.
+10:46:26 INFO  : 'after 3000' command is executed.
+10:46:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+10:46:28 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+10:46:28 INFO  : Context for 'APU' is selected.
+10:46:28 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+10:46:28 INFO  : 'configparams force-mem-access 1' command is executed.
+10:46:28 INFO  : Context for 'APU' is selected.
+10:46:28 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+10:46:29 INFO  : 'ps7_init' command is executed.
+10:46:29 INFO  : 'ps7_post_config' command is executed.
+10:46:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:46:29 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:46:29 INFO  : 'configparams force-mem-access 0' command is executed.
+10:46:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:46:29 INFO  : Memory regions updated for context APU
+10:46:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:46:30 INFO  : 'con' command is executed.
+10:46:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:46:30 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+12:12:41 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+12:12:41 INFO  : Updating application flags with new BSP settings...
+12:12:41 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+12:13:27 INFO  : Disconnected from the channel tcfchan#27.
+12:13:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:13:28 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+12:13:28 INFO  : 'jtag frequency' command is executed.
+12:13:28 INFO  : Context for 'APU' is selected.
+12:13:28 INFO  : System reset is completed.
+12:13:31 INFO  : 'after 3000' command is executed.
+12:13:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+12:13:33 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+12:13:33 INFO  : Context for 'APU' is selected.
+12:13:33 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+12:13:33 INFO  : 'configparams force-mem-access 1' command is executed.
+12:13:33 INFO  : Context for 'APU' is selected.
+12:13:33 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+12:13:34 INFO  : 'ps7_init' command is executed.
+12:13:34 INFO  : 'ps7_post_config' command is executed.
+12:13:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:13:34 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:13:34 INFO  : 'configparams force-mem-access 0' command is executed.
+12:13:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:13:35 INFO  : Memory regions updated for context APU
+12:13:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:13:35 INFO  : 'con' command is executed.
+12:13:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:13:35 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+12:15:25 INFO  : Disconnected from the channel tcfchan#30.
+12:15:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:15:26 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+12:15:26 INFO  : 'jtag frequency' command is executed.
+12:15:26 INFO  : Context for 'APU' is selected.
+12:15:26 INFO  : System reset is completed.
+12:15:29 INFO  : 'after 3000' command is executed.
+12:15:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+12:15:30 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+12:15:30 INFO  : Context for 'APU' is selected.
+12:15:30 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+12:15:30 INFO  : 'configparams force-mem-access 1' command is executed.
+12:15:30 INFO  : Context for 'APU' is selected.
+12:15:30 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+12:15:31 INFO  : 'ps7_init' command is executed.
+12:15:31 INFO  : 'ps7_post_config' command is executed.
+12:15:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:15:32 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:15:32 INFO  : 'configparams force-mem-access 0' command is executed.
+12:15:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:15:32 INFO  : Memory regions updated for context APU
+12:15:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:15:32 INFO  : 'con' command is executed.
+12:15:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:15:32 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+12:25:19 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+12:25:19 INFO  : Updating application flags with new BSP settings...
+12:25:19 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+12:25:49 INFO  : Disconnected from the channel tcfchan#31.
+12:25:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:25:49 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+12:25:49 INFO  : 'jtag frequency' command is executed.
+12:25:49 INFO  : Context for 'APU' is selected.
+12:25:50 INFO  : System reset is completed.
+12:25:53 INFO  : 'after 3000' command is executed.
+12:25:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+12:25:54 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+12:25:54 INFO  : Context for 'APU' is selected.
+12:25:54 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+12:25:54 INFO  : 'configparams force-mem-access 1' command is executed.
+12:25:54 INFO  : Context for 'APU' is selected.
+12:25:54 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+12:25:55 INFO  : 'ps7_init' command is executed.
+12:25:55 INFO  : 'ps7_post_config' command is executed.
+12:25:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:25:55 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:25:55 INFO  : 'configparams force-mem-access 0' command is executed.
+12:25:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:25:55 INFO  : Memory regions updated for context APU
+12:25:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:25:55 INFO  : 'con' command is executed.
+12:25:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:25:55 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+14:30:21 INFO  : Hardware specification for platform project 'design_3' is updated.
+14:31:05 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+14:31:13 INFO  : Updating application flags with new BSP settings...
+14:31:13 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+14:31:19 INFO  : The hardware specfication used by project 'design_3_app' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+14:31:19 INFO  : The file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\design_3_app\_ide\bitstream\design_3_wrapper.bit' stored in project is removed.
+14:31:19 INFO  : The updated bitstream files are copied from platform to folder 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\design_3_app\_ide\bitstream' in project 'design_3_app'.
+14:31:19 INFO  : The file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\design_3_app\_ide\psinit\ps7_init.tcl' stored in project is removed.
+14:31:37 INFO  : The updated ps init files are copied from platform to folder 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\design_3_app\_ide\psinit' in project 'design_3_app'.
+14:33:00 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+14:33:01 INFO  : Updating application flags with new BSP settings...
+14:33:01 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+14:33:43 INFO  : Disconnected from the channel tcfchan#33.
+14:33:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:34:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+14:34:02 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+14:34:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:34:50 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+14:34:50 INFO  : 'jtag frequency' command is executed.
+14:34:50 INFO  : Context for 'APU' is selected.
+14:34:51 INFO  : System reset is completed.
+14:34:54 INFO  : 'after 3000' command is executed.
+14:34:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+14:34:57 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+14:34:57 INFO  : Context for 'APU' is selected.
+14:34:58 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+14:34:58 INFO  : 'configparams force-mem-access 1' command is executed.
+14:34:58 INFO  : Context for 'APU' is selected.
+14:34:58 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+14:35:00 INFO  : 'ps7_init' command is executed.
+14:35:00 INFO  : 'ps7_post_config' command is executed.
+14:35:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:35:01 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:35:01 INFO  : 'configparams force-mem-access 0' command is executed.
+14:35:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:35:01 INFO  : Memory regions updated for context APU
+14:35:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:35:03 INFO  : 'con' command is executed.
+14:35:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:35:03 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+14:36:27 INFO  : Disconnected from the channel tcfchan#37.
+14:36:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:28 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+14:36:28 INFO  : 'jtag frequency' command is executed.
+14:36:28 INFO  : Context for 'APU' is selected.
+14:36:28 INFO  : System reset is completed.
+14:36:32 INFO  : 'after 3000' command is executed.
+14:36:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+14:36:34 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+14:36:34 INFO  : Context for 'APU' is selected.
+14:36:34 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+14:36:34 INFO  : 'configparams force-mem-access 1' command is executed.
+14:36:34 INFO  : Context for 'APU' is selected.
+14:36:34 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+14:36:37 INFO  : 'ps7_init' command is executed.
+14:36:37 INFO  : 'ps7_post_config' command is executed.
+14:36:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:36:39 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:36:39 INFO  : 'configparams force-mem-access 0' command is executed.
+14:36:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:36:39 INFO  : Memory regions updated for context APU
+14:36:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:36:41 INFO  : 'con' command is executed.
+14:36:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:36:41 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+14:37:56 INFO  : Disconnected from the channel tcfchan#38.
+14:37:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:37:57 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+14:37:57 INFO  : 'jtag frequency' command is executed.
+14:37:57 INFO  : Context for 'APU' is selected.
+14:37:57 INFO  : System reset is completed.
+14:38:00 INFO  : 'after 3000' command is executed.
+14:38:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+14:38:01 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+14:38:01 INFO  : Context for 'APU' is selected.
+14:38:02 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+14:38:02 INFO  : 'configparams force-mem-access 1' command is executed.
+14:38:02 INFO  : Context for 'APU' is selected.
+14:38:02 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+14:38:03 INFO  : 'ps7_init' command is executed.
+14:38:03 INFO  : 'ps7_post_config' command is executed.
+14:38:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:38:03 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:38:03 INFO  : 'configparams force-mem-access 0' command is executed.
+14:38:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:38:03 INFO  : Memory regions updated for context APU
+14:38:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:38:05 INFO  : 'con' command is executed.
+14:38:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:38:05 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+14:43:53 INFO  : Disconnected from the channel tcfchan#39.
+14:43:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:43:54 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+14:43:54 INFO  : 'jtag frequency' command is executed.
+14:43:54 INFO  : Context for 'APU' is selected.
+14:43:54 INFO  : System reset is completed.
+14:43:57 INFO  : 'after 3000' command is executed.
+14:43:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+14:43:59 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+14:43:59 INFO  : Context for 'APU' is selected.
+14:43:59 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+14:43:59 INFO  : 'configparams force-mem-access 1' command is executed.
+14:43:59 INFO  : Context for 'APU' is selected.
+14:43:59 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+14:44:00 INFO  : 'ps7_init' command is executed.
+14:44:00 INFO  : 'ps7_post_config' command is executed.
+14:44:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:44:01 ERROR : Memory write error at 0x100000. Cannot access DDR: the controller is held in reset
+14:44:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+----------------End of Script----------------
+
+14:44:01 ERROR : Memory write error at 0x100000. Cannot access DDR: the controller is held in reset
+14:44:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:44:18 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+14:44:18 INFO  : 'jtag frequency' command is executed.
+14:44:19 INFO  : Context for 'APU' is selected.
+14:44:19 INFO  : System reset is completed.
+14:44:23 INFO  : 'after 3000' command is executed.
+14:44:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+14:44:25 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+14:44:26 INFO  : Context for 'APU' is selected.
+14:44:26 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+14:44:26 INFO  : 'configparams force-mem-access 1' command is executed.
+14:44:26 INFO  : Context for 'APU' is selected.
+14:44:26 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+14:44:27 INFO  : 'ps7_init' command is executed.
+14:44:27 INFO  : 'ps7_post_config' command is executed.
+14:44:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:44:27 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:44:28 INFO  : 'configparams force-mem-access 0' command is executed.
+14:44:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:44:28 INFO  : Memory regions updated for context APU
+14:44:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:44:29 INFO  : 'con' command is executed.
+14:44:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:44:29 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+14:59:37 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+14:59:38 INFO  : Updating application flags with new BSP settings...
+14:59:38 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+15:02:12 INFO  : Disconnected from the channel tcfchan#40.
+15:02:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:02:13 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:02:14 INFO  : 'jtag frequency' command is executed.
+15:02:15 INFO  : Context for 'APU' is selected.
+15:02:15 INFO  : System reset is completed.
+15:02:18 INFO  : 'after 3000' command is executed.
+15:02:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:02:20 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+15:02:20 INFO  : Context for 'APU' is selected.
+15:02:20 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+15:02:20 INFO  : 'configparams force-mem-access 1' command is executed.
+15:02:20 INFO  : Context for 'APU' is selected.
+15:02:20 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+15:02:21 INFO  : 'ps7_init' command is executed.
+15:02:21 INFO  : 'ps7_post_config' command is executed.
+15:02:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:02:21 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:02:21 INFO  : 'configparams force-mem-access 0' command is executed.
+15:02:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:02:22 INFO  : Memory regions updated for context APU
+15:02:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:02:23 INFO  : 'con' command is executed.
+15:02:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:02:23 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+15:03:39 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+15:03:40 INFO  : Updating application flags with new BSP settings...
+15:03:40 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+15:04:18 INFO  : Disconnected from the channel tcfchan#42.
+15:04:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:04:20 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:04:20 INFO  : 'jtag frequency' command is executed.
+15:04:20 INFO  : Context for 'APU' is selected.
+15:04:20 INFO  : System reset is completed.
+15:04:23 INFO  : 'after 3000' command is executed.
+15:04:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:04:27 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+15:04:27 INFO  : Context for 'APU' is selected.
+15:04:27 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+15:04:27 INFO  : 'configparams force-mem-access 1' command is executed.
+15:04:28 INFO  : Context for 'APU' is selected.
+15:04:28 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+15:04:34 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+15:04:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+15:04:34 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+15:04:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:05:02 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:05:02 INFO  : 'jtag frequency' command is executed.
+15:05:02 INFO  : Context for 'APU' is selected.
+15:05:02 INFO  : System reset is completed.
+15:05:06 INFO  : 'after 3000' command is executed.
+15:05:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:05:09 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+15:05:09 INFO  : Context for 'APU' is selected.
+15:05:09 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+15:05:10 INFO  : 'configparams force-mem-access 1' command is executed.
+15:05:10 INFO  : Context for 'APU' is selected.
+15:05:10 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+15:05:12 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+15:05:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+15:05:12 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+15:05:21 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+15:05:22 INFO  : Updating application flags with new BSP settings...
+15:05:23 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+15:06:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:06:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+15:06:46 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+15:06:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:07:09 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:07:09 INFO  : 'jtag frequency' command is executed.
+15:07:10 INFO  : Context for 'APU' is selected.
+15:07:10 INFO  : System reset is completed.
+15:07:13 INFO  : 'after 3000' command is executed.
+15:07:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:07:17 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+15:07:17 INFO  : Context for 'APU' is selected.
+15:07:17 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+15:07:17 INFO  : 'configparams force-mem-access 1' command is executed.
+15:07:17 INFO  : Context for 'APU' is selected.
+15:07:18 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+15:07:19 INFO  : 'ps7_init' command is executed.
+15:07:19 INFO  : 'ps7_post_config' command is executed.
+15:07:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:07:19 ERROR : Memory write error at 0x100000. Cannot access DDR: the controller is held in reset
+15:07:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+----------------End of Script----------------
+
+15:07:19 ERROR : Memory write error at 0x100000. Cannot access DDR: the controller is held in reset
+15:07:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:07:38 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:07:38 INFO  : 'jtag frequency' command is executed.
+15:07:38 INFO  : Context for 'APU' is selected.
+15:07:39 INFO  : System reset is completed.
+15:07:42 INFO  : 'after 3000' command is executed.
+15:07:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:07:46 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+15:07:46 INFO  : Context for 'APU' is selected.
+15:07:46 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+15:07:47 INFO  : 'configparams force-mem-access 1' command is executed.
+15:07:47 INFO  : Context for 'APU' is selected.
+15:07:47 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+15:07:49 ERROR : Memory read error at 0xF8F00208. Cannot halt processor core, timeout
+15:07:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+15:07:49 ERROR : Memory read error at 0xF8F00208. Cannot halt processor core, timeout
+15:07:59 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+15:08:00 INFO  : Updating application flags with new BSP settings...
+15:08:00 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+15:08:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:09:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+15:09:12 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+15:09:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:09:28 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:09:28 INFO  : 'jtag frequency' command is executed.
+15:09:28 INFO  : Context for 'APU' is selected.
+15:09:28 INFO  : System reset is completed.
+15:09:32 INFO  : 'after 3000' command is executed.
+15:09:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:09:54 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+15:09:54 INFO  : Context for 'APU' is selected.
+15:09:54 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+15:09:54 INFO  : 'configparams force-mem-access 1' command is executed.
+15:09:54 INFO  : Context for 'APU' is selected.
+15:09:54 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+15:09:55 ERROR : Memory read error at 0xF8F00208. Cannot halt processor core, timeout
+15:09:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+15:09:55 ERROR : Memory read error at 0xF8F00208. Cannot halt processor core, timeout
+15:10:11 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+15:10:12 INFO  : Updating application flags with new BSP settings...
+15:10:13 ERROR : Failed to update application flags from BSP for 'design_3_app'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+15:11:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:11:33 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:11:33 INFO  : 'jtag frequency' command is executed.
+15:11:33 INFO  : Context for 'APU' is selected.
+15:11:34 INFO  : System reset is completed.
+15:11:37 INFO  : 'after 3000' command is executed.
+15:11:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:11:41 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+15:11:41 INFO  : Context for 'APU' is selected.
+15:11:41 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+15:11:42 INFO  : 'configparams force-mem-access 1' command is executed.
+15:11:42 INFO  : Context for 'APU' is selected.
+15:11:42 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+15:11:44 INFO  : 'ps7_init' command is executed.
+15:11:44 INFO  : 'ps7_post_config' command is executed.
+15:11:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:44 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:11:45 INFO  : 'configparams force-mem-access 0' command is executed.
+15:11:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:11:45 INFO  : Memory regions updated for context APU
+15:11:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:45 INFO  : 'con' command is executed.
+15:11:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:11:45 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+15:12:24 INFO  : Disconnected from the channel tcfchan#44.
+15:20:21 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\projects\9_18\temp_xsdb_launch_script.tcl
+15:20:24 INFO  : XSCT server has started successfully.
+15:20:24 INFO  : plnx-install-location is set to ''
+15:20:24 INFO  : Successfully done setting XSCT server connection channel  
+15:20:24 INFO  : Successfully done setting workspace for the tool. 
+15:20:28 INFO  : Registering command handlers for Vitis TCF services
+15:20:34 INFO  : Successfully done query RDI_DATADIR 
+15:41:16 INFO  : Hardware specification for platform project 'design_3' is updated.
+15:42:29 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+15:42:29 INFO  : Updating application flags with new BSP settings...
+15:42:30 INFO  : Successfully updated application flags for project design_3_app.
+15:52:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:52:57 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:52:57 INFO  : 'jtag frequency' command is executed.
+15:52:57 INFO  : Context for 'APU' is selected.
+15:52:57 INFO  : System reset is completed.
+15:53:00 INFO  : 'after 3000' command is executed.
+15:53:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:53:02 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+15:53:02 INFO  : Context for 'APU' is selected.
+15:53:02 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+15:53:02 INFO  : 'configparams force-mem-access 1' command is executed.
+15:53:02 INFO  : Context for 'APU' is selected.
+15:53:02 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+15:53:02 INFO  : 'ps7_init' command is executed.
+15:53:02 INFO  : 'ps7_post_config' command is executed.
+15:53:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:53:03 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:53:03 INFO  : 'configparams force-mem-access 0' command is executed.
+15:53:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:53:03 INFO  : Memory regions updated for context APU
+15:53:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:53:03 INFO  : 'con' command is executed.
+15:53:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:53:03 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+15:57:08 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+15:57:20 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+15:57:45 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+15:58:09 INFO  : Disconnected from the channel tcfchan#3.
+15:58:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:58:09 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:58:09 INFO  : 'jtag frequency' command is executed.
+15:58:09 INFO  : Context for 'APU' is selected.
+15:58:10 INFO  : System reset is completed.
+15:58:13 INFO  : 'after 3000' command is executed.
+15:58:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:58:14 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+15:58:14 INFO  : Context for 'APU' is selected.
+15:58:14 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+15:58:14 INFO  : 'configparams force-mem-access 1' command is executed.
+15:58:14 INFO  : Context for 'APU' is selected.
+15:58:14 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+15:58:14 INFO  : 'ps7_init' command is executed.
+15:58:14 INFO  : 'ps7_post_config' command is executed.
+15:58:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:58:15 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:58:15 INFO  : 'configparams force-mem-access 0' command is executed.
+15:58:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:58:15 INFO  : Memory regions updated for context APU
+15:58:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:58:15 INFO  : 'con' command is executed.
+15:58:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:58:15 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+15:58:52 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...
+15:59:06 INFO  : Disconnected from the channel tcfchan#7.
+15:59:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:59:13 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+15:59:13 INFO  : 'jtag frequency' command is executed.
+15:59:13 INFO  : Context for 'APU' is selected.
+15:59:13 INFO  : System reset is completed.
+15:59:16 INFO  : 'after 3000' command is executed.
+15:59:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+15:59:17 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+15:59:17 INFO  : Context for 'APU' is selected.
+15:59:17 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+15:59:17 INFO  : 'configparams force-mem-access 1' command is executed.
+15:59:17 INFO  : Context for 'APU' is selected.
+15:59:17 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+15:59:18 INFO  : 'ps7_init' command is executed.
+15:59:18 INFO  : 'ps7_post_config' command is executed.
+15:59:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:59:18 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:59:18 INFO  : 'configparams force-mem-access 0' command is executed.
+15:59:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:59:19 INFO  : Memory regions updated for context APU
+15:59:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:59:19 INFO  : 'con' command is executed.
+15:59:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:59:19 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+16:00:15 INFO  : Disconnected from the channel tcfchan#9.
+16:00:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:00:16 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+16:00:16 INFO  : 'jtag frequency' command is executed.
+16:00:16 INFO  : Context for 'APU' is selected.
+16:00:16 INFO  : System reset is completed.
+16:00:19 INFO  : 'after 3000' command is executed.
+16:00:28 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+16:00:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+16:00:28 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+16:00:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:00:33 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+16:00:33 INFO  : 'jtag frequency' command is executed.
+16:00:33 INFO  : Context for 'APU' is selected.
+16:00:33 INFO  : System reset is completed.
+16:00:36 INFO  : 'after 3000' command is executed.
+16:00:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+16:00:37 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit"
+16:00:37 INFO  : Context for 'APU' is selected.
+16:00:37 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa'.
+16:00:37 INFO  : 'configparams force-mem-access 1' command is executed.
+16:00:37 INFO  : Context for 'APU' is selected.
+16:00:37 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl' is done.
+16:00:38 INFO  : 'ps7_init' command is executed.
+16:00:38 INFO  : 'ps7_post_config' command is executed.
+16:00:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:38 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:00:38 INFO  : 'configparams force-mem-access 0' command is executed.
+16:00:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/Debug/design_3_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:00:39 INFO  : Memory regions updated for context APU
+16:00:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:39 INFO  : 'con' command is executed.
+16:00:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:00:39 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\9_18\.sdk\launch_scripts\single_application_debug\systemdebugger_design_3_app_system_standalone.tcl'
+16:02:37 INFO  : Checking for BSP changes to sync application flags for project 'design_3_app'...

@@ -1,0 +1,56 @@
+16:02:37 **** Incremental Build of configuration Debug for project design_3_app ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/sw/design_3/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:83:35: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  printf("Test written value: 0x%08X\n", write_value);
+                                ~~~^     ~~~~~~~~~~~
+                                %08lX
+../src/helloworld.c:102:35: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  printf("Test written value: 0x%08X\n", write_value);
+                                ~~~^     ~~~~~~~~~~~
+                                %08lX
+../src/helloworld.c:111:12: warning: operation on 'counter' may be undefined [-Wsequence-point]
+    counter = counter +=1;
+    ~~~~~~~~^~~~~~~~~~~~~
+../src/helloworld.c:112:17: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+    printf("0x%08X - 0x%08X\n", write_value, read_value);
+              ~~~^              ~~~~~~~~~~~
+              %08lX
+../src/helloworld.c:112:26: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+    printf("0x%08X - 0x%08X\n", write_value, read_value);
+                       ~~~^                  ~~~~~~~~~~
+                       %08lX
+../src/helloworld.c:115:17: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+    printf("0x%08X - 0x%08X\n", write_value, read_value);
+              ~~~^              ~~~~~~~~~~~
+              %08lX
+../src/helloworld.c:115:26: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+    printf("0x%08X - 0x%08X\n", write_value, read_value);
+                       ~~~^                  ~~~~~~~~~~
+                       %08lX
+../src/helloworld.c:78:11: warning: unused variable 'gpio_read0' [-Wunused-variable]
+  uint32_t gpio_read0;
+           ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: design_3_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/sw/design_3/standalone_domain/bsplib/lib -o "design_3_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: design_3_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size design_3_app.elf  |tee "design_3_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  58584	   2600	  23344	  84528	  14a30	design_3_app.elf
+'Finished building: design_3_app.elf.size'
+' '
+
+16:02:40 Build Finished (took 2s.545ms)
+

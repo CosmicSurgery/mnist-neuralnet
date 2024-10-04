@@ -7,7 +7,7 @@ module axi4_lite_register_module_tb;
     reg aresetn = 0;
     
     // AXI4-Lite slave interface
-    reg [4:0] s_axil_awaddr;
+    reg [6:0] s_axil_awaddr;
     reg [2:0] s_axil_awprot;
     reg s_axil_awvalid;
     wire s_axil_awready;
@@ -18,7 +18,7 @@ module axi4_lite_register_module_tb;
     wire [1:0] s_axil_bresp;
     wire s_axil_bvalid;
     reg s_axil_bready;
-    reg [4:0] s_axil_araddr;
+    reg [6:0] s_axil_araddr;
     reg [2:0] s_axil_arprot;
     reg s_axil_arvalid;
     wire s_axil_arready;
@@ -85,6 +85,8 @@ module axi4_lite_register_module_tb;
     // Clock generation
     always #5 aclk = ~aclk;
 
+    integer i;
+    reg base_write = 32'h0678;
     // Test procedure
     initial begin
         // Initialize inputs
@@ -108,53 +110,54 @@ module axi4_lite_register_module_tb;
         #20;
 
         // Test bias registers
-        for (integer i = 0; i < 18; i = i + 1) begin
+        for (i = 0; i < 18; i = i + 1) begin
             // Write to bias register
-            axi_write(i * 4, 5'h0678 + i);
+            axi_write(4 * i, base_write + i);
             
             // Read from bias register
-            axi_read(i * 4);
-            if (s_axil_rdata !== (32'h0678 + i)) begin
-                $display("Error: Bias register %0d read mismatch. Expected: %h, Got: %h", i, 32'h0234 + i, s_axil_rdata);
-            end
+            axi_read(4 * i);
+            if (s_axil_rdata != (base_write + i)) begin
+                $display("Error: Bias register %0d read mismatch. Expected: %h, Got: %h", i, base_write + i, s_axil_rdata);
+            end else 
+                $display("Pass: Expected: %h, Got: %h", i, base_write + i, s_axil_rdata);
             
             // Check bias output
             case (i)
-                0: if (bias_0 !== (5'h0678 + i)) $display("Error: Bias_0 output mismatch");
-                1: if (bias_1 !== (5'h0678 + i)) $display("Error: Bias_1 output mismatch");
-                2: if (bias_2 !== (5'h0678 + i)) $display("Error: Bias_2 output mismatch");
-                3: if (bias_3 !== (5'h0678 + i)) $display("Error: Bias_3 output mismatch");
-                4: if (bias_4 !== (5'h0678 + i)) $display("Error: Bias_4 output mismatch");
-                5: if (bias_5 !== (5'h0678 + i)) $display("Error: Bias_5 output mismatch");
-                6: if (bias_6 !== (5'h0678 + i)) $display("Error: Bias_6 output mismatch");
-                7: if (bias_7 !== (5'h0678 + i)) $display("Error: Bias_7 output mismatch");
-                8: if (bias_8 !== (5'h0678 + i)) $display("Error: Bias_8 output mismatch");
-                9: if (bias_9 !== (5'h0678 + i)) $display("Error: Bias_9 output mismatch");
-                10: if (bias_10 !== (5'h0678 + i)) $display("Error: Bias_10 output mismatch");
-                11: if (bias_11 !== (5'h0678 + i)) $display("Error: Bias_11 output mismatch");
-                12: if (bias_12 !== (5'h0678 + i)) $display("Error: Bias_12 output mismatch");
-                13: if (bias_13 !== (5'h0678 + i)) $display("Error: Bias_13 output mismatch");
-                14: if (bias_14 !== (5'h0678 + i)) $display("Error: Bias_14 output mismatch");
-                15: if (bias_15 !== (5'h0678 + i)) $display("Error: Bias_15 output mismatch");
-                16: if (bias_16 !== (5'h0678 + i)) $display("Error: Bias_16 output mismatch");
-                17: if (bias_17 !== (5'h0678 + i)) $display("Error: Bias_17 output mismatch");
+                0: if (bias_0 !== (base_write + i)) $display("Error: Bias_0 output mismatch");
+                1: if (bias_1 !== (base_write + i)) $display("Error: Bias_1 output mismatch");
+                2: if (bias_2 !== (base_write + i)) $display("Error: Bias_2 output mismatch");
+                3: if (bias_3 !== (base_write + i)) $display("Error: Bias_3 output mismatch");
+                4: if (bias_4 !== (base_write + i)) $display("Error: Bias_4 output mismatch");
+                5: if (bias_5 !== (base_write + i)) $display("Error: Bias_5 output mismatch");
+                6: if (bias_6 !== (base_write + i)) $display("Error: Bias_6 output mismatch");
+                7: if (bias_7 !== (base_write + i)) $display("Error: Bias_7 output mismatch");
+                8: if (bias_8 !== (base_write + i)) $display("Error: Bias_8 output mismatch");
+                9: if (bias_9 !== (base_write + i)) $display("Error: Bias_9 output mismatch");
+                10: if (bias_10 !== (base_write + i)) $display("Error: Bias_10 output mismatch");
+                11: if (bias_11 !== (base_write + i)) $display("Error: Bias_11 output mismatch");
+                12: if (bias_12 !== (base_write + i)) $display("Error: Bias_12 output mismatch");
+                13: if (bias_13 !== (base_write + i)) $display("Error: Bias_13 output mismatch");
+                14: if (bias_14 !== (base_write + i)) $display("Error: Bias_14 output mismatch");
+                15: if (bias_15 !== (base_write + i)) $display("Error: Bias_15 output mismatch");
+                16: if (bias_16 !== (base_write + i)) $display("Error: Bias_16 output mismatch");
+                17: if (bias_17 !== (base_write + i)) $display("Error: Bias_17 output mismatch");
             endcase
         end
 
         // Test control register
-        axi_write(18 * 4, 5'h0678);
-        axi_read(18 * 4);
-        if (s_axil_rdata !== 5'h0678) begin
-            $display("Error: Control register read mismatch. Expected: %h, Got: %h", 5'h0678, s_axil_rdata);
+        axi_write(18*4, 32'h0678);
+        axi_read(18*4);
+        if (s_axil_rdata !== 32'h0678) begin
+            $display("Error: Control register read mismatch. Expected: %h, Got: %h", 32'h0678, s_axil_rdata);
         end
-        if (control !== 5'h0678) begin
-            $display("Error: Control output mismatch. Expected: %h, Got: %h", 5'h0678, control);
+        if (control !== 32'h0678) begin
+            $display("Error: Control output mismatch. Expected: %h, Got: %h", 32'h0678, control);
         end
 
         // Test status register
-        axi_read(19 * 4);
-        if (s_axil_rdata !== 5'h0678) begin
-            $display("Error: Status register read mismatch. Expected: %h, Got: %h", 5'h0678, s_axil_rdata);
+        axi_read(19*4);
+        if (s_axil_rdata !== 32'hABCDEF01) begin
+            $display("Error: Status register read mismatch. Expected: %h, Got: %h", 32'h0678, s_axil_rdata);
         end
 
         $display("Testbench completed");
@@ -163,7 +166,7 @@ module axi4_lite_register_module_tb;
 
     // AXI write task
     task axi_write;
-        input [4:0] addr;
+        input [6:0] addr;
         input [31:0] data;
         begin
             s_axil_awaddr = addr;
@@ -190,7 +193,7 @@ module axi4_lite_register_module_tb;
 
     // AXI read task
     task axi_read;
-        input [4:0] addr;
+        input [6:0] addr;
         begin
             s_axil_araddr = addr;
             s_axil_arvalid = 1;

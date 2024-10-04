@@ -4,118 +4,36 @@
 # IP: C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/blk_mem_gen_0/blk_mem_gen_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blk_mem_gen_0 || ORIG_REF_NAME==blk_mem_gen_0} -quiet] -quiet
 
-# Block Designs: bd/PL_NN_prototype/PL_NN_prototype.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype || ORIG_REF_NAME==PL_NN_prototype} -quiet] -quiet
+# Block Designs: bd/design_3/design_3.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3 || ORIG_REF_NAME==design_3} -quiet] -quiet
 
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_axi4_lite_register_m_0_0/PL_NN_prototype_axi4_lite_register_m_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_axi4_lite_register_m_0_0 || ORIG_REF_NAME==PL_NN_prototype_axi4_lite_register_m_0_0} -quiet] -quiet
+# IP: bd/design_3/ip/design_3_processing_system7_0_0/design_3_processing_system7_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_processing_system7_0_0 || ORIG_REF_NAME==design_3_processing_system7_0_0} -quiet] -quiet
 
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_xbar_0/PL_NN_prototype_xbar_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_xbar_0 || ORIG_REF_NAME==PL_NN_prototype_xbar_0} -quiet] -quiet
+# IP: bd/design_3/ip/design_3_axi4_lite_register_m_0_0/design_3_axi4_lite_register_m_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi4_lite_register_m_0_0 || ORIG_REF_NAME==design_3_axi4_lite_register_m_0_0} -quiet] -quiet
 
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_axi_interconnect_0_0/PL_NN_prototype_axi_interconnect_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_axi_interconnect_0_0 || ORIG_REF_NAME==PL_NN_prototype_axi_interconnect_0_0} -quiet] -quiet
+# IP: bd/design_3/ip/design_3_xbar_1/design_3_xbar_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_xbar_1 || ORIG_REF_NAME==design_3_xbar_1} -quiet] -quiet
 
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_axis_broadcaster_0_0/PL_NN_prototype_axis_broadcaster_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_axis_broadcaster_0_0 || ORIG_REF_NAME==PL_NN_prototype_axis_broadcaster_0_0} -quiet] -quiet
+# IP: bd/design_3/ip/design_3_axi_interconnect_0_0/design_3_axi_interconnect_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_interconnect_0_0 || ORIG_REF_NAME==design_3_axi_interconnect_0_0} -quiet] -quiet
 
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_image_loader_module_0_0/PL_NN_prototype_image_loader_module_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_image_loader_module_0_0 || ORIG_REF_NAME==PL_NN_prototype_image_loader_module_0_0} -quiet] -quiet
+# IP: bd/design_3/ip/design_3_axi_gpio_0_0/design_3_axi_gpio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_axi_gpio_0_0 || ORIG_REF_NAME==design_3_axi_gpio_0_0} -quiet] -quiet
 
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_perceptron_0_0/PL_NN_prototype_perceptron_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_perceptron_0_0 || ORIG_REF_NAME==PL_NN_prototype_perceptron_0_0} -quiet] -quiet
+# IP: bd/design_3/ip/design_3_proc_sys_reset_0_0/design_3_proc_sys_reset_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_proc_sys_reset_0_0 || ORIG_REF_NAME==design_3_proc_sys_reset_0_0} -quiet] -quiet
 
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_perceptron_1_0/PL_NN_prototype_perceptron_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_perceptron_1_0 || ORIG_REF_NAME==PL_NN_prototype_perceptron_1_0} -quiet] -quiet
+# IP: bd/design_3/ip/design_3_image_loader_module_0_0/design_3_image_loader_module_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_image_loader_module_0_0 || ORIG_REF_NAME==design_3_image_loader_module_0_0} -quiet] -quiet
 
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_perceptron_2_0/PL_NN_prototype_perceptron_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_perceptron_2_0 || ORIG_REF_NAME==PL_NN_prototype_perceptron_2_0} -quiet] -quiet
+# IP: bd/design_3/ip/design_3_ila_0_0/design_3_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_ila_0_0 || ORIG_REF_NAME==design_3_ila_0_0} -quiet] -quiet
 
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_xlconstant_0_0/PL_NN_prototype_xlconstant_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_xlconstant_0_0 || ORIG_REF_NAME==PL_NN_prototype_xlconstant_0_0} -quiet] -quiet
-
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_xlconstant_0_1/PL_NN_prototype_xlconstant_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_xlconstant_0_1 || ORIG_REF_NAME==PL_NN_prototype_xlconstant_0_1} -quiet] -quiet
-
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_processing_system7_0_0/PL_NN_prototype_processing_system7_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_processing_system7_0_0 || ORIG_REF_NAME==PL_NN_prototype_processing_system7_0_0} -quiet] -quiet
-
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_axi_gpio_0_0/PL_NN_prototype_axi_gpio_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_axi_gpio_0_0 || ORIG_REF_NAME==PL_NN_prototype_axi_gpio_0_0} -quiet] -quiet
-
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_rst_ps7_0_100M_0/PL_NN_prototype_rst_ps7_0_100M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_rst_ps7_0_100M_0 || ORIG_REF_NAME==PL_NN_prototype_rst_ps7_0_100M_0} -quiet] -quiet
-
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_axi4_lite_final_outp_1_0/PL_NN_prototype_axi4_lite_final_outp_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_axi4_lite_final_outp_1_0 || ORIG_REF_NAME==PL_NN_prototype_axi4_lite_final_outp_1_0} -quiet] -quiet
-
-# IP: bd/PL_NN_prototype/ip/PL_NN_prototype_auto_pc_0/PL_NN_prototype_auto_pc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PL_NN_prototype_auto_pc_0 || ORIG_REF_NAME==PL_NN_prototype_auto_pc_0} -quiet] -quiet
-
-# Block Designs: bd/design_1/design_1.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi4_lite_final_output_0/design_1_axi4_lite_final_output_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi4_lite_final_output_0 || ORIG_REF_NAME==design_1_axi4_lite_final_output_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi4_lite_register_m_0_0/design_1_axi4_lite_register_m_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi4_lite_register_m_0_0 || ORIG_REF_NAME==design_1_axi4_lite_register_m_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_0 || ORIG_REF_NAME==design_1_axi_gpio_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xbar_0 || ORIG_REF_NAME==design_1_xbar_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_interconnect_0_0/design_1_axi_interconnect_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_interconnect_0_0 || ORIG_REF_NAME==design_1_axi_interconnect_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axis_broadcaster_0_0/design_1_axis_broadcaster_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axis_broadcaster_0_0 || ORIG_REF_NAME==design_1_axis_broadcaster_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_image_loader_module_0_0/design_1_image_loader_module_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_image_loader_module_0_0 || ORIG_REF_NAME==design_1_image_loader_module_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_perceptron_1_0/design_1_perceptron_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_perceptron_1_0 || ORIG_REF_NAME==design_1_perceptron_1_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_processing_system7_0_0 || ORIG_REF_NAME==design_1_processing_system7_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_rst_ps7_0_100M_0 || ORIG_REF_NAME==design_1_rst_ps7_0_100M_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconstant_0_0 || ORIG_REF_NAME==design_1_xlconstant_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_xlconstant_1_0/design_1_xlconstant_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconstant_1_0 || ORIG_REF_NAME==design_1_xlconstant_1_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
-
-# Block Designs: bd/design_2/design_2.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2 || ORIG_REF_NAME==design_2} -quiet] -quiet
-
-# IP: bd/design_2/ip/design_2_processing_system7_0_1/design_2_processing_system7_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_processing_system7_0_1 || ORIG_REF_NAME==design_2_processing_system7_0_1} -quiet] -quiet
-
-# IP: bd/design_2/ip/design_2_axi_interconnect_0_0/design_2_axi_interconnect_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_axi_interconnect_0_0 || ORIG_REF_NAME==design_2_axi_interconnect_0_0} -quiet] -quiet
-
-# IP: bd/design_2/ip/design_2_rst_ps7_0_100M_1/design_2_rst_ps7_0_100M_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_rst_ps7_0_100M_1 || ORIG_REF_NAME==design_2_rst_ps7_0_100M_1} -quiet] -quiet
-
-# IP: bd/design_2/ip/design_2_axi4_lite_register_m_0_2/design_2_axi4_lite_register_m_0_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_axi4_lite_register_m_0_2 || ORIG_REF_NAME==design_2_axi4_lite_register_m_0_2} -quiet] -quiet
-
-# IP: bd/design_2/ip/design_2_auto_pc_1/design_2_auto_pc_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_auto_pc_1 || ORIG_REF_NAME==design_2_auto_pc_1} -quiet] -quiet
+# IP: bd/design_3/ip/design_3_auto_pc_0/design_3_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_3_auto_pc_0 || ORIG_REF_NAME==design_3_auto_pc_0} -quiet] -quiet
 
 # XDC: c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc
 
-# XDC: bd/PL_NN_prototype/PL_NN_prototype_ooc.xdc
-
-# XDC: bd/design_1/design_1_ooc.xdc
-
-# XDC: bd/design_2/design_2_ooc.xdc
+# XDC: bd/design_3/design_3_ooc.xdc
