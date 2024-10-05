@@ -72,6 +72,7 @@ int main()
 
 	UINTPTR AXI4_LITE_REGISTER_M_0 = 0x40000000;
 	UINTPTR IMAGE_LOADER = 0x60000000;
+	UINTPTR PERCEPTRON_0 = 0x43C00000;
 	UINTPTR addr = AXI4_LITE_REGISTER_M_0;
 
 	uint32_t read_value;
@@ -109,20 +110,41 @@ int main()
 		read_value = Xil_In32(addr);
 		if (write_value != read_value) {
 			counter = counter +=1;
-			printf("0x%08X - 0x%08X\n", write_value, read_value);
-			printf("Test failed: Written and read values do not match.\n");
-		} else if (write_value == read_value) {
-			printf("0x%08X - 0x%08X\n", write_value, read_value);
-			printf("Test passed: Written and read values match!\n");
+//			printf("0x%08X - 0x%08X\n", write_value, read_value);
+//			printf("Test failed: Written and read values do not match.\n");
 		}
 	}
 
 	if (counter ==0){
-		printf("Test passed!");
+		printf("Test passed!\n\r");
 	} else {
-		printf("Test Failed!");
+		printf("Test Failed!\n\r");
 	}
 
+	write_value = 0xdeadbeef;
+	addr = PERCEPTRON_0;
+	printf("Check PERCEPTRON_0\n\r");
+
+	printf("Test written value: 0x%08X\n", write_value);
+	counter = 0;
+
+	for (int i=0; i<784;i++){
+		write_value = i;
+		addr = addr+4;
+		Xil_Out32(addr, write_value);
+		read_value = Xil_In32(addr);
+		if (write_value != read_value) {
+			counter = counter +=1;
+//			printf("0x%08X - 0x%08X\n", write_value, read_value);
+//			printf("Test failed: Written and read values do not match.\n");
+		}
+	}
+
+	if (counter ==0){
+		printf("Test passed!\n\r");
+	} else {
+		printf("Test Failed!\n\r");
+	}
 
 
     cleanup_platform();

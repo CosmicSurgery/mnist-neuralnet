@@ -1,4 +1,4 @@
-16:02:42 **** Incremental Build of configuration Debug for project design_3_app_system ****
+17:09:56 **** Incremental Build of configuration Debug for project design_3_app_system ****
 make all 
 Generating bif file for the system project
 generate_system_bif.bat 52801 C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/design_3.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app_system/Debug/system.bif
@@ -6,5 +6,5 @@ sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/expor
 creating BOOT.BIN using C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app/_ide/bitstream/design_3_wrapper.bit
 Running C:/Xilinx/Vitis/2019.2/bin/bootgen  -image C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3_app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-16:02:51 Build Finished (took 9s.504ms)
+17:10:08 Build Finished (took 11s.359ms)
 

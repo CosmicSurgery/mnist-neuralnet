@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Fri Oct  4 15:35:05 2024
-# Process ID: 17140
+# Start of session at: Fri Oct  4 16:56:01 2024
+# Process ID: 4972
 # Current directory: C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1
 # Command line: vivado.exe -log design_3_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_3_wrapper.tcl
 # Log file: C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/design_3_wrapper.vds
@@ -13,55 +13,79 @@ source design_3_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/git_repos/mnist_neuralnet/fpga/source'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 342.754 ; gain = 30.324
 Command: synth_design -top design_3_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10096 
+INFO: Helper process launched with PID 13732 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 857.297 ; gain = 233.629
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 860.617 ; gain = 235.070
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_3_wrapper' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/hdl/design_3_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_3' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi4_lite_register_m_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_axi4_lite_register_m_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi4_lite_register_m_0_0' (1#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_axi4_lite_register_m_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'axi4_lite_register_m_0' of module 'design_3_axi4_lite_register_m_0_0' has 41 connections declared, but only 22 given [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:178]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_0_0' (2#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_axi_interconnect_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:429]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_HRSIK2' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1134]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_HRSIK2' (3#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1134]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1CNR8YB' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1280]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1CNR8YB' (4#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1280]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_JDP5DD' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1412]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_JDP5DD' (5#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1412]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1FDXN00' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1558]
-INFO: [Synth 8-6157] synthesizing module 'design_3_auto_pc_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_auto_pc_0' (6#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1FDXN00' (7#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1558]
-INFO: [Synth 8-6157] synthesizing module 'design_3_xbar_1' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_xbar_1' (8#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_interconnect_0_0' (9#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:429]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:327]
-INFO: [Synth 8-6157] synthesizing module 'design_3_ila_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_ila_0_0' (10#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_ila_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_3_image_loader_module_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_image_loader_module_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_image_loader_module_0_0' (11#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_image_loader_module_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'image_loader_module_0' of module 'design_3_image_loader_module_0_0' has 25 connections declared, but only 24 given [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:330]
-INFO: [Synth 8-6157] synthesizing module 'design_3_proc_sys_reset_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_proc_sys_reset_0_0' (12#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_3_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:355]
-INFO: [Synth 8-6157] synthesizing module 'design_3_processing_system7_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_processing_system7_0_0' (13#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-17140-DESKTOP-L93G0Q0/realtime/design_3_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_3_processing_system7_0_0' has 69 connections declared, but only 64 given [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:362]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'image_loader_module_0'. This will prevent further optimization [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:330]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:327]
-INFO: [Synth 8-6155] done synthesizing module 'design_3' (14#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_wrapper' (15#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/hdl/design_3_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi4_lite_register_m_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_axi4_lite_register_m_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi4_lite_register_m_0_0' (1#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_axi4_lite_register_m_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'axi4_lite_register_m_0' of module 'design_3_axi4_lite_register_m_0_0' has 41 connections declared, but only 24 given [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:220]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_0_0' (2#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_gpio_1_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_gpio_1_0' (3#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_axi_interconnect_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:567]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_HRSIK2' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1540]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_HRSIK2' (4#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1540]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1CNR8YB' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1686]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1CNR8YB' (5#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1686]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_JDP5DD' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1832]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_JDP5DD' (6#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1832]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1BBJKPC' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1978]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1BBJKPC' (7#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1978]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_KZMPDG' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:2110]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_KZMPDG' (8#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:2110]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1FDXN00' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:2242]
+INFO: [Synth 8-6157] synthesizing module 'design_3_auto_pc_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_auto_pc_0' (9#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1FDXN00' (10#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:2242]
+INFO: [Synth 8-6157] synthesizing module 'design_3_xbar_1' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_xbar_1' (11#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_xbar_1_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'm_axi_arprot' does not match port width (15) of module 'design_3_xbar_1' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1501]
+WARNING: [Synth 8-689] width (9) of port connection 'm_axi_awprot' does not match port width (15) of module 'design_3_xbar_1' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:1505]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_axi_interconnect_0_0' (12#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:567]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:432]
+INFO: [Synth 8-6157] synthesizing module 'design_3_ila_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_ila_0_0' (13#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_image_loader_module_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_image_loader_module_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_image_loader_module_0_0' (14#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_image_loader_module_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_perceptron_0_1' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_perceptron_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_perceptron_0_1' (15#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_perceptron_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_proc_sys_reset_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_proc_sys_reset_0_0' (16#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_3_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:491]
+INFO: [Synth 8-6157] synthesizing module 'design_3_processing_system7_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_processing_system7_0_0' (17#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/.Xil/Vivado-4972-DESKTOP-L93G0Q0/realtime/design_3_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_3_processing_system7_0_0' has 69 connections declared, but only 64 given [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:498]
+INFO: [Synth 8-6157] synthesizing module 'design_3_xlconstant_0_1' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_xlconstant_0_1/synth/design_3_xlconstant_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 1 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (18#1) [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_xlconstant_0_1' (19#1) [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_xlconstant_0_1/synth/design_3_xlconstant_0_1.v:57]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'image_loader_module_0'. This will prevent further optimization [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:435]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:432]
+INFO: [Synth 8-6155] done synthesizing module 'design_3' (20#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/synth/design_3.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_wrapper' (21#1) [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/hdl/design_3_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_1FDXN00 has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_1FDXN00 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_KZMPDG has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_KZMPDG has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_KZMPDG has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_KZMPDG has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_1BBJKPC has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_1BBJKPC has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_1BBJKPC has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_1BBJKPC has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m02_couplers_imp_JDP5DD has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m02_couplers_imp_JDP5DD has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m02_couplers_imp_JDP5DD has unconnected port S_ACLK
@@ -80,10 +104,14 @@ WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected por
 WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M01_ARESETN
 WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M02_ACLK
 WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M04_ACLK
+WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M04_ARESETN
 WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1029.414 ; gain = 405.746
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1032.902 ; gain = 407.355
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -96,12 +124,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1029.414 ; gain = 405.746
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 1032.902 ; gain = 407.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1029.414 ; gain = 405.746
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 1032.902 ; gain = 407.355
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1029.414 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.083 . Memory (MB): peak = 1032.902 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -120,26 +148,30 @@ Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sour
 Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_image_loader_module_0_0/design_3_image_loader_module_0_0/PL_NN_prototype_image_loader_module_0_0_in_context.xdc] for cell 'design_3_i/image_loader_module_0'
 Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_ila_0_0/design_3_ila_0_0/design_3_ila_0_0_in_context.xdc] for cell 'design_3_i/ila_0'
 Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_ila_0_0/design_3_ila_0_0/design_3_ila_0_0_in_context.xdc] for cell 'design_3_i/ila_0'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_perceptron_0_1/design_3_perceptron_0_1/PL_NN_prototype_perceptron_2_0_in_context.xdc] for cell 'design_3_i/perceptron_0'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_perceptron_0_1/design_3_perceptron_0_1/PL_NN_prototype_perceptron_2_0_in_context.xdc] for cell 'design_3_i/perceptron_0'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_axi_gpio_1_0/design_3_axi_gpio_1_0/design_3_axi_gpio_1_0_in_context.xdc] for cell 'design_3_i/axi_gpio_1'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_axi_gpio_1_0/design_3_axi_gpio_1_0/design_3_axi_gpio_1_0_in_context.xdc] for cell 'design_3_i/axi_gpio_1'
 Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_auto_pc_0/design_3_auto_pc_0/PL_NN_prototype_auto_pc_0_in_context.xdc] for cell 'design_3_i/axi_interconnect_0/s00_couplers/auto_pc'
 Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_auto_pc_0/design_3_auto_pc_0/PL_NN_prototype_auto_pc_0_in_context.xdc] for cell 'design_3_i/axi_interconnect_0/s00_couplers/auto_pc'
 Parsing XDC File [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1029.414 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1032.902 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1029.414 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1032.902 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1029.414 ; gain = 405.746
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1032.902 ; gain = 407.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1029.414 ; gain = 405.746
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1032.902 ; gain = 407.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -413,12 +445,15 @@ Applied set_property DONT_TOUCH = true for design_3_i/axi_gpio_0. (constraint fi
 Applied set_property DONT_TOUCH = true for design_3_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_3_i/image_loader_module_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_3_i/ila_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_3_i/perceptron_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_3_i/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_3_i/axi_gpio_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_3_i/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1029.414 ; gain = 405.746
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 1032.902 ; gain = 407.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1029.414 ; gain = 405.746
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1032.902 ; gain = 407.355
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -459,10 +494,14 @@ WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected por
 WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M01_ARESETN
 WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M02_ACLK
 WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M04_ACLK
+WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port M04_ARESETN
 WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_3_axi_interconnect_0_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1029.414 ; gain = 405.746
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:44 . Memory (MB): peak = 1032.902 ; gain = 407.355
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -474,13 +513,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1029.414 ; gain = 405.746
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:01:00 . Memory (MB): peak = 1032.902 ; gain = 407.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1029.414 ; gain = 405.746
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:00 . Memory (MB): peak = 1032.902 ; gain = 407.355
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -492,7 +531,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1029.414 ; gain = 405.746
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:01:00 . Memory (MB): peak = 1032.902 ; gain = 407.355
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -516,13 +555,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1040.316 ; gain = 416.648
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 1039.402 ; gain = 413.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1040.316 ; gain = 416.648
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 1039.402 ; gain = 413.855
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -541,25 +580,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1040.316 ; gain = 416.648
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 1039.402 ; gain = 413.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1040.316 ; gain = 416.648
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 1039.402 ; gain = 413.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1040.316 ; gain = 416.648
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 1039.402 ; gain = 413.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1040.316 ; gain = 416.648
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 1039.402 ; gain = 413.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -573,10 +612,12 @@ Report BlackBoxes:
 |2     |design_3_auto_pc_0                |         1|
 |3     |design_3_axi4_lite_register_m_0_0 |         1|
 |4     |design_3_axi_gpio_0_0             |         1|
-|5     |design_3_ila_0_0                  |         1|
-|6     |design_3_image_loader_module_0_0  |         1|
-|7     |design_3_proc_sys_reset_0_0       |         1|
-|8     |design_3_processing_system7_0_0   |         1|
+|5     |design_3_axi_gpio_1_0             |         1|
+|6     |design_3_ila_0_0                  |         1|
+|7     |design_3_image_loader_module_0_0  |         1|
+|8     |design_3_perceptron_0_1           |         1|
+|9     |design_3_proc_sys_reset_0_0       |         1|
+|10    |design_3_processing_system7_0_0   |         1|
 +------+----------------------------------+----------+
 
 Report Cell Usage: 
@@ -586,43 +627,46 @@ Report Cell Usage:
 |1     |design_3_auto_pc_0                |     1|
 |2     |design_3_axi4_lite_register_m_0_0 |     1|
 |3     |design_3_axi_gpio_0_0             |     1|
-|4     |design_3_ila_0_0                  |     1|
-|5     |design_3_image_loader_module_0_0  |     1|
-|6     |design_3_proc_sys_reset_0_0       |     1|
-|7     |design_3_processing_system7_0_0   |     1|
-|8     |design_3_xbar_1                   |     1|
+|4     |design_3_axi_gpio_1_0             |     1|
+|5     |design_3_ila_0_0                  |     1|
+|6     |design_3_image_loader_module_0_0  |     1|
+|7     |design_3_perceptron_0_1           |     1|
+|8     |design_3_proc_sys_reset_0_0       |     1|
+|9     |design_3_processing_system7_0_0   |     1|
+|10    |design_3_xbar_1                   |     1|
 +------+----------------------------------+------+
 
 Report Instance Areas: 
 +------+-----------------------+------------------------------+------+
 |      |Instance               |Module                        |Cells |
 +------+-----------------------+------------------------------+------+
-|1     |top                    |                              |  1547|
-|2     |  design_3_i           |design_3                      |  1547|
-|3     |    axi_interconnect_0 |design_3_axi_interconnect_0_0 |   551|
+|1     |top                    |                              |  1853|
+|2     |  design_3_i           |design_3                      |  1853|
+|3     |    axi_interconnect_0 |design_3_axi_interconnect_0_0 |   773|
 |4     |      s00_couplers     |s00_couplers_imp_1FDXN00      |   177|
+|5     |    xlconstant_0       |design_3_xlconstant_0_1       |     0|
 +------+-----------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1040.316 ; gain = 416.648
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 1039.402 ; gain = 413.855
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:37 . Memory (MB): peak = 1040.316 ; gain = 416.648
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1040.316 ; gain = 416.648
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:01:04 . Memory (MB): peak = 1039.402 ; gain = 413.855
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 1039.402 ; gain = 413.855
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1040.316 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1039.402 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1058.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1053.133 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-44 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+56 Infos, 52 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 1063.609 ; gain = 721.320
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1063.609 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:20 . Memory (MB): peak = 1057.176 ; gain = 714.422
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1057.176 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1/design_3_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_3_wrapper_utilization_synth.rpt -pb design_3_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Oct  4 15:36:01 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  4 16:57:33 2024...

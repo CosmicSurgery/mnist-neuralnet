@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 2
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -53,6 +54,10 @@ set_property used_in_synthesis false [get_files -all c:/git_repos/mnist_neuralne
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_ila_0_0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_ila_0_0/design_3_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_perceptron_0_1/src/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_axi_gpio_1_0/design_3_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_axi_gpio_1_0/design_3_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_axi_gpio_1_0/design_3_axi_gpio_1_0.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_auto_pc_0/design_3_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/design_3_ooc.xdc]
 

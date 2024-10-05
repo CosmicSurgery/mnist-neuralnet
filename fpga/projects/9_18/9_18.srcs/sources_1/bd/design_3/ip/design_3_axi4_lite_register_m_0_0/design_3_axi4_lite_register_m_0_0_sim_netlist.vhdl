@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Fri Oct  4 14:21:36 2024
+-- Date        : Fri Oct  4 14:21:34 2024
 -- Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_axi4_lite_register_m_0_0/design_3_axi4_lite_register_m_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_3_axi4_lite_register_m_0_0 -prefix
+--               design_3_axi4_lite_register_m_0_0_ design_3_axi4_lite_register_m_0_0_sim_netlist.vhdl
 -- Design      : design_3_axi4_lite_register_m_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -52,8 +52,6 @@ entity design_3_axi4_lite_register_m_0_0_axi4_lite_register_module is
     status : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axil_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_3_axi4_lite_register_m_0_0_axi4_lite_register_module : entity is "axi4_lite_register_module";
 end design_3_axi4_lite_register_m_0_0_axi4_lite_register_module;
 
 architecture STRUCTURE of design_3_axi4_lite_register_m_0_0_axi4_lite_register_module is

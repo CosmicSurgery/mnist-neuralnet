@@ -4699,3 +4699,2135 @@ TRACE::2024-10-04.15:41:41::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neu
 C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2024-10-04.15:41:41::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:05:44::SCWPlatform::Clearing the existing platform
+TRACE::2024-10-04.16:05:44::SCWSystem::Clearing the existing sysconfig
+TRACE::2024-10-04.16:05:44::SCWBDomain::clearing the fsbl build
+TRACE::2024-10-04.16:05:44::SCWMssOS::Removing the swdes entry for  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:44::SCWMssOS::Removing the swdes entry for  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:05:44::SCWSystem::Clearing the domains completed.
+TRACE::2024-10-04.16:05:44::SCWPlatform::Clearing the opened hw db.
+TRACE::2024-10-04.16:05:44::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:44::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:44::SCWPlatform:: Platform location is C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:44::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:44::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:44::SCWPlatform::Removing the HwDB with name C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:44::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:44::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:44::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:44::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:44::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:44::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:44::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-10-04.16:05:49::SCWPlatform::Opened new HwDB with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWReader::Active system found as  design_3
+TRACE::2024-10-04.16:05:49::SCWReader::Handling sysconfig design_3
+TRACE::2024-10-04.16:05:49::SCWDomain::checking for install qemu data   : 
+TRACE::2024-10-04.16:05:49::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2024-10-04.16:05:49::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:49::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:49::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2024-10-04.16:05:49::SCWMssOS::No sw design opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS::mss exists loading the mss file  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS::Opened the sw design from mss  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS::Adding the swdes entry C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2024-10-04.16:05:49::SCWMssOS::updating the scw layer about changes
+TRACE::2024-10-04.16:05:49::SCWMssOS::Opened the sw design.  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:49::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:05:49::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS:: library already available in sw design:  xilffs:4.2
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:49::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:05:49::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS:: library already available in sw design:  xilrsa:1.5
+TRACE::2024-10-04.16:05:49::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2024-10-04.16:05:49::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:49::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:05:49::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWReader::No isolation master present  
+TRACE::2024-10-04.16:05:49::SCWDomain::checking for install qemu data   : 
+TRACE::2024-10-04.16:05:49::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2024-10-04.16:05:49::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:49::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:05:49::SCWMssOS::No sw design opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS::mss exists loading the mss file  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS::Opened the sw design from mss  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS::Adding the swdes entry C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2024-10-04.16:05:49::SCWMssOS::updating the scw layer about changes
+TRACE::2024-10-04.16:05:49::SCWMssOS::Opened the sw design.  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2024-10-04.16:05:49::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:49::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:49::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:49::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:05:49::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:05:49::SCWReader::No isolation master present  
+TRACE::2024-10-04.16:05:52::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:52::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:52::SCWPlatform:: Platform location is C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa
+TRACE::2024-10-04.16:05:52::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:52::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:56::SCWMssOS::Doing hw sync for the mss in domain: zynq_fsbl
+TRACE::2024-10-04.16:05:56::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:56::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:56::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:56::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:56::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:56::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:56::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:56::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:56::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:56::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:05:56::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:05:56::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa
+TRACE::2024-10-04.16:05:56::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:56::SCWPlatform::update - Opened existing hwdb design_3_wrapper_4
+TRACE::2024-10-04.16:05:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:56::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2024-10-04.16:05:56::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:56::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:56::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:56::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:56::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:56::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:56::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_3
+TRACE::2024-10-04.16:05:56::SCWPlatform::Opened existing hwdb design_3_wrapper_3
+TRACE::2024-10-04.16:05:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:56::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:05:56::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:05:56::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:05:56::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa
+TRACE::2024-10-04.16:05:56::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:56::SCWPlatform::update - Opened existing hwdb design_3_wrapper_4
+TRACE::2024-10-04.16:05:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:05:56::SCWMssOS::Completed hw sync for the mss in domain: zynq_fsbl
+TRACE::2024-10-04.16:05:56::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2024-10-04.16:05:56::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:56::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:05:57::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:05:57::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:05:57::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-10-04.16:06:01::SCWPlatform::Opened new HwDB with name design_3_wrapper_5
+TRACE::2024-10-04.16:06:01::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:01::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:01::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:01::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:06:01::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:01::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:06:01::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_5
+TRACE::2024-10-04.16:06:01::SCWPlatform::Opened existing hwdb design_3_wrapper_5
+TRACE::2024-10-04.16:06:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:06:01::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:06:01::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:06:01::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:06:01::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:01::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:01::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:01::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:06:01::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:01::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:06:01::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_5
+TRACE::2024-10-04.16:06:01::SCWPlatform::Opened existing hwdb design_3_wrapper_5
+TRACE::2024-10-04.16:06:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:06:01::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:06:01::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:06:01::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:06:01::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:01::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:01::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:01::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:06:01::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:01::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:06:01::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_5
+TRACE::2024-10-04.16:06:01::SCWPlatform::Opened existing hwdb design_3_wrapper_5
+TRACE::2024-10-04.16:06:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:06:01::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:06:01::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:06:01::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:06:01::SCWWriter::formatted JSON is {
+	"platformName":	"design_3",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_3",
+	"platHandOff":	"<platformDir>_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_3_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_3",
+	"systems":	[{
+			"systemName":	"design_3",
+			"systemDesc":	"design_3",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_3",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"3b09af7ce7cf9c0b911f9219d92f4761",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.2", "xilrsa:1.5"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"3a8645d1fd4baedb95a807dc8c4fad1b",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2024-10-04.16:06:42::SCWPlatform::Started generating the artifacts platform design_3
+TRACE::2024-10-04.16:06:42::SCWPlatform::Sanity checking of platform is completed
+LOG::2024-10-04.16:06:42::SCWPlatform::Started generating the artifacts for system configuration design_3
+LOG::2024-10-04.16:06:42::SCWSystem::Checking the domain zynq_fsbl
+LOG::2024-10-04.16:06:42::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2024-10-04.16:06:42::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2024-10-04.16:06:42::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2024-10-04.16:06:42::SCWSystem::Checking the domain standalone_domain
+LOG::2024-10-04.16:06:42::SCWSystem::Not a boot domain 
+LOG::2024-10-04.16:06:42::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2024-10-04.16:06:42::SCWDomain::Generating domain artifcats
+TRACE::2024-10-04.16:06:42::SCWMssOS::Generating standalone artifcats
+TRACE::2024-10-04.16:06:42::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/sw/design_3/qemu/
+TRACE::2024-10-04.16:06:42::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/sw/design_3/standalone_domain/qemu/
+TRACE::2024-10-04.16:06:42::SCWMssOS:: Copying the user libraries. 
+TRACE::2024-10-04.16:06:42::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:42::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:42::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:42::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:06:42::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:42::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:06:42::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_5
+TRACE::2024-10-04.16:06:42::SCWPlatform::Opened existing hwdb design_3_wrapper_5
+TRACE::2024-10-04.16:06:42::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:06:42::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:06:42::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:06:42::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:06:42::SCWMssOS::Completed writing the mss file at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2024-10-04.16:06:42::SCWMssOS::Mss edits present, copying mssfile into export location C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:06:42::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2024-10-04.16:06:42::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2024-10-04.16:06:42::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2024-10-04.16:06:42::SCWMssOS::skipping the bsp build ... 
+TRACE::2024-10-04.16:06:42::SCWMssOS::Copying to export directory.
+TRACE::2024-10-04.16:06:42::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2024-10-04.16:06:42::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2024-10-04.16:06:42::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2024-10-04.16:06:42::SCWSystem::Completed Processing the sysconfig design_3
+LOG::2024-10-04.16:06:42::SCWPlatform::Completed generating the artifacts for system configuration design_3
+TRACE::2024-10-04.16:06:42::SCWPlatform::Started preparing the platform 
+TRACE::2024-10-04.16:06:42::SCWSystem::Writing the bif file for system config design_3
+TRACE::2024-10-04.16:06:42::SCWSystem::dir created 
+TRACE::2024-10-04.16:06:42::SCWSystem::Writing the bif 
+TRACE::2024-10-04.16:06:42::SCWPlatform::Started writing the spfm file 
+TRACE::2024-10-04.16:06:42::SCWPlatform::Started writing the xpfm file 
+TRACE::2024-10-04.16:06:42::SCWPlatform::Completed generating the platform
+TRACE::2024-10-04.16:06:42::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:42::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:42::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:42::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:06:42::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:42::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:06:42::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_5
+TRACE::2024-10-04.16:06:42::SCWPlatform::Opened existing hwdb design_3_wrapper_5
+TRACE::2024-10-04.16:06:42::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:06:42::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:06:42::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:06:42::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:06:42::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:42::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:42::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:42::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:06:43::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:43::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:06:43::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_5
+TRACE::2024-10-04.16:06:43::SCWPlatform::Opened existing hwdb design_3_wrapper_5
+TRACE::2024-10-04.16:06:43::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:06:43::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:06:43::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:06:43::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:06:43::SCWWriter::formatted JSON is {
+	"platformName":	"design_3",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_3",
+	"platHandOff":	"<platformDir>_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_3_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_3",
+	"systems":	[{
+			"systemName":	"design_3",
+			"systemDesc":	"design_3",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_3",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"3b09af7ce7cf9c0b911f9219d92f4761",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.2", "xilrsa:1.5"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"3a8645d1fd4baedb95a807dc8c4fad1b",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2024-10-04.16:06:43::SCWPlatform::updated the xpfm file.
+TRACE::2024-10-04.16:06:43::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:43::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:43::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:43::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:06:43::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:06:43::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:06:43::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_5
+TRACE::2024-10-04.16:06:43::SCWPlatform::Opened existing hwdb design_3_wrapper_5
+TRACE::2024-10-04.16:06:43::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:06:43::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:06:43::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:06:43::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:04::SCWPlatform::Clearing the existing platform
+TRACE::2024-10-04.16:34:04::SCWSystem::Clearing the existing sysconfig
+TRACE::2024-10-04.16:34:04::SCWBDomain::clearing the fsbl build
+TRACE::2024-10-04.16:34:04::SCWMssOS::Removing the swdes entry for  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:04::SCWMssOS::Removing the swdes entry for  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:04::SCWSystem::Clearing the domains completed.
+TRACE::2024-10-04.16:34:04::SCWPlatform::Clearing the opened hw db.
+TRACE::2024-10-04.16:34:04::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:04::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:04::SCWPlatform:: Platform location is C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:04::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:04::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:04::SCWPlatform::Removing the HwDB with name C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:04::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:04::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:04::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:04::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:04::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:04::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:04::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-10-04.16:34:09::SCWPlatform::Opened new HwDB with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWReader::Active system found as  design_3
+TRACE::2024-10-04.16:34:09::SCWReader::Handling sysconfig design_3
+TRACE::2024-10-04.16:34:09::SCWDomain::checking for install qemu data   : 
+TRACE::2024-10-04.16:34:09::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2024-10-04.16:34:09::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:09::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:09::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2024-10-04.16:34:09::SCWMssOS::No sw design opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS::mss exists loading the mss file  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS::Opened the sw design from mss  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS::Adding the swdes entry C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2024-10-04.16:34:09::SCWMssOS::updating the scw layer about changes
+TRACE::2024-10-04.16:34:09::SCWMssOS::Opened the sw design.  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:09::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:34:09::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS:: library already available in sw design:  xilffs:4.2
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:09::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:34:09::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS:: library already available in sw design:  xilrsa:1.5
+TRACE::2024-10-04.16:34:09::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2024-10-04.16:34:09::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:09::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:34:09::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWReader::No isolation master present  
+TRACE::2024-10-04.16:34:09::SCWDomain::checking for install qemu data   : 
+TRACE::2024-10-04.16:34:09::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2024-10-04.16:34:09::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:09::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:09::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:09::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:34:09::SCWMssOS::No sw design opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS::mss exists loading the mss file  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS::Opened the sw design from mss  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:09::SCWMssOS::Adding the swdes entry C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2024-10-04.16:34:09::SCWMssOS::updating the scw layer about changes
+TRACE::2024-10-04.16:34:10::SCWMssOS::Opened the sw design.  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:10::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2024-10-04.16:34:10::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2024-10-04.16:34:10::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:10::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:10::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:10::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:10::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:10::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:10::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:10::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:10::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:10::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:34:10::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:10::SCWReader::No isolation master present  
+TRACE::2024-10-04.16:34:16::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:16::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:16::SCWPlatform:: Platform location is C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa
+TRACE::2024-10-04.16:34:16::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:16::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:22::SCWMssOS::Doing hw sync for the mss in domain: zynq_fsbl
+TRACE::2024-10-04.16:34:22::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:22::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:22::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:22::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:22::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:22::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:22::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:22::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:34:22::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:22::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:22::SCWPlatform::update - Opened existing hwdb design_3_wrapper_7
+TRACE::2024-10-04.16:34:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:22::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2024-10-04.16:34:22::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:22::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:22::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:22::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:22::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_6
+TRACE::2024-10-04.16:34:22::SCWPlatform::Opened existing hwdb design_3_wrapper_6
+TRACE::2024-10-04.16:34:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:22::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:22::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:34:22::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:22::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:22::SCWPlatform::update - Opened existing hwdb design_3_wrapper_7
+TRACE::2024-10-04.16:34:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:22::SCWMssOS::Completed hw sync for the mss in domain: zynq_fsbl
+TRACE::2024-10-04.16:34:22::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2024-10-04.16:34:22::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:22::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:22::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-10-04.16:34:28::SCWPlatform::Opened new HwDB with name design_3_wrapper_8
+TRACE::2024-10-04.16:34:28::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:28::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:28::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:28::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:28::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:28::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:28::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_8
+TRACE::2024-10-04.16:34:28::SCWPlatform::Opened existing hwdb design_3_wrapper_8
+TRACE::2024-10-04.16:34:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:28::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:28::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:34:28::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:28::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:28::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:28::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:28::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:28::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:28::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:28::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_8
+TRACE::2024-10-04.16:34:28::SCWPlatform::Opened existing hwdb design_3_wrapper_8
+TRACE::2024-10-04.16:34:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:28::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:28::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:34:28::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:34:28::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:28::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:28::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:28::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:28::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:28::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:28::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_8
+TRACE::2024-10-04.16:34:28::SCWPlatform::Opened existing hwdb design_3_wrapper_8
+TRACE::2024-10-04.16:34:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:28::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:28::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:34:28::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:28::SCWWriter::formatted JSON is {
+	"platformName":	"design_3",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_3",
+	"platHandOff":	"<platformDir>_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_3_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_3",
+	"systems":	[{
+			"systemName":	"design_3",
+			"systemDesc":	"design_3",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_3",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"3b09af7ce7cf9c0b911f9219d92f4761",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.2", "xilrsa:1.5"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"3a8645d1fd4baedb95a807dc8c4fad1b",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2024-10-04.16:34:42::SCWPlatform::Started generating the artifacts platform design_3
+TRACE::2024-10-04.16:34:42::SCWPlatform::Sanity checking of platform is completed
+LOG::2024-10-04.16:34:42::SCWPlatform::Started generating the artifacts for system configuration design_3
+LOG::2024-10-04.16:34:42::SCWSystem::Checking the domain zynq_fsbl
+LOG::2024-10-04.16:34:42::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2024-10-04.16:34:42::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2024-10-04.16:34:42::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2024-10-04.16:34:42::SCWSystem::Checking the domain standalone_domain
+LOG::2024-10-04.16:34:42::SCWSystem::Not a boot domain 
+LOG::2024-10-04.16:34:42::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2024-10-04.16:34:42::SCWDomain::Generating domain artifcats
+TRACE::2024-10-04.16:34:42::SCWMssOS::Generating standalone artifcats
+TRACE::2024-10-04.16:34:42::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/sw/design_3/qemu/
+TRACE::2024-10-04.16:34:42::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/sw/design_3/standalone_domain/qemu/
+TRACE::2024-10-04.16:34:42::SCWMssOS:: Copying the user libraries. 
+TRACE::2024-10-04.16:34:42::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:42::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:42::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:42::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:34:42::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:34:42::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:34:42::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_8
+TRACE::2024-10-04.16:34:42::SCWPlatform::Opened existing hwdb design_3_wrapper_8
+TRACE::2024-10-04.16:34:42::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:34:42::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:42::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:34:42::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:42::SCWMssOS::Completed writing the mss file at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2024-10-04.16:34:42::SCWMssOS::Mss edits present, copying mssfile into export location C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:34:42::SCWMssOS::bsp generated is stale removing and regenerating. 
+TRACE::2024-10-04.16:34:46::SCWMssOS::doing bsp build ... 
+TRACE::2024-10-04.16:34:46::SCWMssOS::System Command Ran  C: & cd  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2024-10-04.16:34:46::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src"
+
+TRACE::2024-10-04.16:34:46::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2024-10-04.16:34:46::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2024-10-04.16:34:46::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:47::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src"
+
+TRACE::2024-10-04.16:34:47::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2024-10-04.16:34:47::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2024-10-04.16:34:47::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:47::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+
+TRACE::2024-10-04.16:34:47::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2024-10-04.16:34:47::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2024-10-04.16:34:47::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:47::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+
+TRACE::2024-10-04.16:34:47::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.16:34:47::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.16:34:47::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:47::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_5/src"
+
+TRACE::2024-10-04.16:34:47::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2024-10-04.16:34:47::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2024-10-04.16:34:47::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:47::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_10/src"
+
+TRACE::2024-10-04.16:34:47::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2024-10-04.16:34:47::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2024-10-04.16:34:47::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:48::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_6/src"
+
+TRACE::2024-10-04.16:34:48::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.16:34:48::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.16:34:48::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:48::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_5/src"
+
+TRACE::2024-10-04.16:34:48::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2024-10-04.16:34:48::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2024-10-04.16:34:48::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:48::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+
+TRACE::2024-10-04.16:34:48::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.16:34:48::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.16:34:48::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:48::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_1/src"
+
+TRACE::2024-10-04.16:34:48::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.16:34:48::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.16:34:48::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:49::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+
+TRACE::2024-10-04.16:34:49::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2024-10-04.16:34:49::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2024-10-04.16:34:49::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:49::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+
+TRACE::2024-10-04.16:34:49::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.16:34:49::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.16:34:49::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:49::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_8/src"
+
+TRACE::2024-10-04.16:34:49::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2024-10-04.16:34:49::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2024-10-04.16:34:49::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:49::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_1/src"
+
+TRACE::2024-10-04.16:34:49::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2024-10-04.16:34:49::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2024-10-04.16:34:49::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:50::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_10/src"
+
+TRACE::2024-10-04.16:34:50::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ttcps_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.16:34:50::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.16:34:50::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:50::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_8/src"
+
+TRACE::2024-10-04.16:34:50::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.16:34:50::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.16:34:50::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:50::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+
+TRACE::2024-10-04.16:34:50::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2024-10-04.16:34:50::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2024-10-04.16:34:50::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+
+TRACE::2024-10-04.16:34:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.16:34:51::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.16:34:51::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:51::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src"
+
+TRACE::2024-10-04.16:34:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2024-10-04.16:34:51::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2024-10-04.16:34:51::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:51::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2024-10-04.16:34:52::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src"
+
+TRACE::2024-10-04.16:34:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2024-10-04.16:34:52::SCWMssOS::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2024-10-04.16:34:52::SCWMssOS::ostartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:52::SCWMssOS::"Compiling cpu_cortexa9"
+
+TRACE::2024-10-04.16:34:52::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+
+TRACE::2024-10-04.16:34:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2024-10-04.16:34:52::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2024-10-04.16:34:52::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:52::SCWMssOS::"Compiling ddrps"
+
+TRACE::2024-10-04.16:34:52::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+
+TRACE::2024-10-04.16:34:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.16:34:52::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.16:34:52::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:52::SCWMssOS::"Compiling devcfg"
+
+TRACE::2024-10-04.16:34:54::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_5/src"
+
+TRACE::2024-10-04.16:34:54::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2024-10-04.16:34:54::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2024-10-04.16:34:54::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:54::SCWMssOS::"Compiling dmaps"
+
+TRACE::2024-10-04.16:34:56::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_10/src"
+
+TRACE::2024-10-04.16:34:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2024-10-04.16:34:56::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2024-10-04.16:34:56::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:56::SCWMssOS::"Compiling emacps"
+
+TRACE::2024-10-04.16:34:58::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_6/src"
+
+TRACE::2024-10-04.16:34:58::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.16:34:58::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.16:34:58::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:34:58::SCWMssOS::"Compiling gpiops"
+
+TRACE::2024-10-04.16:35:00::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_5/src"
+
+TRACE::2024-10-04.16:35:00::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2024-10-04.16:35:00::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2024-10-04.16:35:00::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:35:00::SCWMssOS::"Compiling gpio"
+
+TRACE::2024-10-04.16:35:02::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+
+TRACE::2024-10-04.16:35:02::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.16:35:02::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.16:35:02::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:35:02::SCWMssOS::"Compiling qspips"
+
+TRACE::2024-10-04.16:35:04::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_1/src"
+
+TRACE::2024-10-04.16:35:04::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.16:35:04::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.16:35:04::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:35:04::SCWMssOS::"Compiling scugic"
+
+TRACE::2024-10-04.16:35:06::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+
+TRACE::2024-10-04.16:35:06::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2024-10-04.16:35:06::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2024-10-04.16:35:06::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:35:06::SCWMssOS::"Compiling scutimer"
+
+TRACE::2024-10-04.16:35:07::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+
+TRACE::2024-10-04.16:35:07::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.16:35:07::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.16:35:07::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:35:07::SCWMssOS::"Compiling scuwdt"
+
+TRACE::2024-10-04.16:35:08::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_8/src"
+
+TRACE::2024-10-04.16:35:08::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2024-10-04.16:35:08::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2024-10-04.16:35:08::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:35:08::SCWMssOS::"Compiling sdps"
+
+TRACE::2024-10-04.16:35:11::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_1/src"
+
+TRACE::2024-10-04.16:35:11::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2024-10-04.16:35:11::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2024-10-04.16:35:11::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:35:11::SCWMssOS::"Compiling standalone"
+
+TRACE::2024-10-04.16:35:20::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_10/src"
+
+TRACE::2024-10-04.16:35:20::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ttcps_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.16:35:20::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.16:35:20::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:35:20::SCWMssOS::"Compiling ttcps"
+
+TRACE::2024-10-04.16:35:21::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_8/src"
+
+TRACE::2024-10-04.16:35:21::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.16:35:21::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.16:35:21::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:35:21::SCWMssOS::"Compiling uartps"
+
+TRACE::2024-10-04.16:35:24::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+
+TRACE::2024-10-04.16:35:24::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2024-10-04.16:35:24::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2024-10-04.16:35:24::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:35:24::SCWMssOS::"Compiling usbps"
+
+TRACE::2024-10-04.16:35:26::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+
+TRACE::2024-10-04.16:35:26::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.16:35:26::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.16:35:26::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.16:35:26::SCWMssOS::"Compiling xadcps"
+
+TRACE::2024-10-04.16:35:28::SCWMssOS::'Finished building libraries'
+
+TRACE::2024-10-04.16:35:28::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2024-10-04.16:35:28::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2024-10-04.16:35:28::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2024-10-04.16:35:28::SCWSystem::Completed Processing the sysconfig design_3
+LOG::2024-10-04.16:35:28::SCWPlatform::Completed generating the artifacts for system configuration design_3
+TRACE::2024-10-04.16:35:28::SCWPlatform::Started preparing the platform 
+TRACE::2024-10-04.16:35:28::SCWSystem::Writing the bif file for system config design_3
+TRACE::2024-10-04.16:35:28::SCWSystem::dir created 
+TRACE::2024-10-04.16:35:28::SCWSystem::Writing the bif 
+TRACE::2024-10-04.16:35:28::SCWPlatform::Started writing the spfm file 
+TRACE::2024-10-04.16:35:28::SCWPlatform::Started writing the xpfm file 
+TRACE::2024-10-04.16:35:28::SCWPlatform::Completed generating the platform
+KEYINFO::2024-10-04.16:35:28::SCWMssOS::Could not open the swdb for system_0
+KEYINFO::2024-10-04.16:35:28::SCWMssOS::Could not open the sw design at  system_0
+ERROR: [Hsi 55-1558] Software Design system_0 is not found
+
+TRACE::2024-10-04.16:35:28::SCWMssOS::Cleared the swdb table entry
+TRACE::2024-10-04.16:35:28::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2024-10-04.16:35:28::SCWMssOS::Writing the mss file completed C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:35:28::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:35:28::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:35:28::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:35:28::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:35:28::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:35:28::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:35:28::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_8
+TRACE::2024-10-04.16:35:28::SCWPlatform::Opened existing hwdb design_3_wrapper_8
+TRACE::2024-10-04.16:35:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:35:28::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:35:28::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:35:28::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.16:35:28::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:35:28::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:35:28::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:35:28::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:35:28::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:35:28::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:35:28::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_8
+TRACE::2024-10-04.16:35:28::SCWPlatform::Opened existing hwdb design_3_wrapper_8
+TRACE::2024-10-04.16:35:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:35:28::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:35:28::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:35:28::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:35:28::SCWWriter::formatted JSON is {
+	"platformName":	"design_3",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_3",
+	"platHandOff":	"<platformDir>_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_3_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_3",
+	"systems":	[{
+			"systemName":	"design_3",
+			"systemDesc":	"design_3",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_3",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"3b09af7ce7cf9c0b911f9219d92f4761",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.2", "xilrsa:1.5"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"fa293280d55fef440abd677d129ef91c",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2024-10-04.16:35:28::SCWPlatform::updated the xpfm file.
+TRACE::2024-10-04.16:35:28::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:35:28::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:35:28::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:35:28::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.16:35:28::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.16:35:28::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.16:35:28::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_8
+TRACE::2024-10-04.16:35:28::SCWPlatform::Opened existing hwdb design_3_wrapper_8
+TRACE::2024-10-04.16:35:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.16:35:28::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.16:35:28::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.16:35:28::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:06::SCWPlatform::Clearing the existing platform
+TRACE::2024-10-04.17:04:06::SCWSystem::Clearing the existing sysconfig
+TRACE::2024-10-04.17:04:06::SCWBDomain::clearing the fsbl build
+TRACE::2024-10-04.17:04:06::SCWMssOS::Removing the swdes entry for  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:06::SCWMssOS::Removing the swdes entry for  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:06::SCWSystem::Clearing the domains completed.
+TRACE::2024-10-04.17:04:06::SCWPlatform::Clearing the opened hw db.
+TRACE::2024-10-04.17:04:06::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:06::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:06::SCWPlatform:: Platform location is C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:06::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:06::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:06::SCWPlatform::Removing the HwDB with name C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:06::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:06::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:06::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:06::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:06::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:06::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:06::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-10-04.17:04:12::SCWPlatform::Opened new HwDB with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWReader::Active system found as  design_3
+TRACE::2024-10-04.17:04:12::SCWReader::Handling sysconfig design_3
+TRACE::2024-10-04.17:04:12::SCWDomain::checking for install qemu data   : 
+TRACE::2024-10-04.17:04:12::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2024-10-04.17:04:12::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:12::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:12::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2024-10-04.17:04:12::SCWMssOS::No sw design opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS::mss exists loading the mss file  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS::Opened the sw design from mss  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS::Adding the swdes entry C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2024-10-04.17:04:12::SCWMssOS::updating the scw layer about changes
+TRACE::2024-10-04.17:04:12::SCWMssOS::Opened the sw design.  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:12::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:04:12::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS:: library already available in sw design:  xilffs:4.2
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:12::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:04:12::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS:: library already available in sw design:  xilrsa:1.5
+TRACE::2024-10-04.17:04:12::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2024-10-04.17:04:12::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:12::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:04:12::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWReader::No isolation master present  
+TRACE::2024-10-04.17:04:12::SCWDomain::checking for install qemu data   : 
+TRACE::2024-10-04.17:04:12::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2024-10-04.17:04:12::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:12::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:04:12::SCWMssOS::No sw design opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS::mss exists loading the mss file  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS::Opened the sw design from mss  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS::Adding the swdes entry C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2024-10-04.17:04:12::SCWMssOS::updating the scw layer about changes
+TRACE::2024-10-04.17:04:12::SCWMssOS::Opened the sw design.  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2024-10-04.17:04:12::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:12::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:12::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:12::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:04:12::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:12::SCWReader::No isolation master present  
+TRACE::2024-10-04.17:04:14::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:14::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:14::SCWPlatform:: Platform location is C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa
+TRACE::2024-10-04.17:04:14::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:14::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:20::SCWMssOS::Doing hw sync for the mss in domain: zynq_fsbl
+TRACE::2024-10-04.17:04:20::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:20::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:20::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:20::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:20::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:20::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:20::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:20::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:04:20::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:20::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:20::SCWPlatform::update - Opened existing hwdb design_3_wrapper_11
+TRACE::2024-10-04.17:04:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:20::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2024-10-04.17:04:20::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:20::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:20::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:20::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:20::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_10
+TRACE::2024-10-04.17:04:20::SCWPlatform::Opened existing hwdb design_3_wrapper_10
+TRACE::2024-10-04.17:04:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:20::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:20::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:04:20::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:20::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/tempdsa/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:20::SCWPlatform::update - Opened existing hwdb design_3_wrapper_11
+TRACE::2024-10-04.17:04:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:20::SCWMssOS::Completed hw sync for the mss in domain: zynq_fsbl
+TRACE::2024-10-04.17:04:20::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2024-10-04.17:04:20::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:20::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:20::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-10-04.17:04:25::SCWPlatform::Opened new HwDB with name design_3_wrapper_12
+TRACE::2024-10-04.17:04:25::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:25::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:25::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:25::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:25::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:25::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:25::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_12
+TRACE::2024-10-04.17:04:25::SCWPlatform::Opened existing hwdb design_3_wrapper_12
+TRACE::2024-10-04.17:04:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:25::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:25::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:04:25::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:25::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:25::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:25::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:25::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:25::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:25::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:25::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_12
+TRACE::2024-10-04.17:04:25::SCWPlatform::Opened existing hwdb design_3_wrapper_12
+TRACE::2024-10-04.17:04:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:25::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:25::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:04:25::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:04:25::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:25::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:25::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:25::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:25::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:25::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:25::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_12
+TRACE::2024-10-04.17:04:25::SCWPlatform::Opened existing hwdb design_3_wrapper_12
+TRACE::2024-10-04.17:04:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:25::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:25::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:04:25::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:25::SCWWriter::formatted JSON is {
+	"platformName":	"design_3",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_3",
+	"platHandOff":	"<platformDir>_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_3_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_3",
+	"systems":	[{
+			"systemName":	"design_3",
+			"systemDesc":	"design_3",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_3",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"3b09af7ce7cf9c0b911f9219d92f4761",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.2", "xilrsa:1.5"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"fa293280d55fef440abd677d129ef91c",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2024-10-04.17:04:37::SCWPlatform::Started generating the artifacts platform design_3
+TRACE::2024-10-04.17:04:37::SCWPlatform::Sanity checking of platform is completed
+LOG::2024-10-04.17:04:37::SCWPlatform::Started generating the artifacts for system configuration design_3
+LOG::2024-10-04.17:04:37::SCWSystem::Checking the domain zynq_fsbl
+LOG::2024-10-04.17:04:37::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2024-10-04.17:04:37::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2024-10-04.17:04:37::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2024-10-04.17:04:37::SCWSystem::Checking the domain standalone_domain
+LOG::2024-10-04.17:04:37::SCWSystem::Not a boot domain 
+LOG::2024-10-04.17:04:37::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2024-10-04.17:04:37::SCWDomain::Generating domain artifcats
+TRACE::2024-10-04.17:04:37::SCWMssOS::Generating standalone artifcats
+TRACE::2024-10-04.17:04:37::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/sw/design_3/qemu/
+TRACE::2024-10-04.17:04:37::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/export/design_3/sw/design_3/standalone_domain/qemu/
+TRACE::2024-10-04.17:04:37::SCWMssOS:: Copying the user libraries. 
+TRACE::2024-10-04.17:04:37::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:37::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:37::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:37::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:04:37::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:04:37::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:04:37::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_12
+TRACE::2024-10-04.17:04:37::SCWPlatform::Opened existing hwdb design_3_wrapper_12
+TRACE::2024-10-04.17:04:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:04:37::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:37::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:04:37::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:37::SCWMssOS::Completed writing the mss file at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2024-10-04.17:04:37::SCWMssOS::Mss edits present, copying mssfile into export location C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:04:37::SCWMssOS::bsp generated is stale removing and regenerating. 
+TRACE::2024-10-04.17:04:41::SCWMssOS::doing bsp build ... 
+TRACE::2024-10-04.17:04:41::SCWMssOS::System Command Ran  C: & cd  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2024-10-04.17:04:41::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src"
+
+TRACE::2024-10-04.17:04:41::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2024-10-04.17:04:41::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2024-10-04.17:04:41::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:42::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src"
+
+TRACE::2024-10-04.17:04:42::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2024-10-04.17:04:42::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2024-10-04.17:04:42::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:42::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+
+TRACE::2024-10-04.17:04:42::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2024-10-04.17:04:42::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2024-10-04.17:04:42::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:42::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+
+TRACE::2024-10-04.17:04:42::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.17:04:42::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.17:04:42::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:42::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_5/src"
+
+TRACE::2024-10-04.17:04:42::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2024-10-04.17:04:42::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2024-10-04.17:04:42::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:42::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_10/src"
+
+TRACE::2024-10-04.17:04:42::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2024-10-04.17:04:42::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2024-10-04.17:04:42::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:43::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_6/src"
+
+TRACE::2024-10-04.17:04:43::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.17:04:43::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.17:04:43::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:43::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_5/src"
+
+TRACE::2024-10-04.17:04:43::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2024-10-04.17:04:43::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2024-10-04.17:04:43::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:43::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+
+TRACE::2024-10-04.17:04:43::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.17:04:43::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.17:04:43::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:44::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_1/src"
+
+TRACE::2024-10-04.17:04:44::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.17:04:44::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.17:04:44::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:44::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+
+TRACE::2024-10-04.17:04:44::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2024-10-04.17:04:44::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2024-10-04.17:04:44::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:44::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+
+TRACE::2024-10-04.17:04:44::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.17:04:44::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.17:04:44::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:45::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_8/src"
+
+TRACE::2024-10-04.17:04:45::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2024-10-04.17:04:45::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2024-10-04.17:04:45::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:45::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_1/src"
+
+TRACE::2024-10-04.17:04:45::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2024-10-04.17:04:45::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2024-10-04.17:04:45::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:46::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_10/src"
+
+TRACE::2024-10-04.17:04:46::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ttcps_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.17:04:46::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.17:04:46::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:46::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_8/src"
+
+TRACE::2024-10-04.17:04:46::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.17:04:46::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.17:04:46::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:46::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+
+TRACE::2024-10-04.17:04:46::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2024-10-04.17:04:46::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2024-10-04.17:04:46::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:47::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+
+TRACE::2024-10-04.17:04:47::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-10-04.17:04:47::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-10-04.17:04:47::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:47::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src"
+
+TRACE::2024-10-04.17:04:47::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2024-10-04.17:04:47::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2024-10-04.17:04:47::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:47::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2024-10-04.17:04:48::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src"
+
+TRACE::2024-10-04.17:04:48::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2024-10-04.17:04:48::SCWMssOS::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2024-10-04.17:04:48::SCWMssOS::ostartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:48::SCWMssOS::"Compiling cpu_cortexa9"
+
+TRACE::2024-10-04.17:04:48::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+
+TRACE::2024-10-04.17:04:48::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2024-10-04.17:04:48::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2024-10-04.17:04:48::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:48::SCWMssOS::"Compiling ddrps"
+
+TRACE::2024-10-04.17:04:48::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+
+TRACE::2024-10-04.17:04:48::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.17:04:48::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.17:04:48::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:48::SCWMssOS::"Compiling devcfg"
+
+TRACE::2024-10-04.17:04:51::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_5/src"
+
+TRACE::2024-10-04.17:04:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2024-10-04.17:04:51::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2024-10-04.17:04:51::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:51::SCWMssOS::"Compiling dmaps"
+
+TRACE::2024-10-04.17:04:53::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_10/src"
+
+TRACE::2024-10-04.17:04:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2024-10-04.17:04:53::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2024-10-04.17:04:53::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:54::SCWMssOS::"Compiling emacps"
+
+TRACE::2024-10-04.17:04:57::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_6/src"
+
+TRACE::2024-10-04.17:04:57::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.17:04:57::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.17:04:57::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:04:57::SCWMssOS::"Compiling gpiops"
+
+TRACE::2024-10-04.17:05:00::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_5/src"
+
+TRACE::2024-10-04.17:05:00::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2024-10-04.17:05:00::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2024-10-04.17:05:00::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:05:00::SCWMssOS::"Compiling gpio"
+
+TRACE::2024-10-04.17:05:02::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+
+TRACE::2024-10-04.17:05:02::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.17:05:02::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.17:05:02::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:05:02::SCWMssOS::"Compiling qspips"
+
+TRACE::2024-10-04.17:05:05::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_1/src"
+
+TRACE::2024-10-04.17:05:05::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.17:05:05::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.17:05:05::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:05:05::SCWMssOS::"Compiling scugic"
+
+TRACE::2024-10-04.17:05:08::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+
+TRACE::2024-10-04.17:05:08::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2024-10-04.17:05:08::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2024-10-04.17:05:08::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:05:08::SCWMssOS::"Compiling scutimer"
+
+TRACE::2024-10-04.17:05:10::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+
+TRACE::2024-10-04.17:05:10::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.17:05:10::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.17:05:10::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:05:10::SCWMssOS::"Compiling scuwdt"
+
+TRACE::2024-10-04.17:05:11::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_8/src"
+
+TRACE::2024-10-04.17:05:11::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2024-10-04.17:05:11::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2024-10-04.17:05:11::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:05:11::SCWMssOS::"Compiling sdps"
+
+TRACE::2024-10-04.17:05:15::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_1/src"
+
+TRACE::2024-10-04.17:05:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2024-10-04.17:05:15::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2024-10-04.17:05:15::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:05:15::SCWMssOS::"Compiling standalone"
+
+TRACE::2024-10-04.17:05:26::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_10/src"
+
+TRACE::2024-10-04.17:05:26::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ttcps_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.17:05:26::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.17:05:26::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:05:26::SCWMssOS::"Compiling ttcps"
+
+TRACE::2024-10-04.17:05:28::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_8/src"
+
+TRACE::2024-10-04.17:05:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.17:05:28::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.17:05:28::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:05:28::SCWMssOS::"Compiling uartps"
+
+TRACE::2024-10-04.17:05:31::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+
+TRACE::2024-10-04.17:05:31::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2024-10-04.17:05:31::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2024-10-04.17:05:31::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:05:31::SCWMssOS::"Compiling usbps"
+
+TRACE::2024-10-04.17:05:34::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+
+TRACE::2024-10-04.17:05:34::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-10-04.17:05:34::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-10-04.17:05:34::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-10-04.17:05:34::SCWMssOS::"Compiling xadcps"
+
+TRACE::2024-10-04.17:05:36::SCWMssOS::'Finished building libraries'
+
+TRACE::2024-10-04.17:05:36::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2024-10-04.17:05:36::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2024-10-04.17:05:36::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2024-10-04.17:05:36::SCWSystem::Completed Processing the sysconfig design_3
+LOG::2024-10-04.17:05:36::SCWPlatform::Completed generating the artifacts for system configuration design_3
+TRACE::2024-10-04.17:05:36::SCWPlatform::Started preparing the platform 
+TRACE::2024-10-04.17:05:36::SCWSystem::Writing the bif file for system config design_3
+TRACE::2024-10-04.17:05:36::SCWSystem::dir created 
+TRACE::2024-10-04.17:05:36::SCWSystem::Writing the bif 
+TRACE::2024-10-04.17:05:36::SCWPlatform::Started writing the spfm file 
+TRACE::2024-10-04.17:05:36::SCWPlatform::Started writing the xpfm file 
+TRACE::2024-10-04.17:05:36::SCWPlatform::Completed generating the platform
+KEYINFO::2024-10-04.17:05:36::SCWMssOS::Could not open the swdb for system_0
+KEYINFO::2024-10-04.17:05:36::SCWMssOS::Could not open the sw design at  system_0
+ERROR: [Hsi 55-1558] Software Design system_0 is not found
+
+TRACE::2024-10-04.17:05:36::SCWMssOS::Cleared the swdb table entry
+TRACE::2024-10-04.17:05:36::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2024-10-04.17:05:36::SCWMssOS::Writing the mss file completed C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:05:36::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:05:36::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:05:36::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:05:36::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:05:36::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:05:36::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:05:36::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_12
+TRACE::2024-10-04.17:05:36::SCWPlatform::Opened existing hwdb design_3_wrapper_12
+TRACE::2024-10-04.17:05:36::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:05:36::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:05:36::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:05:36::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2024-10-04.17:05:36::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:05:36::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:05:36::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:05:36::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:05:36::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:05:36::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:05:36::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_12
+TRACE::2024-10-04.17:05:36::SCWPlatform::Opened existing hwdb design_3_wrapper_12
+TRACE::2024-10-04.17:05:36::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:05:36::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:05:36::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:05:36::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:05:36::SCWWriter::formatted JSON is {
+	"platformName":	"design_3",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_3",
+	"platHandOff":	"<platformDir>_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_3_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_3",
+	"systems":	[{
+			"systemName":	"design_3",
+			"systemDesc":	"design_3",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_3",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"3b09af7ce7cf9c0b911f9219d92f4761",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.2", "xilrsa:1.5"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"96e4a427b0b3b4dc937585934b6a5c34",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2024-10-04.17:05:36::SCWPlatform::updated the xpfm file.
+TRACE::2024-10-04.17:05:37::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:05:37::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:05:37::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:05:37::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw
+TRACE::2024-10-04.17:05:37::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/hw/design_3_wrapper.xsa
+TRACE::2024-10-04.17:05:37::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-10-04.17:05:37::SCWPlatform::Trying to set the existing hwdb with name design_3_wrapper_12
+TRACE::2024-10-04.17:05:37::SCWPlatform::Opened existing hwdb design_3_wrapper_12
+TRACE::2024-10-04.17:05:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-10-04.17:05:37::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-10-04.17:05:37::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2024-10-04.17:05:37::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/design_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss

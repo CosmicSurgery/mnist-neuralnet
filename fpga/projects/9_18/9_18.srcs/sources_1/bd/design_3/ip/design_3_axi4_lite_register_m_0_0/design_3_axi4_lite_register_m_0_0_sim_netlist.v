@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Fri Oct  4 14:21:36 2024
+// Date        : Fri Oct  4 14:21:34 2024
 // Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_axi4_lite_register_m_0_0/design_3_axi4_lite_register_m_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_3_axi4_lite_register_m_0_0 -prefix
+//               design_3_axi4_lite_register_m_0_0_ design_3_axi4_lite_register_m_0_0_sim_netlist.v
 // Design      : design_3_axi4_lite_register_m_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,175 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_3_axi4_lite_register_m_0_0,axi4_lite_register_module,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
-(* X_CORE_INFO = "axi4_lite_register_module,Vivado 2019.2" *) 
-(* NotValidForBitStream *)
-module design_3_axi4_lite_register_m_0_0
-   (aclk,
-    aresetn,
-    s_axil_awaddr,
-    s_axil_awprot,
-    s_axil_awvalid,
-    s_axil_awready,
-    s_axil_wdata,
-    s_axil_wstrb,
-    s_axil_wvalid,
-    s_axil_wready,
-    s_axil_bresp,
-    s_axil_bvalid,
-    s_axil_bready,
-    s_axil_araddr,
-    s_axil_arprot,
-    s_axil_arvalid,
-    s_axil_arready,
-    s_axil_rdata,
-    s_axil_rresp,
-    s_axil_rvalid,
-    s_axil_rready,
-    bias_0,
-    bias_1,
-    bias_2,
-    bias_3,
-    bias_4,
-    bias_5,
-    bias_6,
-    bias_7,
-    bias_8,
-    bias_9,
-    bias_10,
-    bias_11,
-    bias_12,
-    bias_13,
-    bias_14,
-    bias_15,
-    bias_16,
-    bias_17,
-    control,
-    status);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 aclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF s_axil, ASSOCIATED_RESET aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_3_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil AWADDR" *) input [6:0]s_axil_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil AWPROT" *) input [2:0]s_axil_awprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil AWVALID" *) input s_axil_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil AWREADY" *) output s_axil_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil WDATA" *) input [31:0]s_axil_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil WSTRB" *) input [3:0]s_axil_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil WVALID" *) input s_axil_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil WREADY" *) output s_axil_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil BRESP" *) output [1:0]s_axil_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil BVALID" *) output s_axil_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil BREADY" *) input s_axil_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil ARADDR" *) input [6:0]s_axil_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil ARPROT" *) input [2:0]s_axil_arprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil ARVALID" *) input s_axil_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil ARREADY" *) output s_axil_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil RDATA" *) output [31:0]s_axil_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil RRESP" *) output [1:0]s_axil_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil RVALID" *) output s_axil_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axil, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 7, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_3_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s_axil_rready;
-  output [31:0]bias_0;
-  output [31:0]bias_1;
-  output [31:0]bias_2;
-  output [31:0]bias_3;
-  output [31:0]bias_4;
-  output [31:0]bias_5;
-  output [31:0]bias_6;
-  output [31:0]bias_7;
-  output [31:0]bias_8;
-  output [31:0]bias_9;
-  output [31:0]bias_10;
-  output [31:0]bias_11;
-  output [31:0]bias_12;
-  output [31:0]bias_13;
-  output [31:0]bias_14;
-  output [31:0]bias_15;
-  output [31:0]bias_16;
-  output [31:0]bias_17;
-  output [31:0]control;
-  input [31:0]status;
-
-  wire \<const0> ;
-  wire aclk;
-  wire aresetn;
-  wire [31:0]bias_0;
-  wire [31:0]bias_1;
-  wire [31:0]bias_10;
-  wire [31:0]bias_11;
-  wire [31:0]bias_12;
-  wire [31:0]bias_13;
-  wire [31:0]bias_14;
-  wire [31:0]bias_15;
-  wire [31:0]bias_16;
-  wire [31:0]bias_17;
-  wire [31:0]bias_2;
-  wire [31:0]bias_3;
-  wire [31:0]bias_4;
-  wire [31:0]bias_5;
-  wire [31:0]bias_6;
-  wire [31:0]bias_7;
-  wire [31:0]bias_8;
-  wire [31:0]bias_9;
-  wire [31:0]control;
-  wire [6:0]s_axil_araddr;
-  wire s_axil_arready;
-  wire s_axil_arvalid;
-  wire [6:0]s_axil_awaddr;
-  wire s_axil_awready;
-  wire s_axil_awvalid;
-  wire s_axil_bvalid;
-  wire [31:0]s_axil_rdata;
-  wire s_axil_rready;
-  wire s_axil_rvalid;
-  wire [31:0]s_axil_wdata;
-  wire s_axil_wready;
-  wire s_axil_wvalid;
-  wire [31:0]status;
-
-  assign s_axil_bresp[1] = \<const0> ;
-  assign s_axil_bresp[0] = \<const0> ;
-  assign s_axil_rresp[1] = \<const0> ;
-  assign s_axil_rresp[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  design_3_axi4_lite_register_m_0_0_axi4_lite_register_module inst
-       (.aclk(aclk),
-        .aresetn(aresetn),
-        .axi_rvalid_reg_0(s_axil_rvalid),
-        .bias_0(bias_0),
-        .bias_1(bias_1),
-        .bias_10(bias_10),
-        .bias_11(bias_11),
-        .bias_12(bias_12),
-        .bias_13(bias_13),
-        .bias_14(bias_14),
-        .bias_15(bias_15),
-        .bias_16(bias_16),
-        .bias_17(bias_17),
-        .bias_2(bias_2),
-        .bias_3(bias_3),
-        .bias_4(bias_4),
-        .bias_5(bias_5),
-        .bias_6(bias_6),
-        .bias_7(bias_7),
-        .bias_8(bias_8),
-        .bias_9(bias_9),
-        .control(control),
-        .s_axil_araddr(s_axil_araddr[6:2]),
-        .s_axil_arready(s_axil_arready),
-        .s_axil_arvalid(s_axil_arvalid),
-        .s_axil_awaddr(s_axil_awaddr[6:2]),
-        .s_axil_awready(s_axil_awready),
-        .s_axil_awvalid(s_axil_awvalid),
-        .s_axil_bvalid(s_axil_bvalid),
-        .s_axil_rdata(s_axil_rdata),
-        .s_axil_rready(s_axil_rready),
-        .s_axil_wdata(s_axil_wdata),
-        .s_axil_wready(s_axil_wready),
-        .s_axil_wvalid(s_axil_wvalid),
-        .status(status));
-endmodule
-
-(* ORIG_REF_NAME = "axi4_lite_register_module" *) 
 module design_3_axi4_lite_register_m_0_0_axi4_lite_register_module
    (s_axil_wready,
     s_axil_awready,
@@ -14247,6 +14078,174 @@ module design_3_axi4_lite_register_m_0_0_axi4_lite_register_module
         .D(data_curr_i_1_n_0),
         .Q(data_curr),
         .R(1'b0));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_3_axi4_lite_register_m_0_0,axi4_lite_register_module,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
+(* X_CORE_INFO = "axi4_lite_register_module,Vivado 2019.2" *) 
+(* NotValidForBitStream *)
+module design_3_axi4_lite_register_m_0_0
+   (aclk,
+    aresetn,
+    s_axil_awaddr,
+    s_axil_awprot,
+    s_axil_awvalid,
+    s_axil_awready,
+    s_axil_wdata,
+    s_axil_wstrb,
+    s_axil_wvalid,
+    s_axil_wready,
+    s_axil_bresp,
+    s_axil_bvalid,
+    s_axil_bready,
+    s_axil_araddr,
+    s_axil_arprot,
+    s_axil_arvalid,
+    s_axil_arready,
+    s_axil_rdata,
+    s_axil_rresp,
+    s_axil_rvalid,
+    s_axil_rready,
+    bias_0,
+    bias_1,
+    bias_2,
+    bias_3,
+    bias_4,
+    bias_5,
+    bias_6,
+    bias_7,
+    bias_8,
+    bias_9,
+    bias_10,
+    bias_11,
+    bias_12,
+    bias_13,
+    bias_14,
+    bias_15,
+    bias_16,
+    bias_17,
+    control,
+    status);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 aclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF s_axil, ASSOCIATED_RESET aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_3_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil AWADDR" *) input [6:0]s_axil_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil AWPROT" *) input [2:0]s_axil_awprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil AWVALID" *) input s_axil_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil AWREADY" *) output s_axil_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil WDATA" *) input [31:0]s_axil_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil WSTRB" *) input [3:0]s_axil_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil WVALID" *) input s_axil_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil WREADY" *) output s_axil_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil BRESP" *) output [1:0]s_axil_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil BVALID" *) output s_axil_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil BREADY" *) input s_axil_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil ARADDR" *) input [6:0]s_axil_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil ARPROT" *) input [2:0]s_axil_arprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil ARVALID" *) input s_axil_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil ARREADY" *) output s_axil_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil RDATA" *) output [31:0]s_axil_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil RRESP" *) output [1:0]s_axil_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil RVALID" *) output s_axil_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axil RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axil, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 7, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_3_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s_axil_rready;
+  output [31:0]bias_0;
+  output [31:0]bias_1;
+  output [31:0]bias_2;
+  output [31:0]bias_3;
+  output [31:0]bias_4;
+  output [31:0]bias_5;
+  output [31:0]bias_6;
+  output [31:0]bias_7;
+  output [31:0]bias_8;
+  output [31:0]bias_9;
+  output [31:0]bias_10;
+  output [31:0]bias_11;
+  output [31:0]bias_12;
+  output [31:0]bias_13;
+  output [31:0]bias_14;
+  output [31:0]bias_15;
+  output [31:0]bias_16;
+  output [31:0]bias_17;
+  output [31:0]control;
+  input [31:0]status;
+
+  wire \<const0> ;
+  wire aclk;
+  wire aresetn;
+  wire [31:0]bias_0;
+  wire [31:0]bias_1;
+  wire [31:0]bias_10;
+  wire [31:0]bias_11;
+  wire [31:0]bias_12;
+  wire [31:0]bias_13;
+  wire [31:0]bias_14;
+  wire [31:0]bias_15;
+  wire [31:0]bias_16;
+  wire [31:0]bias_17;
+  wire [31:0]bias_2;
+  wire [31:0]bias_3;
+  wire [31:0]bias_4;
+  wire [31:0]bias_5;
+  wire [31:0]bias_6;
+  wire [31:0]bias_7;
+  wire [31:0]bias_8;
+  wire [31:0]bias_9;
+  wire [31:0]control;
+  wire [6:0]s_axil_araddr;
+  wire s_axil_arready;
+  wire s_axil_arvalid;
+  wire [6:0]s_axil_awaddr;
+  wire s_axil_awready;
+  wire s_axil_awvalid;
+  wire s_axil_bvalid;
+  wire [31:0]s_axil_rdata;
+  wire s_axil_rready;
+  wire s_axil_rvalid;
+  wire [31:0]s_axil_wdata;
+  wire s_axil_wready;
+  wire s_axil_wvalid;
+  wire [31:0]status;
+
+  assign s_axil_bresp[1] = \<const0> ;
+  assign s_axil_bresp[0] = \<const0> ;
+  assign s_axil_rresp[1] = \<const0> ;
+  assign s_axil_rresp[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  design_3_axi4_lite_register_m_0_0_axi4_lite_register_module inst
+       (.aclk(aclk),
+        .aresetn(aresetn),
+        .axi_rvalid_reg_0(s_axil_rvalid),
+        .bias_0(bias_0),
+        .bias_1(bias_1),
+        .bias_10(bias_10),
+        .bias_11(bias_11),
+        .bias_12(bias_12),
+        .bias_13(bias_13),
+        .bias_14(bias_14),
+        .bias_15(bias_15),
+        .bias_16(bias_16),
+        .bias_17(bias_17),
+        .bias_2(bias_2),
+        .bias_3(bias_3),
+        .bias_4(bias_4),
+        .bias_5(bias_5),
+        .bias_6(bias_6),
+        .bias_7(bias_7),
+        .bias_8(bias_8),
+        .bias_9(bias_9),
+        .control(control),
+        .s_axil_araddr(s_axil_araddr[6:2]),
+        .s_axil_arready(s_axil_arready),
+        .s_axil_arvalid(s_axil_arvalid),
+        .s_axil_awaddr(s_axil_awaddr[6:2]),
+        .s_axil_awready(s_axil_awready),
+        .s_axil_awvalid(s_axil_awvalid),
+        .s_axil_bvalid(s_axil_bvalid),
+        .s_axil_rdata(s_axil_rdata),
+        .s_axil_rready(s_axil_rready),
+        .s_axil_wdata(s_axil_wdata),
+        .s_axil_wready(s_axil_wready),
+        .s_axil_wvalid(s_axil_wvalid),
+        .status(status));
 endmodule
 `ifndef GLBL
 `define GLBL

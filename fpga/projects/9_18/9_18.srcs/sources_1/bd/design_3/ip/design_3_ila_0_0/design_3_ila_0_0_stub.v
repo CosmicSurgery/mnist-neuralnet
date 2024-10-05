@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Fri Oct  4 15:35:01 2024
+// Date        : Fri Oct  4 15:34:58 2024
 // Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_ila_0_0/design_3_ila_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_3_ila_0_0 -prefix
+//               design_3_ila_0_0_ design_3_ila_0_0_stub.v
 // Design      : design_3_ila_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

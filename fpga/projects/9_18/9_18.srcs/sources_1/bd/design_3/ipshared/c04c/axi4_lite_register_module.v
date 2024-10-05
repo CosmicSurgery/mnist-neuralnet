@@ -96,9 +96,9 @@ module axi4_lite_register_module (
         end
         if (wr_en) begin
             if (addr < 5'd18) begin
+            addr_curr <= 0;
+            data_curr <= 0;
                 bias_regs[addr] <= axi_wdata;
-                addr_curr <= 0;
-                data_curr <= 0;
             end else if (addr == 5'd18) begin
                 control_reg <= axi_wdata;
             end
