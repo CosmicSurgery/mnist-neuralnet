@@ -1,42 +1,4 @@
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-Pass: Expected: 00000000, Got: 00000000         0
-Pass: Expected: 00000001, Got: 00000001         1
-Pass: Expected: 00000002, Got: 00000002         2
-Pass: Expected: 00000003, Got: 00000003         3
-Pass: Expected: 00000004, Got: 00000004         4
-Pass: Expected: 00000005, Got: 00000005         5
-Pass: Expected: 00000006, Got: 00000006         6
-Pass: Expected: 00000007, Got: 00000007         7
-Pass: Expected: 00000008, Got: 00000008         8
-Pass: Expected: 00000009, Got: 00000009         9
-Pass: Expected: 0000000a, Got: 0000000a        10
-Pass: Expected: 0000000b, Got: 0000000b        11
-Pass: Expected: 0000000c, Got: 0000000c        12
-Pass: Expected: 0000000d, Got: 0000000d        13
-Pass: Expected: 0000000e, Got: 0000000e        14
-Pass: Expected: 0000000f, Got: 0000000f        15
-Pass: Expected: 00000010, Got: 00000010        16
-Pass: Expected: 00000011, Got: 00000011        17
-Testbench completed
-$finish called at time : 1675 ns : File "C:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_register_module/tb/axi4_lite_register_module_tb.v" Line 164
-Pass: Expected: 00000000, Got: 00000000         0
-Pass: Expected: 00000001, Got: 00000001         1
-Pass: Expected: 00000002, Got: 00000002         2
-Pass: Expected: 00000003, Got: 00000003         3
-Pass: Expected: 00000004, Got: 00000004         4
-Pass: Expected: 00000005, Got: 00000005         5
-Pass: Expected: 00000006, Got: 00000006         6
-Pass: Expected: 00000007, Got: 00000007         7
-Pass: Expected: 00000008, Got: 00000008         8
-Pass: Expected: 00000009, Got: 00000009         9
-Pass: Expected: 0000000a, Got: 0000000a        10
-Pass: Expected: 0000000b, Got: 0000000b        11
-Pass: Expected: 0000000c, Got: 0000000c        12
-Pass: Expected: 0000000d, Got: 0000000d        13
-Pass: Expected: 0000000e, Got: 0000000e        14
-Pass: Expected: 0000000f, Got: 0000000f        15
-Pass: Expected: 00000010, Got: 00000010        16
-Pass: Expected: 00000011, Got: 00000011        17
-Testbench completed
-$finish called at time : 1675 ns : File "C:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_register_module/tb/axi4_lite_register_module_tb.v" Line 164
+Block Memory Generator module design_3_cpu_tb.design_3_no_cpu_i.image_loader_module_0.inst.IMG_LOADER.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module design_3_cpu_tb.design_3_no_cpu_i.perceptron_0.inst.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.

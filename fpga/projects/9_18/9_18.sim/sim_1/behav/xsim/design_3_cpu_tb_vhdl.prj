@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../source/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" \
+"../../../../9_18.ip_user_files/bd/design_3_no_cpu/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" \
+"../../../../9_18.ip_user_files/bd/design_3_no_cpu/ip/design_3_no_cpu_perceptron_0_0/src/mult_gen_0/sim/mult_gen_0.vhd" \
+"../../../../9_18.ip_user_files/bd/design_3_no_cpu/ip/design_3_no_cpu_perceptron_0_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" \
+
+# Do not sort compile order
+nosort

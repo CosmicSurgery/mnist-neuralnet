@@ -59,6 +59,10 @@ reg axi_awready;
 reg axi_wready;
 reg axi_bvalid;
 
+wire [4:0] raddr;
+
+assign raddr = s_axil_araddr[6:2];
+
 // Read address decoding
 wire rd_en = s_axil_arvalid & axi_arready & ~axi_rvalid;
 
@@ -80,13 +84,13 @@ always @(posedge aclk) begin
     if (~aresetn) begin
         axi_rdata <= 32'h0;
     end else if (rd_en) begin
-        if (s_axil_araddr < 5'd18) begin
-            axi_rdata <= a[s_axil_araddr];
-        end else if (s_axil_araddr == 5'd18) begin
+        if (raddr < 5'd10) begin
+            axi_rdata <= a[raddr];
+        end else if (raddr == 5'd10) begin
             if (done)
-                axi_rdata <= 32'hdeadbeef;
+                axi_rdata <= 32'hFFFFFFFF;
             else
-                axi_rdata <= 32'habcdcafe;
+                axi_rdata <= 32'hbadbadba;
         end else begin
             axi_rdata <= 32'h0;
         end

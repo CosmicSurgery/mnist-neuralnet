@@ -1,8 +1,84 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 555bf5019cc9431495c7b0933ab7c7e2 --incr --debug typical --relax --mt 2 -L axi_bram_ctrl_v4_1_2 -L xil_defaultlib -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_20 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_19 -L axi_crossbar_v2_1_21 -L axi_lite_ipif_v3_0_4 -L lib_cdc_v1_0_2 -L interrupt_control_v3_1_4 -L axi_gpio_v2_0_22 -L blk_mem_gen_v8_4_4 -L axi_vip_v1_1_6 -L processing_system7_vip_v1_0_8 -L proc_sys_reset_v5_0_13 -L axi_protocol_converter_v2_1_20 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot axi4_lite_register_module_tb_behav xil_defaultlib.axi4_lite_register_module_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 555bf5019cc9431495c7b0933ab7c7e2 --incr --debug typical --relax --mt 2 -L axi_bram_ctrl_v4_1_2 -L xil_defaultlib -L blk_mem_gen_v8_4_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_20 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_19 -L axi_crossbar_v2_1_21 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot design_3_cpu_tb_behav xil_defaultlib.design_3_cpu_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 's_axil_0_rresp' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/design_3_cpu_tb.v:70]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'BRAM_PORTB_we' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ipshared/08f5/perceptron.v:77]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package xpm.vcomponents
+Compiling package axi_bram_ctrl_v4_1_2.axi_bram_ctrl_funcs
+Compiling package mult_gen_v12_0_16.mult_gen_v12_0_16_viv_comp
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package mult_gen_v12_0_16.mult_gen_v12_0_16_pkg
+Compiling package ieee.std_logic_signed
+Compiling package unisim.vcomponents
+Compiling package mult_gen_v12_0_16.dsp_pkg
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module xil_defaultlib.axi4_lite_register_module
+Compiling module xil_defaultlib.design_3_no_cpu_axi4_lite_regist...
+Compiling module xil_defaultlib.m00_couplers_imp_KR4NVB
+Compiling module xil_defaultlib.m01_couplers_imp_1UE3GM1
+Compiling module xil_defaultlib.m02_couplers_imp_1OO6LJE
+Compiling module xil_defaultlib.s00_couplers_imp_TIOCSV
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_addr_arbite...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_carry_...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_addr_decode...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_splitter(C_...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_splitter
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module axi_register_slice_v2_1_20.axi_register_slice_v2_1_20_axic_...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_decerr_slav...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_crossbar_sa...
+Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_axi_crossba...
+Compiling module xil_defaultlib.design_3_no_cpu_xbar_0
+Compiling module xil_defaultlib.design_3_no_cpu_axi_interconnect...
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_2.axi_lite [\axi_lite(c_s_axi_addr_width=12,...]
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_2.axi_bram_ctrl_top [\axi_bram_ctrl_top(c_bram_addr_w...]
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_2.axi_bram_ctrl [\axi_bram_ctrl(c_memory_depth=10...]
+Compiling architecture axi_bram_ctrl_0_arch of entity xil_defaultlib.axi_bram_ctrl_0 [axi_bram_ctrl_0_default]
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="zyn...
+Compiling module xil_defaultlib.blk_mem_gen_0
+Compiling module xil_defaultlib.dual_port_AXI_Native_bram
+Compiling module xil_defaultlib.image_loader_module
+Compiling module xil_defaultlib.design_3_no_cpu_image_loader_mod...
+Compiling architecture xilinx of entity mult_gen_v12_0_16.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,alumodereg=0...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,alumodereg=0...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,alumodereg=0...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.op_resize [\op_resize(ai_width=32,bi_width=...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.dsp [\dsp(c_xdevicefamily="zynq",c_a_...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.mult_gen_v12_0_16_viv [\mult_gen_v12_0_16_viv(c_verbosi...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.mult_gen_v12_0_16 [\mult_gen_v12_0_16(c_xdevicefami...]
+Compiling architecture mult_gen_0_arch of entity xil_defaultlib.mult_gen_0 [mult_gen_0_default]
+Compiling module xil_defaultlib.perceptron
+Compiling module xil_defaultlib.design_3_no_cpu_perceptron_0_0
+Compiling module xil_defaultlib.design_3_no_cpu
+Compiling module xil_defaultlib.design_3_cpu_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot design_3_cpu_tb_behav

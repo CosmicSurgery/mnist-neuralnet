@@ -81,7 +81,9 @@ module axi4_lite_register_module_tb;
         .control(control),
         .status(status)
     );
-
+    
+    wire img_load_addr = 32'h8000000;
+    wire percept_addr = 32'h5000000;
     // Clock generation
     always #5 aclk = ~aclk;
 
@@ -108,6 +110,8 @@ module axi4_lite_register_module_tb;
         #100;
         aresetn = 1;
         #20;
+        
+        
 
         // Test bias registers
         for (i = 0; i < 18; i = i + 1) begin

@@ -443,3 +443,4 @@ xsdbm_v2_0_0=$RDI_DATADIR/xsim/ip/xsdbm_v2_0_0
 axi_tlm_ext_v1_0=$RDI_DATADIR/xsim/ip/axi_tlm_ext_v1_0
 tsn_endpoint_ethernet_mac_block_v1_0_5=$RDI_DATADIR/xsim/ip/tsn_endpoint_ethernet_mac_block_v1_0_5
 mem_pl_v1_0_0=$RDI_DATADIR/xsim/ip/mem_pl_v1_0_0
+xil_defaultlib=xsim.dir/xil_defaultlib

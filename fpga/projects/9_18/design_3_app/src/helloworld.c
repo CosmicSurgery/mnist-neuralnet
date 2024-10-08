@@ -57,18 +57,21 @@
 #define GPIO_BASE_0 0x41200000;
 
 XGpio gpio0;
-
+XGpio gpio1;
 
 int main()
 {
     init_platform();
     XGpio gpio0;		//
+    XGpio gpio1;
 
     print("Hello World\n\r");
 
 	XGpio_Initialize(&gpio0, XPAR_GPIO_0_DEVICE_ID);
-
-	XGpio_SetDataDirection(&gpio0, 1, 0x00000000);			// OUTPUT
+	XGpio_Initialize(&gpio1, XPAR_GPIO_1_DEVICE_ID);
+	XGpio_SetDataDirection(&gpio0, 1, 0xFFFFFFFF);			// INPUT
+	XGpio_SetDataDirection(&gpio0, 2, 0x00000000);			// OUTPUT
+	XGpio_SetDataDirection(&gpio1, 1, 0xFFFFFFFF);			// INPUT
 
 	UINTPTR AXI4_LITE_REGISTER_M_0 = 0x40000000;
 	UINTPTR IMAGE_LOADER = 0x60000000;
@@ -76,43 +79,29 @@ int main()
 	UINTPTR addr = AXI4_LITE_REGISTER_M_0;
 
 	uint32_t read_value;
-	uint32_t gpio_read0;
+	uint32_t a_tdata;
+	uint32_t done;
 	uint32_t write_value = 0xdeadbeef;
 
+	print("Test Initial GPIO values\n\r");
+
+	a_tdata = XGpio_DiscreteRead(&gpio0, 1);
+	done = XGpio_DiscreteRead(&gpio1, 1);
+
+	printf("0x%08X - 0x%08X\n", a_tdata, done);
+
+
 	print("Check AXI4_LITE_REGISTER_M_0\n\r");
-
-	printf("Test written value: 0x%08X\n", write_value);
-
-//	for (int i=0; i<19;i++){
-//		write_value = i+1;
-//		addr = addr+4;
-//		Xil_Out32(addr, write_value);
-//		read_value = Xil_In32(addr);
-//		if (write_value != read_value) {
-//			printf("0x%08X - 0x%08X\n", write_value, read_value);
-//			printf("Test failed: Written and read values do not match.\n");
-//		} else if (write_value == read_value) {
-//			printf("0x%08X - 0x%08X\n", write_value, read_value);
-//			printf("Test passed: Written and read values match!\n");
-//		}
-//	}
-	write_value = 0xdeadbeef;
-	addr = IMAGE_LOADER;
-	print("Check IMAGE_LOADER\n\r");
-
-	printf("Test written value: 0x%08X\n", write_value);
 	int counter = 0;
 
-	for (int i=0; i<784;i++){
-		write_value = i;
-		addr = addr+4;
+	for (int i=0; i<19;i++){
+		write_value = 0;
 		Xil_Out32(addr, write_value);
 		read_value = Xil_In32(addr);
 		if (write_value != read_value) {
-			counter = counter +=1;
-//			printf("0x%08X - 0x%08X\n", write_value, read_value);
-//			printf("Test failed: Written and read values do not match.\n");
+			counter = counter +1;
 		}
+		addr = addr+4;
 	}
 
 	if (counter ==0){
@@ -121,23 +110,41 @@ int main()
 		printf("Test Failed!\n\r");
 	}
 
-	write_value = 0xdeadbeef;
-	addr = PERCEPTRON_0;
-	printf("Check PERCEPTRON_0\n\r");
-
-	printf("Test written value: 0x%08X\n", write_value);
+	addr = IMAGE_LOADER;
+	print("Check IMAGE_LOADER\n\r");
 	counter = 0;
 
 	for (int i=0; i<784;i++){
-		write_value = i;
-		addr = addr+4;
+		write_value = 1;
 		Xil_Out32(addr, write_value);
 		read_value = Xil_In32(addr);
 		if (write_value != read_value) {
-			counter = counter +=1;
+			counter = counter +1;
 //			printf("0x%08X - 0x%08X\n", write_value, read_value);
 //			printf("Test failed: Written and read values do not match.\n");
 		}
+		addr = addr+4;
+	}
+
+	if (counter ==0){
+		printf("Test passed!\n\r");
+	} else {
+		printf("Test Failed!\n\r");
+	}
+	addr = PERCEPTRON_0;
+	printf("Check PERCEPTRON_0\n\r");
+	counter = 0;
+
+	for (int i=0; i<784;i++){
+		write_value = 1;
+		Xil_Out32(addr, write_value);
+		read_value = Xil_In32(addr);
+		if (write_value != read_value) {
+			counter = counter +1;
+//			printf("0x%08X - 0x%08X\n", write_value, read_value);
+//			printf("Test failed: Written and read values do not match.\n");
+		}
+		addr = addr+4;
 	}
 
 	if (counter ==0){
@@ -146,6 +153,17 @@ int main()
 		printf("Test Failed!\n\r");
 	}
 
+	printf("Test start functionality, and expected result\n\r");
+
+	XGpio_DiscreteWrite(&gpio0, 2, 0x00000001);
+
+	usleep(100000);
+
+	a_tdata = XGpio_DiscreteRead(&gpio0, 1);
+	done = XGpio_DiscreteRead(&gpio1, 1);
+
+
+	printf("0x%08X - 0x%08X\n", a_tdata, done);
 
     cleanup_platform();
     return 0;
