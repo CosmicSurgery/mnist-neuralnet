@@ -18,7 +18,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
+ 
 
 module design_3_cpu_tb();
 
@@ -79,9 +79,17 @@ initial aclk_0 = 0;
 
 always #5 aclk_0 = ~aclk_0;
 
-wire img_load_addr = 32'h8000000;
-wire percept_addr = 32'h5000000;
+wire [31:0]img_load_addr = 32'h80000000;
+wire [31:0]percept_addr = 32'h50000000;
 reg [31:0] read_val;
+
+wire [31:0] write_values [4:0];
+assign write_values[0] = 32'd1;
+assign write_values[1] = 32'd2;
+assign write_values[2] = 32'd3;
+assign write_values[3] = 32'd4;
+assign write_values[4] = 32'd5;
+reg [31:0]axi_addr;
 
 integer i;
 initial begin
@@ -98,16 +106,26 @@ initial begin
     s_axil_0_arprot = 0;
     s_axil_0_arvalid = 0;
     s_axil_0_rready = 0;
+    start_0 = 0;
+    axi_addr = 32'd0;
 
     // Reset
     #100;
     s_axi_aresetn_0 = 1;
     #20;
     
+    axi_addr = percept_addr;
+//    for (i = 0; i<5; i = i +1)
+//    begin
+//        axi_write(axi_addr, write_values[i]);
+//        axi_addr = axi_addr + 32'd4;
+//        @(posedge aclk_0);
+//    end
+    axi_write(img_load_addr, 32'h30000000);
+//    axi_write(percept_addr, 1);
     for (i=0;i <784; i=i+1) begin
 //        axi_write(img_load_addr + 4 * i, 1);
         axi_write(percept_addr + 4 * i, 1);
-        repeat(1) @ (posedge aclk_0);
     end
 //    for (i=0;i <784; i=i+1) begin
 //        axi_read(img_load_addr + (4 * i));
@@ -120,6 +138,14 @@ initial begin
 //        end
 //    end
     
+    
+    start_0 = 1;
+    while (!done_0) begin
+        @(posedge aclk_0);
+    end
+    
+    $finish;
+    
 
 end
 
@@ -128,11 +154,11 @@ end
         input [31:0] addr;
         input [31:0] data;
         begin
-            s_axil_0_awaddr = addr;
-            s_axil_0_awvalid = 1;
-            s_axil_0_wdata = data;
-            s_axil_0_wvalid = 1;
-            s_axil_0_bready = 1;
+            s_axil_0_awaddr <= addr;
+            s_axil_0_awvalid <= 1;
+            s_axil_0_wdata <= data;
+            s_axil_0_wvalid <= 1;
+            s_axil_0_bready <= 1;
             @(posedge aclk_0);
             fork
                 begin
@@ -145,7 +171,7 @@ end
                 end
             join
             while (!s_axil_0_bvalid) @(posedge aclk_0);
-            s_axil_0_bready = 0;
+            s_axil_0_bready <= 0;
             @(posedge aclk_0);
         end
     endtask
@@ -154,14 +180,14 @@ end
     task axi_read;
         input [31:0] addr;
         begin
-            s_axil_0_araddr = addr;
-            s_axil_0_arvalid = 1;
-            s_axil_0_rready = 1;
+            s_axil_0_araddr <= addr;
+            s_axil_0_arvalid <= 1;
+            s_axil_0_rready <= 1;
             @(posedge aclk_0);
             while (!s_axil_0_arready) @(posedge aclk_0);
-            s_axil_0_arvalid = 0;
+            s_axil_0_arvalid <= 0;
             while (!s_axil_0_rvalid) @(posedge aclk_0);
-            s_axil_0_rready = 0;
+            s_axil_0_rready <= 0;
             @(posedge aclk_0);
         end
     endtask

@@ -1,0 +1,6 @@
+ERROR: [XSIM 43-3268] Logical library name '"../../../../../../../../source/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v"' should not contain white space, new line, /, \, = or .
+ERROR: [XSIM 43-3217] perceptron_tb_vlog.prj (line 3): Incorrect project file syntax. Correct syntax is one of: vhdl <worklib> <file>, verilog <worklib> <file> [<file> ...] [[-d <macro>] ...] [[-i <include>] ...], or NOSORT. Presence of NOSORT on a line of its own disables file order sorting.
+INFO: [VRFC 10-163] Analyzing VHDL file "c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/mult_gen_0/sim/mult_gen_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mult_gen_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axi_bram_ctrl_0'

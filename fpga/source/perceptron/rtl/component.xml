@@ -843,7 +843,7 @@
       <spirit:file>
         <spirit:name>perceptron.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_ec30602f</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_c57e91db</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -944,9 +944,8 @@
       <spirit:file>
         <spirit:name>../tb/perceptron_tb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
@@ -992,7 +991,7 @@
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
       <xilinx:coreRevision>11</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-09-25T04:19:19Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-10-08T20:31:20Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@76bb79a9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
@@ -1274,6 +1273,16 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@44d96bc4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@307a13b5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@5d8cfb19_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bf4dd4d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70ae6e34_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f7e10d3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5df2fb58_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@726647b4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23fb2401_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3087aace_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13a8acfd_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41a3fca3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68589ea5_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

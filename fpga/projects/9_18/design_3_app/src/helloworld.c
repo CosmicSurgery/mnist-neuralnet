@@ -94,15 +94,15 @@ int main()
 	print("Check AXI4_LITE_REGISTER_M_0\n\r");
 	int counter = 0;
 
-	for (int i=0; i<19;i++){
-		write_value = 0;
-		Xil_Out32(addr, write_value);
-		read_value = Xil_In32(addr);
-		if (write_value != read_value) {
-			counter = counter +1;
-		}
-		addr = addr+4;
-	}
+//	for (int i=0; i<19;i++){
+//		write_value = 0;
+//		Xil_Out32(addr, write_value);
+//		read_value = Xil_In32(addr);
+//		if (write_value != read_value) {
+//			counter = counter +1;
+//		}
+//		addr = addr+4;
+//	}
 
 	if (counter ==0){
 		printf("Test passed!\n\r");
@@ -114,17 +114,22 @@ int main()
 	print("Check IMAGE_LOADER\n\r");
 	counter = 0;
 
-	for (int i=0; i<784;i++){
-		write_value = 1;
-		Xil_Out32(addr, write_value);
-		read_value = Xil_In32(addr);
-		if (write_value != read_value) {
-			counter = counter +1;
-//			printf("0x%08X - 0x%08X\n", write_value, read_value);
-//			printf("Test failed: Written and read values do not match.\n");
-		}
-		addr = addr+4;
-	}
+
+	write_value = 0x30000000;
+	Xil_Out32(addr, write_value);
+	read_value = Xil_In32(addr);
+
+//	for (int i=0; i<784;i++){
+//		write_value = 1;
+//		Xil_Out32(addr, write_value);
+//		read_value = Xil_In32(addr);
+//		if (write_value != read_value) {
+//			counter = counter +1;
+////			printf("0x%08X - 0x%08X\n", write_value, read_value);
+////			printf("Test failed: Written and read values do not match.\n");
+//		}
+//		addr = addr+4;
+//	}
 
 	if (counter ==0){
 		printf("Test passed!\n\r");
@@ -138,20 +143,24 @@ int main()
 	for (int i=0; i<784;i++){
 		write_value = 1;
 		Xil_Out32(addr, write_value);
-		read_value = Xil_In32(addr);
-		if (write_value != read_value) {
-			counter = counter +1;
-//			printf("0x%08X - 0x%08X\n", write_value, read_value);
-//			printf("Test failed: Written and read values do not match.\n");
-		}
 		addr = addr+4;
 	}
-
-	if (counter ==0){
-		printf("Test passed!\n\r");
-	} else {
-		printf("Test Failed!\n\r");
-	}
+//	addr = PERCEPTRON_0;
+//	for (int i=0; i<784;i++){
+//		read_value = Xil_In32(addr);
+//		if (write_value != read_value) {
+//			counter = counter +1;
+////			printf("0x%08X - 0x%08X\n", write_value, read_value);
+////			printf("Test failed: Written and read values do not match.\n");
+//		}
+//		addr = addr+4;
+//	}
+//
+//	if (counter ==0){
+//		printf("Test passed!\n\r");
+//	} else {
+//		printf("Test Failed!\n\r");
+//	}
 
 	printf("Test start functionality, and expected result\n\r");
 

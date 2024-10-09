@@ -220,6 +220,7 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net aclk_0_1 [get_bd_ports aclk_0] [get_bd_pins axi4_lite_register_m_0/aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins image_loader_module_0/s_axi_aclk] [get_bd_pins perceptron_0/s_axi_aclk]
   connect_bd_net -net axi4_lite_register_m_0_bias_0 [get_bd_pins axi4_lite_register_m_0/bias_0] [get_bd_pins perceptron_0/bias]
+  connect_bd_net -net axi4_lite_register_m_0_control [get_bd_pins axi4_lite_register_m_0/control] [get_bd_pins axi4_lite_register_m_0/status]
   connect_bd_net -net perceptron_0_a_tdata [get_bd_ports a_tdata_0] [get_bd_pins perceptron_0/a_tdata]
   connect_bd_net -net perceptron_0_done [get_bd_ports done_0] [get_bd_pins perceptron_0/done]
   connect_bd_net -net s_axi_aresetn_0_1 [get_bd_ports s_axi_aresetn_0] [get_bd_pins axi4_lite_register_m_0/aresetn] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/M02_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins image_loader_module_0/s_axi_aresetn] [get_bd_pins perceptron_0/s_axi_aresetn]

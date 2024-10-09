@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Mon Oct  7 16:04:06 2024
+//Date        : Tue Oct  8 17:41:59 2024
 //Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 //Command     : generate_target design_3_no_cpu.bd
 //Design      : design_3_no_cpu
@@ -62,6 +62,7 @@ module design_3_no_cpu
 
   wire aclk_0_1;
   wire [31:0]axi4_lite_register_m_0_bias_0;
+  wire [31:0]axi4_lite_register_m_0_control;
   wire [31:0]axi_interconnect_0_M00_AXI_ARADDR;
   wire [2:0]axi_interconnect_0_M00_AXI_ARPROT;
   wire axi_interconnect_0_M00_AXI_ARREADY;
@@ -174,6 +175,7 @@ module design_3_no_cpu
        (.aclk(aclk_0_1),
         .aresetn(s_axi_aresetn_0_1),
         .bias_0(axi4_lite_register_m_0_bias_0),
+        .control(axi4_lite_register_m_0_control),
         .s_axil_araddr(axi_interconnect_0_M00_AXI_ARADDR[6:0]),
         .s_axil_arprot(axi_interconnect_0_M00_AXI_ARPROT),
         .s_axil_arready(axi_interconnect_0_M00_AXI_ARREADY),
@@ -193,7 +195,7 @@ module design_3_no_cpu
         .s_axil_wready(axi_interconnect_0_M00_AXI_WREADY),
         .s_axil_wstrb(axi_interconnect_0_M00_AXI_WSTRB),
         .s_axil_wvalid(axi_interconnect_0_M00_AXI_WVALID),
-        .status({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
+        .status(axi4_lite_register_m_0_control));
   design_3_no_cpu_axi_interconnect_0_0 axi_interconnect_0
        (.ACLK(aclk_0_1),
         .ARESETN(s_axi_aresetn_0_1),

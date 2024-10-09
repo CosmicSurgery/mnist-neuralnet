@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/mult_gen_0/sim/mult_gen_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mult_gen_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axi_bram_ctrl_0'

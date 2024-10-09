@@ -5,7 +5,7 @@ Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 's_axil_0_rresp' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/design_3_cpu_tb.v:70]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'BRAM_PORTB_we' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ipshared/08f5/perceptron.v:77]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'BRAM_PORTB_we' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/debug/ipshared/08f5/perceptron.v:77]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

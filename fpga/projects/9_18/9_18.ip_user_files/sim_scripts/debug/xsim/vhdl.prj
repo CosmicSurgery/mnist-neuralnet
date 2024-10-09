@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/debug/ip/debug_perceptron_0_0/src/mult_gen_0/sim/mult_gen_0.vhd" \
+"../../../bd/debug/ip/debug_perceptron_0_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" \
+
+nosort

@@ -1,3 +1,81 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module perceptron
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/perceptron/rtl/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'blk_mem_gen_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/perceptron/rtl/src/blk_mem_gen_0/sim/blk_mem_gen_0.v:56]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3_no_cpu/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dual_port_AXI_Native_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ipshared/db16/image_loader_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module image_loader_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ip/design_3_no_cpu_image_loader_module_0_0/sim/design_3_no_cpu_image_loader_module_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_no_cpu_image_loader_module_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ipshared/c04c/axi4_lite_register_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi4_lite_register_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ip/design_3_no_cpu_axi4_lite_register_m_0_0/sim/design_3_no_cpu_axi4_lite_register_m_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_no_cpu_axi4_lite_register_m_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ip/design_3_no_cpu_perceptron_0_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'blk_mem_gen_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ip/design_3_no_cpu_perceptron_0_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v:56]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ipshared/08f5/perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module perceptron
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'perceptron' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ipshared/08f5/perceptron.v:23]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ip/design_3_no_cpu_perceptron_0_0/sim/design_3_no_cpu_perceptron_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_no_cpu_perceptron_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ip/design_3_no_cpu_xbar_0/sim/design_3_no_cpu_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_no_cpu_xbar_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/sim/design_3_no_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_no_cpu
+INFO: [VRFC 10-311] analyzing module design_3_no_cpu_axi_interconnect_0_0
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_KR4NVB
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_1UE3GM1
+INFO: [VRFC 10-311] analyzing module m02_couplers_imp_1OO6LJE
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_TIOCSV
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3_no_cpu/hdl/design_3_no_cpu_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_no_cpu_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/debug/ip/debug_perceptron_0_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'blk_mem_gen_0' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/debug/ip/debug_perceptron_0_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v:56]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/debug/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dual_port_AXI_Native_bram
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'dual_port_AXI_Native_bram' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/debug/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v:9]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/debug/ipshared/08f5/perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module perceptron
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'perceptron' [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/debug/ipshared/08f5/perceptron.v:23]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/debug/ip/debug_perceptron_0_0/sim/debug_perceptron_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debug_perceptron_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/debug/sim/debug.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debug
+INFO: [VRFC 10-311] analyzing module debug_axi_interconnect_0_0
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_1E3CDF9
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_3QBE3H
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_1QZBEAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/debug/ip/debug_xbar_0/sim/debug_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debug_xbar_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/debug/hdl/debug_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debug_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/debug_interconnect_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debug_interconnect_tb
+WARNING: [VRFC 10-3248] data object 'start' is already declared [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/debug_interconnect_tb.v:64]
+WARNING: [VRFC 10-3703] second declaration of 'start' ignored [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/debug_interconnect_tb.v:64]
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/debug_interconnect_tb.v:193]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/tb/image_loader_module_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module image_loader_module_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/tb/image_loader_module_tb_dad.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module image_loader_module_dad
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/PL_NN/tb/PL_NN_axi_read_write_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PL_NN_axi_read_write_tb
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/git_repos/mnist_neuralnet/fpga/source/PL_NN/tb/PL_NN_axi_read_write_tb.v:224]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/PL_NN/tb/PL_NN_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PL_NN_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/dual_port_AXI_Native_bram/tb/dual_port_AXI_Native_bram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dual_port_AXI_Native_bram_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module perceptron_tb
+INFO: [VRFC 10-2458] undeclared symbol a_tdata, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:95]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_register_module/tb/axi4_lite_register_module_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi4_lite_register_module_tb
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/tb/axi4_lite_layer_connector_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module axi4_lite_layer_connector_tb
 INFO: [VRFC 10-2458] undeclared symbol start, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_layer_connector/tb/axi4_lite_layer_connector_tb.v:6]
@@ -22,5 +100,13 @@ WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of
 WARNING: [VRFC 10-2502] extra semicolon in $unit (global) scope [C:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/tb/axi4_lite_final_output_tb.v:205]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/design_3_cpu_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_3_cpu_tb
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/debug_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debug_tb
+INFO: [VRFC 10-2458] undeclared symbol a_tdata, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/debug_tb.v:96]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/debugalt_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debugalt_tb
+INFO: [VRFC 10-2458] undeclared symbol s_axil_0_aresetn, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/debugalt_tb.v:93]
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'axi_bram_ctrl_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/debug/ip/debug_perceptron_0_0/src/mult_gen_0/sim/mult_gen_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mult_gen_0'
