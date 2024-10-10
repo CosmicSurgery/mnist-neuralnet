@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="axi_bram_ctrl_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/axi_bram_ctrl_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ila_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/ila_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_3_perceptron_0_1_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/design_3_perceptron_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_axi4_lite_register_m_0_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_axi4_lite_register_m_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_tier2_xbar_3_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_tier2_xbar_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_axi4_lite_final_outp_0_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_axi4_lite_final_outp_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_hardmax_0_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_hardmax_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_tier2_xbar_2_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_tier2_xbar_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_tier2_xbar_0_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_tier2_xbar_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_perceptron_8_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_8_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_perceptron_9_8_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_9_8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_tier2_xbar_1_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_tier2_xbar_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_perceptron_7_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_7_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_6_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_6_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_axi4_lite_register_m_0_1_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_axi4_lite_register_m_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_axi4_lite_register_m_0_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_axis_broadcaster_0_2_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_axis_broadcaster_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_axis_broadcaster_0_1_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_axis_broadcaster_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_perceptron_0_3_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_0_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_1_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_2_7_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_2_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_3_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_4_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_4_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_5_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_5_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="design_3_no_cpu_perceptron_0_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/design_3_no_cpu_perceptron_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_3_perceptron_0_1_synth_1"/>
+	</Run>
+	<Run Id="design_3_no_cpu_xbar_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/design_3_no_cpu_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_perceptron_9_6_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_9_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_9_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_9_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_9_7_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_9_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_9_3_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_9_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_9_2_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_9_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_9_5_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_9_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_2_6_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_2_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_9_4_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_9_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_9_1_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_9_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="debug_interconnect_xbar_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/debug_interconnect_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_perceptron_0_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_0_2_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_axi4_lite_layer_conn_0_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_axi4_lite_layer_conn_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_axis_broadcaster_0_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_axis_broadcaster_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_perceptron_0_1_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_2_1_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_2_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_2_2_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_2_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_2_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_2_3_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_2_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_perceptron_2_4_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_2_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_image_loader_module_0_1_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_image_loader_module_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PL_NN_perceptron_2_5_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_perceptron_2_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+	</Run>
+	<Run Id="PL_NN_xbar_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/PL_NN_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="axi_bram_ctrl_0_synth_1"/>
+		<Parent Id="ila_0_synth_1"/>
+		<Parent Id="design_3_perceptron_0_1_synth_1"/>
+		<Parent Id="PL_NN_axi4_lite_register_m_0_0_synth_1"/>
+		<Parent Id="PL_NN_tier2_xbar_3_0_synth_1"/>
+		<Parent Id="PL_NN_axi4_lite_final_outp_0_0_synth_1"/>
+		<Parent Id="PL_NN_hardmax_0_0_synth_1"/>
+		<Parent Id="PL_NN_tier2_xbar_2_0_synth_1"/>
+		<Parent Id="PL_NN_tier2_xbar_0_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_8_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_9_8_synth_1"/>
+		<Parent Id="PL_NN_tier2_xbar_1_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_7_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_6_0_synth_1"/>
+		<Parent Id="PL_NN_axi4_lite_register_m_0_1_synth_1"/>
+		<Parent Id="PL_NN_axis_broadcaster_0_2_synth_1"/>
+		<Parent Id="PL_NN_axis_broadcaster_0_1_synth_1"/>
+		<Parent Id="PL_NN_perceptron_0_3_synth_1"/>
+		<Parent Id="PL_NN_perceptron_1_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_2_7_synth_1"/>
+		<Parent Id="PL_NN_perceptron_3_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_4_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_5_0_synth_1"/>
+		<Parent Id="design_3_no_cpu_perceptron_0_0_synth_1"/>
+		<Parent Id="design_3_no_cpu_xbar_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_9_6_synth_1"/>
+		<Parent Id="PL_NN_perceptron_9_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_9_7_synth_1"/>
+		<Parent Id="PL_NN_perceptron_9_3_synth_1"/>
+		<Parent Id="PL_NN_perceptron_9_2_synth_1"/>
+		<Parent Id="PL_NN_perceptron_9_5_synth_1"/>
+		<Parent Id="PL_NN_perceptron_2_6_synth_1"/>
+		<Parent Id="PL_NN_perceptron_9_4_synth_1"/>
+		<Parent Id="PL_NN_perceptron_9_1_synth_1"/>
+		<Parent Id="debug_interconnect_xbar_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_0_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_0_2_synth_1"/>
+		<Parent Id="PL_NN_axi4_lite_layer_conn_0_0_synth_1"/>
+		<Parent Id="PL_NN_axis_broadcaster_0_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_0_1_synth_1"/>
+		<Parent Id="PL_NN_perceptron_2_1_synth_1"/>
+		<Parent Id="PL_NN_perceptron_2_2_synth_1"/>
+		<Parent Id="PL_NN_perceptron_2_0_synth_1"/>
+		<Parent Id="PL_NN_perceptron_2_3_synth_1"/>
+		<Parent Id="PL_NN_perceptron_2_4_synth_1"/>
+		<Parent Id="PL_NN_image_loader_module_0_1_synth_1"/>
+		<Parent Id="PL_NN_perceptron_2_5_synth_1"/>
+		<Parent Id="PL_NN_xbar_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

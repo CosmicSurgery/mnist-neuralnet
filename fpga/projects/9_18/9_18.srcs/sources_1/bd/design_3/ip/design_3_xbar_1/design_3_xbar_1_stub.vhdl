@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Fri Oct  4 16:55:58 2024
+-- Date        : Fri Oct  4 16:55:57 2024
 -- Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_xbar_1/design_3_xbar_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_3_xbar_1 -prefix
+--               design_3_xbar_1_ design_3_xbar_1_stub.vhdl
 -- Design      : design_3_xbar_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1

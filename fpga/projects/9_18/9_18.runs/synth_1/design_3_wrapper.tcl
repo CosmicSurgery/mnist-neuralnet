@@ -18,6 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 2
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,12 +35,10 @@ set_property ip_repo_paths c:/git_repos/mnist_neuralnet/fpga/source [current_pro
 update_ip_catalog
 set_property ip_output_repo c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files -quiet C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/axi_bram_ctrl_0_synth_1/axi_bram_ctrl_0.dcp
-set_property used_in_implementation false [get_files C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.runs/axi_bram_ctrl_0_synth_1/axi_bram_ctrl_0.dcp]
-read_verilog -library xil_defaultlib C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/hdl/design_3_wrapper.v
-read_ip -quiet C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
-
+read_verilog -library xil_defaultlib {
+  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v
+  C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/hdl/design_3_wrapper.v
+}
 add_files C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/design_3.bd
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_processing_system7_0_0/design_3_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_xbar_1/design_3_xbar_1_ooc.xdc]
@@ -54,14 +53,13 @@ set_property used_in_synthesis false [get_files -all c:/git_repos/mnist_neuralne
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_ila_0_0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_ila_0_0/design_3_ila_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_perceptron_0_1/src/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_perceptron_0_1/src/ila_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_perceptron_0_1/src/ila_0/ila_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_axi_gpio_1_0/design_3_axi_gpio_1_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_axi_gpio_1_0/design_3_axi_gpio_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_axi_gpio_1_0/design_3_axi_gpio_1_0.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/ip/design_3_auto_pc_0/design_3_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sources_1/bd/design_3/design_3_ooc.xdc]
-
-read_ip -quiet C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/axi_bram_ctrl_0.xci
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

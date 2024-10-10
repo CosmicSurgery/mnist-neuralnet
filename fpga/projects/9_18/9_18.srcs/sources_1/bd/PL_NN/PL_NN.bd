@@ -5,8 +5,7 @@
       "device": "xc7z010clg400-1",
       "name": "PL_NN",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.2",
-      "validated": "true"
+      "tool_version": "2019.2"
     },
     "design_tree": {
       "axis_broadcaster_0": "",
@@ -56,9 +55,17 @@
       },
       "image_loader_module_0": "",
       "axi4_lite_layer_conn_0": "",
+      "axis_broadcaster_1": "",
+      "axis_broadcaster_2": "",
+      "axi4_lite_final_outp_0": "",
+      "hardmax_0": "",
+      "axi4_lite_register_m_0": "",
+      "axi4_lite_register_m_1": "",
       "perceptron_0": "",
       "perceptron_1": "",
       "perceptron_2": "",
+      "perceptron_18": "",
+      "perceptron_19": "",
       "perceptron_3": "",
       "perceptron_4": "",
       "perceptron_5": "",
@@ -66,6 +73,13 @@
       "perceptron_7": "",
       "perceptron_8": "",
       "perceptron_9": "",
+      "perceptron_20": "",
+      "perceptron_21": "",
+      "perceptron_22": "",
+      "perceptron_23": "",
+      "perceptron_24": "",
+      "perceptron_25": "",
+      "perceptron_26": "",
       "perceptron_10": "",
       "perceptron_11": "",
       "perceptron_12": "",
@@ -74,22 +88,7 @@
       "perceptron_15": "",
       "perceptron_16": "",
       "perceptron_17": "",
-      "axis_broadcaster_1": "",
-      "axis_broadcaster_2": "",
-      "axi4_lite_register_m_0": "",
-      "axi4_lite_register_m_1": "",
-      "perceptron_18": "",
-      "perceptron_19": "",
-      "perceptron_20": "",
-      "perceptron_21": "",
-      "perceptron_22": "",
-      "perceptron_23": "",
-      "perceptron_24": "",
-      "perceptron_25": "",
-      "perceptron_26": "",
-      "perceptron_27": "",
-      "axi4_lite_final_outp_0": "",
-      "hardmax_0": ""
+      "perceptron_27": ""
     },
     "interface_ports": {
       "S00_AXI_0": {
@@ -168,14 +167,6 @@
           "MAX_BURST_LENGTH": {
             "value": "1"
           },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
-          },
-          "CLK_DOMAIN": {
-            "value": "PL_NN_ACLK_0",
-            "value_src": "default"
-          },
           "NUM_READ_THREADS": {
             "value": "1"
           },
@@ -187,10 +178,6 @@
           },
           "WUSER_BITS_PER_BYTE": {
             "value": "0"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
           }
         }
       }
@@ -200,44 +187,14 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "ASSOCIATED_BUSIF": {
-            "value": "S00_AXI_0",
-            "value_src": "default"
-          },
-          "ASSOCIATED_RESET": {
-            "value": "ARESETN_0",
-            "value_src": "default"
-          },
-          "CLK_DOMAIN": {
-            "value": "PL_NN_ACLK_0",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "10000000"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
           }
         }
       },
       "ARESETN_0": {
         "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
+        "direction": "I"
       },
       "start_0": {
         "direction": "I"
@@ -3052,6 +3009,30 @@
           }
         },
         "interface_nets": {
+          "tier2_xbar_2_to_m21_couplers": {
+            "interface_ports": [
+              "tier2_xbar_2/M05_AXI",
+              "m21_couplers/S_AXI"
+            ]
+          },
+          "m26_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M26_AXI",
+              "m26_couplers/M_AXI"
+            ]
+          },
+          "m22_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M22_AXI",
+              "m22_couplers/M_AXI"
+            ]
+          },
+          "tier2_xbar_2_to_m22_couplers": {
+            "interface_ports": [
+              "tier2_xbar_2/M06_AXI",
+              "m22_couplers/S_AXI"
+            ]
+          },
           "tier2_xbar_3_to_m31_couplers": {
             "interface_ports": [
               "tier2_xbar_3/M07_AXI",
@@ -3076,16 +3057,16 @@
               "m23_couplers/S_AXI"
             ]
           },
-          "m24_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M24_AXI",
-              "m24_couplers/M_AXI"
-            ]
-          },
           "tier2_xbar_3_to_m24_couplers": {
             "interface_ports": [
               "tier2_xbar_3/M00_AXI",
               "m24_couplers/S_AXI"
+            ]
+          },
+          "m24_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M24_AXI",
+              "m24_couplers/M_AXI"
             ]
           },
           "m25_couplers_to_axi_interconnect_0": {
@@ -3100,58 +3081,46 @@
               "m25_couplers/S_AXI"
             ]
           },
-          "m26_couplers_to_axi_interconnect_0": {
+          "m12_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "M26_AXI",
-              "m26_couplers/M_AXI"
+              "M12_AXI",
+              "m12_couplers/M_AXI"
             ]
           },
-          "tier2_xbar_2_to_m21_couplers": {
+          "tier2_xbar_1_to_m11_couplers": {
             "interface_ports": [
-              "tier2_xbar_2/M05_AXI",
-              "m21_couplers/S_AXI"
+              "tier2_xbar_1/M03_AXI",
+              "m11_couplers/S_AXI"
             ]
           },
-          "m22_couplers_to_axi_interconnect_0": {
+          "tier2_xbar_1_to_m12_couplers": {
             "interface_ports": [
-              "M22_AXI",
-              "m22_couplers/M_AXI"
+              "tier2_xbar_1/M04_AXI",
+              "m12_couplers/S_AXI"
             ]
           },
-          "tier2_xbar_2_to_m22_couplers": {
+          "m13_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "tier2_xbar_2/M06_AXI",
-              "m22_couplers/S_AXI"
+              "M13_AXI",
+              "m13_couplers/M_AXI"
             ]
           },
-          "m23_couplers_to_axi_interconnect_0": {
+          "tier2_xbar_0_to_m00_couplers": {
             "interface_ports": [
-              "M23_AXI",
-              "m23_couplers/M_AXI"
+              "tier2_xbar_0/M00_AXI",
+              "m00_couplers/S_AXI"
             ]
           },
-          "tier2_xbar_1_to_m13_couplers": {
+          "m01_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "tier2_xbar_1/M05_AXI",
-              "m13_couplers/S_AXI"
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           },
-          "m14_couplers_to_axi_interconnect_0": {
+          "m00_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "M14_AXI",
-              "m14_couplers/M_AXI"
-            ]
-          },
-          "m03_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M03_AXI",
-              "m03_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_0_to_m03_couplers": {
-            "interface_ports": [
-              "tier2_xbar_0/M03_AXI",
-              "m03_couplers/S_AXI"
+              "M00_AXI",
+              "m00_couplers/M_AXI"
             ]
           },
           "m04_couplers_to_axi_interconnect_0": {
@@ -3190,16 +3159,16 @@
               "m06_couplers/S_AXI"
             ]
           },
-          "m07_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M07_AXI",
-              "m07_couplers/M_AXI"
-            ]
-          },
           "tier2_xbar_0_to_m07_couplers": {
             "interface_ports": [
               "tier2_xbar_0/M07_AXI",
               "m07_couplers/S_AXI"
+            ]
+          },
+          "m07_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M07_AXI",
+              "m07_couplers/M_AXI"
             ]
           },
           "m08_couplers_to_axi_interconnect_0": {
@@ -3232,190 +3201,46 @@
               "m09_couplers/S_AXI"
             ]
           },
-          "m11_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M11_AXI",
-              "m11_couplers/M_AXI"
-            ]
-          },
           "tier2_xbar_1_to_m10_couplers": {
             "interface_ports": [
               "tier2_xbar_1/M02_AXI",
               "m10_couplers/S_AXI"
             ]
           },
-          "m12_couplers_to_axi_interconnect_0": {
+          "m11_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "M12_AXI",
-              "m12_couplers/M_AXI"
+              "M11_AXI",
+              "m11_couplers/M_AXI"
             ]
           },
-          "tier2_xbar_1_to_m11_couplers": {
+          "tier2_xbar_1_to_m13_couplers": {
             "interface_ports": [
-              "tier2_xbar_1/M03_AXI",
-              "m11_couplers/S_AXI"
+              "tier2_xbar_1/M05_AXI",
+              "m13_couplers/S_AXI"
             ]
           },
-          "tier2_xbar_1_to_m12_couplers": {
+          "m23_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "tier2_xbar_1/M04_AXI",
-              "m12_couplers/S_AXI"
+              "M23_AXI",
+              "m23_couplers/M_AXI"
             ]
           },
-          "m13_couplers_to_axi_interconnect_0": {
+          "m03_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "M13_AXI",
-              "m13_couplers/M_AXI"
+              "M03_AXI",
+              "m03_couplers/M_AXI"
             ]
           },
-          "m00_couplers_to_axi_interconnect_0": {
+          "tier2_xbar_0_to_m03_couplers": {
             "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
+              "tier2_xbar_0/M03_AXI",
+              "m03_couplers/S_AXI"
             ]
           },
-          "m01_couplers_to_axi_interconnect_0": {
+          "m14_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_0_to_m00_couplers": {
-            "interface_ports": [
-              "tier2_xbar_0/M00_AXI",
-              "m00_couplers/S_AXI"
-            ]
-          },
-          "tier2_xbar_0_to_m01_couplers": {
-            "interface_ports": [
-              "tier2_xbar_0/M01_AXI",
-              "m01_couplers/S_AXI"
-            ]
-          },
-          "m02_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_0_to_m02_couplers": {
-            "interface_ports": [
-              "tier2_xbar_0/M02_AXI",
-              "m02_couplers/S_AXI"
-            ]
-          },
-          "xbar_to_i00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "i00_couplers/S_AXI"
-            ]
-          },
-          "xbar_to_i01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "i01_couplers/S_AXI"
-            ]
-          },
-          "i00_couplers_to_tier2_xbar_0": {
-            "interface_ports": [
-              "i00_couplers/M_AXI",
-              "tier2_xbar_0/S00_AXI"
-            ]
-          },
-          "i01_couplers_to_tier2_xbar_1": {
-            "interface_ports": [
-              "i01_couplers/M_AXI",
-              "tier2_xbar_1/S00_AXI"
-            ]
-          },
-          "xbar_to_i02_couplers": {
-            "interface_ports": [
-              "xbar/M02_AXI",
-              "i02_couplers/S_AXI"
-            ]
-          },
-          "i02_couplers_to_tier2_xbar_2": {
-            "interface_ports": [
-              "i02_couplers/M_AXI",
-              "tier2_xbar_2/S00_AXI"
-            ]
-          },
-          "xbar_to_i03_couplers": {
-            "interface_ports": [
-              "xbar/M03_AXI",
-              "i03_couplers/S_AXI"
-            ]
-          },
-          "i03_couplers_to_tier2_xbar_3": {
-            "interface_ports": [
-              "i03_couplers/M_AXI",
-              "tier2_xbar_3/S00_AXI"
-            ]
-          },
-          "axi_interconnect_0_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
-          "tier2_xbar_2_to_m20_couplers": {
-            "interface_ports": [
-              "tier2_xbar_2/M04_AXI",
-              "m20_couplers/S_AXI"
-            ]
-          },
-          "m21_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M21_AXI",
-              "m21_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_1_to_m14_couplers": {
-            "interface_ports": [
-              "tier2_xbar_1/M06_AXI",
-              "m14_couplers/S_AXI"
-            ]
-          },
-          "m15_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M15_AXI",
-              "m15_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_1_to_m15_couplers": {
-            "interface_ports": [
-              "tier2_xbar_1/M07_AXI",
-              "m15_couplers/S_AXI"
-            ]
-          },
-          "m16_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M16_AXI",
-              "m16_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_2_to_m16_couplers": {
-            "interface_ports": [
-              "tier2_xbar_2/M00_AXI",
-              "m16_couplers/S_AXI"
-            ]
-          },
-          "m17_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M17_AXI",
-              "m17_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_2_to_m17_couplers": {
-            "interface_ports": [
-              "tier2_xbar_2/M01_AXI",
-              "m17_couplers/S_AXI"
+              "M14_AXI",
+              "m14_couplers/M_AXI"
             ]
           },
           "m18_couplers_to_axi_interconnect_0": {
@@ -3478,10 +3303,142 @@
               "m28_couplers/S_AXI"
             ]
           },
-          "m29_couplers_to_axi_interconnect_0": {
+          "tier2_xbar_0_to_m01_couplers": {
             "interface_ports": [
-              "M29_AXI",
-              "m29_couplers/M_AXI"
+              "tier2_xbar_0/M01_AXI",
+              "m01_couplers/S_AXI"
+            ]
+          },
+          "tier2_xbar_0_to_m02_couplers": {
+            "interface_ports": [
+              "tier2_xbar_0/M02_AXI",
+              "m02_couplers/S_AXI"
+            ]
+          },
+          "m02_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M02_AXI",
+              "m02_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_i00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "i00_couplers/S_AXI"
+            ]
+          },
+          "xbar_to_i01_couplers": {
+            "interface_ports": [
+              "xbar/M01_AXI",
+              "i01_couplers/S_AXI"
+            ]
+          },
+          "xbar_to_i02_couplers": {
+            "interface_ports": [
+              "xbar/M02_AXI",
+              "i02_couplers/S_AXI"
+            ]
+          },
+          "i00_couplers_to_tier2_xbar_0": {
+            "interface_ports": [
+              "i00_couplers/M_AXI",
+              "tier2_xbar_0/S00_AXI"
+            ]
+          },
+          "i01_couplers_to_tier2_xbar_1": {
+            "interface_ports": [
+              "i01_couplers/M_AXI",
+              "tier2_xbar_1/S00_AXI"
+            ]
+          },
+          "xbar_to_i03_couplers": {
+            "interface_ports": [
+              "xbar/M03_AXI",
+              "i03_couplers/S_AXI"
+            ]
+          },
+          "i02_couplers_to_tier2_xbar_2": {
+            "interface_ports": [
+              "i02_couplers/M_AXI",
+              "tier2_xbar_2/S00_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
+          "axi_interconnect_0_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
+            ]
+          },
+          "i03_couplers_to_tier2_xbar_3": {
+            "interface_ports": [
+              "i03_couplers/M_AXI",
+              "tier2_xbar_3/S00_AXI"
+            ]
+          },
+          "tier2_xbar_2_to_m20_couplers": {
+            "interface_ports": [
+              "tier2_xbar_2/M04_AXI",
+              "m20_couplers/S_AXI"
+            ]
+          },
+          "m21_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M21_AXI",
+              "m21_couplers/M_AXI"
+            ]
+          },
+          "tier2_xbar_1_to_m14_couplers": {
+            "interface_ports": [
+              "tier2_xbar_1/M06_AXI",
+              "m14_couplers/S_AXI"
+            ]
+          },
+          "tier2_xbar_1_to_m15_couplers": {
+            "interface_ports": [
+              "tier2_xbar_1/M07_AXI",
+              "m15_couplers/S_AXI"
+            ]
+          },
+          "m15_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M15_AXI",
+              "m15_couplers/M_AXI"
+            ]
+          },
+          "tier2_xbar_2_to_m16_couplers": {
+            "interface_ports": [
+              "tier2_xbar_2/M00_AXI",
+              "m16_couplers/S_AXI"
+            ]
+          },
+          "m16_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M16_AXI",
+              "m16_couplers/M_AXI"
+            ]
+          },
+          "m17_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M17_AXI",
+              "m17_couplers/M_AXI"
+            ]
+          },
+          "tier2_xbar_2_to_m17_couplers": {
+            "interface_ports": [
+              "tier2_xbar_2/M01_AXI",
+              "m17_couplers/S_AXI"
+            ]
+          },
+          "tier2_xbar_3_to_m29_couplers": {
+            "interface_ports": [
+              "tier2_xbar_3/M05_AXI",
+              "m29_couplers/S_AXI"
             ]
           },
           "m30_couplers_to_axi_interconnect_0": {
@@ -3490,10 +3447,10 @@
               "m30_couplers/M_AXI"
             ]
           },
-          "tier2_xbar_3_to_m29_couplers": {
+          "m29_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "tier2_xbar_3/M05_AXI",
-              "m29_couplers/S_AXI"
+              "M29_AXI",
+              "m29_couplers/M_AXI"
             ]
           }
         },
@@ -3676,78 +3633,6 @@
         "vlnv": "xilinx.com:user:axi4_lite_layer_connector:1.0",
         "xci_name": "PL_NN_axi4_lite_layer_conn_0_0"
       },
-      "perceptron_0": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_0_0"
-      },
-      "perceptron_1": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_0_1"
-      },
-      "perceptron_2": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_0_2"
-      },
-      "perceptron_3": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_2_0"
-      },
-      "perceptron_4": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_2_1"
-      },
-      "perceptron_5": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_2_2"
-      },
-      "perceptron_6": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_2_3"
-      },
-      "perceptron_7": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_2_4"
-      },
-      "perceptron_8": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_2_5"
-      },
-      "perceptron_9": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_2_6"
-      },
-      "perceptron_10": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_9_0"
-      },
-      "perceptron_11": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_9_1"
-      },
-      "perceptron_12": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_9_2"
-      },
-      "perceptron_13": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_9_3"
-      },
-      "perceptron_14": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_9_4"
-      },
-      "perceptron_15": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_9_5"
-      },
-      "perceptron_16": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_9_6"
-      },
-      "perceptron_17": {
-        "vlnv": "xilinx.com:user:perceptron:1.0",
-        "xci_name": "PL_NN_perceptron_9_7"
-      },
       "axis_broadcaster_1": {
         "vlnv": "xilinx.com:ip:axis_broadcaster:1.1",
         "xci_name": "PL_NN_axis_broadcaster_0_1",
@@ -3811,6 +3696,14 @@
           }
         }
       },
+      "axi4_lite_final_outp_0": {
+        "vlnv": "xilinx.com:user:axi4_lite_final_output:1.0",
+        "xci_name": "PL_NN_axi4_lite_final_outp_0_0"
+      },
+      "hardmax_0": {
+        "vlnv": "xilinx.com:user:hardmax:1.0",
+        "xci_name": "PL_NN_hardmax_0_0"
+      },
       "axi4_lite_register_m_0": {
         "vlnv": "xilinx.com:user:axi4_lite_register_module:1.0",
         "xci_name": "PL_NN_axi4_lite_register_m_0_0"
@@ -3819,6 +3712,18 @@
         "vlnv": "xilinx.com:user:axi4_lite_register_module:1.0",
         "xci_name": "PL_NN_axi4_lite_register_m_0_1"
       },
+      "perceptron_0": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_0_0"
+      },
+      "perceptron_1": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_0_1"
+      },
+      "perceptron_2": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_0_2"
+      },
       "perceptron_18": {
         "vlnv": "xilinx.com:user:perceptron:1.0",
         "xci_name": "PL_NN_perceptron_0_3"
@@ -3826,6 +3731,34 @@
       "perceptron_19": {
         "vlnv": "xilinx.com:user:perceptron:1.0",
         "xci_name": "PL_NN_perceptron_1_0"
+      },
+      "perceptron_3": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_2_0"
+      },
+      "perceptron_4": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_2_1"
+      },
+      "perceptron_5": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_2_2"
+      },
+      "perceptron_6": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_2_3"
+      },
+      "perceptron_7": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_2_4"
+      },
+      "perceptron_8": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_2_5"
+      },
+      "perceptron_9": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_2_6"
       },
       "perceptron_20": {
         "vlnv": "xilinx.com:user:perceptron:1.0",
@@ -3855,62 +3788,44 @@
         "vlnv": "xilinx.com:user:perceptron:1.0",
         "xci_name": "PL_NN_perceptron_8_0"
       },
+      "perceptron_10": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_9_0"
+      },
+      "perceptron_11": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_9_1"
+      },
+      "perceptron_12": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_9_2"
+      },
+      "perceptron_13": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_9_3"
+      },
+      "perceptron_14": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_9_4"
+      },
+      "perceptron_15": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_9_5"
+      },
+      "perceptron_16": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_9_6"
+      },
+      "perceptron_17": {
+        "vlnv": "xilinx.com:user:perceptron:1.0",
+        "xci_name": "PL_NN_perceptron_9_7"
+      },
       "perceptron_27": {
         "vlnv": "xilinx.com:user:perceptron:1.0",
         "xci_name": "PL_NN_perceptron_9_8"
-      },
-      "axi4_lite_final_outp_0": {
-        "vlnv": "xilinx.com:user:axi4_lite_final_output:1.0",
-        "xci_name": "PL_NN_axi4_lite_final_outp_0_0"
-      },
-      "hardmax_0": {
-        "vlnv": "xilinx.com:user:hardmax:1.0",
-        "xci_name": "PL_NN_hardmax_0_0"
       }
     },
     "interface_nets": {
-      "axi_interconnect_0_M09_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M09_AXI",
-          "perceptron_9/s_axi"
-        ]
-      },
-      "axi_interconnect_0_M04_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M04_AXI",
-          "perceptron_4/s_axi"
-        ]
-      },
-      "axi_interconnect_0_M20_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M20_AXI",
-          "perceptron_18/s_axi"
-        ]
-      },
-      "axi_interconnect_0_M01_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M01_AXI",
-          "perceptron_1/s_axi"
-        ]
-      },
-      "S00_AXI_0_1": {
-        "interface_ports": [
-          "S00_AXI_0",
-          "axi_interconnect_0/S00_AXI"
-        ]
-      },
-      "axi_interconnect_0_M02_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M02_AXI",
-          "perceptron_2/s_axi"
-        ]
-      },
-      "axis_broadcaster_0_M00_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_0/M00_AXIS",
-          "perceptron_0/x"
-        ]
-      },
       "image_loader_module_0_x": {
         "interface_ports": [
           "image_loader_module_0/x",
@@ -3929,154 +3844,46 @@
           "perceptron_1/x"
         ]
       },
-      "axis_broadcaster_0_M02_AXIS": {
+      "S00_AXI_0_1": {
         "interface_ports": [
-          "axis_broadcaster_0/M02_AXIS",
-          "perceptron_2/x"
+          "S00_AXI_0",
+          "axi_interconnect_0/S00_AXI"
         ]
       },
-      "axis_broadcaster_0_M13_AXIS": {
+      "axi_interconnect_0_M20_AXI": {
         "interface_ports": [
-          "axis_broadcaster_0/M13_AXIS",
-          "perceptron_13/x"
+          "axi_interconnect_0/M20_AXI",
+          "perceptron_18/s_axi"
         ]
       },
-      "axis_broadcaster_0_M08_AXIS": {
+      "axi_interconnect_0_M01_AXI": {
         "interface_ports": [
-          "axis_broadcaster_0/M08_AXIS",
-          "perceptron_8/x"
+          "axi_interconnect_0/M01_AXI",
+          "perceptron_1/s_axi"
         ]
       },
-      "axis_broadcaster_0_M04_AXIS": {
+      "axi_interconnect_0_M04_AXI": {
         "interface_ports": [
-          "axis_broadcaster_0/M04_AXIS",
-          "perceptron_4/x"
+          "axi_interconnect_0/M04_AXI",
+          "perceptron_4/s_axi"
         ]
       },
-      "axis_broadcaster_0_M06_AXIS": {
+      "axi_interconnect_0_M09_AXI": {
         "interface_ports": [
-          "axis_broadcaster_0/M06_AXIS",
-          "perceptron_6/x"
+          "axi_interconnect_0/M09_AXI",
+          "perceptron_9/s_axi"
         ]
       },
-      "axis_broadcaster_0_M12_AXIS": {
+      "axi_interconnect_0_M02_AXI": {
         "interface_ports": [
-          "axis_broadcaster_0/M12_AXIS",
-          "perceptron_12/x"
+          "axi_interconnect_0/M02_AXI",
+          "perceptron_2/s_axi"
         ]
       },
-      "axis_broadcaster_0_M14_AXIS": {
+      "axis_broadcaster_0_M00_AXIS": {
         "interface_ports": [
-          "axis_broadcaster_0/M14_AXIS",
-          "perceptron_14/x"
-        ]
-      },
-      "axis_broadcaster_0_M05_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_0/M05_AXIS",
-          "perceptron_5/x"
-        ]
-      },
-      "axis_broadcaster_0_M03_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_0/M03_AXIS",
-          "perceptron_3/x"
-        ]
-      },
-      "axis_broadcaster_0_M09_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_0/M09_AXIS",
-          "perceptron_9/x"
-        ]
-      },
-      "axis_broadcaster_0_M15_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_0/M15_AXIS",
-          "axis_broadcaster_1/S_AXIS"
-        ]
-      },
-      "axis_broadcaster_0_M11_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_0/M11_AXIS",
-          "perceptron_11/x"
-        ]
-      },
-      "axis_broadcaster_0_M07_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_0/M07_AXIS",
-          "perceptron_7/x"
-        ]
-      },
-      "axis_broadcaster_0_M10_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_0/M10_AXIS",
-          "perceptron_10/x"
-        ]
-      },
-      "axis_broadcaster_1_M02_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_1/M02_AXIS",
-          "perceptron_17/x"
-        ]
-      },
-      "axis_broadcaster_1_M00_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_1/M00_AXIS",
-          "perceptron_15/x"
-        ]
-      },
-      "axis_broadcaster_1_M01_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_1/M01_AXIS",
-          "perceptron_16/x"
-        ]
-      },
-      "axi_interconnect_0_M06_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M06_AXI",
-          "perceptron_6/s_axi"
-        ]
-      },
-      "axi_interconnect_0_M08_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M08_AXI",
-          "perceptron_8/s_axi"
-        ]
-      },
-      "axi_interconnect_0_M07_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M07_AXI",
-          "perceptron_7/s_axi"
-        ]
-      },
-      "axi4_lite_layer_conn_0_a": {
-        "interface_ports": [
-          "axis_broadcaster_2/S_AXIS",
-          "axi4_lite_layer_conn_0/a"
-        ]
-      },
-      "axi_interconnect_0_M12_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M12_AXI",
-          "perceptron_12/s_axi"
-        ]
-      },
-      "axi_interconnect_0_M11_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M11_AXI",
-          "perceptron_11/s_axi"
-        ]
-      },
-      "axi_interconnect_0_M13_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M13_AXI",
-          "perceptron_13/s_axi"
-        ]
-      },
-      "axi_interconnect_0_M14_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M14_AXI",
-          "perceptron_14/s_axi"
+          "axis_broadcaster_0/M00_AXIS",
+          "perceptron_0/x"
         ]
       },
       "axi_interconnect_0_M16_AXI": {
@@ -4085,28 +3892,34 @@
           "perceptron_16/s_axi"
         ]
       },
-      "axi_interconnect_0_M15_AXI": {
+      "axi_interconnect_0_M23_AXI": {
         "interface_ports": [
-          "axi_interconnect_0/M15_AXI",
-          "perceptron_15/s_axi"
+          "axi_interconnect_0/M23_AXI",
+          "perceptron_21/s_axi"
         ]
       },
-      "axi_interconnect_0_M03_AXI": {
+      "axis_broadcaster_2_M07_AXIS": {
         "interface_ports": [
-          "axi_interconnect_0/M03_AXI",
-          "perceptron_3/s_axi"
+          "axis_broadcaster_2/M07_AXIS",
+          "perceptron_25/x"
         ]
       },
-      "axi_interconnect_0_M05_AXI": {
+      "axis_broadcaster_2_M01_AXIS": {
         "interface_ports": [
-          "axi_interconnect_0/M05_AXI",
-          "perceptron_5/s_axi"
+          "axis_broadcaster_2/M01_AXIS",
+          "perceptron_19/x"
         ]
       },
-      "axi_interconnect_0_M19_AXI": {
+      "axi4_lite_layer_conn_0_a": {
         "interface_ports": [
-          "axi_interconnect_0/M19_AXI",
-          "axi4_lite_register_m_0/s_axil"
+          "axis_broadcaster_2/S_AXIS",
+          "axi4_lite_layer_conn_0/a"
+        ]
+      },
+      "axis_broadcaster_0_M03_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_0/M03_AXIS",
+          "perceptron_3/x"
         ]
       },
       "axis_broadcaster_2_M03_AXIS": {
@@ -4115,22 +3928,28 @@
           "perceptron_21/x"
         ]
       },
-      "axis_broadcaster_2_M00_AXIS": {
+      "axis_broadcaster_2_M02_AXIS": {
         "interface_ports": [
-          "axis_broadcaster_2/M00_AXIS",
-          "perceptron_18/x"
+          "axis_broadcaster_2/M02_AXIS",
+          "perceptron_20/x"
         ]
       },
-      "axi_interconnect_0_M28_AXI": {
+      "axi_interconnect_0_M26_AXI": {
         "interface_ports": [
-          "axi_interconnect_0/M28_AXI",
-          "perceptron_26/s_axi"
+          "axi_interconnect_0/M26_AXI",
+          "perceptron_24/s_axi"
         ]
       },
-      "axi_interconnect_0_M23_AXI": {
+      "axis_broadcaster_0_M13_AXIS": {
         "interface_ports": [
-          "axi_interconnect_0/M23_AXI",
-          "perceptron_21/s_axi"
+          "axis_broadcaster_0/M13_AXIS",
+          "perceptron_13/x"
+        ]
+      },
+      "axi_interconnect_0_M06_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M06_AXI",
+          "perceptron_6/s_axi"
         ]
       },
       "axis_broadcaster_2_M09_AXIS": {
@@ -4139,28 +3958,112 @@
           "perceptron_27/x"
         ]
       },
+      "axi_interconnect_0_M07_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M07_AXI",
+          "perceptron_7/s_axi"
+        ]
+      },
+      "axis_broadcaster_2_M00_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_2/M00_AXIS",
+          "perceptron_18/x"
+        ]
+      },
+      "axi_interconnect_0_M30_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M30_AXI",
+          "axi4_lite_register_m_1/s_axil"
+        ]
+      },
+      "axi_interconnect_0_M22_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M22_AXI",
+          "perceptron_20/s_axi"
+        ]
+      },
+      "axi_interconnect_0_M29_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M29_AXI",
+          "perceptron_27/s_axi"
+        ]
+      },
+      "axi_interconnect_0_M14_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M14_AXI",
+          "perceptron_14/s_axi"
+        ]
+      },
+      "axi_interconnect_0_M31_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M31_AXI",
+          "axi4_lite_final_outp_0/s_axil"
+        ]
+      },
+      "axis_broadcaster_1_M02_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_1/M02_AXIS",
+          "perceptron_17/x"
+        ]
+      },
+      "axis_broadcaster_2_M04_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_2/M04_AXIS",
+          "perceptron_22/x"
+        ]
+      },
+      "axi_interconnect_0_M08_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M08_AXI",
+          "perceptron_8/s_axi"
+        ]
+      },
+      "axi_interconnect_0_M19_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M19_AXI",
+          "axi4_lite_register_m_0/s_axil"
+        ]
+      },
+      "axi_interconnect_0_M12_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M12_AXI",
+          "perceptron_12/s_axi"
+        ]
+      },
+      "axis_broadcaster_0_M05_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_0/M05_AXIS",
+          "perceptron_5/x"
+        ]
+      },
+      "axis_broadcaster_0_M14_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_0/M14_AXIS",
+          "perceptron_14/x"
+        ]
+      },
+      "axis_broadcaster_0_M09_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_0/M09_AXIS",
+          "perceptron_9/x"
+        ]
+      },
+      "axis_broadcaster_0_M11_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_0/M11_AXIS",
+          "perceptron_11/x"
+        ]
+      },
+      "axis_broadcaster_1_M01_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_1/M01_AXIS",
+          "perceptron_16/x"
+        ]
+      },
       "axis_broadcaster_2_M06_AXIS": {
         "interface_ports": [
           "axis_broadcaster_2/M06_AXIS",
           "perceptron_24/x"
-        ]
-      },
-      "axi_interconnect_0_M10_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M10_AXI",
-          "perceptron_10/s_axi"
-        ]
-      },
-      "axi_interconnect_0_M17_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M17_AXI",
-          "perceptron_17/s_axi"
-        ]
-      },
-      "axis_broadcaster_2_M07_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_2/M07_AXIS",
-          "perceptron_25/x"
         ]
       },
       "axi_interconnect_0_M18_AXI": {
@@ -4181,58 +4084,10 @@
           "perceptron_26/x"
         ]
       },
-      "axis_broadcaster_2_M01_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_2/M01_AXIS",
-          "perceptron_19/x"
-        ]
-      },
-      "axis_broadcaster_2_M04_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_2/M04_AXIS",
-          "perceptron_22/x"
-        ]
-      },
-      "axis_broadcaster_2_M02_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_2/M02_AXIS",
-          "perceptron_20/x"
-        ]
-      },
-      "axis_broadcaster_2_M05_AXIS": {
-        "interface_ports": [
-          "axis_broadcaster_2/M05_AXIS",
-          "perceptron_23/x"
-        ]
-      },
-      "axi_interconnect_0_M26_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M26_AXI",
-          "perceptron_24/s_axi"
-        ]
-      },
-      "axi_interconnect_0_M30_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M30_AXI",
-          "axi4_lite_register_m_1/s_axil"
-        ]
-      },
-      "axi_interconnect_0_M22_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M22_AXI",
-          "perceptron_20/s_axi"
-        ]
-      },
       "axi_interconnect_0_M27_AXI": {
         "interface_ports": [
           "axi_interconnect_0/M27_AXI",
           "perceptron_25/s_axi"
-        ]
-      },
-      "axi_interconnect_0_M29_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M29_AXI",
-          "perceptron_27/s_axi"
         ]
       },
       "axi_interconnect_0_M21_AXI": {
@@ -4241,16 +4096,118 @@
           "perceptron_19/s_axi"
         ]
       },
+      "axis_broadcaster_0_M08_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_0/M08_AXIS",
+          "perceptron_8/x"
+        ]
+      },
+      "axi_interconnect_0_M03_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M03_AXI",
+          "perceptron_3/s_axi"
+        ]
+      },
+      "axi_interconnect_0_M05_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M05_AXI",
+          "perceptron_5/s_axi"
+        ]
+      },
       "axi_interconnect_0_M24_AXI": {
         "interface_ports": [
           "axi_interconnect_0/M24_AXI",
           "perceptron_22/s_axi"
         ]
       },
-      "axi_interconnect_0_M31_AXI": {
+      "axis_broadcaster_0_M15_AXIS": {
         "interface_ports": [
-          "axi_interconnect_0/M31_AXI",
-          "axi4_lite_final_outp_0/s_axil"
+          "axis_broadcaster_0/M15_AXIS",
+          "axis_broadcaster_1/S_AXIS"
+        ]
+      },
+      "axi_interconnect_0_M11_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M11_AXI",
+          "perceptron_11/s_axi"
+        ]
+      },
+      "axis_broadcaster_2_M05_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_2/M05_AXIS",
+          "perceptron_23/x"
+        ]
+      },
+      "axi_interconnect_0_M10_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M10_AXI",
+          "perceptron_10/s_axi"
+        ]
+      },
+      "axis_broadcaster_0_M04_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_0/M04_AXIS",
+          "perceptron_4/x"
+        ]
+      },
+      "axis_broadcaster_0_M12_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_0/M12_AXIS",
+          "perceptron_12/x"
+        ]
+      },
+      "axis_broadcaster_0_M07_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_0/M07_AXIS",
+          "perceptron_7/x"
+        ]
+      },
+      "axis_broadcaster_0_M10_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_0/M10_AXIS",
+          "perceptron_10/x"
+        ]
+      },
+      "axis_broadcaster_1_M00_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_1/M00_AXIS",
+          "perceptron_15/x"
+        ]
+      },
+      "axi_interconnect_0_M13_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M13_AXI",
+          "perceptron_13/s_axi"
+        ]
+      },
+      "axi_interconnect_0_M15_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M15_AXI",
+          "perceptron_15/s_axi"
+        ]
+      },
+      "axi_interconnect_0_M28_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M28_AXI",
+          "perceptron_26/s_axi"
+        ]
+      },
+      "axis_broadcaster_0_M06_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_0/M06_AXIS",
+          "perceptron_6/x"
+        ]
+      },
+      "axi_interconnect_0_M17_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M17_AXI",
+          "perceptron_17/s_axi"
+        ]
+      },
+      "axis_broadcaster_0_M02_AXIS": {
+        "interface_ports": [
+          "axis_broadcaster_0/M02_AXIS",
+          "perceptron_2/x"
         ]
       }
     },
@@ -4292,38 +4249,8 @@
           "axis_broadcaster_0/aclk",
           "image_loader_module_0/s_axi_aclk",
           "axi4_lite_layer_conn_0/clk",
-          "perceptron_0/s_axi_aclk",
-          "perceptron_1/s_axi_aclk",
-          "perceptron_2/s_axi_aclk",
           "axis_broadcaster_1/aclk",
-          "perceptron_3/s_axi_aclk",
-          "perceptron_4/s_axi_aclk",
-          "perceptron_5/s_axi_aclk",
-          "perceptron_6/s_axi_aclk",
-          "perceptron_10/s_axi_aclk",
-          "perceptron_11/s_axi_aclk",
-          "perceptron_12/s_axi_aclk",
-          "perceptron_13/s_axi_aclk",
-          "perceptron_15/s_axi_aclk",
-          "perceptron_14/s_axi_aclk",
-          "perceptron_16/s_axi_aclk",
-          "perceptron_17/s_axi_aclk",
-          "perceptron_9/s_axi_aclk",
-          "perceptron_8/s_axi_aclk",
-          "perceptron_7/s_axi_aclk",
-          "axi4_lite_register_m_0/aclk",
           "axis_broadcaster_2/aclk",
-          "perceptron_20/s_axi_aclk",
-          "perceptron_19/s_axi_aclk",
-          "perceptron_18/s_axi_aclk",
-          "perceptron_23/s_axi_aclk",
-          "perceptron_24/s_axi_aclk",
-          "perceptron_25/s_axi_aclk",
-          "perceptron_26/s_axi_aclk",
-          "perceptron_21/s_axi_aclk",
-          "perceptron_27/s_axi_aclk",
-          "perceptron_22/s_axi_aclk",
-          "axi4_lite_register_m_1/aclk",
           "axi4_lite_final_outp_0/aclk",
           "hardmax_0/clk",
           "axi_interconnect_0/M05_ACLK",
@@ -4352,7 +4279,37 @@
           "axi_interconnect_0/M28_ACLK",
           "axi_interconnect_0/M29_ACLK",
           "axi_interconnect_0/M30_ACLK",
-          "axi_interconnect_0/M31_ACLK"
+          "axi_interconnect_0/M31_ACLK",
+          "axi4_lite_register_m_0/aclk",
+          "axi4_lite_register_m_1/aclk",
+          "perceptron_0/s_axi_aclk",
+          "perceptron_1/s_axi_aclk",
+          "perceptron_2/s_axi_aclk",
+          "perceptron_18/s_axi_aclk",
+          "perceptron_19/s_axi_aclk",
+          "perceptron_3/s_axi_aclk",
+          "perceptron_4/s_axi_aclk",
+          "perceptron_5/s_axi_aclk",
+          "perceptron_6/s_axi_aclk",
+          "perceptron_7/s_axi_aclk",
+          "perceptron_8/s_axi_aclk",
+          "perceptron_9/s_axi_aclk",
+          "perceptron_20/s_axi_aclk",
+          "perceptron_21/s_axi_aclk",
+          "perceptron_22/s_axi_aclk",
+          "perceptron_23/s_axi_aclk",
+          "perceptron_24/s_axi_aclk",
+          "perceptron_25/s_axi_aclk",
+          "perceptron_26/s_axi_aclk",
+          "perceptron_10/s_axi_aclk",
+          "perceptron_11/s_axi_aclk",
+          "perceptron_12/s_axi_aclk",
+          "perceptron_13/s_axi_aclk",
+          "perceptron_14/s_axi_aclk",
+          "perceptron_15/s_axi_aclk",
+          "perceptron_16/s_axi_aclk",
+          "perceptron_17/s_axi_aclk",
+          "perceptron_27/s_axi_aclk"
         ]
       },
       "ARESETN_0_1": {
@@ -4368,38 +4325,8 @@
           "axis_broadcaster_0/aresetn",
           "image_loader_module_0/s_axi_aresetn",
           "axi4_lite_layer_conn_0/resetn",
-          "perceptron_0/s_axi_aresetn",
-          "perceptron_1/s_axi_aresetn",
-          "perceptron_2/s_axi_aresetn",
           "axis_broadcaster_1/aresetn",
-          "perceptron_3/s_axi_aresetn",
-          "perceptron_4/s_axi_aresetn",
-          "perceptron_5/s_axi_aresetn",
-          "perceptron_6/s_axi_aresetn",
-          "perceptron_7/s_axi_aresetn",
-          "perceptron_8/s_axi_aresetn",
-          "perceptron_9/s_axi_aresetn",
-          "perceptron_17/s_axi_aresetn",
-          "perceptron_16/s_axi_aresetn",
-          "perceptron_15/s_axi_aresetn",
-          "perceptron_14/s_axi_aresetn",
-          "perceptron_13/s_axi_aresetn",
-          "perceptron_12/s_axi_aresetn",
-          "perceptron_11/s_axi_aresetn",
-          "perceptron_10/s_axi_aresetn",
-          "axi4_lite_register_m_0/aresetn",
           "axis_broadcaster_2/aresetn",
-          "perceptron_21/s_axi_aresetn",
-          "perceptron_22/s_axi_aresetn",
-          "perceptron_27/s_axi_aresetn",
-          "perceptron_26/s_axi_aresetn",
-          "perceptron_25/s_axi_aresetn",
-          "perceptron_20/s_axi_aresetn",
-          "perceptron_24/s_axi_aresetn",
-          "perceptron_19/s_axi_aresetn",
-          "perceptron_23/s_axi_aresetn",
-          "perceptron_18/s_axi_aresetn",
-          "axi4_lite_register_m_1/aresetn",
           "axi4_lite_final_outp_0/aresetn",
           "hardmax_0/rstn",
           "axi_interconnect_0/M05_ARESETN",
@@ -4428,7 +4355,37 @@
           "axi_interconnect_0/M28_ARESETN",
           "axi_interconnect_0/M29_ARESETN",
           "axi_interconnect_0/M30_ARESETN",
-          "axi_interconnect_0/M31_ARESETN"
+          "axi_interconnect_0/M31_ARESETN",
+          "axi4_lite_register_m_0/aresetn",
+          "axi4_lite_register_m_1/aresetn",
+          "perceptron_0/s_axi_aresetn",
+          "perceptron_1/s_axi_aresetn",
+          "perceptron_2/s_axi_aresetn",
+          "perceptron_18/s_axi_aresetn",
+          "perceptron_19/s_axi_aresetn",
+          "perceptron_3/s_axi_aresetn",
+          "perceptron_4/s_axi_aresetn",
+          "perceptron_5/s_axi_aresetn",
+          "perceptron_6/s_axi_aresetn",
+          "perceptron_7/s_axi_aresetn",
+          "perceptron_8/s_axi_aresetn",
+          "perceptron_9/s_axi_aresetn",
+          "perceptron_20/s_axi_aresetn",
+          "perceptron_21/s_axi_aresetn",
+          "perceptron_22/s_axi_aresetn",
+          "perceptron_23/s_axi_aresetn",
+          "perceptron_24/s_axi_aresetn",
+          "perceptron_25/s_axi_aresetn",
+          "perceptron_26/s_axi_aresetn",
+          "perceptron_10/s_axi_aresetn",
+          "perceptron_11/s_axi_aresetn",
+          "perceptron_12/s_axi_aresetn",
+          "perceptron_13/s_axi_aresetn",
+          "perceptron_14/s_axi_aresetn",
+          "perceptron_15/s_axi_aresetn",
+          "perceptron_16/s_axi_aresetn",
+          "perceptron_17/s_axi_aresetn",
+          "perceptron_27/s_axi_aresetn"
         ]
       },
       "start_0_1": {
@@ -4439,6 +4396,8 @@
           "perceptron_0/start",
           "perceptron_1/start",
           "perceptron_2/start",
+          "perceptron_18/start",
+          "perceptron_19/start",
           "perceptron_3/start",
           "perceptron_4/start",
           "perceptron_5/start",
@@ -4446,24 +4405,22 @@
           "perceptron_7/start",
           "perceptron_8/start",
           "perceptron_9/start",
-          "perceptron_17/start",
-          "perceptron_16/start",
-          "perceptron_15/start",
-          "perceptron_14/start",
-          "perceptron_13/start",
-          "perceptron_12/start",
-          "perceptron_11/start",
-          "perceptron_10/start",
-          "perceptron_18/start",
+          "perceptron_20/start",
+          "perceptron_21/start",
+          "perceptron_22/start",
           "perceptron_23/start",
           "perceptron_24/start",
-          "perceptron_19/start",
           "perceptron_25/start",
-          "perceptron_20/start",
           "perceptron_26/start",
-          "perceptron_27/start",
-          "perceptron_22/start",
-          "perceptron_21/start"
+          "perceptron_10/start",
+          "perceptron_11/start",
+          "perceptron_12/start",
+          "perceptron_13/start",
+          "perceptron_14/start",
+          "perceptron_15/start",
+          "perceptron_16/start",
+          "perceptron_17/start",
+          "perceptron_27/start"
         ]
       },
       "perceptron_1_a_tdata": {
@@ -4481,6 +4438,7 @@
       "axi4_lite_register_m_0_control": {
         "ports": [
           "axi4_lite_register_m_0/control",
+          "axi4_lite_register_m_0/status",
           "perceptron_0/biasValid",
           "perceptron_1/biasValid",
           "perceptron_2/biasValid",
@@ -4488,18 +4446,17 @@
           "perceptron_4/biasValid",
           "perceptron_5/biasValid",
           "perceptron_6/biasValid",
-          "perceptron_9/biasValid",
-          "perceptron_8/biasValid",
           "perceptron_7/biasValid",
-          "perceptron_17/biasValid",
-          "perceptron_16/biasValid",
-          "perceptron_15/biasValid",
-          "perceptron_14/biasValid",
-          "perceptron_13/biasValid",
-          "perceptron_12/biasValid",
-          "perceptron_11/biasValid",
+          "perceptron_8/biasValid",
+          "perceptron_9/biasValid",
           "perceptron_10/biasValid",
-          "axi4_lite_register_m_0/status"
+          "perceptron_11/biasValid",
+          "perceptron_12/biasValid",
+          "perceptron_13/biasValid",
+          "perceptron_14/biasValid",
+          "perceptron_15/biasValid",
+          "perceptron_16/biasValid",
+          "perceptron_17/biasValid"
         ]
       },
       "axi4_lite_register_m_0_bias_0": {
@@ -4853,17 +4810,17 @@
       "axi4_lite_register_m_1_control": {
         "ports": [
           "axi4_lite_register_m_1/control",
-          "perceptron_22/biasValid",
-          "perceptron_21/biasValid",
-          "perceptron_20/biasValid",
-          "perceptron_19/biasValid",
-          "perceptron_26/biasValid",
-          "perceptron_27/biasValid",
-          "perceptron_25/biasValid",
-          "perceptron_24/biasValid",
-          "perceptron_23/biasValid",
+          "axi4_lite_register_m_1/status",
           "perceptron_18/biasValid",
-          "axi4_lite_register_m_1/status"
+          "perceptron_19/biasValid",
+          "perceptron_20/biasValid",
+          "perceptron_21/biasValid",
+          "perceptron_22/biasValid",
+          "perceptron_23/biasValid",
+          "perceptron_24/biasValid",
+          "perceptron_25/biasValid",
+          "perceptron_26/biasValid",
+          "perceptron_27/biasValid"
         ]
       },
       "perceptron_18_a_tdata": {

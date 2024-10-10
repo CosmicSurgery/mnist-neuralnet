@@ -118,6 +118,8 @@ int main()
 	write_value = 0x30000000;
 	Xil_Out32(addr, write_value);
 	read_value = Xil_In32(addr);
+	write_value = 0x50000000;
+	Xil_Out32(addr+4, write_value);
 
 //	for (int i=0; i<784;i++){
 //		write_value = 1;
@@ -131,11 +133,11 @@ int main()
 //		addr = addr+4;
 //	}
 
-	if (counter ==0){
-		printf("Test passed!\n\r");
-	} else {
-		printf("Test Failed!\n\r");
-	}
+//	if (counter ==0){
+//		printf("Test passed!\n\r");
+//	} else {
+//		printf("Test Failed!\n\r");
+//	}
 	addr = PERCEPTRON_0;
 	printf("Check PERCEPTRON_0\n\r");
 	counter = 0;

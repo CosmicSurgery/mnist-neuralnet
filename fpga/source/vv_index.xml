@@ -445,7 +445,7 @@
 		</DisplayName>
 		<Description value="perceptron_v1_0">
 		</Description>
-		<CoreRevision value="11">
+		<CoreRevision value="14">
 		</CoreRevision>
 		<ComponentPath value="perceptron/rtl/component.xml">
 		</ComponentPath>
@@ -525,6 +525,8 @@
 			<SubcoreVLNV value="xilinx.com:ip:axi_bram_ctrl:4.1">
 			</SubcoreVLNV>
 			<SubcoreVLNV value="xilinx.com:ip:mult_gen:12.0">
+			</SubcoreVLNV>
+			<SubcoreVLNV value="xilinx.com:ip:ila:6.2">
 			</SubcoreVLNV>
 		</SubcoreVLNVs>
 		<Interfaces>

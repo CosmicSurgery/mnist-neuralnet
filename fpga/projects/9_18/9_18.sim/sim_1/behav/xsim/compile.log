@@ -106,7 +106,7 @@ INFO: [VRFC 10-2458] undeclared symbol a_tdata, assumed default net type wire [C
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/debugalt_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module debugalt_tb
 INFO: [VRFC 10-2458] undeclared symbol s_axil_0_aresetn, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.srcs/sim_1/new/debugalt_tb.v:93]
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'axi_bram_ctrl_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/debug/ip/debug_perceptron_0_0/src/mult_gen_0/sim/mult_gen_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git_repos/mnist_neuralnet/fpga/projects/9_18/9_18.ip_user_files/bd/design_3_no_cpu/ip/design_3_no_cpu_perceptron_0_0/src/mult_gen_0/sim/mult_gen_0.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'mult_gen_0'

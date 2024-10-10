@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:perceptron:1.0
-// IP Revision: 11
+// IP Revision: 13
 
 (* X_CORE_INFO = "perceptron,Vivado 2019.2" *)
 (* CHECK_LICENSE_TYPE = "design_3_perceptron_0_1,perceptron,{}" *)
-(* CORE_GENERATION_INFO = "design_3_perceptron_0_1,perceptron,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=perceptron,x_ipVersion=1.0,x_ipCoreRevision=11,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,activation=relu}" *)
+(* CORE_GENERATION_INFO = "design_3_perceptron_0_1,perceptron,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=perceptron,x_ipVersion=1.0,x_ipCoreRevision=13,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,activation=relu}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_3_perceptron_0_1 (
