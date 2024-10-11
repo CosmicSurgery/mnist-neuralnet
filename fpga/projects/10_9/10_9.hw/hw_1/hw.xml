@@ -34,7 +34,7 @@
     <Object name="design_1_i/perceptron_0/inst/start" gui_info="Trigger Setup=1"/>
     <Object name="design_1_i/perceptron_0/inst/x_tready" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/perceptron_0/inst/x_tvalid_del" gui_info="Trigger Setup=2"/>
-    <Object name="design_1_i/perceptron_0_x_tready" gui_info="Trigger Setup=2"/>
+    <Object name="design_1_i/perceptron_0_x_tready" gui_info="Trigger Setup=0"/>
   </ObjectList>
   <probeset name="hw project" active="false">
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
