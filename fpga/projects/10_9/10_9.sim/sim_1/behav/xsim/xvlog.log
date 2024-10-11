@@ -1,0 +1,40 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ipshared/c04c/axi4_lite_register_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi4_lite_register_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ip/design_2_axi4_lite_register_m_0_0/sim/design_2_axi4_lite_register_m_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_2_axi4_lite_register_m_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/perceptron/rtl/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_2/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dual_port_AXI_Native_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ipshared/1e47/image_loader_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module image_loader_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ip/design_2_image_loader_module_0_0/sim/design_2_image_loader_module_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_2_image_loader_module_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ip/design_2_perceptron_0_0/src/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ipshared/e5d5/perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module perceptron
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ip/design_2_perceptron_0_0/sim/design_2_perceptron_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_2_perceptron_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ip/design_2_xbar_0/sim/design_2_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_2_xbar_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ip/design_2_xlconstant_0_0/sim/design_2_xlconstant_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_2_xlconstant_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ipshared/8060/axi4_lite_layer_connector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi4_lite_layer_connector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ip/design_2_axi4_lite_layer_conn_0_0/sim/design_2_axi4_lite_layer_conn_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_2_axi4_lite_layer_conn_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ip/design_2_perceptron_0_1/sim/design_2_perceptron_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_2_perceptron_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/sim/design_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_2
+INFO: [VRFC 10-311] analyzing module design_2_axi_interconnect_0_0
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_F9RV50
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_1O10UX1
+INFO: [VRFC 10-311] analyzing module m02_couplers_imp_E445IF
+INFO: [VRFC 10-311] analyzing module m03_couplers_imp_1PH007A
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_1L7QRZA
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_2_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sim_1/new/design_2_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_2_tb

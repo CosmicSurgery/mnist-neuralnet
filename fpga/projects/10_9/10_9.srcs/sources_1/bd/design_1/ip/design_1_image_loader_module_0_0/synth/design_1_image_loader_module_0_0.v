@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:image_loader_module:1.0
-// IP Revision: 16
+// IP Revision: 17
 
 (* X_CORE_INFO = "image_loader_module,Vivado 2019.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_image_loader_module_0_0,image_loader_module,{}" *)
-(* CORE_GENERATION_INFO = "design_1_image_loader_module_0_0,image_loader_module,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=image_loader_module,x_ipVersion=1.0,x_ipCoreRevision=16,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "design_1_image_loader_module_0_0,image_loader_module,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=image_loader_module,x_ipVersion=1.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_image_loader_module_0_0 (

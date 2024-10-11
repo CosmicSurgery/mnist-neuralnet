@@ -59,6 +59,13 @@ set_property used_in_synthesis false [get_files -all c:/git_repos/mnist_neuralne
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_1/src/ila_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_1/src/ila_0/ila_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_1/src/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/design_1_ila_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 

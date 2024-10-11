@@ -18,15 +18,16 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10236 
-WARNING: [Synth 8-2507] parameter declaration becomes local in perceptron with formal parameter declaration list [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/5707/perceptron.v:55]
-WARNING: [Synth 8-2507] parameter declaration becomes local in perceptron with formal parameter declaration list [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/5707/perceptron.v:56]
+INFO: Helper process launched with PID 18768 
+WARNING: [Synth 8-2507] parameter declaration becomes local in perceptron with formal parameter declaration list [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/e5d5/perceptron.v:55]
+WARNING: [Synth 8-2507] parameter declaration becomes local in perceptron with formal parameter declaration list [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/e5d5/perceptron.v:56]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 883.645 ; gain = 272.027
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 881.672 ; gain = 270.871
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_perceptron_0_0' [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_0/synth/design_1_perceptron_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'perceptron' [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/5707/perceptron.v:23]
+INFO: [Synth 8-6157] synthesizing module 'perceptron' [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/e5d5/perceptron.v:23]
 	Parameter activation bound to: relu - type: string 
+	Parameter input_size bound to: 784 - type: integer 
 	Parameter addressWidth bound to: 10 - type: integer 
 	Parameter n_bits bound to: 32 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'dual_port_AXI_Native_bram' [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v:9]
@@ -218,7 +219,7 @@ WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [c:/git
 	Parameter C_ROUND_PT bound to: 0 - type: integer 
 INFO: [Synth 8-3491] module 'mult_gen_v12_0_16' declared at 'c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_0/src/mult_gen_0/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_16' [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_0/src/mult_gen_0/synth/mult_gen_0.vhd:120]
 INFO: [Synth 8-256] done synthesizing module 'mult_gen_0' (20#1) [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_0/src/mult_gen_0/synth/mult_gen_0.vhd:68]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/5707/perceptron.v:108]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/e5d5/perceptron.v:108]
 INFO: [Synth 8-6157] synthesizing module 'ila_0' [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_0/src/ila_0/synth/ila_0.v:84]
 INFO: [Synth 8-6157] synthesizing module 'CFGLUT5' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1516]
 INFO: [Synth 8-6155] done synthesizing module 'CFGLUT5' (28#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1516]
@@ -235,11 +236,11 @@ INFO: [Synth 8-6155] done synthesizing module 'FDRE' (48#1) [C:/Xilinx/Vivado/20
 WARNING: [Synth 8-7023] instance 'inst' of module 'ila_v6_2_10_ila' has 1033 connections declared, but only 1027 given [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_0/src/ila_0/synth/ila_0.v:3225]
 WARNING: [Synth 8-3848] Net sl_iport0 in module/entity ila_0 does not have driver. [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_0/src/ila_0/synth/ila_0.v:114]
 INFO: [Synth 8-6155] done synthesizing module 'ila_0' (58#1) [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_0/src/ila_0/synth/ila_0.v:84]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'mult'. This will prevent further optimization [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/5707/perceptron.v:101]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'your_instance_name'. This will prevent further optimization [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/5707/perceptron.v:108]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'WEIGHT_MEMORY'. This will prevent further optimization [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/5707/perceptron.v:71]
-WARNING: [Synth 8-6014] Unused sequential element mul_reg was removed.  [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/5707/perceptron.v:138]
-INFO: [Synth 8-6155] done synthesizing module 'perceptron' (59#1) [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/5707/perceptron.v:23]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'mult'. This will prevent further optimization [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/e5d5/perceptron.v:101]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'your_instance_name'. This will prevent further optimization [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/e5d5/perceptron.v:108]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'WEIGHT_MEMORY'. This will prevent further optimization [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/e5d5/perceptron.v:71]
+WARNING: [Synth 8-6014] Unused sequential element mul_reg was removed.  [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/e5d5/perceptron.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'perceptron' (59#1) [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ipshared/e5d5/perceptron.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_perceptron_0_0' (60#1) [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_0/synth/design_1_perceptron_0_0.v:58]
 WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_4_blk_mem_output_block__parameterized0 has unconnected port CLKB
 WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_4_blk_mem_output_block__parameterized0 has unconnected port DOUTA_I[228]
@@ -343,7 +344,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_4_blk_mem_output_block__paramete
 WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_4_blk_mem_output_block__parameterized0 has unconnected port DOUTA_I[130]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:27 ; elapsed = 00:01:33 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished RTL Elaboration : Time (s): cpu = 00:01:30 ; elapsed = 00:02:02 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -356,12 +357,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:28 ; elapsed = 00:01:34 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:31 ; elapsed = 00:02:03 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:28 ; elapsed = 00:01:34 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:31 ; elapsed = 00:02:03 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.264 . Memory (MB): peak = 1441.547 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.281 . Memory (MB): peak = 1439.449 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 238 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -378,22 +379,22 @@ WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1441.547 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1439.449 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 173 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 160 instances
   CFGLUT5 => SRLC32E: 13 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.301 . Memory (MB): peak = 1441.547 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.360 . Memory (MB): peak = 1439.449 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:40 ; elapsed = 00:01:46 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Constraint Validation : Time (s): cpu = 00:01:42 ; elapsed = 00:02:17 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:40 ; elapsed = 00:01:46 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:42 ; elapsed = 00:02:17 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -404,7 +405,7 @@ Applied set_property DONT_TOUCH = true for inst/WEIGHT_MEMORY/bram. (constraint 
 Applied set_property DONT_TOUCH = true for inst/mult. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/your_instance_name. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:40 ; elapsed = 00:01:46 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:42 ; elapsed = 00:02:17 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'GEN_NO_RD_CMD_OPT.GEN_R.axi_rlast_int_reg' into 'GEN_NO_RD_CMD_OPT.GEN_R.axi_rvalid_int_reg' [c:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_0/src/axi_bram_ctrl_0/hdl/axi_bram_ctrl_v4_1_rfs.vhd:7279]
 INFO: [Synth 8-802] inferred FSM for state register 'GEN_NO_RD_CMD_OPT.lite_sm_cs_reg' in module 'axi_lite'
@@ -539,7 +540,7 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in m
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized8'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:43 ; elapsed = 00:01:50 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:45 ; elapsed = 00:02:21 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -779,7 +780,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/your
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/your_instance_name/inst/\ila_core_inst/u_ila_regs/slaveRegDo_mux_1_reg[14] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:56 ; elapsed = 00:02:03 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:58 ; elapsed = 00:02:35 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -791,13 +792,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:17 ; elapsed = 00:02:25 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:19 ; elapsed = 00:03:00 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:17 ; elapsed = 00:02:25 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Timing Optimization : Time (s): cpu = 00:02:20 ; elapsed = 00:03:00 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -809,7 +810,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:19 ; elapsed = 00:02:27 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Technology Mapping : Time (s): cpu = 00:02:21 ; elapsed = 00:03:02 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -873,13 +874,13 @@ INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[0] to constant 0
 INFO: [Synth 8-3295] tying undriven pin inst:trig_in to constant 0
 INFO: [Synth 8-3295] tying undriven pin inst:trig_out_ack to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:23 ; elapsed = 00:02:31 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished IO Insertion : Time (s): cpu = 00:02:25 ; elapsed = 00:03:07 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:23 ; elapsed = 00:02:31 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:25 ; elapsed = 00:03:07 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -898,25 +899,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:24 ; elapsed = 00:02:32 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:26 ; elapsed = 00:03:08 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:24 ; elapsed = 00:02:32 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:26 ; elapsed = 00:03:08 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:24 ; elapsed = 00:02:32 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:26 ; elapsed = 00:03:08 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:24 ; elapsed = 00:02:32 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:26 ; elapsed = 00:03:08 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -954,18 +955,18 @@ Report Cell Usage:
 |20    |FDSE       |    10|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:24 ; elapsed = 00:02:32 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:26 ; elapsed = 00:03:08 . Memory (MB): peak = 1439.449 ; gain = 828.648
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1329 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:02:25 . Memory (MB): peak = 1441.547 ; gain = 829.930
-Synthesis Optimization Complete : Time (s): cpu = 00:02:24 ; elapsed = 00:02:32 . Memory (MB): peak = 1441.547 ; gain = 829.930
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:03:00 . Memory (MB): peak = 1439.449 ; gain = 828.648
+Synthesis Optimization Complete : Time (s): cpu = 00:02:26 ; elapsed = 00:03:08 . Memory (MB): peak = 1439.449 ; gain = 828.648
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.157 . Memory (MB): peak = 1441.547 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.171 . Memory (MB): peak = 1439.449 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 258 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1441.547 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1439.449 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 173 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 160 instances
@@ -974,19 +975,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 328 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:32 ; elapsed = 00:02:42 . Memory (MB): peak = 1441.547 ; gain = 1110.598
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1441.547 ; gain = 0.000
+synth_design: Time (s): cpu = 00:02:35 ; elapsed = 00:03:23 . Memory (MB): peak = 1439.449 ; gain = 1109.578
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1439.449 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.runs/design_1_perceptron_0_0_synth_1/design_1_perceptron_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_perceptron_0_0, cache-ID = 91d6c05298ebe025
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_perceptron_0_0, cache-ID = f87e58fc1882bf0c
 INFO: [Coretcl 2-1174] Renamed 199 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1441.547 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1439.449 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.runs/design_1_perceptron_0_0_synth_1/design_1_perceptron_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_perceptron_0_0_utilization_synth.rpt -pb design_1_perceptron_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 17:02:44 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 11 10:52:00 2024...

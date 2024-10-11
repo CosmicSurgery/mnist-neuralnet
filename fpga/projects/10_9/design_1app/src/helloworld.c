@@ -78,6 +78,7 @@ int main()
 	UINTPTR AXI4_LITE_REGISTER_M_0 = 0x60000000;
 	UINTPTR IMAGE_LOADER = 0x40000000;
 	UINTPTR PERCEPTRON_0 = 0x42C00000;
+	UINTPTR PERCEPTRON_1 = 0x43C00000;
 	UINTPTR addr;
 
 	uint32_t read_value;
@@ -94,31 +95,38 @@ int main()
 
 	addr = AXI4_LITE_REGISTER_M_0;
 	print("Check AXI4_LITE_REGISTER_M_0\n\r");
+	write_value = 0xdeadbeef;
+	Xil_Out32(addr+(2*4), write_value);
+
 //	write_value = 0x00000001;
 //	Xil_Out32(addr, write_value);
 
 
 	addr = IMAGE_LOADER;
 	print("Check IMAGE_LOADER\n\r");
-	write_value = 0x30000000;
-	Xil_Out32(addr, write_value);
-
-//	for (int i=0; i<784;i++){
-//		write_value = i+1;
-//		Xil_Out32(addr, write_value);
-//		addr = addr+4;
-//	}
+	for (int i=0; i<784;i++){
+		write_value = 0x70000000;
+		Xil_Out32(addr, write_value);
+		addr = addr+4;
+	}
 
 	addr = PERCEPTRON_0;
 	printf("Check PERCEPTRON_0\n\r");
-	write_value = 0x00000001;
-	Xil_Out32(addr, write_value);
 
-//	for (int i=0; i<784;i++){
-//		write_value = i+1;
-//		Xil_Out32(addr, write_value);
-//		addr = addr+4;
-//	}
+	for (int i=0; i<784;i++){
+		write_value = 0x00000001;
+		Xil_Out32(addr, write_value);
+		addr = addr+4;
+	}
+
+	addr = PERCEPTRON_1;
+	printf("Check PERCEPTRON_1\n\r");
+
+	for (int i=0; i<784;i++){
+		write_value = 0x04000000;
+		Xil_Out32(addr, write_value);
+		addr = addr+4;
+	}
 
 	printf("Test start functionality, and expected result\n\r");
 

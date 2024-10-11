@@ -1,0 +1,2 @@
+# This file is automatically written.  Do not modify.
+proc gen_USERPARAMETER_input_size_ENABLEMENT {input_size } {expr $input_size <= 1024}

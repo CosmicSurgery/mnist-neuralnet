@@ -1,6 +1,688 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 15:53:47 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_axi4_lite_layer_conn_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_axi4_lite_layer_conn_0_0 (xilinx.com:user:axi4_lite_layer_connector:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 15:53:42 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi4_lite_layer_conn_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi4_lite_layer_conn_0_0 (xilinx.com:user:axi4_lite_layer_connector:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 10:25:18 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_2_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 10:25:17 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 10:25:05 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 10:25:03 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_image_loader_module_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_image_loader_module_0_0 (xilinx.com:user:image_loader_module:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 10:21:42 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_perceptron_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_perceptron_0_1 (xilinx.com:user:perceptron:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 10:21:42 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_perceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_perceptron_0_0 (xilinx.com:user:perceptron:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 10:21:40 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_perceptron_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_perceptron_0_1 (xilinx.com:user:perceptron:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 10:21:40 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_perceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_perceptron_0_0 (xilinx.com:user:perceptron:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 10:12:08 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_perceptron_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_2_perceptron_0_1 (xilinx.com:user:perceptron:1.0) from (Rev. 15) to (Rev. 16)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+Parameter 'addressWidth' is no longer present on the upgraded IP 'design_2_perceptron_0_1', and cannot be set to '10'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:perceptron:1.0 -user_name design_2_perceptron_0_1
+set_property -dict "\
+  CONFIG.Component_Name {design_2_perceptron_0_1} \
+  CONFIG.activation {relu} \
+  CONFIG.input_size {18} \
+  CONFIG.s_axi.ADDR_WIDTH {12} \
+  CONFIG.s_axi.ARUSER_WIDTH {0} \
+  CONFIG.s_axi.AWUSER_WIDTH {0} \
+  CONFIG.s_axi.BUSER_WIDTH {0} \
+  CONFIG.s_axi.CLK_DOMAIN {design_2_M02_ACLK_0} \
+  CONFIG.s_axi.DATA_WIDTH {32} \
+  CONFIG.s_axi.FREQ_HZ {100000000} \
+  CONFIG.s_axi.HAS_BRESP {1} \
+  CONFIG.s_axi.HAS_BURST {0} \
+  CONFIG.s_axi.HAS_CACHE {0} \
+  CONFIG.s_axi.HAS_LOCK {0} \
+  CONFIG.s_axi.HAS_PROT {1} \
+  CONFIG.s_axi.HAS_QOS {0} \
+  CONFIG.s_axi.HAS_REGION {0} \
+  CONFIG.s_axi.HAS_RRESP {1} \
+  CONFIG.s_axi.HAS_WSTRB {1} \
+  CONFIG.s_axi.ID_WIDTH {0} \
+  CONFIG.s_axi.INSERT_VIP {0} \
+  CONFIG.s_axi.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi.NUM_READ_THREADS {1} \
+  CONFIG.s_axi.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi.PHASE {0.000} \
+  CONFIG.s_axi.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi.RUSER_WIDTH {0} \
+  CONFIG.s_axi.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi.WUSER_WIDTH {0} \
+  CONFIG.s_axi_aclk.ASSOCIATED_BUSIF {x:s_axi} \
+  CONFIG.s_axi_aclk.ASSOCIATED_RESET {s_axi_aresetn} \
+  CONFIG.s_axi_aclk.CLK_DOMAIN {design_2_M02_ACLK_0} \
+  CONFIG.s_axi_aclk.FREQ_HZ {100000000} \
+  CONFIG.s_axi_aclk.INSERT_VIP {0} \
+  CONFIG.s_axi_aclk.PHASE {0.000} \
+  CONFIG.s_axi_aresetn.INSERT_VIP {0} \
+  CONFIG.s_axi_aresetn.POLARITY {ACTIVE_LOW} \
+  CONFIG.x.CLK_DOMAIN {design_2_M02_ACLK_0} \
+  CONFIG.x.FREQ_HZ {100000000} \
+  CONFIG.x.HAS_TKEEP {0} \
+  CONFIG.x.HAS_TLAST {0} \
+  CONFIG.x.HAS_TREADY {1} \
+  CONFIG.x.HAS_TSTRB {0} \
+  CONFIG.x.INSERT_VIP {0} \
+  CONFIG.x.LAYERED_METADATA {undef} \
+  CONFIG.x.PHASE {0.000} \
+  CONFIG.x.TDATA_NUM_BYTES {4} \
+  CONFIG.x.TDEST_WIDTH {0} \
+  CONFIG.x.TID_WIDTH {0} \
+  CONFIG.x.TUSER_WIDTH {0} " [get_ips design_2_perceptron_0_1]
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 10:12:08 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_perceptron_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_2_perceptron_0_0 (xilinx.com:user:perceptron:1.0) from (Rev. 15) to (Rev. 16)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+Parameter 'addressWidth' is no longer present on the upgraded IP 'design_2_perceptron_0_0', and cannot be set to '10'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:perceptron:1.0 -user_name design_2_perceptron_0_0
+set_property -dict "\
+  CONFIG.Component_Name {design_2_perceptron_0_0} \
+  CONFIG.activation {relu} \
+  CONFIG.input_size {784} \
+  CONFIG.s_axi.ADDR_WIDTH {12} \
+  CONFIG.s_axi.ARUSER_WIDTH {0} \
+  CONFIG.s_axi.AWUSER_WIDTH {0} \
+  CONFIG.s_axi.BUSER_WIDTH {0} \
+  CONFIG.s_axi.CLK_DOMAIN {design_2_M02_ACLK_0} \
+  CONFIG.s_axi.DATA_WIDTH {32} \
+  CONFIG.s_axi.FREQ_HZ {100000000} \
+  CONFIG.s_axi.HAS_BRESP {1} \
+  CONFIG.s_axi.HAS_BURST {0} \
+  CONFIG.s_axi.HAS_CACHE {0} \
+  CONFIG.s_axi.HAS_LOCK {0} \
+  CONFIG.s_axi.HAS_PROT {1} \
+  CONFIG.s_axi.HAS_QOS {0} \
+  CONFIG.s_axi.HAS_REGION {0} \
+  CONFIG.s_axi.HAS_RRESP {1} \
+  CONFIG.s_axi.HAS_WSTRB {1} \
+  CONFIG.s_axi.ID_WIDTH {0} \
+  CONFIG.s_axi.INSERT_VIP {0} \
+  CONFIG.s_axi.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi.NUM_READ_THREADS {1} \
+  CONFIG.s_axi.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi.PHASE {0.000} \
+  CONFIG.s_axi.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi.RUSER_WIDTH {0} \
+  CONFIG.s_axi.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi.WUSER_WIDTH {0} \
+  CONFIG.s_axi_aclk.ASSOCIATED_BUSIF {x:s_axi} \
+  CONFIG.s_axi_aclk.ASSOCIATED_RESET {s_axi_aresetn} \
+  CONFIG.s_axi_aclk.CLK_DOMAIN {design_2_M02_ACLK_0} \
+  CONFIG.s_axi_aclk.FREQ_HZ {100000000} \
+  CONFIG.s_axi_aclk.INSERT_VIP {0} \
+  CONFIG.s_axi_aclk.PHASE {0.000} \
+  CONFIG.s_axi_aresetn.INSERT_VIP {0} \
+  CONFIG.s_axi_aresetn.POLARITY {ACTIVE_LOW} \
+  CONFIG.x.CLK_DOMAIN {design_2_M02_ACLK_0} \
+  CONFIG.x.FREQ_HZ {100000000} \
+  CONFIG.x.HAS_TKEEP {0} \
+  CONFIG.x.HAS_TLAST {0} \
+  CONFIG.x.HAS_TREADY {1} \
+  CONFIG.x.HAS_TSTRB {0} \
+  CONFIG.x.INSERT_VIP {0} \
+  CONFIG.x.LAYERED_METADATA {undef} \
+  CONFIG.x.PHASE {0.000} \
+  CONFIG.x.TDATA_NUM_BYTES {4} \
+  CONFIG.x.TDEST_WIDTH {0} \
+  CONFIG.x.TID_WIDTH {0} \
+  CONFIG.x.TUSER_WIDTH {0} " [get_ips design_2_perceptron_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 10:12:05 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_perceptron_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_perceptron_0_1 (xilinx.com:user:perceptron:1.0) from (Rev. 15) to (Rev. 16)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+Parameter 'addressWidth' is no longer present on the upgraded IP 'design_1_perceptron_0_1', and cannot be set to '10'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:perceptron:1.0 -user_name design_1_perceptron_0_1
+set_property -dict "\
+  CONFIG.Component_Name {design_1_perceptron_0_1} \
+  CONFIG.activation {relu} \
+  CONFIG.input_size {784} \
+  CONFIG.s_axi.ADDR_WIDTH {12} \
+  CONFIG.s_axi.ARUSER_WIDTH {0} \
+  CONFIG.s_axi.AWUSER_WIDTH {0} \
+  CONFIG.s_axi.BUSER_WIDTH {0} \
+  CONFIG.s_axi.CLK_DOMAIN {} \
+  CONFIG.s_axi.DATA_WIDTH {32} \
+  CONFIG.s_axi.FREQ_HZ {100000000} \
+  CONFIG.s_axi.HAS_BRESP {1} \
+  CONFIG.s_axi.HAS_BURST {0} \
+  CONFIG.s_axi.HAS_CACHE {0} \
+  CONFIG.s_axi.HAS_LOCK {0} \
+  CONFIG.s_axi.HAS_PROT {1} \
+  CONFIG.s_axi.HAS_QOS {0} \
+  CONFIG.s_axi.HAS_REGION {0} \
+  CONFIG.s_axi.HAS_RRESP {1} \
+  CONFIG.s_axi.HAS_WSTRB {1} \
+  CONFIG.s_axi.ID_WIDTH {0} \
+  CONFIG.s_axi.INSERT_VIP {0} \
+  CONFIG.s_axi.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi.NUM_READ_THREADS {1} \
+  CONFIG.s_axi.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi.PHASE {0.000} \
+  CONFIG.s_axi.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi.RUSER_WIDTH {0} \
+  CONFIG.s_axi.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi.WUSER_WIDTH {0} \
+  CONFIG.s_axi_aclk.ASSOCIATED_BUSIF {x:s_axi} \
+  CONFIG.s_axi_aclk.ASSOCIATED_RESET {s_axi_aresetn} \
+  CONFIG.s_axi_aclk.CLK_DOMAIN {} \
+  CONFIG.s_axi_aclk.FREQ_HZ {100000000} \
+  CONFIG.s_axi_aclk.INSERT_VIP {0} \
+  CONFIG.s_axi_aclk.PHASE {0.000} \
+  CONFIG.s_axi_aresetn.INSERT_VIP {0} \
+  CONFIG.s_axi_aresetn.POLARITY {ACTIVE_LOW} \
+  CONFIG.x.CLK_DOMAIN {} \
+  CONFIG.x.FREQ_HZ {100000000} \
+  CONFIG.x.HAS_TKEEP {0} \
+  CONFIG.x.HAS_TLAST {0} \
+  CONFIG.x.HAS_TREADY {1} \
+  CONFIG.x.HAS_TSTRB {0} \
+  CONFIG.x.INSERT_VIP {0} \
+  CONFIG.x.LAYERED_METADATA {undef} \
+  CONFIG.x.PHASE {0.000} \
+  CONFIG.x.TDATA_NUM_BYTES {4} \
+  CONFIG.x.TDEST_WIDTH {0} \
+  CONFIG.x.TID_WIDTH {0} \
+  CONFIG.x.TUSER_WIDTH {0} " [get_ips design_1_perceptron_0_1]
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 11 10:12:05 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_perceptron_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_perceptron_0_0 (xilinx.com:user:perceptron:1.0) from (Rev. 15) to (Rev. 16)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+Parameter 'addressWidth' is no longer present on the upgraded IP 'design_1_perceptron_0_0', and cannot be set to '10'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:perceptron:1.0 -user_name design_1_perceptron_0_0
+set_property -dict "\
+  CONFIG.Component_Name {design_1_perceptron_0_0} \
+  CONFIG.activation {relu} \
+  CONFIG.input_size {784} \
+  CONFIG.s_axi.ADDR_WIDTH {12} \
+  CONFIG.s_axi.ARUSER_WIDTH {0} \
+  CONFIG.s_axi.AWUSER_WIDTH {0} \
+  CONFIG.s_axi.BUSER_WIDTH {0} \
+  CONFIG.s_axi.CLK_DOMAIN {} \
+  CONFIG.s_axi.DATA_WIDTH {32} \
+  CONFIG.s_axi.FREQ_HZ {100000000} \
+  CONFIG.s_axi.HAS_BRESP {1} \
+  CONFIG.s_axi.HAS_BURST {0} \
+  CONFIG.s_axi.HAS_CACHE {0} \
+  CONFIG.s_axi.HAS_LOCK {0} \
+  CONFIG.s_axi.HAS_PROT {1} \
+  CONFIG.s_axi.HAS_QOS {0} \
+  CONFIG.s_axi.HAS_REGION {0} \
+  CONFIG.s_axi.HAS_RRESP {1} \
+  CONFIG.s_axi.HAS_WSTRB {1} \
+  CONFIG.s_axi.ID_WIDTH {0} \
+  CONFIG.s_axi.INSERT_VIP {0} \
+  CONFIG.s_axi.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi.NUM_READ_THREADS {1} \
+  CONFIG.s_axi.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi.PHASE {0.000} \
+  CONFIG.s_axi.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi.RUSER_WIDTH {0} \
+  CONFIG.s_axi.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi.WUSER_WIDTH {0} \
+  CONFIG.s_axi_aclk.ASSOCIATED_BUSIF {x:s_axi} \
+  CONFIG.s_axi_aclk.ASSOCIATED_RESET {s_axi_aresetn} \
+  CONFIG.s_axi_aclk.CLK_DOMAIN {} \
+  CONFIG.s_axi_aclk.FREQ_HZ {100000000} \
+  CONFIG.s_axi_aclk.INSERT_VIP {0} \
+  CONFIG.s_axi_aclk.PHASE {0.000} \
+  CONFIG.s_axi_aresetn.INSERT_VIP {0} \
+  CONFIG.s_axi_aresetn.POLARITY {ACTIVE_LOW} \
+  CONFIG.x.CLK_DOMAIN {} \
+  CONFIG.x.FREQ_HZ {100000000} \
+  CONFIG.x.HAS_TKEEP {0} \
+  CONFIG.x.HAS_TLAST {0} \
+  CONFIG.x.HAS_TREADY {1} \
+  CONFIG.x.HAS_TSTRB {0} \
+  CONFIG.x.INSERT_VIP {0} \
+  CONFIG.x.LAYERED_METADATA {undef} \
+  CONFIG.x.PHASE {0.000} \
+  CONFIG.x.TDATA_NUM_BYTES {4} \
+  CONFIG.x.TDEST_WIDTH {0} \
+  CONFIG.x.TID_WIDTH {0} \
+  CONFIG.x.TUSER_WIDTH {0} " [get_ips design_1_perceptron_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Oct 10 16:41:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_perceptron_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_perceptron_0_1 (xilinx.com:user:perceptron:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Oct 10 16:41:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_perceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_perceptron_0_0 (xilinx.com:user:perceptron:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Oct 10 16:41:52 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_perceptron_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_perceptron_0_1 (xilinx.com:user:perceptron:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Oct 10 16:41:52 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_perceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_perceptron_0_0 (xilinx.com:user:perceptron:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
 | Date         : Wed Oct  9 16:58:16 2024
 | Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

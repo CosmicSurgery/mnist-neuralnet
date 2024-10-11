@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:perceptron:1.0
-// IP Revision: 14
+// IP Revision: 17
 
 `timescale 1ns/1ps
 
@@ -146,7 +146,8 @@ output wire [31 : 0] a_tdata;
 output wire done;
 
   perceptron #(
-    .activation("relu")
+    .activation("relu"),
+    .input_size(784)
   ) inst (
     .start(start),
     .s_axi_araddr(s_axi_araddr),

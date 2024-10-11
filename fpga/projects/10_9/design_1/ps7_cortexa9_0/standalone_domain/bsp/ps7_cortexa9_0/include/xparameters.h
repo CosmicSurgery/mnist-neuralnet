@@ -233,6 +233,11 @@
 #define XPAR_PS7_SLCR_0_S_AXI_HIGHADDR 0xF8000FFF
 
 
+/* Definitions for peripheral PERCEPTRON_1 */
+#define XPAR_PERCEPTRON_1_BASEADDR 0x43C00000
+#define XPAR_PERCEPTRON_1_HIGHADDR 0x43C0FFFF
+
+
 /******************************************************************/
 
 /* Definitions for driver GPIO */

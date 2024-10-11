@@ -822,8 +822,8 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>16</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-09-24T17:21:41Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>17</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-10-11T17:24:49Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@47e63a8a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
@@ -1032,6 +1032,39 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1adabdf2_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@c62f283_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@38c284c7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4372fcb6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31a15534_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@753195c9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cf58c87_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e4a3908_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79225406_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cc7b62a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@561a89f6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5832ee63_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@196ae429_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70d4503_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22d2595_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74717d27_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fa4515f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@603bc6de_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@445c9976_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@722a230f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78a510f4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bc90c1a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55bd4fa7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73c5381_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26c0f5ae_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1688190_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5902e113_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@137bb5ce_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46cafe36_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5eb2cf81_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53c7a41d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a8011c9_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78c92973_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b26f71e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59365732_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67d01cb3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

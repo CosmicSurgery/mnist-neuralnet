@@ -23,20 +23,106 @@
       <Properties Property="CONTROL.TRIGGER_POSITION" value="10"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
+    <Object name="design_1_i/ila_1" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
     <Object name="design_1_i/perceptron_0/inst/your_instance_name" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="10"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="design_1_i/perceptron_1/inst/your_instance_name" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="design_1_i/axi4_lite_layer_conn_0_a_tvalid" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/image_loader_module_0_x_tdata[31:0]" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/image_loader_module_0_x_tvalid" gui_info="Trigger Setup=1"/>
     <Object name="design_1_i/perceptron_0/inst/start" gui_info="Trigger Setup=1"/>
     <Object name="design_1_i/perceptron_0/inst/x_tready" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/perceptron_0/inst/x_tvalid_del" gui_info="Trigger Setup=2"/>
     <Object name="design_1_i/perceptron_0_x_tready" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/perceptron_1/inst/x_tready" gui_info="Trigger Setup=1"/>
+    <Object name="design_1_i/perceptron_1/inst/x_tvalid_del" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/perceptron_1_x_tready" gui_info="Trigger Setup=1"/>
   </ObjectList>
   <probeset name="hw project" active="false">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[31]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[30]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[29]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[28]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[27]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[26]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[25]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[24]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[23]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[22]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[21]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[20]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[19]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[18]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[17]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[16]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[15]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[14]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[13]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[12]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[11]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[10]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[9]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[8]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[7]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[6]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[5]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[4]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[3]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[2]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[1]"/>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tdata[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/axi4_lite_layer_conn_0_a_tvalid"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
@@ -118,7 +204,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe0[63:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -202,7 +288,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe6[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -223,7 +309,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe8[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -265,7 +351,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe1[63:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -349,7 +435,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe2[31:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -401,7 +487,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe4[31:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -453,7 +539,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe3[31:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -505,7 +591,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe5[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -526,7 +612,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe7[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -558,6 +644,435 @@
       </probeOptions>
       <nets>
         <net name="design_1_i/perceptron_0_x_tready"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/perceptron_1/inst/P[63]"/>
+        <net name="design_1_i/perceptron_1/inst/P[62]"/>
+        <net name="design_1_i/perceptron_1/inst/P[61]"/>
+        <net name="design_1_i/perceptron_1/inst/P[60]"/>
+        <net name="design_1_i/perceptron_1/inst/P[59]"/>
+        <net name="design_1_i/perceptron_1/inst/P[58]"/>
+        <net name="design_1_i/perceptron_1/inst/P[57]"/>
+        <net name="design_1_i/perceptron_1/inst/P[56]"/>
+        <net name="design_1_i/perceptron_1/inst/P[55]"/>
+        <net name="design_1_i/perceptron_1/inst/P[54]"/>
+        <net name="design_1_i/perceptron_1/inst/P[53]"/>
+        <net name="design_1_i/perceptron_1/inst/P[52]"/>
+        <net name="design_1_i/perceptron_1/inst/P[51]"/>
+        <net name="design_1_i/perceptron_1/inst/P[50]"/>
+        <net name="design_1_i/perceptron_1/inst/P[49]"/>
+        <net name="design_1_i/perceptron_1/inst/P[48]"/>
+        <net name="design_1_i/perceptron_1/inst/P[47]"/>
+        <net name="design_1_i/perceptron_1/inst/P[46]"/>
+        <net name="design_1_i/perceptron_1/inst/P[45]"/>
+        <net name="design_1_i/perceptron_1/inst/P[44]"/>
+        <net name="design_1_i/perceptron_1/inst/P[43]"/>
+        <net name="design_1_i/perceptron_1/inst/P[42]"/>
+        <net name="design_1_i/perceptron_1/inst/P[41]"/>
+        <net name="design_1_i/perceptron_1/inst/P[40]"/>
+        <net name="design_1_i/perceptron_1/inst/P[39]"/>
+        <net name="design_1_i/perceptron_1/inst/P[38]"/>
+        <net name="design_1_i/perceptron_1/inst/P[37]"/>
+        <net name="design_1_i/perceptron_1/inst/P[36]"/>
+        <net name="design_1_i/perceptron_1/inst/P[35]"/>
+        <net name="design_1_i/perceptron_1/inst/P[34]"/>
+        <net name="design_1_i/perceptron_1/inst/P[33]"/>
+        <net name="design_1_i/perceptron_1/inst/P[32]"/>
+        <net name="design_1_i/perceptron_1/inst/P[31]"/>
+        <net name="design_1_i/perceptron_1/inst/P[30]"/>
+        <net name="design_1_i/perceptron_1/inst/P[29]"/>
+        <net name="design_1_i/perceptron_1/inst/P[28]"/>
+        <net name="design_1_i/perceptron_1/inst/P[27]"/>
+        <net name="design_1_i/perceptron_1/inst/P[26]"/>
+        <net name="design_1_i/perceptron_1/inst/P[25]"/>
+        <net name="design_1_i/perceptron_1/inst/P[24]"/>
+        <net name="design_1_i/perceptron_1/inst/P[23]"/>
+        <net name="design_1_i/perceptron_1/inst/P[22]"/>
+        <net name="design_1_i/perceptron_1/inst/P[21]"/>
+        <net name="design_1_i/perceptron_1/inst/P[20]"/>
+        <net name="design_1_i/perceptron_1/inst/P[19]"/>
+        <net name="design_1_i/perceptron_1/inst/P[18]"/>
+        <net name="design_1_i/perceptron_1/inst/P[17]"/>
+        <net name="design_1_i/perceptron_1/inst/P[16]"/>
+        <net name="design_1_i/perceptron_1/inst/P[15]"/>
+        <net name="design_1_i/perceptron_1/inst/P[14]"/>
+        <net name="design_1_i/perceptron_1/inst/P[13]"/>
+        <net name="design_1_i/perceptron_1/inst/P[12]"/>
+        <net name="design_1_i/perceptron_1/inst/P[11]"/>
+        <net name="design_1_i/perceptron_1/inst/P[10]"/>
+        <net name="design_1_i/perceptron_1/inst/P[9]"/>
+        <net name="design_1_i/perceptron_1/inst/P[8]"/>
+        <net name="design_1_i/perceptron_1/inst/P[7]"/>
+        <net name="design_1_i/perceptron_1/inst/P[6]"/>
+        <net name="design_1_i/perceptron_1/inst/P[5]"/>
+        <net name="design_1_i/perceptron_1/inst/P[4]"/>
+        <net name="design_1_i/perceptron_1/inst/P[3]"/>
+        <net name="design_1_i/perceptron_1/inst/P[2]"/>
+        <net name="design_1_i/perceptron_1/inst/P[1]"/>
+        <net name="design_1_i/perceptron_1/inst/P[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/perceptron_1/inst/pos_edge_start"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/perceptron_1/inst/start"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/perceptron_1/inst/sum[63]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[62]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[61]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[60]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[59]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[58]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[57]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[56]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[55]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[54]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[53]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[52]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[51]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[50]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[49]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[48]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[47]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[46]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[45]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[44]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[43]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[42]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[41]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[40]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[39]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[38]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[37]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[36]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[35]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[34]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[33]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[32]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[31]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[30]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[29]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[28]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[27]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[26]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[25]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[24]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[23]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[22]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[21]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[20]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[19]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[18]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[17]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[16]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[15]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[14]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[13]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[12]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[11]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[10]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[9]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[8]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[7]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[6]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[5]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[4]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[3]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[2]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[1]"/>
+        <net name="design_1_i/perceptron_1/inst/sum[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/perceptron_1/inst/wout[31]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[30]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[29]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[28]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[27]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[26]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[25]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[24]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[23]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[22]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[21]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[20]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[19]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[18]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[17]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[16]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[15]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[14]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[13]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[12]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[11]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[10]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[9]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[8]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[7]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[6]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[5]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[4]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[3]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[2]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[1]"/>
+        <net name="design_1_i/perceptron_1/inst/wout[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[31]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[30]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[29]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[28]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[27]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[26]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[25]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[24]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[23]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[22]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[21]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[20]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[19]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[18]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[17]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[16]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[15]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[14]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[13]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[12]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[11]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[10]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[9]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[8]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[7]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[6]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[5]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[4]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[3]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[2]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[1]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[31]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[30]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[29]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[28]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[27]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[26]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[25]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[24]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[23]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[22]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[21]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[20]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[19]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[18]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[17]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[16]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[15]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[14]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[13]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[12]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[11]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[10]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[9]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[8]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[7]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[6]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[5]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[4]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[3]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[2]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[1]"/>
+        <net name="design_1_i/perceptron_1/inst/x_tdata_del[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/perceptron_1/inst/x_tready"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/perceptron_1/inst/x_tvalid_del"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/perceptron_1_x_tready"/>
       </nets>
     </probe>
   </probeset>

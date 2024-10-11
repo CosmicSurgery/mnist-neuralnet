@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Wed Oct  9 17:59:17 2024
+| Date         : Fri Oct 11 16:01:49 2024
 | Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -178,12 +178,15 @@ Table of Contents
 | design_1_xbar_0                   |    1 |
 | design_1_processing_system7_0_0   |    1 |
 | design_1_proc_sys_reset_0_0       |    1 |
+| design_1_perceptron_0_1           |    1 |
 | design_1_perceptron_0_0           |    1 |
 | design_1_image_loader_module_0_0  |    1 |
+| design_1_ila_0_1                  |    1 |
 | design_1_ila_0_0                  |    1 |
 | design_1_axi_gpio_1_0             |    1 |
 | design_1_axi_gpio_0_0             |    1 |
 | design_1_axi4_lite_register_m_0_0 |    1 |
+| design_1_axi4_lite_layer_conn_0_0 |    1 |
 | design_1_auto_pc_0                |    1 |
 +-----------------------------------+------+
 
