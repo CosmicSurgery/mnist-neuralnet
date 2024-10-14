@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../source/perceptron/rtl/src/ila_0/sim/ila_0.v" \
+"../../../../../../source/perceptron/rtl/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../../../source/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v" \
+"../../../../../../source/perceptron/rtl/perceptron.v" \
+"../../../../../../source/perceptron/tb/perceptron_full_selfcheck_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

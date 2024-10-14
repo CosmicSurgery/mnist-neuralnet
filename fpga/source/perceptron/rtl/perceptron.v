@@ -45,9 +45,8 @@ module perceptron #(activation="relu", input_size=784)(
     input wire s_axi_aclk,
     input [31:0] x_tdata, // un-weighted input value
     input x_tvalid,
-    output reg x_tready,
+    output wire x_tready,
     input [31:0] bias,
-    input biasValid,
     output reg [31:0] a_tdata, // result of the activation function and output of the perceptron
     output reg done
     );
@@ -64,9 +63,11 @@ module perceptron #(activation="relu", input_size=784)(
     wire pos_edge_start;
     reg [31:0] x_tdata_del;
     reg x_tvalid_del;
+    reg P_valid;
     wire [63:0]P;
     
     assign pos_edge_start = start & !start_reg;
+    assign x_tready = ~done;
     
     dual_port_AXI_Native_bram WEIGHT_MEMORY (
     .BRAM_PORTB_addr    (r_addr),
@@ -121,8 +122,7 @@ module perceptron #(activation="relu", input_size=784)(
 );
     
 
-// test
-        
+    // Start process
     always@(posedge s_axi_aclk) begin
         if (!s_axi_aresetn)
             start_reg <= 0;
@@ -130,16 +130,16 @@ module perceptron #(activation="relu", input_size=784)(
             start_reg <= start;
     end
     
-    
+    // main accumulation process
     always @(posedge s_axi_aclk) begin
         if (!s_axi_aresetn) begin
             sum <= 64'd0;
-            x_tready <=0;
-            mul <=0;
+        end
+        else if (done) begin
+            sum <= 0;
         end
         else begin
-            if (pos_edge_start) begin
-                x_tready <=1;
+            if (x_tvalid & ~x_tvalid_del) begin
                 if (bias[31] == 1)
                 begin
                     sum[63:59] <= {5{1'b1}};   // Formatting with two's compliment 
@@ -147,27 +147,30 @@ module perceptron #(activation="relu", input_size=784)(
                 sum[58:27] <= bias;
             end
             else 
-            if (x_tvalid_del & x_tready & r_addr < input_size) begin
-//                mul <= $signed(wout) * $signed(x_tdata_del); // come back and see if I need to instantiate a DSP48
-//                sum <= mul + sum;
+            // Two clock-cycle delay between r_addr and P
+            if (P_valid) begin
                 sum <= P +sum;
                 // make sure to come back and check for overflow.
             end
         end
     end
     
+    // data/valid delay process
     always @(posedge s_axi_aclk) begin
         x_tdata_del <= x_tdata;
-        x_tvalid_del <= x_tvalid;
+        x_tvalid_del <= x_tvalid & x_tready;
+        P_valid <= x_tvalid_del;
     end
     
+    // output process
     always @(posedge s_axi_aclk)
     begin
-        if (!s_axi_aresetn) 
+        if (!s_axi_aresetn) begin
             done <=0;
-        else if (pos_edge_start) 
+        end
+        else if (x_tvalid) 
             done <=0;
-        else if (r_addr == input_size) begin
+        else if (r_addr == input_size & ~P_valid) begin
             a_tdata <= sum[63-5:27];
             done <=1;
             if (activation == "relu") begin
@@ -182,7 +185,9 @@ module perceptron #(activation="relu", input_size=784)(
     always @(posedge s_axi_aclk) begin
         if(!s_axi_aresetn)
             r_addr <= 0;
-        else
+        else if (done) begin
+            r_addr <= 0;
+        end else
         if(x_tvalid & x_tready & r_addr <= input_size-1) begin
             r_addr <= r_addr + 1;
         end
