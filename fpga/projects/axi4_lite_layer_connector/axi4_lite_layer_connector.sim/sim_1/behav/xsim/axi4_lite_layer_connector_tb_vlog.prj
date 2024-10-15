@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../source/axi4_lite_layer_connector/rtl/axi4_lite_layer_connector.v" \
+"../../../../../../source/axi4_lite_layer_connector/tb/axi4_lite_layer_connector_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

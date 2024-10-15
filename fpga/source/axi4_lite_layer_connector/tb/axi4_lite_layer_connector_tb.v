@@ -3,7 +3,6 @@
 module axi4_lite_layer_connector_tb ();
 
     axi4_lite_layer_connector uut(
-    .start(start),
     .clk(clk),
     .a0(a[0]),
     .a1(a[1]),
@@ -76,7 +75,7 @@ module axi4_lite_layer_connector_tb ();
     
     initial begin
         clk = 0;
-        forever #1 clk = ~clk; // 100MHz clock
+        forever #5 clk = ~clk; // 100MHz clock
     end
     
     initial begin
@@ -89,6 +88,19 @@ module axi4_lite_layer_connector_tb ();
         resetn <=1;
         repeat (10) @(posedge clk);
         done <=1;
+        
+        repeat (10) @(posedge clk);
+        while (a_tvalid) repeat (10) @(posedge clk);
+        #1 done <= 0;
+        
+        repeat (10) @(posedge clk);
+        done <=1;
+        
+        repeat (10) @(posedge clk);
+        while (a_tvalid) repeat (10) @(posedge clk);
+        
+        
+        #300 $finish;
     
     end
         
