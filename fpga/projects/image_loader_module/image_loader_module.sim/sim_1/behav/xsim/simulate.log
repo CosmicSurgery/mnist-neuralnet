@@ -3192,12 +3192,4 @@ blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
-blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
-blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
-blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
-blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
-blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
-blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
-blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
-blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
-$finish called at time : 48175 ns : File "C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/tb/image_loader_module_tb.v" Line 128
+blk_mem_gen_v8_4

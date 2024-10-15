@@ -92,7 +92,7 @@ module image_loader_module_tb();
     // Apply reset
     repeat (30) @(posedge s_axi_aclk);
     s_axi_aresetn = 1;
-    x_tready = 0;
+    x_tready = 1;
     
 
     axi_addr = 'd0;

@@ -50,7 +50,6 @@ reg [4:0]addr;				// Need 18 addresses, 5 bits
 reg status;
 wire posedge_done;
 reg done_reg;
-reg hold;
 assign posedge_done = done & ~done_reg;
 
 
@@ -62,7 +61,6 @@ always @(posedge clk or negedge resetn) begin
         a_tvalid <=0;
         a_tdata <= 32'd0;
         status <= 0;
-        hold <= 1;
 	end
 	else if (posedge_done) begin
         a[0] <= a0;
@@ -84,30 +82,26 @@ always @(posedge clk or negedge resetn) begin
         a[16] <= a16;
         a[17] <= a17;
         status <= 1;
-        hold <= 0;
     end
-	else if (~hold) begin
-        if (status) begin
-           
-           if (a_tready & addr == 5'd0) begin
-               a_tvalid <= 1;
-               addr <= addr + 1;
-               status <= 0;
-           end else if (addr == 5'd0) begin
-               a_tvalid <= 1;
-               status <= 1;
-           end else begin
-               addr <= 0;
-               status <= 1;
-           end
-        end	   
-        else if (a_tready & addr < 'd18) begin
-            a_tvalid <= 1;
-            a_tdata <= a[addr];
-            addr <= addr + 1;
-        end
-        else if (addr == 'd18)
-            a_tvalid <= 0;
+    if (status) begin
+       if (a_tready & addr == 5'd0) begin
+           a_tvalid <= 1;
+           addr <= addr + 1;
+           status <= 0;
+       end else if (addr == 5'd0) begin
+           a_tvalid <= 1;
+           status <= 1;
+       end else begin
+           addr <= 0;
+           status <= 1;
+       end
+    end	   
+    else if (a_tvalid & a_tready & addr < 'd18) begin
+        a_tdata <= a[addr];
+        addr <= addr + 1;
+    end
+    else if (addr == 'd18) begin
+        a_tvalid <= 0;
     end
 end
 
