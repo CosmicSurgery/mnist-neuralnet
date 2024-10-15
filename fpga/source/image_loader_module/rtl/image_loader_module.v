@@ -31,10 +31,10 @@ module image_loader_module (
 
     reg [9:0] r_addr;
     reg start_reg;
-    reg x_tvalid_del;
     wire pos_edge_start;
+    reg status;
     
-    assign pos_edge_start = start & !start_reg & x_tready;
+    assign pos_edge_start = (start & !start_reg) | status;
 
 
 
@@ -69,32 +69,40 @@ dual_port_AXI_Native_bram IMG_LOADER (
     );   
 
     always @(posedge s_axi_aclk) begin
-        if (!s_axi_aresetn)
+        if (!s_axi_aresetn) begin
             start_reg <= 0;
-        if (start & x_tready)
+        end
+        else
             start_reg <= start;
     end
     
     always @(posedge s_axi_aclk) begin
-        x_tvalid <= x_tvalid_del;
         if(!s_axi_aresetn) begin
             r_addr <= 10'd0;
             x_tvalid <= 0;
-            x_tvalid_del <=0;
+            status <= 0;
         end
         else
-            if (pos_edge_start) begin
-                r_addr <= 10'd0;
-                x_tvalid_del <= 1; // x_tvalid should go high after a number of clock cycles equal to the BRAM's delay (which is 1).
-            end
-            else
-            if(x_tvalid_del & x_tready & (r_addr <= 10'd783)) begin
-                x_tvalid <= x_tvalid_del;
+        if (pos_edge_start) begin
+            if(x_tready & (r_addr == 10'd0)) begin
                 r_addr <= r_addr + 1;
+                x_tvalid <= 1;
+                status <= 0;
             end
-            else if (r_addr == 10'd784) begin
-                x_tvalid <= 0;
+            else if (r_addr == 10'd0) begin 
+                x_tvalid <= 1;
+                status <= 1;
+            end else begin
+                r_addr <= 10'd0;
+                status <= 1;
             end
+        end
+        else if (x_tvalid & x_tready & (r_addr <= 10'd783)) begin
+            r_addr <= r_addr + 1;
+        end
+        else if (r_addr == 10'd784) begin
+            x_tvalid <= 0;
+        end
     end
 
     endmodule

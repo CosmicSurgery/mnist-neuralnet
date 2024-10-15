@@ -1,0 +1,16 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Block Memory Generator module perceptron_full_selfcheck_tb.uut.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_4 collision detected at time: 305000, Instance: perceptron_full_selfcheck_tb.uut.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+
+Simulation: PASSED
+
+$finish called at time : 55485 ns : File "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_full_selfcheck_tb.v" Line 158

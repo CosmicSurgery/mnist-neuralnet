@@ -1,0 +1,10 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/git_repos/mnist_neuralnet/fpga/projects/image_loader_module/image_loader_module.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/source/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v,1727117460,verilog,,C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl/image_loader_module.v,,dual_port_AXI_Native_bram,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/rtl/image_loader_module.v,1729011497,verilog,,C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/tb/image_loader_module_tb.v,,image_loader_module,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/source/image_loader_module/tb/image_loader_module_tb.v,1729011677,verilog,,,,image_loader_module_tb,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd,1727237580,vhdl,,,,axi_bram_ctrl_0,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/blk_mem_gen_0/sim/blk_mem_gen_0.v,1726877957,verilog,,C:/git_repos/mnist_neuralnet/fpga/source/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v,,blk_mem_gen_0,,,,,,,,
