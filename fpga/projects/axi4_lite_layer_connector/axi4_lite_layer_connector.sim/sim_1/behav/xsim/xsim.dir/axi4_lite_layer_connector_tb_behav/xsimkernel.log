@@ -2,3 +2,6 @@ Running: xsim.dir/axi4_lite_layer_connector_tb_behav/xsimk.exe -simmode gui -wdb
 Design successfully loaded
 Design Loading Memory Usage: 6888 KB (Peak: 6888 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 7564 KB (Peak: 7564 KB)
+Simulation CPU Usage: 15 ms
