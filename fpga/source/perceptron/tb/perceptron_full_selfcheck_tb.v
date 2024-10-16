@@ -30,6 +30,7 @@ module perceptron_full_selfcheck_tb();
   reg x_tvalid;
   wire x_tready;
   reg [31:0] bias;
+  wire [31:0]a_tdata;
   
       // Instantiate the module
   perceptron uut (
@@ -113,7 +114,7 @@ initial begin
     expected_value = 0;
     for (i = 0; i<784; i = i +1)
     begin
-        axi_write(axi_addr, 1+i);
+        axi_write(axi_addr, 100000000 + 1+i);
         axi_addr = axi_addr + 32'd4;
         expected_value = expected_value + (1+i);
         @(posedge s_axi_aclk);

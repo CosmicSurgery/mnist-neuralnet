@@ -8,5 +8,4 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/s
 INFO: [VRFC 10-311] analyzing module perceptron
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_full_selfcheck_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module perceptron_full_selfcheck_tb
-INFO: [VRFC 10-2458] undeclared symbol a_tdata, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_full_selfcheck_tb.v:62]
-INFO: [VRFC 10-2458] undeclared symbol done, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_full_selfcheck_tb.v:63]
+INFO: [VRFC 10-2458] undeclared symbol done, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_full_selfcheck_tb.v:64]

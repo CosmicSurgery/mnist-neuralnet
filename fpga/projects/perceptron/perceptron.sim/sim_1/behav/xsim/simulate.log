@@ -5,12 +5,13 @@ blk_mem_gen_v8_4_4 collision detected at time: 305000, Instance: perceptron_full
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+Error read value 000000124105c208 does not equal expected value 0004b208
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
-blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+Error read value 000000124105c208 does not equal expected value 0004b208
 
-Simulation: PASSED
+Simulation: FAILED
 
-$finish called at time : 55485 ns : File "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_full_selfcheck_tb.v" Line 158
+$finish called at time : 55475 ns : File "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_full_selfcheck_tb.v" Line 159
