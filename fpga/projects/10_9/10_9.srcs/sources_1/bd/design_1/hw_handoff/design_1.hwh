@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 16 17:17:23 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 16 17:34:16 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:2.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -159,7 +159,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="2" FULLNAME="/axi4_lite_final_outp_0" HWVERSION="1.0" INSTANCE="axi4_lite_final_outp_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi4_lite_final_output" VLNV="xilinx.com:user:axi4_lite_final_output:1.0">
+    <MODULE COREREVISION="5" FULLNAME="/axi4_lite_final_outp_0" HWVERSION="1.0" INSTANCE="axi4_lite_final_outp_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi4_lite_final_output" VLNV="xilinx.com:user:axi4_lite_final_output:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="s_axil" NAME="reg0" RANGE="16" USAGE="register"/>
@@ -181,7 +181,7 @@
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axil_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi4_lite_final_outp_0_s_axil_awaddr">
+        <PORT DIR="I" LEFT="6" NAME="s_axil_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi4_lite_final_outp_0_s_axil_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M06_AXI_awaddr"/>
           </CONNECTIONS>
@@ -236,7 +236,7 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M06_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axil_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi4_lite_final_outp_0_s_axil_araddr">
+        <PORT DIR="I" LEFT="6" NAME="s_axil_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi4_lite_final_outp_0_s_axil_araddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M06_AXI_araddr"/>
           </CONNECTIONS>
@@ -412,7 +412,7 @@
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="ADDR_WIDTH" VALUE="4"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="7"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
@@ -463,7 +463,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="6" FULLNAME="/axi4_lite_layer_conn_0" HWVERSION="1.0" INSTANCE="axi4_lite_layer_conn_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi4_lite_layer_connector" VLNV="xilinx.com:user:axi4_lite_layer_connector:1.0">
+    <MODULE COREREVISION="7" FULLNAME="/axi4_lite_layer_conn_0" HWVERSION="1.0" INSTANCE="axi4_lite_layer_conn_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi4_lite_layer_connector" VLNV="xilinx.com:user:axi4_lite_layer_connector:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_axi4_lite_layer_conn_0_0"/>
@@ -10055,8 +10055,8 @@
         <PORT DIR="O" NAME="done" SIGIS="undef" SIGNAME="perceptron_1_done">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a0done"/>
-            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a2done"/>
             <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a1done"/>
+            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a2done"/>
             <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a3done"/>
             <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a4done"/>
             <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a5done"/>
@@ -10194,12 +10194,12 @@
             <CONNECTION INSTANCE="axi_gpio_1" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M04_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M05_ARESETN"/>
-            <CONNECTION INSTANCE="axi4_lite_layer_conn_0" PORT="resetn"/>
             <CONNECTION INSTANCE="image_loader_module_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="perceptron_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="perceptron_1" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="aresetn"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M06_ARESETN"/>
+            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="aresetn"/>
+            <CONNECTION INSTANCE="axi4_lite_layer_conn_0" PORT="resetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -11366,12 +11366,12 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M04_ACLK"/>
             <CONNECTION INSTANCE="ila_1" PORT="clk"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M05_ACLK"/>
-            <CONNECTION INSTANCE="axi4_lite_layer_conn_0" PORT="clk"/>
             <CONNECTION INSTANCE="image_loader_module_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="perceptron_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="perceptron_1" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="aclk"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M06_ACLK"/>
+            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="aclk"/>
+            <CONNECTION INSTANCE="axi4_lite_layer_conn_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -11679,15 +11679,15 @@
       <PORTS>
         <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_8"/>
-            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_9"/>
-            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_5"/>
-            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_3"/>
-            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_2"/>
             <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_1"/>
+            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_2"/>
+            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_3"/>
             <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_4"/>
+            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_5"/>
             <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_6"/>
             <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_7"/>
+            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_8"/>
+            <CONNECTION INSTANCE="axi4_lite_final_outp_0" PORT="a_2_9"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

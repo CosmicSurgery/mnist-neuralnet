@@ -79,6 +79,7 @@ int main()
 	UINTPTR IMAGE_LOADER = 0x40000000;
 	UINTPTR PERCEPTRON_0 = 0x42C00000;
 	UINTPTR PERCEPTRON_1 = 0x43C00000;
+	UINTPTR FINAL_OUTPUT = 0x43C10000;
 	UINTPTR addr;
 
 	uint32_t read_value;
@@ -127,6 +128,11 @@ int main()
 		Xil_Out32(addr, write_value);
 		addr = addr+4;
 	}
+
+	read_value = Xil_In32(FINAL_OUTPUT);
+	printf("Read value = 0x%08X", read_value);
+	read_value = Xil_In32(FINAL_OUTPUT+4);
+	printf("Read value = 0x%08X", read_value);
 
 	printf("Test start functionality, and expected result\n\r");
 

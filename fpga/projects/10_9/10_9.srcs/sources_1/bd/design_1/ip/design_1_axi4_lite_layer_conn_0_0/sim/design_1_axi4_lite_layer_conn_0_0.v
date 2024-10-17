@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:axi4_lite_layer_connector:1.0
-// IP Revision: 6
+// IP Revision: 7
 
 `timescale 1ns/1ps
 

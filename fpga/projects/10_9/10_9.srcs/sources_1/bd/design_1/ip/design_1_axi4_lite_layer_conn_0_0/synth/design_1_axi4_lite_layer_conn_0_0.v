@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:axi4_lite_layer_connector:1.0
-// IP Revision: 6
+// IP Revision: 7
 
 (* X_CORE_INFO = "axi4_lite_layer_connector,Vivado 2019.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_axi4_lite_layer_conn_0_0,axi4_lite_layer_connector,{}" *)
-(* CORE_GENERATION_INFO = "design_1_axi4_lite_layer_conn_0_0,axi4_lite_layer_connector,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=axi4_lite_layer_connector,x_ipVersion=1.0,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "design_1_axi4_lite_layer_conn_0_0,axi4_lite_layer_connector,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=axi4_lite_layer_connector,x_ipVersion=1.0,x_ipCoreRevision=7,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_axi4_lite_layer_conn_0_0 (

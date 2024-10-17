@@ -34,6 +34,7 @@
     </Object>
     <Object name="design_1_i/perceptron_1/inst/your_instance_name" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="10"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
   </ObjectList>
@@ -47,7 +48,7 @@
     <Object name="design_1_i/perceptron_0_x_tready" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/perceptron_1/inst/x_tready" gui_info="Trigger Setup=1"/>
     <Object name="design_1_i/perceptron_1/inst/x_tvalid_del" gui_info="Trigger Setup=0"/>
-    <Object name="design_1_i/perceptron_1_x_tready" gui_info="Trigger Setup=1"/>
+    <Object name="design_1_i/perceptron_1_x_tready" gui_info="Trigger Setup=0"/>
   </ObjectList>
   <probeset name="hw project" active="false">
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">

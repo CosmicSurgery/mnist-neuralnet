@@ -238,6 +238,11 @@
 #define XPAR_PERCEPTRON_1_HIGHADDR 0x43C0FFFF
 
 
+/* Definitions for peripheral AXI4_LITE_FINAL_OUTP_0 */
+#define XPAR_AXI4_LITE_FINAL_OUTP_0_BASEADDR 0x43C10000
+#define XPAR_AXI4_LITE_FINAL_OUTP_0_HIGHADDR 0x43C1FFFF
+
+
 /******************************************************************/
 
 /* Definitions for driver GPIO */
@@ -256,7 +261,7 @@
 #define XPAR_AXI_GPIO_1_HIGHADDR 0x4120FFFF
 #define XPAR_AXI_GPIO_1_DEVICE_ID 1
 #define XPAR_AXI_GPIO_1_INTERRUPT_PRESENT 0
-#define XPAR_AXI_GPIO_1_IS_DUAL 0
+#define XPAR_AXI_GPIO_1_IS_DUAL 1
 
 
 /******************************************************************/
@@ -273,7 +278,7 @@
 #define XPAR_GPIO_1_HIGHADDR 0x4120FFFF
 #define XPAR_GPIO_1_DEVICE_ID XPAR_AXI_GPIO_1_DEVICE_ID
 #define XPAR_GPIO_1_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_1_IS_DUAL 0
+#define XPAR_GPIO_1_IS_DUAL 1
 
 
 /******************************************************************/

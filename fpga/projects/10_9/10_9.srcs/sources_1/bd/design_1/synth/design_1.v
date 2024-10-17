@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Wed Oct 16 17:16:56 2024
+//Date        : Wed Oct 16 17:34:15 2024
 //Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -290,11 +290,11 @@ module design_1
         .a_tvalid(axi4_lite_final_outp_0_a_tvalid),
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .s_axil_araddr(axi_interconnect_0_M06_AXI_ARADDR[3:0]),
+        .s_axil_araddr(axi_interconnect_0_M06_AXI_ARADDR[6:0]),
         .s_axil_arprot(axi_interconnect_0_M06_AXI_ARPROT),
         .s_axil_arready(axi_interconnect_0_M06_AXI_ARREADY),
         .s_axil_arvalid(axi_interconnect_0_M06_AXI_ARVALID),
-        .s_axil_awaddr(axi_interconnect_0_M06_AXI_AWADDR[3:0]),
+        .s_axil_awaddr(axi_interconnect_0_M06_AXI_AWADDR[6:0]),
         .s_axil_awprot(axi_interconnect_0_M06_AXI_AWPROT),
         .s_axil_awready(axi_interconnect_0_M06_AXI_AWREADY),
         .s_axil_awvalid(axi_interconnect_0_M06_AXI_AWVALID),
