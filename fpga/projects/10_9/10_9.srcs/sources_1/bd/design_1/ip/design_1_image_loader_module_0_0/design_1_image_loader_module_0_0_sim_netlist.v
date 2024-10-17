@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Fri Oct 11 10:50:13 2024
+// Date        : Wed Oct 16 17:19:17 2024
 // Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_image_loader_module_0_0/design_1_image_loader_module_0_0_sim_netlist.v
@@ -1340,7 +1340,7 @@ module design_1_image_loader_module_0_0_dual_port_AXI_Native_bram
     s_axi_arprot,
     s_axi_arvalid,
     s_axi_rready,
-    BRAM_PORTB_addr);
+    out);
   output s_axi_awready;
   output s_axi_wready;
   output [1:0]s_axi_bresp;
@@ -1363,7 +1363,7 @@ module design_1_image_loader_module_0_0_dual_port_AXI_Native_bram
   input [2:0]s_axi_arprot;
   input s_axi_arvalid;
   input s_axi_rready;
-  input [9:0]BRAM_PORTB_addr;
+  input [9:0]out;
 
   wire [11:2]BRAM_PORTA_addr;
   wire BRAM_PORTA_clk;
@@ -1371,7 +1371,7 @@ module design_1_image_loader_module_0_0_dual_port_AXI_Native_bram
   wire [31:0]BRAM_PORTA_dout;
   wire BRAM_PORTA_en;
   wire [3:3]BRAM_PORTA_we;
-  wire [9:0]BRAM_PORTB_addr;
+  wire [9:0]out;
   wire s_axi_aclk;
   wire [11:0]s_axi_araddr;
   wire s_axi_aresetn;
@@ -1435,7 +1435,7 @@ module design_1_image_loader_module_0_0_dual_port_AXI_Native_bram
   (* x_core_info = "blk_mem_gen_v8_4_4,Vivado 2019.2" *) 
   design_1_image_loader_module_0_0_blk_mem_gen_0 bram
        (.addra(BRAM_PORTA_addr),
-        .addrb(BRAM_PORTB_addr),
+        .addrb(out),
         .clka(BRAM_PORTA_clk),
         .clkb(BRAM_PORTA_clk),
         .dina(BRAM_PORTA_din),
@@ -1460,10 +1460,8 @@ module design_1_image_loader_module_0_0_image_loader_module
     s_axi_rvalid,
     x_tdata,
     x_tvalid,
-    x_tready,
-    start,
-    s_axi_aresetn,
     s_axi_aclk,
+    s_axi_aresetn,
     s_axi_awaddr,
     s_axi_awprot,
     s_axi_awvalid,
@@ -1474,7 +1472,9 @@ module design_1_image_loader_module_0_0_image_loader_module
     s_axi_araddr,
     s_axi_arprot,
     s_axi_arvalid,
-    s_axi_rready);
+    s_axi_rready,
+    x_tready,
+    start);
   output s_axi_awready;
   output s_axi_wready;
   output [1:0]s_axi_bresp;
@@ -1485,10 +1485,8 @@ module design_1_image_loader_module_0_0_image_loader_module
   output s_axi_rvalid;
   output [31:0]x_tdata;
   output x_tvalid;
-  input x_tready;
-  input start;
-  input s_axi_aresetn;
   input s_axi_aclk;
+  input s_axi_aresetn;
   input [11:0]s_axi_awaddr;
   input [2:0]s_axi_awprot;
   input s_axi_awvalid;
@@ -1500,13 +1498,18 @@ module design_1_image_loader_module_0_0_image_loader_module
   input [2:0]s_axi_arprot;
   input s_axi_arvalid;
   input s_axi_rready;
+  input x_tready;
+  input start;
 
+  wire clear;
   wire [9:0]p_0_in;
-  wire \r_addr[4]_i_1_n_0 ;
-  wire \r_addr[8]_i_2_n_0 ;
-  wire \r_addr[9]_i_1_n_0 ;
+  wire pos_edge_start;
+  wire \r_addr[5]_i_2_n_0 ;
+  wire \r_addr[9]_i_2_n_0 ;
   wire \r_addr[9]_i_4_n_0 ;
-  wire \r_addr[9]_i_5_n_0 ;
+  wire \r_addr[9]_i_6_n_0 ;
+  wire \r_addr[9]_i_7_n_0 ;
+  wire \r_addr[9]_i_8_n_0 ;
   wire [9:0]r_addr_reg;
   wire s_axi_aclk;
   wire [11:0]s_axi_araddr;
@@ -1532,19 +1535,18 @@ module design_1_image_loader_module_0_0_image_loader_module
   wire start;
   wire start_reg;
   wire start_reg_i_1_n_0;
+  wire status_i_1_n_0;
+  wire status_reg_n_0;
   wire [31:0]x_tdata;
   wire x_tready;
   wire x_tvalid;
-  wire x_tvalid1;
-  wire x_tvalid_del;
-  wire x_tvalid_del_i_1_n_0;
+  wire x_tvalid0;
   wire x_tvalid_i_1_n_0;
-  wire x_tvalid_i_2_n_0;
   wire x_tvalid_i_3_n_0;
   wire x_tvalid_i_4_n_0;
 
   design_1_image_loader_module_0_0_dual_port_AXI_Native_bram IMG_LOADER
-       (.BRAM_PORTB_addr(r_addr_reg),
+       (.out(r_addr_reg),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_araddr(s_axi_araddr),
         .s_axi_aresetn(s_axi_aresetn),
@@ -1567,116 +1569,125 @@ module design_1_image_loader_module_0_0_image_loader_module
         .s_axi_wstrb(s_axi_wstrb),
         .s_axi_wvalid(s_axi_wvalid),
         .x_tdata(x_tdata));
-  LUT1 #(
-    .INIT(2'h1)) 
+  LUT6 #(
+    .INIT(64'h1101FFFF11011101)) 
     \r_addr[0]_i_1 
        (.I0(r_addr_reg[0]),
+        .I1(status_reg_n_0),
+        .I2(start),
+        .I3(start_reg),
+        .I4(\r_addr[9]_i_6_n_0 ),
+        .I5(x_tready),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT5 #(
+    .INIT(32'h00515100)) 
     \r_addr[1]_i_1 
-       (.I0(r_addr_reg[0]),
-        .I1(r_addr_reg[1]),
+       (.I0(status_reg_n_0),
+        .I1(start),
+        .I2(start_reg),
+        .I3(r_addr_reg[0]),
+        .I4(r_addr_reg[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'h6A)) 
+  LUT6 #(
+    .INIT(64'h0051515151000000)) 
     \r_addr[2]_i_1 
-       (.I0(r_addr_reg[2]),
-        .I1(r_addr_reg[0]),
-        .I2(r_addr_reg[1]),
+       (.I0(status_reg_n_0),
+        .I1(start),
+        .I2(start_reg),
+        .I3(r_addr_reg[1]),
+        .I4(r_addr_reg[0]),
+        .I5(r_addr_reg[2]),
         .O(p_0_in[2]));
   (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT4 #(
-    .INIT(16'h6AAA)) 
+  LUT5 #(
+    .INIT(32'h007F0080)) 
     \r_addr[3]_i_1 
-       (.I0(r_addr_reg[3]),
-        .I1(r_addr_reg[1]),
-        .I2(r_addr_reg[0]),
-        .I3(r_addr_reg[2]),
-        .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT5 #(
-    .INIT(32'h6AAAAAAA)) 
-    \r_addr[4]_i_1 
-       (.I0(r_addr_reg[4]),
-        .I1(r_addr_reg[3]),
-        .I2(r_addr_reg[1]),
-        .I3(r_addr_reg[0]),
-        .I4(r_addr_reg[2]),
-        .O(\r_addr[4]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h6AAAAAAAAAAAAAAA)) 
-    \r_addr[5]_i_1 
-       (.I0(r_addr_reg[5]),
-        .I1(r_addr_reg[2]),
-        .I2(r_addr_reg[0]),
-        .I3(r_addr_reg[1]),
+       (.I0(r_addr_reg[1]),
+        .I1(r_addr_reg[0]),
+        .I2(r_addr_reg[2]),
+        .I3(pos_edge_start),
         .I4(r_addr_reg[3]),
-        .I5(r_addr_reg[4]),
-        .O(p_0_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT4 #(
-    .INIT(16'hA6AA)) 
-    \r_addr[6]_i_1 
-       (.I0(r_addr_reg[6]),
-        .I1(r_addr_reg[4]),
-        .I2(\r_addr[8]_i_2_n_0 ),
-        .I3(r_addr_reg[5]),
-        .O(p_0_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT5 #(
-    .INIT(32'hA6AAAAAA)) 
-    \r_addr[7]_i_1 
-       (.I0(r_addr_reg[7]),
-        .I1(r_addr_reg[5]),
-        .I2(\r_addr[8]_i_2_n_0 ),
-        .I3(r_addr_reg[4]),
-        .I4(r_addr_reg[6]),
-        .O(p_0_in[7]));
+        .O(p_0_in[3]));
   LUT6 #(
-    .INIT(64'hAA6AAAAAAAAAAAAA)) 
-    \r_addr[8]_i_1 
-       (.I0(r_addr_reg[8]),
-        .I1(r_addr_reg[6]),
-        .I2(r_addr_reg[4]),
-        .I3(\r_addr[8]_i_2_n_0 ),
-        .I4(r_addr_reg[5]),
-        .I5(r_addr_reg[7]),
-        .O(p_0_in[8]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \r_addr[8]_i_2 
+    .INIT(64'h00007FFF00008000)) 
+    \r_addr[4]_i_1 
        (.I0(r_addr_reg[2]),
         .I1(r_addr_reg[0]),
         .I2(r_addr_reg[1]),
         .I3(r_addr_reg[3]),
-        .O(\r_addr[8]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'h08FF)) 
-    \r_addr[9]_i_1 
-       (.I0(x_tready),
-        .I1(start),
+        .I4(pos_edge_start),
+        .I5(r_addr_reg[4]),
+        .O(p_0_in[4]));
+  LUT5 #(
+    .INIT(32'h008A0045)) 
+    \r_addr[5]_i_1 
+       (.I0(\r_addr[5]_i_2_n_0 ),
+        .I1(start_reg),
+        .I2(start),
+        .I3(status_reg_n_0),
+        .I4(r_addr_reg[5]),
+        .O(p_0_in[5]));
+  LUT5 #(
+    .INIT(32'h7FFFFFFF)) 
+    \r_addr[5]_i_2 
+       (.I0(r_addr_reg[3]),
+        .I1(r_addr_reg[1]),
+        .I2(r_addr_reg[0]),
+        .I3(r_addr_reg[2]),
+        .I4(r_addr_reg[4]),
+        .O(\r_addr[5]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'h008A0045)) 
+    \r_addr[6]_i_1 
+       (.I0(\r_addr[9]_i_7_n_0 ),
+        .I1(start_reg),
+        .I2(start),
+        .I3(status_reg_n_0),
+        .I4(r_addr_reg[6]),
+        .O(p_0_in[6]));
+  LUT6 #(
+    .INIT(64'h0000B0BB00004044)) 
+    \r_addr[7]_i_1 
+       (.I0(\r_addr[9]_i_7_n_0 ),
+        .I1(r_addr_reg[6]),
         .I2(start_reg),
-        .I3(s_axi_aresetn),
-        .O(\r_addr[9]_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+        .I3(start),
+        .I4(status_reg_n_0),
+        .I5(r_addr_reg[7]),
+        .O(p_0_in[7]));
+  LUT5 #(
+    .INIT(32'h00DF0020)) 
+    \r_addr[8]_i_1 
+       (.I0(r_addr_reg[6]),
+        .I1(\r_addr[9]_i_7_n_0 ),
+        .I2(r_addr_reg[7]),
+        .I3(pos_edge_start),
+        .I4(r_addr_reg[8]),
+        .O(p_0_in[8]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \r_addr[9]_i_1 
+       (.I0(s_axi_aresetn),
+        .O(clear));
+  LUT5 #(
+    .INIT(32'hFF80AA80)) 
     \r_addr[9]_i_2 
        (.I0(x_tready),
-        .I1(\r_addr[9]_i_4_n_0 ),
-        .I2(x_tvalid_del),
-        .O(x_tvalid1));
-  LUT5 #(
-    .INIT(32'h6AAAAAAA)) 
+        .I1(x_tvalid),
+        .I2(\r_addr[9]_i_4_n_0 ),
+        .I3(pos_edge_start),
+        .I4(\r_addr[9]_i_6_n_0 ),
+        .O(\r_addr[9]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000DFFF00002000)) 
     \r_addr[9]_i_3 
-       (.I0(r_addr_reg[9]),
-        .I1(r_addr_reg[7]),
-        .I2(\r_addr[9]_i_5_n_0 ),
-        .I3(r_addr_reg[6]),
-        .I4(r_addr_reg[8]),
+       (.I0(r_addr_reg[7]),
+        .I1(\r_addr[9]_i_7_n_0 ),
+        .I2(r_addr_reg[6]),
+        .I3(r_addr_reg[8]),
+        .I4(pos_edge_start),
+        .I5(r_addr_reg[9]),
         .O(p_0_in[9]));
   LUT6 #(
     .INIT(64'h777777777777777F)) 
@@ -1684,88 +1695,110 @@ module design_1_image_loader_module_0_0_image_loader_module
        (.I0(r_addr_reg[9]),
         .I1(r_addr_reg[8]),
         .I2(r_addr_reg[4]),
-        .I3(r_addr_reg[5]),
+        .I3(r_addr_reg[7]),
         .I4(r_addr_reg[6]),
-        .I5(r_addr_reg[7]),
+        .I5(r_addr_reg[5]),
         .O(\r_addr[9]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT3 #(
+    .INIT(8'hAE)) 
     \r_addr[9]_i_5 
-       (.I0(r_addr_reg[5]),
+       (.I0(status_reg_n_0),
+        .I1(start),
+        .I2(start_reg),
+        .O(pos_edge_start));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \r_addr[9]_i_6 
+       (.I0(x_tvalid_i_3_n_0),
+        .I1(r_addr_reg[8]),
+        .I2(r_addr_reg[9]),
+        .I3(\r_addr[9]_i_8_n_0 ),
+        .O(\r_addr[9]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
+    \r_addr[9]_i_7 
+       (.I0(r_addr_reg[4]),
         .I1(r_addr_reg[2]),
         .I2(r_addr_reg[0]),
         .I3(r_addr_reg[1]),
         .I4(r_addr_reg[3]),
-        .I5(r_addr_reg[4]),
-        .O(\r_addr[9]_i_5_n_0 ));
+        .I5(r_addr_reg[5]),
+        .O(\r_addr[9]_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \r_addr[9]_i_8 
+       (.I0(r_addr_reg[5]),
+        .I1(r_addr_reg[6]),
+        .I2(r_addr_reg[7]),
+        .I3(r_addr_reg[4]),
+        .O(\r_addr[9]_i_8_n_0 ));
   FDRE \r_addr_reg[0] 
        (.C(s_axi_aclk),
-        .CE(x_tvalid1),
+        .CE(\r_addr[9]_i_2_n_0 ),
         .D(p_0_in[0]),
         .Q(r_addr_reg[0]),
-        .R(\r_addr[9]_i_1_n_0 ));
+        .R(clear));
   FDRE \r_addr_reg[1] 
        (.C(s_axi_aclk),
-        .CE(x_tvalid1),
+        .CE(\r_addr[9]_i_2_n_0 ),
         .D(p_0_in[1]),
         .Q(r_addr_reg[1]),
-        .R(\r_addr[9]_i_1_n_0 ));
+        .R(clear));
   FDRE \r_addr_reg[2] 
        (.C(s_axi_aclk),
-        .CE(x_tvalid1),
+        .CE(\r_addr[9]_i_2_n_0 ),
         .D(p_0_in[2]),
         .Q(r_addr_reg[2]),
-        .R(\r_addr[9]_i_1_n_0 ));
+        .R(clear));
   FDRE \r_addr_reg[3] 
        (.C(s_axi_aclk),
-        .CE(x_tvalid1),
+        .CE(\r_addr[9]_i_2_n_0 ),
         .D(p_0_in[3]),
         .Q(r_addr_reg[3]),
-        .R(\r_addr[9]_i_1_n_0 ));
+        .R(clear));
   FDRE \r_addr_reg[4] 
        (.C(s_axi_aclk),
-        .CE(x_tvalid1),
-        .D(\r_addr[4]_i_1_n_0 ),
+        .CE(\r_addr[9]_i_2_n_0 ),
+        .D(p_0_in[4]),
         .Q(r_addr_reg[4]),
-        .R(\r_addr[9]_i_1_n_0 ));
+        .R(clear));
   FDRE \r_addr_reg[5] 
        (.C(s_axi_aclk),
-        .CE(x_tvalid1),
+        .CE(\r_addr[9]_i_2_n_0 ),
         .D(p_0_in[5]),
         .Q(r_addr_reg[5]),
-        .R(\r_addr[9]_i_1_n_0 ));
+        .R(clear));
   FDRE \r_addr_reg[6] 
        (.C(s_axi_aclk),
-        .CE(x_tvalid1),
+        .CE(\r_addr[9]_i_2_n_0 ),
         .D(p_0_in[6]),
         .Q(r_addr_reg[6]),
-        .R(\r_addr[9]_i_1_n_0 ));
+        .R(clear));
   FDRE \r_addr_reg[7] 
        (.C(s_axi_aclk),
-        .CE(x_tvalid1),
+        .CE(\r_addr[9]_i_2_n_0 ),
         .D(p_0_in[7]),
         .Q(r_addr_reg[7]),
-        .R(\r_addr[9]_i_1_n_0 ));
+        .R(clear));
   FDRE \r_addr_reg[8] 
        (.C(s_axi_aclk),
-        .CE(x_tvalid1),
+        .CE(\r_addr[9]_i_2_n_0 ),
         .D(p_0_in[8]),
         .Q(r_addr_reg[8]),
-        .R(\r_addr[9]_i_1_n_0 ));
+        .R(clear));
   FDRE \r_addr_reg[9] 
        (.C(s_axi_aclk),
-        .CE(x_tvalid1),
+        .CE(\r_addr[9]_i_2_n_0 ),
         .D(p_0_in[9]),
         .Q(r_addr_reg[9]),
-        .R(\r_addr[9]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT4 #(
-    .INIT(16'hEAC0)) 
+        .R(clear));
+  LUT2 #(
+    .INIT(4'h8)) 
     start_reg_i_1
-       (.I0(s_axi_aresetn),
-        .I1(start),
-        .I2(x_tready),
-        .I3(start_reg),
+       (.I0(start),
+        .I1(s_axi_aresetn),
         .O(start_reg_i_1_n_0));
   FDRE start_reg_reg
        (.C(s_axi_aclk),
@@ -1773,57 +1806,58 @@ module design_1_image_loader_module_0_0_image_loader_module
         .D(start_reg_i_1_n_0),
         .Q(start_reg),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT5 #(
-    .INIT(32'h8A888888)) 
-    x_tvalid_del_i_1
-       (.I0(s_axi_aresetn),
-        .I1(x_tvalid_del),
-        .I2(start_reg),
-        .I3(start),
-        .I4(x_tready),
-        .O(x_tvalid_del_i_1_n_0));
-  FDRE x_tvalid_del_reg
+  LUT6 #(
+    .INIT(64'hCCFC000044540000)) 
+    status_i_1
+       (.I0(x_tready),
+        .I1(status_reg_n_0),
+        .I2(start),
+        .I3(start_reg),
+        .I4(s_axi_aresetn),
+        .I5(\r_addr[9]_i_6_n_0 ),
+        .O(status_i_1_n_0));
+  FDRE status_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(x_tvalid_del_i_1_n_0),
-        .Q(x_tvalid_del),
+        .D(status_i_1_n_0),
+        .Q(status_reg_n_0),
         .R(1'b0));
-  LUT5 #(
-    .INIT(32'h88888088)) 
+  LUT6 #(
+    .INIT(64'hEEEE2E2200000000)) 
     x_tvalid_i_1
-       (.I0(x_tvalid_del),
-        .I1(s_axi_aresetn),
-        .I2(x_tvalid_i_2_n_0),
-        .I3(x_tvalid_i_3_n_0),
-        .I4(x_tvalid_i_4_n_0),
+       (.I0(x_tvalid),
+        .I1(x_tvalid0),
+        .I2(start_reg),
+        .I3(start),
+        .I4(status_reg_n_0),
+        .I5(s_axi_aresetn),
         .O(x_tvalid_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFF08FF)) 
+    .INIT(64'h0000000100004000)) 
     x_tvalid_i_2
-       (.I0(x_tready),
-        .I1(start),
-        .I2(start_reg),
-        .I3(r_addr_reg[4]),
-        .I4(r_addr_reg[1]),
-        .I5(r_addr_reg[5]),
-        .O(x_tvalid_i_2_n_0));
-  LUT4 #(
-    .INIT(16'h1000)) 
-    x_tvalid_i_3
-       (.I0(r_addr_reg[3]),
-        .I1(r_addr_reg[2]),
+       (.I0(x_tvalid_i_3_n_0),
+        .I1(r_addr_reg[8]),
         .I2(r_addr_reg[9]),
-        .I3(r_addr_reg[8]),
-        .O(x_tvalid_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+        .I3(r_addr_reg[4]),
+        .I4(x_tvalid_i_4_n_0),
+        .I5(pos_edge_start),
+        .O(x_tvalid0));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
-    .INIT(16'hFFF2)) 
+    .INIT(16'hFFFE)) 
+    x_tvalid_i_3
+       (.I0(r_addr_reg[1]),
+        .I1(r_addr_reg[0]),
+        .I2(r_addr_reg[3]),
+        .I3(r_addr_reg[2]),
+        .O(x_tvalid_i_3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
     x_tvalid_i_4
-       (.I0(r_addr_reg[0]),
-        .I1(r_addr_reg[1]),
-        .I2(r_addr_reg[7]),
-        .I3(r_addr_reg[6]),
+       (.I0(r_addr_reg[7]),
+        .I1(r_addr_reg[6]),
+        .I2(r_addr_reg[5]),
         .O(x_tvalid_i_4_n_0));
   FDRE x_tvalid_reg
        (.C(s_axi_aclk),

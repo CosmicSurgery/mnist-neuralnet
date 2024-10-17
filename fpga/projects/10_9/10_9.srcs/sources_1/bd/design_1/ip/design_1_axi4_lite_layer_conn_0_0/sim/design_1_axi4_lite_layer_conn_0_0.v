@@ -48,14 +48,13 @@
 
 
 // IP VLNV: xilinx.com:user:axi4_lite_layer_connector:1.0
-// IP Revision: 5
+// IP Revision: 6
 
 `timescale 1ns/1ps
 
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_axi4_lite_layer_conn_0_0 (
-  start,
   clk,
   a0,
   a1,
@@ -99,8 +98,7 @@ module design_1_axi4_lite_layer_conn_0_0 (
   a_tready
 );
 
-input wire start;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF a, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF a, ASSOCIATED_RESET resetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire [31 : 0] a0;
@@ -151,7 +149,6 @@ output wire a_tvalid;
 input wire a_tready;
 
   axi4_lite_layer_connector inst (
-    .start(start),
     .clk(clk),
     .a0(a0),
     .a1(a1),

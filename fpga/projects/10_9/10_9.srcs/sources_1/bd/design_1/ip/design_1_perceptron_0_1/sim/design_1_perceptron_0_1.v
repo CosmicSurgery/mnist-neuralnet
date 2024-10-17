@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:perceptron:1.0
-// IP Revision: 17
+// IP Revision: 19
 
 `timescale 1ns/1ps
 
@@ -81,7 +81,6 @@ module design_1_perceptron_0_1 (
   x_tvalid,
   x_tready,
   bias,
-  biasValid,
   a_tdata,
   done
 );
@@ -141,7 +140,6 @@ input wire x_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 x TREADY" *)
 output wire x_tready;
 input wire [31 : 0] bias;
-input wire biasValid;
 output wire [31 : 0] a_tdata;
 output wire done;
 
@@ -175,7 +173,6 @@ output wire done;
     .x_tvalid(x_tvalid),
     .x_tready(x_tready),
     .bias(bias),
-    .biasValid(biasValid),
     .a_tdata(a_tdata),
     .done(done)
   );

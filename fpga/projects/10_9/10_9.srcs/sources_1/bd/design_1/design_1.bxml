@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1728687396"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1728687396"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1728687396"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1728687396"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1729124243"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1729124243"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1729124243"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1729124243"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\design_1_perceptron_0_0\design_1_perceptron_0_0.xci" Type="IP">
         <Instance HierarchyPath="perceptron_0"/>
@@ -121,6 +121,22 @@
       </File>
       <File Name="ip\design_1_auto_pc_0\design_1_auto_pc_0.xci" Type="IP">
         <Instance HierarchyPath="axi_interconnect_0/s00_couplers/auto_pc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_axi4_lite_final_outp_0_0\design_1_axi4_lite_final_outp_0_0.xci" Type="IP">
+        <Instance HierarchyPath="axi4_lite_final_outp_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_xlconstant_1_0\design_1_xlconstant_1_0.xci" Type="IP">
+        <Instance HierarchyPath="xlconstant_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

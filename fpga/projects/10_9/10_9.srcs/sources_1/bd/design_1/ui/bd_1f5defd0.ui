@@ -1,56 +1,64 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.343351",
-   "Default View_TopLeft":"-862,15",
+   "Default View_ScaleFactor":"0.363441",
+   "Default View_TopLeft":"-391,-140",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 4 -x 1300 -y 1430 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 4 -x 1300 -y 1450 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 9 -x 3500 -y 1430 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 9 -x 3500 -y 1450 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -x 240 -y 1520 -defaultsOSRD
 preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 240 -y 1290 -defaultsOSRD
 preplace inst axi_interconnect_0 -pg 1 -lvl 2 -x 680 -y 1210 -defaultsOSRD
-preplace inst axi4_lite_register_m_0 -pg 1 -lvl 3 -x 1100 -y 260 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 3 -x 1100 -y 1550 -defaultsOSRD
-preplace inst axi_gpio_1 -pg 1 -lvl 3 -x 1100 -y 1350 -defaultsOSRD
-preplace inst ila_0 -pg 1 -lvl 3 -x 1100 -y 1920 -defaultsOSRD
+preplace inst axi4_lite_register_m_0 -pg 1 -lvl 5 -x 1990 -y 110 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 4 -x 1560 -y 690 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 8 -x 3320 -y 1200 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 4 -x 1560 -y 1220 -defaultsOSRD
 preplace inst xlconstant_0 -pg 1 -lvl 1 -x 240 -y 990 -defaultsOSRD
-preplace inst ila_1 -pg 1 -lvl 3 -x 1100 -y 600 -defaultsOSRD
-preplace inst perceptron_0 -pg 1 -lvl 3 -x 1100 -y 1140 -defaultsOSRD
-preplace inst perceptron_1 -pg 1 -lvl 3 -x 1100 -y 840 -defaultsOSRD
-preplace inst image_loader_module_0 -pg 1 -lvl 3 -x 1100 -y 1730 -defaultsOSRD
-preplace inst axi4_lite_layer_conn_0 -pg 1 -lvl 2 -x 680 -y 510 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 1180 470 70 860
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 2 500 970 880
+preplace inst ila_1 -pg 1 -lvl 3 -x 1100 -y 660 -defaultsOSRD
+preplace inst axi4_lite_layer_conn_0 -pg 1 -lvl 6 -x 2620 -y 1240 -defaultsOSRD
+preplace inst image_loader_module_0 -pg 1 -lvl 3 -x 1100 -y 1170 -defaultsOSRD
+preplace inst perceptron_0 -pg 1 -lvl 5 -x 1990 -y 930 -defaultsOSRD
+preplace inst perceptron_1 -pg 1 -lvl 7 -x 2990 -y 920 -defaultsOSRD
+preplace inst axi4_lite_final_outp_0 -pg 1 -lvl 8 -x 3320 -y 750 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 8 -x 3320 -y 1070 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 20 1180 480 970 890 830 1250 920 1740 760 2200 810 2800 780 3120
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 7 460 960 900 820 1240 820 1750 1090 2140 1710 2810 1060 3130
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 1190 450
-preplace netloc axi_gpio_0_gpio_io_o 1 1 3 510 950 910 990 1260
-preplace netloc perceptron_0_done 1 1 3 530 1440 NJ 1440 1250
-preplace netloc perceptron_0_a_tdata 1 1 3 520 1430 NJ 1430 1240
-preplace netloc axi4_lite_register_m_0_bias_0 1 2 2 930 510 1250
-preplace netloc image_loader_module_0_x_tdata 1 2 2 940 1640 1240
-preplace netloc axi4_lite_register_m_0_control 1 2 2 930 500 1240
-preplace netloc xlconstant_0_dout 1 1 2 450 960 920
-preplace netloc image_loader_module_0_x_tvalid 1 2 2 950 1820 1250
-preplace netloc perceptron_0_x_tready 1 2 2 960 1830 1240
-preplace netloc axi4_lite_register_m_0_bias_1 1 2 2 920 20 1240
-preplace netloc axi4_lite_layer_conn_0_a_tdata 1 2 1 910 500n
-preplace netloc axi4_lite_layer_conn_0_a_tvalid 1 2 1 900 520n
-preplace netloc perceptron_1_x_tready 1 2 1 890 540n
-preplace netloc axi4_lite_register_m_0_bias_2 1 1 3 500 10 NJ 10 1270
-preplace netloc processing_system7_0_DDR 1 1 3 480J 1450 NJ 1450 1270J
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 490 1050n
-preplace netloc axi_interconnect_0_M03_AXI 1 2 1 840 1220n
-preplace netloc axi_interconnect_0_M01_AXI 1 2 1 850 1180n
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 460J 1460 NJ 1460 1280J
-preplace netloc axi_interconnect_0_M00_AXI 1 2 1 850 230n
-preplace netloc axi_interconnect_0_M02_AXI 1 2 1 890 1130n
-preplace netloc axi_interconnect_0_M04_AXI 1 2 1 830 1240n
-preplace netloc axi_interconnect_0_M05_AXI 1 2 1 870 830n
-levelinfo -pg 1 0 240 680 1100 1300
-pagesize -pg 1 -db -bbox -sgen 0 0 1420 2010
+preplace netloc axi_gpio_0_gpio_io_o 1 2 5 920 1080 N 1080 1710 1080 2160 1700 2790
+preplace netloc perceptron_0_done 1 4 2 N 720 2180
+preplace netloc perceptron_0_a_tdata 1 5 1 2140 890n
+preplace netloc axi4_lite_register_m_0_bias_0 1 4 2 1760 -130 2210
+preplace netloc image_loader_module_0_x_tdata 1 3 2 1260 870 N
+preplace netloc axi4_lite_register_m_0_control 1 4 2 1770 350 2200
+preplace netloc xlconstant_0_dout 1 1 5 450 950 N 950 N 950 1700 1100 2170
+preplace netloc image_loader_module_0_x_tvalid 1 3 2 1270 890 N
+preplace netloc perceptron_0_x_tready 1 3 2 1280 910 N
+preplace netloc axi4_lite_register_m_0_bias_1 1 5 2 N -50 2780
+preplace netloc axi4_lite_layer_conn_0_a_tdata 1 2 5 900 790 N 790 N 790 N 790 2740
+preplace netloc axi4_lite_layer_conn_0_a_tvalid 1 2 5 910 800 N 800 1720 750 N 750 2760
+preplace netloc perceptron_1_x_tready 1 2 5 920 810 N 810 1730 770 N 770 2750
+preplace netloc axi4_lite_register_m_0_bias_2 1 5 1 2210 -30n
+preplace netloc perceptron_1_a_tdata 1 7 1 3140 590n
+preplace netloc axi4_lite_final_outp_0_a_tdata 1 8 1 3470 750n
+preplace netloc axi4_lite_final_outp_0_a_tvalid 1 8 1 3460 770n
+preplace netloc perceptron_1_done 1 7 1 3150 790n
+preplace netloc xlconstant_1_dout 1 7 2 3150 470 3480
+preplace netloc axi_interconnect_0_M02_AXI 1 2 3 870 930 N 930 N
+preplace netloc axi_interconnect_0_M04_AXI 1 2 6 830 1440 N 1440 N 1440 2150 1670 2770 1180 N
+preplace netloc axi_interconnect_0_M03_AXI 1 2 2 850 750 1230
+preplace netloc processing_system7_0_DDR 1 1 8 470J 1450 NJ 1450 NJ 1450 N 1450 2130 1680 2800 1430 N 1430 N
+preplace netloc axi_interconnect_0_M05_AXI 1 2 5 860 780 N 780 N 780 2190 800 2770
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 490 1030n
+preplace netloc processing_system7_0_FIXED_IO 1 1 8 460J 1460 NJ 1460 NJ 1460 N 1460 2120 1690 2820 1450 N 1450 N
+preplace netloc axi_interconnect_0_M01_AXI 1 2 1 880 1140n
+preplace netloc axi_interconnect_0_M00_AXI 1 2 3 830 80 N 80 N
+preplace netloc axi_interconnect_0_M06_AXI 1 2 6 840 530 NJ 530 NJ 530 NJ 530 NJ 530 NJ
+levelinfo -pg 1 0 240 680 1100 1560 1990 2620 2990 3320 3500
+pagesize -pg 1 -db -bbox -sgen 0 -150 3620 2010
 "
 }
 {
-   "da_axi4_cnt":"6",
+   "da_axi4_cnt":"7",
    "da_ps7_cnt":"1"
 }

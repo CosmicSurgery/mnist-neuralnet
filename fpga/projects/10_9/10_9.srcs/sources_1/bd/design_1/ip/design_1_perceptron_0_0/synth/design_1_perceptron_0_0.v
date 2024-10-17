@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:perceptron:1.0
-// IP Revision: 17
+// IP Revision: 19
 
 (* X_CORE_INFO = "perceptron,Vivado 2019.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_perceptron_0_0,perceptron,{}" *)
-(* CORE_GENERATION_INFO = "design_1_perceptron_0_0,perceptron,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=perceptron,x_ipVersion=1.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,activation=relu,input_size=784}" *)
+(* CORE_GENERATION_INFO = "design_1_perceptron_0_0,perceptron,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=perceptron,x_ipVersion=1.0,x_ipCoreRevision=19,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,activation=relu,input_size=784}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_perceptron_0_0 (
@@ -82,7 +82,6 @@ module design_1_perceptron_0_0 (
   x_tvalid,
   x_tready,
   bias,
-  biasValid,
   a_tdata,
   done
 );
@@ -142,7 +141,6 @@ input wire x_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 x TREADY" *)
 output wire x_tready;
 input wire [31 : 0] bias;
-input wire biasValid;
 output wire [31 : 0] a_tdata;
 output wire done;
 
@@ -176,7 +174,6 @@ output wire done;
     .x_tvalid(x_tvalid),
     .x_tready(x_tready),
     .bias(bias),
-    .biasValid(biasValid),
     .a_tdata(a_tdata),
     .done(done)
   );

@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Fri Oct 11 10:51:58 2024
+// Date        : Wed Oct 16 17:20:54 2024
 // Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.srcs/sources_1/bd/design_1/ip/design_1_perceptron_0_0/design_1_perceptron_0_0_stub.v
@@ -18,8 +18,8 @@ module design_1_perceptron_0_0(start, s_axi_araddr, s_axi_arprot,
   s_axi_arready, s_axi_arvalid, s_axi_awaddr, s_axi_awprot, s_axi_awready, s_axi_awvalid, 
   s_axi_bready, s_axi_bresp, s_axi_bvalid, s_axi_rdata, s_axi_rready, s_axi_rresp, 
   s_axi_rvalid, s_axi_wdata, s_axi_wready, s_axi_wstrb, s_axi_wvalid, s_axi_aresetn, 
-  s_axi_aclk, x_tdata, x_tvalid, x_tready, bias, biasValid, a_tdata, done)
-/* synthesis syn_black_box black_box_pad_pin="start,s_axi_araddr[11:0],s_axi_arprot[2:0],s_axi_arready,s_axi_arvalid,s_axi_awaddr[11:0],s_axi_awprot[2:0],s_axi_awready,s_axi_awvalid,s_axi_bready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_rdata[31:0],s_axi_rready,s_axi_rresp[1:0],s_axi_rvalid,s_axi_wdata[31:0],s_axi_wready,s_axi_wstrb[3:0],s_axi_wvalid,s_axi_aresetn,s_axi_aclk,x_tdata[31:0],x_tvalid,x_tready,bias[31:0],biasValid,a_tdata[31:0],done" */;
+  s_axi_aclk, x_tdata, x_tvalid, x_tready, bias, a_tdata, done)
+/* synthesis syn_black_box black_box_pad_pin="start,s_axi_araddr[11:0],s_axi_arprot[2:0],s_axi_arready,s_axi_arvalid,s_axi_awaddr[11:0],s_axi_awprot[2:0],s_axi_awready,s_axi_awvalid,s_axi_bready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_rdata[31:0],s_axi_rready,s_axi_rresp[1:0],s_axi_rvalid,s_axi_wdata[31:0],s_axi_wready,s_axi_wstrb[3:0],s_axi_wvalid,s_axi_aresetn,s_axi_aclk,x_tdata[31:0],x_tvalid,x_tready,bias[31:0],a_tdata[31:0],done" */;
   input start;
   input [11:0]s_axi_araddr;
   input [2:0]s_axi_arprot;
@@ -46,7 +46,6 @@ module design_1_perceptron_0_0(start, s_axi_araddr, s_axi_arprot,
   input x_tvalid;
   output x_tready;
   input [31:0]bias;
-  input biasValid;
   output [31:0]a_tdata;
   output done;
 endmodule
