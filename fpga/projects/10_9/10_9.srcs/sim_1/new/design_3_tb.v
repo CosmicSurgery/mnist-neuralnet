@@ -44,6 +44,8 @@ module design_3_tb();
     reg s_axi_aclk_0;
     reg s_axi_aresetn_0;
     reg start_0;
+    wire z_tValid_0;
+    wire [3:0]z_tdata_0;
 
     design_3 design_3_i
        (.s_axi_0_araddr(s_axi_0_araddr),
@@ -67,7 +69,24 @@ module design_3_tb();
         .s_axi_0_wvalid(s_axi_0_wvalid),
         .s_axi_aclk_0(s_axi_aclk_0),
         .s_axi_aresetn_0(s_axi_aresetn_0),
-        .start_0(start_0));
+        .start_0(start_0),
+        .z_tValid_0(z_tValid_0),
+        .z_tdata_0(z_tdata_0));
+        
+    integer img_file;
+    integer weight_0_0_file;
+    integer weight_0_1_file;
+    integer weight_0_2_file;
+    integer weight_1_0_file;
+    integer bias_0_file;
+    integer bias_1_file;
+    
+    integer output_file;
+    integer status;
+    reg [31:0] data_in;
+    reg [31:0] data_out;
+    reg [31:0] read_data;
+    reg [31:0] expected_value;
         
     initial begin
         s_axi_aclk_0 = 0;
@@ -106,21 +125,105 @@ module design_3_tb();
         s_axi_aresetn_0 = 1;
         #20;
         
+        img_file = $fopen("img.mif", "r");
+        weight_0_0_file = $fopen("weight_0_0.mif", "r");
+        weight_0_1_file = $fopen("weight0_1.mif", "r");
+        weight_0_2_file = $fopen("weight0_2.mif", "r");
+        weight_1_0_file = $fopen("weight_1_0.mif", "r");
+        bias_0_file = $fopen("bias_0.mif", "r");
+        bias_1_file = $fopen("bias_1.mif", "r");
+        
         axi_addr = percept_0_addr;
         for (i = 0; i<784; i = i +1)
         begin
-            axi_write(img_load_addr + ( i *4), 'h70000000);
-            axi_write(percept_0_addr + ( i *4), 1);
-            @(posedge s_axi_aclk_0);
+            status = $fscanf(img_file, "%b\n", data_in);
+            axi_write(img_load_addr + ( i *4), data_in);
+            
+            status = $fscanf(weight_0_0_file, "%b\n", data_in);
+            axi_write(percept_0_addr + ( i *4), data_in);
+            
+            status = $fscanf(weight_0_1_file, "%b\n", data_in);
+            axi_write(percept_2_addr + ( i *4), data_in);
+            
+            status = $fscanf(weight_0_2_file, "%b\n", data_in);
+            axi_write(percept_3_addr + ( i *4), data_in);
         end
         
         for (i = 0; i<18; i = i +1)
         begin
-            axi_write(percept_1_addr + ( i *4), 'h04000000);
-            @(posedge s_axi_aclk_0);
+            
+            status = $fscanf(weight_1_0_file, "%b\n", data_in);
+            axi_write(percept_1_addr + ( i *4), data_in);
+            if (i ==1) begin
+            status = $fscanf(bias_1_file, "%b\n", data_in);
+            axi_write(bias_register_addr + ( i *4), data_in);
+            end else begin
+            status = $fscanf(bias_0_file, "%b\n", data_in);
+            axi_write(bias_register_addr + ( i *4), data_in);
+            end
         end
+        
+    #100 @(posedge s_axi_aclk_0);
+    #1 start_0=1;
+    
+    while (~z_tValid_0) repeat (30) @(posedge s_axi_aclk_0);
+    
+    
+    $fclose(img_file);
+    $fclose(weight_0_0_file);
+    $fclose(weight_0_1_file);
+    $fclose(weight_0_2_file);
+    $fclose(weight_1_0_file);
+    $fclose(bias_0_file);
+    $fclose(bias_1_file);
+    #300 $finish;
         
     end
         
-        
+    // AXI write task
+    task axi_write;
+        input [31:0] addr;
+        input [31:0] data;
+        begin
+            s_axi_0_awaddr <= addr;
+            s_axi_0_awvalid <= 1;
+            s_axi_0_wdata <= data;
+            s_axi_0_wvalid <= 1;
+            s_axi_0_bready <= 1;
+            @(posedge s_axi_aclk_0);
+            fork
+                begin
+                    while (!s_axi_0_wready) @ (posedge s_axi_aclk_0);
+                    s_axi_0_wvalid <= 0;
+                end
+                begin
+                    while (!s_axi_0_awready) @(posedge s_axi_aclk_0);
+                    s_axi_0_awvalid <= 0;
+                end
+            join
+            while (!s_axi_0_bvalid) @(posedge s_axi_aclk_0);
+            s_axi_0_bready <= 0;
+            @(posedge s_axi_aclk_0);
+        end
+    endtask
+
+    // AXI read task
+    task axi_read;
+        input [31:0] addr;
+        output [31:0] read_data;
+        begin
+            @(posedge s_axi_aclk_0);
+            s_axi_0_araddr <= addr;
+            s_axi_0_arvalid <= 1;
+            s_axi_0_rready <= 1;
+            repeat (1) @(posedge s_axi_aclk_0);
+            while (!s_axi_0_arready) @(posedge s_axi_aclk_0);
+            s_axi_0_arvalid <= 0;
+            while (!s_axi_0_rvalid) @(posedge s_axi_aclk_0);
+            s_axi_0_rready <= 0;
+            read_data <= s_axi_0_rdata; // get read data value when rvalid and rready are high
+            @(posedge s_axi_aclk_0);
+        end
+    endtask
+    
 endmodule

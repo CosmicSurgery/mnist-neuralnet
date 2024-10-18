@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Thu Oct 17 12:47:28 2024
+//Date        : Thu Oct 17 16:59:07 2024
 //Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 //Command     : generate_target design_3_wrapper.bd
 //Design      : design_3_wrapper
@@ -31,7 +31,9 @@ module design_3_wrapper
     s_axi_0_wvalid,
     s_axi_aclk_0,
     s_axi_aresetn_0,
-    start_0);
+    start_0,
+    z_tValid_0,
+    z_tdata_0);
   input [31:0]s_axi_0_araddr;
   input [2:0]s_axi_0_arprot;
   output [0:0]s_axi_0_arready;
@@ -54,6 +56,8 @@ module design_3_wrapper
   input s_axi_aclk_0;
   input s_axi_aresetn_0;
   input start_0;
+  output z_tValid_0;
+  output [3:0]z_tdata_0;
 
   wire [31:0]s_axi_0_araddr;
   wire [2:0]s_axi_0_arprot;
@@ -77,6 +81,8 @@ module design_3_wrapper
   wire s_axi_aclk_0;
   wire s_axi_aresetn_0;
   wire start_0;
+  wire z_tValid_0;
+  wire [3:0]z_tdata_0;
 
   design_3 design_3_i
        (.s_axi_0_araddr(s_axi_0_araddr),
@@ -100,5 +106,7 @@ module design_3_wrapper
         .s_axi_0_wvalid(s_axi_0_wvalid),
         .s_axi_aclk_0(s_axi_aclk_0),
         .s_axi_aresetn_0(s_axi_aresetn_0),
-        .start_0(start_0));
+        .start_0(start_0),
+        .z_tValid_0(z_tValid_0),
+        .z_tdata_0(z_tdata_0));
 endmodule

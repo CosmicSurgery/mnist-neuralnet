@@ -266,7 +266,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>971fa9fc</spirit:value>
+            <spirit:value>abcf8b1f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -282,7 +282,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>971fa9fc</spirit:value>
+            <spirit:value>abcf8b1f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -989,7 +989,7 @@
       <spirit:file>
         <spirit:name>axi4_lite_final_output.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_971fa9fc</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_abcf8b1f</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1045,8 +1045,8 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>5</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-10-17T00:33:26Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>6</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-10-17T23:42:58Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@61c7739b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
@@ -1076,13 +1076,24 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@5dd31daf_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@53484fff_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1583c573_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d10c4db_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@354cfb87_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68db900b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40454b03_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73d23574_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37cd8c9a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36e4b9fc_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37ac4e17_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@94299da_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f3d604b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@644d483f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="d54002dd"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="1d37552a"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5c60d7ca"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1e5d3ef5"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="55289e29"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="e81de1e3"/>
     </xilinx:packagingInfo>

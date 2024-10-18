@@ -1,5 +1,4 @@
-import numpy as np
-from fxpmath import Fxp
+import numpy as np  
 import sys
 import os
 import glob
@@ -217,6 +216,9 @@ def main(gen_output_files=False):
         
         a_tdata.append(layer_output)
         with open(os.path.join(txt_folder, f"output_layer_{layer}.txt"), "w") as file:
+            for i in range(neurons_per_layer[layer]):
+                file.write(layer_output[i] + "\n")
+        with open(os.path.join(hex_folder, f"output_layer_{layer}.txt"), "w") as file:
             for i in range(neurons_per_layer[layer]):
                 file.write(layer_output[i] + "\n")
         

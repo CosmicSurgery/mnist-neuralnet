@@ -1,13 +1,16 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 8aee1eb6e3ea48dfb69ae172a8fb85c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_4 -L axi_bram_ctrl_v4_1_2 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_20 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_19 -L axi_crossbar_v2_1_21 -L xlconstant_v1_1_6 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot design_2_tb_behav xil_defaultlib.design_2_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 8aee1eb6e3ea48dfb69ae172a8fb85c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_20 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_19 -L axi_crossbar_v2_1_21 -L axi_lite_ipif_v3_0_4 -L lib_cdc_v1_0_2 -L axi_timebase_wdt_v3_0_12 -L axis_infrastructure_v1_1_0 -L axis_broadcaster_v1_1_19 -L blk_mem_gen_v8_4_4 -L axi_bram_ctrl_v4_1_2 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L xlconstant_v1_1_6 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot design_3_tb_behav xil_defaultlib.design_3_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'BRAM_PORTB_we' [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ipshared/e5d5/perceptron.v:77]
+WARNING: [VRFC 10-3091] actual bit length 27 differs from formal bit length 30 for port 'm_axi_arprot' [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/sim/design_3.v:2369]
+WARNING: [VRFC 10-3091] actual bit length 27 differs from formal bit length 30 for port 'm_axi_awprot' [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/sim/design_3.v:2373]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'BRAM_PORTB_we' [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ipshared/1e62/perceptron.v:78]
+WARNING: [VRFC 10-5021] port 'timebase_interrupt' is not connected on this instance [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/sim/design_3.v:619]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_2/ipshared/c04c/axi4_lite_register_module.v" Line 1. Module axi4_lite_register_module doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ipshared/0b19/axi4_lite_final_output.v" Line 1. Module axi4_lite_final_output doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard
@@ -15,28 +18,44 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package axi_lite_ipif_v3_0_4.ipif_pkg
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
 Compiling package xpm.vcomponents
 Compiling package axi_bram_ctrl_v4_1_2.axi_bram_ctrl_funcs
 Compiling package mult_gen_v12_0_16.mult_gen_v12_0_16_viv_comp
 Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
 Compiling package mult_gen_v12_0_16.mult_gen_v12_0_16_pkg
 Compiling package ieee.std_logic_signed
-Compiling package unisim.vcomponents
 Compiling package mult_gen_v12_0_16.dsp_pkg
-Compiling package ieee.vital_timing
-Compiling package ieee.vital_primitives
-Compiling package unisim.vpkg
+Compiling module xil_defaultlib.axi4_lite_final_output
+Compiling module xil_defaultlib.design_3_axi4_lite_final_outp_0_...
 Compiling module xil_defaultlib.axi4_lite_layer_connector
-Compiling module xil_defaultlib.design_2_axi4_lite_layer_conn_0_...
+Compiling module xil_defaultlib.design_3_axi4_lite_layer_conn_0_...
 Compiling module xil_defaultlib.axi4_lite_register_module
-Compiling module xil_defaultlib.design_2_axi4_lite_register_m_0_...
-Compiling module xil_defaultlib.m00_couplers_imp_F9RV50
-Compiling module xil_defaultlib.m01_couplers_imp_1O10UX1
-Compiling module xil_defaultlib.m02_couplers_imp_E445IF
-Compiling module xil_defaultlib.m03_couplers_imp_1PH007A
-Compiling module xil_defaultlib.s00_couplers_imp_1L7QRZA
+Compiling module xil_defaultlib.design_3_axi4_lite_register_m_0_...
+Compiling module xil_defaultlib.m00_couplers_imp_HRSIK2
+Compiling module xil_defaultlib.m01_couplers_imp_1CNR8YB
+Compiling module xil_defaultlib.m02_couplers_imp_JDP5DD
+Compiling module xil_defaultlib.m03_couplers_imp_1BBJKPC
+Compiling module xil_defaultlib.m04_couplers_imp_KZMPDG
+Compiling module xil_defaultlib.m05_couplers_imp_19RSRO5
+Compiling module xil_defaultlib.m06_couplers_imp_LRJVXZ
+Compiling module xil_defaultlib.m07_couplers_imp_18PJZ4M
+Compiling module xil_defaultlib.m08_couplers_imp_O8MN0E
+Compiling module xil_defaultlib.m09_couplers_imp_1F2H8GV
+Compiling module xil_defaultlib.s00_couplers_imp_1FDXN00
 Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_addr_arbite...
 Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_carry_...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
 Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
 Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
 Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
@@ -52,8 +71,31 @@ Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
 Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_decerr_slav...
 Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_crossbar_sa...
 Compiling module axi_crossbar_v2_1_21.axi_crossbar_v2_1_21_axi_crossba...
-Compiling module xil_defaultlib.design_2_xbar_0
-Compiling module xil_defaultlib.design_2_axi_interconnect_0_0
+Compiling module xil_defaultlib.design_3_xbar_0
+Compiling module xil_defaultlib.design_3_axi_interconnect_0_0
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fdr_v of entity unisim.FDR [fdr_default]
+Compiling architecture implementation of entity lib_cdc_v1_0_2.cdc_sync [\cdc_sync(c_mtbf_stages=4)\]
+Compiling architecture imp of entity axi_timebase_wdt_v3_0_12.timebase_wdt_core [\timebase_wdt_core(c_family="zyn...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_4.pselect_f [\pselect_f(c_ab=2,c_aw=2,c_bar="...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_4.pselect_f [\pselect_f(c_ab=2,c_aw=2,c_bar="...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_4.pselect_f [\pselect_f(c_ab=2,c_aw=2,c_bar="...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_4.pselect_f [\pselect_f(c_ab=2,c_aw=2,c_bar="...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_4.address_decoder [\address_decoder(c_bus_awidth=4,...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_4.slave_attachment [\slave_attachment(c_ard_addr_ran...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_4.axi_lite_ipif [\axi_lite_ipif(c_s_axi_addr_widt...]
+Compiling architecture imp of entity axi_timebase_wdt_v3_0_12.axi_timebase_wdt [\axi_timebase_wdt(c_family="zynq...]
+Compiling architecture top_arch of entity axi_timebase_wdt_v3_0_12.axi_timebase_wdt_top [\axi_timebase_wdt_top(c_family="...]
+Compiling architecture design_3_axi_timebase_wdt_0_0_arch of entity xil_defaultlib.design_3_axi_timebase_wdt_0_0 [design_3_axi_timebase_wdt_0_0_de...]
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_broadcaster_v1_1_19.axis_broadcaster_v1_1_19_core(C_...
+Compiling module xil_defaultlib.tdata_design_3_axis_broadcaster_...
+Compiling module xil_defaultlib.tuser_design_3_axis_broadcaster_...
+Compiling module xil_defaultlib.top_design_3_axis_broadcaster_0_...
+Compiling module xil_defaultlib.design_3_axis_broadcaster_0_0
+Compiling module xil_defaultlib.hardmax
+Compiling module xil_defaultlib.design_3_hardmax_0_0
 Compiling architecture implementation of entity axi_bram_ctrl_v4_1_2.axi_lite [\axi_lite(c_s_axi_addr_width=12,...]
 Compiling architecture implementation of entity axi_bram_ctrl_v4_1_2.axi_bram_ctrl_top [\axi_bram_ctrl_top(c_bram_addr_w...]
 Compiling architecture implementation of entity axi_bram_ctrl_v4_1_2.axi_bram_ctrl [\axi_bram_ctrl(c_memory_depth=10...]
@@ -66,7 +108,7 @@ Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="zyn...
 Compiling module xil_defaultlib.blk_mem_gen_0
 Compiling module xil_defaultlib.dual_port_AXI_Native_bram
 Compiling module xil_defaultlib.image_loader_module
-Compiling module xil_defaultlib.design_2_image_loader_module_0_0
+Compiling module xil_defaultlib.design_3_image_loader_module_0_0
 Compiling architecture xilinx of entity mult_gen_v12_0_16.delay_line [\delay_line(c_xdevicefamily="zyn...]
 Compiling architecture xilinx of entity mult_gen_v12_0_16.delay_line [\delay_line(c_xdevicefamily="zyn...]
 Compiling architecture xilinx of entity mult_gen_v12_0_16.delay_line [\delay_line(c_xdevicefamily="zyn...]
@@ -82,12 +124,16 @@ Compiling architecture xilinx of entity mult_gen_v12_0_16.mult_gen_v12_0_16 [\mu
 Compiling architecture mult_gen_0_arch of entity xil_defaultlib.mult_gen_0 [mult_gen_0_default]
 Compiling module xil_defaultlib.ila_0
 Compiling module xil_defaultlib.perceptron
-Compiling module xil_defaultlib.design_2_perceptron_0_0
-Compiling module xil_defaultlib.design_2_perceptron_0_1
+Compiling module xil_defaultlib.design_3_perceptron_0_0
+Compiling module xil_defaultlib.design_3_perceptron_1_0
+Compiling module xil_defaultlib.design_3_perceptron_2_0
+Compiling module xil_defaultlib.design_3_perceptron_3_0
+Compiling module xlconstant_v1_1_6.xlconstant_v1_1_6_xlconstant
+Compiling module xil_defaultlib.design_3_xlconstant_0_0
 Compiling module xlconstant_v1_1_6.xlconstant_v1_1_6_xlconstant(CON...
-Compiling module xil_defaultlib.design_2_xlconstant_0_0
-Compiling module xil_defaultlib.design_2
-Compiling module xil_defaultlib.design_2_wrapper
-Compiling module xil_defaultlib.design_2_tb
+Compiling module xil_defaultlib.design_3_xlconstant_1_0
+Compiling module xil_defaultlib.design_3_xlconstant_2_0
+Compiling module xil_defaultlib.design_3
+Compiling module xil_defaultlib.design_3_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot design_2_tb_behav
+Built simulation snapshot design_3_tb_behav
