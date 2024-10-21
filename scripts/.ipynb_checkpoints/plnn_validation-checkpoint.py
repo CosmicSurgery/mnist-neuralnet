@@ -1,8 +1,8 @@
-import numpy as np
-from fxpmath import Fxp
+import numpy as np  
 import sys
 import os
 import glob
+from fxpmath import Fxp
 
 # Thank you Chatgpt!!!
 def twos_complement(bin_str):
@@ -89,6 +89,7 @@ def manual_binary_multiply(bin_str1, bin_str2):
 
 
 def main(gen_output_files=False):
+   
     # Define the folder for the binary files
     hex_folder = "hex_files"
     txt_folder = "txt_files"
@@ -98,10 +99,12 @@ def main(gen_output_files=False):
     
     x32 = Fxp(-7.25, dtype='S5.27')
     x64 = Fxp(-7.25, dtype='S10.54')
-    num_layers = 2  # Example: 2 layers
-    neurons_per_layer = [3, 1]  # Example: 3 neurons in layer 1, 2 neurons in layer 2
+    num_layers = 1  # Example: 2 layers
+    neurons_per_layer = [3]  # Example: 3 neurons in layer 1, 2 neurons in layer 2
     input_size = 784
-    gen_output_files = True
+    weights = []
+    bias = []
+    img = [0 for k in range(input_size)]
     if gen_output_files:
         for folder in folders:
             # Create the folder if it doesn't exist
@@ -113,12 +116,10 @@ def main(gen_output_files=False):
                 except Exception as e:
                     print(f"Error deleting file {f}: {e}")
         img = (np.random.rand(1,input_size) * 2) -1
-        weights = []
-        bias = []
     
         with open(os.path.join(txt_folder, "img.txt"), "w") as file:
             for i in range(input_size):
-                file.write(str(x32(img[0,i]).bin())+"\n")
+                file.write(str(float(x32(img[0,i])))+"\n")
         with open(os.path.join(bin_folder, "img.mif"), "w") as file:
             for i in range(input_size):
                 file.write(str(x32(img[0,i]).bin())+"\n")
@@ -134,7 +135,7 @@ def main(gen_output_files=False):
             
             with open(os.path.join(txt_folder, f"bias_{layer}.txt"), "w") as file:
                 for i in range(neurons_per_layer[layer]):
-                    file.write(str(x32(bias[layer][i]).bin()) + "\n")
+                    file.write(str(float(x32(bias[layer][i]))) + "\n")
             with open(os.path.join(bin_folder, f"bias_{layer}.mif"), "w") as file:
                 for i in range(neurons_per_layer[layer]):
                     file.write(str(x32(bias[layer][i]).bin()) + "\n")
@@ -146,7 +147,7 @@ def main(gen_output_files=False):
                     
                 with open(os.path.join(txt_folder, f"weight_{layer}_{neuron}.txt"), "w") as file:
                     for i in range(input_size_for_layer):
-                        file.write(str(x32(weights[layer][i, neuron]).bin()) + "\n")
+                        file.write(str(float(x32(weights[layer][i, neuron]))) + "\n")
                 with open(os.path.join(bin_folder, f"weight_{layer}_{neuron}.mif"), "w") as file:
                     for i in range(input_size_for_layer):
                         file.write(str(x32(weights[layer][i, neuron]).bin()) + "\n")
@@ -163,67 +164,117 @@ def main(gen_output_files=False):
                 # Convert the value to an unsigned char representation (assuming the range is normalized between -1 and 1)
                 file.write( '0b'+str(x32(img[0,i]).bin())+", " if i < input_size -1 else '0b'+str(x32(img[0,i]).bin()) )
             file.write(" };\n\n")
-
+    
             file.write("unsigned char hex_img[784] = { ")
             for i in range(input_size):
                 # Convert the value to an unsigned char representation (assuming the range is normalized between -1 and 1)
                 file.write( str(x32(img[0,i]).hex())+", " if i < input_size -1 else str(x32(img[0,i]).hex()) )
             file.write(" };\n\n")
-
-
+    
+    
             
             file.write("#endif // IMG_H\n")
-
+    weights = []
+    bias = []
+    img = [0 for k in range(input_size)]
+    # Read img for the current layer
+    with open(os.path.join(bin_folder, f"img.mif"), "r") as file:
+        lines = file.readlines()
+        for i in range(input_size):
+            img[i] = lines[i].strip()
     
-
-    else:
-        # Reading weights and biases from files for each layer
-        for layer in range(num_layers):
-            input_size_for_layer = input_size if layer == 0 else neurons_per_layer[layer - 1]
-            
-            # Initialize weights and bias for the current layer
-            weights_layer = np.zeros((input_size_for_layer, neurons_per_layer[layer]))
-            bias_layer = np.zeros(neurons_per_layer[layer])
-            
-            # Read biases for the current layer
-            with open(os.path.join(txt_folder, f"bias_{layer}.txt"), "r") as file:
+    # Reading weights and biases from files for each layer
+    for layer in range(num_layers):
+        input_size_for_layer = input_size if layer == 0 else neurons_per_layer[layer - 1]
+        
+        # Initialize weights and bias for the current layer
+        weights_layer = np.zeros((input_size_for_layer, neurons_per_layer[layer]),dtype=( np.str_, 32))
+        bias_layer = np.zeros(neurons_per_layer[layer],dtype=( np.str_, 32))
+        
+        # Read biases for the current layer
+        with open(os.path.join(bin_folder, f"bias_{layer}.mif"), "r") as file:
+            lines = file.readlines()
+            for i in range(neurons_per_layer[layer]):
+                bias_layer[i] = lines[i].strip()
+        bias.append(bias_layer)
+    
+        # Read weights for the current layer
+        for neuron in range(neurons_per_layer[layer]):
+            with open(os.path.join(bin_folder, f"weight_{layer}_{neuron}.mif"), "r") as file:
                 lines = file.readlines()
-                for i in range(neurons_per_layer[layer]):
-                    bias_layer[i] = x32(lines[i].strip())
-            bias.append(bias_layer)
-
-            # Read weights for the current layer
-            for neuron in range(neurons_per_layer[layer]):
-                with open(os.path.join(txt_folder, f"weight_{layer}_{neuron}.txt"), "r") as file:
-                    lines = file.readlines()
-                    for i in range(input_size_for_layer):
-                        weights_layer[i, neuron] = x32(lines[i].strip())
-            weights.append(weights_layer)
-
-    # Feedforward calculation for each layer
+                for i in range(input_size_for_layer):
+                    weights_layer[i, neuron] = lines[i].strip()
+                    
+        weights.append(weights_layer)
+    
+    # Feedforward fixed-point calculation for each layer
     a_tdata = []
+    a_tdata_float = []
     for layer in range(num_layers):
         input_data = img if layer == 0 else a_tdata[layer - 1]
         layer_output = []
-        
+        layer_output_float = []
         for j in range(neurons_per_layer[layer]):
-            b = x64(bias[layer][j]).bin()
-            acc = b
+            b = bias[layer][j]
+            
+            acc = ['0']*64
+            acc[5:len(b)+5] = b
+            acc = ''.join(acc)
+            
+            b_float = float(x32(''.join(('0b',bias[layer][j]))))
+            acc_float = b_float
+    
+            if  float(x32(''.join(('0b',b)))) != b_float:
+                raise Exception(f"BIAS %s, %d, are not equal at layer {layer}, neuron {j} and input value {i}", float(x64(''.join(('0b',b)))), b_float)
+            
             for i in range(input_size_for_layer):
-                w, x = x32(weights[layer][i, j]).bin(), x32(input_data[0][i]).bin()
+                w = weights[layer][i,j]
+                w, x = weights[layer][i, j], input_data[i]
                 p = manual_binary_multiply(w, x)
                 acc = add_binary(acc, p)
+                
+                w_float, x_float = float(x32(''.join(('0b',weights[layer][i, j])))), float(x32(''.join(('0b',input_data[i]))))
+                p_float = w_float * x_float
+                acc_float = acc_float + p_float
+    
+                val1 = float(x64(''.join(('0b',acc))))
+                val2 = float(x32(''.join(('0b',w))))
+                val3 = float(x32(''.join(('0b',x))))
+                val4 = float(x64(''.join(('0b',p))))
+                
+                if  val2 != w_float:
+                    raise Exception(f"WEIGHTS %s, %d, are not equal at layer {layer}, neuron {j} and input value {i}", val2, w_float)
+                if  val3 != x_float:
+                    raise Exception(f"img %s, %d, are not equal at layer {layer}, neuron {j} and input value {i}", val3, x_float)
+                if  val4 != p_float:
+                    raise Exception(f"SUM %s, %d, are not equal at layer {layer}, neuron {j} and input value {i}", val4, p_float)
+                if  abs(val1 - acc_float) > 0.0000001: # This verifies that the fixed point calculation agrees with the floating point calculation within 7 decimal places...
+                    raise Exception(f" ACCUMULATE %s, %d, are not equal at layer {layer}, neuron {j} and input value {i}", val1, acc_float)
+                
             layer_output.append(acc)
+            
+            layer_output_float.append(acc_float)
         
         a_tdata.append(layer_output)
-        with open(os.path.join(txt_folder, f"output_layer_{layer}.txt"), "w") as file:
+        
+        a_tdata_float.append(layer_output_float)
+        
+        with open(os.path.join(bin_folder, f"output_layer_{layer}.mif"), "w") as file:
             for i in range(neurons_per_layer[layer]):
                 file.write(layer_output[i] + "\n")
-        
-
-        
+        with open(os.path.join(hex_folder, f"output_layer_{layer}.mif"), "w") as file:
+            for i in range(neurons_per_layer[layer]):
+                file.write(x64(''.join(('0b',layer_output[i]))).hex() + "\n")
+         
+        with open(os.path.join(txt_folder, f"output_layer_{layer}.txt"), "w") as file:
+            for i in range(neurons_per_layer[layer]):
+                file.write(str(layer_output_float[i]) + "\n")
+                
     for layer in range(num_layers):
         print(a_tdata[layer], end='\n')
+        
+        print(a_tdata_float[layer], end='\n')
+    
     print("Success!")
     
     
