@@ -77,10 +77,10 @@ design_1_wrapper uut (
 );
 
 integer img_file;
-integer weight0_file;
-integer weight1_file;
-integer weight2_file;
-integer bias_file;
+integer weight_0_0_file;
+integer weight_0_1_file;
+integer weight_0_2_file;
+integer bias_0_file;
 
 integer output_file;
 integer status;
@@ -122,16 +122,16 @@ initial begin
     # 20 s_axi_aresetn_0 = 1;
     
     img_file = $fopen("img.mif", "r");
-    weight0_file = $fopen("weight0.mif", "r");
-    weight1_file = $fopen("weight1.mif", "r");
-    weight2_file = $fopen("weight2.mif", "r");
-    bias_file = $fopen("bias.mif", "r");
-//    output_file = $fopen("output_data.txt", "w");
+    weight_0_0_file = $fopen("weight_0_0.mif", "r");
+    weight_0_1_file = $fopen("weight_0_1.mif", "r");
+    weight_0_2_file = $fopen("weight_0_2.mif", "r");
+    bias_0_file = $fopen("bias_0.mif", "r");
+//    output_file = $fopen("output_layer_0.mif", "w");
     
     axi_addr = axi_register_addr;
     for (i = 0; i<18; i = i +1)
     begin
-        status = $fscanf(bias_file, "%b\n", data_in);
+        status = $fscanf(bias_0_file, "%b\n", data_in);
         if (status == 0) begin
             $display("End of file or reading error occurred.");
             data_in = 0;
@@ -160,7 +160,7 @@ initial begin
     axi_addr = perceptron0_addr;
     for (i = 0; i<784; i = i +1)
     begin
-        status = $fscanf(weight0_file, "%b\n", data_in);
+        status = $fscanf(weight_0_0_file, "%b\n", data_in);
         if (status == 0) begin
             $display("End of file or reading error occurred.");
             $finish; // Exit loop if nothing is read
@@ -174,7 +174,7 @@ initial begin
     axi_addr = perceptron1_addr;
     for (i = 0; i<784; i = i +1)
     begin
-        status = $fscanf(weight1_file, "%b\n", data_in);
+        status = $fscanf(weight_0_1_file, "%b\n", data_in);
         if (status == 0) begin
             $display("End of file or reading error occurred.");
             $finish; // Exit loop if nothing is read
@@ -188,7 +188,7 @@ initial begin
     axi_addr = perceptron2_addr;
     for (i = 0; i<784; i = i +1)
     begin
-        status = $fscanf(weight2_file, "%b\n", data_in);
+        status = $fscanf(weight_0_2_file, "%b\n", data_in);
         if (status == 0) begin
             $display("End of file or reading error occurred.");
             $finish; // Exit loop if nothing is read
@@ -206,10 +206,10 @@ initial begin
     
     
     $fclose(img_file);
-    $fclose(weight0_file);
-    $fclose(weight1_file);
-    $fclose(weight2_file);
-    $fclose(bias_file);
+    $fclose(weight_0_0_file);
+    $fclose(weight_0_1_file);
+    $fclose(weight_0_2_file);
+    $fclose(bias_0_file);
     #300 $finish;
     
 end

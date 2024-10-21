@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.519571",
-   "Default View_TopLeft":"-358,-464",
+   "Default View_TopLeft":"-527,-312",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
@@ -33,15 +33,15 @@ preplace netloc axi4_lite_register_m_0_bias_2 1 1 2 480J 40 830
 preplace netloc axi4_lite_register_m_0_control 1 0 2 -120 420 480
 preplace netloc axi_interconnect_0_M01_AXI 1 1 2 NJ -290 910
 preplace netloc s_axi_0_1 1 0 1 -150 -410n
-preplace netloc axis_broadcaster_0_M00_AXIS 1 2 1 860 -250n
-preplace netloc axi_interconnect_0_M04_AXI 1 1 2 NJ -230 880
 preplace netloc axi4_lite_layer_conn_0_a 1 4 1 N -40
 preplace netloc image_loader_module_0_x 1 1 2 530 -150 830
-preplace netloc axis_broadcaster_0_M01_AXIS 1 2 1 900 -40n
-preplace netloc axi_interconnect_0_M02_AXI 1 0 2 -120 -470 490
-preplace netloc axi_interconnect_0_M00_AXI 1 1 1 520 -310n
 preplace netloc axi_interconnect_0_M03_AXI 1 1 2 NJ -250 850
+preplace netloc axi_interconnect_0_M04_AXI 1 1 2 NJ -230 880
+preplace netloc axis_broadcaster_0_M01_AXIS 1 2 1 900 -40n
+preplace netloc axis_broadcaster_0_M00_AXIS 1 2 1 860 -250n
+preplace netloc axi_interconnect_0_M00_AXI 1 1 1 520 -310n
 preplace netloc axis_broadcaster_0_M02_AXIS 1 2 1 850 150n
+preplace netloc axi_interconnect_0_M02_AXI 1 0 2 -120 -470 490
 levelinfo -pg 1 -170 330 680 1090 1380 1520
 pagesize -pg 1 -db -bbox -sgen -330 -1120 1600 640
 "
