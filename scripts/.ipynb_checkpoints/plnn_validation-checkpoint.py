@@ -88,6 +88,24 @@ def manual_binary_multiply(bin_str1, bin_str2):
     return result[-(len1 + len2):]
 
 
+def convert32_64(bin_str1):
+    bin_str2 = ['0']*64
+    if bin_str1[0] == '1': # this means the number is negative
+        bin_str2[:5] = '1'*5
+        
+    bin_str2[5:len(bin_str1)+5] = bin_str1
+    bin_str2 = ''.join(bin_str2)
+        
+    return bin_str2
+
+def convert64_32(bin_str1):
+    if bin_str1[0] == '1':
+        bin_str2 = '0'*32
+    else:
+        bin_str2 = bin_str1[5:32+5]
+        
+    return bin_str2
+
 def main(gen_output_files=False):
    
     # Define the folder for the binary files
@@ -99,8 +117,8 @@ def main(gen_output_files=False):
     
     x32 = Fxp(-7.25, dtype='S5.27')
     x64 = Fxp(-7.25, dtype='S10.54')
-    num_layers = 1  # Example: 2 layers
-    neurons_per_layer = [3]  # Example: 3 neurons in layer 1, 2 neurons in layer 2
+    num_layers = 2  # Example: 2 layers
+    neurons_per_layer = [3,1]  # Example: 3 neurons in layer 1, 2 neurons in layer 2
     input_size = 784
     weights = []
     bias = []
@@ -216,10 +234,7 @@ def main(gen_output_files=False):
         layer_output_float = []
         for j in range(neurons_per_layer[layer]):
             b = bias[layer][j]
-            
-            acc = ['0']*64
-            acc[5:len(b)+5] = b
-            acc = ''.join(acc)
+            acc = convert32_64(b)
             
             b_float = float(x32(''.join(('0b',bias[layer][j]))))
             acc_float = b_float
@@ -232,7 +247,11 @@ def main(gen_output_files=False):
                 w, x = weights[layer][i, j], input_data[i]
                 p = manual_binary_multiply(w, x)
                 acc = add_binary(acc, p)
-                
+
+                if len(input_data[i]) != 32:
+                    print(i)
+                    print(input_data[i])
+                    
                 w_float, x_float = float(x32(''.join(('0b',weights[layer][i, j])))), float(x32(''.join(('0b',input_data[i]))))
                 p_float = w_float * x_float
                 acc_float = acc_float + p_float
@@ -251,7 +270,7 @@ def main(gen_output_files=False):
                 if  abs(val1 - acc_float) > 0.0000001: # This verifies that the fixed point calculation agrees with the floating point calculation within 7 decimal places...
                     raise Exception(f" ACCUMULATE %s, %d, are not equal at layer {layer}, neuron {j} and input value {i}", val1, acc_float)
                 
-            layer_output.append(acc)
+            layer_output.append(convert64_32(acc))
             
             layer_output_float.append(acc_float)
         
