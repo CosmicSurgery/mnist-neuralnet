@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="perceptron_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="glbl" />
+            <top_module name="perceptron_tb" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1095800fs"></ZoomStartTime>
+      <ZoomEndTime time="1168201fs"></ZoomEndTime>
+      <Cursor1Time time="1101800fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="284"></NameColumnWidth>
+      <ValueColumnWidth column_width="236"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="45" />
+   <wvobject fp_name="/perceptron_tb/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_araddr" type="array">
+      <obj_property name="ElementShortName">s_axi_araddr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_araddr[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_arprot" type="array">
+      <obj_property name="ElementShortName">s_axi_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_arready" type="logic">
+      <obj_property name="ElementShortName">s_axi_arready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_arvalid" type="logic">
+      <obj_property name="ElementShortName">s_axi_arvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_awaddr" type="array">
+      <obj_property name="ElementShortName">s_axi_awaddr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awaddr[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_awprot" type="array">
+      <obj_property name="ElementShortName">s_axi_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_awready" type="logic">
+      <obj_property name="ElementShortName">s_axi_awready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_awvalid" type="logic">
+      <obj_property name="ElementShortName">s_axi_awvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_bready" type="logic">
+      <obj_property name="ElementShortName">s_axi_bready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_bready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_bresp" type="array">
+      <obj_property name="ElementShortName">s_axi_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_bvalid" type="logic">
+      <obj_property name="ElementShortName">s_axi_bvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_bvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_rdata" type="array">
+      <obj_property name="ElementShortName">s_axi_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_rready" type="logic">
+      <obj_property name="ElementShortName">s_axi_rready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_rresp" type="array">
+      <obj_property name="ElementShortName">s_axi_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_rvalid" type="logic">
+      <obj_property name="ElementShortName">s_axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_wdata" type="array">
+      <obj_property name="ElementShortName">s_axi_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_wready" type="logic">
+      <obj_property name="ElementShortName">s_axi_wready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_wready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_wstrb" type="array">
+      <obj_property name="ElementShortName">s_axi_wstrb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_wstrb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_wvalid" type="logic">
+      <obj_property name="ElementShortName">s_axi_wvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_wvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_aresetn" type="logic">
+      <obj_property name="ElementShortName">s_axi_aresetn</obj_property>
+      <obj_property name="ObjectShortName">s_axi_aresetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/s_axi_aclk" type="logic">
+      <obj_property name="ElementShortName">s_axi_aclk</obj_property>
+      <obj_property name="ObjectShortName">s_axi_aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/x_tdata" type="array">
+      <obj_property name="ElementShortName">x_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/x_tvalid" type="logic">
+      <obj_property name="ElementShortName">x_tvalid</obj_property>
+      <obj_property name="ObjectShortName">x_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/x_tready" type="logic">
+      <obj_property name="ElementShortName">x_tready</obj_property>
+      <obj_property name="ObjectShortName">x_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/write_values" type="array">
+      <obj_property name="ElementShortName">write_values[4:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_values[4:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/img_values" type="array">
+      <obj_property name="ElementShortName">img_values[4:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">img_values[4:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/bias" type="array">
+      <obj_property name="ElementShortName">bias[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bias[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/biasValid" type="logic">
+      <obj_property name="ElementShortName">biasValid</obj_property>
+      <obj_property name="ObjectShortName">biasValid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/expected_values" type="array">
+      <obj_property name="ElementShortName">expected_values[4:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_values[4:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/expected_a_tdata" type="array">
+      <obj_property name="ElementShortName">expected_a_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_a_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/axi_addr" type="array">
+      <obj_property name="ElementShortName">axi_addr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_addr[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/read_data" type="array">
+      <obj_property name="ElementShortName">read_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/ErrorCount" type="array">
+      <obj_property name="ElementShortName">ErrorCount[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ErrorCount[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/delay" type="array">
+      <obj_property name="ElementShortName">delay[31:0]</obj_property>
+      <obj_property name="ObjectShortName">delay[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/hid_addr" type="array">
+      <obj_property name="ElementShortName">hid_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">hid_addr[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/a_tdata" type="logic">
+      <obj_property name="ElementShortName">a_tdata</obj_property>
+      <obj_property name="ObjectShortName">a_tdata</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/uut/x_tdata_del" type="array">
+      <obj_property name="ElementShortName">x_tdata_del[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x_tdata_del[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/uut/P" type="array">
+      <obj_property name="ElementShortName">P[63:0]</obj_property>
+      <obj_property name="ObjectShortName">P[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/uut/temp_sum" type="array">
+      <obj_property name="ElementShortName">temp_sum[63:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_sum[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/uut/sum" type="array">
+      <obj_property name="ElementShortName">sum[63:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/uut/wout" type="array">
+      <obj_property name="ElementShortName">wout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wout[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/perceptron_tb/uut/r_addr" type="array">
+      <obj_property name="ElementShortName">r_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">r_addr[9:0]</obj_property>
+   </wvobject>
+</wave_config>

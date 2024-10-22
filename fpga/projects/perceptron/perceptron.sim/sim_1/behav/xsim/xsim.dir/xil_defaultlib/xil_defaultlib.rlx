@@ -4,10 +4,10 @@ Nov  6 2019
 21:57:16
 C:/git_repos/mnist_neuralnet/fpga/projects/perceptron/perceptron.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
 C:/git_repos/mnist_neuralnet/fpga/source/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v,1727117460,verilog,,C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v,,dual_port_AXI_Native_bram,,,,,,,,
-C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v,1729105213,verilog,,C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_full_selfcheck_tb.v,,perceptron,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v,1729554874,verilog,,C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v,,perceptron,,,,,,,,
 C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd,1727237580,vhdl,,,,axi_bram_ctrl_0,,,,,,,,
 C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/blk_mem_gen_0/sim/blk_mem_gen_0.v,1726877957,verilog,,C:/git_repos/mnist_neuralnet/fpga/source/dual_port_AXI_Native_bram/rtl/dual_port_AXI_Native_bram.v,,blk_mem_gen_0,,,,,,,,
 C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/ila_0/sim/ila_0.v,1728518200,verilog,,C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/blk_mem_gen_0/sim/blk_mem_gen_0.v,,ila_0,,,,,,,,
 C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/src/mult_gen_0/sim/mult_gen_0.vhd,1728419481,vhdl,,,,mult_gen_0,,,,,,,,
 C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_full_selfcheck_tb.v,1729104308,verilog,,,,perceptron_full_selfcheck_tb,,,,,,,,
-C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v,1728421419,verilog,,,,perceptron_tb,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v,1729557864,verilog,,,,perceptron_tb,,,,,,,,

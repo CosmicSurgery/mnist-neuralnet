@@ -1,7 +1,0 @@
-Running: xsim.dir/perceptron_tb_behav/xsimk.exe -simmode gui -wdb perceptron_tb_behav.wdb -simrunnum 0 -socket 65230
-Design successfully loaded
-Design Loading Memory Usage: 8232 KB (Peak: 8232 KB)
-Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 9896 KB (Peak: 9896 KB)
-Simulation CPU Usage: 61 ms

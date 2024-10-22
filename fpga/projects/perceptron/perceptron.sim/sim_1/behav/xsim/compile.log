@@ -6,6 +6,10 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/s
 INFO: [VRFC 10-311] analyzing module dual_port_AXI_Native_bram
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module perceptron
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_full_selfcheck_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module perceptron_full_selfcheck_tb
-INFO: [VRFC 10-2458] undeclared symbol done, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_full_selfcheck_tb.v:64]
+WARNING: [VRFC 10-3248] data object 'P' is already declared [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:68]
+WARNING: [VRFC 10-3703] second declaration of 'P' ignored [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:68]
+WARNING: [VRFC 10-3248] data object 'sum' is already declared [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:69]
+WARNING: [VRFC 10-3703] second declaration of 'sum' ignored [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:69]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module perceptron_tb
+INFO: [VRFC 10-2458] undeclared symbol a_tdata, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:101]

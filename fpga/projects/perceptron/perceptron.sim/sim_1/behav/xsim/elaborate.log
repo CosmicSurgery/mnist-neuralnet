@@ -1,10 +1,11 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 51f02af3ad864c7f980aaf5a16cc3d53 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L blk_mem_gen_v8_4_4 -L axi_bram_ctrl_v4_1_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot perceptron_full_selfcheck_tb_behav xil_defaultlib.perceptron_full_selfcheck_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 51f02af3ad864c7f980aaf5a16cc3d53 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L blk_mem_gen_v8_4_4 -L axi_bram_ctrl_v4_1_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot perceptron_tb_behav xil_defaultlib.perceptron_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'BRAM_PORTB_we' [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a_tdata' [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/tb/perceptron_tb.v:101]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'BRAM_PORTB_we' [C:/git_repos/mnist_neuralnet/fpga/source/perceptron/rtl/perceptron.v:86]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -51,6 +52,6 @@ Compiling architecture xilinx of entity mult_gen_v12_0_16.mult_gen_v12_0_16 [\mu
 Compiling architecture mult_gen_0_arch of entity xil_defaultlib.mult_gen_0 [mult_gen_0_default]
 Compiling module xil_defaultlib.ila_0
 Compiling module xil_defaultlib.perceptron
-Compiling module xil_defaultlib.perceptron_full_selfcheck_tb
+Compiling module xil_defaultlib.perceptron_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot perceptron_full_selfcheck_tb_behav
+Built simulation snapshot perceptron_tb_behav
