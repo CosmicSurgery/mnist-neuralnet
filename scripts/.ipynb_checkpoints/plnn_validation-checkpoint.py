@@ -52,8 +52,12 @@ def add_binary(bin_str1, bin_str2):
     if sign1 == sign2 and sign1 != result_sign:
         if sign1 == '0':  # Positive overflow
             result = '0' + '1' * (max_len - 1)  # Max positive value: 011...111
+            # return 'fail'
+            raise Exception(f"OVERFLOW")
         else:  # Negative overflow
             result = '1' + '0' * (max_len - 1)  # Max negative value: 100...000
+            raise Exception(f"OVERFLOW")
+            
     
     return result
 
@@ -100,9 +104,15 @@ def convert32_64(bin_str1):
 
 def convert64_32(bin_str1):
     if bin_str1[0] == '1':
-        bin_str2 = '0'*32
+        if bin_str1[1:5] != '1111':
+            raise Exception(f"OVERFLOW")
+        else:
+            bin_str2 = '0'*32
     else:
-        bin_str2 = bin_str1[5:32+5]
+        if bin_str1[1:5] != '0000':
+            raise Exception(f"OVERFLOW")
+        else:
+            bin_str2 = bin_str1[5:32+5]
         
     return bin_str2
 
@@ -118,7 +128,7 @@ def main(gen_output_files=False):
     x32 = Fxp(-7.25, dtype='S5.27')
     x64 = Fxp(-7.25, dtype='S10.54')
     num_layers = 2  # Example: 2 layers
-    neurons_per_layer = [3,1]  # Example: 3 neurons in layer 1, 2 neurons in layer 2
+    neurons_per_layer = [10,10]  # Example: 3 neurons in layer 1, 2 neurons in layer 2
     input_size = 784
     weights = []
     bias = []
@@ -172,23 +182,30 @@ def main(gen_output_files=False):
                 with open(os.path.join(hex_folder, f"weight_{layer}_{neuron}.mif"), "w") as file:
                     for i in range(input_size_for_layer):
                         file.write(str(x32(weights[layer][i, neuron]).hex()) + "\n")
-    
+                        
+        temp_bias = list(bias[0]) + list(bias[1])
         with open(os.path.join(h_folder, "img.h"), "w") as file:
             file.write("#ifndef IMG_H\n")
             file.write("#define IMG_H\n\n")
             
-            file.write("unsigned char bin_img[784] = { ")
+            file.write("uint32_t bin_img[784] = { ")
             for i in range(input_size):
                 # Convert the value to an unsigned char representation (assuming the range is normalized between -1 and 1)
                 file.write( '0b'+str(x32(img[0,i]).bin())+", " if i < input_size -1 else '0b'+str(x32(img[0,i]).bin()) )
             file.write(" };\n\n")
-    
-            file.write("unsigned char hex_img[784] = { ")
-            for i in range(input_size):
-                # Convert the value to an unsigned char representation (assuming the range is normalized between -1 and 1)
-                file.write( str(x32(img[0,i]).hex())+", " if i < input_size -1 else str(x32(img[0,i]).hex()) )
-            file.write(" };\n\n")
-    
+
+            for i in range(2):
+                for j in range(10):
+                    file.write(f"uint32_t weights_{i}_{j}[{input_size}] =" + " { "  + ''.join([f"0b{x32(k).bin()}, " for k in weights[i][:-1,j]]) + f"0b{x32(weights[i][-1,j]).bin()}" + " };\n\n")
+                    
+            file.write("uint32_t bias [10] = {" )
+            for i in range(2):
+                for j in range(10):
+                    if (i*10)+j < 19:
+                        file.write(''.join(f"0b{x32(temp_bias[(i*10)+j]).bin()}, " ))
+            file.write(f"0b{x32(temp_bias[-1]).bin()}" + " };\n\n")
+                    
+                    
     
             
             file.write("#endif // IMG_H\n")
@@ -229,6 +246,7 @@ def main(gen_output_files=False):
     a_tdata = []
     a_tdata_float = []
     for layer in range(num_layers):
+        input_size_for_layer = input_size if layer == 0 else neurons_per_layer[layer - 1]
         input_data = img if layer == 0 else a_tdata[layer - 1]
         layer_output = []
         layer_output_float = []
@@ -246,6 +264,8 @@ def main(gen_output_files=False):
                 w = weights[layer][i,j]
                 w, x = weights[layer][i, j], input_data[i]
                 p = manual_binary_multiply(w, x)
+                # if add_binary(acc,p) == 'fail': 
+                #     raise Except(f"ERROR OVERFLOW at {layer, j, i}")
                 acc = add_binary(acc, p)
 
                 if len(input_data[i]) != 32:
@@ -283,7 +303,7 @@ def main(gen_output_files=False):
                 file.write(layer_output[i] + "\n")
         with open(os.path.join(hex_folder, f"output_layer_{layer}.mif"), "w") as file:
             for i in range(neurons_per_layer[layer]):
-                file.write(x64(''.join(('0b',layer_output[i]))).hex() + "\n")
+                file.write(x32(''.join(('0b',layer_output[i]))).hex() + "\n")
          
         with open(os.path.join(txt_folder, f"output_layer_{layer}.txt"), "w") as file:
             for i in range(neurons_per_layer[layer]):
