@@ -31,15 +31,22 @@ module perceptron_tb();
   wire x_tready;
   
   wire [31:0] write_values [4:0];
-  assign write_values[0] = 32'd1;
-  assign write_values[1] = 32'd2;
-  assign write_values[2] = 32'd3;
-  assign write_values[3] = 32'd4;
-  assign write_values[4] = 32'd5;
+  assign write_values[0] = 32'b01111111111111111111111111111111;
+  assign write_values[1] = 32'b01111111111111111111111111111111;
+  assign write_values[2] = 32'b01111111111111111111111111111111;
+  assign write_values[3] = 32'b01111111111111111111111111111111;
+  assign write_values[4] = 32'b01111111111111111111111111111111;
+  
+  wire[31:0] img_values [4:0];
+  assign img_values[0] = 32'b01111111111111111111111111111111;
+  assign img_values[1] = 32'b01111111111111111111111111111111;
+  assign img_values[2] = 32'b01111111111111111111111111111111;
+  assign img_values[3] = 32'b01111111111111111111111111111111;
+  assign img_values[4] = 32'b01111111111111111111111111111111;
   
   wire [31:0] bias;
   reg biasValid = 1;
-  assign bias = 32'd1;
+  assign bias = 32'd0;
   
   wire [31:0] expected_values [4:0];
   assign expected_values[0] = 32'd1+bias;
@@ -91,19 +98,11 @@ module perceptron_tb();
     .x_tvalid(x_tvalid),
     .x_tready(x_tready),
     .bias(bias),
-    .biasValid(biasValid),
     .a_tdata(a_tdata),
     .done(done)
   );
   
-  wire [63:0] sum;
-  wire [31:0] mul;
-  wire [31:0] wout;
-  wire [31:0] x_tdata_del;
-  assign sum = uut.sum;
-  assign mul = uut.mul;
-  assign wout = uut.wout;
-  assign x_tdata_del = uut.x_tdata_del;
+  
     // Clock generation
   initial begin
     s_axi_aclk = 0;
@@ -145,6 +144,7 @@ initial begin
     end
 
     axi_addr = 32'd0;
+    
     for (i = 0; i<5; i = i +1)
     begin
         axi_read(axi_addr, read_data);
@@ -163,9 +163,9 @@ initial begin
     @(posedge s_axi_aclk);
     // Test perceptron inner-logic.
     x_tvalid <=1;
-    for (i = 1; i<6; i = i +1)
+    for (i = 0; i<5; i = i +1)
     begin    
-        x_tdata <= 32'd0 + i;
+        x_tdata <= img_values[i];
         @(posedge s_axi_aclk);
     end
     @(posedge s_axi_aclk) start = 0;

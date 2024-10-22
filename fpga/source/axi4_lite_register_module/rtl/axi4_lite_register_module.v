@@ -43,6 +43,8 @@ module axi4_lite_register_module (
     output wire [31:0] bias_15,
     output wire [31:0] bias_16,
     output wire [31:0] bias_17,
+    output wire [31:0] bias_18,
+    output wire [31:0] bias_19,
     
     // Control register output
     output wire [31:0] control,
@@ -52,7 +54,7 @@ module axi4_lite_register_module (
 );
 
     // Internal registers
-    reg [31:0] bias_regs [0:17];
+    reg [31:0] bias_regs [0:19];
     reg [31:0] control_reg;
     
     // AXI4-Lite interface registers
@@ -83,7 +85,7 @@ module axi4_lite_register_module (
     integer i;
     always @(posedge aclk) begin
         if (~aresetn) begin
-            for (i = 0; i < 18; i = i + 1) begin
+            for (i = 0; i < 20; i = i + 1) begin
                 bias_regs[i] <= 32'h0;
                 addr_curr <=0;
                 data_curr <=0;
@@ -98,11 +100,11 @@ module axi4_lite_register_module (
             data_curr <=1;
         end
         if (wr_en) begin
-            if (waddr < 5'd18) begin
+            if (waddr < 5'd20) begin
             addr_curr <= 0;
             data_curr <= 0;
                 bias_regs[waddr] <= axi_wdata;
-            end else if (waddr == 5'd18) begin
+            end else if (waddr == 5'd20) begin
                 control_reg <= axi_wdata;
             end
         end 
@@ -122,11 +124,11 @@ module axi4_lite_register_module (
         if (~aresetn) begin
             axi_rdata <= 32'h0;
         end else if (rd_en) begin
-            if (raddr < 5'd18) begin
+            if (raddr < 5'd20) begin
                 axi_rdata <= bias_regs[raddr];
-            end else if (raddr == 7'd18) begin
+            end else if (raddr == 5'd20) begin
                 axi_rdata <= control_reg;
-            end else if (raddr == 5'd19) begin
+            end else if (raddr == 5'd21) begin
                 axi_rdata <= status;
             end else begin
                 axi_rdata <= 32'h0;
@@ -195,6 +197,8 @@ module axi4_lite_register_module (
     assign bias_15 = bias_regs[15];
     assign bias_16 = bias_regs[16];
     assign bias_17 = bias_regs[17];
+    assign bias_18 = bias_regs[18];
+    assign bias_19 = bias_regs[19];
     
 
 // Assign control register output

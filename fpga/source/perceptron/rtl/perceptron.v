@@ -65,6 +65,14 @@ module perceptron #(activation="relu", input_size=784)(
     reg P_valid;
     reg w_valid;
     wire [63:0]P;
+    wire signed [63:0] P;
+    wire signed [63:0] sum;
+    wire overflow;
+    wire [63:0] temp_sum; // Temporary wire to hold the result of P + sum
+    assign temp_sum = P + sum; // Combinational addition
+    
+    assign overflow = (P[63] == sum[63]) && (P[63] != temp_sum[63]);
+
     
     assign pos_edge_start = start & !start_reg;
     assign x_tready = ~done;
@@ -106,20 +114,20 @@ module perceptron #(activation="relu", input_size=784)(
       .P(P)      // output wire [63 : 0] P
     );
     
-    ila_0 your_instance_name (
-	.clk(s_axi_aclk), // input wire clk
+//    ila_0 your_instance_name (
+//	.clk(s_axi_aclk), // input wire clk
 
 
-	.probe0(P), // input wire [63:0]  probe0  
-	.probe1(sum), // input wire [63:0]  probe1 
-	.probe2(wout), // input wire [31:0]  probe2 
-	.probe3(x_tdata_del), // input wire [31:0]  probe3 
-	.probe4(x_tdata), // input wire [0:0]  probe4 
-	.probe5(x_tready), // input wire [0:0]  probe5 
-	.probe6(pos_edge_start), // input wire [0:0]  probe6 
-	.probe7(x_tvalid_del), // input wire [0:0]  probe7 
-	.probe8(start) // input wire [0:0]  probe8
-);
+//	.probe0(P), // input wire [63:0]  probe0  
+//	.probe1(sum), // input wire [63:0]  probe1 
+//	.probe2(wout), // input wire [31:0]  probe2 
+//	.probe3(x_tdata_del), // input wire [31:0]  probe3 
+//	.probe4(x_tdata), // input wire [0:0]  probe4 
+//	.probe5(x_tready), // input wire [0:0]  probe5 
+//	.probe6(pos_edge_start), // input wire [0:0]  probe6 
+//	.probe7(x_tvalid_del), // input wire [0:0]  probe7 
+//	.probe8(done) // input wire [0:0]  probe8
+//);
     
 
     // Start process
@@ -149,7 +157,20 @@ module perceptron #(activation="relu", input_size=784)(
             else 
             // Two clock-cycle delay between r_addr and P
             if (P_valid) begin
-                sum <= P +sum;
+                if (overflow) begin
+                    if (P[63] == 1) begin
+                        // Negative overflow
+                        sum[63] <= 1'b1;
+                        sum[62:0] <= 63'd0;
+                    end else begin
+                        // Positive overflow
+                        sum[63] <= 1'b0;
+                        sum[62:0] <= ~0;
+                    end
+                end else begin
+                    // No overflow, proceed with addition
+                    sum <= P + sum;
+                end
                 // make sure to come back and check for overflow.
             end
         end
