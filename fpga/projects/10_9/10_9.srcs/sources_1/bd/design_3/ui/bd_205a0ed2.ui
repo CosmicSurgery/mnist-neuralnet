@@ -1,72 +1,72 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.439417",
-   "Default View_TopLeft":"125,2",
+   "Default View_ScaleFactor":"0.63303",
+   "Default View_TopLeft":"-179,675",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port s_axi_0 -pg 1 -lvl 0 -x 0 -y 510 -defaultsOSRD
-preplace port start_0 -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
-preplace port s_axi_aresetn_0 -pg 1 -lvl 0 -x 0 -y 490 -defaultsOSRD
-preplace port s_axi_aclk_0 -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
-preplace port z_tValid_0 -pg 1 -lvl 16 -x 5080 -y 340 -defaultsOSRD
-preplace portBus z_tdata_0 -pg 1 -lvl 16 -x 5080 -y 360 -defaultsOSRD
-preplace inst axi4_lite_register_m_0 -pg 1 -lvl 13 -x 4210 -y 510 -defaultsOSRD
-preplace inst axi_interconnect_0 -pg 1 -lvl 12 -x 3680 -y 600 -defaultsOSRD
-preplace inst axi_timebase_wdt_0 -pg 1 -lvl 11 -x 3170 -y 360 -defaultsOSRD
-preplace inst axis_broadcaster_0 -pg 1 -lvl 10 -x 2790 -y 350 -defaultsOSRD
-preplace inst image_loader_module_0 -pg 1 -lvl 8 -x 2160 -y 360 -defaultsOSRD
-preplace inst perceptron_0 -pg 1 -lvl 7 -x 1840 -y 330 -defaultsOSRD
-preplace inst perceptron_1 -pg 1 -lvl 6 -x 1450 -y 340 -defaultsOSRD
-preplace inst perceptron_2 -pg 1 -lvl 5 -x 1060 -y 250 -defaultsOSRD
-preplace inst perceptron_3 -pg 1 -lvl 4 -x 720 -y 220 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 3 -x 450 -y 150 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 2 -x 280 -y 150 -defaultsOSRD
-preplace inst xlconstant_2 -pg 1 -lvl 1 -x 110 -y 90 -defaultsOSRD
-preplace inst axi4_lite_layer_conn_0 -pg 1 -lvl 14 -x 4590 -y 690 -defaultsOSRD
-preplace inst axi4_lite_final_outp_0 -pg 1 -lvl 15 -x 4900 -y 450 -defaultsOSRD
-preplace inst hardmax_0 -pg 1 -lvl 9 -x 2470 -y 350 -defaultsOSRD
-preplace netloc axi4_lite_final_outp_0_a_tdata 1 8 8 2320 100 N 100 2970 90 3310 70 N 70 N 70 N 70 5030
-preplace netloc axi4_lite_final_outp_0_a_tvalid 1 8 8 2330 110 N 110 N 110 3330 100 3920 60 N 60 N 60 5040
-preplace netloc axi4_lite_layer_conn_0_a_tdata 1 5 10 1240 100 1640 110 N 110 2310 120 N 120 2980 100 3320 80 3910 90 N 90 4710
-preplace netloc axi4_lite_layer_conn_0_a_tvalid 1 5 10 1250 120 N 120 N 120 2290 130 N 130 2990 120 3340 110 3930 80 N 80 4730
-preplace netloc axi4_lite_register_m_0_bias_0 1 6 8 1680 130 N 130 2280 140 N 140 3000 130 3350 120 3960 130 4340
-preplace netloc axi4_lite_register_m_0_bias_1 1 5 9 1230 140 1650 150 N 150 N 150 N 150 N 150 3370 140 N 140 4330
-preplace netloc axi4_lite_register_m_0_bias_2 1 1 13 190 50 N 50 N 50 900 60 N 60 1660 50 2000 160 N 160 N 160 N 160 3380 150 N 150 4460
-preplace netloc axi4_lite_register_m_0_bias_3 1 4 10 930 140 1190 150 1640 160 1990 170 N 170 N 170 N 170 3390 160 3970 120 4350
-preplace netloc axi4_lite_register_m_0_bias_4 1 3 11 580 110 850 120 1200 160 1620 170 1980 180 N 180 N 180 N 180 3400 170 3950 110 4360
-preplace netloc axi4_lite_register_m_0_control 1 12 2 4090 100 4370
-preplace netloc perceptron_0_a_tdata 1 7 7 1980 500 N 500 N 500 N 500 3500 260 4030 190 4470
-preplace netloc perceptron_0_done 1 7 7 1960 470 N 470 N 470 N 470 3480 270 4020 180 4440
-preplace netloc perceptron_1_a_tdata 1 6 9 1630 480 N 480 N 480 N 480 3010 140 3360 130 3900 30 N 30 4760
-preplace netloc perceptron_1_done 1 6 9 1610 500 1970 510 N 510 2640 190 N 190 3420 180 3990 170 N 170 4740
-preplace netloc perceptron_1_x_tready 1 5 10 1260 180 1600 190 N 190 N 190 2630 200 N 200 3430 190 3980 160 N 160 4720
-preplace netloc perceptron_2_a_tdata 1 5 9 1190 190 1590 200 N 200 N 200 2600 220 N 220 3450 210 4010 200 4450
-preplace netloc perceptron_2_done 1 5 9 1210 200 1580 220 N 220 N 220 2590 230 N 230 3460 220 N 220 4410
-preplace netloc perceptron_3_a_tdata 1 4 10 910 130 N 130 1660 140 N 140 2270 240 N 240 N 240 3470 230 4040 210 4420
-preplace netloc perceptron_3_done 1 4 10 890 110 N 110 1630 210 1960 250 N 250 N 250 N 250 3480 240 N 240 4390
-preplace netloc xlconstant_0_dout 1 3 11 540 30 N 30 1210 170 1610 180 1970 260 N 260 N 260 N 260 3490 250 N 250 4380
-preplace netloc xlconstant_1_dout 1 2 13 360 70 N 70 880 90 N 90 1650 100 N 100 2300 210 N 210 N 210 3440 200 3940 20 N 20 4770
-preplace netloc start_0_1 1 0 8 20J 30 NJ 30 NJ 30 530J 80 870J 360 1210 480 1580 440 1990
-preplace netloc s_axi_aresetn_0_1 1 0 15 30J 230 NJ 230 NJ 230 550J 90 860J 100 1180 490 1650 460 2000 460 2310 460 2610 430 3030 480 3530 300 4080 270 4430 260 4750
-preplace netloc s_axi_aclk_0_1 1 0 15 NJ 250 NJ 250 NJ 250 560J 100 840 400 1190 500 1590 450 2010 450 2300 450 2600 440 3020 510 3520 290 4070 260 4400 250 N
-preplace netloc hardmax_0_z_tdata 1 9 7 2620J 460 NJ 460 3410J 90 3890J 40 NJ 40 NJ 40 5060J
-preplace netloc hardmax_0_z_tValid 1 9 7 2630J 450 NJ 450 3460J 280 4000J 50 NJ 50 NJ 50 5050J
-preplace netloc axis_broadcaster_0_M01_AXIS 1 4 7 940 80 N 80 N 80 N 80 N 80 N 80 2950
-preplace netloc axis_broadcaster_0_M00_AXIS 1 6 5 1690 70 N 70 N 70 N 70 2960
-preplace netloc axis_broadcaster_0_M02_AXIS 1 3 8 590 60 890 70 N 70 1660 90 N 90 N 90 N 90 2940
-preplace netloc image_loader_module_0_x 1 8 2 2280 440 2590
-preplace netloc S00_AXI_0_1 1 0 12 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 1960J 490 NJ 490 NJ 490 NJ 490 3510J
-preplace netloc axi_interconnect_0_M00_AXI 1 12 1 4060 480n
-preplace netloc axi_interconnect_0_M05_AXI 1 5 8 1220 30 1650 40 2000 30 N 30 N 30 N 30 N 30 3860
-preplace netloc axi_interconnect_0_M06_AXI 1 12 3 4050 230 N 230 N
-preplace netloc axi_interconnect_0_M07_AXI 1 4 9 920 40 N 40 1660 30 1990 40 N 40 N 40 N 40 N 40 3850
-preplace netloc axi_interconnect_0_M08_AXI 1 3 10 570 40 910 50 N 50 1650 60 N 60 N 60 N 60 2940 50 N 50 3840
-preplace netloc axi_interconnect_0_M02_AXI 1 6 7 1670 20 N 20 N 20 N 20 N 20 N 20 3870
-preplace netloc axi_interconnect_0_M09_AXI 1 10 3 3020 60 N 60 3830
-preplace netloc axi_interconnect_0_M01_AXI 1 7 6 2010 10 N 10 N 10 N 10 N 10 3880
-levelinfo -pg 1 0 110 280 450 720 1060 1450 1840 2160 2470 2790 3170 3680 4210 4590 4900 5080
-pagesize -pg 1 -db -bbox -sgen -160 0 5220 1120
+preplace port s_axi_0 -pg 1 -lvl 0 -x 0 -y 1180 -defaultsOSRD
+preplace port start_0 -pg 1 -lvl 0 -x 0 -y 1730 -defaultsOSRD
+preplace port s_axi_aresetn_0 -pg 1 -lvl 0 -x 0 -y 1220 -defaultsOSRD
+preplace port s_axi_aclk_0 -pg 1 -lvl 0 -x 0 -y 1200 -defaultsOSRD
+preplace port z_tValid_0 -pg 1 -lvl 6 -x 1800 -y 940 -defaultsOSRD
+preplace portBus z_tdata_0 -pg 1 -lvl 6 -x 1800 -y 960 -defaultsOSRD
+preplace inst axi4_lite_register_m_0 -pg 1 -lvl 3 -x 860 -y 1090 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 2 -x 410 -y 1420 -defaultsOSRD
+preplace inst axi_timebase_wdt_0 -pg 1 -lvl 3 -x 860 -y 1800 -defaultsOSRD
+preplace inst axis_broadcaster_0 -pg 1 -lvl 4 -x 1210 -y 1590 -defaultsOSRD
+preplace inst image_loader_module_0 -pg 1 -lvl 3 -x 860 -y 1580 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 100 -y 730 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 2 -x 410 -y 150 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 1 -x 100 -y 370 -defaultsOSRD
+preplace inst axi4_lite_layer_conn_0 -pg 1 -lvl 2 -x 410 -y 660 -defaultsOSRD
+preplace inst axi4_lite_final_outp_0 -pg 1 -lvl 3 -x 860 -y 290 -defaultsOSRD
+preplace inst hardmax_0 -pg 1 -lvl 5 -x 1600 -y 950 -defaultsOSRD
+preplace inst perceptron_0 -pg 1 -lvl 5 -x 1600 -y 1300 -defaultsOSRD
+preplace inst perceptron_2 -pg 1 -lvl 5 -x 1600 -y 1500 -defaultsOSRD
+preplace inst perceptron_3 -pg 1 -lvl 5 -x 1600 -y 1730 -defaultsOSRD
+preplace inst perceptron_4 -pg 1 -lvl 3 -x 860 -y 710 -defaultsOSRD
+preplace netloc axi4_lite_final_outp_0_a_tdata 1 3 2 1060 820 1470J
+preplace netloc axi4_lite_final_outp_0_a_tvalid 1 3 2 1050 830 1460J
+preplace netloc axi4_lite_layer_conn_0_a_tdata 1 2 1 N 650
+preplace netloc axi4_lite_layer_conn_0_a_tvalid 1 2 1 N 670
+preplace netloc axi4_lite_register_m_0_bias_0 1 3 2 NJ 910 1450
+preplace netloc axi4_lite_register_m_0_bias_1 1 2 2 710 1330 1010
+preplace netloc axi4_lite_register_m_0_bias_2 1 1 1 200 370n
+preplace netloc axi4_lite_register_m_0_bias_3 1 3 2 NJ 950 1410
+preplace netloc axi4_lite_register_m_0_bias_4 1 3 2 1050 1320 1360J
+preplace netloc axi4_lite_register_m_0_control 1 2 2 720 1340 1000
+preplace netloc perceptron_0_a_tdata 1 1 5 220 220 670J 850 NJ 850 NJ 850 1720
+preplace netloc perceptron_0_done 1 1 5 210 10 NJ 10 NJ 10 NJ 10 1760
+preplace netloc perceptron_1_done 1 2 2 700 1380 1020
+preplace netloc perceptron_2_a_tdata 1 1 5 240 230 660J 570 1040J 840 NJ 840 1750
+preplace netloc perceptron_2_done 1 1 5 230 1090 620J 1360 1040J 1340 1380J 1180 1740
+preplace netloc perceptron_3_a_tdata 1 1 5 220 1120 610J 1350 NJ 1350 1390J 1190 1730
+preplace netloc perceptron_3_done 1 1 5 240 1100 600J 1390 1050J 1330 1370J 1170 1770
+preplace netloc xlconstant_0_dout 1 1 1 180 730n
+preplace netloc xlconstant_1_dout 1 2 1 680 150n
+preplace netloc start_0_1 1 0 5 NJ 1730 NJ 1730 660 1410 NJ 1410 1460
+preplace netloc s_axi_aresetn_0_1 1 0 5 NJ 1220 210 1110 650 1460 1030 1460 1420
+preplace netloc s_axi_aclk_0_1 1 0 5 NJ 1200 190 210 640 1480 1010 1480 1400
+preplace netloc hardmax_0_z_tdata 1 5 1 NJ 960
+preplace netloc hardmax_0_z_tValid 1 5 1 NJ 940
+preplace netloc perceptron_4_x_tready 1 2 1 N 690
+preplace netloc perceptron_4_a_tdata 1 2 2 690 1400 1030
+preplace netloc image_loader_module_0_x 1 3 1 1050 1570n
+preplace netloc axis_broadcaster_0_M01_AXIS 1 4 1 1450 1450n
+preplace netloc axi_interconnect_0_M08_AXI 1 2 3 N 1490 NJ 1490 1380J
+preplace netloc axi_interconnect_0_M02_AXI 1 2 3 N 1370 1060J 1360 1440J
+preplace netloc axi_interconnect_0_M06_AXI 1 2 1 580 70n
+preplace netloc axi_interconnect_0_M09_AXI 1 2 1 560 1510n
+preplace netloc axi_interconnect_0_M01_AXI 1 2 1 570 1350n
+preplace netloc axis_broadcaster_0_M00_AXIS 1 4 1 1430 1250n
+preplace netloc S00_AXI_0_1 1 0 2 NJ 1180 NJ
+preplace netloc axi_interconnect_0_M07_AXI 1 2 3 N 1470 NJ 1470 NJ
+preplace netloc axis_broadcaster_0_M02_AXIS 1 4 1 1370 1610n
+preplace netloc axi_interconnect_0_M00_AXI 1 2 1 630 1060n
+preplace netloc axi_interconnect_0_M03_AXI 1 2 1 590 710n
+levelinfo -pg 1 0 100 410 860 1210 1600 1800
+pagesize -pg 1 -db -bbox -sgen -160 0 1940 1890
 "
 }
 0

@@ -6,7 +6,7 @@ Starting static elaboration
 Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 27 differs from formal bit length 30 for port 'm_axi_arprot' [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/sim/design_3.v:2369]
 WARNING: [VRFC 10-3091] actual bit length 27 differs from formal bit length 30 for port 'm_axi_awprot' [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/sim/design_3.v:2373]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'BRAM_PORTB_we' [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ipshared/1e62/perceptron.v:78]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'BRAM_PORTB_we' [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ipshared/df32/perceptron.v:86]
 WARNING: [VRFC 10-5021] port 'timebase_interrupt' is not connected on this instance [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/sim/design_3.v:619]
 Completed static elaboration
 Starting simulation data flow analysis
@@ -125,9 +125,9 @@ Compiling architecture mult_gen_0_arch of entity xil_defaultlib.mult_gen_0 [mult
 Compiling module xil_defaultlib.ila_0
 Compiling module xil_defaultlib.perceptron
 Compiling module xil_defaultlib.design_3_perceptron_0_0
-Compiling module xil_defaultlib.design_3_perceptron_1_0
 Compiling module xil_defaultlib.design_3_perceptron_2_0
 Compiling module xil_defaultlib.design_3_perceptron_3_0
+Compiling module xil_defaultlib.design_3_perceptron_4_0
 Compiling module xlconstant_v1_1_6.xlconstant_v1_1_6_xlconstant
 Compiling module xil_defaultlib.design_3_xlconstant_0_0
 Compiling module xlconstant_v1_1_6.xlconstant_v1_1_6_xlconstant(CON...

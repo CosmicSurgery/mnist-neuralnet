@@ -35,12 +35,14 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/p
 INFO: [VRFC 10-311] analyzing module design_3_image_loader_module_0_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ip/design_3_perceptron_0_0/src/ila_0/sim/ila_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ila_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ipshared/1e62/perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ipshared/df32/perceptron.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module perceptron
+WARNING: [VRFC 10-3248] data object 'P' is already declared [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ipshared/df32/perceptron.v:68]
+WARNING: [VRFC 10-3703] second declaration of 'P' ignored [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ipshared/df32/perceptron.v:68]
+WARNING: [VRFC 10-3248] data object 'sum' is already declared [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ipshared/df32/perceptron.v:69]
+WARNING: [VRFC 10-3703] second declaration of 'sum' ignored [C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ipshared/df32/perceptron.v:69]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ip/design_3_perceptron_0_0/sim/design_3_perceptron_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_3_perceptron_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ip/design_3_perceptron_1_0/sim/design_3_perceptron_1_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_3_perceptron_1_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ip/design_3_perceptron_2_0/sim/design_3_perceptron_2_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_3_perceptron_2_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/10_9/10_9.ip_user_files/bd/design_3/ip/design_3_perceptron_3_0/sim/design_3_perceptron_3_0.v" into library xil_defaultlib

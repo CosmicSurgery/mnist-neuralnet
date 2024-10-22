@@ -11,34 +11,34 @@
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
       <ZoomEndTime time="1025fs"></ZoomEndTime>
-      <Cursor1Time time="512fs"></Cursor1Time>
+      <Cursor1Time time="514fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="333"></NameColumnWidth>
-      <ValueColumnWidth column_width="187"></ValueColumnWidth>
+      <ValueColumnWidth column_width="294"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="3" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="design_1_i/image_loader_module_0_x_tdata" type="array">
+   <wvobject fp_name="design_1_i/axi4_lite_final_outp_0_a_tvalid" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/image_loader_module_0_x_tdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">image_loader_module_0_x_tdata[31:0]</obj_property>
+      <obj_property name="ElementShortName">design_1_i/axi4_lite_final_outp_0_a_tvalid</obj_property>
+      <obj_property name="ObjectShortName">axi4_lite_final_outp_0_a_tvalid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/perceptron_1_a_tdata" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/perceptron_1_a_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">perceptron_1_a_tdata[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="design_1_i/image_loader_module_0_x_tvalid" type="logic">
+   <wvobject fp_name="design_1_i/perceptron_1_done" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/image_loader_module_0_x_tvalid</obj_property>
-      <obj_property name="ObjectShortName">image_loader_module_0_x_tvalid</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/perceptron_0_x_tready" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/perceptron_0_x_tready</obj_property>
-      <obj_property name="ObjectShortName">perceptron_0_x_tready</obj_property>
+      <obj_property name="ElementShortName">design_1_i/perceptron_1_done</obj_property>
+      <obj_property name="ObjectShortName">perceptron_1_done</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

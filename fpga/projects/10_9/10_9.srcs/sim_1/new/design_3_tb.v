@@ -127,8 +127,8 @@ module design_3_tb();
         
         img_file = $fopen("img.mif", "r");
         weight_0_0_file = $fopen("weight_0_0.mif", "r");
-        weight_0_1_file = $fopen("weight0_1.mif", "r");
-        weight_0_2_file = $fopen("weight0_2.mif", "r");
+        weight_0_1_file = $fopen("weight_0_1.mif", "r");
+        weight_0_2_file = $fopen("weight_0_2.mif", "r");
         weight_1_0_file = $fopen("weight_1_0.mif", "r");
         bias_0_file = $fopen("bias_0.mif", "r");
         bias_1_file = $fopen("bias_1.mif", "r");
@@ -155,11 +155,11 @@ module design_3_tb();
             status = $fscanf(weight_1_0_file, "%b\n", data_in);
             axi_write(percept_1_addr + ( i *4), data_in);
             if (i ==1) begin
-            status = $fscanf(bias_1_file, "%b\n", data_in);
-            axi_write(bias_register_addr + ( i *4), data_in);
+                status = $fscanf(bias_1_file, "%b\n", data_in);
+                axi_write(bias_register_addr + ( i *4), data_in);
             end else begin
-            status = $fscanf(bias_0_file, "%b\n", data_in);
-            axi_write(bias_register_addr + ( i *4), data_in);
+                status = $fscanf(bias_0_file, "%b\n", data_in);
+                axi_write(bias_register_addr + ( i *4), data_in);
             end
         end
         

@@ -49,7 +49,7 @@
 #include "platform.h"
 #include "xil_printf.h"
 #include "xil_io.h"
-//#include "img.h"
+#include "img.h"
 #include "xgpio.h"
 #include "sleep.h"
 #include "xparameters.h"
@@ -74,25 +74,30 @@ int main()
 	XGpio_SetDataDirection(&gpio0, 1, 0x00000000);			// OUTPUT
 	XGpio_SetDataDirection(&gpio0, 2, 0xFFFFFFFF);			// INPUT
 	XGpio_SetDataDirection(&gpio1, 1, 0xFFFFFFFF);			// INPUT
+	XGpio_SetDataDirection(&gpio1, 2, 0xFFFFFFFF);			// INPUT
 
 	UINTPTR AXI4_LITE_REGISTER_M_0 = 0x60000000;
 	UINTPTR IMAGE_LOADER = 0x40000000;
 	UINTPTR PERCEPTRON_0 = 0x42C00000;
 	UINTPTR PERCEPTRON_1 = 0x43C00000;
+	UINTPTR PERCEPTRON_2 = 0x43C20000;
+	UINTPTR PERCEPTRON_3 = 0x43C30000;
 	UINTPTR FINAL_OUTPUT = 0x43C10000;
 	UINTPTR addr;
 
 	uint32_t read_value;
-	uint32_t a_tdata;
+	uint32_t z_tdata;
+	uint32_t z_tValid;
 	uint32_t done;
 	uint32_t write_value;
 
 	print("Test Initial GPIO values\n\r");
 
 	done = XGpio_DiscreteRead(&gpio0, 2);
-	a_tdata = XGpio_DiscreteRead(&gpio1, 1);
+	z_tdata = XGpio_DiscreteRead(&gpio1, 1);
+	z_tValid = XGpio_DiscreteRead(&gpio1, 2);
 
-	printf("0x%08X - 0x%08X\n", a_tdata, done);
+	printf("0x%lu - 0x%lu - 0x%lu\n", z_tdata, done, z_tValid);
 
 	addr = AXI4_LITE_REGISTER_M_0;
 	print("Check AXI4_LITE_REGISTER_M_0\n\r");
@@ -106,8 +111,12 @@ int main()
 	addr = IMAGE_LOADER;
 	print("Check IMAGE_LOADER\n\r");
 	for (int i=0; i<784;i++){
-		write_value = 0x70000000;
+		write_value = bin_img[i];
 		Xil_Out32(addr, write_value);
+		read_value = Xil_In32(addr);
+		if (read_value != write_value | i ==0){
+			printf("FAIL 0x%lu, 0x%lu", read_value, write_value);
+		}
 		addr = addr+4;
 	}
 
@@ -115,19 +124,75 @@ int main()
 	printf("Check PERCEPTRON_0\n\r");
 
 	for (int i=0; i<784;i++){
-		write_value = 0x00000001;
+		write_value = weights_0_0[i];
 		Xil_Out32(addr, write_value);
+		read_value = Xil_In32(addr);
+		if (read_value != write_value){
+			printf("FAIL 0x%08X, 0x%08X", read_value, write_value);
+		}
 		addr = addr+4;
 	}
 
 	addr = PERCEPTRON_1;
 	printf("Check PERCEPTRON_1\n\r");
 
-	for (int i=0; i<784;i++){
-		write_value = 0x04000000;
+	for (int i=0; i<3;i++){
+		write_value = weights_1_0[i];
 		Xil_Out32(addr, write_value);
 		addr = addr+4;
+		read_value = Xil_In32(addr);
+		if (read_value != write_value){
+			printf("FAIL 0x%08X, 0x%08X", read_value, write_value);
+		}
 	}
+
+	addr = PERCEPTRON_2;
+	printf("Check PERCEPTRON_2\n\r");
+
+	for (int i=0; i<784;i++){
+		write_value = weights_0_1[i];
+		Xil_Out32(addr, write_value);
+		read_value = Xil_In32(addr);
+		if (read_value != write_value){
+			printf("FAIL");
+		}
+		addr = addr+4;
+	}
+
+	addr = PERCEPTRON_3;
+	printf("Check PERCEPTRON_3\n\r");
+
+	for (int i=0; i<784;i++){
+		write_value = weights_0_2[i];
+		Xil_Out32(addr, write_value);
+		read_value = Xil_In32(addr);
+		if (read_value != write_value){
+			printf("FAIL");
+		}
+		addr = addr+4;
+	}
+
+	addr = AXI4_LITE_REGISTER_M_0;
+	printf("Check Bias registers \n\r");
+	write_value = bias_0[0];
+	Xil_Out32(addr, write_value);
+	read_value = Xil_In32(addr);
+	printf("test 0x%08X, 0x%08X", read_value, write_value);
+
+	addr = addr +4;
+	Xil_Out32(addr, bias_1);
+	read_value = Xil_In32(addr);
+	printf("test 0x%08X, 0x%08X", read_value, write_value);
+
+	addr = addr +4;
+	Xil_Out32(addr, bias_0[1]);
+	read_value = Xil_In32(addr);
+	printf("test 0x%08X, 0x%08X", read_value, write_value);
+
+	addr = addr +4;
+	Xil_Out32(addr, bias_0[2]);
+	read_value = Xil_In32(addr);
+	printf("test 0x%08X, 0x%08X", read_value, write_value);
 
 	read_value = Xil_In32(FINAL_OUTPUT);
 	printf("Read value = 0x%08X", read_value);
@@ -141,10 +206,27 @@ int main()
 	usleep(100000);
 
 	done = XGpio_DiscreteRead(&gpio0, 2);
-	a_tdata = XGpio_DiscreteRead(&gpio1, 1);
+	z_tdata = XGpio_DiscreteRead(&gpio1, 1);
+	z_tValid = XGpio_DiscreteRead(&gpio1, 2);
 
 
-	printf("0x%08X - 0x%08X\n", a_tdata, done);
+	printf("0x%lu - 0x%lu - 0x%lu\n", z_tdata, done, z_tValid);
+
+	usleep(10000000);
+
+	done = XGpio_DiscreteRead(&gpio0, 2);
+	z_tdata = XGpio_DiscreteRead(&gpio1, 1);
+	z_tValid = XGpio_DiscreteRead(&gpio1, 2);
+
+//	while (z_tValid != 1)
+//		printf(".");
+
+	printf("0x%lu - 0x%lu - 0x%lu\n", z_tdata, done, z_tValid);
+
+	for (int i = 0; i <=10; i++){
+		read_value = Xil_In32(FINAL_OUTPUT + i*4);
+		printf("Read value = 0x%08X\n", read_value);
+	}
 
     cleanup_platform();
     return 0;

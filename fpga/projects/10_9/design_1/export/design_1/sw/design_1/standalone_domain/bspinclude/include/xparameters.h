@@ -243,6 +243,16 @@
 #define XPAR_AXI4_LITE_FINAL_OUTP_0_HIGHADDR 0x43C1FFFF
 
 
+/* Definitions for peripheral PERCEPTRON_2 */
+#define XPAR_PERCEPTRON_2_BASEADDR 0x43C20000
+#define XPAR_PERCEPTRON_2_HIGHADDR 0x43C2FFFF
+
+
+/* Definitions for peripheral PERCEPTRON_3 */
+#define XPAR_PERCEPTRON_3_BASEADDR 0x43C30000
+#define XPAR_PERCEPTRON_3_HIGHADDR 0x43C3FFFF
+
+
 /******************************************************************/
 
 /* Definitions for driver GPIO */
@@ -500,6 +510,29 @@
 
 /******************************************************************/
 
+/* Definitions for driver WDTTB */
+#define XPAR_XWDTTB_NUM_INSTANCES 1U
+
+/* Definitions for peripheral AXI_TIMEBASE_WDT_0 */
+#define XPAR_AXI_TIMEBASE_WDT_0_DEVICE_ID 0U
+#define XPAR_AXI_TIMEBASE_WDT_0_BASEADDR 0x42600000U
+#define XPAR_AXI_TIMEBASE_WDT_0_HIGHADDR 0x4260FFFFU
+#define XPAR_AXI_TIMEBASE_WDT_0_ENABLE_WINDOW_WDT 0U
+#define XPAR_AXI_TIMEBASE_WDT_0_MAX_COUNT_WIDTH 0U
+#define XPAR_AXI_TIMEBASE_WDT_0_SST_COUNT_WIDTH 0U
+#define XPAR_AXI_TIMEBASE_WDT_0_IS_PL 1U
+
+/* Canonical definitions for peripheral AXI_TIMEBASE_WDT_0 */
+#define XPAR_WDTTB_0_DEVICE_ID 0U
+#define XPAR_WDTTB_0_BASEADDR 0x42600000U
+#define XPAR_WDTTB_0_HIGHADDR 0x4260FFFFU
+#define XPAR_WDTTB_0_ENABLE_WINDOW_WDT 0U
+#define XPAR_WDTTB_0_MAX_COUNT_WIDTH 0U
+#define XPAR_WDTTB_0_SST_COUNT_WIDTH 0U
+#define XPAR_WDTTB_0_IS_PL 1U
+
+
+/******************************************************************/
 /* Definitions for driver XADCPS */
 #define XPAR_XADCPS_NUM_INSTANCES 1
 
