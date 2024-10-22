@@ -1,0 +1,103 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Tue Oct 22 14:32:59 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_axi4_lite_register_m_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_axi4_lite_register_m_0_0 (xilinx.com:user:axi4_lite_register_module:1.0) from (Rev. 6) to (Rev. 7)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_axi4_lite_register_m_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'bias_20'
+
+-Upgrade has removed port 'bias_21'
+
+-Upgrade has removed port 'bias_22'
+
+-Upgrade has removed port 'bias_23'
+
+-Upgrade has removed port 'bias_24'
+
+-Upgrade has removed port 'bias_25'
+
+-Upgrade has removed port 'bias_26'
+
+-Upgrade has removed port 'bias_27'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Tue Oct 22 14:32:59 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_axi4_lite_layer_conn_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_axi4_lite_layer_conn_0_0 (xilinx.com:user:axi4_lite_layer_connector:1.0) from (Rev. 8) to (Rev. 9)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_axi4_lite_layer_conn_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'a10'
+
+-Upgrade has removed port 'a10done'
+
+-Upgrade has removed port 'a11'
+
+-Upgrade has removed port 'a11done'
+
+-Upgrade has removed port 'a12'
+
+-Upgrade has removed port 'a12done'
+
+-Upgrade has removed port 'a13'
+
+-Upgrade has removed port 'a13done'
+
+-Upgrade has removed port 'a14'
+
+-Upgrade has removed port 'a14done'
+
+-Upgrade has removed port 'a15'
+
+-Upgrade has removed port 'a15done'
+
+-Upgrade has removed port 'a16'
+
+-Upgrade has removed port 'a16done'
+
+-Upgrade has removed port 'a17'
+
+-Upgrade has removed port 'a17done'
+
+
