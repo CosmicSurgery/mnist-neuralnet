@@ -1,0 +1,78 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Block Memory Generator module test_read_write_file_tb.uut.design_1_i.image_loader_module_0.inst.IMG_LOADER.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_read_write_file_tb.uut.design_1_i.perceptron_0.inst.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_read_write_file_tb.uut.design_1_i.perceptron_1.inst.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_read_write_file_tb.uut.design_1_i.perceptron_2.inst.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_4 collision detected at time: 1495000, Instance: test_read_write_file_tb.uut.design_1_i.image_loader_module_0.inst.IMG_LOADER.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 56375000, Instance: test_read_write_file_tb.uut.design_1_i.perceptron_0.inst.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 111255000, Instance: test_read_write_file_tb.uut.design_1_i.perceptron_1.inst.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 166135000, Instance: test_read_write_file_tb.uut.design_1_i.perceptron_2.inst.WEIGHT_MEMORY.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+$finish called at time : 229485 ns : File "C:/git_repos/mnist_neuralnet/fpga/projects/validate_math/validate_math.srcs/sim_1/new/test_read_write_file_tb.v" Line 213

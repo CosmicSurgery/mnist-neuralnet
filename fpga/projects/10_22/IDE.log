@@ -9,3 +9,79 @@
 15:16:58 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
 15:59:44 INFO  : Checking for BSP changes to sync application flags for project 'plnn_app'...
 16:00:04 INFO  : Checking for BSP changes to sync application flags for project 'plnn_app'...
+16:00:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:00:37 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+16:00:37 INFO  : 'jtag frequency' command is executed.
+16:00:37 INFO  : Context for 'APU' is selected.
+16:00:37 INFO  : System reset is completed.
+16:00:40 INFO  : 'after 3000' command is executed.
+16:00:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+16:00:42 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/_ide/bitstream/PL_NN_wrapper.bit"
+16:00:42 INFO  : Context for 'APU' is selected.
+16:00:42 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn/export/plnn/hw/PL_NN_wrapper.xsa'.
+16:00:42 INFO  : 'configparams force-mem-access 1' command is executed.
+16:00:42 INFO  : Context for 'APU' is selected.
+16:00:42 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/_ide/psinit/ps7_init.tcl' is done.
+16:00:42 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+16:00:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/_ide/bitstream/PL_NN_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn/export/plnn/hw/PL_NN_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+16:00:42 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+16:01:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:01:05 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+16:01:05 INFO  : 'jtag frequency' command is executed.
+16:01:05 INFO  : Context for 'APU' is selected.
+16:01:05 INFO  : System reset is completed.
+16:01:08 INFO  : 'after 3000' command is executed.
+16:01:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+16:01:09 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/_ide/bitstream/PL_NN_wrapper.bit"
+16:01:09 INFO  : Context for 'APU' is selected.
+16:01:09 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn/export/plnn/hw/PL_NN_wrapper.xsa'.
+16:01:09 INFO  : 'configparams force-mem-access 1' command is executed.
+16:01:09 INFO  : Context for 'APU' is selected.
+16:01:09 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/_ide/psinit/ps7_init.tcl' is done.
+16:01:10 INFO  : 'ps7_init' command is executed.
+16:01:10 INFO  : 'ps7_post_config' command is executed.
+16:01:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:01:10 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/Debug/plnn_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:01:10 INFO  : 'configparams force-mem-access 0' command is executed.
+16:01:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/_ide/bitstream/PL_NN_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn/export/plnn/hw/PL_NN_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/Debug/plnn_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:01:10 INFO  : Memory regions updated for context APU
+16:01:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:01:10 INFO  : 'con' command is executed.
+16:01:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:01:10 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\10_22\.sdk\launch_scripts\single_application_debug\systemdebugger_plnn_app_system_standalone.tcl'
