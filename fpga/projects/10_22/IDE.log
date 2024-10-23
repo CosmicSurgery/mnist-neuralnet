@@ -85,3 +85,4 @@ con
 ----------------End of Script----------------
 
 16:01:10 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\10_22\.sdk\launch_scripts\single_application_debug\systemdebugger_plnn_app_system_standalone.tcl'
+16:13:01 INFO  : Disconnected from the channel tcfchan#4.
