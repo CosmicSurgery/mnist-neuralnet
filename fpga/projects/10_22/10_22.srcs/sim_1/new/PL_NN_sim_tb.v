@@ -227,6 +227,10 @@ module PL_NN_sim_tb();
             if (i < 10) begin
                 status = $fscanf(bias_0_file, "%b\n", data_in);
                 axi_write(axi_register + ( i *4), data_in);
+                for (j = 10; j < 20; j = j + 1) begin
+                    status = $fscanf(weights[j], "%b\n", data_in);
+                    axi_write(all_perceptrons[j] + ( i *4), data_in);
+                end
             end else if (i < 20) begin
                 status = $fscanf(bias_1_file, "%b\n", data_in);
                 axi_write(axi_register + ( i *4), data_in);
