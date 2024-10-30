@@ -53,7 +53,8 @@ module axi4_lite_final_output (
     output wire a8_tready,
     output wire a9_tready,
     output reg [31:0]x_tdata,
-    output reg x_tvalid
+    output reg x_tvalid,
+    input wire x_tready
 
 );
 
@@ -79,27 +80,63 @@ reg axi_awready;
 reg axi_wready;
 reg axi_bvalid;
 
-wire [4:0] raddr;
+wire [4:0] raddr;				// Need 18 addresses, 5 bits
+reg status;
+wire posedge_done;
+reg done_reg;
+assign posedge_done = done & ~done_reg;
 
 assign raddr = s_axil_araddr[6:2];
 
 // Read address decoding
 wire rd_en = s_axil_arvalid & axi_arready & ~axi_rvalid;
 
-// internal registers
-wire [31:0] a [9:0];
-assign a[0] = a0_tdata;
-assign a[1] = a1_tdata;
-assign a[2] = a2_tdata;
-assign a[3] = a3_tdata;
-assign a[4] = a4_tdata;
-assign a[5] = a5_tdata;
-assign a[6] = a6_tdata;
-assign a[7] = a7_tdata;
-assign a[8] = a8_tdata;
-assign a[9] = a9_tdata;
+reg [31:0] a [9:0];
+always @(posedge aclk) begin
+    done_reg <= done;
+    if (!aresetn) begin
+        addr <= 0;
+        x_tvalid <=0;
+        x_tdata <= 32'd0;
+        status <= 0;
+	end
+	else if (posedge_done & ~x_tvalid) begin
+        a[0] <= a0_tdata;
+        a[1] <= a1_tdata;
+        a[2] <= a2_tdata;
+        a[3] <= a3_tdata;
+        a[4] <= a4_tdata;
+        a[5] <= a5_tdata;
+        a[6] <= a6_tdata;
+        a[7] <= a7_tdata;
+        a[8] <= a8_tdata;
+        a[9] <= a9_tdata;
+        status <= 1;
+    end
+    if (status) begin
+       if (x_tready & addr == 5'd0) begin
+           x_tdata <= a[addr];
+           x_tvalid <= 1;
+           addr <= addr + 1;
+           status <= 0;
+       end else if (addr == 5'd0) begin
+           x_tvalid <= 1;
+           status <= 1;
+       end else begin
+           addr <= 0;
+           status <= 1;
+       end
+    end	   
+    else if (x_tvalid & x_tready & addr < 'd10) begin
+        x_tdata <= a[addr];
+        addr <= addr + 1;
+    end
+    else if (addr == 'd10) begin
+        x_tvalid <= 0;
+    end
+end
 
-// Read logic
+// Axi Read logic
 always @(posedge aclk) begin
     if (~aresetn) begin
         axi_rdata <= 32'h0;
@@ -152,22 +189,6 @@ assign s_axil_arready = axi_arready;
 assign s_axil_rdata = axi_rdata;
 assign s_axil_rresp = 2'b00;  // OKAY response
 assign s_axil_rvalid = axi_rvalid;
-
-
-always @(posedge aclk) begin
-    if (!aresetn) begin
-        addr <= 0;
-        x_tvalid <=0;
-        x_tdata <= 32'd0;
-	end
-    else if (done & addr < 'd10) begin
-        x_tvalid <= 1;
-        x_tdata <= a[addr];
-	    addr <= addr + 1;
-    end
-    else if (addr >= 'd10)
-        x_tvalid <= 0;
-end
 
 
 endmodule

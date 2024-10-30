@@ -21,26 +21,40 @@
 
 
 module hardmax (
+    input wire start,
     input clk,
     input rstn,
     input a_tValid,
+    output reg a_tready,
     input [31:0]a_tdata,
     output reg z_tValid,
     output [3:0]z_tdata
     );
     
+    reg start_reg;
     reg [31:0]maxA;
     reg [31:0]compA;
-    reg [3:0]maxElem = 0;
-    reg [3:0]compElem = 0;
-    reg [3:0]z_tdata;
-        
+    reg [3:0]maxElem;
+    reg [3:0]compElem;
+    reg [3:0]z_tdata;  
+    assign pos_edge_start = start & !start_reg;
+    
     always @(posedge clk) begin
+        start_reg <= start;
         if (rstn ==0) begin 
             z_tValid <= 1'b0;
             z_tdata <= 0;
+            a_tready <= 0;
+            maxElem <= 0;
+            compElem <= 0;
+        end else if (pos_edge_start) begin
+            z_tValid <= 1'b0;
+            z_tdata <= 0;
+            a_tready <= 1;
+            maxElem <= 0;
+            compElem <= 0;
         end
-        else if (a_tValid & !z_tValid) begin
+        else if (a_tValid & a_tready) begin
             if (compElem == 0) begin
                 maxA <= a_tdata;
             end else begin

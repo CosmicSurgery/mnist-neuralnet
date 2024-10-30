@@ -207,7 +207,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.ACLK.ASSOCIATED_BUSIF">s_axil:a0:a1:a2:a3:a4:a5:a6:a7:a8:a9</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.ACLK.ASSOCIATED_BUSIF">s_axil:a0:a1:a2:a3:a4:a5:a6:a7:a8:a9:x</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_RESET</spirit:name>
@@ -535,6 +535,38 @@
         </spirit:portMap>
       </spirit:portMaps>
     </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>x</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>x_tdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>x_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>x_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
   </spirit:busInterfaces>
   <spirit:memoryMaps>
     <spirit:memoryMap>
@@ -562,7 +594,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b193d37b</spirit:value>
+            <spirit:value>5d5acbb9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -578,7 +610,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b193d37b</spirit:value>
+            <spirit:value>5d5acbb9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1430,6 +1462,19 @@
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
+      <spirit:port>
+        <spirit:name>x_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
     </spirit:ports>
   </spirit:model>
   <spirit:choices>
@@ -1445,7 +1490,7 @@
       <spirit:file>
         <spirit:name>axi4_lite_final_output.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_b193d37b</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_5d5acbb9</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1501,8 +1546,8 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>7</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-10-30T19:04:01Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>8</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-10-30T20:49:05Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@61c7739b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
@@ -1587,14 +1632,41 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@50df435_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@111fc3fb_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2526e9c4_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a78af1c_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c7b3646_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6947d130_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@201f3b25_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ed21d99_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dc2d20e_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@737d309a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4edaf9d8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1271534f_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44a48598_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e64a258_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33427017_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a567f98_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@509bbdb8_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21e878af_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ad78b10_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6be7876b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@468eb287_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d0dae7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bfbcaef_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@784cd753_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@90c2a45_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c28749b_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ed4ab8d_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d5d1643_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76a1693_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c2d52a_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/source/axi4_lite_final_output/rtl</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="e16682da"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="eb4180ec"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="1d37552a"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b112df5f"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="7bf63a55"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3e1c718f"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="7c4e3dd1"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="e81de1e3"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
