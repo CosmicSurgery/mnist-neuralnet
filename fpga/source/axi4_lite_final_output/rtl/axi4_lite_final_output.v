@@ -22,33 +22,53 @@ module axi4_lite_final_output (
     output wire s_axil_rvalid,
     input wire s_axil_rready,
 
-    input wire [31:0] a_2_0,
-    input wire [31:0] a_2_1,
-    input wire [31:0] a_2_2,
-    input wire [31:0] a_2_3,
-    input wire [31:0] a_2_4,
-    input wire [31:0] a_2_5,
-    input wire [31:0] a_2_6,
-    input wire [31:0] a_2_7,
-    input wire [31:0] a_2_8,
-    input wire [31:0] a_2_9,
-    input wire a0done,
-    input wire a1done,
-    input wire a2done,
-    input wire a3done,
-    input wire a4done,
-    input wire a5done,
-    input wire a6done,
-    input wire a7done,
-    input wire a8done,
-    input wire a9done,
-    output reg [31:0]a_tdata,
-    output reg a_tvalid
+    input wire [31:0]a0_tdata,
+    input wire [31:0]a1_tdata,
+    input wire [31:0]a2_tdata,
+    input wire [31:0]a3_tdata,
+    input wire [31:0]a4_tdata,
+    input wire [31:0]a5_tdata,
+    input wire [31:0]a6_tdata,
+    input wire [31:0]a7_tdata,
+    input wire [31:0]a8_tdata,
+    input wire [31:0]a9_tdata,
+    input wire a0_tvalid,
+    input wire a1_tvalid,
+    input wire a2_tvalid,
+    input wire a3_tvalid,
+    input wire a4_tvalid,
+    input wire a5_tvalid,
+    input wire a6_tvalid,
+    input wire a7_tvalid,
+    input wire a8_tvalid,
+    input wire a9_tvalid,
+    output wire a0_tready,
+    output wire a1_tready,
+    output wire a2_tready,
+    output wire a3_tready,
+    output wire a4_tready,
+    output wire a5_tready,
+    output wire a6_tready,
+    output wire a7_tready,
+    output wire a8_tready,
+    output wire a9_tready,
+    output reg [31:0]x_tdata,
+    output reg x_tvalid
 
 );
 
 wire done;
-assign done = a0done & a1done & a2done & a3done & a4done & a5done & a6done & a7done & a8done & a9done;
+assign done = a0_tvalid & a1_tvalid & a2_tvalid & a3_tvalid & a4_tvalid & a5_tvalid & a6_tvalid & a7_tvalid & a8_tvalid & a9_tvalid;
+assign a0_tready = ~x_tvalid;
+assign a1_tready = ~x_tvalid;
+assign a2_tready = ~x_tvalid;
+assign a3_tready = ~x_tvalid;
+assign a4_tready = ~x_tvalid;
+assign a5_tready = ~x_tvalid;
+assign a6_tready = ~x_tvalid;
+assign a7_tready = ~x_tvalid;
+assign a8_tready = ~x_tvalid;
+assign a9_tready = ~x_tvalid;
 reg [3:0]addr;				// Need 18 addresses, 5 bits
 
 // AXI4-Lite interface registers
@@ -68,16 +88,16 @@ wire rd_en = s_axil_arvalid & axi_arready & ~axi_rvalid;
 
 // internal registers
 wire [31:0] a [9:0];
-assign a[0] = a_2_0;
-assign a[1] = a_2_1;
-assign a[2] = a_2_2;
-assign a[3] = a_2_3;
-assign a[4] = a_2_4;
-assign a[5] = a_2_5;
-assign a[6] = a_2_6;
-assign a[7] = a_2_7;
-assign a[8] = a_2_8;
-assign a[9] = a_2_9;
+assign a[0] = a0_tdata;
+assign a[1] = a1_tdata;
+assign a[2] = a2_tdata;
+assign a[3] = a3_tdata;
+assign a[4] = a4_tdata;
+assign a[5] = a5_tdata;
+assign a[6] = a6_tdata;
+assign a[7] = a7_tdata;
+assign a[8] = a8_tdata;
+assign a[9] = a9_tdata;
 
 // Read logic
 always @(posedge aclk) begin
@@ -137,16 +157,16 @@ assign s_axil_rvalid = axi_rvalid;
 always @(posedge aclk) begin
     if (!aresetn) begin
         addr <= 0;
-        a_tvalid <=0;
-        a_tdata <= 32'd0;
+        x_tvalid <=0;
+        x_tdata <= 32'd0;
 	end
     else if (done & addr < 'd10) begin
-        a_tvalid <= 1;
-        a_tdata <= a[addr];
+        x_tvalid <= 1;
+        x_tdata <= a[addr];
 	    addr <= addr + 1;
     end
     else if (addr >= 'd10)
-        a_tvalid <= 0;
+        x_tvalid <= 0;
 end
 
 
