@@ -4,8 +4,9 @@
 #include <string.h>
 #include <math.h>
 #include "test_images.h"
+#include <time.h>
 
-#define NUM_IMAGES 60000
+#define NUM_IMAGES 10000
 #define IMAGE_SIZE 784
 #define LAYER_ONE_SIZE 18
 #define LAYER_TWO_SIZE 10
@@ -59,6 +60,7 @@ int hardmax(double *z, double *a, int LAYER_SIZE){
         if (z[i] > z[m]){
             m = i;
         }
+        // printf("%f %d ", z[i], m);
     }
     return m;
 }
@@ -80,15 +82,21 @@ int main(){
     // int *y;
     // printf("Status Load: %d \n", read_MNIST(&x, &y, filename));
 	struct model nn = build_model();
-
-    for (int i = 0; i <= 28*28; i++){
-        img[i] = img[i] / 255.0;
+    int j =10;
+    clock_t t;
+    t = clock();
+    for (int j =0; j <=10000; j++){
+        for (int i = 0; i <= 28*28; i++){
+            x[j][i] = x[j][i] / 255.0;
+        }
+        int yhat = forward(&nn, x[j]);
+        if (j%1000 == 0){
+            // printf(".", yhat);
+        }
     }
-
-    int yhat = forward(&nn, img);
-
-    printf("%d", yhat);
-
+    t = clock() - t;
+    double time_taken = ((double)t)/CLOCKS_PER_SEC;
+    printf("All done!\nCompute time: %f \nTotal elapsed time:", time_taken);
     // for (int i = 0; i < IMAGE_SIZE; i++){
     //     printf("%d, %lf\n",i,x[0][i]);
 

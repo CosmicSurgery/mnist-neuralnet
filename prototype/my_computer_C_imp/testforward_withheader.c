@@ -295,9 +295,9 @@ int forward(struct model *nn, double *x0){
 int main(){
 	// main_loop();
     // char filename[] = "MNIST_train.txt"; 
-    // double **x;
-    // int *y;
-    // printf("Status Load: %d \n", read_MNIST(&x, &y, filename));
+    double **x;
+    int *y;
+    printf("Status Load: %d \n", read_MNIST(&x, &y, filename));
 	struct model nn = build_model();
 
     for (int i = 0; i <= 28*28; i++){

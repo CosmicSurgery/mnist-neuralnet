@@ -255,7 +255,7 @@ void train(double **x, int *y, struct model *nn){
         }
         backward(nn, x[i], &(y[i]));
 
-        if ( i % 10000 == 0){
+        if ( i % 100 == 0){
             double loss = cross_entropy(&(y[i]), nn->a2 );
             printf("\nloss: %lf [%d/%d] ", loss, i+1, limit);
             // printf("\n");
