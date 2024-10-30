@@ -48,7 +48,8 @@ module perceptron #(activation="relu", input_size=784)(
     output wire x_tready,
     input [31:0] bias,
     output reg [31:0] a_tdata, // result of the activation function and output of the perceptron
-    output reg done
+    output reg a_tvalid,
+    input wire a_tready
     );
     
     parameter addressWidth = 10;
@@ -75,7 +76,7 @@ module perceptron #(activation="relu", input_size=784)(
 
     
     assign pos_edge_start = start & !start_reg;
-    assign x_tready = ~done;
+    assign x_tready = ~a_tvalid;
     
     dual_port_AXI_Native_bram WEIGHT_MEMORY (
     .BRAM_PORTB_addr    (r_addr),
@@ -126,7 +127,7 @@ module perceptron #(activation="relu", input_size=784)(
 //	.probe5(x_tready), // input wire [0:0]  probe5 
 //	.probe6(pos_edge_start), // input wire [0:0]  probe6 
 //	.probe7(x_tvalid_del), // input wire [0:0]  probe7 
-//	.probe8(done) // input wire [0:0]  probe8
+//	.probe8(a_tvalid) // input wire [0:0]  probe8
 //);
     
 
@@ -143,7 +144,7 @@ module perceptron #(activation="relu", input_size=784)(
         if (!s_axi_aresetn) begin
             sum <= 64'd0;
         end
-        else if (done) begin
+        else if (a_tvalid) begin
             sum <= 0;
         end
         else begin
@@ -187,13 +188,13 @@ module perceptron #(activation="relu", input_size=784)(
     always @(posedge s_axi_aclk)
     begin
         if (!s_axi_aresetn) begin
-            done <=0;
+            a_tvalid <=0;
         end
-        else if (x_tvalid) 
-            done <=0;
+        else if (a_tvalid & a_tready) 
+            a_tvalid <=0;
         else if (r_addr == input_size & ~P_valid) begin
             a_tdata <= sum[63-5:27];
-            done <=1;
+            a_tvalid <=1;
             if (activation == "relu") begin
                 if (sum[63] != 0) begin
                     a_tdata <= 32'd0;
@@ -208,7 +209,7 @@ module perceptron #(activation="relu", input_size=784)(
             r_addr <= 0;
             w_valid = 0;
         end
-        else if (done) begin
+        else if (a_tvalid) begin
             r_addr <= 0;
         end else
         if(x_tvalid & x_tready & r_addr <= input_size-1) begin
