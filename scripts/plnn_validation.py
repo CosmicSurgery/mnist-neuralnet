@@ -199,8 +199,8 @@ def main(gen_output_files=False):
                     file.write(f"uint32_t weights_{i}_{j}[{input_size}] =" + " { "  + ''.join([f"0b{x32(k).bin()}, " for k in weights[i][:-1,j]]) + f"0b{x32(weights[i][-1,j]).bin()}" + " };\n\n")
                     
             file.write("uint32_t bias [10] = {" )
-            for i in range(2):
-                for j in range(10):
+            for i in range(num_layers):
+                for j in range(neurons_per_layer[i]):
                     if (i*10)+j < 19:
                         file.write(''.join(f"0b{x32(temp_bias[(i*10)+j]).bin()}, " ))
             file.write(f"0b{x32(temp_bias[-1]).bin()}" + " };\n\n")
