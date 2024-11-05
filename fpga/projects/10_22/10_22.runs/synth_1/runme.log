@@ -12,157 +12,237 @@ source PL_NN_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/git_repos/mnist_neuralnet/fpga/source'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 360.359 ; gain = 56.988
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_0/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_0/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_1/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_1/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_1/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_1/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_2/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_2/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_2/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_2/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_3/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_3/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_3/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_3/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_4/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_4/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_4/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_4/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_5/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_5/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_5/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_5/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_6/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_6/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_6/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_6/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_7/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_7/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_7/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_7/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_8/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_8/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_8/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_8/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_9/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_9/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_9/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_9/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_18/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_18/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_18/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_18/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_1_0/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_1_0/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_1_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_1_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_2_0/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_2_0/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_2_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_2_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_3_0/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_3_0/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_3_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_3_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_4_0/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_4_0/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_4_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_4_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_5_0/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_5_0/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_5_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_5_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_6_0/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_6_0/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_6_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_6_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_7_0/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_7_0/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_7_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_7_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_8_0/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_8_0/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_8_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_8_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mult_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_9_0/src/mult_gen_0/sim/mult_gen_0.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_9_0/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_9_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'axi_bram_ctrl_0' generated file not found 'c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_9_0/src/axi_bram_ctrl_0/sim/axi_bram_ctrl_0.vhd'. Please regenerate to continue.
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 360.336 ; gain = 57.770
 Command: synth_design -top PL_NN_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18028 
+INFO: Helper process launched with PID 21372 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 884.930 ; gain = 233.027
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 884.766 ; gain = 234.531
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'PL_NN_wrapper' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/hdl/PL_NN_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'PL_NN' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:13]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_axi4_lite_final_outp_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axi4_lite_final_outp_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axi4_lite_final_outp_0_0' (1#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axi4_lite_final_outp_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_axi4_lite_layer_conn_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axi4_lite_layer_conn_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axi4_lite_layer_conn_0_0' (2#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axi4_lite_layer_conn_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_axi4_lite_register_m_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axi4_lite_register_m_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axi4_lite_register_m_0_0' (3#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axi4_lite_register_m_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_axi_gpio_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axi_gpio_0_0' (4#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_axi_gpio_0_1' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axi_gpio_0_1' (5#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_axi_interconnect_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:2149]
-INFO: [Synth 8-6157] synthesizing module 'i00_couplers_imp_7YAJXB' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6452]
-INFO: [Synth 8-6155] done synthesizing module 'i00_couplers_imp_7YAJXB' (6#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6452]
-INFO: [Synth 8-6157] synthesizing module 'i01_couplers_imp_19VD7LJ' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6598]
-INFO: [Synth 8-6155] done synthesizing module 'i01_couplers_imp_19VD7LJ' (7#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6598]
-INFO: [Synth 8-6157] synthesizing module 'i02_couplers_imp_1DZU2TQ' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6744]
-INFO: [Synth 8-6155] done synthesizing module 'i02_couplers_imp_1DZU2TQ' (8#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6744]
-INFO: [Synth 8-6157] synthesizing module 'i03_couplers_imp_3U4KKM' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6890]
-INFO: [Synth 8-6155] done synthesizing module 'i03_couplers_imp_3U4KKM' (9#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6890]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_UZ1GUO' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7036]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_UZ1GUO' (10#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7036]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1NH4E48' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7182]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1NH4E48' (11#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7182]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1J9BC3L' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7328]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1J9BC3L' (12#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7328]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_Z76415' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7474]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_Z76415' (13#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7474]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1RS1N8Z' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7620]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1RS1N8Z' (14#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7620]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_PKHDSR' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7766]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_PKHDSR' (15#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7766]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_LGPD2A' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7912]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_LGPD2A' (16#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7912]
-INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1VVI2RU' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8058]
-INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1VVI2RU' (17#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8058]
-INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_18FRZ87' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8204]
-INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_18FRZ87' (18#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8204]
-INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_75YOLB' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8350]
-INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_75YOLB' (19#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8350]
-INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_1HRP5HD' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8496]
-INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_1HRP5HD' (20#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8496]
-INFO: [Synth 8-6157] synthesizing module 'm11_couplers_imp_XCLKVD' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8642]
-INFO: [Synth 8-6155] done synthesizing module 'm11_couplers_imp_XCLKVD' (21#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8642]
-INFO: [Synth 8-6157] synthesizing module 'm12_couplers_imp_T7WWB4' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8788]
-INFO: [Synth 8-6155] done synthesizing module 'm12_couplers_imp_T7WWB4' (22#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8788]
-INFO: [Synth 8-6157] synthesizing module 'm13_couplers_imp_1LWPF94' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8920]
-INFO: [Synth 8-6155] done synthesizing module 'm13_couplers_imp_1LWPF94' (23#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8920]
-INFO: [Synth 8-6157] synthesizing module 'm14_couplers_imp_L08RQA' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9052]
-INFO: [Synth 8-6155] done synthesizing module 'm14_couplers_imp_L08RQA' (24#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9052]
-INFO: [Synth 8-6157] synthesizing module 'm15_couplers_imp_1V8BVRE' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9198]
-INFO: [Synth 8-6155] done synthesizing module 'm15_couplers_imp_1V8BVRE' (25#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9198]
-INFO: [Synth 8-6157] synthesizing module 'm16_couplers_imp_1R1FHMB' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9344]
-INFO: [Synth 8-6155] done synthesizing module 'm16_couplers_imp_1R1FHMB' (26#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9344]
-INFO: [Synth 8-6157] synthesizing module 'm17_couplers_imp_P6TKPN' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9490]
-INFO: [Synth 8-6155] done synthesizing module 'm17_couplers_imp_P6TKPN' (27#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9490]
-INFO: [Synth 8-6157] synthesizing module 'm18_couplers_imp_3YCD52' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9636]
-INFO: [Synth 8-6155] done synthesizing module 'm18_couplers_imp_3YCD52' (28#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9636]
-INFO: [Synth 8-6157] synthesizing module 'm19_couplers_imp_1EZ9F8U' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9782]
-INFO: [Synth 8-6155] done synthesizing module 'm19_couplers_imp_1EZ9F8U' (29#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9782]
-INFO: [Synth 8-6157] synthesizing module 'm20_couplers_imp_1SDFR3N' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9928]
-INFO: [Synth 8-6155] done synthesizing module 'm20_couplers_imp_1SDFR3N' (30#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9928]
-INFO: [Synth 8-6157] synthesizing module 'm21_couplers_imp_MQVACB' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10074]
-INFO: [Synth 8-6155] done synthesizing module 'm21_couplers_imp_MQVACB' (31#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10074]
-INFO: [Synth 8-6157] synthesizing module 'm22_couplers_imp_HWKSPU' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10220]
-INFO: [Synth 8-6155] done synthesizing module 'm22_couplers_imp_HWKSPU' (32#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10220]
-INFO: [Synth 8-6157] synthesizing module 'm23_couplers_imp_1X814LM' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10366]
-INFO: [Synth 8-6155] done synthesizing module 'm23_couplers_imp_1X814LM' (33#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10366]
-INFO: [Synth 8-6157] synthesizing module 'm24_couplers_imp_RBRTSG' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10512]
-INFO: [Synth 8-6155] done synthesizing module 'm24_couplers_imp_RBRTSG' (34#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10512]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_G1MV0B' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10658]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_auto_pc_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_auto_pc_0' (35#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_G1MV0B' (36#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10658]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_tier2_xbar_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_tier2_xbar_0_0' (37#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_tier2_xbar_1_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_tier2_xbar_1_0' (38#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_tier2_xbar_2_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_tier2_xbar_2_0' (39#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_tier2_xbar_3_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_tier2_xbar_3_0' (40#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_3_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_xbar_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_xbar_0' (41#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axi_interconnect_0_0' (42#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:2149]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_axis_broadcaster_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axis_broadcaster_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axis_broadcaster_0_0' (43#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axis_broadcaster_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_axis_broadcaster_2_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axis_broadcaster_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axis_broadcaster_2_0' (44#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_axis_broadcaster_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_hardmax_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_hardmax_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_hardmax_0_0' (45#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_hardmax_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_image_loader_module_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_image_loader_module_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_image_loader_module_0_0' (46#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_image_loader_module_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_0' (47#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_1' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_1' (48#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_18' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_18_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_18' (49#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_18_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_1_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_1_0' (50#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_2' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_2' (51#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_2_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_2_0' (52#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_3_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_3_0' (53#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_3_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_4_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_4_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_4_0' (54#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_4_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_5_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_5_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_5_0' (55#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_5_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_6_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_6_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_6_0' (56#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_6_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_7_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_7_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_7_0' (57#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_7_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_8_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_8_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_8_0' (58#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_8_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_9_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_9_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_9_0' (59#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_9_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_3' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_3' (60#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_4' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_4' (61#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_5' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_5' (62#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_5_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_6' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_6' (63#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_6_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_7' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_7' (64#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_7_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_8' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_8_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_8' (65#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_8_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_9' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_9_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_9' (66#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_9_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_proc_sys_reset_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_proc_sys_reset_0_0' (67#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'PL_NN_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:2075]
-INFO: [Synth 8-6157] synthesizing module 'PL_NN_processing_system7_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PL_NN_processing_system7_0_0' (68#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-5904-DESKTOP-L93G0Q0/realtime/PL_NN_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'PL_NN_processing_system7_0_0' has 69 connections declared, but only 64 given [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:2082]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_axi4_lite_final_outp_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axi4_lite_final_outp_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axi4_lite_final_outp_0_0' (1#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axi4_lite_final_outp_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_axi4_lite_layer_conn_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axi4_lite_layer_conn_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axi4_lite_layer_conn_0_0' (2#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axi4_lite_layer_conn_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_axi4_lite_register_m_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axi4_lite_register_m_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axi4_lite_register_m_0_0' (3#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axi4_lite_register_m_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_axi_gpio_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axi_gpio_0_0' (4#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_axi_gpio_0_1' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axi_gpio_0_1' (5#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_axi_interconnect_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:2213]
+INFO: [Synth 8-6157] synthesizing module 'i00_couplers_imp_7YAJXB' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6516]
+INFO: [Synth 8-6155] done synthesizing module 'i00_couplers_imp_7YAJXB' (6#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6516]
+INFO: [Synth 8-6157] synthesizing module 'i01_couplers_imp_19VD7LJ' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6662]
+INFO: [Synth 8-6155] done synthesizing module 'i01_couplers_imp_19VD7LJ' (7#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6662]
+INFO: [Synth 8-6157] synthesizing module 'i02_couplers_imp_1DZU2TQ' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6808]
+INFO: [Synth 8-6155] done synthesizing module 'i02_couplers_imp_1DZU2TQ' (8#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6808]
+INFO: [Synth 8-6157] synthesizing module 'i03_couplers_imp_3U4KKM' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6954]
+INFO: [Synth 8-6155] done synthesizing module 'i03_couplers_imp_3U4KKM' (9#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:6954]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_UZ1GUO' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7100]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_UZ1GUO' (10#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7100]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1NH4E48' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7246]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1NH4E48' (11#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7246]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1J9BC3L' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7392]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1J9BC3L' (12#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7392]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_Z76415' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7538]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_Z76415' (13#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7538]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1RS1N8Z' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7684]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1RS1N8Z' (14#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7684]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_PKHDSR' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7830]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_PKHDSR' (15#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7830]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_LGPD2A' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7976]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_LGPD2A' (16#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:7976]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1VVI2RU' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8122]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1VVI2RU' (17#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8122]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_18FRZ87' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8268]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_18FRZ87' (18#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8268]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_75YOLB' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8414]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_75YOLB' (19#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8414]
+INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_1HRP5HD' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8560]
+INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_1HRP5HD' (20#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8560]
+INFO: [Synth 8-6157] synthesizing module 'm11_couplers_imp_XCLKVD' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8706]
+INFO: [Synth 8-6155] done synthesizing module 'm11_couplers_imp_XCLKVD' (21#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8706]
+INFO: [Synth 8-6157] synthesizing module 'm12_couplers_imp_T7WWB4' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8852]
+INFO: [Synth 8-6155] done synthesizing module 'm12_couplers_imp_T7WWB4' (22#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8852]
+INFO: [Synth 8-6157] synthesizing module 'm13_couplers_imp_1LWPF94' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8984]
+INFO: [Synth 8-6155] done synthesizing module 'm13_couplers_imp_1LWPF94' (23#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:8984]
+INFO: [Synth 8-6157] synthesizing module 'm14_couplers_imp_L08RQA' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9116]
+INFO: [Synth 8-6155] done synthesizing module 'm14_couplers_imp_L08RQA' (24#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9116]
+INFO: [Synth 8-6157] synthesizing module 'm15_couplers_imp_1V8BVRE' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9262]
+INFO: [Synth 8-6155] done synthesizing module 'm15_couplers_imp_1V8BVRE' (25#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9262]
+INFO: [Synth 8-6157] synthesizing module 'm16_couplers_imp_1R1FHMB' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9408]
+INFO: [Synth 8-6155] done synthesizing module 'm16_couplers_imp_1R1FHMB' (26#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9408]
+INFO: [Synth 8-6157] synthesizing module 'm17_couplers_imp_P6TKPN' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9554]
+INFO: [Synth 8-6155] done synthesizing module 'm17_couplers_imp_P6TKPN' (27#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9554]
+INFO: [Synth 8-6157] synthesizing module 'm18_couplers_imp_3YCD52' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9700]
+INFO: [Synth 8-6155] done synthesizing module 'm18_couplers_imp_3YCD52' (28#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9700]
+INFO: [Synth 8-6157] synthesizing module 'm19_couplers_imp_1EZ9F8U' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9846]
+INFO: [Synth 8-6155] done synthesizing module 'm19_couplers_imp_1EZ9F8U' (29#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9846]
+INFO: [Synth 8-6157] synthesizing module 'm20_couplers_imp_1SDFR3N' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9992]
+INFO: [Synth 8-6155] done synthesizing module 'm20_couplers_imp_1SDFR3N' (30#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:9992]
+INFO: [Synth 8-6157] synthesizing module 'm21_couplers_imp_MQVACB' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10138]
+INFO: [Synth 8-6155] done synthesizing module 'm21_couplers_imp_MQVACB' (31#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10138]
+INFO: [Synth 8-6157] synthesizing module 'm22_couplers_imp_HWKSPU' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10284]
+INFO: [Synth 8-6155] done synthesizing module 'm22_couplers_imp_HWKSPU' (32#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10284]
+INFO: [Synth 8-6157] synthesizing module 'm23_couplers_imp_1X814LM' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10430]
+INFO: [Synth 8-6155] done synthesizing module 'm23_couplers_imp_1X814LM' (33#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10430]
+INFO: [Synth 8-6157] synthesizing module 'm24_couplers_imp_RBRTSG' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10576]
+INFO: [Synth 8-6155] done synthesizing module 'm24_couplers_imp_RBRTSG' (34#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10576]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_G1MV0B' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10722]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_auto_pc_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_auto_pc_0' (35#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_G1MV0B' (36#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:10722]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_tier2_xbar_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_tier2_xbar_0_0' (37#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_tier2_xbar_1_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_tier2_xbar_1_0' (38#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_tier2_xbar_2_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_tier2_xbar_2_0' (39#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_tier2_xbar_3_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_tier2_xbar_3_0' (40#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_tier2_xbar_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_xbar_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_xbar_0' (41#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axi_interconnect_0_0' (42#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:2213]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_axis_broadcaster_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axis_broadcaster_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axis_broadcaster_0_0' (43#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axis_broadcaster_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_axis_broadcaster_2_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axis_broadcaster_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_axis_broadcaster_2_0' (44#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_axis_broadcaster_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_hardmax_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_hardmax_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_hardmax_0_0' (45#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_hardmax_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_image_loader_module_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_image_loader_module_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_image_loader_module_0_0' (46#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_image_loader_module_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_0' (47#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_1' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_1' (48#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_18' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_18_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_18' (49#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_18_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_1_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_1_0' (50#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_2' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_2' (51#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_2_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_2_0' (52#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_3_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_3_0' (53#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_4_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_4_0' (54#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_4_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_5_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_5_0' (55#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_5_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_6_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_6_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_6_0' (56#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_6_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_7_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_7_0' (57#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_7_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_8_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_8_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_8_0' (58#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_8_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_9_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_9_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_9_0' (59#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_9_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_3' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_3' (60#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_4' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_4' (61#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_5' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_5' (62#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_6' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_6' (63#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_7' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_7' (64#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_7_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_8' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_8' (65#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_8_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_perceptron_0_9' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_9_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_perceptron_0_9' (66#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_perceptron_0_9_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_proc_sys_reset_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_proc_sys_reset_0_0' (67#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'PL_NN_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:2139]
+INFO: [Synth 8-6157] synthesizing module 'PL_NN_processing_system7_0_0' [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PL_NN_processing_system7_0_0' (68#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/.Xil/Vivado-14788-DESKTOP-L93G0Q0/realtime/PL_NN_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'PL_NN_processing_system7_0_0' has 69 connections declared, but only 64 given [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:2146]
 INFO: [Synth 8-6155] done synthesizing module 'PL_NN' (69#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/synth/PL_NN.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'PL_NN_wrapper' (70#1) [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/hdl/PL_NN_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_G1MV0B has unconnected port M_ACLK
@@ -267,7 +347,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_UZ1GUO has unconnected port M_AC
 WARNING: [Synth 8-3331] design m00_couplers_imp_UZ1GUO has unconnected port M_ARESETN
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 969.871 ; gain = 317.969
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 969.273 ; gain = 319.039
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -280,12 +360,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 969.871 ; gain = 317.969
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 969.273 ; gain = 319.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 969.871 ; gain = 317.969
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 969.273 ; gain = 319.039
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.184 . Memory (MB): peak = 969.871 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.186 . Memory (MB): peak = 969.273 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -298,48 +378,48 @@ Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/so
 Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_axi4_lite_register_m_0_0/PL_NN_axi4_lite_register_m_0_0/PL_NN_axi4_lite_register_m_0_0_in_context.xdc] for cell 'PL_NN_i/axi4_lite_register_m_0'
 Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_xbar_0/PL_NN_xbar_0/PL_NN_xbar_0_in_context.xdc] for cell 'PL_NN_i/axi_interconnect_0/xbar'
 Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_xbar_0/PL_NN_xbar_0/PL_NN_xbar_0_in_context.xdc] for cell 'PL_NN_i/axi_interconnect_0/xbar'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_0/PL_NN_perceptron_0_0/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_0'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_0/PL_NN_perceptron_0_0/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_0'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_1/PL_NN_perceptron_0_1/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_1'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_1/PL_NN_perceptron_0_1/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_1'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_2/PL_NN_perceptron_0_2/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_2'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_2/PL_NN_perceptron_0_2/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_2'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_3/PL_NN_perceptron_0_3/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_3'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_3/PL_NN_perceptron_0_3/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_3'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_4/PL_NN_perceptron_0_4/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_4'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_4/PL_NN_perceptron_0_4/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_4'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_5/PL_NN_perceptron_0_5/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_5'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_5/PL_NN_perceptron_0_5/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_5'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_6/PL_NN_perceptron_0_6/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_6'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_6/PL_NN_perceptron_0_6/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_6'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_7/PL_NN_perceptron_0_7/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_7'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_7/PL_NN_perceptron_0_7/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_7'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_8/PL_NN_perceptron_0_8/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_8'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_8/PL_NN_perceptron_0_8/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_8'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_9/PL_NN_perceptron_0_9/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_9'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_9/PL_NN_perceptron_0_9/PL_NN_perceptron_0_0_in_context.xdc] for cell 'PL_NN_i/perceptron_9'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_0/PL_NN_perceptron_0_0/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_0'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_0/PL_NN_perceptron_0_0/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_0'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_1/PL_NN_perceptron_0_1/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_1'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_1/PL_NN_perceptron_0_1/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_1'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_2/PL_NN_perceptron_0_2/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_2'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_2/PL_NN_perceptron_0_2/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_2'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_3/PL_NN_perceptron_0_3/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_3'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_3/PL_NN_perceptron_0_3/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_3'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_4/PL_NN_perceptron_0_4/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_4'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_4/PL_NN_perceptron_0_4/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_4'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_5/PL_NN_perceptron_0_5/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_5'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_5/PL_NN_perceptron_0_5/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_5'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_6/PL_NN_perceptron_0_6/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_6'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_6/PL_NN_perceptron_0_6/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_6'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_7/PL_NN_perceptron_0_7/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_7'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_7/PL_NN_perceptron_0_7/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_7'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_8/PL_NN_perceptron_0_8/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_8'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_8/PL_NN_perceptron_0_8/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_8'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_9/PL_NN_perceptron_0_9/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_9'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_9/PL_NN_perceptron_0_9/PL_NN_perceptron_0_1_in_context.xdc] for cell 'PL_NN_i/perceptron_9'
 Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_axi4_lite_layer_conn_0_0/PL_NN_axi4_lite_layer_conn_0_0/PL_NN_axi4_lite_layer_conn_0_0_in_context.xdc] for cell 'PL_NN_i/axi4_lite_layer_conn_0'
 Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_axi4_lite_layer_conn_0_0/PL_NN_axi4_lite_layer_conn_0_0/PL_NN_axi4_lite_layer_conn_0_0_in_context.xdc] for cell 'PL_NN_i/axi4_lite_layer_conn_0'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_18/PL_NN_perceptron_0_18/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_18'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_18/PL_NN_perceptron_0_18/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_18'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_1_0/PL_NN_perceptron_1_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_19'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_1_0/PL_NN_perceptron_1_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_19'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_2_0/PL_NN_perceptron_2_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_20'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_2_0/PL_NN_perceptron_2_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_20'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_3_0/PL_NN_perceptron_3_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_21'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_3_0/PL_NN_perceptron_3_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_21'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_4_0/PL_NN_perceptron_4_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_22'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_4_0/PL_NN_perceptron_4_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_22'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_5_0/PL_NN_perceptron_5_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_23'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_5_0/PL_NN_perceptron_5_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_23'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_6_0/PL_NN_perceptron_6_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_24'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_6_0/PL_NN_perceptron_6_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_24'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_7_0/PL_NN_perceptron_7_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_25'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_7_0/PL_NN_perceptron_7_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_25'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_8_0/PL_NN_perceptron_8_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_26'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_8_0/PL_NN_perceptron_8_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_26'
-Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_9_0/PL_NN_perceptron_9_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_27'
-Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_9_0/PL_NN_perceptron_9_0/PL_NN_perceptron_7_0_in_context.xdc] for cell 'PL_NN_i/perceptron_27'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_18/PL_NN_perceptron_0_18/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_18'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_0_18/PL_NN_perceptron_0_18/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_18'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_1_0/PL_NN_perceptron_1_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_19'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_1_0/PL_NN_perceptron_1_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_19'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_2_0/PL_NN_perceptron_2_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_20'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_2_0/PL_NN_perceptron_2_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_20'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_3_0/PL_NN_perceptron_3_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_21'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_3_0/PL_NN_perceptron_3_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_21'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_4_0/PL_NN_perceptron_4_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_22'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_4_0/PL_NN_perceptron_4_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_22'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_5_0/PL_NN_perceptron_5_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_23'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_5_0/PL_NN_perceptron_5_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_23'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_6_0/PL_NN_perceptron_6_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_24'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_6_0/PL_NN_perceptron_6_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_24'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_7_0/PL_NN_perceptron_7_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_25'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_7_0/PL_NN_perceptron_7_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_25'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_8_0/PL_NN_perceptron_8_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_26'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_8_0/PL_NN_perceptron_8_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_26'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_9_0/PL_NN_perceptron_9_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_27'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_perceptron_9_0/PL_NN_perceptron_9_0/PL_NN_perceptron_1_0_in_context.xdc] for cell 'PL_NN_i/perceptron_27'
 Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_image_loader_module_0_0/PL_NN_image_loader_module_0_0/PL_NN_image_loader_module_0_0_in_context.xdc] for cell 'PL_NN_i/image_loader_module_0'
 Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_image_loader_module_0_0/PL_NN_image_loader_module_0_0/PL_NN_image_loader_module_0_0_in_context.xdc] for cell 'PL_NN_i/image_loader_module_0'
 Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_axi4_lite_final_outp_0_0/PL_NN_axi4_lite_final_outp_0_0/PL_NN_axi4_lite_final_outp_0_0_in_context.xdc] for cell 'PL_NN_i/axi4_lite_final_outp_0'
@@ -368,22 +448,22 @@ Parsing XDC File [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/sy
 Finished Parsing XDC File [C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1072.625 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1071.625 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.211 . Memory (MB): peak = 1072.625 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'PL_NN_i/axis_broadcaster_0' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'PL_NN_i/axis_broadcaster_2' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.234 . Memory (MB): peak = 1071.625 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'PL_NN_i/axis_broadcaster_0' at clock pin 'aclk' is different from the actual clock period '12.999', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'PL_NN_i/axis_broadcaster_2' at clock pin 'aclk' is different from the actual clock period '12.999', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -688,10 +768,10 @@ Applied set_property DONT_TOUCH = true for PL_NN_i/axi_interconnect_0/tier2_xbar
 Applied set_property DONT_TOUCH = true for PL_NN_i/axi_interconnect_0/tier2_xbar_3. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for PL_NN_i/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -727,7 +807,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -739,13 +819,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -757,7 +837,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -781,13 +861,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -806,25 +886,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -920,32 +1000,32 @@ Report Instance Areas:
 +------+-----------------------+---------------------------+------+
 |      |Instance               |Module                     |Cells |
 +------+-----------------------+---------------------------+------+
-|1     |top                    |                           |  6944|
-|2     |  PL_NN_i              |PL_NN                      |  6944|
+|1     |top                    |                           |  6965|
+|2     |  PL_NN_i              |PL_NN                      |  6965|
 |3     |    axi_interconnect_0 |PL_NN_axi_interconnect_0_0 |  3601|
 |4     |      s00_couplers     |s00_couplers_imp_G1MV0B    |   177|
 +------+-----------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1084.488 ; gain = 434.254
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 52 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 1085.684 ; gain = 317.969
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1085.684 ; gain = 433.781
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1084.488 ; gain = 319.039
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1084.488 ; gain = 434.254
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.105 . Memory (MB): peak = 1085.684 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 1084.488 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1097.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1092.645 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-153 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+153 Infos, 184 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 1102.797 ; gain = 742.438
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1102.797 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1097.586 ; gain = 737.250
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1097.586 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/synth_1/PL_NN_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file PL_NN_wrapper_utilization_synth.rpt -pb PL_NN_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 22 14:45:50 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 30 21:50:50 2024...

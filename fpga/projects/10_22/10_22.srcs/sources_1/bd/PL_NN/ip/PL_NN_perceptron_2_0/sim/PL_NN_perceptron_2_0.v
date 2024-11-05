@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:perceptron:1.0
-// IP Revision: 23
+// IP Revision: 24
 
 `timescale 1ns/1ps
 
@@ -82,7 +82,8 @@ module PL_NN_perceptron_2_0 (
   x_tready,
   bias,
   a_tdata,
-  done
+  a_tvalid,
+  a_tready
 );
 
 input wire start;
@@ -129,7 +130,7 @@ input wire s_axi_wvalid;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 s_axi_aresetn RST" *)
 input wire s_axi_aresetn;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_aclk, ASSOCIATED_BUSIF x:s_axi, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN PL_NN_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_aclk, ASSOCIATED_BUSIF x:s_axi:a, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN PL_NN_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axi_aclk CLK" *)
 input wire s_axi_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 x TDATA" *)
@@ -140,8 +141,13 @@ input wire x_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 x TREADY" *)
 output wire x_tready;
 input wire [31 : 0] bias;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 a TDATA" *)
 output wire [31 : 0] a_tdata;
-output wire done;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 a TVALID" *)
+output wire a_tvalid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME a, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN PL_NN_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 a TREADY" *)
+input wire a_tready;
 
   perceptron #(
     .activation("relu"),
@@ -174,6 +180,7 @@ output wire done;
     .x_tready(x_tready),
     .bias(bias),
     .a_tdata(a_tdata),
-    .done(done)
+    .a_tvalid(a_tvalid),
+    .a_tready(a_tready)
   );
 endmodule

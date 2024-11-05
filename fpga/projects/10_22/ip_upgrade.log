@@ -1,6 +1,1293 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_9_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_9_0 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_9_0'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_9_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_8_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_8_0 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_8_0'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_8_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_7_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_7_0 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_7_0'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_7_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_6_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_6_0 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_6_0'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_6_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_5_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_5_0 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_5_0'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_5_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_4_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_4_0 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_4_0'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_4_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_3_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_3_0 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_3_0'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_3_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_2_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_2_0 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_2_0'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_2_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_1_0 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_1_0'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_1_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_9'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_0_9 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_0_9'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_0_9'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_8'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_0_8 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_0_8'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_0_8'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_7'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_0_7 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_0_7'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_0_7'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_6'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_0_6 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_0_6'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_0_6'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_5'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_0_5 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_0_5'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_0_5'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_4'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_0_4 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_0_4'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_0_4'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_3'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_0_3 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_0_3'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_0_3'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_0_2 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_0_2'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_0_2'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_18'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_0_18 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_0_18'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_0_18'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_0_1 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_0_1'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_perceptron_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_perceptron_0_0 (xilinx.com:user:perceptron:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_perceptron_0_0'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_perceptron_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'done'
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'a_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_hardmax_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_hardmax_0_0 (xilinx.com:user:hardmax:1.0) from (Rev. 6) to (Rev. 10)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_hardmax_0_0'.
+
+
+-Upgrade has added interface 'a' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_hardmax_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'a_tready'
+
+-Upgrade has added port 'start'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_axi4_lite_layer_conn_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_axi4_lite_layer_conn_0_0 (xilinx.com:user:axi4_lite_layer_connector:1.0) from (Rev. 9) to (Rev. 10)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_axi4_lite_layer_conn_0_0'.
+
+
+-Upgrade has removed interface 'a'
+
+-Upgrade has added interface 'a0' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a1' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a2' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a3' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a4' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a5' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a6' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a7' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a8' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a9' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'x' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_axi4_lite_layer_conn_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'a0'
+
+-Upgrade has removed port 'a0done'
+
+-Upgrade has removed port 'a1'
+
+-Upgrade has removed port 'a1done'
+
+-Upgrade has removed port 'a2'
+
+-Upgrade has removed port 'a2done'
+
+-Upgrade has removed port 'a3'
+
+-Upgrade has removed port 'a3done'
+
+-Upgrade has removed port 'a4'
+
+-Upgrade has removed port 'a4done'
+
+-Upgrade has removed port 'a5'
+
+-Upgrade has removed port 'a5done'
+
+-Upgrade has removed port 'a6'
+
+-Upgrade has removed port 'a6done'
+
+-Upgrade has removed port 'a7'
+
+-Upgrade has removed port 'a7done'
+
+-Upgrade has removed port 'a8'
+
+-Upgrade has removed port 'a8done'
+
+-Upgrade has removed port 'a9'
+
+-Upgrade has removed port 'a9done'
+
+-Upgrade has removed port 'a_tdata'
+
+-Upgrade has removed port 'a_tready'
+
+-Upgrade has removed port 'a_tvalid'
+
+-Upgrade has added port 'a0_tdata'
+
+-Upgrade has added port 'a0_tready'
+
+-Upgrade has added port 'a0_tvalid'
+
+-Upgrade has added port 'a1_tdata'
+
+-Upgrade has added port 'a1_tready'
+
+-Upgrade has added port 'a1_tvalid'
+
+-Upgrade has added port 'a2_tdata'
+
+-Upgrade has added port 'a2_tready'
+
+-Upgrade has added port 'a2_tvalid'
+
+-Upgrade has added port 'a3_tdata'
+
+-Upgrade has added port 'a3_tready'
+
+-Upgrade has added port 'a3_tvalid'
+
+-Upgrade has added port 'a4_tdata'
+
+-Upgrade has added port 'a4_tready'
+
+-Upgrade has added port 'a4_tvalid'
+
+-Upgrade has added port 'a5_tdata'
+
+-Upgrade has added port 'a5_tready'
+
+-Upgrade has added port 'a5_tvalid'
+
+-Upgrade has added port 'a6_tdata'
+
+-Upgrade has added port 'a6_tready'
+
+-Upgrade has added port 'a6_tvalid'
+
+-Upgrade has added port 'a7_tdata'
+
+-Upgrade has added port 'a7_tready'
+
+-Upgrade has added port 'a7_tvalid'
+
+-Upgrade has added port 'a8_tdata'
+
+-Upgrade has added port 'a8_tready'
+
+-Upgrade has added port 'a8_tvalid'
+
+-Upgrade has added port 'a9_tdata'
+
+-Upgrade has added port 'a9_tready'
+
+-Upgrade has added port 'a9_tvalid'
+
+-Upgrade has added port 'x_tdata'
+
+-Upgrade has added port 'x_tready'
+
+-Upgrade has added port 'x_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Oct 30 20:33:15 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'PL_NN_axi4_lite_final_outp_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of PL_NN_axi4_lite_final_outp_0_0 (xilinx.com:user:axi4_lite_final_output:1.0) from (Rev. 6) to (Rev. 8)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'PL_NN_axi4_lite_final_outp_0_0'.
+
+
+-Upgrade has removed interface 'a'
+
+-Upgrade has added interface 'a0' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a1' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a2' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a3' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a4' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a5' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a6' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a7' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a8' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'a9' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'x' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'PL_NN_axi4_lite_final_outp_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'a0done'
+
+-Upgrade has removed port 'a1done'
+
+-Upgrade has removed port 'a2done'
+
+-Upgrade has removed port 'a3done'
+
+-Upgrade has removed port 'a4done'
+
+-Upgrade has removed port 'a5done'
+
+-Upgrade has removed port 'a6done'
+
+-Upgrade has removed port 'a7done'
+
+-Upgrade has removed port 'a8done'
+
+-Upgrade has removed port 'a9done'
+
+-Upgrade has removed port 'a_2_0'
+
+-Upgrade has removed port 'a_2_1'
+
+-Upgrade has removed port 'a_2_2'
+
+-Upgrade has removed port 'a_2_3'
+
+-Upgrade has removed port 'a_2_4'
+
+-Upgrade has removed port 'a_2_5'
+
+-Upgrade has removed port 'a_2_6'
+
+-Upgrade has removed port 'a_2_7'
+
+-Upgrade has removed port 'a_2_8'
+
+-Upgrade has removed port 'a_2_9'
+
+-Upgrade has removed port 'a_tdata'
+
+-Upgrade has removed port 'a_tvalid'
+
+-Upgrade has added port 'a0_tdata'
+
+-Upgrade has added port 'a0_tready'
+
+-Upgrade has added port 'a0_tvalid'
+
+-Upgrade has added port 'a1_tdata'
+
+-Upgrade has added port 'a1_tready'
+
+-Upgrade has added port 'a1_tvalid'
+
+-Upgrade has added port 'a2_tdata'
+
+-Upgrade has added port 'a2_tready'
+
+-Upgrade has added port 'a2_tvalid'
+
+-Upgrade has added port 'a3_tdata'
+
+-Upgrade has added port 'a3_tready'
+
+-Upgrade has added port 'a3_tvalid'
+
+-Upgrade has added port 'a4_tdata'
+
+-Upgrade has added port 'a4_tready'
+
+-Upgrade has added port 'a4_tvalid'
+
+-Upgrade has added port 'a5_tdata'
+
+-Upgrade has added port 'a5_tready'
+
+-Upgrade has added port 'a5_tvalid'
+
+-Upgrade has added port 'a6_tdata'
+
+-Upgrade has added port 'a6_tready'
+
+-Upgrade has added port 'a6_tvalid'
+
+-Upgrade has added port 'a7_tdata'
+
+-Upgrade has added port 'a7_tready'
+
+-Upgrade has added port 'a7_tvalid'
+
+-Upgrade has added port 'a8_tdata'
+
+-Upgrade has added port 'a8_tready'
+
+-Upgrade has added port 'a8_tvalid'
+
+-Upgrade has added port 'a9_tdata'
+
+-Upgrade has added port 'a9_tready'
+
+-Upgrade has added port 'a9_tvalid'
+
+-Upgrade has added port 'x_tdata'
+
+-Upgrade has added port 'x_tready'
+
+-Upgrade has added port 'x_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
 | Date         : Wed Oct 30 14:31:07 2024
 | Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

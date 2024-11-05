@@ -561,4 +561,5 @@ blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
-blk_mem_gen_v
+blk_mem_gen_v8_4_4 WARNING: Address 310 is outside range for B Read
+$finish called at time : 1484915 ns : File "C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sim_1/new/PL_NN_sim_tb.v" Line 254

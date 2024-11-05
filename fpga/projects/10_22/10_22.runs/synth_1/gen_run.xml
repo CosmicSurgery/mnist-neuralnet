@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1729633268">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1730350027">
   <File Type="PA-TCL" Name="PL_NN_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="PL_NN_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="PL_NN_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="PL_NN_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="PL_NN_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="PL_NN_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="PL_NN_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="PL_NN_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="PL_NN_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/PL_NN/PL_NN.bd">
@@ -20,10 +25,25 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/PL_NN_sim/PL_NN_sim.bd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/PL_NN_sim/hdl/PL_NN_sim_wrapper.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="PL_NN_wrapper"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -42,39 +62,41 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_axi4_lite_final_outp_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_axis_broadcaster_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_5_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_5"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_axis_broadcaster_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_4_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_4"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_image_loader_module_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_6_0"/>
   <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_6"/>
   <BlockFileSet Type="BlockSrcs" Name="PL_NN_proc_sys_reset_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_7_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_7"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_8_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_axis_broadcaster_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_tier2_xbar_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_axis_broadcaster_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_axi4_lite_register_m_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_9_0"/>
   <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_9"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_axi_gpio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_image_loader_module_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_18"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_axi_gpio_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_hardmax_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_axi4_lite_register_m_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_5_0"/>
   <BlockFileSet Type="BlockSrcs" Name="PL_NN_axi4_lite_layer_conn_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PL_NN_tier2_xbar_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_7_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_8_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_perceptron_0_18"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_axi4_lite_final_outp_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_hardmax_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="PL_NN_tier2_xbar_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="PL_NN_tier2_xbar_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PL_NN_tier2_xbar_2_0"/>
 </GenRun>

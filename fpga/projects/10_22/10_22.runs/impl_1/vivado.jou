@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Oct 22 14:45:56 2024
-# Process ID: 2512
+# Start of session at: Wed Oct 30 21:50:57 2024
+# Process ID: 7520
 # Current directory: C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/impl_1
 # Command line: vivado.exe -log PL_NN_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source PL_NN_wrapper.tcl -notrace
 # Log file: C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.runs/impl_1/PL_NN_wrapper.vdi

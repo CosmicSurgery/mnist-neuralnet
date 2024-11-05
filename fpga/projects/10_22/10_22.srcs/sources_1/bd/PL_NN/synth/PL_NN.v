@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Tue Oct 22 14:40:54 2024
+//Date        : Wed Oct 30 21:46:26 2024
 //Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 //Command     : generate_target PL_NN.bd
 //Design      : PL_NN
@@ -54,11 +54,12 @@ module PL_NN
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
 
-  wire [31:0]axi4_lite_final_outp_0_a_tdata;
-  wire axi4_lite_final_outp_0_a_tvalid;
-  wire [31:0]axi4_lite_layer_conn_0_a_TDATA;
-  wire axi4_lite_layer_conn_0_a_TREADY;
-  wire axi4_lite_layer_conn_0_a_TVALID;
+  wire [31:0]axi4_lite_final_outp_0_x_TDATA;
+  wire axi4_lite_final_outp_0_x_TREADY;
+  wire axi4_lite_final_outp_0_x_TVALID;
+  wire [31:0]axi4_lite_layer_conn_0_x_TDATA;
+  wire axi4_lite_layer_conn_0_x_TREADY;
+  wire axi4_lite_layer_conn_0_x_TVALID;
   wire [31:0]axi4_lite_register_m_0_bias_0;
   wire [31:0]axi4_lite_register_m_0_bias_1;
   wire [31:0]axi4_lite_register_m_0_bias_10;
@@ -617,46 +618,66 @@ module PL_NN
   wire [31:0]image_loader_module_0_x_TDATA;
   wire image_loader_module_0_x_TREADY;
   wire image_loader_module_0_x_TVALID;
-  wire [31:0]perceptron_0_a_tdata;
-  wire perceptron_0_done;
-  wire [31:0]perceptron_18_a_tdata;
-  wire perceptron_18_done;
-  wire [31:0]perceptron_19_a_tdata;
-  wire perceptron_19_done;
-  wire [31:0]perceptron_1_a_tdata;
-  wire perceptron_1_done;
-  wire [31:0]perceptron_20_a_tdata;
-  wire perceptron_20_done;
-  wire [31:0]perceptron_21_a_tdata;
-  wire perceptron_21_done;
-  wire [31:0]perceptron_22_a_tdata;
-  wire perceptron_22_done;
-  wire [31:0]perceptron_23_a_tdata;
-  wire perceptron_23_done;
-  wire [31:0]perceptron_24_a_tdata;
-  wire perceptron_24_done;
-  wire [31:0]perceptron_25_a_tdata;
-  wire perceptron_25_done;
-  wire [31:0]perceptron_26_a_tdata;
-  wire perceptron_26_done;
-  wire [31:0]perceptron_27_a_tdata;
-  wire perceptron_27_done;
-  wire [31:0]perceptron_2_a_tdata;
-  wire perceptron_2_done;
-  wire [31:0]perceptron_3_a_tdata;
-  wire perceptron_3_done;
-  wire [31:0]perceptron_4_a_tdata;
-  wire perceptron_4_done;
-  wire [31:0]perceptron_5_a_tdata;
-  wire perceptron_5_done;
-  wire [31:0]perceptron_6_a_tdata;
-  wire perceptron_6_done;
-  wire [31:0]perceptron_7_a_tdata;
-  wire perceptron_7_done;
-  wire [31:0]perceptron_8_a_tdata;
-  wire perceptron_8_done;
-  wire [31:0]perceptron_9_a_tdata;
-  wire perceptron_9_done;
+  wire [31:0]perceptron_0_a_TDATA;
+  wire perceptron_0_a_TREADY;
+  wire perceptron_0_a_TVALID;
+  wire [31:0]perceptron_18_a_TDATA;
+  wire perceptron_18_a_TREADY;
+  wire perceptron_18_a_TVALID;
+  wire [31:0]perceptron_19_a_TDATA;
+  wire perceptron_19_a_TREADY;
+  wire perceptron_19_a_TVALID;
+  wire [31:0]perceptron_1_a_TDATA;
+  wire perceptron_1_a_TREADY;
+  wire perceptron_1_a_TVALID;
+  wire [31:0]perceptron_20_a_TDATA;
+  wire perceptron_20_a_TREADY;
+  wire perceptron_20_a_TVALID;
+  wire [31:0]perceptron_21_a_TDATA;
+  wire perceptron_21_a_TREADY;
+  wire perceptron_21_a_TVALID;
+  wire [31:0]perceptron_22_a_TDATA;
+  wire perceptron_22_a_TREADY;
+  wire perceptron_22_a_TVALID;
+  wire [31:0]perceptron_23_a_TDATA;
+  wire perceptron_23_a_TREADY;
+  wire perceptron_23_a_TVALID;
+  wire [31:0]perceptron_24_a_TDATA;
+  wire perceptron_24_a_TREADY;
+  wire perceptron_24_a_TVALID;
+  wire [31:0]perceptron_25_a_TDATA;
+  wire perceptron_25_a_TREADY;
+  wire perceptron_25_a_TVALID;
+  wire [31:0]perceptron_26_a_TDATA;
+  wire perceptron_26_a_TREADY;
+  wire perceptron_26_a_TVALID;
+  wire [31:0]perceptron_27_a_TDATA;
+  wire perceptron_27_a_TREADY;
+  wire perceptron_27_a_TVALID;
+  wire [31:0]perceptron_2_a_TDATA;
+  wire perceptron_2_a_TREADY;
+  wire perceptron_2_a_TVALID;
+  wire [31:0]perceptron_3_a_TDATA;
+  wire perceptron_3_a_TREADY;
+  wire perceptron_3_a_TVALID;
+  wire [31:0]perceptron_4_a_TDATA;
+  wire perceptron_4_a_TREADY;
+  wire perceptron_4_a_TVALID;
+  wire [31:0]perceptron_5_a_TDATA;
+  wire perceptron_5_a_TREADY;
+  wire perceptron_5_a_TVALID;
+  wire [31:0]perceptron_6_a_TDATA;
+  wire perceptron_6_a_TREADY;
+  wire perceptron_6_a_TVALID;
+  wire [31:0]perceptron_7_a_TDATA;
+  wire perceptron_7_a_TREADY;
+  wire perceptron_7_a_TVALID;
+  wire [31:0]perceptron_8_a_TDATA;
+  wire perceptron_8_a_TREADY;
+  wire perceptron_8_a_TVALID;
+  wire [31:0]perceptron_9_a_TDATA;
+  wire perceptron_9_a_TREADY;
+  wire perceptron_9_a_TVALID;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
@@ -721,28 +742,36 @@ module PL_NN
   wire processing_system7_0_M_AXI_GP0_WVALID;
 
   PL_NN_axi4_lite_final_outp_0_0 axi4_lite_final_outp_0
-       (.a0done(perceptron_18_done),
-        .a1done(perceptron_19_done),
-        .a2done(perceptron_20_done),
-        .a3done(perceptron_21_done),
-        .a4done(perceptron_22_done),
-        .a5done(perceptron_23_done),
-        .a6done(perceptron_24_done),
-        .a7done(perceptron_25_done),
-        .a8done(perceptron_26_done),
-        .a9done(perceptron_27_done),
-        .a_2_0(perceptron_18_a_tdata),
-        .a_2_1(perceptron_19_a_tdata),
-        .a_2_2(perceptron_20_a_tdata),
-        .a_2_3(perceptron_21_a_tdata),
-        .a_2_4(perceptron_22_a_tdata),
-        .a_2_5(perceptron_23_a_tdata),
-        .a_2_6(perceptron_24_a_tdata),
-        .a_2_7(perceptron_25_a_tdata),
-        .a_2_8(perceptron_26_a_tdata),
-        .a_2_9(perceptron_27_a_tdata),
-        .a_tdata(axi4_lite_final_outp_0_a_tdata),
-        .a_tvalid(axi4_lite_final_outp_0_a_tvalid),
+       (.a0_tdata(perceptron_18_a_TDATA),
+        .a0_tready(perceptron_18_a_TREADY),
+        .a0_tvalid(perceptron_18_a_TVALID),
+        .a1_tdata(perceptron_19_a_TDATA),
+        .a1_tready(perceptron_19_a_TREADY),
+        .a1_tvalid(perceptron_19_a_TVALID),
+        .a2_tdata(perceptron_20_a_TDATA),
+        .a2_tready(perceptron_20_a_TREADY),
+        .a2_tvalid(perceptron_20_a_TVALID),
+        .a3_tdata(perceptron_21_a_TDATA),
+        .a3_tready(perceptron_21_a_TREADY),
+        .a3_tvalid(perceptron_21_a_TVALID),
+        .a4_tdata(perceptron_22_a_TDATA),
+        .a4_tready(perceptron_22_a_TREADY),
+        .a4_tvalid(perceptron_22_a_TVALID),
+        .a5_tdata(perceptron_23_a_TDATA),
+        .a5_tready(perceptron_23_a_TREADY),
+        .a5_tvalid(perceptron_23_a_TVALID),
+        .a6_tdata(perceptron_24_a_TDATA),
+        .a6_tready(perceptron_24_a_TREADY),
+        .a6_tvalid(perceptron_24_a_TVALID),
+        .a7_tdata(perceptron_25_a_TDATA),
+        .a7_tready(perceptron_25_a_TREADY),
+        .a7_tvalid(perceptron_25_a_TVALID),
+        .a8_tdata(perceptron_26_a_TDATA),
+        .a8_tready(perceptron_26_a_TREADY),
+        .a8_tvalid(perceptron_26_a_TVALID),
+        .a9_tdata(perceptron_27_a_TDATA),
+        .a9_tready(perceptron_27_a_TREADY),
+        .a9_tvalid(perceptron_27_a_TVALID),
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(proc_sys_reset_0_peripheral_aresetn),
         .s_axil_araddr(axi_interconnect_0_M10_AXI_ARADDR[6:0]),
@@ -763,33 +792,46 @@ module PL_NN
         .s_axil_wdata(axi_interconnect_0_M10_AXI_WDATA),
         .s_axil_wready(axi_interconnect_0_M10_AXI_WREADY),
         .s_axil_wstrb(axi_interconnect_0_M10_AXI_WSTRB),
-        .s_axil_wvalid(axi_interconnect_0_M10_AXI_WVALID));
+        .s_axil_wvalid(axi_interconnect_0_M10_AXI_WVALID),
+        .x_tdata(axi4_lite_final_outp_0_x_TDATA),
+        .x_tready(axi4_lite_final_outp_0_x_TREADY),
+        .x_tvalid(axi4_lite_final_outp_0_x_TVALID));
   PL_NN_axi4_lite_layer_conn_0_0 axi4_lite_layer_conn_0
-       (.a0(perceptron_0_a_tdata),
-        .a0done(perceptron_0_done),
-        .a1(perceptron_1_a_tdata),
-        .a1done(perceptron_1_done),
-        .a2(perceptron_2_a_tdata),
-        .a2done(perceptron_2_done),
-        .a3(perceptron_3_a_tdata),
-        .a3done(perceptron_3_done),
-        .a4(perceptron_4_a_tdata),
-        .a4done(perceptron_4_done),
-        .a5(perceptron_5_a_tdata),
-        .a5done(perceptron_5_done),
-        .a6(perceptron_6_a_tdata),
-        .a6done(perceptron_6_done),
-        .a7(perceptron_7_a_tdata),
-        .a7done(perceptron_7_done),
-        .a8(perceptron_8_a_tdata),
-        .a8done(perceptron_8_done),
-        .a9(perceptron_9_a_tdata),
-        .a9done(perceptron_9_done),
-        .a_tdata(axi4_lite_layer_conn_0_a_TDATA),
-        .a_tready(axi4_lite_layer_conn_0_a_TREADY),
-        .a_tvalid(axi4_lite_layer_conn_0_a_TVALID),
+       (.a0_tdata(perceptron_0_a_TDATA),
+        .a0_tready(perceptron_0_a_TREADY),
+        .a0_tvalid(perceptron_0_a_TVALID),
+        .a1_tdata(perceptron_1_a_TDATA),
+        .a1_tready(perceptron_1_a_TREADY),
+        .a1_tvalid(perceptron_1_a_TVALID),
+        .a2_tdata(perceptron_2_a_TDATA),
+        .a2_tready(perceptron_2_a_TREADY),
+        .a2_tvalid(perceptron_2_a_TVALID),
+        .a3_tdata(perceptron_3_a_TDATA),
+        .a3_tready(perceptron_3_a_TREADY),
+        .a3_tvalid(perceptron_3_a_TVALID),
+        .a4_tdata(perceptron_4_a_TDATA),
+        .a4_tready(perceptron_4_a_TREADY),
+        .a4_tvalid(perceptron_4_a_TVALID),
+        .a5_tdata(perceptron_5_a_TDATA),
+        .a5_tready(perceptron_5_a_TREADY),
+        .a5_tvalid(perceptron_5_a_TVALID),
+        .a6_tdata(perceptron_6_a_TDATA),
+        .a6_tready(perceptron_6_a_TREADY),
+        .a6_tvalid(perceptron_6_a_TVALID),
+        .a7_tdata(perceptron_7_a_TDATA),
+        .a7_tready(perceptron_7_a_TREADY),
+        .a7_tvalid(perceptron_7_a_TVALID),
+        .a8_tdata(perceptron_8_a_TDATA),
+        .a8_tready(perceptron_8_a_TREADY),
+        .a8_tvalid(perceptron_8_a_TVALID),
+        .a9_tdata(perceptron_9_a_TDATA),
+        .a9_tready(perceptron_9_a_TREADY),
+        .a9_tvalid(perceptron_9_a_TVALID),
         .clk(processing_system7_0_FCLK_CLK0),
-        .resetn(proc_sys_reset_0_peripheral_aresetn));
+        .resetn(proc_sys_reset_0_peripheral_aresetn),
+        .x_tdata(axi4_lite_layer_conn_0_x_TDATA),
+        .x_tready(axi4_lite_layer_conn_0_x_TREADY),
+        .x_tvalid(axi4_lite_layer_conn_0_x_TVALID));
   PL_NN_axi4_lite_register_m_0_0 axi4_lite_register_m_0
        (.aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1456,14 +1498,16 @@ module PL_NN
         .m_axis_tdata({axis_broadcaster_2_M09_AXIS_TDATA,axis_broadcaster_2_M08_AXIS_TDATA,axis_broadcaster_2_M07_AXIS_TDATA,axis_broadcaster_2_M06_AXIS_TDATA,axis_broadcaster_2_M05_AXIS_TDATA,axis_broadcaster_2_M04_AXIS_TDATA,axis_broadcaster_2_M03_AXIS_TDATA,axis_broadcaster_2_M02_AXIS_TDATA,axis_broadcaster_2_M01_AXIS_TDATA,axis_broadcaster_2_M00_AXIS_TDATA}),
         .m_axis_tready({axis_broadcaster_2_M09_AXIS_TREADY,axis_broadcaster_2_M08_AXIS_TREADY,axis_broadcaster_2_M07_AXIS_TREADY,axis_broadcaster_2_M06_AXIS_TREADY,axis_broadcaster_2_M05_AXIS_TREADY,axis_broadcaster_2_M04_AXIS_TREADY,axis_broadcaster_2_M03_AXIS_TREADY,axis_broadcaster_2_M02_AXIS_TREADY,axis_broadcaster_2_M01_AXIS_TREADY,axis_broadcaster_2_M00_AXIS_TREADY}),
         .m_axis_tvalid({axis_broadcaster_2_M09_AXIS_TVALID,axis_broadcaster_2_M08_AXIS_TVALID,axis_broadcaster_2_M07_AXIS_TVALID,axis_broadcaster_2_M06_AXIS_TVALID,axis_broadcaster_2_M05_AXIS_TVALID,axis_broadcaster_2_M04_AXIS_TVALID,axis_broadcaster_2_M03_AXIS_TVALID,axis_broadcaster_2_M02_AXIS_TVALID,axis_broadcaster_2_M01_AXIS_TVALID,axis_broadcaster_2_M00_AXIS_TVALID}),
-        .s_axis_tdata(axi4_lite_layer_conn_0_a_TDATA),
-        .s_axis_tready(axi4_lite_layer_conn_0_a_TREADY),
-        .s_axis_tvalid(axi4_lite_layer_conn_0_a_TVALID));
+        .s_axis_tdata(axi4_lite_layer_conn_0_x_TDATA),
+        .s_axis_tready(axi4_lite_layer_conn_0_x_TREADY),
+        .s_axis_tvalid(axi4_lite_layer_conn_0_x_TVALID));
   PL_NN_hardmax_0_0 hardmax_0
-       (.a_tValid(axi4_lite_final_outp_0_a_tvalid),
-        .a_tdata(axi4_lite_final_outp_0_a_tdata),
+       (.a_tValid(axi4_lite_final_outp_0_x_TVALID),
+        .a_tdata(axi4_lite_final_outp_0_x_TDATA),
+        .a_tready(axi4_lite_final_outp_0_x_TREADY),
         .clk(processing_system7_0_FCLK_CLK0),
         .rstn(proc_sys_reset_0_peripheral_aresetn),
+        .start(axi_gpio_0_gpio_io_o),
         .z_tValid(hardmax_0_z_tValid),
         .z_tdata(hardmax_0_z_tdata));
   PL_NN_image_loader_module_0_0 image_loader_module_0
@@ -1493,9 +1537,10 @@ module PL_NN
         .x_tready(image_loader_module_0_x_TREADY),
         .x_tvalid(image_loader_module_0_x_TVALID));
   PL_NN_perceptron_0_0 perceptron_0
-       (.a_tdata(perceptron_0_a_tdata),
+       (.a_tdata(perceptron_0_a_TDATA),
+        .a_tready(perceptron_0_a_TREADY),
+        .a_tvalid(perceptron_0_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_0),
-        .done(perceptron_0_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M00_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1522,9 +1567,10 @@ module PL_NN
         .x_tready(axis_broadcaster_0_M00_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_0_M00_AXIS_TVALID));
   PL_NN_perceptron_0_1 perceptron_1
-       (.a_tdata(perceptron_1_a_tdata),
+       (.a_tdata(perceptron_1_a_TDATA),
+        .a_tready(perceptron_1_a_TREADY),
+        .a_tvalid(perceptron_1_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_1),
-        .done(perceptron_1_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M01_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1551,9 +1597,10 @@ module PL_NN
         .x_tready(axis_broadcaster_0_M01_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_0_M01_AXIS_TVALID));
   PL_NN_perceptron_0_18 perceptron_18
-       (.a_tdata(perceptron_18_a_tdata),
+       (.a_tdata(perceptron_18_a_TDATA),
+        .a_tready(perceptron_18_a_TREADY),
+        .a_tvalid(perceptron_18_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_10),
-        .done(perceptron_18_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M18_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1580,9 +1627,10 @@ module PL_NN
         .x_tready(axis_broadcaster_2_M00_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_2_M00_AXIS_TVALID));
   PL_NN_perceptron_1_0 perceptron_19
-       (.a_tdata(perceptron_19_a_tdata),
+       (.a_tdata(perceptron_19_a_TDATA),
+        .a_tready(perceptron_19_a_TREADY),
+        .a_tvalid(perceptron_19_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_11),
-        .done(perceptron_19_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M19_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1609,9 +1657,10 @@ module PL_NN
         .x_tready(axis_broadcaster_2_M01_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_2_M01_AXIS_TVALID));
   PL_NN_perceptron_0_2 perceptron_2
-       (.a_tdata(perceptron_2_a_tdata),
+       (.a_tdata(perceptron_2_a_TDATA),
+        .a_tready(perceptron_2_a_TREADY),
+        .a_tvalid(perceptron_2_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_2),
-        .done(perceptron_2_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M02_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1638,9 +1687,10 @@ module PL_NN
         .x_tready(axis_broadcaster_0_M02_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_0_M02_AXIS_TVALID));
   PL_NN_perceptron_2_0 perceptron_20
-       (.a_tdata(perceptron_20_a_tdata),
+       (.a_tdata(perceptron_20_a_TDATA),
+        .a_tready(perceptron_20_a_TREADY),
+        .a_tvalid(perceptron_20_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_20),
-        .done(perceptron_20_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M20_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1667,9 +1717,10 @@ module PL_NN
         .x_tready(axis_broadcaster_2_M02_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_2_M02_AXIS_TVALID));
   PL_NN_perceptron_3_0 perceptron_21
-       (.a_tdata(perceptron_21_a_tdata),
+       (.a_tdata(perceptron_21_a_TDATA),
+        .a_tready(perceptron_21_a_TREADY),
+        .a_tvalid(perceptron_21_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_21),
-        .done(perceptron_21_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M21_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1696,9 +1747,10 @@ module PL_NN
         .x_tready(axis_broadcaster_2_M03_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_2_M03_AXIS_TVALID));
   PL_NN_perceptron_4_0 perceptron_22
-       (.a_tdata(perceptron_22_a_tdata),
+       (.a_tdata(perceptron_22_a_TDATA),
+        .a_tready(perceptron_22_a_TREADY),
+        .a_tvalid(perceptron_22_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_22),
-        .done(perceptron_22_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M22_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1725,9 +1777,10 @@ module PL_NN
         .x_tready(axis_broadcaster_2_M04_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_2_M04_AXIS_TVALID));
   PL_NN_perceptron_5_0 perceptron_23
-       (.a_tdata(perceptron_23_a_tdata),
+       (.a_tdata(perceptron_23_a_TDATA),
+        .a_tready(perceptron_23_a_TREADY),
+        .a_tvalid(perceptron_23_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_23),
-        .done(perceptron_23_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M23_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1754,9 +1807,10 @@ module PL_NN
         .x_tready(axis_broadcaster_2_M05_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_2_M05_AXIS_TVALID));
   PL_NN_perceptron_6_0 perceptron_24
-       (.a_tdata(perceptron_24_a_tdata),
+       (.a_tdata(perceptron_24_a_TDATA),
+        .a_tready(perceptron_24_a_TREADY),
+        .a_tvalid(perceptron_24_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_24),
-        .done(perceptron_24_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M24_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1783,9 +1837,10 @@ module PL_NN
         .x_tready(axis_broadcaster_2_M06_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_2_M06_AXIS_TVALID));
   PL_NN_perceptron_7_0 perceptron_25
-       (.a_tdata(perceptron_25_a_tdata),
+       (.a_tdata(perceptron_25_a_TDATA),
+        .a_tready(perceptron_25_a_TREADY),
+        .a_tvalid(perceptron_25_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_25),
-        .done(perceptron_25_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M15_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1812,9 +1867,10 @@ module PL_NN
         .x_tready(axis_broadcaster_2_M07_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_2_M07_AXIS_TVALID));
   PL_NN_perceptron_8_0 perceptron_26
-       (.a_tdata(perceptron_26_a_tdata),
+       (.a_tdata(perceptron_26_a_TDATA),
+        .a_tready(perceptron_26_a_TREADY),
+        .a_tvalid(perceptron_26_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_26),
-        .done(perceptron_26_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M16_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1841,9 +1897,10 @@ module PL_NN
         .x_tready(axis_broadcaster_2_M08_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_2_M08_AXIS_TVALID));
   PL_NN_perceptron_9_0 perceptron_27
-       (.a_tdata(perceptron_27_a_tdata),
+       (.a_tdata(perceptron_27_a_TDATA),
+        .a_tready(perceptron_27_a_TREADY),
+        .a_tvalid(perceptron_27_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_27),
-        .done(perceptron_27_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M17_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1870,9 +1927,10 @@ module PL_NN
         .x_tready(axis_broadcaster_2_M09_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_2_M09_AXIS_TVALID));
   PL_NN_perceptron_0_3 perceptron_3
-       (.a_tdata(perceptron_3_a_tdata),
+       (.a_tdata(perceptron_3_a_TDATA),
+        .a_tready(perceptron_3_a_TREADY),
+        .a_tvalid(perceptron_3_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_3),
-        .done(perceptron_3_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M03_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1899,9 +1957,10 @@ module PL_NN
         .x_tready(axis_broadcaster_0_M03_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_0_M03_AXIS_TVALID));
   PL_NN_perceptron_0_4 perceptron_4
-       (.a_tdata(perceptron_4_a_tdata),
+       (.a_tdata(perceptron_4_a_TDATA),
+        .a_tready(perceptron_4_a_TREADY),
+        .a_tvalid(perceptron_4_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_4),
-        .done(perceptron_4_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M04_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1928,9 +1987,10 @@ module PL_NN
         .x_tready(axis_broadcaster_0_M04_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_0_M04_AXIS_TVALID));
   PL_NN_perceptron_0_5 perceptron_5
-       (.a_tdata(perceptron_5_a_tdata),
+       (.a_tdata(perceptron_5_a_TDATA),
+        .a_tready(perceptron_5_a_TREADY),
+        .a_tvalid(perceptron_5_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_5),
-        .done(perceptron_5_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M05_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1957,9 +2017,10 @@ module PL_NN
         .x_tready(axis_broadcaster_0_M05_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_0_M05_AXIS_TVALID));
   PL_NN_perceptron_0_6 perceptron_6
-       (.a_tdata(perceptron_6_a_tdata),
+       (.a_tdata(perceptron_6_a_TDATA),
+        .a_tready(perceptron_6_a_TREADY),
+        .a_tvalid(perceptron_6_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_6),
-        .done(perceptron_6_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M06_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -1986,9 +2047,10 @@ module PL_NN
         .x_tready(axis_broadcaster_0_M06_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_0_M06_AXIS_TVALID));
   PL_NN_perceptron_0_7 perceptron_7
-       (.a_tdata(perceptron_7_a_tdata),
+       (.a_tdata(perceptron_7_a_TDATA),
+        .a_tready(perceptron_7_a_TREADY),
+        .a_tvalid(perceptron_7_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_7),
-        .done(perceptron_7_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M07_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -2015,9 +2077,10 @@ module PL_NN
         .x_tready(axis_broadcaster_0_M07_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_0_M07_AXIS_TVALID));
   PL_NN_perceptron_0_8 perceptron_8
-       (.a_tdata(perceptron_8_a_tdata),
+       (.a_tdata(perceptron_8_a_TDATA),
+        .a_tready(perceptron_8_a_TREADY),
+        .a_tvalid(perceptron_8_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_8),
-        .done(perceptron_8_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M08_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -2044,9 +2107,10 @@ module PL_NN
         .x_tready(axis_broadcaster_0_M08_AXIS_TREADY),
         .x_tvalid(axis_broadcaster_0_M08_AXIS_TVALID));
   PL_NN_perceptron_0_9 perceptron_9
-       (.a_tdata(perceptron_9_a_tdata),
+       (.a_tdata(perceptron_9_a_TDATA),
+        .a_tready(perceptron_9_a_TREADY),
+        .a_tvalid(perceptron_9_a_TVALID),
         .bias(axi4_lite_register_m_0_bias_9),
-        .done(perceptron_9_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M09_AXI_ARADDR[11:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),

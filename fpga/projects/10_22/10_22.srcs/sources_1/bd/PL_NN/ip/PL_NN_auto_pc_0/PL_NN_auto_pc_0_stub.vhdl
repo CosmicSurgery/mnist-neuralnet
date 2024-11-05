@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Tue Oct 22 14:06:14 2024
+-- Date        : Wed Oct 30 21:49:50 2024
 -- Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top PL_NN_auto_pc_0 -prefix
---               PL_NN_auto_pc_0_ PL_NN_auto_pc_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_auto_pc_0/PL_NN_auto_pc_0_stub.vhdl
 -- Design      : PL_NN_auto_pc_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1

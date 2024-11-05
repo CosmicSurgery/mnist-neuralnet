@@ -48,37 +48,47 @@
 
 
 // IP VLNV: xilinx.com:user:hardmax:1.0
-// IP Revision: 6
+// IP Revision: 10
 
 (* X_CORE_INFO = "hardmax,Vivado 2019.2" *)
 (* CHECK_LICENSE_TYPE = "PL_NN_hardmax_0_0,hardmax,{}" *)
-(* CORE_GENERATION_INFO = "PL_NN_hardmax_0_0,hardmax,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=hardmax,x_ipVersion=1.0,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "PL_NN_hardmax_0_0,hardmax,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=hardmax,x_ipVersion=1.0,x_ipCoreRevision=10,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module PL_NN_hardmax_0_0 (
+  start,
   clk,
   rstn,
   a_tValid,
+  a_tready,
   a_tdata,
   z_tValid,
   z_tdata
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rstn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN PL_NN_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+input wire start;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rstn, ASSOCIATED_BUSIF a, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN PL_NN_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rstn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rstn RST" *)
 input wire rstn;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 a TVALID" *)
 input wire a_tValid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 a TREADY" *)
+output wire a_tready;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME a, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN PL_NN_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 a TDATA" *)
 input wire [31 : 0] a_tdata;
 output wire z_tValid;
 output wire [3 : 0] z_tdata;
 
   hardmax inst (
+    .start(start),
     .clk(clk),
     .rstn(rstn),
     .a_tValid(a_tValid),
+    .a_tready(a_tready),
     .a_tdata(a_tdata),
     .z_tValid(z_tValid),
     .z_tdata(z_tdata)

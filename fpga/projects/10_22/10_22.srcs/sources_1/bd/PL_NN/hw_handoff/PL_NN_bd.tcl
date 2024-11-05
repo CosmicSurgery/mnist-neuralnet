@@ -339,7 +339,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.096154} \
    CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {125.000000} \
    CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} \
-   CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {100.000000} \
+   CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {76.923080} \
    CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} \
@@ -375,7 +375,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_CAN_PERIPHERAL_FREQMHZ {100} \
    CONFIG.PCW_CAN_PERIPHERAL_VALID {0} \
-   CONFIG.PCW_CLK0_FREQ {100000000} \
+   CONFIG.PCW_CLK0_FREQ {76923080} \
    CONFIG.PCW_CLK1_FREQ {10000000} \
    CONFIG.PCW_CLK2_FREQ {10000000} \
    CONFIG.PCW_CLK3_FREQ {10000000} \
@@ -492,8 +492,8 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_EN_USB1 {0} \
    CONFIG.PCW_EN_WDT {0} \
    CONFIG.PCW_FCLK0_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {5} \
-   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {2} \
+   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {13} \
+   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_FCLK1_PERIPHERAL_CLKSRC {IO PLL} \
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {1} \
@@ -507,7 +507,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FCLK_CLK1_BUF {FALSE} \
    CONFIG.PCW_FCLK_CLK2_BUF {FALSE} \
    CONFIG.PCW_FCLK_CLK3_BUF {FALSE} \
-   CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} \
+   CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {75} \
    CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA3_PERIPHERAL_FREQMHZ {50} \
@@ -1053,7 +1053,8 @@ proc create_root_design { parentCell } {
  ] $processing_system7_0
 
   # Create interface connections
-  connect_bd_intf_net -intf_net axi4_lite_layer_conn_0_a [get_bd_intf_pins axi4_lite_layer_conn_0/a] [get_bd_intf_pins axis_broadcaster_2/S_AXIS]
+  connect_bd_intf_net -intf_net axi4_lite_final_outp_0_x [get_bd_intf_pins axi4_lite_final_outp_0/x] [get_bd_intf_pins hardmax_0/a]
+  connect_bd_intf_net -intf_net axi4_lite_layer_conn_0_x [get_bd_intf_pins axi4_lite_layer_conn_0/x] [get_bd_intf_pins axis_broadcaster_2/S_AXIS]
   connect_bd_intf_net -intf_net axi_interconnect_0_M00_AXI [get_bd_intf_pins axi_interconnect_0/M00_AXI] [get_bd_intf_pins perceptron_0/s_axi]
   connect_bd_intf_net -intf_net axi_interconnect_0_M01_AXI [get_bd_intf_pins axi_interconnect_0/M01_AXI] [get_bd_intf_pins perceptron_1/s_axi]
   connect_bd_intf_net -intf_net axi_interconnect_0_M02_AXI [get_bd_intf_pins axi_interconnect_0/M02_AXI] [get_bd_intf_pins perceptron_2/s_axi]
@@ -1100,13 +1101,31 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axis_broadcaster_2_M08_AXIS [get_bd_intf_pins axis_broadcaster_2/M08_AXIS] [get_bd_intf_pins perceptron_26/x]
   connect_bd_intf_net -intf_net axis_broadcaster_2_M09_AXIS [get_bd_intf_pins axis_broadcaster_2/M09_AXIS] [get_bd_intf_pins perceptron_27/x]
   connect_bd_intf_net -intf_net image_loader_module_0_x [get_bd_intf_pins axis_broadcaster_0/S_AXIS] [get_bd_intf_pins image_loader_module_0/x]
+  connect_bd_intf_net -intf_net perceptron_0_a [get_bd_intf_pins axi4_lite_layer_conn_0/a0] [get_bd_intf_pins perceptron_0/a]
+  connect_bd_intf_net -intf_net perceptron_18_a [get_bd_intf_pins axi4_lite_final_outp_0/a0] [get_bd_intf_pins perceptron_18/a]
+  connect_bd_intf_net -intf_net perceptron_19_a [get_bd_intf_pins axi4_lite_final_outp_0/a1] [get_bd_intf_pins perceptron_19/a]
+  connect_bd_intf_net -intf_net perceptron_1_a [get_bd_intf_pins axi4_lite_layer_conn_0/a1] [get_bd_intf_pins perceptron_1/a]
+  connect_bd_intf_net -intf_net perceptron_20_a [get_bd_intf_pins axi4_lite_final_outp_0/a2] [get_bd_intf_pins perceptron_20/a]
+  connect_bd_intf_net -intf_net perceptron_21_a [get_bd_intf_pins axi4_lite_final_outp_0/a3] [get_bd_intf_pins perceptron_21/a]
+  connect_bd_intf_net -intf_net perceptron_22_a [get_bd_intf_pins axi4_lite_final_outp_0/a4] [get_bd_intf_pins perceptron_22/a]
+  connect_bd_intf_net -intf_net perceptron_23_a [get_bd_intf_pins axi4_lite_final_outp_0/a5] [get_bd_intf_pins perceptron_23/a]
+  connect_bd_intf_net -intf_net perceptron_24_a [get_bd_intf_pins axi4_lite_final_outp_0/a6] [get_bd_intf_pins perceptron_24/a]
+  connect_bd_intf_net -intf_net perceptron_25_a [get_bd_intf_pins axi4_lite_final_outp_0/a7] [get_bd_intf_pins perceptron_25/a]
+  connect_bd_intf_net -intf_net perceptron_26_a [get_bd_intf_pins axi4_lite_final_outp_0/a8] [get_bd_intf_pins perceptron_26/a]
+  connect_bd_intf_net -intf_net perceptron_27_a [get_bd_intf_pins axi4_lite_final_outp_0/a9] [get_bd_intf_pins perceptron_27/a]
+  connect_bd_intf_net -intf_net perceptron_2_a [get_bd_intf_pins axi4_lite_layer_conn_0/a2] [get_bd_intf_pins perceptron_2/a]
+  connect_bd_intf_net -intf_net perceptron_3_a [get_bd_intf_pins axi4_lite_layer_conn_0/a3] [get_bd_intf_pins perceptron_3/a]
+  connect_bd_intf_net -intf_net perceptron_4_a [get_bd_intf_pins axi4_lite_layer_conn_0/a4] [get_bd_intf_pins perceptron_4/a]
+  connect_bd_intf_net -intf_net perceptron_5_a [get_bd_intf_pins axi4_lite_layer_conn_0/a5] [get_bd_intf_pins perceptron_5/a]
+  connect_bd_intf_net -intf_net perceptron_6_a [get_bd_intf_pins axi4_lite_layer_conn_0/a6] [get_bd_intf_pins perceptron_6/a]
+  connect_bd_intf_net -intf_net perceptron_7_a [get_bd_intf_pins axi4_lite_layer_conn_0/a7] [get_bd_intf_pins perceptron_7/a]
+  connect_bd_intf_net -intf_net perceptron_8_a [get_bd_intf_pins axi4_lite_layer_conn_0/a8] [get_bd_intf_pins perceptron_8/a]
+  connect_bd_intf_net -intf_net perceptron_9_a [get_bd_intf_pins axi4_lite_layer_conn_0/a9] [get_bd_intf_pins perceptron_9/a]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins axi_interconnect_0/S00_AXI] [get_bd_intf_pins processing_system7_0/M_AXI_GP0]
 
   # Create port connections
-  connect_bd_net -net axi4_lite_final_outp_0_a_tdata [get_bd_pins axi4_lite_final_outp_0/a_tdata] [get_bd_pins hardmax_0/a_tdata]
-  connect_bd_net -net axi4_lite_final_outp_0_a_tvalid [get_bd_pins axi4_lite_final_outp_0/a_tvalid] [get_bd_pins hardmax_0/a_tValid]
   connect_bd_net -net axi4_lite_register_m_0_bias_0 [get_bd_pins axi4_lite_register_m_0/bias_0] [get_bd_pins perceptron_0/bias]
   connect_bd_net -net axi4_lite_register_m_0_bias_1 [get_bd_pins axi4_lite_register_m_0/bias_1] [get_bd_pins perceptron_1/bias]
   connect_bd_net -net axi4_lite_register_m_0_bias_2 [get_bd_pins axi4_lite_register_m_0/bias_2] [get_bd_pins perceptron_2/bias]
@@ -1128,49 +1147,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi4_lite_register_m_0_bias_26 [get_bd_pins axi4_lite_register_m_0/bias_18] [get_bd_pins perceptron_26/bias]
   connect_bd_net -net axi4_lite_register_m_0_bias_27 [get_bd_pins axi4_lite_register_m_0/bias_19] [get_bd_pins perceptron_27/bias]
   connect_bd_net -net axi4_lite_register_m_0_control [get_bd_pins axi4_lite_register_m_0/control] [get_bd_pins axi4_lite_register_m_0/status]
-  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins image_loader_module_0/start] [get_bd_pins perceptron_0/start] [get_bd_pins perceptron_1/start] [get_bd_pins perceptron_18/start] [get_bd_pins perceptron_19/start] [get_bd_pins perceptron_2/start] [get_bd_pins perceptron_20/start] [get_bd_pins perceptron_21/start] [get_bd_pins perceptron_22/start] [get_bd_pins perceptron_23/start] [get_bd_pins perceptron_24/start] [get_bd_pins perceptron_25/start] [get_bd_pins perceptron_26/start] [get_bd_pins perceptron_27/start] [get_bd_pins perceptron_3/start] [get_bd_pins perceptron_4/start] [get_bd_pins perceptron_5/start] [get_bd_pins perceptron_6/start] [get_bd_pins perceptron_7/start] [get_bd_pins perceptron_8/start] [get_bd_pins perceptron_9/start]
+  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins hardmax_0/start] [get_bd_pins image_loader_module_0/start] [get_bd_pins perceptron_0/start] [get_bd_pins perceptron_1/start] [get_bd_pins perceptron_18/start] [get_bd_pins perceptron_19/start] [get_bd_pins perceptron_2/start] [get_bd_pins perceptron_20/start] [get_bd_pins perceptron_21/start] [get_bd_pins perceptron_22/start] [get_bd_pins perceptron_23/start] [get_bd_pins perceptron_24/start] [get_bd_pins perceptron_25/start] [get_bd_pins perceptron_26/start] [get_bd_pins perceptron_27/start] [get_bd_pins perceptron_3/start] [get_bd_pins perceptron_4/start] [get_bd_pins perceptron_5/start] [get_bd_pins perceptron_6/start] [get_bd_pins perceptron_7/start] [get_bd_pins perceptron_8/start] [get_bd_pins perceptron_9/start]
   connect_bd_net -net hardmax_0_z_tValid [get_bd_pins axi_gpio_1/gpio_io_i] [get_bd_pins hardmax_0/z_tValid]
   connect_bd_net -net hardmax_0_z_tdata [get_bd_pins axi_gpio_1/gpio2_io_i] [get_bd_pins hardmax_0/z_tdata]
-  connect_bd_net -net perceptron_0_a_tdata [get_bd_pins axi4_lite_layer_conn_0/a0] [get_bd_pins perceptron_0/a_tdata]
-  connect_bd_net -net perceptron_0_done [get_bd_pins axi4_lite_layer_conn_0/a0done] [get_bd_pins perceptron_0/done]
-  connect_bd_net -net perceptron_18_a_tdata [get_bd_pins axi4_lite_final_outp_0/a_2_0] [get_bd_pins perceptron_18/a_tdata]
-  connect_bd_net -net perceptron_18_done [get_bd_pins axi4_lite_final_outp_0/a0done] [get_bd_pins perceptron_18/done]
-  connect_bd_net -net perceptron_19_a_tdata [get_bd_pins axi4_lite_final_outp_0/a_2_1] [get_bd_pins perceptron_19/a_tdata]
-  connect_bd_net -net perceptron_19_done [get_bd_pins axi4_lite_final_outp_0/a1done] [get_bd_pins perceptron_19/done]
-  connect_bd_net -net perceptron_1_a_tdata [get_bd_pins axi4_lite_layer_conn_0/a1] [get_bd_pins perceptron_1/a_tdata]
-  connect_bd_net -net perceptron_1_done [get_bd_pins axi4_lite_layer_conn_0/a1done] [get_bd_pins perceptron_1/done]
-  connect_bd_net -net perceptron_20_a_tdata [get_bd_pins axi4_lite_final_outp_0/a_2_2] [get_bd_pins perceptron_20/a_tdata]
-  connect_bd_net -net perceptron_20_done [get_bd_pins axi4_lite_final_outp_0/a2done] [get_bd_pins perceptron_20/done]
-  connect_bd_net -net perceptron_21_a_tdata [get_bd_pins axi4_lite_final_outp_0/a_2_3] [get_bd_pins perceptron_21/a_tdata]
-  connect_bd_net -net perceptron_21_done [get_bd_pins axi4_lite_final_outp_0/a3done] [get_bd_pins perceptron_21/done]
-  connect_bd_net -net perceptron_22_a_tdata [get_bd_pins axi4_lite_final_outp_0/a_2_4] [get_bd_pins perceptron_22/a_tdata]
-  connect_bd_net -net perceptron_22_done [get_bd_pins axi4_lite_final_outp_0/a4done] [get_bd_pins perceptron_22/done]
-  connect_bd_net -net perceptron_23_a_tdata [get_bd_pins axi4_lite_final_outp_0/a_2_5] [get_bd_pins perceptron_23/a_tdata]
-  connect_bd_net -net perceptron_23_done [get_bd_pins axi4_lite_final_outp_0/a5done] [get_bd_pins perceptron_23/done]
-  connect_bd_net -net perceptron_24_a_tdata [get_bd_pins axi4_lite_final_outp_0/a_2_6] [get_bd_pins perceptron_24/a_tdata]
-  connect_bd_net -net perceptron_24_done [get_bd_pins axi4_lite_final_outp_0/a6done] [get_bd_pins perceptron_24/done]
-  connect_bd_net -net perceptron_25_a_tdata [get_bd_pins axi4_lite_final_outp_0/a_2_7] [get_bd_pins perceptron_25/a_tdata]
-  connect_bd_net -net perceptron_25_done [get_bd_pins axi4_lite_final_outp_0/a7done] [get_bd_pins perceptron_25/done]
-  connect_bd_net -net perceptron_26_a_tdata [get_bd_pins axi4_lite_final_outp_0/a_2_8] [get_bd_pins perceptron_26/a_tdata]
-  connect_bd_net -net perceptron_26_done [get_bd_pins axi4_lite_final_outp_0/a8done] [get_bd_pins perceptron_26/done]
-  connect_bd_net -net perceptron_27_a_tdata [get_bd_pins axi4_lite_final_outp_0/a_2_9] [get_bd_pins perceptron_27/a_tdata]
-  connect_bd_net -net perceptron_27_done [get_bd_pins axi4_lite_final_outp_0/a9done] [get_bd_pins perceptron_27/done]
-  connect_bd_net -net perceptron_2_a_tdata [get_bd_pins axi4_lite_layer_conn_0/a2] [get_bd_pins perceptron_2/a_tdata]
-  connect_bd_net -net perceptron_2_done [get_bd_pins axi4_lite_layer_conn_0/a2done] [get_bd_pins perceptron_2/done]
-  connect_bd_net -net perceptron_3_a_tdata [get_bd_pins axi4_lite_layer_conn_0/a3] [get_bd_pins perceptron_3/a_tdata]
-  connect_bd_net -net perceptron_3_done [get_bd_pins axi4_lite_layer_conn_0/a3done] [get_bd_pins perceptron_3/done]
-  connect_bd_net -net perceptron_4_a_tdata [get_bd_pins axi4_lite_layer_conn_0/a4] [get_bd_pins perceptron_4/a_tdata]
-  connect_bd_net -net perceptron_4_done [get_bd_pins axi4_lite_layer_conn_0/a4done] [get_bd_pins perceptron_4/done]
-  connect_bd_net -net perceptron_5_a_tdata [get_bd_pins axi4_lite_layer_conn_0/a5] [get_bd_pins perceptron_5/a_tdata]
-  connect_bd_net -net perceptron_5_done [get_bd_pins axi4_lite_layer_conn_0/a5done] [get_bd_pins perceptron_5/done]
-  connect_bd_net -net perceptron_6_a_tdata [get_bd_pins axi4_lite_layer_conn_0/a6] [get_bd_pins perceptron_6/a_tdata]
-  connect_bd_net -net perceptron_6_done [get_bd_pins axi4_lite_layer_conn_0/a6done] [get_bd_pins perceptron_6/done]
-  connect_bd_net -net perceptron_7_a_tdata [get_bd_pins axi4_lite_layer_conn_0/a7] [get_bd_pins perceptron_7/a_tdata]
-  connect_bd_net -net perceptron_7_done [get_bd_pins axi4_lite_layer_conn_0/a7done] [get_bd_pins perceptron_7/done]
-  connect_bd_net -net perceptron_8_a_tdata [get_bd_pins axi4_lite_layer_conn_0/a8] [get_bd_pins perceptron_8/a_tdata]
-  connect_bd_net -net perceptron_8_done [get_bd_pins axi4_lite_layer_conn_0/a8done] [get_bd_pins perceptron_8/done]
-  connect_bd_net -net perceptron_9_a_tdata [get_bd_pins axi4_lite_layer_conn_0/a9] [get_bd_pins perceptron_9/a_tdata]
-  connect_bd_net -net perceptron_9_done [get_bd_pins axi4_lite_layer_conn_0/a9done] [get_bd_pins perceptron_9/done]
   connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins axi4_lite_final_outp_0/aresetn] [get_bd_pins axi4_lite_layer_conn_0/resetn] [get_bd_pins axi4_lite_register_m_0/aresetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/M02_ARESETN] [get_bd_pins axi_interconnect_0/M03_ARESETN] [get_bd_pins axi_interconnect_0/M04_ARESETN] [get_bd_pins axi_interconnect_0/M05_ARESETN] [get_bd_pins axi_interconnect_0/M06_ARESETN] [get_bd_pins axi_interconnect_0/M07_ARESETN] [get_bd_pins axi_interconnect_0/M08_ARESETN] [get_bd_pins axi_interconnect_0/M09_ARESETN] [get_bd_pins axi_interconnect_0/M10_ARESETN] [get_bd_pins axi_interconnect_0/M11_ARESETN] [get_bd_pins axi_interconnect_0/M12_ARESETN] [get_bd_pins axi_interconnect_0/M13_ARESETN] [get_bd_pins axi_interconnect_0/M14_ARESETN] [get_bd_pins axi_interconnect_0/M15_ARESETN] [get_bd_pins axi_interconnect_0/M16_ARESETN] [get_bd_pins axi_interconnect_0/M17_ARESETN] [get_bd_pins axi_interconnect_0/M18_ARESETN] [get_bd_pins axi_interconnect_0/M19_ARESETN] [get_bd_pins axi_interconnect_0/M20_ARESETN] [get_bd_pins axi_interconnect_0/M21_ARESETN] [get_bd_pins axi_interconnect_0/M22_ARESETN] [get_bd_pins axi_interconnect_0/M23_ARESETN] [get_bd_pins axi_interconnect_0/M24_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axis_broadcaster_0/aresetn] [get_bd_pins axis_broadcaster_2/aresetn] [get_bd_pins hardmax_0/rstn] [get_bd_pins image_loader_module_0/s_axi_aresetn] [get_bd_pins perceptron_0/s_axi_aresetn] [get_bd_pins perceptron_1/s_axi_aresetn] [get_bd_pins perceptron_18/s_axi_aresetn] [get_bd_pins perceptron_19/s_axi_aresetn] [get_bd_pins perceptron_2/s_axi_aresetn] [get_bd_pins perceptron_20/s_axi_aresetn] [get_bd_pins perceptron_21/s_axi_aresetn] [get_bd_pins perceptron_22/s_axi_aresetn] [get_bd_pins perceptron_23/s_axi_aresetn] [get_bd_pins perceptron_24/s_axi_aresetn] [get_bd_pins perceptron_25/s_axi_aresetn] [get_bd_pins perceptron_26/s_axi_aresetn] [get_bd_pins perceptron_27/s_axi_aresetn] [get_bd_pins perceptron_3/s_axi_aresetn] [get_bd_pins perceptron_4/s_axi_aresetn] [get_bd_pins perceptron_5/s_axi_aresetn] [get_bd_pins perceptron_6/s_axi_aresetn] [get_bd_pins perceptron_7/s_axi_aresetn] [get_bd_pins perceptron_8/s_axi_aresetn] [get_bd_pins perceptron_9/s_axi_aresetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi4_lite_final_outp_0/aclk] [get_bd_pins axi4_lite_layer_conn_0/clk] [get_bd_pins axi4_lite_register_m_0/aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/M03_ACLK] [get_bd_pins axi_interconnect_0/M04_ACLK] [get_bd_pins axi_interconnect_0/M05_ACLK] [get_bd_pins axi_interconnect_0/M06_ACLK] [get_bd_pins axi_interconnect_0/M07_ACLK] [get_bd_pins axi_interconnect_0/M08_ACLK] [get_bd_pins axi_interconnect_0/M09_ACLK] [get_bd_pins axi_interconnect_0/M10_ACLK] [get_bd_pins axi_interconnect_0/M11_ACLK] [get_bd_pins axi_interconnect_0/M12_ACLK] [get_bd_pins axi_interconnect_0/M13_ACLK] [get_bd_pins axi_interconnect_0/M14_ACLK] [get_bd_pins axi_interconnect_0/M15_ACLK] [get_bd_pins axi_interconnect_0/M16_ACLK] [get_bd_pins axi_interconnect_0/M17_ACLK] [get_bd_pins axi_interconnect_0/M18_ACLK] [get_bd_pins axi_interconnect_0/M19_ACLK] [get_bd_pins axi_interconnect_0/M20_ACLK] [get_bd_pins axi_interconnect_0/M21_ACLK] [get_bd_pins axi_interconnect_0/M22_ACLK] [get_bd_pins axi_interconnect_0/M23_ACLK] [get_bd_pins axi_interconnect_0/M24_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axis_broadcaster_0/aclk] [get_bd_pins axis_broadcaster_2/aclk] [get_bd_pins hardmax_0/clk] [get_bd_pins image_loader_module_0/s_axi_aclk] [get_bd_pins perceptron_0/s_axi_aclk] [get_bd_pins perceptron_1/s_axi_aclk] [get_bd_pins perceptron_18/s_axi_aclk] [get_bd_pins perceptron_19/s_axi_aclk] [get_bd_pins perceptron_2/s_axi_aclk] [get_bd_pins perceptron_20/s_axi_aclk] [get_bd_pins perceptron_21/s_axi_aclk] [get_bd_pins perceptron_22/s_axi_aclk] [get_bd_pins perceptron_23/s_axi_aclk] [get_bd_pins perceptron_24/s_axi_aclk] [get_bd_pins perceptron_25/s_axi_aclk] [get_bd_pins perceptron_26/s_axi_aclk] [get_bd_pins perceptron_27/s_axi_aclk] [get_bd_pins perceptron_3/s_axi_aclk] [get_bd_pins perceptron_4/s_axi_aclk] [get_bd_pins perceptron_5/s_axi_aclk] [get_bd_pins perceptron_6/s_axi_aclk] [get_bd_pins perceptron_7/s_axi_aclk] [get_bd_pins perceptron_8/s_axi_aclk] [get_bd_pins perceptron_9/s_axi_aclk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N1 [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins processing_system7_0/FCLK_RESET0_N]

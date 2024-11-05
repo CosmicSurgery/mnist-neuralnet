@@ -86,3 +86,64 @@ con
 
 16:01:10 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\10_22\.sdk\launch_scripts\single_application_debug\systemdebugger_plnn_app_system_standalone.tcl'
 16:13:01 INFO  : Disconnected from the channel tcfchan#4.
+21:59:21 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\projects\10_22\temp_xsdb_launch_script.tcl
+21:59:25 INFO  : XSCT server has started successfully.
+21:59:25 INFO  : plnx-install-location is set to ''
+21:59:25 INFO  : Successfully done setting XSCT server connection channel  
+21:59:25 INFO  : Successfully done setting workspace for the tool. 
+21:59:29 INFO  : Registering command handlers for Vitis TCF services
+21:59:33 INFO  : Successfully done query RDI_DATADIR 
+22:10:03 INFO  : Hardware specification for platform project 'plnn' is updated.
+22:12:51 INFO  : Checking for BSP changes to sync application flags for project 'plnn_app'...
+22:12:56 INFO  : The hardware specfication used by project 'plnn_app' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+22:12:56 INFO  : The file 'C:\git_repos\mnist_neuralnet\fpga\projects\10_22\plnn_app\_ide\bitstream\PL_NN_wrapper.bit' stored in project is removed.
+22:12:56 INFO  : The updated bitstream files are copied from platform to folder 'C:\git_repos\mnist_neuralnet\fpga\projects\10_22\plnn_app\_ide\bitstream' in project 'plnn_app'.
+22:12:56 INFO  : The file 'C:\git_repos\mnist_neuralnet\fpga\projects\10_22\plnn_app\_ide\psinit\ps7_init.tcl' stored in project is removed.
+22:13:03 INFO  : The updated ps init files are copied from platform to folder 'C:\git_repos\mnist_neuralnet\fpga\projects\10_22\plnn_app\_ide\psinit' in project 'plnn_app'.
+22:13:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:13:55 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+22:13:55 INFO  : 'jtag frequency' command is executed.
+22:13:55 INFO  : Context for 'APU' is selected.
+22:13:55 INFO  : System reset is completed.
+22:13:58 INFO  : 'after 3000' command is executed.
+22:13:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+22:14:00 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/_ide/bitstream/PL_NN_wrapper.bit"
+22:14:00 INFO  : Context for 'APU' is selected.
+22:14:00 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn/export/plnn/hw/PL_NN_wrapper.xsa'.
+22:14:00 INFO  : 'configparams force-mem-access 1' command is executed.
+22:14:00 INFO  : Context for 'APU' is selected.
+22:14:00 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/_ide/psinit/ps7_init.tcl' is done.
+22:14:00 INFO  : 'ps7_init' command is executed.
+22:14:00 INFO  : 'ps7_post_config' command is executed.
+22:14:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:14:01 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/Debug/plnn_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:14:01 INFO  : 'configparams force-mem-access 0' command is executed.
+22:14:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/_ide/bitstream/PL_NN_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn/export/plnn/hw/PL_NN_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app/Debug/plnn_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:14:01 INFO  : Memory regions updated for context APU
+22:14:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:14:01 INFO  : 'con' command is executed.
+22:14:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:14:01 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\10_22\.sdk\launch_scripts\single_application_debug\systemdebugger_plnn_app_system_standalone.tcl'
+11:13:00 INFO  : Disconnected from the channel tcfchan#3.

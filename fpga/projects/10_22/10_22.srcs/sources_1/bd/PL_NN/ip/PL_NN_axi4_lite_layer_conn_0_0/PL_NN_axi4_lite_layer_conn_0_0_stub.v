@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Tue Oct 22 14:43:12 2024
+// Date        : Wed Oct 30 20:46:02 2024
 // Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_axi4_lite_layer_conn_0_0/PL_NN_axi4_lite_layer_conn_0_0_stub.v
+//               C:/git_repos/mnist_neuralnet/fpga/projects/10_22/10_22.srcs/sources_1/bd/PL_NN/ip/PL_NN_axi4_lite_layer_conn_0_0/PL_NN_axi4_lite_layer_conn_0_0_stub.v
 // Design      : PL_NN_axi4_lite_layer_conn_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1
@@ -14,32 +14,45 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "axi4_lite_layer_connector,Vivado 2019.2" *)
-module PL_NN_axi4_lite_layer_conn_0_0(clk, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a0done, a1done, 
-  a2done, a3done, a4done, a5done, a6done, a7done, a8done, a9done, resetn, a_tdata, a_tvalid, a_tready)
-/* synthesis syn_black_box black_box_pad_pin="clk,a0[31:0],a1[31:0],a2[31:0],a3[31:0],a4[31:0],a5[31:0],a6[31:0],a7[31:0],a8[31:0],a9[31:0],a0done,a1done,a2done,a3done,a4done,a5done,a6done,a7done,a8done,a9done,resetn,a_tdata[31:0],a_tvalid,a_tready" */;
+module PL_NN_axi4_lite_layer_conn_0_0(clk, a0_tdata, a1_tdata, a2_tdata, a3_tdata, 
+  a4_tdata, a5_tdata, a6_tdata, a7_tdata, a8_tdata, a9_tdata, a0_tvalid, a1_tvalid, a2_tvalid, 
+  a3_tvalid, a4_tvalid, a5_tvalid, a6_tvalid, a7_tvalid, a8_tvalid, a9_tvalid, a0_tready, 
+  a1_tready, a2_tready, a3_tready, a4_tready, a5_tready, a6_tready, a7_tready, a8_tready, 
+  a9_tready, resetn, x_tdata, x_tvalid, x_tready)
+/* synthesis syn_black_box black_box_pad_pin="clk,a0_tdata[31:0],a1_tdata[31:0],a2_tdata[31:0],a3_tdata[31:0],a4_tdata[31:0],a5_tdata[31:0],a6_tdata[31:0],a7_tdata[31:0],a8_tdata[31:0],a9_tdata[31:0],a0_tvalid,a1_tvalid,a2_tvalid,a3_tvalid,a4_tvalid,a5_tvalid,a6_tvalid,a7_tvalid,a8_tvalid,a9_tvalid,a0_tready,a1_tready,a2_tready,a3_tready,a4_tready,a5_tready,a6_tready,a7_tready,a8_tready,a9_tready,resetn,x_tdata[31:0],x_tvalid,x_tready" */;
   input clk;
-  input [31:0]a0;
-  input [31:0]a1;
-  input [31:0]a2;
-  input [31:0]a3;
-  input [31:0]a4;
-  input [31:0]a5;
-  input [31:0]a6;
-  input [31:0]a7;
-  input [31:0]a8;
-  input [31:0]a9;
-  input a0done;
-  input a1done;
-  input a2done;
-  input a3done;
-  input a4done;
-  input a5done;
-  input a6done;
-  input a7done;
-  input a8done;
-  input a9done;
+  input [31:0]a0_tdata;
+  input [31:0]a1_tdata;
+  input [31:0]a2_tdata;
+  input [31:0]a3_tdata;
+  input [31:0]a4_tdata;
+  input [31:0]a5_tdata;
+  input [31:0]a6_tdata;
+  input [31:0]a7_tdata;
+  input [31:0]a8_tdata;
+  input [31:0]a9_tdata;
+  input a0_tvalid;
+  input a1_tvalid;
+  input a2_tvalid;
+  input a3_tvalid;
+  input a4_tvalid;
+  input a5_tvalid;
+  input a6_tvalid;
+  input a7_tvalid;
+  input a8_tvalid;
+  input a9_tvalid;
+  output a0_tready;
+  output a1_tready;
+  output a2_tready;
+  output a3_tready;
+  output a4_tready;
+  output a5_tready;
+  output a6_tready;
+  output a7_tready;
+  output a8_tready;
+  output a9_tready;
   input resetn;
-  output [31:0]a_tdata;
-  output a_tvalid;
-  input a_tready;
+  output [31:0]x_tdata;
+  output x_tvalid;
+  input x_tready;
 endmodule
