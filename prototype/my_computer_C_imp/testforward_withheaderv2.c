@@ -4,6 +4,12 @@
 #include <string.h>
 #include <math.h>
 #include "test_images.h"
+#include "train_0_h.h"
+#include "train_1_h.h"
+#include "train_2_h.h"
+#include "train_3_h.h"
+#include "train_4_h.h"
+#include "train_5_h.h"
 #include <time.h>
 
 #define NUM_IMAGES 10000

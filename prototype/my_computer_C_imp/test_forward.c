@@ -3,8 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <time.h>
 
-#define NUM_IMAGES 60000
+#define NUM_IMAGES 10000
 #define IMAGE_SIZE 784
 #define LAYER_ONE_SIZE 18
 #define LAYER_TWO_SIZE 10
@@ -12,6 +13,66 @@
 #define LEARNING_RATE 0.001
 #define NUM_EPOCHS 1
 #define BATCH_SIZE 1
+
+/* ----------------------------------------------------------------------- */
+/*
+  Easy embeddable cross-platform high resolution timer function. For each 
+  platform we select the high resolution timer. You can call the 'ns()' 
+  function in your file after embedding this. 
+*/
+// https://roxlu.com/2014/047/high-resolution-timer-function-in-c-c-- <---- credit
+#include <stdint.h>
+#if defined(__linux)
+#  define HAVE_POSIX_TIMER
+#  include <time.h>
+#  ifdef CLOCK_MONOTONIC
+#     define CLOCKID CLOCK_MONOTONIC
+#  else
+#     define CLOCKID CLOCK_REALTIME
+#  endif
+#elif defined(__APPLE__)
+#  define HAVE_MACH_TIMER
+#  include <mach/mach_time.h>
+#elif defined(_WIN32)
+#  define WIN32_LEAN_AND_MEAN
+#  include <windows.h>
+#endif
+static uint64_t ns() {
+  static uint64_t is_init = 0;
+#if defined(__APPLE__)
+    static mach_timebase_info_data_t info;
+    if (0 == is_init) {
+      mach_timebase_info(&info);
+      is_init = 1;
+    }
+    uint64_t now;
+    now = mach_absolute_time();
+    now *= info.numer;
+    now /= info.denom;
+    return now;
+#elif defined(__linux)
+    static struct timespec linux_rate;
+    if (0 == is_init) {
+      clock_getres(CLOCKID, &linux_rate);
+      is_init = 1;
+    }
+    uint64_t now;
+    struct timespec spec;
+    clock_gettime(CLOCKID, &spec);
+    now = spec.tv_sec * 1.0e9 + spec.tv_nsec;
+    return now;
+#elif defined(_WIN32)
+    static LARGE_INTEGER win_frequency;
+    if (0 == is_init) {
+      QueryPerformanceFrequency(&win_frequency);
+      is_init = 1;
+    }
+    LARGE_INTEGER now;
+    QueryPerformanceCounter(&now);
+    return (uint64_t) ((1e9 * now.QuadPart)  / win_frequency.QuadPart);
+#endif
+}
+/* ----------------------------------------------------------------------- */
 
 int read_MNIST(double ***x, int **y, char filename[]){
     FILE *file = fopen(filename, "r");
@@ -243,12 +304,27 @@ void backward(struct model *nn, double *x0, int *y){
 }
 
 
-void train(double **x, int *y, struct model *nn){
+uint64_t* train(double **x, int *y, struct model *nn){
     double correct = 0;
     int limit = NUM_IMAGES;
+    uint64_t *elapsed_times = (uint64_t*) malloc(limit * sizeof(uint64_t));  // Array to store times
+    
     for(int i = 0; i < limit; i++){
-
+        uint64_t start, end;
+        uint64_t time_taken;
+        
+        // Start timing
+        start = ns();
+        
+        // Call the forward function
         int yhat = forward(nn, x[i]);
+        
+        // End timing
+        end = ns();
+        
+        // Calculate time elapsed in seconds and store in array
+        time_taken = (end - start);
+        elapsed_times[i] = (uint64_t) time_taken;
 
         if (yhat == y[i]){
             correct ++;
@@ -267,6 +343,8 @@ void train(double **x, int *y, struct model *nn){
     }
     correct = correct / limit;
     printf("\nTraining Error: \n Accuracy: %lf\%", 100*correct);
+
+    return elapsed_times;
 }
 
 // void test(double **x, int *y, struct model *nn){
@@ -278,7 +356,7 @@ void train(double **x, int *y, struct model *nn){
 
 int main(){
 	// main_loop();
-    char filename[] = "MNIST_train.txt"; 
+    char filename[] = "MNIST_test.txt"; 
     double **x;
     int *y;
     printf("Status Load: %d \n", read_MNIST(&x, &y, filename));
@@ -287,7 +365,25 @@ int main(){
     //     printf("%d, %lf\n",i,x[0][i]);
 
     // }
-    train(x,y, &nn);
+        // Call the train function and get the elapsed times
+    uint64_t* elapsed_times = train(x, y, &nn);
+    
+    // Print the elapsed times for each forward pass
+    printf("\nElapsed times for each forward pass (in seconds):\n");
+    for (int i = 0; i < NUM_IMAGES; i++) {
+        printf("%llu, ", elapsed_times[i]);
+    }
+
+    // uint64_t test1, test2;
+    // test1 = ns();
+    // forward(&nn, &x[0]);
+    // test2 = ns();
+    // printf("%llu\n", test1);
+    // printf("%llu\n", test2);
+    // printf("%llu\n", test2- test1);
+    
+    // Free the allocated memory after use
+    // free(elapsed_times);
     // for(int i = 0; i < IMAGE_SIZE; i++){
     //     printf("%d - %lf\n", i, x[50000][i]);
     // }
