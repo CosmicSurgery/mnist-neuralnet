@@ -1,0 +1,7 @@
+07:59:08 **** Clean-only build of configuration Debug for project xilffs_polled_example_1 ****
+make clean 
+rm -rf  ./src/xilffs_polled_example.o  ./src/xilffs_polled_example.d  xilffs_polled_example_1.elf.size  xilffs_polled_example_1.elf
+' '
+
+07:59:11 Build Finished (took 2s.495ms)
+

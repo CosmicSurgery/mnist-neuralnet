@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="xilffs_polled_example_1" location="C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/xilffs_polled_example_1" platform="C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sd_card.xpfm" platformUID="xilinx:zybo::0.0(custom)" systemProject="system_bsp_example_1" sysConfig="sd_card" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="8b233e1c4e8d479a6ed376b479ae7861">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1155517776" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.126041750" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

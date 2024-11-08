@@ -1,0 +1,207 @@
+/*
+ * testsd.c
+ *
+ *  Created on: May 14, 2020
+ *      Author: VIPIN
+ */
+
+#include "xparameters.h"	/* SDK generated parameters */
+#include "ff.h"
+#include "xstatus.h"
+#include <stdlib.h>
+#include "xil_printf.h"
+#include "xil_cache.h"
+
+static FIL fil;		/* File object */
+FATFS  fatfs;
+
+static char FileName[32] = "debug.bin";
+static char *SD_File;
+
+#define inputImageSize 784
+#define numInputImage 2
+
+
+#ifdef __ICCARM__
+#pragma data_alignment = 32
+u8 DestinationAddress[inputImageSize];
+#pragma data_alignment = 32
+u8 SourceAddress[inputImageSize];
+#else
+u8 DestinationAddress[inputImageSize] __attribute__ ((aligned(32)));
+u8 SourceAddress[inputImageSize] __attribute__ ((aligned(32)));
+#endif
+
+#define TEST 0
+char imageBuffer[inputImageSize * numInputImage];
+
+int main(){
+	int Status;
+
+    Status = doSDTEST(&fatfs);
+    if (Status != XST_SUCCESS) {
+    	print("file system init failed\n\r");
+    	return XST_FAILURE;
+    }
+//    Status = ReadFile("lenacolor.bin",(u32)imageBuffer);
+//    if (Status != XST_SUCCESS) {
+//  	 print("file read failed\n\r");
+//    	 return XST_FAILURE;
+//    }
+//    Status = WriteFile("lend.bin",(784),(u32)imageBuffer);
+//    if (Status != XST_SUCCESS) {
+//  	 print("file write failed\n\r");
+//    	 return XST_FAILURE;
+//    }
+
+	 xil_printf("Successfully ran SDTest \r\n");
+
+}
+
+int doSDTEST(void){
+	FRESULT rc;
+	UINT NumBytesRead;
+	UINT NumBytesWritten;
+	u32 BuffCnt;
+	BYTE work[FF_MAX_SS];
+	u32 FileSize = (784);
+
+
+	TCHAR *Path = "0:/";
+
+
+	rc = f_mount(&fatfs,Path,0);
+	if (rc) {
+		xil_printf(" ERROR : f_mount returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+
+	SD_File = (char *)FileName;
+
+	rc = f_open(&fil, SD_File, FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
+	if (rc) {
+		print("file open failed\n\r");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Pointer to beginning of file .
+	 */
+
+	rc = f_lseek(&fil, 0);
+	if (rc) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Write data to file.
+	 */
+
+	for(BuffCnt = 0; BuffCnt < FileSize; BuffCnt++){
+		SourceAddress[BuffCnt] = TEST + BuffCnt;
+	}
+
+	rc = f_write(&fil, (const void*)SourceAddress, FileSize,
+			&NumBytesWritten);
+	if (rc) {
+		print("file write failed\n\r");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Pointer to beginning of file .
+	 */
+
+	rc = f_lseek(&fil, 0);
+	if (rc) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Read data from file.
+	 */
+
+	rc = f_read(&fil, (void*)DestinationAddress, FileSize,
+			&NumBytesRead);
+	if (rc) {
+		print("file read failed\n\r");
+		return XST_FAILURE;
+	}
+
+	for(BuffCnt = 0; BuffCnt < FileSize; BuffCnt++){
+		if(SourceAddress[BuffCnt] != DestinationAddress[BuffCnt]){
+			return XST_FAILURE;
+		}
+	}
+
+
+
+
+	/*
+	 * Close file.
+	 */
+
+	rc = f_close(&fil);
+	if (rc) {
+		print("file close failed\n\r");
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+
+
+//static int ReadFile(char *FileName, u32 DestinationAddress)
+//{
+//	FIL fil;
+//	FRESULT rc;
+//	UINT br;
+//	u32 file_size;
+//	rc = f_open(&fil, FileName, FA_READ);
+//	if (rc) {
+//		xil_printf(" ERROR : f_open returned %d\r\n", rc);
+//		return XST_FAILURE;
+//	}
+//	file_size = fil.fsize;
+//	rc = f_lseek(&fil, 0);
+//	if (rc) {
+//		xil_printf(" ERROR : f_lseek returned %d\r\n", rc);
+//		return XST_FAILURE;
+//	}
+//	rc = f_read(&fil, (void*) DestinationAddress, file_size, &br);
+//	if (rc) {
+//		xil_printf(" ERROR : f_read returned %d\r\n", rc);
+//		return XST_FAILURE;
+//	}
+//	rc = f_close(&fil);
+//	if (rc) {
+//		xil_printf(" ERROR : f_close returned %d\r\n", rc);
+//		return XST_FAILURE;
+//	}
+//	Xil_DCacheFlush();
+//	return XST_SUCCESS;
+//}
+
+static int WriteFile(char *FileName, u32 size, u32 SourceAddress){
+	UINT btw;
+	static FIL fil; // File instance
+	FRESULT rc; // FRESULT variable
+	rc = f_open(&fil, (char *)FileName, FA_OPEN_ALWAYS | FA_WRITE); //f_open
+	if (rc) {
+		xil_printf(" ERROR : f_open returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+	rc = f_write(&fil,(const void*)SourceAddress,size,&btw);
+	if (rc) {
+		xil_printf(" ERROR : f_write returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+	rc = f_close(&fil);
+	if (rc) {
+		xil_printf(" ERROR : f_write returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+	return XST_SUCCESS;
+}
+

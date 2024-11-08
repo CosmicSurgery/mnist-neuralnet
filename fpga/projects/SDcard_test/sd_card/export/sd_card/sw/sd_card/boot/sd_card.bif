@@ -1,0 +1,7 @@
+/*sd_card*/
+the_ROM_image:
+{
+  [bootloader]<sd_card/boot/fsbl.elf>
+   <bitstream> 
+  <elf>
+}
