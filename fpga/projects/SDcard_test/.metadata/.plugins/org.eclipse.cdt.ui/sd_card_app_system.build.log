@@ -1,12 +1,12 @@
-10:42:43 **** Build of configuration Debug for project sd_card_app_system ****
+09:07:43 **** Incremental Build of configuration Debug for project sd_card_app_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 52680 C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sd_card.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app_system/Debug/system.bif
+generate_system_bif.bat 52627 C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sd_card.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app_system/Debug/system.bif
 sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sd_card.xpfm --sys_config sd_card --bif C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app_system/Debug/system.bif --bitstream C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit --elf C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf,ps7_cortexa9_0
 creating BOOT.BIN using C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit
 Error: platform file not found: C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/boot/fsbl.elf
 Running C:/Xilinx/Vitis/2019.2/bin/bootgen  -image C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 [ERROR]  : Can't read file - C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/boot/fsbl.elf
 
-10:43:36 Build Finished (took 53s.394ms)
+09:07:48 Build Finished (took 5s.301ms)
 

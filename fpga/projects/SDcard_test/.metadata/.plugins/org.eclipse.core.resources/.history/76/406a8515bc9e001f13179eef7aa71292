@@ -5,33 +5,42 @@
  *      Author: VIPIN
  */
 
+#include "xparameters.h"	/* SDK generated parameters */
 #include "ff.h"
 #include "xstatus.h"
 #include <stdlib.h>
 #include "xil_printf.h"
 #include "xil_cache.h"
 
+static FIL fil;		/* File object */
 FATFS  fatfs;
 
-static int SD_Init();
-static int SD_Eject();
-//static int ReadFile(char *FileName, u32 DestinationAddress);
-//static int WriteFile(char *FileName, u32 size, u32 SourceAddress);
+static char FileName[32] = "debug.bin";
+static char *SD_File;
+
+#define inputImageSize 784
+#define numInputImage 60000
+static int doSDTEST();
 
 
-#define inputImageWidth 512
-#define inputImageHeight 512
+#ifdef __ICCARM__
+#pragma data_alignment = 32
+u32 DestinationAddress[inputImageSize * numInputImage];
+#pragma data_alignment = 32
+u32 SourceAddress[inputImageSize * numInputImage];
+#else
+u32 DestinationAddress[inputImageSize * numInputImage] __attribute__ ((aligned(32)));
+u32 SourceAddress[inputImageSize * numInputImage] __attribute__ ((aligned(32)));
+#endif
 
-char imageBuffer[784];
-
-
+#define TEST 0
+char imageBuffer[inputImageSize * numInputImage];
 
 int main(){
 	int Status;
 
     Status = doSDTEST(&fatfs);
     if (Status != XST_SUCCESS) {
-    	print("file system init failed\n\r");
     	return XST_FAILURE;
     }
 //    Status = ReadFile("lenacolor.bin",(u32)imageBuffer);
@@ -44,20 +53,102 @@ int main(){
 //  	 print("file write failed\n\r");
 //    	 return XST_FAILURE;
 //    }
+
+	 xil_printf("Successfully ran SDTest \r\n");
+
 }
 
 int doSDTEST(void){
 	FRESULT rc;
+	UINT NumBytesRead;
+	UINT NumBytesWritten;
+	u32 BuffCnt;
+	BYTE work[FF_MAX_SS];
+	u32 FileSize = (inputImageSize * numInputImage *4);
+
+
 	TCHAR *Path = "0:/";
+
+
 	rc = f_mount(&fatfs,Path,0);
 	if (rc) {
+    	print("file system init failed\n\r");
 		xil_printf(" ERROR : f_mount returned %d\r\n", rc);
 		return XST_FAILURE;
 	}
 
+	SD_File = (char *)FileName;
+
+	rc = f_open(&fil, SD_File, FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
+	if (rc) {
+		print("file open failed\n\r");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Pointer to beginning of file .
+	 */
+
+	rc = f_lseek(&fil, 0);
+	if (rc) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Write data to file.
+	 */
+
+	for(BuffCnt = 0; BuffCnt < FileSize/4; BuffCnt++){
+		SourceAddress[BuffCnt] = TEST + BuffCnt;
+	}
+
+	rc = f_write(&fil, (const void*)SourceAddress, FileSize,
+			&NumBytesWritten);
+	printf("numbytes written - %d\n\r", NumBytesWritten);
+	if (rc) {
+		print("file write failed\n\r");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Pointer to beginning of file .
+	 */
+
+	rc = f_lseek(&fil, 0);
+	if (rc) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Read data from file.
+	 */
+
+	rc = f_read(&fil, (void*)DestinationAddress, FileSize,
+			&NumBytesRead);
+	printf("numbytes read - %d\n\r", NumBytesRead);
+	if (rc) {
+		print("file read failed\n\r");
+		return XST_FAILURE;
+	}
+
+	printf("FileSize = %d\n\r", FileSize);
+	for(BuffCnt = 0; BuffCnt < FileSize/4; BuffCnt++){
+		printf("%d - %d\n\r", BuffCnt, SourceAddress[BuffCnt]);
+		if(SourceAddress[BuffCnt] != DestinationAddress[BuffCnt]){
+			return XST_FAILURE;
+		}
+	}
+
+
+
+
+	/*
+	 * Close file.
+	 */
 
 	rc = f_close(&fil);
 	if (rc) {
+		print("file close failed\n\r");
 		return XST_FAILURE;
 	}
 

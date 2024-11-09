@@ -14,3 +14,9 @@ timestamp=[2024-11-07 20:07:10], mode=PLATFORM_GENERATION, duration=0:01:25.525,
 timestamp=[2024-11-08 07:58:50], mode=PLATFORM_GENERATION, duration=0:00:32.634, duration_ms=32634, data={name=sd_card}
 timestamp=[2024-11-08 07:59:08], mode=PLATFORM_GENERATION, duration=0:00:18.053, duration_ms=18053, data={name=sd_card}
 timestamp=[2024-11-08 08:02:42], mode=PLATFORM_GENERATION, duration=0:03:22.156, duration_ms=202156, data={name=sd_card}
+timestamp=[2024-11-08 14:20:17], mode=WORKBENCH_START, duration=0:00:15.169, duration_ms=15169, data={}
+timestamp=[2024-11-08 14:21:57], mode=WORKBENCH_START, duration=0:00:15.066, duration_ms=15066, data={}
+timestamp=[2024-11-08 14:21:59], mode=WORKBENCH_UI_INIT, duration=0:00:02.264, duration_ms=2264, data={editors_count=6, platform_editors_count=4, projects_count=8, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,sd_card,sd_card_app,sd_card_app_system,sd_card_debug,sd_card_debug_system,system_bsp_example_1,xilffs_polled_example_1}
+timestamp=[2024-11-09 08:55:47], mode=WORKBENCH_START, duration=0:00:14.745, duration_ms=14745, data={}
+timestamp=[2024-11-09 08:55:50], mode=WORKBENCH_UI_INIT, duration=0:00:03.026, duration_ms=3026, data={editors_count=6, platform_editors_count=4, projects_count=8, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,sd_card,sd_card_app,sd_card_app_system,sd_card_debug,sd_card_debug_system,system_bsp_example_1,xilffs_polled_example_1}
+timestamp=[2024-11-09 09:02:20], mode=PLATFORM_GENERATION, duration=0:00:37.833, duration_ms=37833, data={name=sd_card}

@@ -11,7 +11,6 @@
 #include <stdlib.h>
 #include "xil_printf.h"
 #include "xil_cache.h"
-#include <stdio.h>
 
 static FIL fil;		/* File object */
 FATFS  fatfs;
@@ -142,7 +141,7 @@ int doSDTEST(void){
 
 	rc = f_read(&fil, (void*)DestinationAddress, FileSize,
 			&NumBytesRead);
-	printf("numbytes read - %d\n\r", NumBytesRead);
+	prinf("numbytes read - %d\n\r", NumBytesRead);
 	if (rc) {
 		print("file read failed\n\r");
 		return XST_FAILURE;

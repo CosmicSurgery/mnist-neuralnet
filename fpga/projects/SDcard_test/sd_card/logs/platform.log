@@ -3123,3 +3123,464 @@ TRACE::2024-11-08.08:02:41::SCWMssOS::Checking the sw design at  C:/git_repos/mn
 TRACE::2024-11-08.08:02:41::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
 
 TRACE::2024-11-08.08:02:41::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:43::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:43::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:43::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:46::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw
+TRACE::2024-11-09.09:01:46::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:46::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-11-09.09:01:46::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-11-09.09:01:49::SCWPlatform::Opened new HwDB with name design_1_wrapper
+TRACE::2024-11-09.09:01:49::SCWReader::Active system found as  sd_card
+TRACE::2024-11-09.09:01:49::SCWReader::Handling sysconfig sd_card
+TRACE::2024-11-09.09:01:49::SCWDomain::checking for install qemu data   : 
+TRACE::2024-11-09.09:01:49::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2024-11-09.09:01:49::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2024-11-09.09:01:49::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:49::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:49::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:49::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw
+TRACE::2024-11-09.09:01:49::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:49::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-11-09.09:01:49::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2024-11-09.09:01:49::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2024-11-09.09:01:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-11-09.09:01:49::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:49::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:49::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:49::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw
+TRACE::2024-11-09.09:01:49::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:49::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-11-09.09:01:49::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2024-11-09.09:01:49::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2024-11-09.09:01:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-11-09.09:01:49::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:49::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:49::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:49::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw
+TRACE::2024-11-09.09:01:49::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:49::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-11-09.09:01:49::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2024-11-09.09:01:49::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2024-11-09.09:01:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-11-09.09:01:49::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:49::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2024-11-09.09:01:49::SCWMssOS::No sw design opened at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:49::SCWMssOS::mss exists loading the mss file  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:50::SCWMssOS::Opened the sw design from mss  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:50::SCWMssOS::Adding the swdes entry C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system
+TRACE::2024-11-09.09:01:50::SCWMssOS::updating the scw layer about changes
+TRACE::2024-11-09.09:01:50::SCWMssOS::Opened the sw design.  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:50::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:50::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:50::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:50::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw
+TRACE::2024-11-09.09:01:50::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:50::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-11-09.09:01:50::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2024-11-09.09:01:50::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2024-11-09.09:01:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-11-09.09:01:50::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:50::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2024-11-09.09:01:50::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:50::SCWMssOS:: library already available in sw design:  xilffs:4.2
+TRACE::2024-11-09.09:01:50::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2024-11-09.09:01:50::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2024-11-09.09:01:50::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:50::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:50::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:50::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw
+TRACE::2024-11-09.09:01:50::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:50::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-11-09.09:01:50::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2024-11-09.09:01:50::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2024-11-09.09:01:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-11-09.09:01:50::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:50::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2024-11-09.09:01:50::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:50::SCWReader::No isolation master present  
+LOG::2024-11-09.09:01:50::SCWPlatform::Started generating the artifacts platform sd_card
+TRACE::2024-11-09.09:01:50::SCWPlatform::Sanity checking of platform is completed
+LOG::2024-11-09.09:01:50::SCWPlatform::Started generating the artifacts for system configuration sd_card
+LOG::2024-11-09.09:01:50::SCWSystem::Checking the domain standalone_domain
+LOG::2024-11-09.09:01:50::SCWSystem::Not a boot domain 
+LOG::2024-11-09.09:01:50::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2024-11-09.09:01:50::SCWDomain::Generating domain artifcats
+TRACE::2024-11-09.09:01:50::SCWMssOS::Generating standalone artifcats
+TRACE::2024-11-09.09:01:50::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/qemu/
+TRACE::2024-11-09.09:01:50::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/qemu/
+TRACE::2024-11-09.09:01:50::SCWMssOS:: Copying the user libraries. 
+TRACE::2024-11-09.09:01:50::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:50::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:50::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:50::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw
+TRACE::2024-11-09.09:01:50::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:01:50::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-11-09.09:01:50::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2024-11-09.09:01:50::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2024-11-09.09:01:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-11-09.09:01:50::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:50::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2024-11-09.09:01:50::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:50::SCWMssOS::Completed writing the mss file at C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2024-11-09.09:01:50::SCWMssOS::Mss edits present, copying mssfile into export location C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:01:50::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2024-11-09.09:01:50::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2024-11-09.09:01:50::SCWDomain::Building the domain as part of full build :  standalone_domain
+TRACE::2024-11-09.09:01:50::SCWMssOS::doing bsp build ... 
+TRACE::2024-11-09.09:01:50::SCWMssOS::System Command Ran  C: & cd  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2024-11-09.09:01:50::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src"
+
+TRACE::2024-11-09.09:01:50::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2024-11-09.09:01:50::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2024-11-09.09:01:50::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:50::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src"
+
+TRACE::2024-11-09.09:01:50::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2024-11-09.09:01:50::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2024-11-09.09:01:50::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:50::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+
+TRACE::2024-11-09.09:01:50::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2024-11-09.09:01:50::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2024-11-09.09:01:50::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:50::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+
+TRACE::2024-11-09.09:01:50::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-11-09.09:01:50::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-11-09.09:01:50::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:50::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_5/src"
+
+TRACE::2024-11-09.09:01:50::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2024-11-09.09:01:50::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2024-11-09.09:01:50::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_10/src"
+
+TRACE::2024-11-09.09:01:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2024-11-09.09:01:51::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2024-11-09.09:01:51::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_6/src"
+
+TRACE::2024-11-09.09:01:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-11-09.09:01:51::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-11-09.09:01:51::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+
+TRACE::2024-11-09.09:01:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-11-09.09:01:51::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-11-09.09:01:51::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_1/src"
+
+TRACE::2024-11-09.09:01:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-11-09.09:01:51::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-11-09.09:01:51::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+
+TRACE::2024-11-09.09:01:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2024-11-09.09:01:51::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2024-11-09.09:01:51::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+
+TRACE::2024-11-09.09:01:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-11-09.09:01:52::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-11-09.09:01:52::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_8/src"
+
+TRACE::2024-11-09.09:01:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2024-11-09.09:01:52::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2024-11-09.09:01:52::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_1/src"
+
+TRACE::2024-11-09.09:01:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2024-11-09.09:01:52::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2024-11-09.09:01:52::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_10/src"
+
+TRACE::2024-11-09.09:01:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ttcps_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-11-09.09:01:53::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-11-09.09:01:53::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_8/src"
+
+TRACE::2024-11-09.09:01:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-11-09.09:01:53::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-11-09.09:01:53::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+
+TRACE::2024-11-09.09:01:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2024-11-09.09:01:53::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2024-11-09.09:01:53::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:54::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+
+TRACE::2024-11-09.09:01:54::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-11-09.09:01:54::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-11-09.09:01:54::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:54::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v4_2/src"
+
+TRACE::2024-11-09.09:01:54::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilffs_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2024-11-09.09:01:54::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2024-11-09.09:01:54::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:54::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src"
+
+TRACE::2024-11-09.09:01:54::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2024-11-09.09:01:54::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2024-11-09.09:01:54::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:54::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2024-11-09.09:01:56::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src"
+
+TRACE::2024-11-09.09:01:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2024-11-09.09:01:56::SCWMssOS::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2024-11-09.09:01:56::SCWMssOS::ostartfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:56::SCWMssOS::"Compiling cpu_cortexa9"
+
+TRACE::2024-11-09.09:01:56::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+
+TRACE::2024-11-09.09:01:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2024-11-09.09:01:56::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2024-11-09.09:01:56::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:56::SCWMssOS::"Compiling ddrps"
+
+TRACE::2024-11-09.09:01:56::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+
+TRACE::2024-11-09.09:01:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-11-09.09:01:56::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-11-09.09:01:56::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:56::SCWMssOS::"Compiling devcfg"
+
+TRACE::2024-11-09.09:01:58::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_5/src"
+
+TRACE::2024-11-09.09:01:58::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2024-11-09.09:01:58::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2024-11-09.09:01:58::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:58::SCWMssOS::"Compiling dmaps"
+
+TRACE::2024-11-09.09:01:59::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_10/src"
+
+TRACE::2024-11-09.09:01:59::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2024-11-09.09:01:59::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2024-11-09.09:01:59::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:01:59::SCWMssOS::"Compiling emacps"
+
+TRACE::2024-11-09.09:02:00::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_6/src"
+
+TRACE::2024-11-09.09:02:00::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-11-09.09:02:00::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-11-09.09:02:00::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:02:01::SCWMssOS::"Compiling gpiops"
+
+TRACE::2024-11-09.09:02:02::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+
+TRACE::2024-11-09.09:02:02::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-11-09.09:02:02::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-11-09.09:02:02::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:02:02::SCWMssOS::"Compiling qspips"
+
+TRACE::2024-11-09.09:02:03::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_1/src"
+
+TRACE::2024-11-09.09:02:03::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-11-09.09:02:03::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-11-09.09:02:03::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:02:03::SCWMssOS::"Compiling scugic"
+
+TRACE::2024-11-09.09:02:04::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+
+TRACE::2024-11-09.09:02:04::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2024-11-09.09:02:04::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2024-11-09.09:02:04::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:02:04::SCWMssOS::"Compiling scutimer"
+
+TRACE::2024-11-09.09:02:05::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+
+TRACE::2024-11-09.09:02:05::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-11-09.09:02:05::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-11-09.09:02:05::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:02:05::SCWMssOS::"Compiling scuwdt"
+
+TRACE::2024-11-09.09:02:06::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_8/src"
+
+TRACE::2024-11-09.09:02:06::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2024-11-09.09:02:06::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2024-11-09.09:02:06::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:02:06::SCWMssOS::"Compiling sdps"
+
+TRACE::2024-11-09.09:02:07::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_1/src"
+
+TRACE::2024-11-09.09:02:07::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2024-11-09.09:02:07::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2024-11-09.09:02:07::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:02:08::SCWMssOS::"Compiling standalone"
+
+TRACE::2024-11-09.09:02:14::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_10/src"
+
+TRACE::2024-11-09.09:02:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ttcps_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-11-09.09:02:14::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-11-09.09:02:14::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:02:14::SCWMssOS::"Compiling ttcps"
+
+TRACE::2024-11-09.09:02:15::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_8/src"
+
+TRACE::2024-11-09.09:02:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-11-09.09:02:15::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-11-09.09:02:15::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:02:15::SCWMssOS::"Compiling uartps"
+
+TRACE::2024-11-09.09:02:16::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+
+TRACE::2024-11-09.09:02:16::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2024-11-09.09:02:16::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2024-11-09.09:02:16::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:02:16::SCWMssOS::"Compiling usbps"
+
+TRACE::2024-11-09.09:02:18::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+
+TRACE::2024-11-09.09:02:18::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-11-09.09:02:18::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-11-09.09:02:18::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:02:18::SCWMssOS::"Compiling xadcps"
+
+TRACE::2024-11-09.09:02:19::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v4_2/src"
+
+TRACE::2024-11-09.09:02:19::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilffs_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2024-11-09.09:02:19::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2024-11-09.09:02:19::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2024-11-09.09:02:19::SCWMssOS::"Compiling XilFFs Library"
+
+TRACE::2024-11-09.09:02:19::SCWMssOS::'Finished building libraries'
+
+TRACE::2024-11-09.09:02:19::SCWMssOS::Copying to export directory.
+TRACE::2024-11-09.09:02:19::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2024-11-09.09:02:19::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+TRACE::2024-11-09.09:02:19::SCWMssOS:: Completed Standalone Artifacts creation 
+LOG::2024-11-09.09:02:19::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2024-11-09.09:02:19::SCWSystem::Completed Processing the sysconfig sd_card
+LOG::2024-11-09.09:02:19::SCWPlatform::Completed generating the artifacts for system configuration sd_card
+TRACE::2024-11-09.09:02:19::SCWPlatform::Started preparing the platform 
+TRACE::2024-11-09.09:02:19::SCWSystem::Writing the bif file for system config sd_card
+TRACE::2024-11-09.09:02:19::SCWSystem::dir created 
+TRACE::2024-11-09.09:02:19::SCWSystem::Writing the bif 
+TRACE::2024-11-09.09:02:19::SCWPlatform::Started writing the spfm file 
+TRACE::2024-11-09.09:02:19::SCWPlatform::Started writing the xpfm file 
+TRACE::2024-11-09.09:02:19::SCWPlatform::Completed generating the platform
+TRACE::2024-11-09.09:02:19::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:02:19::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:02:19::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:02:19::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw
+TRACE::2024-11-09.09:02:19::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:02:19::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-11-09.09:02:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2024-11-09.09:02:19::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2024-11-09.09:02:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-11-09.09:02:19::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:02:19::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2024-11-09.09:02:19::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:02:19::SCWWriter::formatted JSON is {
+	"platformName":	"sd_card",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"sd_card",
+	"platHandOff":	"C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"true",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"sd_card",
+	"systems":	[{
+			"systemName":	"sd_card",
+			"systemDesc":	"sd_card",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"sd_card",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"54d9f643ef18c6b308d42ee2331b431a",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.2"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2024-11-09.09:02:19::SCWPlatform::updated the xpfm file.
+TRACE::2024-11-09.09:02:20::SCWPlatform::Trying to open the hw design at C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:02:20::SCWPlatform::DSA given C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:02:20::SCWPlatform::DSA absoulate path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:02:20::SCWPlatform::DSA directory C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw
+TRACE::2024-11-09.09:02:20::SCWPlatform:: Platform Path C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/hw/design_1_wrapper.xsa
+TRACE::2024-11-09.09:02:20::SCWPlatform:: Unique name xilinx:zybo::0.0
+TRACE::2024-11-09.09:02:20::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2024-11-09.09:02:20::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2024-11-09.09:02:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-11-09.09:02:20::SCWMssOS::Checking the sw design at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2024-11-09.09:02:20::SCWMssOS::DEBUG:  swdes dump  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2024-11-09.09:02:20::SCWMssOS::Sw design exists and opened at  C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/ps7_cortexa9_0/standalone_domain/bsp/system.mss

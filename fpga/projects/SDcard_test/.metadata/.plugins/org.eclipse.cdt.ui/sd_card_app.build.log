@@ -1,4 +1,4 @@
-10:59:10 **** Incremental Build of configuration Debug for project sd_card_app ****
+09:07:41 **** Incremental Build of configuration Debug for project sd_card_app ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -8,34 +8,23 @@ make --no-print-directory main-build
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sdTest.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/bspinclude/include -MMD -MP -MF"src/sdTest.d" -MT"src/sdTest.o" -o "src/sdTest.o" "../src/sdTest.c"
 ../src/sdTest.c: In function 'doSDTEST':
-../src/sdTest.c:107:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-  printf("numbytes written - %d\n\r", NumBytesWritten);
-  ^~~~~~
-../src/sdTest.c:107:2: warning: incompatible implicit declaration of built-in function 'printf'
-../src/sdTest.c:107:2: note: include '<stdio.h>' or provide a declaration of 'printf'
-../src/sdTest.c:14:1:
-+#include <stdio.h>
- 
-../src/sdTest.c:107:2:
-  printf("numbytes written - %d\n\r", NumBytesWritten);
-  ^~~~~~
-../src/sdTest.c:134:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+../src/sdTest.c:151:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
   printf("FileSize = %d\n\r", FileSize);
                      ~^       ~~~~~~~~
                      %ld
-../src/sdTest.c:136:12: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+../src/sdTest.c:155:12: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
    printf("%d - %d\n\r", BuffCnt, SourceAddress[BuffCnt]);
            ~^            ~~~~~~~
            %ld
-../src/sdTest.c:136:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+../src/sdTest.c:155:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
    printf("%d - %d\n\r", BuffCnt, SourceAddress[BuffCnt]);
                 ~^                ~~~~~~~~~~~~~~~~~~~~~~
                 %ld
-../src/sdTest.c:66:7: warning: unused variable 'work' [-Wunused-variable]
+../src/sdTest.c:81:7: warning: unused variable 'work' [-Wunused-variable]
   BYTE work[FF_MAX_SS];
        ^~~~
 At top level:
-../src/sdTest.c:191:12: warning: 'WriteFile' defined but not used [-Wunused-function]
+../src/sdTest.c:209:12: warning: 'WriteFile' defined but not used [-Wunused-function]
  static int WriteFile(char *FileName, u32 size, u32 SourceAddress){
             ^~~~~~~~~
 'Finished building: ../src/sdTest.c'
@@ -48,9 +37,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size sd_card_app.elf  |tee "sd_card_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  87428	   2660	  41120	 131208	  20088	sd_card_app.elf
+  87972	   2660	423387008	423477640	193dc188	sd_card_app.elf
 'Finished building: sd_card_app.elf.size'
 ' '
 
-10:59:24 Build Finished (took 14s.370ms)
+09:07:42 Build Finished (took 1s.114ms)
 

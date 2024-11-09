@@ -8939,3 +8939,3098 @@ java.lang.IllegalStateException: Need an underlying widget to be able to set the
 
 !ENTRY com.xilinx.sdk.utils 1 0 2024-11-08 11:35:09.985
 !MESSAGE Executed Webtalk command
+!SESSION 2024-11-08 14:19:41.742 -----------------------------------------------
+eclipse.buildId=2019.2
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-11-08 14:20:02.036
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-11-08 14:20:06.361
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-11-08 14:20:06.377
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-11-08 14:20:06.377
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.ui 4 4 2024-11-08 14:20:13.795
+!MESSAGE Conflicting handlers for com.xilinx.sdx.system.core.importSourcesCommand: {com.xilinx.sdx.system.core.handler.ImportSourcesHandler} vs {com.xilinx.sdx.system.core.handler.ImportSourcesHandler}
+
+!ENTRY org.eclipse.ui 4 4 2024-11-08 14:20:13.810
+!MESSAGE Conflicting handlers for com.xilinx.sdx.system.core.importSourcesCommand: {com.xilinx.sdx.system.core.handler.ImportSourcesHandler} vs {com.xilinx.sdx.system.core.handler.ImportSourcesHandler}
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:20:16.624
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:20:16.624
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:20:16.640
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:20:16.640
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:20:16.640
+!MESSAGE XSCT Command: [setws C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test], Thread: Thread-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:20:16.640
+!MESSAGE XSCT command with result: [setws C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test], Result: [null, ]. Thread: Thread-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:20:16.703
+!MESSAGE XSCT Command: [enable_info_messages], Thread: Worker-3: Enabling info messages in xsct server
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:20:16.703
+!MESSAGE XSCT command with result: [enable_info_messages], Result: [null, ]. Thread: Worker-3: Enabling info messages in xsct server
+
+!ENTRY org.eclipse.ui.workbench 4 2 2024-11-08 14:20:17.537
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.exists(HFileUtils.java:1258)
+	at ui.utils.vitiside.HVitisIdeMgr.execBuildInfo(HVitisIdeMgr.java:145)
+	at ui.utils.vitiside.HVitisIdeMgr.init(HVitisIdeMgr.java:107)
+	at ui.utils.vitiside.HVitisIdeMgr.sharedInstance(HVitisIdeMgr.java:79)
+	at ui.utils.HSystem.setVitisIdeMode(HSystem.java:2182)
+	at com.xilinx.sdk.utils.SDKUtils.setupVitisVivadoBridge(SDKUtils.java:144)
+	at com.xilinx.ide.tools.startup.WorkspaceInit.setupVivadoBridge(WorkspaceInit.java:40)
+	at com.xilinx.ide.tools.startup.WorkspaceInit.execute(WorkspaceInit.java:32)
+	at com.xilinx.ide.tools.startup.InitSDK.earlyStartup(InitSDK.java:33)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:77)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2758)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+
+!ENTRY org.eclipse.ui 4 0 2024-11-08 14:20:17.537
+!MESSAGE Unable to execute early startup code for the org.eclipse.ui.IStartup extension contributed by the 'com.xilinx.ide.tools' plug-in.
+!STACK 0
+ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.exists(HFileUtils.java:1258)
+	at ui.utils.vitiside.HVitisIdeMgr.execBuildInfo(HVitisIdeMgr.java:145)
+	at ui.utils.vitiside.HVitisIdeMgr.init(HVitisIdeMgr.java:107)
+	at ui.utils.vitiside.HVitisIdeMgr.sharedInstance(HVitisIdeMgr.java:79)
+	at ui.utils.HSystem.setVitisIdeMode(HSystem.java:2182)
+	at com.xilinx.sdk.utils.SDKUtils.setupVitisVivadoBridge(SDKUtils.java:144)
+	at com.xilinx.ide.tools.startup.WorkspaceInit.setupVivadoBridge(WorkspaceInit.java:40)
+	at com.xilinx.ide.tools.startup.WorkspaceInit.execute(WorkspaceInit.java:32)
+	at com.xilinx.ide.tools.startup.InitSDK.earlyStartup(InitSDK.java:33)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:77)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2758)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+
+!ENTRY org.eclipse.osgi 4 0 2024-11-08 14:20:17.568
+!MESSAGE An error occurred while automatically activating bundle com.xilinx.sdsoc.ui (53).
+!STACK 0
+org.osgi.framework.BundleException: Exception in com.xilinx.sdsoc.ui.SDSUIPlugin.start() of bundle com.xilinx.sdsoc.ui.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:800)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1002)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:354)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:114)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:505)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:392)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:470)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:419)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:411)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:609)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:177)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:931)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:60)
+	at org.eclipse.ui.internal.WorkbenchPlugin.lambda$0(WorkbenchPlugin.java:288)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:54)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:285)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2758)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelper._setCustomRepositoryPaths(PlatformHelper.java:1878)
+	at com.xilinx.sdx.platform.PlatformHelper.init(PlatformHelper.java:1385)
+	at com.xilinx.sdsoc.ui.SDSUIPlugin.start(SDSUIPlugin.java:60)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	... 27 more
+Root exception:
+ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelper._setCustomRepositoryPaths(PlatformHelper.java:1878)
+	at com.xilinx.sdx.platform.PlatformHelper.init(PlatformHelper.java:1385)
+	at com.xilinx.sdsoc.ui.SDSUIPlugin.start(SDSUIPlugin.java:60)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1002)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:354)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:114)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:505)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:392)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:470)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:419)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:411)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:609)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:177)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:931)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:60)
+	at org.eclipse.ui.internal.WorkbenchPlugin.lambda$0(WorkbenchPlugin.java:288)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:54)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:285)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2758)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-08 14:20:17.568
+!MESSAGE Exception in provider org.eclipse.cdt.managedbuilder.core.MBSLanguageSettingsProvider: getSettingEntries(xilinx.gnu.armv7.exe.debug.1707555271, L/sd_card_app/src/sdTest.c, org.eclipse.cdt.core.gcc)
+!STACK 0
+ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelperUtils.resolve(PlatformHelperUtils.java:350)
+	at com.xilinx.sdx.platform.PlatformHelper.getSDXSystemConfiguration(PlatformHelper.java:1103)
+	at com.xilinx.sdx.platform.PlatformHelper.getBspIncludePaths(PlatformHelper.java:86)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.hasApplicationLocalBsp(SdkPlatformHelper.java:129)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.getBspPath(SdkPlatformFilesResolver.java:117)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.getResolvedPath(SdkPlatformFilesResolver.java:81)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.resolveValue(SdkPlatformFilesResolver.java:54)
+	at org.eclipse.core.internal.variables.DynamicVariable.getValue(DynamicVariable.java:56)
+	at org.eclipse.cdt.internal.core.cdtvariables.EclipseVariablesVariableSupplier$EclipseVarMacro.loadValue(EclipseVariablesVariableSupplier.java:103)
+	at org.eclipse.cdt.internal.core.cdtvariables.EclipseVariablesVariableSupplier$EclipseVarMacro.getStringValue(EclipseVariablesVariableSupplier.java:90)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:361)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:292)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:275)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.getResolvedMacro(SupplierBasedCdtVariableSubstitutor.java:260)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveToString(SupplierBasedCdtVariableSubstitutor.java:222)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveToString(SupplierBasedCdtVariableSubstitutor.java:241)
+	at org.eclipse.cdt.utils.cdtvariables.CdtVariableResolver.resolveToString(CdtVariableResolver.java:122)
+	at org.eclipse.cdt.internal.core.cdtvariables.CdtVariableManager.resolveValue(CdtVariableManager.java:124)
+	at org.eclipse.cdt.managedbuilder.internal.language.settings.providers.MBSLanguageSettingsProvider.getSettingEntries(MBSLanguageSettingsProvider.java:89)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer$LanguageSettingsWorkspaceProvider.getSettingEntries(LanguageSettingsProvidersSerializer.java:181)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesPooled(LanguageSettingsProvidersSerializer.java:1426)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesUpResourceTree(LanguageSettingsProvidersSerializer.java:1454)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesByKind(LanguageSettingsProvidersSerializer.java:1517)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSystemSettingEntriesByKind(LanguageSettingsProvidersSerializer.java:1579)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:98)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1061)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:848)
+	at org.eclipse.cdt.internal.core.model.CModelBuilder2.parse(CModelBuilder2.java:147)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parseUsingCModelBuilder(TranslationUnit.java:678)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parse(TranslationUnit.java:666)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.buildStructure(TranslationUnit.java:465)
+	at org.eclipse.cdt.internal.core.model.Openable.generateInfos(Openable.java:261)
+	at org.eclipse.cdt.internal.core.model.CElement.openWhenClosed(CElement.java:427)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:570)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:362)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:73)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:349)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.ui.workbench 4 2 2024-11-08 14:20:17.568
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in com.xilinx.sdsoc.ui was unable to load class com.xilinx.sdsoc.ui.SDSInit.
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:197)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:179)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:931)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:60)
+	at org.eclipse.ui.internal.WorkbenchPlugin.lambda$0(WorkbenchPlugin.java:288)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:54)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:285)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2758)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: java.lang.ClassNotFoundException: An error occurred while automatically activating bundle com.xilinx.sdsoc.ui (53).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:123)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:505)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:392)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:470)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:419)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:411)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:609)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:177)
+	... 10 more
+Caused by: org.osgi.framework.BundleException: Exception in com.xilinx.sdsoc.ui.SDSUIPlugin.start() of bundle com.xilinx.sdsoc.ui.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:800)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1002)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:354)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:114)
+	... 20 more
+Caused by: ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelper._setCustomRepositoryPaths(PlatformHelper.java:1878)
+	at com.xilinx.sdx.platform.PlatformHelper.init(PlatformHelper.java:1385)
+	at com.xilinx.sdsoc.ui.SDSUIPlugin.start(SDSUIPlugin.java:60)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	... 27 more
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2024-11-08 14:20:17.568
+!MESSAGE Plug-in com.xilinx.sdsoc.ui was unable to load class com.xilinx.sdsoc.ui.SDSInit.
+!STACK 0
+java.lang.ClassNotFoundException: An error occurred while automatically activating bundle com.xilinx.sdsoc.ui (53).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:123)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:505)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:392)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:470)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:419)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:411)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:609)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:177)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:931)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:60)
+	at org.eclipse.ui.internal.WorkbenchPlugin.lambda$0(WorkbenchPlugin.java:288)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:54)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:285)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2758)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: org.osgi.framework.BundleException: Exception in com.xilinx.sdsoc.ui.SDSUIPlugin.start() of bundle com.xilinx.sdsoc.ui.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:800)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1002)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:354)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:114)
+	... 20 more
+Caused by: ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelper._setCustomRepositoryPaths(PlatformHelper.java:1878)
+	at com.xilinx.sdx.platform.PlatformHelper.init(PlatformHelper.java:1385)
+	at com.xilinx.sdsoc.ui.SDSUIPlugin.start(SDSUIPlugin.java:60)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	... 27 more
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2024-11-08 14:20:17.568
+!MESSAGE Plug-in com.xilinx.sdsoc.ui was unable to load class com.xilinx.sdsoc.ui.SDSInit.
+!STACK 0
+java.lang.ClassNotFoundException: An error occurred while automatically activating bundle com.xilinx.sdsoc.ui (53).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:123)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:505)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:392)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:470)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:419)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:411)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:609)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:177)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:931)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:60)
+	at org.eclipse.ui.internal.WorkbenchPlugin.lambda$0(WorkbenchPlugin.java:288)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:54)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:285)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2758)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: org.osgi.framework.BundleException: Exception in com.xilinx.sdsoc.ui.SDSUIPlugin.start() of bundle com.xilinx.sdsoc.ui.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:800)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1002)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:354)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:114)
+	... 20 more
+Caused by: ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelper._setCustomRepositoryPaths(PlatformHelper.java:1878)
+	at com.xilinx.sdx.platform.PlatformHelper.init(PlatformHelper.java:1385)
+	at com.xilinx.sdsoc.ui.SDSUIPlugin.start(SDSUIPlugin.java:60)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	... 27 more
+
+!ENTRY org.eclipse.ui 4 0 2024-11-08 14:20:17.568
+!MESSAGE Unable to execute early startup code for the org.eclipse.ui.IStartup extension contributed by the 'com.xilinx.sdsoc.ui' plug-in.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in com.xilinx.sdsoc.ui was unable to load class com.xilinx.sdsoc.ui.SDSInit.
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:197)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:179)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:931)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:60)
+	at org.eclipse.ui.internal.WorkbenchPlugin.lambda$0(WorkbenchPlugin.java:288)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:54)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:285)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2758)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: java.lang.ClassNotFoundException: An error occurred while automatically activating bundle com.xilinx.sdsoc.ui (53).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:123)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:505)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:392)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:470)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:419)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:411)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:609)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:177)
+	... 10 more
+Caused by: org.osgi.framework.BundleException: Exception in com.xilinx.sdsoc.ui.SDSUIPlugin.start() of bundle com.xilinx.sdsoc.ui.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:800)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1002)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:354)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:114)
+	... 20 more
+Caused by: ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelper._setCustomRepositoryPaths(PlatformHelper.java:1878)
+	at com.xilinx.sdx.platform.PlatformHelper.init(PlatformHelper.java:1385)
+	at com.xilinx.sdsoc.ui.SDSUIPlugin.start(SDSUIPlugin.java:60)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	... 27 more
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2024-11-08 14:20:17.568
+!MESSAGE Plug-in com.xilinx.sdsoc.ui was unable to load class com.xilinx.sdsoc.ui.SDSInit.
+!STACK 0
+java.lang.ClassNotFoundException: An error occurred while automatically activating bundle com.xilinx.sdsoc.ui (53).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:123)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:505)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:392)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:470)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:419)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:411)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:609)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:177)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:931)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:60)
+	at org.eclipse.ui.internal.WorkbenchPlugin.lambda$0(WorkbenchPlugin.java:288)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:54)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:285)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2758)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: org.osgi.framework.BundleException: Exception in com.xilinx.sdsoc.ui.SDSUIPlugin.start() of bundle com.xilinx.sdsoc.ui.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:800)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1002)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:354)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:114)
+	... 20 more
+Caused by: ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelper._setCustomRepositoryPaths(PlatformHelper.java:1878)
+	at com.xilinx.sdx.platform.PlatformHelper.init(PlatformHelper.java:1385)
+	at com.xilinx.sdsoc.ui.SDSUIPlugin.start(SDSUIPlugin.java:60)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	... 27 more
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-08 14:20:17.584
+!MESSAGE Exception in provider org.eclipse.cdt.managedbuilder.core.MBSLanguageSettingsProvider: getSettingEntries(xilinx.gnu.armv7.exe.debug.1707555271, L/sd_card_app/src/sdTest.c, org.eclipse.cdt.core.gcc)
+!STACK 0
+ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelperUtils.resolve(PlatformHelperUtils.java:350)
+	at com.xilinx.sdx.platform.PlatformHelper.getSDXSystemConfiguration(PlatformHelper.java:1103)
+	at com.xilinx.sdx.platform.PlatformHelper.getBspIncludePaths(PlatformHelper.java:86)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.hasApplicationLocalBsp(SdkPlatformHelper.java:129)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.getBspPath(SdkPlatformFilesResolver.java:117)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.getResolvedPath(SdkPlatformFilesResolver.java:81)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.resolveValue(SdkPlatformFilesResolver.java:54)
+	at org.eclipse.core.internal.variables.DynamicVariable.getValue(DynamicVariable.java:56)
+	at org.eclipse.cdt.internal.core.cdtvariables.EclipseVariablesVariableSupplier$EclipseVarMacro.loadValue(EclipseVariablesVariableSupplier.java:103)
+	at org.eclipse.cdt.internal.core.cdtvariables.EclipseVariablesVariableSupplier$EclipseVarMacro.getStringValue(EclipseVariablesVariableSupplier.java:90)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:361)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:292)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:275)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.getResolvedMacro(SupplierBasedCdtVariableSubstitutor.java:260)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveToString(SupplierBasedCdtVariableSubstitutor.java:222)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveToString(SupplierBasedCdtVariableSubstitutor.java:241)
+	at org.eclipse.cdt.utils.cdtvariables.CdtVariableResolver.resolveToString(CdtVariableResolver.java:122)
+	at org.eclipse.cdt.internal.core.cdtvariables.CdtVariableManager.resolveValue(CdtVariableManager.java:124)
+	at org.eclipse.cdt.managedbuilder.internal.language.settings.providers.MBSLanguageSettingsProvider.getSettingEntries(MBSLanguageSettingsProvider.java:89)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer$LanguageSettingsWorkspaceProvider.getSettingEntries(LanguageSettingsProvidersSerializer.java:181)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesPooled(LanguageSettingsProvidersSerializer.java:1426)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesUpResourceTree(LanguageSettingsProvidersSerializer.java:1454)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesByKind(LanguageSettingsProvidersSerializer.java:1517)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getLocalSettingEntriesByKind(LanguageSettingsProvidersSerializer.java:1599)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:102)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1061)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:848)
+	at org.eclipse.cdt.internal.core.model.CModelBuilder2.parse(CModelBuilder2.java:147)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parseUsingCModelBuilder(TranslationUnit.java:678)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parse(TranslationUnit.java:666)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.buildStructure(TranslationUnit.java:465)
+	at org.eclipse.cdt.internal.core.model.Openable.generateInfos(Openable.java:261)
+	at org.eclipse.cdt.internal.core.model.CElement.openWhenClosed(CElement.java:427)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:570)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:362)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:73)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:349)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-08 14:20:17.594
+!MESSAGE Exception in provider org.eclipse.cdt.managedbuilder.core.MBSLanguageSettingsProvider: getSettingEntries(xilinx.gnu.armv7.exe.debug.1707555271, L/sd_card_app/src/sdTest.c, org.eclipse.cdt.core.gcc)
+!STACK 0
+ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelperUtils.resolve(PlatformHelperUtils.java:350)
+	at com.xilinx.sdx.platform.PlatformHelper.getSDXSystemConfiguration(PlatformHelper.java:1103)
+	at com.xilinx.sdx.platform.PlatformHelper.getBspIncludePaths(PlatformHelper.java:86)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.hasApplicationLocalBsp(SdkPlatformHelper.java:129)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.getBspPath(SdkPlatformFilesResolver.java:117)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.getResolvedPath(SdkPlatformFilesResolver.java:81)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.resolveValue(SdkPlatformFilesResolver.java:54)
+	at org.eclipse.core.internal.variables.DynamicVariable.getValue(DynamicVariable.java:56)
+	at org.eclipse.cdt.internal.core.cdtvariables.EclipseVariablesVariableSupplier$EclipseVarMacro.loadValue(EclipseVariablesVariableSupplier.java:103)
+	at org.eclipse.cdt.internal.core.cdtvariables.EclipseVariablesVariableSupplier$EclipseVarMacro.getStringValue(EclipseVariablesVariableSupplier.java:90)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:361)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:292)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:275)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.getResolvedMacro(SupplierBasedCdtVariableSubstitutor.java:260)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveToString(SupplierBasedCdtVariableSubstitutor.java:222)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveToString(SupplierBasedCdtVariableSubstitutor.java:241)
+	at org.eclipse.cdt.utils.cdtvariables.CdtVariableResolver.resolveToString(CdtVariableResolver.java:122)
+	at org.eclipse.cdt.internal.core.cdtvariables.CdtVariableManager.resolveValue(CdtVariableManager.java:124)
+	at org.eclipse.cdt.managedbuilder.internal.language.settings.providers.MBSLanguageSettingsProvider.getSettingEntries(MBSLanguageSettingsProvider.java:89)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer$LanguageSettingsWorkspaceProvider.getSettingEntries(LanguageSettingsProvidersSerializer.java:181)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesPooled(LanguageSettingsProvidersSerializer.java:1426)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesUpResourceTree(LanguageSettingsProvidersSerializer.java:1454)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesByKind(LanguageSettingsProvidersSerializer.java:1517)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesByKind(LanguageSettingsProvidersSerializer.java:1559)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:106)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1061)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:848)
+	at org.eclipse.cdt.internal.core.model.CModelBuilder2.parse(CModelBuilder2.java:147)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parseUsingCModelBuilder(TranslationUnit.java:678)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parse(TranslationUnit.java:666)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.buildStructure(TranslationUnit.java:465)
+	at org.eclipse.cdt.internal.core.model.Openable.generateInfos(Openable.java:261)
+	at org.eclipse.cdt.internal.core.model.CElement.openWhenClosed(CElement.java:427)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:570)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:362)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:73)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:349)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-08 14:20:17.600
+!MESSAGE Exception in provider org.eclipse.cdt.managedbuilder.core.MBSLanguageSettingsProvider: getSettingEntries(xilinx.gnu.armv7.exe.debug.1707555271, L/sd_card_app/src/sdTest.c, org.eclipse.cdt.core.gcc)
+!STACK 0
+ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelperUtils.resolve(PlatformHelperUtils.java:350)
+	at com.xilinx.sdx.platform.PlatformHelper.getSDXSystemConfiguration(PlatformHelper.java:1103)
+	at com.xilinx.sdx.platform.PlatformHelper.getBspIncludePaths(PlatformHelper.java:86)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.hasApplicationLocalBsp(SdkPlatformHelper.java:129)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.getBspPath(SdkPlatformFilesResolver.java:117)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.getResolvedPath(SdkPlatformFilesResolver.java:81)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.resolveValue(SdkPlatformFilesResolver.java:54)
+	at org.eclipse.core.internal.variables.DynamicVariable.getValue(DynamicVariable.java:56)
+	at org.eclipse.cdt.internal.core.cdtvariables.EclipseVariablesVariableSupplier$EclipseVarMacro.loadValue(EclipseVariablesVariableSupplier.java:103)
+	at org.eclipse.cdt.internal.core.cdtvariables.EclipseVariablesVariableSupplier$EclipseVarMacro.getStringValue(EclipseVariablesVariableSupplier.java:90)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:361)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:292)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:275)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.getResolvedMacro(SupplierBasedCdtVariableSubstitutor.java:260)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveToString(SupplierBasedCdtVariableSubstitutor.java:222)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveToString(SupplierBasedCdtVariableSubstitutor.java:241)
+	at org.eclipse.cdt.utils.cdtvariables.CdtVariableResolver.resolveToString(CdtVariableResolver.java:122)
+	at org.eclipse.cdt.internal.core.cdtvariables.CdtVariableManager.resolveValue(CdtVariableManager.java:124)
+	at org.eclipse.cdt.managedbuilder.internal.language.settings.providers.MBSLanguageSettingsProvider.getSettingEntries(MBSLanguageSettingsProvider.java:89)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer$LanguageSettingsWorkspaceProvider.getSettingEntries(LanguageSettingsProvidersSerializer.java:181)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesPooled(LanguageSettingsProvidersSerializer.java:1426)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesUpResourceTree(LanguageSettingsProvidersSerializer.java:1454)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesByKind(LanguageSettingsProvidersSerializer.java:1517)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesByKind(LanguageSettingsProvidersSerializer.java:1559)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:110)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1061)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:848)
+	at org.eclipse.cdt.internal.core.model.CModelBuilder2.parse(CModelBuilder2.java:147)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parseUsingCModelBuilder(TranslationUnit.java:678)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parse(TranslationUnit.java:666)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.buildStructure(TranslationUnit.java:465)
+	at org.eclipse.cdt.internal.core.model.Openable.generateInfos(Openable.java:261)
+	at org.eclipse.cdt.internal.core.model.CElement.openWhenClosed(CElement.java:427)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:570)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:362)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:73)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:349)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-08 14:20:17.600
+!MESSAGE Exception in provider org.eclipse.cdt.managedbuilder.core.MBSLanguageSettingsProvider: getSettingEntries(xilinx.gnu.armv7.exe.debug.1707555271, L/sd_card_app/src/sdTest.c, org.eclipse.cdt.core.gcc)
+!STACK 0
+ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelperUtils.resolve(PlatformHelperUtils.java:350)
+	at com.xilinx.sdx.platform.PlatformHelper.getSDXSystemConfiguration(PlatformHelper.java:1103)
+	at com.xilinx.sdx.platform.PlatformHelper.getBspIncludePaths(PlatformHelper.java:86)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.hasApplicationLocalBsp(SdkPlatformHelper.java:129)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.getBspPath(SdkPlatformFilesResolver.java:117)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.getResolvedPath(SdkPlatformFilesResolver.java:81)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformFilesResolver.resolveValue(SdkPlatformFilesResolver.java:54)
+	at org.eclipse.core.internal.variables.DynamicVariable.getValue(DynamicVariable.java:56)
+	at org.eclipse.cdt.internal.core.cdtvariables.EclipseVariablesVariableSupplier$EclipseVarMacro.loadValue(EclipseVariablesVariableSupplier.java:103)
+	at org.eclipse.cdt.internal.core.cdtvariables.EclipseVariablesVariableSupplier$EclipseVarMacro.getStringValue(EclipseVariablesVariableSupplier.java:90)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:361)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:292)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveMacro(SupplierBasedCdtVariableSubstitutor.java:275)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.getResolvedMacro(SupplierBasedCdtVariableSubstitutor.java:260)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveToString(SupplierBasedCdtVariableSubstitutor.java:222)
+	at org.eclipse.cdt.utils.cdtvariables.SupplierBasedCdtVariableSubstitutor.resolveToString(SupplierBasedCdtVariableSubstitutor.java:241)
+	at org.eclipse.cdt.utils.cdtvariables.CdtVariableResolver.resolveToString(CdtVariableResolver.java:122)
+	at org.eclipse.cdt.internal.core.cdtvariables.CdtVariableManager.resolveValue(CdtVariableManager.java:124)
+	at org.eclipse.cdt.managedbuilder.internal.language.settings.providers.MBSLanguageSettingsProvider.getSettingEntries(MBSLanguageSettingsProvider.java:89)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer$LanguageSettingsWorkspaceProvider.getSettingEntries(LanguageSettingsProvidersSerializer.java:181)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesPooled(LanguageSettingsProvidersSerializer.java:1426)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesUpResourceTree(LanguageSettingsProvidersSerializer.java:1454)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesByKind(LanguageSettingsProvidersSerializer.java:1517)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsProvidersSerializer.getSettingEntriesByKind(LanguageSettingsProvidersSerializer.java:1559)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:114)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1061)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:848)
+	at org.eclipse.cdt.internal.core.model.CModelBuilder2.parse(CModelBuilder2.java:147)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parseUsingCModelBuilder(TranslationUnit.java:678)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parse(TranslationUnit.java:666)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.buildStructure(TranslationUnit.java:465)
+	at org.eclipse.cdt.internal.core.model.Openable.generateInfos(Openable.java:261)
+	at org.eclipse.cdt.internal.core.model.CElement.openWhenClosed(CElement.java:427)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:570)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:362)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:73)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:349)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.ui.workbench 4 2 2024-11-08 14:20:17.836
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelperUtils.resolve(PlatformHelperUtils.java:350)
+	at com.xilinx.sdx.platform.PlatformHelper.getSDXSystemConfiguration(PlatformHelper.java:1103)
+	at com.xilinx.sdx.platform.PlatformHelper.getProcessorGroupPrettyName(PlatformHelper.java:901)
+	at com.xilinx.sdx.system.explorer.DomainNameDecorator.decorateText(DomainNameDecorator.java:88)
+	at org.eclipse.ui.internal.decorators.FullDecoratorDefinition.decorateText(FullDecoratorDefinition.java:133)
+	at org.eclipse.ui.internal.decorators.FullTextDecoratorRunnable.run(FullTextDecoratorRunnable.java:24)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.safeDecorateText(DecoratorManager.java:497)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.decorateText(DecoratorManager.java:453)
+	at org.eclipse.ui.internal.decorators.DecoratorManager$ManagedWorkbenchLabelDecorator.decorateText(DecoratorManager.java:151)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.getStyledText(DecoratingStyledCellLabelProvider.java:202)
+	at org.eclipse.jface.viewers.DelegatingStyledCellLabelProvider.update(DelegatingStyledCellLabelProvider.java:106)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.update(DecoratingStyledCellLabelProvider.java:131)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:141)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:943)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:117)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:44)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1022)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:475)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:44)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2158)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createTreeItem(AbstractTreeViewer.java:837)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:815)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:601)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:763)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalExpand(AbstractTreeViewer.java:1677)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalExpand(AbstractTreeViewer.java:1674)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalExpand(AbstractTreeViewer.java:1674)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.setSelectionToWidget(AbstractTreeViewer.java:2543)
+	at org.eclipse.ui.navigator.CommonViewer.setSelectionToWidget(CommonViewer.java:439)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelectionToWidget(StructuredViewer.java:1758)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.setSelectionToWidget(AbstractTreeViewer.java:3015)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1714)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1081)
+	at org.eclipse.ui.navigator.CommonViewer.setSelection(CommonViewer.java:368)
+	at org.eclipse.ui.navigator.CommonNavigator.selectReveal(CommonNavigator.java:389)
+	at org.eclipse.ui.internal.navigator.actions.LinkEditorAction$2$1.run(LinkEditorAction.java:108)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.actions.LinkEditorAction$2.runInUIThread(LinkEditorAction.java:95)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3906)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3537)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1170)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1059)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:667)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:597)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:78)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:656)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:592)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1498)
+
+!ENTRY org.eclipse.ui 4 4 2024-11-08 14:20:17.836
+!MESSAGE Exception in Decorator. The 'Domain Name Decorator' decorator will be disabled.
+!SUBENTRY 1 org.eclipse.ui 4 4 2024-11-08 14:20:17.836
+!MESSAGE Out of memory
+!STACK 0
+ui.frmwork.COutOfMemoryException: Out of memory
+	at ui.frmwork.tcltasksi.isLegalFilePath(Native Method)
+	at ui.frmwork.tcl.TclTaskHelpers.isLegalFilePath(TclTaskHelpers.java:70)
+	at ui.utils.file.HFileUtils.isLegalFilePath(HFileUtils.java:3329)
+	at ui.utils.file.HFileUtils.isValidPath(HFileUtils.java:3459)
+	at ui.utils.file.HFileUtils.getCanonicalPath(HFileUtils.java:2168)
+	at com.xilinx.sdx.platform.PlatformHelperUtils.resolve(PlatformHelperUtils.java:350)
+	at com.xilinx.sdx.platform.PlatformHelper.getSDXSystemConfiguration(PlatformHelper.java:1103)
+	at com.xilinx.sdx.platform.PlatformHelper.getProcessorGroupPrettyName(PlatformHelper.java:901)
+	at com.xilinx.sdx.system.explorer.DomainNameDecorator.decorateText(DomainNameDecorator.java:88)
+	at org.eclipse.ui.internal.decorators.FullDecoratorDefinition.decorateText(FullDecoratorDefinition.java:133)
+	at org.eclipse.ui.internal.decorators.FullTextDecoratorRunnable.run(FullTextDecoratorRunnable.java:24)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.safeDecorateText(DecoratorManager.java:497)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.decorateText(DecoratorManager.java:453)
+	at org.eclipse.ui.internal.decorators.DecoratorManager$ManagedWorkbenchLabelDecorator.decorateText(DecoratorManager.java:151)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.getStyledText(DecoratingStyledCellLabelProvider.java:202)
+	at org.eclipse.jface.viewers.DelegatingStyledCellLabelProvider.update(DelegatingStyledCellLabelProvider.java:106)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.update(DecoratingStyledCellLabelProvider.java:131)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:141)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:943)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:117)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:44)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1022)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:475)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:44)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2158)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createTreeItem(AbstractTreeViewer.java:837)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:815)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:601)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:763)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalExpand(AbstractTreeViewer.java:1677)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalExpand(AbstractTreeViewer.java:1674)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalExpand(AbstractTreeViewer.java:1674)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.setSelectionToWidget(AbstractTreeViewer.java:2543)
+	at org.eclipse.ui.navigator.CommonViewer.setSelectionToWidget(CommonViewer.java:439)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelectionToWidget(StructuredViewer.java:1758)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.setSelectionToWidget(AbstractTreeViewer.java:3015)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1714)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1081)
+	at org.eclipse.ui.navigator.CommonViewer.setSelection(CommonViewer.java:368)
+	at org.eclipse.ui.navigator.CommonNavigator.selectReveal(CommonNavigator.java:389)
+	at org.eclipse.ui.internal.navigator.actions.LinkEditorAction$2$1.run(LinkEditorAction.java:108)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.actions.LinkEditorAction$2.runInUIThread(LinkEditorAction.java:95)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3906)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3537)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1170)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1059)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:667)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:597)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:78)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:656)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:592)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1498)
+!SESSION 2024-11-08 14:21:38.558 -----------------------------------------------
+eclipse.buildId=2019.2
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-11-08 14:21:42.333
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-11-08 14:21:48.614
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-11-08 14:21:48.621
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-11-08 14:21:48.621
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.ui 4 4 2024-11-08 14:21:54.146
+!MESSAGE Conflicting handlers for com.xilinx.sdx.system.core.importSourcesCommand: {com.xilinx.sdx.system.core.handler.ImportSourcesHandler} vs {com.xilinx.sdx.system.core.handler.ImportSourcesHandler}
+
+!ENTRY org.eclipse.ui 4 4 2024-11-08 14:21:54.148
+!MESSAGE Conflicting handlers for com.xilinx.sdx.system.core.importSourcesCommand: {com.xilinx.sdx.system.core.handler.ImportSourcesHandler} vs {com.xilinx.sdx.system.core.handler.ImportSourcesHandler}
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:21:56.916
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:21:56.917
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:21:56.931
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:21:56.931
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:21:56.932
+!MESSAGE XSCT Command: [setws C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test], Thread: Thread-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:21:56.935
+!MESSAGE XSCT command with result: [setws C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test], Result: [null, ]. Thread: Thread-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:21:57.067
+!MESSAGE XSCT Command: [enable_info_messages], Thread: Worker-1: Enabling info messages in xsct server
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:21:57.068
+!MESSAGE XSCT command with result: [enable_info_messages], Result: [null, ]. Thread: Worker-1: Enabling info messages in xsct server
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-11-08 14:21:59.513
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\miles'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:22:00.222
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:22:06.471
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:22:06.472
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 14:22:06.473
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2019.2/data]. Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY org.eclipse.ui 4 4 2024-11-08 15:28:39.646
+!MESSAGE Conflicting handlers for com.xilinx.sdx.system.core.importSourcesCommand: {com.xilinx.sdx.system.core.handler.ImportSourcesHandler@43687954} vs {com.xilinx.sdx.system.core.handler.ImportSourcesHandler}
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:28:39.709
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:28:42.309
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:28:42.309
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:28:42.309
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Result: [null, {"device": "7z010",
+"family": "zynq",
+"timestamp": "Thu Nov  7 15:23:19 2024",
+"vivado_version": "2019.2",
+"part": "xc7z010clg400-1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:29:09.305
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:29:09.321
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Result: [null, {"processing_system7_0": {"hier_name": "processing_system7_0",
+"type": "processing_system7",
+"version": "5.5",
+"ip_type": "",
+},
+"ps7_clockc_0": {"hier_name": "ps7_clockc_0",
+"type": "ps7_clockc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_uart_1": {"hier_name": "ps7_uart_1",
+"type": "ps7_uart",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pl310_0": {"hier_name": "ps7_pl310_0",
+"type": "ps7_pl310",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pmu_0": {"hier_name": "ps7_pmu_0",
+"type": "ps7_pmu",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_0": {"hier_name": "ps7_qspi_0",
+"type": "ps7_qspi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_linear_0": {"hier_name": "ps7_qspi_linear_0",
+"type": "ps7_qspi_linear",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_axi_interconnect_0": {"hier_name": "ps7_axi_interconnect_0",
+"type": "ps7_axi_interconnect",
+"version": "1.00.a",
+"ip_type": "BUS",
+},
+"ps7_cortexa9_0": {"hier_name": "ps7_cortexa9_0",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_cortexa9_1": {"hier_name": "ps7_cortexa9_1",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_ddr_0": {"hier_name": "ps7_ddr_0",
+"type": "ps7_ddr",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ethernet_0": {"hier_name": "ps7_ethernet_0",
+"type": "ps7_ethernet",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_usb_0": {"hier_name": "ps7_usb_0",
+"type": "ps7_usb",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_sd_0": {"hier_name": "ps7_sd_0",
+"type": "ps7_sdio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ttc_0": {"hier_name": "ps7_ttc_0",
+"type": "ps7_ttc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpio_0": {"hier_name": "ps7_gpio_0",
+"type": "ps7_gpio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ddrc_0": {"hier_name": "ps7_ddrc_0",
+"type": "ps7_ddrc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dev_cfg_0": {"hier_name": "ps7_dev_cfg_0",
+"type": "ps7_dev_cfg",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_xadc_0": {"hier_name": "ps7_xadc_0",
+"type": "ps7_xadc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ocmc_0": {"hier_name": "ps7_ocmc_0",
+"type": "ps7_ocmc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_coresight_comp_0": {"hier_name": "ps7_coresight_comp_0",
+"type": "ps7_coresight_comp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpv_0": {"hier_name": "ps7_gpv_0",
+"type": "ps7_gpv",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuc_0": {"hier_name": "ps7_scuc_0",
+"type": "ps7_scuc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_globaltimer_0": {"hier_name": "ps7_globaltimer_0",
+"type": "ps7_globaltimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_intc_dist_0": {"hier_name": "ps7_intc_dist_0",
+"type": "ps7_intc_dist",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_l2cachec_0": {"hier_name": "ps7_l2cachec_0",
+"type": "ps7_l2cachec",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_s": {"hier_name": "ps7_dma_s",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_iop_bus_config_0": {"hier_name": "ps7_iop_bus_config_0",
+"type": "ps7_iop_bus_config",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ram_0": {"hier_name": "ps7_ram_0",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ram_1": {"hier_name": "ps7_ram_1",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_scugic_0": {"hier_name": "ps7_scugic_0",
+"type": "ps7_scugic",
+"version": "1.00.a",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"ps7_scutimer_0": {"hier_name": "ps7_scutimer_0",
+"type": "ps7_scutimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuwdt_0": {"hier_name": "ps7_scuwdt_0",
+"type": "ps7_scuwdt",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_slcr_0": {"hier_name": "ps7_slcr_0",
+"type": "ps7_slcr",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_ns": {"hier_name": "ps7_dma_ns",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_0": {"hier_name": "ps7_afi_0",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_1": {"hier_name": "ps7_afi_1",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_2": {"hier_name": "ps7_afi_2",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_3": {"hier_name": "ps7_afi_3",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_m_axi_gp0": {"hier_name": "ps7_m_axi_gp0",
+"type": "ps7_m_axi_gp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:29:14.906
+!MESSAGE XSCT Command: [::hsi::utils::lg_init C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:29:14.922
+!MESSAGE XSCT command with result: [::hsi::utils::lg_init C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Result: [null, lg1]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:29:14.922
+!MESSAGE XSCT Command: [::hsi::utils::lg_get_memories -json], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:29:14.922
+!MESSAGE XSCT command with result: [::hsi::utils::lg_get_memories -json], Result: [null, {"ps7_ddr_0": {"base_addr": "0x100000",
+"size": "0x1FF00000",
+},
+"ps7_qspi_linear_0": {"base_addr": "0xFC000000",
+"size": "0x1000000",
+},
+"ps7_ram_0": {"base_addr": "0x0",
+"size": "0x30000",
+},
+"ps7_ram_1": {"base_addr": "0xFFFF0000",
+"size": "0xFE00",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:29:14.922
+!MESSAGE XSCT Command: [::hsi::utils::lg_get_sections -json], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:29:14.938
+!MESSAGE XSCT command with result: [::hsi::utils::lg_get_sections -json], Result: [null, {"code_sections": ".text:0x0::ps7_ddr_0:ps7_qspi_linear_0:ps7_ram_0:ps7_ram_1",
+"data_sections": ".rodata:0x0::ps7_ddr_0:ps7_ram_0:ps7_ram_1 .rodata1:0x0::ps7_ddr_0:ps7_ram_0:ps7_ram_1 .sdata2:0x0::ps7_ddr_0:ps7_ram_0:ps7_ram_1 .sbss2:0x0::ps7_ddr_0:ps7_ram_0:ps7_ram_1 .data:0x0::ps7_ddr_0:ps7_ram_0:ps7_ram_1 .data1:0x0::ps7_ddr_0:ps7_ram_0:ps7_ram_1 .fixup:0x0::ps7_ddr_0:ps7_ram_0:ps7_ram_1 .sdata:0x0::ps7_ddr_0:ps7_ram_0:ps7_ram_1 .sbss:0x0::ps7_ddr_0:ps7_ram_0:ps7_ram_1 .bss:0x0::ps7_ddr_0:ps7_ram_0:ps7_ram_1",
+"stack_section": "stack:0x2000::ps7_ddr_0:ps7_ram_0:ps7_ram_1",
+"heap_section": "heap:0x2000::ps7_ddr_0:ps7_ram_0:ps7_ram_1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:38:11.669
+!MESSAGE XSCT Command: [::hsi::utils::lg_delete], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-08 15:38:11.669
+!MESSAGE XSCT command with result: [::hsi::utils::lg_delete], Result: [null, ]. Thread: main
+!SESSION 2024-11-09 08:55:12.136 -----------------------------------------------
+eclipse.buildId=2019.2
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-11-09 08:55:33.206
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-11-09 08:55:37.863
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-11-09 08:55:37.863
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-11-09 08:55:37.863
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.ui 4 4 2024-11-09 08:55:44.805
+!MESSAGE Conflicting handlers for com.xilinx.sdx.system.core.importSourcesCommand: {com.xilinx.sdx.system.core.handler.ImportSourcesHandler} vs {com.xilinx.sdx.system.core.handler.ImportSourcesHandler}
+
+!ENTRY org.eclipse.ui 4 4 2024-11-09 08:55:44.805
+!MESSAGE Conflicting handlers for com.xilinx.sdx.system.core.importSourcesCommand: {com.xilinx.sdx.system.core.handler.ImportSourcesHandler} vs {com.xilinx.sdx.system.core.handler.ImportSourcesHandler}
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 08:55:50.681
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 08:55:50.681
+!MESSAGE XSCT Command: [enable_info_messages], Thread: Worker-0: Enabling info messages in xsct server
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 08:55:50.694
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-23
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 08:55:50.726
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 08:55:50.754
+!MESSAGE XSCT command with result: [enable_info_messages], Result: [null, ]. Thread: Worker-0: Enabling info messages in xsct server
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 08:55:50.756
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-23
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 08:55:50.785
+!MESSAGE XSCT Command: [setws C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test], Thread: Thread-23
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 08:55:50.845
+!MESSAGE XSCT command with result: [setws C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test], Result: [null, ]. Thread: Thread-23
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-11-09 08:55:50.960
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\miles'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 08:55:51.362
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-5: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 08:55:57.260
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-5: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 08:55:57.260
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-5: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 08:55:57.260
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2019.2/data]. Thread: Worker-5: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:02:20.187
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Thread: Worker-10: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:02:23.329
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Result: [null, ]. Thread: Worker-10: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:02:23.329
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss ], Thread: Worker-10: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:02:23.344
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-10: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:02:23.344
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Thread: Worker-10: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:02:23.344
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-10: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:02:23.344
+!MESSAGE Generating MD5 hash for file: C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\sd_card\export\sd_card\sw\sd_card\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:02:23.360
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Thread: Worker-10: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:02:23.360
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-10: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:02:26.031
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Thread: Worker-10: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:02:26.047
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Result: [null, {"processing_system7_0": {"hier_name": "processing_system7_0",
+"type": "processing_system7",
+"version": "5.5",
+"ip_type": "",
+},
+"ps7_clockc_0": {"hier_name": "ps7_clockc_0",
+"type": "ps7_clockc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_uart_1": {"hier_name": "ps7_uart_1",
+"type": "ps7_uart",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pl310_0": {"hier_name": "ps7_pl310_0",
+"type": "ps7_pl310",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pmu_0": {"hier_name": "ps7_pmu_0",
+"type": "ps7_pmu",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_0": {"hier_name": "ps7_qspi_0",
+"type": "ps7_qspi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_linear_0": {"hier_name": "ps7_qspi_linear_0",
+"type": "ps7_qspi_linear",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_axi_interconnect_0": {"hier_name": "ps7_axi_interconnect_0",
+"type": "ps7_axi_interconnect",
+"version": "1.00.a",
+"ip_type": "BUS",
+},
+"ps7_cortexa9_0": {"hier_name": "ps7_cortexa9_0",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_cortexa9_1": {"hier_name": "ps7_cortexa9_1",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_ddr_0": {"hier_name": "ps7_ddr_0",
+"type": "ps7_ddr",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ethernet_0": {"hier_name": "ps7_ethernet_0",
+"type": "ps7_ethernet",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_usb_0": {"hier_name": "ps7_usb_0",
+"type": "ps7_usb",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_sd_0": {"hier_name": "ps7_sd_0",
+"type": "ps7_sdio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ttc_0": {"hier_name": "ps7_ttc_0",
+"type": "ps7_ttc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpio_0": {"hier_name": "ps7_gpio_0",
+"type": "ps7_gpio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ddrc_0": {"hier_name": "ps7_ddrc_0",
+"type": "ps7_ddrc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dev_cfg_0": {"hier_name": "ps7_dev_cfg_0",
+"type": "ps7_dev_cfg",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_xadc_0": {"hier_name": "ps7_xadc_0",
+"type": "ps7_xadc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ocmc_0": {"hier_name": "ps7_ocmc_0",
+"type": "ps7_ocmc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_coresight_comp_0": {"hier_name": "ps7_coresight_comp_0",
+"type": "ps7_coresight_comp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpv_0": {"hier_name": "ps7_gpv_0",
+"type": "ps7_gpv",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuc_0": {"hier_name": "ps7_scuc_0",
+"type": "ps7_scuc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_globaltimer_0": {"hier_name": "ps7_globaltimer_0",
+"type": "ps7_globaltimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_intc_dist_0": {"hier_name": "ps7_intc_dist_0",
+"type": "ps7_intc_dist",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_l2cachec_0": {"hier_name": "ps7_l2cachec_0",
+"type": "ps7_l2cachec",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_s": {"hier_name": "ps7_dma_s",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_iop_bus_config_0": {"hier_name": "ps7_iop_bus_config_0",
+"type": "ps7_iop_bus_config",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ram_0": {"hier_name": "ps7_ram_0",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ram_1": {"hier_name": "ps7_ram_1",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_scugic_0": {"hier_name": "ps7_scugic_0",
+"type": "ps7_scugic",
+"version": "1.00.a",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"ps7_scutimer_0": {"hier_name": "ps7_scutimer_0",
+"type": "ps7_scutimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuwdt_0": {"hier_name": "ps7_scuwdt_0",
+"type": "ps7_scuwdt",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_slcr_0": {"hier_name": "ps7_slcr_0",
+"type": "ps7_slcr",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_ns": {"hier_name": "ps7_dma_ns",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_0": {"hier_name": "ps7_afi_0",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_1": {"hier_name": "ps7_afi_1",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_2": {"hier_name": "ps7_afi_2",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_3": {"hier_name": "ps7_afi_3",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_m_axi_gp0": {"hier_name": "ps7_m_axi_gp0",
+"type": "ps7_m_axi_gp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: Worker-10: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:02:32.029
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '1'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:03:01.217
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss ], Thread: Worker-6: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:03:01.217
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-6: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:03:01.217
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Thread: Worker-6: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:03:01.233
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-6: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:03:01.233
+!MESSAGE Generating MD5 hash for file: C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\sd_card\export\sd_card\sw\sd_card\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:03:01.233
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Thread: Worker-6: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:03:01.233
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-6: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:03:08.948
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '2'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.209
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.209
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Result: [null, {"device": "7z010",
+"family": "zynq",
+"timestamp": "Thu Nov  7 15:23:19 2024",
+"vivado_version": "2019.2",
+"part": "xc7z010clg400-1",
+}]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.335
+!MESSAGE XSCT Command: [::hsi::utils::get_ps_config_params -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.350
+!MESSAGE XSCT command with result: [::hsi::utils::get_ps_config_params -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Result: [null, {"PCW_APU_PERIPHERAL_FREQMHZ": "650",
+"PCW_DDR_HPRLPR_QUEUE_PARTITION": "HPR(0)/LPR(32)",
+"PCW_DDR_HPR_TO_CRITICAL_PRIORITY_LEVEL": "15",
+"PCW_DDR_LPR_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_DDR_PORT0_HPR_ENABLE": "0",
+"PCW_DDR_PORT1_HPR_ENABLE": "0",
+"PCW_DDR_PORT2_HPR_ENABLE": "0",
+"PCW_DDR_PORT3_HPR_ENABLE": "0",
+"PCW_DDR_WRITE_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_FPGA0_PERIPHERAL_FREQMHZ": "100",
+"PCW_UIPARAM_DDR_BUS_WIDTH": "32 Bit",
+"PCW_UIPARAM_DDR_FREQ_MHZ": "525",
+}]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.350
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.366
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0], Result: [null, {"ps7_afi_0": {},
+"ps7_afi_1": {},
+"ps7_afi_2": {},
+"ps7_afi_3": {},
+"ps7_coresight_comp_0": {},
+"ps7_ddr_0": {},
+"ps7_ddrc_0": {},
+"ps7_dev_cfg_0": {},
+"ps7_dma_ns": {},
+"ps7_dma_s": {},
+"ps7_ethernet_0": {},
+"ps7_globaltimer_0": {},
+"ps7_gpio_0": {},
+"ps7_gpv_0": {},
+"ps7_intc_dist_0": {},
+"ps7_iop_bus_config_0": {},
+"ps7_l2cachec_0": {},
+"ps7_ocmc_0": {},
+"ps7_pl310_0": {},
+"ps7_pmu_0": {},
+"ps7_qspi_0": {},
+"ps7_qspi_linear_0": {},
+"ps7_ram_0": {},
+"ps7_ram_1": {},
+"ps7_scuc_0": {},
+"ps7_scugic_0": {},
+"ps7_scutimer_0": {},
+"ps7_scuwdt_0": {},
+"ps7_sd_0": {},
+"ps7_slcr_0": {},
+"ps7_ttc_0": {},
+"ps7_uart_1": {},
+"ps7_usb_0": {},
+"ps7_xadc_0": {},
+}]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.366
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.382
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0], Result: [null, {"ps7_afi_0": {"name": "ps7_afi_0",
+"base": "0xF8008000",
+"high": "0xF8008FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_1": {"name": "ps7_afi_1",
+"base": "0xF8009000",
+"high": "0xF8009FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_2": {"name": "ps7_afi_2",
+"base": "0xF800A000",
+"high": "0xF800AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_3": {"name": "ps7_afi_3",
+"base": "0xF800B000",
+"high": "0xF800BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_coresight_comp_0": {"name": "ps7_coresight_comp_0",
+"base": "0xF8800000",
+"high": "0xF88FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddrc_0": {"name": "ps7_ddrc_0",
+"base": "0xF8006000",
+"high": "0xF8006FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dev_cfg_0": {"name": "ps7_dev_cfg_0",
+"base": "0xF8007000",
+"high": "0xF80070FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_ns": {"name": "ps7_dma_ns",
+"base": "0xF8004000",
+"high": "0xF8004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_s": {"name": "ps7_dma_s",
+"base": "0xF8003000",
+"high": "0xF8003FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ethernet_0": {"name": "ps7_ethernet_0",
+"base": "0xE000B000",
+"high": "0xE000BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_globaltimer_0": {"name": "ps7_globaltimer_0",
+"base": "0xF8F00200",
+"high": "0xF8F002FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpio_0": {"name": "ps7_gpio_0",
+"base": "0xE000A000",
+"high": "0xE000AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpv_0": {"name": "ps7_gpv_0",
+"base": "0xF8900000",
+"high": "0xF89FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_intc_dist_0": {"name": "ps7_intc_dist_0",
+"base": "0xF8F01000",
+"high": "0xF8F01FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_iop_bus_config_0": {"name": "ps7_iop_bus_config_0",
+"base": "0xE0200000",
+"high": "0xE0200FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_l2cachec_0": {"name": "ps7_l2cachec_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ocmc_0": {"name": "ps7_ocmc_0",
+"base": "0xF800C000",
+"high": "0xF800CFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pl310_0": {"name": "ps7_pl310_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pmu_0": {"name": "ps7_pmu_0",
+"base": "0xF8893000",
+"high": "0xF8893FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_0": {"name": "ps7_qspi_0",
+"base": "0xE000D000",
+"high": "0xE000DFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_linear_0": {"name": "ps7_qspi_linear_0",
+"base": "0xFC000000",
+"high": "0xFCFFFFFF",
+"size": "16777216",
+"slaveintf": "",
+"type": "FLASH",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuc_0": {"name": "ps7_scuc_0",
+"base": "0xF8F00000",
+"high": "0xF8F000FC",
+"size": "253",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scugic_0": {"name": "ps7_scugic_0",
+"base": "0xF8F00100",
+"high": "0xF8F001FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scutimer_0": {"name": "ps7_scutimer_0",
+"base": "0xF8F00600",
+"high": "0xF8F0061F",
+"size": "32",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuwdt_0": {"name": "ps7_scuwdt_0",
+"base": "0xF8F00620",
+"high": "0xF8F006FF",
+"size": "224",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_0": {"name": "ps7_sd_0",
+"base": "0xE0100000",
+"high": "0xE0100FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_slcr_0": {"name": "ps7_slcr_0",
+"base": "0xF8000000",
+"high": "0xF8000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ttc_0": {"name": "ps7_ttc_0",
+"base": "0xF8001000",
+"high": "0xF8001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_1": {"name": "ps7_uart_1",
+"base": "0xE0001000",
+"high": "0xE0001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_usb_0": {"name": "ps7_usb_0",
+"base": "0xE0002000",
+"high": "0xE0002FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_xadc_0": {"name": "ps7_xadc_0",
+"base": "0xF8007100",
+"high": "0xF8007120",
+"size": "33",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddr_0": {"name": "ps7_ddr_0",
+"base": "0x00100000",
+"high": "0x1FFFFFFF",
+"size": "535822336",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_0": {"name": "ps7_ram_0",
+"base": "0x00000000",
+"high": "0x0002FFFF",
+"size": "196608",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_1": {"name": "ps7_ram_1",
+"base": "0xFFFF0000",
+"high": "0xFFFFFDFF",
+"size": "65024",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.399
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_ENABLED], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.399
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.399
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.399
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.399
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.399
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.430
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.430
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.430
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_FREQ], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.430
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_FREQ], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.430
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_CPU_CLK_FREQ_HZ], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.430
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_CPU_CLK_FREQ_HZ], Result: [null, 650000000]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.430
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.461
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa], Result: [null, {"ps7_cortexa9_0": {"bscan": "",
+"index": "0",
+},
+"ps7_cortexa9_1": {"bscan": "",
+"index": "1",
+},
+}]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.461
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.461
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1], Result: [null, {"ps7_afi_0": {},
+"ps7_afi_1": {},
+"ps7_afi_2": {},
+"ps7_afi_3": {},
+"ps7_coresight_comp_0": {},
+"ps7_ddr_0": {},
+"ps7_ddrc_0": {},
+"ps7_dev_cfg_0": {},
+"ps7_dma_ns": {},
+"ps7_dma_s": {},
+"ps7_ethernet_0": {},
+"ps7_globaltimer_0": {},
+"ps7_gpio_0": {},
+"ps7_gpv_0": {},
+"ps7_intc_dist_0": {},
+"ps7_iop_bus_config_0": {},
+"ps7_l2cachec_0": {},
+"ps7_ocmc_0": {},
+"ps7_pl310_0": {},
+"ps7_pmu_0": {},
+"ps7_qspi_0": {},
+"ps7_qspi_linear_0": {},
+"ps7_ram_0": {},
+"ps7_ram_1": {},
+"ps7_scuc_0": {},
+"ps7_scugic_0": {},
+"ps7_scutimer_0": {},
+"ps7_scuwdt_0": {},
+"ps7_sd_0": {},
+"ps7_slcr_0": {},
+"ps7_ttc_0": {},
+"ps7_uart_1": {},
+"ps7_usb_0": {},
+"ps7_xadc_0": {},
+}]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.477
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.499
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1], Result: [null, {"ps7_afi_0": {"name": "ps7_afi_0",
+"base": "0xF8008000",
+"high": "0xF8008FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_1": {"name": "ps7_afi_1",
+"base": "0xF8009000",
+"high": "0xF8009FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_2": {"name": "ps7_afi_2",
+"base": "0xF800A000",
+"high": "0xF800AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_3": {"name": "ps7_afi_3",
+"base": "0xF800B000",
+"high": "0xF800BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_coresight_comp_0": {"name": "ps7_coresight_comp_0",
+"base": "0xF8800000",
+"high": "0xF88FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddrc_0": {"name": "ps7_ddrc_0",
+"base": "0xF8006000",
+"high": "0xF8006FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dev_cfg_0": {"name": "ps7_dev_cfg_0",
+"base": "0xF8007000",
+"high": "0xF80070FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_ns": {"name": "ps7_dma_ns",
+"base": "0xF8004000",
+"high": "0xF8004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_s": {"name": "ps7_dma_s",
+"base": "0xF8003000",
+"high": "0xF8003FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ethernet_0": {"name": "ps7_ethernet_0",
+"base": "0xE000B000",
+"high": "0xE000BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_globaltimer_0": {"name": "ps7_globaltimer_0",
+"base": "0xF8F00200",
+"high": "0xF8F002FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpio_0": {"name": "ps7_gpio_0",
+"base": "0xE000A000",
+"high": "0xE000AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpv_0": {"name": "ps7_gpv_0",
+"base": "0xF8900000",
+"high": "0xF89FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_intc_dist_0": {"name": "ps7_intc_dist_0",
+"base": "0xF8F01000",
+"high": "0xF8F01FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_iop_bus_config_0": {"name": "ps7_iop_bus_config_0",
+"base": "0xE0200000",
+"high": "0xE0200FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_l2cachec_0": {"name": "ps7_l2cachec_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ocmc_0": {"name": "ps7_ocmc_0",
+"base": "0xF800C000",
+"high": "0xF800CFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pl310_0": {"name": "ps7_pl310_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pmu_0": {"name": "ps7_pmu_0",
+"base": "0xF8893000",
+"high": "0xF8893FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_0": {"name": "ps7_qspi_0",
+"base": "0xE000D000",
+"high": "0xE000DFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_linear_0": {"name": "ps7_qspi_linear_0",
+"base": "0xFC000000",
+"high": "0xFCFFFFFF",
+"size": "16777216",
+"slaveintf": "",
+"type": "FLASH",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuc_0": {"name": "ps7_scuc_0",
+"base": "0xF8F00000",
+"high": "0xF8F000FC",
+"size": "253",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scugic_0": {"name": "ps7_scugic_0",
+"base": "0xF8F00100",
+"high": "0xF8F001FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scutimer_0": {"name": "ps7_scutimer_0",
+"base": "0xF8F00600",
+"high": "0xF8F0061F",
+"size": "32",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuwdt_0": {"name": "ps7_scuwdt_0",
+"base": "0xF8F00620",
+"high": "0xF8F006FF",
+"size": "224",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_0": {"name": "ps7_sd_0",
+"base": "0xE0100000",
+"high": "0xE0100FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_slcr_0": {"name": "ps7_slcr_0",
+"base": "0xF8000000",
+"high": "0xF8000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ttc_0": {"name": "ps7_ttc_0",
+"base": "0xF8001000",
+"high": "0xF8001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_1": {"name": "ps7_uart_1",
+"base": "0xE0001000",
+"high": "0xE0001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_usb_0": {"name": "ps7_usb_0",
+"base": "0xE0002000",
+"high": "0xE0002FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_xadc_0": {"name": "ps7_xadc_0",
+"base": "0xF8007100",
+"high": "0xF8007120",
+"size": "33",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddr_0": {"name": "ps7_ddr_0",
+"base": "0x00100000",
+"high": "0x1FFFFFFF",
+"size": "535822336",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_0": {"name": "ps7_ram_0",
+"base": "0x00000000",
+"high": "0x0002FFFF",
+"size": "196608",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_1": {"name": "ps7_ram_1",
+"base": "0xFFFF0000",
+"high": "0xFFFFFDFF",
+"size": "65024",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.499
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_ENABLED], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.509
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.509
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.524
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.524
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.524
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.524
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.556
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.556
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_FREQ], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.572
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_FREQ], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.572
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.572
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Result: [null, 650000000]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.587
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.603
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa ps7_cortexa9_0], Result: [null, ps7_afi_0 ps7_afi_1 ps7_afi_2 ps7_afi_3 ps7_coresight_comp_0 ps7_ddr_0 ps7_ddrc_0 ps7_dev_cfg_0 ps7_dma_ns ps7_dma_s ps7_ethernet_0 ps7_globaltimer_0 ps7_gpio_0 ps7_gpv_0 ps7_intc_dist_0 ps7_iop_bus_config_0 ps7_l2cachec_0 ps7_ocmc_0 ps7_pl310_0 ps7_pmu_0 ps7_qspi_0 ps7_qspi_linear_0 ps7_ram_0 ps7_ram_1 ps7_scuc_0 ps7_scugic_0 ps7_scutimer_0 ps7_scuwdt_0 ps7_sd_0 ps7_slcr_0 ps7_ttc_0 ps7_uart_1 ps7_usb_0 ps7_xadc_0]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.603
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_files_on_hw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa bit], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.603
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_files_on_hw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa bit], Result: [null, design_1_wrapper.bit]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:10.603
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY org.eclipse.tcf 4 0 2024-11-09 09:06:12.917
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2024-11-09 09:06:12.917
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2024-11-09 09:06:12.932
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:12.995
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#4]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.004
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.309
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279787858A]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.309
+!MESSAGE XSCT Command: [version -server], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.309
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.2]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.325
+!MESSAGE XSCT Command: [version], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.325
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.2
+SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.325
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.325
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279787858A]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.325
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.341
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.341
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.356
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279787858A]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.356
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.372
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.388
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.388
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279787858A]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.388
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.404
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.404
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.420
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279787858A]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.420
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.436
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.436
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.436
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279787858A]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.436
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.467
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.467
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.467
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279787858A]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.467
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.483
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.483
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zybo 210279787858A" && level == 0}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.504
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zybo 210279787858A" && level == 0}], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.504
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.515
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.515
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.530
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.530
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.562
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:13.562
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:16.575
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:16.611
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:16.622
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279787858A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:16.622
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:16.638
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:16.638
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:16.779
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:16.779
+!MESSAGE XSCT Command: [fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:17.995
+!MESSAGE XSCT command with result: [fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.042
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.136
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.136
+!MESSAGE XSCT Command: [loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.199
+!MESSAGE XSCT command with result: [loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, design_1_wrapper_0]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.199
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.214
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.214
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.214
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.214
+!MESSAGE XSCT Command: [source C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/psinit/ps7_init.tcl], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.230
+!MESSAGE XSCT command with result: [source C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.230
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.481
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.496
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.496
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.496
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.496
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.512
+!MESSAGE XSCT Command: [dow C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.779
+!MESSAGE XSCT command with result: [dow C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.779
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.810
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.904
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.936
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.936
+!MESSAGE XSCT Command: [con], Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:06:18.984
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-11: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:06:18.985
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '1'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:06:18.985
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '1'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:07:19.829
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss ], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:07:19.829
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:07:19.829
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:07:19.829
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:07:19.845
+!MESSAGE Generating MD5 hash for file: C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\sd_card\export\sd_card\sw\sd_card\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:07:19.845
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:07:19.845
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:07:24.188
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '3'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:07:41.522
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss ], Thread: Worker-18: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:07:41.522
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-18: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:07:41.533
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Thread: Worker-18: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:07:41.533
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-18: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:07:41.538
+!MESSAGE Generating MD5 hash for file: C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\sd_card\export\sd_card\sw\sd_card\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:07:41.538
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Thread: Worker-18: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:07:41.538
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/sw/sd_card/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-18: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:07:48.744
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '4'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:18.844
+!MESSAGE XSCT Command: [disconnect tcfchan#4], Thread: Thread-205
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:18.882
+!MESSAGE XSCT command with result: [disconnect tcfchan#4], Result: [null, ]. Thread: Thread-205
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:18.961
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:18.993
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#7]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:18.993
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.009
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279787858A]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.009
+!MESSAGE XSCT Command: [version -server], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.009
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.2]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.009
+!MESSAGE XSCT Command: [version], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.009
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.2
+SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.025
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.025
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279787858A]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.025
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.041
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.057
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.057
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279787858A]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.057
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.088
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.088
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.088
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279787858A]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.088
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.121
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.121
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.137
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279787858A]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.137
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.168
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.168
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.168
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279787858A]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.168
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.204
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.205
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.216
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279787858A]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.216
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.232
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.232
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zybo 210279787858A" && level == 0}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.247
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zybo 210279787858A" && level == 0}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.264
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.264
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.264
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.279
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.279
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.319
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:19.321
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:22.334
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:22.349
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:22.349
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279787858A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:22.349
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:22.365
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:22.365
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:22.381
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:22.381
+!MESSAGE XSCT Command: [fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.602
+!MESSAGE XSCT command with result: [fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.634
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.650
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.650
+!MESSAGE XSCT Command: [loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.650
+!MESSAGE XSCT command with result: [loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, design_1_wrapper_0]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.650
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.650
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.665
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.681
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.681
+!MESSAGE XSCT Command: [source C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/psinit/ps7_init.tcl], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.681
+!MESSAGE XSCT command with result: [source C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.681
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.965
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.965
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.965
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.965
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.981
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:23.981
+!MESSAGE XSCT Command: [dow C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:24.263
+!MESSAGE XSCT command with result: [dow C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:24.263
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:24.294
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:24.358
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:24.373
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:24.373
+!MESSAGE XSCT Command: [con], Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:08:24.404
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_sd_card_app_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:08:24.404
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '2'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:08:24.404
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '2'
+
+!ENTRY org.eclipse.ui 2 2 2024-11-09 09:10:52.631
+!MESSAGE Invalid preference category path: com.xilinx.sdk.ui.preferences.page (bundle: com.xilinx.sdk.ui.customize, page: com.xilinx.sdk.ui.customize.sdkCustomizationPreferences)
+
+!ENTRY org.eclipse.ui 2 2 2024-11-09 09:10:52.631
+!MESSAGE Invalid preference category path: com.autoesl.autopilot.ui.startup.preferences.AutoPilotRootPreferencePage (bundle: com.autoesl.autopilot.ui.cdfg.diagram, page: com.autoesl.autopilot.ui.cdfg.diagram.general)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:34:32.583
+!MESSAGE XSCT Command: [disconnect tcfchan#7], Thread: Thread-305
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-09 09:34:32.593
+!MESSAGE XSCT command with result: [disconnect tcfchan#7], Result: [null, ]. Thread: Thread-305
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:34:32.721
+!MESSAGE Executing command: cmd /C C:\Xilinx\Vitis\2019.2\bin\wbtcv.bat -mode batch -source vitis_webtalk.tcl
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-09 09:34:32.816
+!MESSAGE Executed Webtalk command

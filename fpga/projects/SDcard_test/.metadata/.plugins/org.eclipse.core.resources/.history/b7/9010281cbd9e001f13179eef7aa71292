@@ -142,7 +142,7 @@ int doSDTEST(void){
 
 	rc = f_read(&fil, (void*)DestinationAddress, FileSize,
 			&NumBytesRead);
-	printf("numbytes read - %d\n\r", NumBytesRead);
+	prinf("numbytes read - %d\n\r", NumBytesRead);
 	if (rc) {
 		print("file read failed\n\r");
 		return XST_FAILURE;

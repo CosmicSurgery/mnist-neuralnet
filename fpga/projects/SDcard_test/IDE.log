@@ -1515,3 +1515,121 @@ con
 
 11:00:03 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\.sdk\launch_scripts\single_application_debug\systemdebugger_sd_card_app_system_standalone.tcl'
 11:35:01 INFO  : Disconnected from the channel tcfchan#58.
+14:20:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\temp_xsdb_launch_script.tcl
+14:20:16 INFO  : XSCT server has started successfully.
+14:20:16 INFO  : Successfully done setting XSCT server connection channel  
+14:20:16 INFO  : plnx-install-location is set to ''
+14:20:16 INFO  : Successfully done setting workspace for the tool. 
+14:21:53 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\temp_xsdb_launch_script.tcl
+14:21:56 INFO  : XSCT server has started successfully.
+14:21:56 INFO  : plnx-install-location is set to ''
+14:21:56 INFO  : Successfully done setting XSCT server connection channel  
+14:21:56 INFO  : Successfully done setting workspace for the tool. 
+14:22:00 INFO  : Registering command handlers for Vitis TCF services
+14:22:06 INFO  : Successfully done query RDI_DATADIR 
+15:29:14 INFO  : Inferring section assignments and sizes from elf file: C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\sd_card_app\Debug\sd_card_app.elf
+08:55:44 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\temp_xsdb_launch_script.tcl
+08:55:50 INFO  : XSCT server has started successfully.
+08:55:50 INFO  : plnx-install-location is set to ''
+08:55:50 INFO  : Successfully done setting XSCT server connection channel  
+08:55:50 INFO  : Successfully done setting workspace for the tool. 
+08:55:51 INFO  : Registering command handlers for Vitis TCF services
+08:55:57 INFO  : Successfully done query RDI_DATADIR 
+09:02:20 INFO  : Checking for BSP changes to sync application flags for project 'sd_card_app'...
+09:03:01 INFO  : Checking for BSP changes to sync application flags for project 'sd_card_app'...
+09:06:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:06:13 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+09:06:13 INFO  : 'jtag frequency' command is executed.
+09:06:13 INFO  : Context for 'APU' is selected.
+09:06:13 INFO  : System reset is completed.
+09:06:16 INFO  : 'after 3000' command is executed.
+09:06:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+09:06:17 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit"
+09:06:18 INFO  : Context for 'APU' is selected.
+09:06:18 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa'.
+09:06:18 INFO  : 'configparams force-mem-access 1' command is executed.
+09:06:18 INFO  : Context for 'APU' is selected.
+09:06:18 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/psinit/ps7_init.tcl' is done.
+09:06:18 INFO  : 'ps7_init' command is executed.
+09:06:18 INFO  : 'ps7_post_config' command is executed.
+09:06:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:06:18 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:06:18 INFO  : 'configparams force-mem-access 0' command is executed.
+09:06:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:06:18 INFO  : Memory regions updated for context APU
+09:06:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:06:18 INFO  : 'con' command is executed.
+09:06:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:06:18 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\.sdk\launch_scripts\single_application_debug\systemdebugger_sd_card_app_system_standalone.tcl'
+09:07:19 INFO  : Checking for BSP changes to sync application flags for project 'sd_card_app'...
+09:07:41 INFO  : Checking for BSP changes to sync application flags for project 'sd_card_app'...
+09:08:18 INFO  : Disconnected from the channel tcfchan#4.
+09:08:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:08:19 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+09:08:19 INFO  : 'jtag frequency' command is executed.
+09:08:19 INFO  : Context for 'APU' is selected.
+09:08:19 INFO  : System reset is completed.
+09:08:22 INFO  : 'after 3000' command is executed.
+09:08:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+09:08:23 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit"
+09:08:23 INFO  : Context for 'APU' is selected.
+09:08:23 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa'.
+09:08:23 INFO  : 'configparams force-mem-access 1' command is executed.
+09:08:23 INFO  : Context for 'APU' is selected.
+09:08:23 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/psinit/ps7_init.tcl' is done.
+09:08:23 INFO  : 'ps7_init' command is executed.
+09:08:23 INFO  : 'ps7_post_config' command is executed.
+09:08:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:08:24 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:08:24 INFO  : 'configparams force-mem-access 0' command is executed.
+09:08:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:08:24 INFO  : Memory regions updated for context APU
+09:08:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:08:24 INFO  : 'con' command is executed.
+09:08:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:08:24 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\.sdk\launch_scripts\single_application_debug\systemdebugger_sd_card_app_system_standalone.tcl'
+09:34:32 INFO  : Disconnected from the channel tcfchan#7.
