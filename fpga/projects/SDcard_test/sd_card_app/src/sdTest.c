@@ -59,19 +59,6 @@ int main(){
 
 }
 
-// Function to display progress bar
-void printProgressBar(float progress) {
-    int barWidth = 70;  // Width of the progress bar
-    printf("[");
-    int pos = barWidth * progress;
-    for (int i = 0; i < barWidth; ++i) {
-        if (i < pos) printf("=");
-        else if (i == pos) printf(">");
-        else printf(" ");
-    }
-    printf("] %d%%\r", (int)(progress * 100));
-    fflush(stdout);  // Force output to update
-}
 
 int doSDTEST(void){
 	FRESULT rc;
@@ -150,9 +137,11 @@ int doSDTEST(void){
 
 	printf("FileSize = %d\n\r", FileSize);
 	for(BuffCnt = 0; BuffCnt < FileSize/4; BuffCnt++){
-        printProgressBar((float)BuffCnt / (FileSize / 4));
+		if (BuffCnt % 500000 == 0){
+	        printf("Samples verified: %d\r", (float)BuffCnt / (FileSize / 4));
+		}
 
-		printf("%d - %d\n\r", BuffCnt, SourceAddress[BuffCnt]);
+//		printf("%d - %d\n\r", BuffCnt, SourceAddress[BuffCnt]);
 		if(SourceAddress[BuffCnt] != DestinationAddress[BuffCnt]){
 			return XST_FAILURE;
 		}

@@ -1633,3 +1633,110 @@ con
 
 09:08:24 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\.sdk\launch_scripts\single_application_debug\systemdebugger_sd_card_app_system_standalone.tcl'
 09:34:32 INFO  : Disconnected from the channel tcfchan#7.
+07:50:48 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\temp_xsdb_launch_script.tcl
+07:50:54 INFO  : XSCT server has started successfully.
+07:50:54 INFO  : Successfully done setting XSCT server connection channel  
+07:50:54 INFO  : plnx-install-location is set to ''
+07:50:54 INFO  : Successfully done setting workspace for the tool. 
+07:50:54 INFO  : Registering command handlers for Vitis TCF services
+07:51:00 INFO  : Successfully done query RDI_DATADIR 
+07:53:28 INFO  : Checking for BSP changes to sync application flags for project 'sd_card_app'...
+07:53:39 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa is already opened
+
+07:56:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:56:18 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+07:56:18 INFO  : 'jtag frequency' command is executed.
+07:56:18 INFO  : Context for 'APU' is selected.
+07:56:18 INFO  : System reset is completed.
+07:56:21 INFO  : 'after 3000' command is executed.
+07:56:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+07:56:23 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit"
+07:56:23 INFO  : Context for 'APU' is selected.
+07:56:23 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa'.
+07:56:23 INFO  : 'configparams force-mem-access 1' command is executed.
+07:56:23 INFO  : Context for 'APU' is selected.
+07:56:23 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/psinit/ps7_init.tcl' is done.
+07:56:23 INFO  : 'ps7_init' command is executed.
+07:56:23 INFO  : 'ps7_post_config' command is executed.
+07:56:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:56:24 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+07:56:24 INFO  : 'configparams force-mem-access 0' command is executed.
+07:56:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+07:56:24 INFO  : Memory regions updated for context APU
+07:56:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:56:24 INFO  : 'con' command is executed.
+07:56:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+07:56:24 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\.sdk\launch_scripts\single_application_debug\systemdebugger_sd_card_app_system_standalone.tcl'
+07:58:49 INFO  : Checking for BSP changes to sync application flags for project 'sd_card_app'...
+07:58:52 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa is already opened
+
+07:59:06 INFO  : Disconnected from the channel tcfchan#2.
+07:59:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:59:06 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+07:59:06 INFO  : 'jtag frequency' command is executed.
+07:59:06 INFO  : Context for 'APU' is selected.
+07:59:06 INFO  : System reset is completed.
+07:59:09 INFO  : 'after 3000' command is executed.
+07:59:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+07:59:10 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit"
+07:59:10 INFO  : Context for 'APU' is selected.
+07:59:13 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa'.
+07:59:13 INFO  : 'configparams force-mem-access 1' command is executed.
+07:59:13 INFO  : Context for 'APU' is selected.
+07:59:13 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/psinit/ps7_init.tcl' is done.
+07:59:14 INFO  : 'ps7_init' command is executed.
+07:59:14 INFO  : 'ps7_post_config' command is executed.
+07:59:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:59:14 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+07:59:14 INFO  : 'configparams force-mem-access 0' command is executed.
+07:59:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card/export/sd_card/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/projects/SDcard_test/sd_card_app/Debug/sd_card_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+07:59:14 INFO  : Memory regions updated for context APU
+07:59:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:59:14 INFO  : 'con' command is executed.
+07:59:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+07:59:14 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\projects\SDcard_test\.sdk\launch_scripts\single_application_debug\systemdebugger_sd_card_app_system_standalone.tcl'
+08:05:09 INFO  : Disconnected from the channel tcfchan#4.
