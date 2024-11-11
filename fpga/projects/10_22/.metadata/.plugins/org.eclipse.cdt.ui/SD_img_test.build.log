@@ -1,0 +1,38 @@
+11:20:52 **** Incremental Build of configuration Debug for project SD_img_test ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn/export/plnn/sw/plnn/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:219:31: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+     printf("Read value = 0x%08X\n", read_value);
+                            ~~~^     ~~~~~~~~~~
+                            %08lX
+../src/helloworld.c: In function 'doSDTEST':
+../src/helloworld.c:303:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("FileSize = %d\n\r", FileSize);
+                     ~^       ~~~~~~~~
+                     %ld
+../src/helloworld.c:235:7: warning: unused variable 'work' [-Wunused-variable]
+  BYTE work[FF_MAX_SS];
+       ^~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SD_img_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn/export/plnn/sw/plnn/standalone_domain/bsplib/lib -o "SD_img_test.elf"  ./src/SDtest.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SD_img_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size SD_img_test.elf  |tee "SD_img_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91840	  37696	423387584	423517120	193e5bc0	SD_img_test.elf
+'Finished building: SD_img_test.elf.size'
+' '
+
+11:20:53 Build Finished (took 1s.47ms)
+

@@ -1,10 +1,7 @@
-22:12:54 **** Incremental Build of configuration Debug for project plnn_app ****
-make all 
-make --no-print-directory pre-build
-a9-linaro-pre-build-step
+08:19:18 **** Clean-only build of configuration Debug for project plnn_app ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  plnn_app.elf.size  plnn_app.elf
 ' '
-make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
 
-22:12:54 Build Finished (took 373ms)
+08:19:18 Build Finished (took 181ms)
 

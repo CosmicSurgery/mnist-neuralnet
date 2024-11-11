@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="plnn_app" location="C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn_app" platform="C:/git_repos/mnist_neuralnet/fpga/projects/10_22/plnn/export/plnn/plnn.xpfm" platformUID="xilinx:zybo::0.0(custom)" systemProject="plnn_app_system" sysConfig="plnn" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="82ba8e0c676a181ef0fd8fa2e1e93f9e">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1532335776">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1697872361" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>
