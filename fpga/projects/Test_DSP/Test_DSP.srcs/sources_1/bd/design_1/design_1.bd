@@ -1,0 +1,223 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x795900981D37262A",
+      "device": "xc7z010clg400-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "xbip_dsp48_macro_0": ""
+    },
+    "ports": {
+      "CLK": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_CLK_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "A": {
+        "type": "data",
+        "direction": "I",
+        "left": "24",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "B": {
+        "type": "data",
+        "direction": "I",
+        "left": "17",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "C": {
+        "type": "data",
+        "direction": "I",
+        "left": "47",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "P": {
+        "type": "data",
+        "direction": "O",
+        "left": "47",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency width format long minimum {} maximum {}} value 48} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}} DATA_WIDTH 48}",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "D": {
+        "type": "data",
+        "direction": "I",
+        "left": "24",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "xbip_dsp48_macro_0": {
+        "vlnv": "xilinx.com:ip:xbip_dsp48_macro:3.0",
+        "xci_name": "design_1_xbip_dsp48_macro_0_0",
+        "parameters": {
+          "a_width": {
+            "value": "25"
+          },
+          "areg_3": {
+            "value": "true"
+          },
+          "areg_4": {
+            "value": "true"
+          },
+          "breg_3": {
+            "value": "true"
+          },
+          "breg_4": {
+            "value": "true"
+          },
+          "c_width": {
+            "value": "48"
+          },
+          "creg_3": {
+            "value": "true"
+          },
+          "creg_4": {
+            "value": "true"
+          },
+          "creg_5": {
+            "value": "true"
+          },
+          "d_width": {
+            "value": "25"
+          },
+          "dreg_3": {
+            "value": "true"
+          },
+          "instruction1": {
+            "value": "(A+D)*B-C"
+          },
+          "instruction2": {
+            "value": "#"
+          },
+          "instruction3": {
+            "value": "#"
+          },
+          "instruction4": {
+            "value": "#"
+          },
+          "instruction5": {
+            "value": "#"
+          },
+          "instruction6": {
+            "value": "#"
+          },
+          "instruction7": {
+            "value": "#"
+          },
+          "instruction8": {
+            "value": "#"
+          },
+          "mreg_5": {
+            "value": "true"
+          },
+          "p_binarywidth": {
+            "value": "0"
+          },
+          "p_full_width": {
+            "value": "48"
+          },
+          "p_width": {
+            "value": "48"
+          },
+          "pipeline_options": {
+            "value": "Automatic"
+          },
+          "preg_6": {
+            "value": "true"
+          },
+          "show_filtered": {
+            "value": "false"
+          }
+        }
+      }
+    },
+    "nets": {
+      "CLK_0_1": {
+        "ports": [
+          "CLK",
+          "xbip_dsp48_macro_0/CLK"
+        ]
+      },
+      "A_0_1": {
+        "ports": [
+          "A",
+          "xbip_dsp48_macro_0/A"
+        ]
+      },
+      "B_0_1": {
+        "ports": [
+          "B",
+          "xbip_dsp48_macro_0/B"
+        ]
+      },
+      "C_0_1": {
+        "ports": [
+          "C",
+          "xbip_dsp48_macro_0/C"
+        ]
+      },
+      "xbip_dsp48_macro_0_P": {
+        "ports": [
+          "xbip_dsp48_macro_0/P",
+          "P"
+        ]
+      },
+      "D_0_1": {
+        "ports": [
+          "D",
+          "xbip_dsp48_macro_0/D"
+        ]
+      }
+    }
+  }
+}

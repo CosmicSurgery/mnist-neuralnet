@@ -1,0 +1,12 @@
+
+{ 
+    crc :  8636961821844258110  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto bee097c4517f464f91a873aa687f4f8a --incr --debug typical --relax --mt 2 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L xbip_dsp48_macro_v3_0_17 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot TEST_DSP_tb_behav xil_defaultlib.TEST_DSP_tb xil_defaultlib.glbl" , 
+    buildDate : "Nov  6 2019" , 
+    buildTime : "21:57:16" , 
+    linkCmd : "C:\\Xilinx\\Vivado\\2019.2\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/TEST_DSP_tb_behav/xsimk.exe\"   \"xsim.dir/TEST_DSP_tb_behav/obj/xsim_0.win64.obj\" \"xsim.dir/TEST_DSP_tb_behav/obj/xsim_1.win64.obj\" -L\"C:\\Xilinx\\Vivado\\2019.2\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
