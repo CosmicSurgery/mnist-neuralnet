@@ -60,17 +60,11 @@ module TEST_DSP_tb();
     reg [3:0] data_in;
     
 //    integer numTests = 2;
-    wire [3:0] w0;
-    wire [3:0] w1;
-    wire [3:0] a0;
-    wire [3:0] a1;
-    wire [3:0] a2;
-    
-    assign a0 = 4'd2; // seven
-    assign a1 = 4'd3; // twelve
-    assign a2 = 4'd4; // twelve
-    assign w0 = 4'd3; // negative one 
-    assign w1 = 4'd4; // negative eight
+    reg [3:0] w0 = 4'd2;
+    reg [3:0] w1 = 4'd3;
+    reg [3:0] a0 = 4'd4;
+    reg [3:0] a1 = 4'd3;
+    reg [3:0] a2 = 4'd4;
     
     
 //    assign a0[1] = 4'b0000;
@@ -128,7 +122,59 @@ module TEST_DSP_tb();
         
 //        test_file = $fopen("a1.mif", "r");
 //        status = $fscanf(test_file, "%d", data_in);
+        a0 = 4'd2; // seven
+        a1 = 4'd3; // twelve
+        a2 = 4'd4; // twelve
+        w0 = 4'd3; // negative one 
+        w1 = 4'd4; // negative eight
+        
+        repeat (10) @ (posedge CLK);
 
+        if (P != 48'b000000000000010000001100001000001100001000000110) begin
+            error_count = error_count + 1;
+        end
+        
+        a0 = 4'd12; // seven
+        a1 = 4'd5; // twelve
+        a2 = 4'd7; // twelve
+        w0 = 4'd3; // negative one 
+        w1 = -(4'd1); // negative eight
+        
+        repeat (10) @ (posedge CLK);
+
+        if (P != 48'b111111111111110111110111110100010100001100100100) begin
+            error_count = error_count + 1;
+        end
+        
+        a0 = 4'd15; // seven
+        a1 = 4'd14; // twelve
+        a2 = 4'd6; // twelve
+        w0 = 4'd2; // negative one 
+        w1 = -(4'd7); // negative eight
+        
+        repeat (10) @ (posedge CLK);
+
+        if (P != 48'b111111111111010010011010010100001100011100011110) begin
+            error_count = error_count + 1;
+        end
+        
+        a0 = 4'd11; // seven
+        a1 = 4'd0; // twelve
+        a2 = 4'd1; // twelve
+        w0 = -(4'd2); // negative one 
+        w1 = (4'd4); // negative eight
+        
+        repeat (10) @ (posedge CLK);
+
+        if (P != 48'b000000000000000100000000101011111011111111101010) begin
+            error_count = error_count + 1;
+        end
+        
+        if (error_count == 0) begin
+            $display("SUCCESS!");
+        end else begin
+            $display("FAIL");
+        end
         
     end
     

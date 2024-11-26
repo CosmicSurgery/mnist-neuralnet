@@ -1,4 +1,0 @@
-Running: xsim.dir/TEST_DSP_tb_behav/xsimk.exe -simmode gui -wdb TEST_DSP_tb_behav.wdb -simrunnum 0 -socket 62952
-Design successfully loaded
-Design Loading Memory Usage: 7240 KB (Peak: 7240 KB)
-Design Loading CPU Usage: 0 ms
