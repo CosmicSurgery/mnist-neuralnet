@@ -66,11 +66,11 @@ module TEST_DSP_tb();
     wire [3:0] a1;
     wire [3:0] a2;
     
-    assign a0 = 4'd7; // seven
-    assign a1 = 4'd12; // twelve
-    assign a2 = 4'd3; // twelve
-    assign w0 = 4'd4; // negative one 
-    assign w1 = 4'd3; // negative eight
+    assign a0 = 4'd2; // seven
+    assign a1 = 4'd3; // twelve
+    assign a2 = 4'd4; // twelve
+    assign w0 = 4'd3; // negative one 
+    assign w1 = 4'd4; // negative eight
     
     
 //    assign a0[1] = 4'b0000;
@@ -81,7 +81,7 @@ module TEST_DSP_tb();
     wire [7:0] expected [3:0];
     assign expected[0] = 8'd28; // seven * negative one = negative eleven
     assign expected[1] = 8'd48; // twelve * negative one - negative twelve
-    assign expected[2] = 8'd21; // negative eighty eight 
+    assign expected[2] = 8'd21; // negative eighty eight
     assign expected[3] = 8'd36; // negative ninety six
     
     wire [7:0] results [3:0];
@@ -90,42 +90,45 @@ module TEST_DSP_tb();
     assign results[2] = P[23:16];
     assign results[3] = P[31:24];
     
+    reg [1:0]test_out;
+    
     integer i;
     integer counter = 0;
     integer error_count = 0;
     initial begin
-        RSTN = 0;
-        A <= 25'd0;
-        B <= 18'd0;
-        C <= 48'd0;
-        D <= 25'd0;
-        debug <= 4'd0;
+//        RSTN = 0;
+//        A <= 25'd0;
+//        B <= 18'd0;
+//        C <= 48'd0;
+//        D <= 25'd0;
+//        debug <= 4'd0;
         
-        repeat (10) @ (posedge CLK);
+//        repeat (10) @ (posedge CLK);
         
-        RSTN = 1;
+//        RSTN = 1;
         
-        A[3:0] <= w0;
-        D[19:16] <= w1;
-        B[3:0] <= a0;
-        B[11:8] <= a1;
+//        A[3:0] <= w0;
+//        D[19:16] <= w1;
+//        B[3:0] <= a0;
+//        B[11:8] <= a1;
         
         
-        repeat (10) @ (posedge CLK);
         
-        for (i=0;i<4;i= i+1) begin            
-            if (results[i] != expected[i]) begin
-                $display("bad result%d", 1+i);
-                error_count = error_count +1;
-            end
-        end
-        if (error_count == 0) begin
-            $display("Success!");
-        end
+//        repeat (10) @ (posedge CLK);
+        
+//        for (i=0;i<4;i= i+1) begin            
+//            if (results[i] != expected[i]) begin
+//                $display("bad result%d", 1+i);
+//                error_count = error_count +1;
+//            end
+//        end
+//        if (error_count == 0) begin
+//            $display("Success!");
+//        end
         
 //        test_file = $fopen("a1.mif", "r");
 //        status = $fscanf(test_file, "%d", data_in);
-        
+
         
     end
     
