@@ -8,5 +8,5 @@
 **/debug_header_.exe
 **/test_h.h
 **/scripts/img
-**.bin
-**.json
+*.bin
+*.json
