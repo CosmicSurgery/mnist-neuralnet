@@ -24,18 +24,14 @@ Compiling package unisim.vpkg
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=25...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=18...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=48...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(bcascreg=2,breg=2,use_d...]
-Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e1_wrapper_v3_0 [\xbip_dsp48e1_wrapper_v3_0(areg=...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e1_wrapper_v3_0 [\xbip_dsp48e1_wrapper_v3_0(acasc...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=24...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(1,1)(1,1)\]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture synth of entity xbip_dsp48_macro_v3_0_17.xbip_dsp48_macro_synth [\xbip_dsp48_macro_synth(c_xdevic...]
 Compiling architecture synth of entity xbip_dsp48_macro_v3_0_17.xbip_dsp48_macro_v3_0_17_viv [\xbip_dsp48_macro_v3_0_17_viv(c_...]
 Compiling architecture xilinx of entity xbip_dsp48_macro_v3_0_17.xbip_dsp48_macro_v3_0_17 [\xbip_dsp48_macro_v3_0_17(c_xdev...]
-Compiling architecture design_1_xbip_dsp48_macro_0_0_arch of entity xil_defaultlib.design_1_xbip_dsp48_macro_0_0 [design_1_xbip_dsp48_macro_0_0_de...]
-Compiling module xil_defaultlib.design_1
+Compiling architecture xbip_dsp48_macro_0_arch of entity xil_defaultlib.xbip_dsp48_macro_0 [xbip_dsp48_macro_0_default]
 Compiling module xil_defaultlib.DSP_overpack_wrapper
 Compiling module xil_defaultlib.TEST_DSP_tb
 Compiling module xil_defaultlib.glbl

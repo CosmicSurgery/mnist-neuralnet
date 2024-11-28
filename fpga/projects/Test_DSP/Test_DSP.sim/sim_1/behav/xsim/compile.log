@@ -1,16 +1,14 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/DSP_overpack_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/DSP_overpack_wrapper/rtl/DSP_overpack_wrapper.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module DSP_overpack_wrapper
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module TEST_DSP_tb
-INFO: [VRFC 10-2458] undeclared symbol a0, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:43]
-INFO: [VRFC 10-2458] undeclared symbol a1, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:44]
-INFO: [VRFC 10-2458] undeclared symbol a2, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:45]
-INFO: [VRFC 10-2458] undeclared symbol w0, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:47]
-INFO: [VRFC 10-2458] undeclared symbol w1, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:48]
-WARNING: [VRFC 10-2938] 'w0' is already implicitly declared on line 47 [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:63]
-WARNING: [VRFC 10-2938] 'w1' is already implicitly declared on line 48 [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:64]
-WARNING: [VRFC 10-2938] 'a0' is already implicitly declared on line 43 [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:65]
-WARNING: [VRFC 10-2938] 'a1' is already implicitly declared on line 44 [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:66]
-WARNING: [VRFC 10-2938] 'a2' is already implicitly declared on line 45 [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:67]
+WARNING: [VRFC 10-3248] data object 'w0' is already declared [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:73]
+WARNING: [VRFC 10-3703] second declaration of 'w0' ignored [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:73]
+WARNING: [VRFC 10-3248] data object 'w1' is already declared [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:74]
+WARNING: [VRFC 10-3703] second declaration of 'w1' ignored [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:74]
+WARNING: [VRFC 10-3248] data object 'a0' is already declared [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:75]
+WARNING: [VRFC 10-3703] second declaration of 'a0' ignored [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:75]
+WARNING: [VRFC 10-3248] data object 'a1' is already declared [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:76]
+WARNING: [VRFC 10-3703] second declaration of 'a1' ignored [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:76]
+WARNING: [VRFC 10-3248] data object 'a2' is already declared [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:77]
+WARNING: [VRFC 10-3703] second declaration of 'a2' ignored [C:/git_repos/mnist_neuralnet/fpga/projects/Test_DSP/Test_DSP.srcs/sim_1/new/TEST_DSP_tb.v:77]

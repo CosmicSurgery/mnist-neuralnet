@@ -161,7 +161,6 @@ proc create_root_design { parentCell } {
   set A [ create_bd_port -dir I -from 24 -to 0 -type data A ]
   set B [ create_bd_port -dir I -from 17 -to 0 -type data B ]
   set C [ create_bd_port -dir I -from 47 -to 0 -type data C ]
-  set CLK [ create_bd_port -dir I -type clk CLK ]
   set D [ create_bd_port -dir I -from 24 -to 0 -type data D ]
   set P [ create_bd_port -dir O -from 47 -to 0 -type data P ]
 
@@ -169,16 +168,16 @@ proc create_root_design { parentCell } {
   set xbip_dsp48_macro_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xbip_dsp48_macro:3.0 xbip_dsp48_macro_0 ]
   set_property -dict [ list \
    CONFIG.a_width {25} \
-   CONFIG.areg_3 {true} \
-   CONFIG.areg_4 {true} \
-   CONFIG.breg_3 {true} \
-   CONFIG.breg_4 {true} \
+   CONFIG.areg_3 {false} \
+   CONFIG.areg_4 {false} \
+   CONFIG.breg_3 {false} \
+   CONFIG.breg_4 {false} \
    CONFIG.c_width {48} \
-   CONFIG.creg_3 {true} \
-   CONFIG.creg_4 {true} \
-   CONFIG.creg_5 {true} \
+   CONFIG.creg_3 {false} \
+   CONFIG.creg_4 {false} \
+   CONFIG.creg_5 {false} \
    CONFIG.d_width {25} \
-   CONFIG.dreg_3 {true} \
+   CONFIG.dreg_3 {false} \
    CONFIG.instruction1 {(A+D)*B-C} \
    CONFIG.instruction2 {#} \
    CONFIG.instruction3 {#} \
@@ -187,19 +186,19 @@ proc create_root_design { parentCell } {
    CONFIG.instruction6 {#} \
    CONFIG.instruction7 {#} \
    CONFIG.instruction8 {#} \
-   CONFIG.mreg_5 {true} \
+   CONFIG.mreg_5 {false} \
    CONFIG.p_binarywidth {0} \
    CONFIG.p_full_width {48} \
    CONFIG.p_width {48} \
-   CONFIG.pipeline_options {Automatic} \
-   CONFIG.preg_6 {true} \
+   CONFIG.pipeline_options {By_Tier} \
+   CONFIG.preg_6 {false} \
    CONFIG.show_filtered {false} \
+   CONFIG.tier_3 {false} \
  ] $xbip_dsp48_macro_0
 
   # Create port connections
   connect_bd_net -net A_0_1 [get_bd_ports A] [get_bd_pins xbip_dsp48_macro_0/A]
   connect_bd_net -net B_0_1 [get_bd_ports B] [get_bd_pins xbip_dsp48_macro_0/B]
-  connect_bd_net -net CLK_0_1 [get_bd_ports CLK] [get_bd_pins xbip_dsp48_macro_0/CLK]
   connect_bd_net -net C_0_1 [get_bd_ports C] [get_bd_pins xbip_dsp48_macro_0/C]
   connect_bd_net -net D_0_1 [get_bd_ports D] [get_bd_pins xbip_dsp48_macro_0/D]
   connect_bd_net -net xbip_dsp48_macro_0_P [get_bd_ports P] [get_bd_pins xbip_dsp48_macro_0/P]

@@ -1,14 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov 22 08:21:33 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov 26 11:20:30 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:2.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_CLK">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xbip_dsp48_macro_0" PORT="CLK"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" LEFT="24" NAME="A" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_A">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xbip_dsp48_macro_0" PORT="A"/>
@@ -91,9 +86,9 @@
         <PARAMETER NAME="C_HAS_CARRYOUT" VALUE="0"/>
         <PARAMETER NAME="C_HAS_PCOUT" VALUE="0"/>
         <PARAMETER NAME="C_CONSTANT_1" VALUE="1"/>
-        <PARAMETER NAME="C_LATENCY" VALUE="-1"/>
+        <PARAMETER NAME="C_LATENCY" VALUE="64"/>
         <PARAMETER NAME="C_OPMODES" VALUE="000100100011010100001000"/>
-        <PARAMETER NAME="C_REG_CONFIG" VALUE="00000000000011110011100011000100"/>
+        <PARAMETER NAME="C_REG_CONFIG" VALUE="00000000000000000000000000000000"/>
         <PARAMETER NAME="C_TEST_CORE" VALUE="0"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_xbip_dsp48_macro_0_0"/>
         <PARAMETER NAME="GUI_Behaviour" VALUE="Coregen"/>
@@ -107,7 +102,7 @@
         <PARAMETER NAME="instruction7" VALUE="#"/>
         <PARAMETER NAME="instruction8" VALUE="#"/>
         <PARAMETER NAME="instruction_list" VALUE="#"/>
-        <PARAMETER NAME="pipeline_options" VALUE="Automatic"/>
+        <PARAMETER NAME="pipeline_options" VALUE="By_Tier"/>
         <PARAMETER NAME="tier_1" VALUE="false"/>
         <PARAMETER NAME="tier_2" VALUE="false"/>
         <PARAMETER NAME="tier_3" VALUE="false"/>
@@ -116,20 +111,20 @@
         <PARAMETER NAME="tier_6" VALUE="false"/>
         <PARAMETER NAME="dreg_1" VALUE="false"/>
         <PARAMETER NAME="dreg_2" VALUE="false"/>
-        <PARAMETER NAME="dreg_3" VALUE="true"/>
+        <PARAMETER NAME="dreg_3" VALUE="false"/>
         <PARAMETER NAME="areg_1" VALUE="false"/>
         <PARAMETER NAME="areg_2" VALUE="false"/>
-        <PARAMETER NAME="areg_3" VALUE="true"/>
-        <PARAMETER NAME="areg_4" VALUE="true"/>
+        <PARAMETER NAME="areg_3" VALUE="false"/>
+        <PARAMETER NAME="areg_4" VALUE="false"/>
         <PARAMETER NAME="breg_1" VALUE="false"/>
         <PARAMETER NAME="breg_2" VALUE="false"/>
-        <PARAMETER NAME="breg_3" VALUE="true"/>
-        <PARAMETER NAME="breg_4" VALUE="true"/>
+        <PARAMETER NAME="breg_3" VALUE="false"/>
+        <PARAMETER NAME="breg_4" VALUE="false"/>
         <PARAMETER NAME="creg_1" VALUE="false"/>
         <PARAMETER NAME="creg_2" VALUE="false"/>
-        <PARAMETER NAME="creg_3" VALUE="true"/>
-        <PARAMETER NAME="creg_4" VALUE="true"/>
-        <PARAMETER NAME="creg_5" VALUE="true"/>
+        <PARAMETER NAME="creg_3" VALUE="false"/>
+        <PARAMETER NAME="creg_4" VALUE="false"/>
+        <PARAMETER NAME="creg_5" VALUE="false"/>
         <PARAMETER NAME="concatreg_3" VALUE="false"/>
         <PARAMETER NAME="concatreg_4" VALUE="false"/>
         <PARAMETER NAME="concatreg_5" VALUE="false"/>
@@ -143,8 +138,8 @@
         <PARAMETER NAME="cinreg_3" VALUE="false"/>
         <PARAMETER NAME="cinreg_4" VALUE="false"/>
         <PARAMETER NAME="cinreg_5" VALUE="false"/>
-        <PARAMETER NAME="mreg_5" VALUE="true"/>
-        <PARAMETER NAME="preg_6" VALUE="true"/>
+        <PARAMETER NAME="mreg_5" VALUE="false"/>
+        <PARAMETER NAME="preg_6" VALUE="false"/>
         <PARAMETER NAME="d_width" VALUE="25"/>
         <PARAMETER NAME="d_binarywidth" VALUE="0"/>
         <PARAMETER NAME="a_width" VALUE="25"/>
@@ -187,11 +182,6 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_CLK">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="24" NAME="A" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="A"/>

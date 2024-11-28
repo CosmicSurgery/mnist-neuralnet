@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Fri Nov 22 08:21:33 2024
+//Date        : Tue Nov 26 11:20:29 2024
 //Host        : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -14,26 +14,22 @@ module design_1
    (A,
     B,
     C,
-    CLK,
     D,
     P);
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.A DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.A, LAYERED_METADATA undef" *) input [24:0]A;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.B DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.B, LAYERED_METADATA undef" *) input [17:0]B;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.C DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.C, LAYERED_METADATA undef" *) input [47:0]C;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN design_1_CLK_0, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input CLK;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.D DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.D, LAYERED_METADATA undef" *) input [24:0]D;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.P DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.P, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency width format long minimum {} maximum {}} value 48} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}} DATA_WIDTH 48}" *) output [47:0]P;
 
   wire [24:0]A_0_1;
   wire [17:0]B_0_1;
-  wire CLK_0_1;
   wire [47:0]C_0_1;
   wire [24:0]D_0_1;
   wire [47:0]xbip_dsp48_macro_0_P;
 
   assign A_0_1 = A[24:0];
   assign B_0_1 = B[17:0];
-  assign CLK_0_1 = CLK;
   assign C_0_1 = C[47:0];
   assign D_0_1 = D[24:0];
   assign P[47:0] = xbip_dsp48_macro_0_P;
@@ -41,7 +37,6 @@ module design_1
        (.A(A_0_1),
         .B(B_0_1),
         .C(C_0_1),
-        .CLK(CLK_0_1),
         .D(D_0_1),
         .P(xbip_dsp48_macro_0_P));
 endmodule

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x795900981D37262A",
+      "boundary_crc": "0xF3498BF6F3498BF6",
       "device": "xc7z010clg400-1",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
@@ -12,28 +12,6 @@
       "xbip_dsp48_macro_0": ""
     },
     "ports": {
-      "CLK": {
-        "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_CLK_0",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
-          }
-        }
-      },
       "A": {
         "type": "data",
         "direction": "I",
@@ -104,34 +82,34 @@
             "value": "25"
           },
           "areg_3": {
-            "value": "true"
+            "value": "false"
           },
           "areg_4": {
-            "value": "true"
+            "value": "false"
           },
           "breg_3": {
-            "value": "true"
+            "value": "false"
           },
           "breg_4": {
-            "value": "true"
+            "value": "false"
           },
           "c_width": {
             "value": "48"
           },
           "creg_3": {
-            "value": "true"
+            "value": "false"
           },
           "creg_4": {
-            "value": "true"
+            "value": "false"
           },
           "creg_5": {
-            "value": "true"
+            "value": "false"
           },
           "d_width": {
             "value": "25"
           },
           "dreg_3": {
-            "value": "true"
+            "value": "false"
           },
           "instruction1": {
             "value": "(A+D)*B-C"
@@ -158,7 +136,7 @@
             "value": "#"
           },
           "mreg_5": {
-            "value": "true"
+            "value": "false"
           },
           "p_binarywidth": {
             "value": "0"
@@ -170,24 +148,21 @@
             "value": "48"
           },
           "pipeline_options": {
-            "value": "Automatic"
+            "value": "By_Tier"
           },
           "preg_6": {
-            "value": "true"
+            "value": "false"
           },
           "show_filtered": {
+            "value": "false"
+          },
+          "tier_3": {
             "value": "false"
           }
         }
       }
     },
     "nets": {
-      "CLK_0_1": {
-        "ports": [
-          "CLK",
-          "xbip_dsp48_macro_0/CLK"
-        ]
-      },
       "A_0_1": {
         "ports": [
           "A",

@@ -1,25 +1,23 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-602,-421",
+   "Default View_TopLeft":"-493,-148",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port CLK -pg 1 -lvl 0 -x -20 -y -150 -defaultsOSRD
-preplace portBus A -pg 1 -lvl 0 -x -20 -y -130 -defaultsOSRD
-preplace portBus B -pg 1 -lvl 0 -x -20 -y -110 -defaultsOSRD
-preplace portBus C -pg 1 -lvl 0 -x -20 -y -90 -defaultsOSRD
-preplace portBus P -pg 1 -lvl 2 -x 220 -y -110 -defaultsOSRD
-preplace portBus D -pg 1 -lvl 0 -x -20 -y -70 -defaultsOSRD
-preplace inst xbip_dsp48_macro_0 -pg 1 -lvl 1 -x 100 -y -110 -defaultsOSRD
-preplace netloc CLK_0_1 1 0 1 N -150
-preplace netloc A_0_1 1 0 1 N -130
-preplace netloc B_0_1 1 0 1 N -110
-preplace netloc C_0_1 1 0 1 N -90
-preplace netloc xbip_dsp48_macro_0_P 1 1 1 N -110
-preplace netloc D_0_1 1 0 1 N -70
-levelinfo -pg 1 -20 100 220
-pagesize -pg 1 -db -bbox -sgen -120 -210 320 180
+preplace portBus A -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace portBus B -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus C -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace portBus P -pg 1 -lvl 2 -x 240 -y 100 -defaultsOSRD
+preplace portBus D -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace inst xbip_dsp48_macro_0 -pg 1 -lvl 1 -x 120 -y 100 -defaultsOSRD
+preplace netloc A_0_1 1 0 1 20J 70n
+preplace netloc B_0_1 1 0 1 20J 90n
+preplace netloc C_0_1 1 0 1 20J 110n
+preplace netloc xbip_dsp48_macro_0_P 1 1 1 N 100
+preplace netloc D_0_1 1 0 1 20J 130n
+levelinfo -pg 1 0 120 240
+pagesize -pg 1 -db -bbox -sgen -100 0 340 200
 "
 }
-
+0
