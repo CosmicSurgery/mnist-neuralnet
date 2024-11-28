@@ -4,19 +4,27 @@ module DSP_overpack_wrapper
    (a0,
     a1,
     a2,
-    CLK,
     w0,
     w1,
-    P,
+    p1,
+    p2,
+    p3,
+    p4,
+    p5,
+    p6,
     RSTN);
     input [3:0]a0;
     input [3:0]a1;
     input [3:0]a2;
     input [3:0]w0;
     input [3:0]w1;
-    input CLK;
     input RSTN;
-    output P;
+    output [7:0] p1;
+    output [7:0] p2;
+    output [7:0] p3;
+    output [7:0] p4;
+    output [7:0] p5;
+    output [7:0] p6;
     
     wire [3:0]a0;
     wire [3:0]a1;
@@ -28,14 +36,13 @@ module DSP_overpack_wrapper
     wire [47:0]C;
     wire [24:0]D;
     wire [47:0]P;
-    wire CLK;
     wire RSTN;
-    reg [1:0] p1;
-    reg [1:0] p2;
-    reg [1:0] p3;
-    reg [1:0] p4;
-    reg [1:0] p5;
-    reg [7:0] p6;
+    wire [7:0] p1;
+    wire [7:0] p2;
+    wire [7:0] p3;
+    wire [7:0] p4;
+    wire [7:0] p5;
+    wire [7:0] p6;
     
     
     assign B[3:0] = a0;
@@ -62,30 +69,20 @@ module DSP_overpack_wrapper
     assign C[31:30] = w1[1:0] * a2[1:0];
     assign C[47:32] = 0;
     
-    always @ (posedge CLK) begin
-        p1 <= w0[1:0] * a1[1:0];
-        p2 <= w0[1:0] * a2[1:0];
-        p3 <= w1[1:0] * a0[1:0];
-        p4 <= w1[1:0] * a1[1:0];
-        p5 <= w1[1:0] * a2[1:0];
-        p6 <= w0[1:0] * a1[1:0];
-    end
+    assign p1 = P[7:0];
+    assign p2 = P[13:6];
+    assign p3 = P[19:12];
+    assign p4 = P[25:18];
+    assign p5 = P[31:24];
+    assign p6 = P[37:30];
     
     
-    
-//    C[8]  = w[0];
-//    C[14] = w[0];
-//    C[20] = w[1];
-//    C[26] = w[1];
-//    C[32] = w[1];
-    
+    xbip_dsp48_macro_0 DSP
+    (.A(A),
+    .B(B),
+    .C(C),
+    .D(D),
+    .P(P));
         
-    design_1 design_1_i
-       (.A(A),
-        .B(B),
-        .C(C),
-        .CLK(CLK),
-        .D(D),
-        .P(P));
 
 endmodule

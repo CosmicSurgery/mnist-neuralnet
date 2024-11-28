@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../source/DSP_overpack_wrapper/rtl/DSP_overpack_wrapper.v" \
+"../../../../../../source/cluster/rtl/cluster.v" \
+"../../../../../../source/cluster/tb/cluster_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
