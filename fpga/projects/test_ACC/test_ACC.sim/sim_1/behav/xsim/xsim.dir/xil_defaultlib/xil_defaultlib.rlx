@@ -1,0 +1,7 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/git_repos/mnist_neuralnet/fpga/projects/test_ACC/test_ACC.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/projects/test_ACC/test_ACC.srcs/sources_1/ip/c_accum_0/sim/c_accum_0.vhd,1732731604,vhdl,,,,c_accum_0,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/projects/test_ACC/test_ACC.srcs/sources_1/new/test_ACC_tb.v,1732745402,verilog,,,,test_ACC_tb,,,,,,,,
