@@ -188,7 +188,7 @@ module cluster#(input_size = 784)
                 a_tvalid <= 1;
             end else if (~a_tvalid & a_addr!=0) begin // A_tvalid is low, but condition not met, then do the things that are necessary (probably just set the address to 0)
                 a_addr <= 0;
-            end else if (a_addr == output_size -1) begin
+            end else if (a_addr == output_size -1) begin                        // termination condition
                 a_tvalid <= 0;
             end else if (a_tvalid & a_tready) begin // if a_tvalid is high and a_tready is high, then iterate through the data otherwise do nothing
                 if (z[a_addr][17] == 'b1) begin                                 // If the number is negative
@@ -198,7 +198,14 @@ module cluster#(input_size = 784)
                 end else begin
                     a_tdata <= 4'b1111;                                         // If overflow, set to max positive value
                 end
-                a_addr <= a_addr+1;
+                // Special incrementation method 0 -> 3 -> 6 -> ... -> 45 -> 1 -> 4 -> 7 -> ... -> 46 -> 2 -> 5 -> 8 -> ... -> 47
+                if (a_addr == output_size -3) begin
+                    a_addr <= 1;
+                end else if (a_addr == output_size - 2) begin
+                    a_addr <= 2;
+                end else begin
+                    a_addr <= a_addr+3;
+                end
             end 
         end else if (a_addr!=0) begin
             a_addr <= 0;
