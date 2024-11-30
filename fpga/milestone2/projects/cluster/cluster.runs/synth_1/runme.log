@@ -1,0 +1,663 @@
+
+*** Running vivado
+    with args -log cluster.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cluster.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source cluster.tcl -notrace
+Command: synth_design -top cluster -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 28008 
+WARNING: [Synth 8-2507] parameter declaration becomes local in cluster with formal parameter declaration list [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:39]
+WARNING: [Synth 8-2507] parameter declaration becomes local in cluster with formal parameter declaration list [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:66]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 827.918 ; gain = 237.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cluster' [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:3]
+	Parameter input_size bound to: 784 - type: integer 
+	Parameter input_width bound to: 10 - type: integer 
+	Parameter bitwidth bound to: 3'b100 
+	Parameter numinputs bound to: 6'b011000 
+	Parameter pow_w_s bound to: 4'b0000 
+	Parameter pow_b_s bound to: 4'b0000 
+	Parameter pow_a_s bound to: 4'b0000 
+	Parameter a_addr_width bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'DSP_overpack_wrapper' [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/DSP_overpack_wrapper/rtl/DSP_overpack_wrapper.v:3]
+INFO: [Synth 8-6157] synthesizing module 'xbip_dsp48_macro_0' [C:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.runs/synth_1/.Xil/Vivado-23116-DESKTOP-L93G0Q0/realtime/xbip_dsp48_macro_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xbip_dsp48_macro_0' (1#1) [C:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.runs/synth_1/.Xil/Vivado-23116-DESKTOP-L93G0Q0/realtime/xbip_dsp48_macro_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DSP_overpack_wrapper' (2#1) [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/DSP_overpack_wrapper/rtl/DSP_overpack_wrapper.v:3]
+WARNING: [Synth 8-7023] instance 'udsp' of module 'DSP_overpack_wrapper' has 12 connections declared, but only 11 given [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-7023] instance 'udsp' of module 'DSP_overpack_wrapper' has 12 connections declared, but only 11 given [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-7023] instance 'udsp' of module 'DSP_overpack_wrapper' has 12 connections declared, but only 11 given [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-7023] instance 'udsp' of module 'DSP_overpack_wrapper' has 12 connections declared, but only 11 given [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-324] index 4 out of range [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-324] index 4 out of range [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-324] index 4 out of range [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-7023] instance 'udsp' of module 'DSP_overpack_wrapper' has 12 connections declared, but only 11 given [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-324] index 5 out of range [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-324] index 5 out of range [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-324] index 5 out of range [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-7023] instance 'udsp' of module 'DSP_overpack_wrapper' has 12 connections declared, but only 11 given [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-324] index 6 out of range [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-324] index 6 out of range [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-324] index 6 out of range [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-7023] instance 'udsp' of module 'DSP_overpack_wrapper' has 12 connections declared, but only 11 given [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-324] index 7 out of range [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-324] index 7 out of range [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-324] index 7 out of range [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+WARNING: [Synth 8-7023] instance 'udsp' of module 'DSP_overpack_wrapper' has 12 connections declared, but only 11 given [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:92]
+INFO: [Synth 8-6157] synthesizing module 'c_accum_0' [C:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.runs/synth_1/.Xil/Vivado-23116-DESKTOP-L93G0Q0/realtime/c_accum_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_accum_0' (3#1) [C:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.runs/synth_1/.Xil/Vivado-23116-DESKTOP-L93G0Q0/realtime/c_accum_0_stub.v:6]
+WARNING: [Synth 8-3848] Net i in module/entity cluster does not have driver. [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:71]
+WARNING: [Synth 8-3848] Net b_tready in module/entity cluster does not have driver. [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'cluster' (4#1) [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:3]
+WARNING: [Synth 8-3331] design DSP_overpack_wrapper has unconnected port RSTN
+WARNING: [Synth 8-3331] design cluster has unconnected port b_tready
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[63]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[62]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[61]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[60]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[55]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[54]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[53]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[52]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[47]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[46]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[45]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[44]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[39]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[38]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[37]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[36]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[31]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[30]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[29]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[28]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[23]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[22]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[21]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[20]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[15]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[14]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[13]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[12]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[7]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[6]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[5]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[4]
+WARNING: [Synth 8-3331] design cluster has unconnected port b_tvalid
+WARNING: [Synth 8-3331] design cluster has unconnected port configure[2]
+WARNING: [Synth 8-3331] design cluster has unconnected port configure[1]
+WARNING: [Synth 8-3331] design cluster has unconnected port configure[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 885.512 ; gain = 295.426
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 885.512 ; gain = 295.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 885.512 ; gain = 295.426
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 885.512 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[0].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[0].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[1].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[1].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[2].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[2].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[3].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[3].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[4].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[4].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[5].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[5].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[6].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[6].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[7].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[7].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[8].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[8].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[9].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[9].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[10].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[10].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[11].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[11].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[12].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[12].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[13].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[13].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[14].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[14].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[15].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[15].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[16].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[16].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[17].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[17].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[18].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[18].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[19].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[19].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[20].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[20].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[21].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[21].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[22].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[22].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[23].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[23].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[24].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[24].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[25].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[25].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[26].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[26].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[27].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[27].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[28].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[28].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[29].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[29].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[30].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[30].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[31].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[31].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[32].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[32].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[33].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[33].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[34].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[34].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[35].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[35].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[36].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[36].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[37].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[37].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[38].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[38].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[39].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[39].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[40].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[40].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[41].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[41].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[42].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[42].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[43].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[43].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[44].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[44].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[45].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[45].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[46].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[46].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[47].uacc'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/c_accum_0/c_accum_0/c_accum_0_in_context.xdc] for cell 'genblk4[47].uacc'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[0].udsp/DSP'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[0].udsp/DSP'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[1].udsp/DSP'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[1].udsp/DSP'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[2].udsp/DSP'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[2].udsp/DSP'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[3].udsp/DSP'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[3].udsp/DSP'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[4].udsp/DSP'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[4].udsp/DSP'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[5].udsp/DSP'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[5].udsp/DSP'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[6].udsp/DSP'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[6].udsp/DSP'
+Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[7].udsp/DSP'
+Finished Parsing XDC File [c:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0/xbip_dsp48_macro_0_in_context.xdc] for cell 'genblk3[7].udsp/DSP'
+Parsing XDC File [C:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1000.691 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1000.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1000.691 ; gain = 410.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1000.691 ; gain = 410.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for \genblk4[0].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[10].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[11].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[12].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[13].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[14].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[15].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[16].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[17].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[18].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[19].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[1].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[20].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[21].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[22].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[23].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[24].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[25].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[26].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[27].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[28].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[29].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[2].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[30].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[31].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[32].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[33].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[34].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[35].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[36].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[37].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[38].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[39].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[3].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[40].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[41].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[42].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[43].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[44].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[45].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[46].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[47].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[4].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[5].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[6].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[7].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[8].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk4[9].uacc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk3[0].udsp /DSP. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk3[1].udsp /DSP. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk3[2].udsp /DSP. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk3[3].udsp /DSP. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk3[4].udsp /DSP. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk3[5].udsp /DSP. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk3[6].udsp /DSP. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \genblk3[7].udsp /DSP. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1000.691 ; gain = 410.605
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'x_tready_reg' into 'w_tready_reg' [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:63]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1000.691 ; gain = 410.605
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 48    
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 1     
+	  48 Input     18 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   7 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module cluster 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 48    
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 1     
+	  48 Input     18 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   7 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design cluster has unconnected port b_tready
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[63]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[62]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[61]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[60]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[55]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[54]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[53]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[52]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[47]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[46]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[45]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[44]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[39]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[38]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[37]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[36]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[31]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[30]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[29]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[28]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[23]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[22]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[21]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[20]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[15]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[14]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[13]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[12]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[7]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[6]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[5]
+WARNING: [Synth 8-3331] design cluster has unconnected port w_tdata[4]
+WARNING: [Synth 8-3331] design cluster has unconnected port b_tvalid
+WARNING: [Synth 8-3331] design cluster has unconnected port configure[2]
+WARNING: [Synth 8-3331] design cluster has unconnected port configure[1]
+WARNING: [Synth 8-3331] design cluster has unconnected port configure[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\status_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (a_tvalid_reg)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1000.691 ; gain = 410.605
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1000.691 ; gain = 410.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1000.691 ; gain = 410.605
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1010.230 ; gain = 420.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1015.527 ; gain = 425.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1015.527 ; gain = 425.441
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1015.527 ; gain = 425.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1015.527 ; gain = 425.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1015.527 ; gain = 425.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1015.527 ; gain = 425.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------+----------+
+|      |BlackBox name      |Instances |
++------+-------------------+----------+
+|1     |c_accum_0          |        48|
+|2     |xbip_dsp48_macro_0 |         8|
++------+-------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------+------+
+|      |Cell                   |Count |
++------+-----------------------+------+
+|1     |c_accum_0              |     1|
+|2     |c_accum_0__48          |     1|
+|3     |c_accum_0__49          |     1|
+|4     |c_accum_0__50          |     1|
+|5     |c_accum_0__51          |     1|
+|6     |c_accum_0__52          |     1|
+|7     |c_accum_0__53          |     1|
+|8     |c_accum_0__54          |     1|
+|9     |c_accum_0__55          |     1|
+|10    |c_accum_0__56          |     1|
+|11    |c_accum_0__57          |     1|
+|12    |c_accum_0__58          |     1|
+|13    |c_accum_0__59          |     1|
+|14    |c_accum_0__60          |     1|
+|15    |c_accum_0__61          |     1|
+|16    |c_accum_0__62          |     1|
+|17    |c_accum_0__63          |     1|
+|18    |c_accum_0__64          |     1|
+|19    |c_accum_0__65          |     1|
+|20    |c_accum_0__66          |     1|
+|21    |c_accum_0__67          |     1|
+|22    |c_accum_0__68          |     1|
+|23    |c_accum_0__69          |     1|
+|24    |c_accum_0__70          |     1|
+|25    |c_accum_0__71          |     1|
+|26    |c_accum_0__72          |     1|
+|27    |c_accum_0__73          |     1|
+|28    |c_accum_0__74          |     1|
+|29    |c_accum_0__75          |     1|
+|30    |c_accum_0__76          |     1|
+|31    |c_accum_0__77          |     1|
+|32    |c_accum_0__78          |     1|
+|33    |c_accum_0__79          |     1|
+|34    |c_accum_0__80          |     1|
+|35    |c_accum_0__81          |     1|
+|36    |c_accum_0__82          |     1|
+|37    |c_accum_0__83          |     1|
+|38    |c_accum_0__84          |     1|
+|39    |c_accum_0__85          |     1|
+|40    |c_accum_0__86          |     1|
+|41    |c_accum_0__87          |     1|
+|42    |c_accum_0__88          |     1|
+|43    |c_accum_0__89          |     1|
+|44    |c_accum_0__90          |     1|
+|45    |c_accum_0__91          |     1|
+|46    |c_accum_0__92          |     1|
+|47    |c_accum_0__93          |     1|
+|48    |c_accum_0__94          |     1|
+|49    |xbip_dsp48_macro_0     |     1|
+|50    |xbip_dsp48_macro_0__10 |     1|
+|51    |xbip_dsp48_macro_0__11 |     1|
+|52    |xbip_dsp48_macro_0__12 |     1|
+|53    |xbip_dsp48_macro_0__13 |     1|
+|54    |xbip_dsp48_macro_0__14 |     1|
+|55    |xbip_dsp48_macro_0__8  |     1|
+|56    |xbip_dsp48_macro_0__9  |     1|
+|57    |BUFG                   |     1|
+|58    |CARRY4                 |   146|
+|59    |LUT1                   |     2|
+|60    |LUT2                   |   517|
+|61    |LUT3                   |   199|
+|62    |LUT4                   |   360|
+|63    |LUT5                   |     6|
+|64    |LUT6                   |    63|
+|65    |MUXF7                  |    24|
+|66    |MUXF8                  |    12|
+|67    |FDRE                   |   567|
+|68    |IBUF                   |   113|
+|69    |OBUF                   |     9|
+|70    |OBUFT                  |     1|
++------+-----------------------+------+
+
+Report Instance Areas: 
++------+--------------------+--------------------------------+------+
+|      |Instance            |Module                          |Cells |
++------+--------------------+--------------------------------+------+
+|1     |top                 |                                |  3268|
+|2     |  \genblk3[0].udsp  |DSP_overpack_wrapper__xdcDup__1 |    54|
+|3     |  \genblk3[1].udsp  |DSP_overpack_wrapper__xdcDup__2 |    54|
+|4     |  \genblk3[2].udsp  |DSP_overpack_wrapper__xdcDup__3 |    54|
+|5     |  \genblk3[3].udsp  |DSP_overpack_wrapper__xdcDup__4 |    54|
+|6     |  \genblk3[4].udsp  |DSP_overpack_wrapper__xdcDup__5 |    48|
+|7     |  \genblk3[5].udsp  |DSP_overpack_wrapper__xdcDup__6 |    48|
+|8     |  \genblk3[6].udsp  |DSP_overpack_wrapper__xdcDup__7 |    48|
+|9     |  \genblk3[7].udsp  |DSP_overpack_wrapper            |    48|
++------+--------------------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1015.527 ; gain = 425.441
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:32 . Memory (MB): peak = 1015.527 ; gain = 310.262
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1015.527 ; gain = 425.441
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1015.527 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 182 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'cluster' is not ideal for floorplanning, since the cellview 'cluster' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1023.719 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 1023.719 ; gain = 712.008
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1023.719 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/git_repos/mnist_neuralnet/fpga/milestone 2/projects/cluster/cluster.runs/synth_1/cluster.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cluster_utilization_synth.rpt -pb cluster_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 27 19:06:14 2024...
