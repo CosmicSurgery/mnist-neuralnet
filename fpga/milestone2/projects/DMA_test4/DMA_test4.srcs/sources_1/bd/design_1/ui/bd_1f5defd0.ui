@@ -1,0 +1,27 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-332,-239",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 260 -y 70 -defaultsOSRD
+preplace inst axi_cdma_0 -pg 1 -lvl 2 -x 690 -y 70 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 690 -y 290 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 260 -y 340 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 3 -x 1030 -y 320 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 10 220 510 410 850
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 20 230 490
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 520 420 860
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 500 60n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 2 500 -20 840J
+preplace netloc axi_cdma_0_M_AXI 1 2 1 850 60n
+preplace netloc axi_mem_intercon_M00_AXI 1 0 4 10 -80 NJ -80 NJ -80 1180
+levelinfo -pg 1 -10 260 690 1030 1210
+pagesize -pg 1 -db -bbox -sgen -10 -310 1210 440
+"
+}
+{
+   "da_axi4_cnt":"2",
+   "da_ps7_cnt":"1"
+}
