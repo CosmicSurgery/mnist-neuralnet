@@ -1,0 +1,9 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/classifier/classifier.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/classifier/classifier.srcs/sources_1/ip/c_accum_1/sim/c_accum_1.vhd,1733000086,vhdl,,,,c_accum_1,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/classifier/classifier.srcs/sources_1/ip/mult_gen_0/sim/mult_gen_0.vhd,1732999660,vhdl,,,,mult_gen_0,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/milestone2/source/classifier/rtl/classifier.v,1733001421,verilog,,C:/git_repos/mnist_neuralnet/fpga/milestone2/source/classifier/tb/classifier_tb.v,,classifier,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/milestone2/source/classifier/tb/classifier_tb.v,1733001776,verilog,,,,classifier_tb,,,,,,,,
