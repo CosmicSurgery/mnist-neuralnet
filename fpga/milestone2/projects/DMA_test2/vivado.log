@@ -249,3 +249,5 @@ WARNING: [Project 1-645] Board images not set in Hardware Platform.
 INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DMA_test4/design_1_wrapper.xsa
 write_hw_platform: Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 2020.430 ; gain = 0.000
 file copy -force C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DMA_test4/DMA_test4.runs/impl_1/design_1_wrapper.bit C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DMA_test4/design_1_wrapper.bit
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 29 21:07:40 2024...

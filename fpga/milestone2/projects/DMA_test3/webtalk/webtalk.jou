@@ -2,8 +2,8 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # 
-# Start of session at: Fri Nov 29 19:29:30 2024
-# Process ID: 46240
+# Start of session at: Fri Nov 29 21:07:33 2024
+# Process ID: 31408
 # Current directory: C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DMA_test3/webtalk
 # Command line: wbtcv.exe -mode batch -source vitis_webtalk.tcl
 # Log file: C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DMA_test3/webtalk/webtalk.log

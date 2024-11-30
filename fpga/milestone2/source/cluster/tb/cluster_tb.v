@@ -105,10 +105,12 @@ module cluster_tb();
         b_tvalid <= 1;
         configure <= 3'b000;
         a_tready <= 1;
-    
-        while (~a_tvalid) @ (posedge CLK);
         
+        while (~a_tvalid) @ (posedge CLK);
         while (a_tvalid) @ (posedge CLK);
+        while (~a_tvalid) @ (posedge CLK);
+        while (a_tvalid) @ (posedge CLK);
+        
         $display("Success!");
         $finish;
     

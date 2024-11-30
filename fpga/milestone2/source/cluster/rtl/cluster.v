@@ -60,7 +60,7 @@ module cluster#(input_size = 784)
     //state machine logic
     reg matmul_finished = 0;
     reg activation_condition = 0;
-    wire matmul_active = w_tvalid & x_tvalid & w_tready & x_tready & (pixel_num <= input_size-1);
+    wire matmul_active = (w_tvalid & x_tvalid & w_tready & x_tready) | (pixel_num == input_size-1);
     
     //output activation logic
     localparam output_size = 48;
@@ -101,7 +101,7 @@ module cluster#(input_size = 784)
     
     generate
     for(i=0;i < 48; i=i+1) begin
-        c_accum_0 uacc (.B(p[i]), .SCLR(~(matmul_active | matmul_finished)), .CLK(CLK), .Q(acc[i]));
+        c_accum_0 uacc (.B(p[i]), .SCLR(~matmul_active), .CLK(CLK), .Q(acc[i]));
     end
     endgenerate
     
@@ -115,7 +115,7 @@ module cluster#(input_size = 784)
             w_tready <= 0;
             x_tready <= 0;
             pixel_num <= 0;
-        end else if ((w_tvalid & x_tvalid) & (~x_tready & ~w_tready) & ~matmul_finished) begin
+        end else if ((w_tvalid & x_tvalid) & (~x_tready & ~w_tready) & ~matmul_active) begin
             w_tready <= 1;
             x_tready <= 1;
         end else if (w_tready & w_tvalid & x_tready & x_tvalid & pixel_num < input_size-1) begin
@@ -191,7 +191,13 @@ module cluster#(input_size = 784)
             end else if (a_addr == output_size -1) begin
                 a_tvalid <= 0;
             end else if (a_tvalid & a_tready) begin // if a_tvalid is high and a_tready is high, then iterate through the data otherwise do nothing
-                a_tdata <= z[a_addr][10:7] & {4{~z[a_addr][17]}};                                    // combinatorial logic applies the relu activation function over the z register
+                if (z[a_addr][17] == 'b1) begin                                 // If the number is negative
+                    a_tdata <= 4'b0000;
+                end else if (z[a_addr][17:11] == {7{1'b0}}) begin               // if the number is positive and no overflow
+                    a_tdata <= z[a_addr][10:7];
+                end else begin
+                    a_tdata <= 4'b1111;                                         // If overflow, set to max positive value
+                end
                 a_addr <= a_addr+1;
             end 
         end else if (a_addr!=0) begin
@@ -217,7 +223,7 @@ module cluster#(input_size = 784)
             end
             status <= 2'b01;
         end else if (~activation_condition & ~matmul_finished) begin
-            if (pixel_num == input_size-2) begin                                            // assert matmul_finished the second-to last pixel value, so that it is asserted the last pixel value
+            if (pixel_num == input_size-1) begin                                            // assert matmul_finished the second-to last pixel value, so that it is asserted the last pixel value
                 matmul_finished <= 1;
             end
             if (matmul_active) begin

@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="8078900fs"></ZoomStartTime>
-      <ZoomEndTime time="8158301fs"></ZoomEndTime>
-      <Cursor1Time time="8145000fs"></Cursor1Time>
+      <ZoomStartTime time="276916fs"></ZoomStartTime>
+      <ZoomEndTime time="346617fs"></ZoomEndTime>
+      <Cursor1Time time="308916fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="151"></NameColumnWidth>
-      <ValueColumnWidth column_width="480"></ValueColumnWidth>
+      <ValueColumnWidth column_width="183"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="28" />
+   <WVObjectSize size="32" />
    <wvobject fp_name="/cluster_tb/x_tdata" type="array">
       <obj_property name="ElementShortName">x_tdata[11:0]</obj_property>
       <obj_property name="ObjectShortName">x_tdata[11:0]</obj_property>
@@ -104,6 +104,11 @@
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
    </wvobject>
+   <wvobject fp_name="/cluster_tb/uut/pixel_num" type="array">
+      <obj_property name="ElementShortName">pixel_num[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_num[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="/cluster_tb/RST" type="logic">
       <obj_property name="ElementShortName">RST</obj_property>
       <obj_property name="ObjectShortName">RST</obj_property>
@@ -131,5 +136,19 @@
    <wvobject fp_name="/cluster_tb/uut/activation_condition" type="logic">
       <obj_property name="ElementShortName">activation_condition</obj_property>
       <obj_property name="ObjectShortName">activation_condition</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cluster_tb/uut/z" type="array">
+      <obj_property name="ElementShortName">z[47:0][17:0]</obj_property>
+      <obj_property name="ObjectShortName">z[47:0][17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cluster_tb/uut/acc" type="array">
+      <obj_property name="ElementShortName">acc[47:0][17:0]</obj_property>
+      <obj_property name="ObjectShortName">acc[47:0][17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cluster_tb/uut/p" type="array">
+      <obj_property name="ElementShortName">p[47:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">p[47:0][7:0]</obj_property>
    </wvobject>
 </wave_config>

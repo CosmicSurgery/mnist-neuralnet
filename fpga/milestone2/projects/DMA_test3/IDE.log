@@ -334,3 +334,4 @@ con
 ----------------End of Script----------------
 
 20:59:36 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\DMA_test3\.sdk\launch_scripts\single_application_debug\systemdebugger_dma_test3_app_system_standalone.tcl'
+21:07:32 INFO  : Disconnected from the channel tcfchan#21.

@@ -4,7 +4,8 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 50a8820990
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'RSTN' is not connected on this instance [C:/git_repos/mnist_neuralnet/fpga/milestone 2/source/cluster/rtl/cluster.v:93]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 64 for port 'a_tdata' [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/cluster/tb/cluster_tb.v:13]
+WARNING: [VRFC 10-5021] port 'RSTN' is not connected on this instance [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/cluster/rtl/cluster.v:93]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
