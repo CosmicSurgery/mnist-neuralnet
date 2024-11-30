@@ -1,0 +1,7 @@
+/*DMA_test3*/
+the_ROM_image:
+{
+  [bootloader]<DMA_test3/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}
