@@ -39,6 +39,11 @@ module cluster#(input_size = 784)
     localparam input_width = $clog2(input_size);
     reg [(input_width-1):0] pixel_num;
     
+    //output activation logic
+    localparam output_size = 48;
+    localparam a_addr_width = $clog2(output_size); 
+    reg [(a_addr_width-1):0] a_addr = 0;
+    
     localparam [2:0] bitwidth = 4;
     localparam [5:0] numinputs = 24;
     localparam [3:0] pow_w_s = 0; // This is proportional to the weight scalar: log_2(w_s) = pow_w_s
@@ -52,20 +57,16 @@ module cluster#(input_size = 784)
     wire [3:0] w1 [7:0];
     wire [3:0] b  [15:0];
     
-    wire [7:0] p [47:0];
-    reg [7:0] p_reg [47:0];
-    wire [17:0] acc [47:0];
-    reg [17:0] z [47:0];
+    wire [7:0] p [(output_size-1):0];
+    reg [7:0] p_reg [(output_size-1):0];
+    wire [17:0] acc [(output_size-1):0];
+    reg [17:0] z [(output_size-1):0];
     
     //state machine logic
     reg matmul_finished = 0;
     reg activation_condition = 0;
     wire matmul_active = (w_tvalid & x_tvalid & w_tready & x_tready) | (pixel_num == input_size-1);
     
-    //output activation logic
-    localparam output_size = 48;
-    localparam a_addr_width = $clog2(output_size); 
-    reg [(a_addr_width-1):0] a_addr = 0;
     
     // looping variables
     integer j;
@@ -157,15 +158,15 @@ module cluster#(input_size = 784)
                 // more elegant way to do this?
                 z[((j*3)+0)][17:7] <= {11{b[j][3]}}; // adds zeros if positve and ones if negative
                 z[((j*3)+0)][6:4] <=  b[j][2:0];
-                z[((j*3)+0)][3:0] <= 0;
+                z[((j*3)+0)][3:0] <= 4'b0000;
                 
                 z[((j*3)+1)][17:7] <= {11{b[j][3]}}; // adds zeros if positive and ones if negative
                 z[((j*3)+1)][6:4] <=  b[j][2:0];
-                z[((j*3)+1)][3:0] <= 0;
+                z[((j*3)+1)][3:0] <= 4'b0000;
                 
                 z[((j*3)+2)][17:7] <= {11{b[j][3]}}; // adds zeros if positve and ones if negative
                 z[((j*3)+2)][6:4] <=  b[j][2:0];
-                z[((j*3)+2)][3:0] <= 0;
+                z[((j*3)+2)][3:0] <= 4'b0000;
                 
             end
         end     
@@ -237,7 +238,7 @@ module cluster#(input_size = 784)
                 status <= 2'b01;            
             end
         end else if (activation_condition & matmul_finished) begin
-            status <= 2'b00;
+            status <= 2'b11;
         end
         
         
