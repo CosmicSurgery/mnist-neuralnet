@@ -1,0 +1,9 @@
+18:56:49 **** Incremental Build of configuration Debug for project jyufd_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 63585 C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/export/deadsawesd/deadsawesd.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd_system/Debug/system.bif
+sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/export/deadsawesd/deadsawesd.xpfm --sys_config deadsawesd --bif C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd_system/Debug/system.bif --no_bitstream --elf C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/Debug/jyufd.elf,ps7_cortexa9_0
+Running C:/Xilinx/Vitis/2019.2/bin/bootgen  -image C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+18:56:56 Build Finished (took 6s.566ms)
+

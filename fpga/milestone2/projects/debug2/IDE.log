@@ -1,0 +1,242 @@
+18:17:57 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\temp_xsdb_launch_script.tcl
+18:18:00 INFO  : XSCT server has started successfully.
+18:18:00 INFO  : plnx-install-location is set to ''
+18:18:00 INFO  : Successfully done setting XSCT server connection channel  
+18:18:00 INFO  : Successfully done query RDI_DATADIR 
+18:18:00 INFO  : Successfully done setting workspace for the tool. 
+18:18:04 INFO  : Registering command handlers for Vitis TCF services
+18:19:11 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+18:19:11 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+18:21:05 INFO  : Checking for BSP changes to sync application flags for project 'jyufd'...
+18:21:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+18:21:53 INFO  : 'fpga -state' command is executed.
+18:22:06 INFO  : Memory regions updated for context APU
+18:22:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+18:22:25 INFO  : 'fpga -state' command is executed.
+18:22:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:22:25 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+18:22:25 INFO  : 'jtag frequency' command is executed.
+18:22:25 INFO  : Context for 'APU' is selected.
+18:22:25 INFO  : System reset is completed.
+18:22:28 INFO  : 'after 3000' command is executed.
+18:22:28 INFO  : Context for 'APU' is selected.
+18:22:28 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/export/deadsawesd/hw/design_1_wrapper.xsa'.
+18:22:28 INFO  : 'configparams force-mem-access 1' command is executed.
+18:22:29 INFO  : Context for 'APU' is selected.
+18:22:29 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/_ide/psinit/ps7_init.tcl' is done.
+18:22:29 INFO  : 'ps7_init' command is executed.
+18:22:29 INFO  : 'ps7_post_config' command is executed.
+18:22:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:22:29 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/Debug/jyufd.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:22:29 INFO  : 'configparams force-mem-access 0' command is executed.
+18:22:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/export/deadsawesd/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/Debug/jyufd.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:22:29 INFO  : Memory regions updated for context APU
+18:22:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:22:29 INFO  : 'con' command is executed.
+18:22:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:22:29 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\.sdk\launch_scripts\single_application_debug\systemdebugger_jyufd_system_standalone.tcl'
+18:32:12 INFO  : Hardware specification for platform project 'deadsawesd' is updated.
+18:32:19 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+18:32:19 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+18:33:54 INFO  : Hardware specification for platform project 'deadsawesd' is updated.
+18:34:02 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+18:34:02 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+18:35:28 INFO  : Disconnected from the channel tcfchan#3.
+18:35:49 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\temp_xsdb_launch_script.tcl
+18:35:51 INFO  : XSCT server has started successfully.
+18:35:55 INFO  : Registering command handlers for Vitis TCF services
+18:36:02 INFO  : plnx-install-location is set to ''
+18:36:02 INFO  : Successfully done setting XSCT server connection channel  
+18:36:02 INFO  : Successfully done query RDI_DATADIR 
+18:36:02 INFO  : Successfully done setting workspace for the tool. 
+18:36:03 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+18:36:03 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+18:36:40 INFO  : Hardware specification for platform project 'deadsawesd' is updated.
+18:36:46 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+18:36:47 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+18:36:58 INFO  : Hardware specification for platform project 'deadsawesd' is updated.
+18:37:04 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+18:37:05 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+18:38:42 INFO  : Checking for BSP changes to sync application flags for project 'jyufd'...
+18:38:44 INFO  : Updating application flags with new BSP settings...
+18:38:45 INFO  : Successfully updated application flags for project jyufd.
+18:38:47 INFO  : The hardware specfication used by project 'jyufd' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+18:38:48 INFO  : The updated bitstream files are copied from platform to folder 'C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\jyufd\_ide\bitstream' in project 'jyufd'.
+18:38:48 INFO  : The file 'C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\jyufd\_ide\psinit\ps7_init.tcl' stored in project is removed.
+18:38:56 INFO  : The updated ps init files are copied from platform to folder 'C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\jyufd\_ide\psinit' in project 'jyufd'.
+18:39:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:39:39 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+18:39:39 INFO  : 'jtag frequency' command is executed.
+18:39:39 INFO  : Context for 'APU' is selected.
+18:39:39 INFO  : System reset is completed.
+18:39:42 INFO  : 'after 3000' command is executed.
+18:39:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+18:39:43 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/_ide/bitstream/design_1_wrapper.bit"
+18:39:43 INFO  : Context for 'APU' is selected.
+18:39:43 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/export/deadsawesd/hw/design_1_wrapper.xsa'.
+18:39:43 INFO  : 'configparams force-mem-access 1' command is executed.
+18:39:43 INFO  : Context for 'APU' is selected.
+18:39:43 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/_ide/psinit/ps7_init.tcl' is done.
+18:39:44 INFO  : 'ps7_init' command is executed.
+18:39:44 INFO  : 'ps7_post_config' command is executed.
+18:39:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:39:44 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/Debug/jyufd.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:39:44 INFO  : 'configparams force-mem-access 0' command is executed.
+18:39:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/export/deadsawesd/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/Debug/jyufd.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:39:44 INFO  : Memory regions updated for context APU
+18:39:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:39:44 INFO  : 'con' command is executed.
+18:39:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:39:44 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\.sdk\launch_scripts\single_application_debug\systemdebugger_jyufd_system_standalone.tcl'
+18:40:33 INFO  : Hardware specification for platform project 'deadsawesd' is updated.
+18:40:40 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+18:40:40 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+18:40:58 ERROR : Failed to openhw "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/export/deadsawesd/hw/design_1_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:42:06 INFO  : Checking for BSP changes to sync application flags for project 'jyufd'...
+18:42:06 ERROR : Failed to get platform details for the project 'jyufd'. Cannot sync application flags.
+18:42:08 ERROR : Failed to compute checksum of hardware specification file used by project 'jyufd'
+18:42:39 INFO  : Hardware specification for platform project 'deadsawesd' is updated.
+18:42:43 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+18:42:43 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+18:43:48 INFO  : Checking for BSP changes to sync application flags for project 'jyufd'...
+18:43:51 INFO  : Updating application flags with new BSP settings...
+18:43:51 INFO  : Successfully updated application flags for project jyufd.
+18:43:53 INFO  : The hardware specfication used by project 'jyufd' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+18:43:53 INFO  : The file 'C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\jyufd\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+18:43:53 INFO  : The updated bitstream files are copied from platform to folder 'C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\jyufd\_ide\bitstream' in project 'jyufd'.
+18:43:53 INFO  : The file 'C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\jyufd\_ide\psinit\ps7_init.tcl' stored in project is removed.
+18:43:59 INFO  : The updated ps init files are copied from platform to folder 'C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\jyufd\_ide\psinit' in project 'jyufd'.
+18:44:27 INFO  : Disconnected from the channel tcfchan#4.
+18:44:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+18:44:27 INFO  : 'fpga -state' command is executed.
+18:44:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:44:27 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+18:44:27 INFO  : 'jtag frequency' command is executed.
+18:44:27 INFO  : Context for 'APU' is selected.
+18:44:27 INFO  : System reset is completed.
+18:44:30 INFO  : 'after 3000' command is executed.
+18:44:30 INFO  : Context for 'APU' is selected.
+18:44:31 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/export/deadsawesd/hw/design_1_wrapper.xsa'.
+18:44:31 INFO  : 'configparams force-mem-access 1' command is executed.
+18:44:31 INFO  : Context for 'APU' is selected.
+18:44:31 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/_ide/psinit/ps7_init.tcl' is done.
+18:44:31 INFO  : 'ps7_init' command is executed.
+18:44:31 INFO  : 'ps7_post_config' command is executed.
+18:44:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:31 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/Debug/jyufd.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:44:31 INFO  : 'configparams force-mem-access 0' command is executed.
+18:44:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/export/deadsawesd/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/jyufd/Debug/jyufd.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:44:31 INFO  : Memory regions updated for context APU
+18:44:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:31 INFO  : 'con' command is executed.
+18:44:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:44:31 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\.sdk\launch_scripts\single_application_debug\systemdebugger_jyufd_system_standalone.tcl'
+18:46:33 INFO  : Hardware specification for platform project 'deadsawesd' is updated.
+18:46:38 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+18:46:38 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+18:50:26 INFO  : Checking for BSP changes to sync application flags for project 'jyufd'...
+18:50:47 INFO  : Disconnected from the channel tcfchan#10.
+18:50:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+18:50:47 INFO  : 'fpga -state' command is executed.
+18:50:53 INFO  : Memory regions updated for context APU
+18:51:50 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\temp_xsdb_launch_script.tcl
+18:52:02 INFO  : XSCT server has started successfully.
+18:52:02 INFO  : plnx-install-location is set to ''
+18:52:02 INFO  : Successfully done setting XSCT server connection channel  
+18:52:08 INFO  : Registering command handlers for Vitis TCF services
+18:52:37 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/hw/design_1_wrapper.xsa is already opened
+
+18:52:41 INFO  : Successfully done setting workspace for the tool. 
+18:52:41 INFO  : Successfully done query RDI_DATADIR 
+18:52:44 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+18:52:46 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+18:53:29 INFO  : Hardware specification for platform project 'deadsawesd' is updated.
+18:53:34 INFO  : Hardware specification for platform project 'deadsawesd' is updated.
+18:54:10 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+18:54:17 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+18:56:44 INFO  : Checking for BSP changes to sync application flags for project 'jyufd'...
+18:57:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+18:57:31 INFO  : 'fpga -state' command is executed.
+18:57:34 INFO  : Memory regions updated for context APU
+18:57:58 INFO  : Hardware specification for platform project 'deadsawesd' is updated.
+18:58:06 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+18:58:07 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+19:02:02 INFO  : Hardware specification for platform project 'deadsawesd' is updated.
+19:02:07 ERROR : Failed to execute command 'domain active {zynq_fsbl}'. Click on details for more information.
+19:02:10 ERROR : Failed to read mss path for 'standalone_domain'.
+19:02:10 ERROR : Failed to execute command 'platform read {C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\deadsawesd\platform.spr}'. Click on details for more information.
+19:02:51 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug2\temp_xsdb_launch_script.tcl
+19:02:54 INFO  : XSCT server has started successfully.
+19:02:54 INFO  : plnx-install-location is set to ''
+19:02:54 INFO  : Successfully done setting XSCT server connection channel  
+19:02:59 INFO  : Registering command handlers for Vitis TCF services
+19:03:06 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/hw/design_1_wrapper.xsa is already opened
+
+19:03:06 INFO  : Successfully done setting workspace for the tool. 
+19:03:06 INFO  : Successfully done query RDI_DATADIR 
+19:03:06 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+19:03:07 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug2/deadsawesd/ps7_cortexa9_0/standalone_domain/bsp/system.mss"

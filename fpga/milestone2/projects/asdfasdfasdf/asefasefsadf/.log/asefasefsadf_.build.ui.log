@@ -1,0 +1,19 @@
+2024-11-29T18:15:44.269954400255-18:15:44 **** Clean-only build of project asefasefsadf ****
+000-buildplatform.bat 61085 asefasefsadf clean 
+000-No connection could be made because the target machine actively refused it
+000-    while executing
+000-"error $message"
+000-    (procedure "connect" line 143)
+000-    invoked from within
+000-"connect -u TCP:localhost:$XSDB_PORT"
+000-    invoked from within
+000-"if { $iswindows == 1 } {    
+000-
+000-    set XSDB_PORT [lindex $argv 0]
+000-    set PLATFORM_NAME [lindex $argv 1]
+000-    set arglen [llength $argv]
+000-    set lastind..."
+000-    (file "C:/Xilinx/Vitis/2019.2\scripts\vitis\util\buildplatform.tcl" line 11)
+00255-
+18:15:47 Build Finished (took 3s.445ms)
+

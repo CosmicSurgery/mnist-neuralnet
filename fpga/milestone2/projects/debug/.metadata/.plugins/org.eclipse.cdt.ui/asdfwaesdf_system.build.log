@@ -1,0 +1,10 @@
+16:51:05 **** Build of configuration Debug for project asdfwaesdf_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 59565 C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfaesfdf/export/asdfaesfdf/asdfaesfdf.xpfm standalone_domain C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfwaesdf_system/Debug/system.bif
+sdcard_gen --xpfm C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfaesfdf/export/asdfaesfdf/asdfaesfdf.xpfm --sys_config asdfaesfdf --bif C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfwaesdf_system/Debug/system.bif --bitstream C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfwaesdf/_ide/bitstream/design_1_wrapper.bit --elf C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfwaesdf/Debug/asdfwaesdf.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfwaesdf/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2019.2/bin/bootgen  -image C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfwaesdf_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+16:51:10 Build Finished (took 5s.557ms)
+

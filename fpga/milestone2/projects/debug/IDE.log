@@ -1,0 +1,67 @@
+16:46:19 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug\temp_xsdb_launch_script.tcl
+16:46:21 INFO  : XSCT server has started successfully.
+16:46:21 INFO  : Successfully done setting XSCT server connection channel  
+16:46:21 INFO  : plnx-install-location is set to ''
+16:46:21 INFO  : Successfully done setting workspace for the tool. 
+16:46:21 INFO  : Successfully done query RDI_DATADIR 
+16:46:22 INFO  : Registering command handlers for Vitis TCF services
+16:47:09 ERROR : Failed to create platform.
+16:48:33 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfaesfdf/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+16:48:33 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfaesfdf/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+16:51:02 INFO  : Checking for BSP changes to sync application flags for project 'asdfwaesdf'...
+16:51:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:51:48 INFO  : Jtag cable 'Digilent Zybo 210279787858A' is selected.
+16:51:48 INFO  : 'jtag frequency' command is executed.
+16:51:48 INFO  : Context for 'APU' is selected.
+16:51:48 INFO  : System reset is completed.
+16:51:51 INFO  : 'after 3000' command is executed.
+16:51:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1' command is executed.
+16:51:53 INFO  : FPGA configured successfully with bitstream "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfwaesdf/_ide/bitstream/design_1_wrapper.bit"
+16:51:53 INFO  : Context for 'APU' is selected.
+16:51:53 INFO  : Hardware design information is loaded from 'C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfaesfdf/export/asdfaesfdf/hw/design_1_wrapper.xsa'.
+16:51:53 INFO  : 'configparams force-mem-access 1' command is executed.
+16:51:53 INFO  : Context for 'APU' is selected.
+16:51:53 INFO  : Sourcing of 'C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfwaesdf/_ide/psinit/ps7_init.tcl' is done.
+16:51:53 INFO  : 'ps7_init' command is executed.
+16:51:53 INFO  : 'ps7_post_config' command is executed.
+16:51:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:51:53 INFO  : The application 'C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfwaesdf/Debug/asdfwaesdf.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:51:53 INFO  : 'configparams force-mem-access 0' command is executed.
+16:51:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279787858A" && level==0} -index 1
+fpga -file C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfwaesdf/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfaesfdf/export/asdfaesfdf/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfwaesdf/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfwaesdf/Debug/asdfwaesdf.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:51:54 INFO  : Memory regions updated for context APU
+16:51:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:51:54 INFO  : 'con' command is executed.
+16:51:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:51:54 INFO  : Launch script is exported to file 'C:\git_repos\mnist_neuralnet\fpga\milestone2\projects\debug\.sdk\launch_scripts\single_application_debug\systemdebugger_asdfwaesdf_system_standalone.tcl'
+17:13:42 INFO  : Hardware specification for platform project 'asdfaesfdf' is updated.
+17:13:50 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfaesfdf/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+17:13:50 INFO  : Successfully done sdx_reload_mss "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/debug/asdfaesfdf/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+17:15:37 INFO  : Checking for BSP changes to sync application flags for project 'asdfwaesdf'...
+17:15:37 ERROR : Failed to get platform details for the project 'asdfwaesdf'. Cannot sync application flags.
+17:15:40 ERROR : Failed to compute checksum of hardware specification file used by project 'asdfwaesdf'
+17:16:12 INFO  : Checking for BSP changes to sync application flags for project 'asdfwaesdf'...
+17:16:12 ERROR : Failed to get platform details for the project 'asdfwaesdf'. Cannot sync application flags.
+17:16:15 ERROR : Failed to compute checksum of hardware specification file used by project 'asdfwaesdf'
+17:18:35 INFO  : Disconnected from the channel tcfchan#3.

@@ -1,0 +1,76 @@
+
+
+#include <stdio.h>
+#include "xil_printf.h"
+#include "xil_types.h"
+#include "xil_cache.h"
+#include "xparameters.h"
+#include "xaxidma.h"
+#include "xil_io.h"
+
+#define DMA_DEVICE_ID XPAR_AXI_DMA_0_DEVICE_ID
+#define DMA_TRANSFER_SIZE 16
+
+
+static XAxiDma dma_ctl;
+static XAxiDma_Config *dma_cfg;
+
+int main()
+{
+	s32 status;
+	u32 data_dma_to_device[DMA_TRANSFER_SIZE];
+	u32 data_device_to_dma[DMA_TRANSFER_SIZE];
+
+	// Disable cache to prevent cache search forcing external memory access in this demonstration??
+	Xil_DCacheDisable();
+
+	print("FPGA DMA test\n");
+
+	// Initialize AXI DMA driver
+	dma_cfg = XAxiDma_LookupConfig(DMA_DEVICE_ID);
+	if (NULL == dma_cfg) {
+		return XST_FAILURE;
+	}
+	status = XAxiDma_CfgInitialize(&dma_ctl, dma_cfg);
+	if (status != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+
+	// Initialize DMA-read data buffer with 32-bit incrementing counter data
+	for (u32 i=0; i<DMA_TRANSFER_SIZE; i++) {
+		data_dma_to_device[i] = i;
+	}
+
+	// Submit for DMA-write operation to move data from AXI-stream FIFO in PL fabric
+	status = XAxiDma_SimpleTransfer(&dma_ctl, XPAR_AXI_BRAM_CTRL_1_S_AXI_BASEADDR, DMA_TRANSFER_SIZE*4, XAXIDMA_DEVICE_TO_DMA);
+
+	// Submit for DMA-read operation to move data to BRAM in PL fabric
+	status = XAxiDma_SimpleTransfer(&dma_ctl, data_dma_to_device, DMA_TRANSFER_SIZE*4, XAXIDMA_DMA_TO_DEVICE);
+	if (status != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+	usleep(1);
+//	if (XAxiDma_Busy(&dma_ctl, XAXIDMA_DMA_TO_DEVICE)) {
+//		return XST_FAILURE;
+//	}
+//
+//	if (status != XST_SUCCESS){
+//		return XST_FAILURE;
+//	}
+
+	usleep(1);
+	if (XAxiDma_Busy(&dma_ctl, XAXIDMA_DMA_TO_DEVICE)) {
+		return XST_FAILURE;
+	}
+
+
+	// Verify received data after complete DMA loop
+	xil_printf("Received data after complete round-trip DMA loop.\n");
+	for (u32 i=0; i<DMA_TRANSFER_SIZE; i++) {
+		xil_printf("%u ", Xil_In32(XPAR_AXI_BRAM_CTRL_1_S_AXI_BASEADDR + (i*4)));
+	}
+
+	return XST_SUCCESS;
+
+}

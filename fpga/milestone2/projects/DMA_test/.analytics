@@ -1,0 +1,35 @@
+timestamp=[2024-11-29 09:46:13], mode=WORKBENCH_START, duration=0:00:04.930, duration_ms=4930, data={}
+timestamp=[2024-11-29 09:46:14], mode=WORKBENCH_UI_INIT, duration=0:00:00.999, duration_ms=999, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2024-11-29 09:47:42], mode=WORKBENCH_START, duration=0:00:07.242, duration_ms=7242, data={}
+timestamp=[2024-11-29 09:47:44], mode=WORKBENCH_UI_INIT, duration=0:00:01.850, duration_ms=1850, data={editors_count=0, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2024-11-29 09:51:14], mode=WORKBENCH_START, duration=0:00:05.302, duration_ms=5302, data={}
+timestamp=[2024-11-29 09:51:15], mode=WORKBENCH_UI_INIT, duration=0:00:01.006, duration_ms=1006, data={editors_count=0, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2024-11-29 09:53:34], mode=PLATFORM_CREATION, duration=0:00:21.486, duration_ms=21486, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2024-11-29 09:54:21], mode=APP_CREATION, duration=0:00:12.213, duration_ms=12213, data={name=DMA_test_app, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=DMA_test, application_type=application}
+timestamp=[2024-11-29 10:08:28], mode=PLATFORM_GENERATION, duration=0:00:58.686, duration_ms=58686, data={name=DMA_test}
+timestamp=[2024-11-29 12:52:04], mode=PLATFORM_CREATION, duration=0:00:17.916, duration_ms=17916, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2024-11-29 12:54:34], mode=APP_CREATION, duration=0:00:08.634, duration_ms=8634, data={name=DMA_test2_app, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=DMA_test2, application_type=application}
+timestamp=[2024-11-29 12:55:06], mode=PLATFORM_GENERATION, duration=0:00:01.613, duration_ms=1613, data={name=DMA_test2}
+timestamp=[2024-11-29 12:55:48], mode=PLATFORM_GENERATION, duration=0:00:26.897, duration_ms=26897, data={name=DMA_test2}
+timestamp=[2024-11-29 13:05:30], mode=PLATFORM_GENERATION, duration=0:00:25.665, duration_ms=25665, data={name=DMA_test2}
+timestamp=[2024-11-29 13:06:14], mode=PLATFORM_GENERATION, duration=0:00:27.416, duration_ms=27416, data={name=DMA_test2}
+timestamp=[2024-11-29 13:06:54], mode=PLATFORM_GENERATION, duration=0:00:26.728, duration_ms=26728, data={name=DMA_test2}
+timestamp=[2024-11-29 13:08:21], mode=PLATFORM_GENERATION, duration=0:00:27.808, duration_ms=27808, data={name=DMA_test2}
+timestamp=[2024-11-29 13:08:36], mode=PLATFORM_GENERATION, duration=0:00:04.091, duration_ms=4091, data={name=DMA_test}
+timestamp=[2024-11-29 13:08:47], mode=PLATFORM_GENERATION, duration=0:00:01.904, duration_ms=1904, data={name=DMA_test2}
+timestamp=[2024-11-29 13:10:05], mode=WORKBENCH_START, duration=0:00:14.617, duration_ms=14617, data={}
+timestamp=[2024-11-29 13:10:06], mode=WORKBENCH_UI_INIT, duration=0:00:01.546, duration_ms=1546, data={editors_count=1, platform_editors_count=0, projects_count=7, platform_projects_count=2, active_platform_editor=false, projects=DMA_test,DMA_test2,DMA_test2_app,DMA_test2_app_system,DMA_test_app,DMA_test_app_system,RemoteSystemsTempFiles}
+timestamp=[2024-11-29 13:10:51], mode=PLATFORM_GENERATION, duration=0:00:34.576, duration_ms=34576, data={name=DMA_test2}
+timestamp=[2024-11-29 13:11:24], mode=PLATFORM_GENERATION, duration=0:00:28.104, duration_ms=28104, data={name=DMA_test2}
+timestamp=[2024-11-29 13:11:58], mode=PLATFORM_GENERATION, duration=0:00:28.238, duration_ms=28238, data={name=DMA_test2}
+timestamp=[2024-11-29 13:13:09], mode=PLATFORM_GENERATION, duration=0:00:01.640, duration_ms=1640, data={name=DMA_test2}
+timestamp=[2024-11-29 13:16:13], mode=PLATFORM_GENERATION, duration=0:00:26.473, duration_ms=26473, data={name=DMA_test2}
+timestamp=[2024-11-29 13:16:23], mode=PLATFORM_GENERATION, duration=0:00:01.588, duration_ms=1588, data={name=DMA_test2}
+timestamp=[2024-11-29 13:17:37], mode=PLATFORM_GENERATION, duration=0:00:01.560, duration_ms=1560, data={name=DMA_test2}
+timestamp=[2024-11-29 13:18:08], mode=PLATFORM_GENERATION, duration=0:00:26.502, duration_ms=26502, data={name=DMA_test2}
+timestamp=[2024-11-29 13:39:17], mode=PLATFORM_GENERATION, duration=0:00:01.595, duration_ms=1595, data={name=DMA_test2}
+timestamp=[2024-11-29 13:49:52], mode=PLATFORM_GENERATION, duration=0:00:01.560, duration_ms=1560, data={name=DMA_test2}
+timestamp=[2024-11-29 13:50:24], mode=PLATFORM_GENERATION, duration=0:00:01.574, duration_ms=1574, data={name=DMA_test2}
+timestamp=[2024-11-29 13:50:57], mode=PLATFORM_GENERATION, duration=0:00:27.691, duration_ms=27691, data={name=DMA_test2}
+timestamp=[2024-11-29 13:51:37], mode=PLATFORM_CREATION, duration=0:00:16.874, duration_ms=16874, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2024-11-29 13:51:47], mode=PLATFORM_GENERATION, duration=0:00:01.621, duration_ms=1621, data={name=delete}

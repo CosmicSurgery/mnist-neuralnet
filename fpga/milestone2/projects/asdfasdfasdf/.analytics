@@ -1,0 +1,15 @@
+timestamp=[2024-11-29 17:19:06], mode=WORKBENCH_START, duration=0:00:06.421, duration_ms=6421, data={}
+timestamp=[2024-11-29 17:19:07], mode=WORKBENCH_UI_INIT, duration=0:00:01.161, duration_ms=1161, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2024-11-29 17:20:04], mode=PLATFORM_CREATION, duration=0:00:21.512, duration_ms=21512, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2024-11-29 17:21:16], mode=PLATFORM_GENERATION, duration=0:01:03.285, duration_ms=63285, data={name=asefasefsadf}
+timestamp=[2024-11-29 17:21:50], mode=APP_CREATION, duration=0:00:12.267, duration_ms=12267, data={name=sfgsdfs, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=asefasefsadf, application_type=application}
+timestamp=[2024-11-29 17:29:29], mode=WORKBENCH_START, duration=0:00:12.913, duration_ms=12913, data={}
+timestamp=[2024-11-29 17:29:31], mode=WORKBENCH_UI_INIT, duration=0:00:02.022, duration_ms=2022, data={editors_count=5, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,asefasefsadf,sfgsdfs,sfgsdfs_system}
+timestamp=[2024-11-29 17:34:36], mode=PLATFORM_GENERATION, duration=0:00:34.136, duration_ms=34136, data={name=asefasefsadf}
+timestamp=[2024-11-29 17:59:02], mode=PLATFORM_GENERATION, duration=0:00:46.763, duration_ms=46763, data={name=asefasefsadf}
+timestamp=[2024-11-29 18:11:54], mode=PLATFORM_GENERATION, duration=0:00:30.663, duration_ms=30663, data={name=asefasefsadf}
+timestamp=[2024-11-29 18:13:19], mode=PLATFORM_GENERATION, duration=0:01:08.704, duration_ms=68704, data={name=asefasefsadf}
+timestamp=[2024-11-29 18:13:38], mode=PLATFORM_GENERATION, duration=0:00:04.718, duration_ms=4718, data={name=asefasefsadf}
+timestamp=[2024-11-29 18:14:49], mode=PLATFORM_GENERATION, duration=0:01:04.541, duration_ms=64541, data={name=asefasefsadf}
+timestamp=[2024-11-29 18:15:21], mode=PLATFORM_GENERATION, duration=0:00:03.313, duration_ms=3313, data={name=asefasefsadf}
+timestamp=[2024-11-29 18:15:47], mode=PLATFORM_GENERATION, duration=0:00:03.491, duration_ms=3491, data={name=asefasefsadf}
