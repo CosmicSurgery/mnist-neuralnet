@@ -15,3 +15,5 @@ timestamp=[2024-11-11 08:18:05], mode=APP_CREATION, duration=0:00:09.190, durati
 timestamp=[2024-11-11 08:19:18], mode=PLATFORM_GENERATION, duration=0:00:03.304, duration_ms=3304, data={name=plnn}
 timestamp=[2024-11-11 08:20:23], mode=PLATFORM_GENERATION, duration=0:00:53.097, duration_ms=53097, data={name=plnn}
 timestamp=[2024-11-11 08:23:05], mode=PLATFORM_GENERATION, duration=0:00:32.890, duration_ms=32890, data={name=plnn}
+timestamp=[2024-11-29 09:44:38], mode=WORKBENCH_START, duration=0:00:15.988, duration_ms=15988, data={}
+timestamp=[2024-11-29 09:44:41], mode=WORKBENCH_UI_INIT, duration=0:00:02.418, duration_ms=2418, data={editors_count=8, platform_editors_count=4, projects_count=6, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,SD_img_test,SD_img_test_system,plnn,plnn_app,plnn_app_system}
