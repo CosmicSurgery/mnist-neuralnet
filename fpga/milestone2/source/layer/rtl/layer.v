@@ -22,10 +22,10 @@ module cluster#(input_size = 784)
     input wire [11:0]x_tdata;
     input wire x_tvalid;
     output reg x_tready;
-    input wire [63:0]b_tdata;                   // Number of bits x Number of weights per DSP x Number of DSPs
+    input wire [(bram_buswidth-1):0]b_tdata;                   // Number of bits x Number of weights per DSP x Number of DSPs
     input wire b_tvalid;
     output reg b_tready;
-    input wire [63:0]w_tdata;                   // Number of bits x Number of weights per DSP x Number of DSPs
+    input wire [(bram_buswidth-1):0]w_tdata;                   // Number of bits x Number of weights per DSP x Number of DSPs
     input wire w_tvalid;
     output reg w_tready;
     output reg [3:0]a_tdata;                    
@@ -36,6 +36,8 @@ module cluster#(input_size = 784)
     input wire CLK;
     input wire RST;
     
+    localparam bram_buswidth = bitwidth * 2 * numDSPs;
+    
     localparam input_width = $clog2(input_size);
     reg [(input_width-1):0] pixel_num;
     
@@ -44,6 +46,7 @@ module cluster#(input_size = 784)
     localparam a_addr_width = $clog2(output_size); 
     reg [(a_addr_width-1):0] a_addr = 0;
     
+    localparam numDSPs = 80;    
     localparam [2:0] bitwidth = 4;
     localparam [5:0] numinputs = 24;
     localparam [3:0] pow_w_s = 0; // This is proportional to the weight scalar: log_2(w_s) = pow_w_s
@@ -53,9 +56,9 @@ module cluster#(input_size = 784)
     wire [3:0] x0 = x_tdata[3:0];
     wire [3:0] x1 = x_tdata[7:4];
     wire [3:0] x2 = x_tdata[11:8];
-    wire [3:0] w0 [7:0];
-    wire [3:0] w1 [7:0];
-    wire [3:0] b  [15:0];
+    wire [3:0] w0 [79:0];
+    wire [3:0] w1 [79:0];
+    wire [3:0] b  [159:0];
     
     wire [7:0] p [(output_size-1):0];
     reg [7:0] p_reg [(output_size-1):0];
@@ -73,7 +76,7 @@ module cluster#(input_size = 784)
     genvar i;
     
     generate
-    for(i=0; i <8; i=i+1) begin
+    for(i=0; i <numDSPs; i=i+1) begin
     
         assign w0[i] = w_tdata[(3+(2*i*bitwidth)):(0+(2*i*bitwidth))];
         assign w1[i] = w_tdata[(7+(2*i*bitwidth)):(4+(2*i*bitwidth))];
@@ -82,7 +85,7 @@ module cluster#(input_size = 784)
     endgenerate
     
     generate
-    for(i=0; i <16; i=i+1) begin
+    for(i=0; i <(numDSPs*2); i=i+1) begin
         assign b[i] = b_tdata[(3+(i*bitwidth)):(i*bitwidth)];
     end
     endgenerate
@@ -90,7 +93,7 @@ module cluster#(input_size = 784)
     
     // DSP overpacking multiplication NO APPROXIMATION
     generate
-    for(i=0; i <8; i=i+1) begin
+    for(i=0; i <numDSPs; i=i+1) begin
         DSP_overpack_wrapper udsp (.a0(x0),.a1(x1),.a2(x2),
                                 .w0(w0[i]),.w1(w1[i]),
                                 .p1(p[(6*i)]), .p2(p[((6*i)+1)]), .p3(p[((6*i)+2)]),
@@ -101,7 +104,7 @@ module cluster#(input_size = 784)
     
     
     generate
-    for(i=0;i < 48; i=i+1) begin
+    for(i=0;i < (6*numDSPs); i=i+1) begin                                                            // num Accumulators should be 6 x number of DSPs
         c_accum_0 uacc (.B(p[i]), .SCLR(~matmul_active), .CLK(CLK), .Q(acc[i]));
     end
     endgenerate
