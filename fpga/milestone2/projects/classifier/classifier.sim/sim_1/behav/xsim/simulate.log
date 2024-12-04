@@ -1,0 +1,3 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+$finish called at time : 2035 ns : File "C:/git_repos/mnist_neuralnet/fpga/milestone2/source/classifier/tb/classifier_tb.v" Line 92

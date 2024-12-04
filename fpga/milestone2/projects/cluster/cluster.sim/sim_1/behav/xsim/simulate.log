@@ -1,0 +1,4 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Success!
+$finish called at time : 16505 ns : File "C:/git_repos/mnist_neuralnet/fpga/milestone2/source/cluster/tb/cluster_tb.v" Line 115
