@@ -168,22 +168,6 @@
       </spirit:portMaps>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>BRAM_PORTB_rst</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
-      <spirit:slave/>
-      <spirit:portMaps>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>RST</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>BRAM_PORTB_rst</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-      </spirit:portMaps>
-    </spirit:busInterface>
-    <spirit:busInterface>
       <spirit:name>s_axi_aresetn</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
@@ -258,7 +242,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>306ce0db</spirit:value>
+            <spirit:value>d6dbabca</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -274,7 +258,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>306ce0db</spirit:value>
+            <spirit:value>d6dbabca</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -359,22 +343,13 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>BRAM_PORTB_rst</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
         <spirit:name>BRAM_PORTB_we</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -741,7 +716,7 @@
       <spirit:file>
         <spirit:name>DP_bram.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_306ce0db</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_d6dbabca</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -794,22 +769,22 @@
       <xilinx:displayName>DP_bram_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-12-02T18:35:26Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-12-05T23:33:10Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@54283441_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3feb3a57_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ac01c75_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bb54c16_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@b740eac_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14c5afb6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4afa1e34_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d32a895_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39c8a604_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2872c9a3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="457fd108"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5dd0c285"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="fa7d8b6e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b07cdedd"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="ebb8a101"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0e49567a"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="7414f27a"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="136df7ca"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

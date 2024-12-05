@@ -11,7 +11,6 @@ module DP_bram
     BRAM_PORTB_din,
     BRAM_PORTB_dout,
     BRAM_PORTB_en,
-    BRAM_PORTB_rst,
     BRAM_PORTB_we,
     s_axi_araddr,
     s_axi_arprot,
@@ -39,8 +38,7 @@ module DP_bram
   input [31:0] BRAM_PORTB_din;       //input
   output [31:0] BRAM_PORTB_dout;      //output
   input BRAM_PORTB_en;        //input
-  input BRAM_PORTB_rst;       //input
-  input BRAM_PORTB_we; 
+  input [3:0] BRAM_PORTB_we; 
   input wire [11:0]s_axi_araddr;
   input wire [2:0]s_axi_arprot;
   output wire s_axi_arready;
@@ -68,7 +66,6 @@ wire BRAM_PORTA_clk;
 wire [31:0] BRAM_PORTA_din;
 wire [31:0] BRAM_PORTA_dout;
 wire BRAM_PORTA_en;
-wire BRAM_PORTA_rst;
 wire [3:0] BRAM_PORTA_we;
 
 wire [9:0] BRAM_PORTB_addr;
@@ -76,8 +73,7 @@ wire BRAM_PORTB_clk;
 wire [31:0] BRAM_PORTB_din;
 wire [31:0] BRAM_PORTB_dout;
 wire BRAM_PORTB_en;
-wire BRAM_PORTB_rst;
-wire BRAM_PORTB_we;
+wire [3:0] BRAM_PORTB_we;
 
 axi_bram_ctrl_0 BRAM_CONTROLLER (
   .s_axi_aclk(s_axi_aclk),        // input wire s_axi_aclk
