@@ -1,0 +1,1875 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_9'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_9 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_9'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_9'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_8'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_8 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_8'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_8'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_7'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_7 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_7'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_7'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_6'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_6 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_6'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_6'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_5'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_5 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_5'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_5'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_4'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_4 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_4'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_4'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_3'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_3 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_3'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_3'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_2 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_2'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_2'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_19'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_19 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_19'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_19'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_18'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_18 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_18'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_18'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_17'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_17 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_17'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_17'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_16'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_16 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_16'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_16'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_15'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_15 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_15'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_15'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_14'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_14 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_14'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_14'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_13'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_13 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_13'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_13'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_12'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_12 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_12'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_12'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_11'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_11 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_11'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_11'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_10'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_10 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_10'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_10'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_1 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_1'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:34:35 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_0 (xilinx.com:user:DP_bram:1.0) from (Rev. 3) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'weight_memory_DP_bram_0_0'.
+
+
+-Upgrade has removed interface 'BRAM_PORTB_rst'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'BRAM_PORTB_rst'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_9'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_9 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_9'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_8'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_8 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_8'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_7'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_7 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_7'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_6'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_6 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_6'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_5'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_5 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_5'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_4'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_4 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_4'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_3'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_3 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_3'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_2 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_2'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_19'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_19 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_19'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_18'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_18 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_18'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_17'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_17 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_17'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_16'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_16 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_16'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_15'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_15 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_15'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_14'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_14 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_14'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_13'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_13 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_13'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_12'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_12 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_12'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_11'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_11 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_11'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_10'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_10 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_10'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_1 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_1'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 15:02:54 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of weight_memory_DP_bram_0_0 (xilinx.com:user:DP_bram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'weight_memory_DP_bram_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'BRAM_PORTB_we' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_9'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_9 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_8'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_8 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_7'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_7 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_6'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_6 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_5 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_4 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_3'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_3 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_2 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_19'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_19 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_18'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_18 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_17'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_17 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_16'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_16 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_15'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_15 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_14'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_14 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_13'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_13 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_12'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_12 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_11'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_11 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_10'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_10 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_1 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 14:57:25 2024
+| Host         : DESKTOP-L93G0Q0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weight_memory_DP_bram_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of weight_memory_DP_bram_0_0 (xilinx.com:user:DP_bram:1.0 (Rev. 2)) to Vivado generation flows.
+
