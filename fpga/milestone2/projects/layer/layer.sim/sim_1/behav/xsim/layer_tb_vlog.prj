@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../source/DSP_overpack_wrapper/rtl/DSP_overpack_wrapper.v" \
+"../../../../layer.srcs/sources_1/imports/rtl/layer.v" \
+"../../../../../../source/layer/tb/layer_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

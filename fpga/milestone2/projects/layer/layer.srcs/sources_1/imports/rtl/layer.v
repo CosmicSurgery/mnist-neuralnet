@@ -1,6 +1,6 @@
 `timescale 1 ns / 1 ps
 
-module cluster#(input_size = 784)
+module layer#(input_size = 784)
     (x_tdata, // just three images for now...
     x_tready,
     x_tvalid,
@@ -32,7 +32,7 @@ module cluster#(input_size = 784)
     output reg a_tvalid;
     input wire a_tready;
     input wire [2:0] configure;
-    output reg [1:0] status;
+    output reg [1:0] status; 
     input wire CLK;
     input wire RST;
     
@@ -149,15 +149,15 @@ module cluster#(input_size = 784)
         // Process that handles the output of the DSP and accumulator logic
         // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         if (RST == 0) begin                                  // Active low reset
-            for (j=0; j< 48; j=j+1) begin
+            for (j=0; j< output_size; j=j+1) begin
                 z[j] <= 0;
             end
         end else if (matmul_finished) begin                                // Condition to capture output of accumulator and add it to register z's current value
-            for (j=0; j< 48; j=j+1) begin                                   // Freeze the value of the z registers so that they can be sent to other peripherals.
+            for (j=0; j< output_size; j=j+1) begin                                   // Freeze the value of the z registers so that they can be sent to other peripherals.
                 z[j] <= z[j] + acc[j];
             end                                 
         end else if (~activation_condition & matmul_active) begin                       // Condition to reset the value of the z register to the bias value, activation condition must be low in order to reset the z register
-            for (j=0; j<16; j=j+1) begin
+            for (j=0; j<(output_size/3); j=j+1) begin
                 // more elegant way to do this?
                 z[((j*3)+0)][17:7] <= {11{b[j][3]}}; // adds zeros if positve and ones if negative
                 z[((j*3)+0)][6:4] <=  b[j][2:0];

@@ -1,0 +1,10 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/layer/layer.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/layer/layer.srcs/sources_1/imports/rtl/layer.v,1733353890,verilog,,C:/git_repos/mnist_neuralnet/fpga/milestone2/source/layer/tb/layer_tb.v,,layer,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/layer/layer.srcs/sources_1/ip/c_accum_0/sim/c_accum_0.vhd,1733354674,vhdl,,,,c_accum_0,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/layer/layer.srcs/sources_1/ip/xbip_dsp48_macro_0/sim/xbip_dsp48_macro_0.vhd,1733354676,vhdl,,,,xbip_dsp48_macro_0,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/milestone2/source/DSP_overpack_wrapper/rtl/DSP_overpack_wrapper.v,1732748969,verilog,,C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/layer/layer.srcs/sources_1/imports/rtl/layer.v,,DSP_overpack_wrapper,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/milestone2/source/layer/tb/layer_tb.v,1733356163,verilog,,,,layer_tb,,,,,,,,
