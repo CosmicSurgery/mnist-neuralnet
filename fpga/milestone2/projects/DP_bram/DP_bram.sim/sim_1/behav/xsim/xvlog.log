@@ -1,0 +1,95 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ipshared/1321/DP_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DP_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_0_0/sim/axi_bram_block_DP_bram_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_1_0/sim/axi_bram_block_DP_bram_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_10_0/sim/axi_bram_block_DP_bram_10_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_10_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_11_0/sim/axi_bram_block_DP_bram_11_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_11_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_12_0/sim/axi_bram_block_DP_bram_12_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_12_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_13_0/sim/axi_bram_block_DP_bram_13_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_13_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_14_0/sim/axi_bram_block_DP_bram_14_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_14_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_15_0/sim/axi_bram_block_DP_bram_15_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_15_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_16_0/sim/axi_bram_block_DP_bram_16_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_16_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_17_0/sim/axi_bram_block_DP_bram_17_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_17_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_18_0/sim/axi_bram_block_DP_bram_18_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_18_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_19_0/sim/axi_bram_block_DP_bram_19_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_19_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_2_0/sim/axi_bram_block_DP_bram_2_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_2_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_20_0/sim/axi_bram_block_DP_bram_20_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_20_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_21_0/sim/axi_bram_block_DP_bram_21_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_21_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_3_0/sim/axi_bram_block_DP_bram_3_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_3_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_4_0/sim/axi_bram_block_DP_bram_4_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_4_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_5_0/sim/axi_bram_block_DP_bram_5_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_5_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_6_0/sim/axi_bram_block_DP_bram_6_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_6_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_7_0/sim/axi_bram_block_DP_bram_7_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_7_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_8_0/sim/axi_bram_block_DP_bram_8_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_8_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_DP_bram_9_0/sim/axi_bram_block_DP_bram_9_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_DP_bram_9_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_xbar_0/sim/axi_bram_block_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_xbar_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_xlconcat_0_0/sim/axi_bram_block_xlconcat_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_xlconcat_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_xlconstant_0_0/sim/axi_bram_block_xlconstant_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_xlconstant_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_tier2_xbar_0_0/sim/axi_bram_block_tier2_xbar_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_tier2_xbar_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_tier2_xbar_1_0/sim/axi_bram_block_tier2_xbar_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_tier2_xbar_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_tier2_xbar_2_0/sim/axi_bram_block_tier2_xbar_2_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_tier2_xbar_2_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/ip/axi_bram_block_auto_pc_0/sim/axi_bram_block_auto_pc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_auto_pc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.ip_user_files/bd/axi_bram_block/sim/axi_bram_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block
+INFO: [VRFC 10-311] analyzing module axi_bram_block_axi_interconnect_0_0
+INFO: [VRFC 10-311] analyzing module i00_couplers_imp_MH9L2T
+INFO: [VRFC 10-311] analyzing module i01_couplers_imp_1LQZAOI
+INFO: [VRFC 10-311] analyzing module i02_couplers_imp_11SXR7E
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_YA8EGB
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_1XK9B0S
+INFO: [VRFC 10-311] analyzing module m02_couplers_imp_194VH9G
+INFO: [VRFC 10-311] analyzing module m03_couplers_imp_9V65FN
+INFO: [VRFC 10-311] analyzing module m04_couplers_imp_55O778
+INFO: [VRFC 10-311] analyzing module m05_couplers_imp_14ZD3KJ
+INFO: [VRFC 10-311] analyzing module m06_couplers_imp_1KIH3SR
+INFO: [VRFC 10-311] analyzing module m07_couplers_imp_KOHB30
+INFO: [VRFC 10-311] analyzing module m08_couplers_imp_1B286MT
+INFO: [VRFC 10-311] analyzing module m09_couplers_imp_BAQOJ6
+INFO: [VRFC 10-311] analyzing module m10_couplers_imp_1PMKNC5
+INFO: [VRFC 10-311] analyzing module m11_couplers_imp_QFDVK2
+INFO: [VRFC 10-311] analyzing module m12_couplers_imp_1Z6JVU
+INFO: [VRFC 10-311] analyzing module m13_couplers_imp_116OWEL
+INFO: [VRFC 10-311] analyzing module m14_couplers_imp_1ET2G6Y
+INFO: [VRFC 10-311] analyzing module m15_couplers_imp_F1LAOT
+INFO: [VRFC 10-311] analyzing module m16_couplers_imp_UK9UNP
+INFO: [VRFC 10-311] analyzing module m17_couplers_imp_1UBG3TE
+INFO: [VRFC 10-311] analyzing module m18_couplers_imp_3CQX0B
+INFO: [VRFC 10-311] analyzing module m19_couplers_imp_136FGSC
+INFO: [VRFC 10-311] analyzing module m20_couplers_imp_1TGYD86
+INFO: [VRFC 10-311] analyzing module m21_couplers_imp_TN1RV5
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_1FXZFJ2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/source/axi_bram_block_wrapper/rtl/axi_bram_block_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/source/axi_bram_block_wrapper/tb/axi_bram_block_wrapper_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bram_block_wrapper_tb
