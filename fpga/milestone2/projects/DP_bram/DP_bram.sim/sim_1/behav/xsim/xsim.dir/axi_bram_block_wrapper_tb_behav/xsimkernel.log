@@ -1,0 +1,4 @@
+Running: xsim.dir/axi_bram_block_wrapper_tb_behav/xsimk.exe -simmode gui -wdb axi_bram_block_wrapper_tb_behav.wdb -simrunnum 0 -socket 56903
+Design successfully loaded
+Design Loading Memory Usage: 14796 KB (Peak: 14796 KB)
+Design Loading CPU Usage: 15 ms
