@@ -109,6 +109,7 @@ vlog -work xlconstant_v1_1_6  -v2k5 "+incdir+../../../../DP_bram.srcs/sources_1/
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../DP_bram.srcs/sources_1/bd/axi_bram_block/ipshared/ec67/hdl" \
 "../../../bd/axi_bram_block/ip/axi_bram_block_xlconstant_0_0/sim/axi_bram_block_xlconstant_0_0.v" \
+"../../../bd/axi_bram_block/sim/axi_bram_block.v" \
 "../../../bd/axi_bram_block/ip/axi_bram_block_tier2_xbar_0_0/sim/axi_bram_block_tier2_xbar_0_0.v" \
 "../../../bd/axi_bram_block/ip/axi_bram_block_tier2_xbar_1_0/sim/axi_bram_block_tier2_xbar_1_0.v" \
 "../../../bd/axi_bram_block/ip/axi_bram_block_tier2_xbar_2_0/sim/axi_bram_block_tier2_xbar_2_0.v" \
@@ -118,7 +119,6 @@ vlog -work axi_protocol_converter_v2_1_20  -v2k5 "+incdir+../../../../DP_bram.sr
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../DP_bram.srcs/sources_1/bd/axi_bram_block/ipshared/ec67/hdl" \
 "../../../bd/axi_bram_block/ip/axi_bram_block_auto_pc_0/sim/axi_bram_block_auto_pc_0.v" \
-"../../../bd/axi_bram_block/sim/axi_bram_block.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

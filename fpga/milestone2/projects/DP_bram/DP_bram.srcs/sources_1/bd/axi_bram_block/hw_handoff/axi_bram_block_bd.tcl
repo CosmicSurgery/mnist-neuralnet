@@ -374,7 +374,7 @@ proc create_root_design { parentCell } {
   assign_bd_address -offset 0x00014000 -range 0x00001000 -target_address_space [get_bd_addr_spaces s_axi] [get_bd_addr_segs DP_bram_19/s_axi/reg0] -force
   assign_bd_address -offset 0x00002000 -range 0x00001000 -target_address_space [get_bd_addr_spaces s_axi] [get_bd_addr_segs DP_bram_1/s_axi/reg0] -force
   assign_bd_address -offset 0x00020000 -range 0x00001000 -target_address_space [get_bd_addr_spaces s_axi] [get_bd_addr_segs DP_bram_20/s_axi/reg0] -force
-  assign_bd_address -offset 0x00016000 -range 0x00001000 -target_address_space [get_bd_addr_spaces s_axi] [get_bd_addr_segs DP_bram_21/s_axi/reg0] -force
+  assign_bd_address -offset 0x00021000 -range 0x00001000 -target_address_space [get_bd_addr_spaces s_axi] [get_bd_addr_segs DP_bram_21/s_axi/reg0] -force
   assign_bd_address -offset 0x00003000 -range 0x00001000 -target_address_space [get_bd_addr_spaces s_axi] [get_bd_addr_segs DP_bram_2/s_axi/reg0] -force
   assign_bd_address -offset 0x00004000 -range 0x00001000 -target_address_space [get_bd_addr_spaces s_axi] [get_bd_addr_segs DP_bram_3/s_axi/reg0] -force
   assign_bd_address -offset 0x00005000 -range 0x00001000 -target_address_space [get_bd_addr_spaces s_axi] [get_bd_addr_segs DP_bram_4/s_axi/reg0] -force

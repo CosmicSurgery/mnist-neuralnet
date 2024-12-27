@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Dec  6 19:25:24 2024
+# Process ID: 6988
+# Current directory: C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_15_0_synth_1
+# Command line: vivado.exe -log axi_bram_block_DP_bram_15_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi_bram_block_DP_bram_15_0.tcl
+# Log file: C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_15_0_synth_1/axi_bram_block_DP_bram_15_0.vds
+# Journal file: C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_15_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source axi_bram_block_DP_bram_15_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/git_repos/mnist_neuralnet/fpga/milestone2/source/weight_memory/rtl'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP axi_bram_block_DP_bram_15_0, cache-ID = 264122376eb94c80.
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  6 19:25:32 2024...

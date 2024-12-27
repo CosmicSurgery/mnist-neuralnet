@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="axi_bram_block_DP_bram_0_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="axi_bram_block_DP_bram_1_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_10_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_11_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_11_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_12_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_12_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_13_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_13_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_14_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_14_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_15_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_15_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_16_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_16_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_17_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_17_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_18_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_18_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_19_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_19_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_2_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_20_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_20_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_21_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_21_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_3_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_4_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_4_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_5_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_5_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_6_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_6_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_7_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_7_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_8_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_8_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_DP_bram_9_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_DP_bram_9_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="axi_bram_block_DP_bram_0_0_synth_1"/>
+	</Run>
+	<Run Id="axi_bram_block_xbar_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="axi_bram_block_tier2_xbar_0_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_tier2_xbar_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="axi_bram_block_tier2_xbar_1_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_tier2_xbar_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="axi_bram_block_tier2_xbar_2_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_tier2_xbar_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="axi_bram_block_auto_pc_0_synth_1" LaunchDir="C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/DP_bram/DP_bram.runs/axi_bram_block_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

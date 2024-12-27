@@ -78,6 +78,7 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/axi_bram_block/ip/axi_bram_block_xlconstant_0_0/sim/axi_bram_block_xlconstant_0_0.v" \
+  "../../../bd/axi_bram_block/sim/axi_bram_block.v" \
   "../../../bd/axi_bram_block/ip/axi_bram_block_tier2_xbar_0_0/sim/axi_bram_block_tier2_xbar_0_0.v" \
   "../../../bd/axi_bram_block/ip/axi_bram_block_tier2_xbar_1_0/sim/axi_bram_block_tier2_xbar_1_0.v" \
   "../../../bd/axi_bram_block/ip/axi_bram_block_tier2_xbar_2_0/sim/axi_bram_block_tier2_xbar_2_0.v" \
@@ -87,7 +88,6 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/axi_bram_block/ip/axi_bram_block_auto_pc_0/sim/axi_bram_block_auto_pc_0.v" \
-  "../../../bd/axi_bram_block/sim/axi_bram_block.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v
