@@ -22,10 +22,10 @@ module layer#(input_size = 784)
     input wire [11:0]x_tdata;
     input wire x_tvalid;
     output reg x_tready;
-    input wire [(bram_buswidth-1):0]b_tdata;                   // Number of bits x Number of weights per DSP x Number of DSPs
+    input wire [639:0]b_tdata;                   // Number of bits x Number of weights per DSP x Number of DSPs
     input wire b_tvalid;
     output reg b_tready;
-    input wire [(bram_buswidth-1):0]w_tdata;                   // Number of bits x Number of weights per DSP x Number of DSPs
+    input wire [639:0]w_tdata;                   // Number of bits x Number of weights per DSP x Number of DSPs
     input wire w_tvalid;
     output reg w_tready;
     output reg [3:0]a_tdata;                    
