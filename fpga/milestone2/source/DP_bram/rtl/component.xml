@@ -242,7 +242,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d6dbabca</spirit:value>
+            <spirit:value>f20f4495</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -258,7 +258,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d6dbabca</spirit:value>
+            <spirit:value>f20f4495</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -714,6 +714,14 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
+        <spirit:name>../src/axi_bram_ctrl_0/axi_bram_ctrl_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../src/blk_mem_gen_0/blk_mem_gen_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>DP_bram.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_d6dbabca</spirit:userFileType>
@@ -721,6 +729,14 @@
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../src/axi_bram_ctrl_0/axi_bram_ctrl_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../src/blk_mem_gen_0/blk_mem_gen_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
       <spirit:file>
         <spirit:name>DP_bram.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
@@ -768,8 +784,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>DP_bram_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-12-05T23:33:10Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-12-07T01:31:15Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@14c5afb6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
@@ -777,13 +793,21 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6d32a895_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@39c8a604_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2872c9a3_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2311ef1_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d36a001_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@738bf6ce_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@788482c2_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2856dfdb_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42ec7bb7_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d2d08e6_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@162eb71_ARCHIVE_LOCATION">c:/git_repos/mnist_neuralnet/fpga/milestone2/source/DP_bram/rtl</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5dd0c285"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="fa7d8b6e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0e49567a"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9438823b"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="7414f27a"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="136df7ca"/>
     </xilinx:packagingInfo>
