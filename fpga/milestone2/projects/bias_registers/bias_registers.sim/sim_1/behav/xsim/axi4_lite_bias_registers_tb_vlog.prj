@@ -1,7 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../../../source/bias_registers/rtl/axi4_lite_register_module.v" \
-"../../../../../../source/bias_registers/tb/axi4_lite_register_module_tb.v" \
+"../../../../../../source/bias_registers/rtl/axi4_lite_bias_registers.v" \
+"../../../../../../source/bias_registers/tb/axi4_lite_bias_registers_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
