@@ -1,0 +1,7 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/git_repos/mnist_neuralnet/fpga/milestone2/projects/bias_registers/bias_registers.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v,1736191612,verilog,,C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/tb/axi4_lite_register_module_tb.v,,axi4_lite_bias_registers,,,,,,,,
+C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/tb/axi4_lite_register_module_tb.v,1736191341,verilog,,,,axi4_lite_bias_registers_tb,,,,,,,,

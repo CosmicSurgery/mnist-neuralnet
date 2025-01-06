@@ -1,0 +1,15 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto e0146ef642a2439ba559e0af70076bd7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot axi4_lite_bias_registers_tb_behav xil_defaultlib.axi4_lite_bias_registers_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v" Line 1. Module axi4_lite_bias_registers doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi4_lite_bias_registers
+Compiling module xil_defaultlib.axi4_lite_bias_registers_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot axi4_lite_bias_registers_tb_behav

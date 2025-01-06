@@ -1,0 +1,24 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi4_lite_bias_registers
+INFO: [VRFC 10-2458] undeclared symbol bias_0, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:151]
+INFO: [VRFC 10-2458] undeclared symbol bias_1, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:152]
+INFO: [VRFC 10-2458] undeclared symbol bias_2, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:153]
+INFO: [VRFC 10-2458] undeclared symbol bias_3, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:154]
+INFO: [VRFC 10-2458] undeclared symbol bias_4, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:155]
+INFO: [VRFC 10-2458] undeclared symbol bias_5, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:156]
+INFO: [VRFC 10-2458] undeclared symbol bias_6, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:157]
+INFO: [VRFC 10-2458] undeclared symbol bias_7, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:158]
+INFO: [VRFC 10-2458] undeclared symbol bias_8, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:159]
+INFO: [VRFC 10-2458] undeclared symbol bias_9, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:160]
+INFO: [VRFC 10-2458] undeclared symbol bias_10, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:161]
+INFO: [VRFC 10-2458] undeclared symbol bias_11, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:162]
+INFO: [VRFC 10-2458] undeclared symbol bias_12, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:163]
+INFO: [VRFC 10-2458] undeclared symbol bias_13, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:164]
+INFO: [VRFC 10-2458] undeclared symbol bias_14, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:165]
+INFO: [VRFC 10-2458] undeclared symbol bias_15, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:166]
+INFO: [VRFC 10-2458] undeclared symbol bias_16, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:167]
+INFO: [VRFC 10-2458] undeclared symbol bias_17, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:168]
+INFO: [VRFC 10-2458] undeclared symbol bias_18, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:169]
+INFO: [VRFC 10-2458] undeclared symbol bias_19, assumed default net type wire [C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/rtl/axi4_lite_register_module.v:170]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/git_repos/mnist_neuralnet/fpga/milestone2/source/bias_registers/tb/axi4_lite_register_module_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi4_lite_bias_registers_tb
