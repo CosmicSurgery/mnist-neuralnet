@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="layer_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="layer_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="8041800fs"></ZoomStartTime>
+      <ZoomEndTime time="8306001fs"></ZoomEndTime>
+      <Cursor1Time time="8165000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="151"></NameColumnWidth>
+      <ValueColumnWidth column_width="199"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="37" />
+   <wvobject fp_name="/layer_tb/x_tdata" type="array">
+      <obj_property name="ElementShortName">x_tdata[11:0]</obj_property>
+      <obj_property name="ObjectShortName">x_tdata[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/x_tvalid" type="logic">
+      <obj_property name="ElementShortName">x_tvalid</obj_property>
+      <obj_property name="ObjectShortName">x_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/x_tready" type="logic">
+      <obj_property name="ElementShortName">x_tready</obj_property>
+      <obj_property name="ObjectShortName">x_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/x0" type="array">
+      <obj_property name="ElementShortName">x0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">x0[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/x1" type="array">
+      <obj_property name="ElementShortName">x1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">x1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/x2" type="array">
+      <obj_property name="ElementShortName">x2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">x2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/b_tdata" type="array">
+      <obj_property name="ElementShortName">b_tdata[639:0]</obj_property>
+      <obj_property name="ObjectShortName">b_tdata[639:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/b_tvalid" type="logic">
+      <obj_property name="ElementShortName">b_tvalid</obj_property>
+      <obj_property name="ObjectShortName">b_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/b_tready" type="logic">
+      <obj_property name="ElementShortName">b_tready</obj_property>
+      <obj_property name="ObjectShortName">b_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/b" type="array">
+      <obj_property name="ElementShortName">b[159:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">b[159:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/w_tdata" type="array">
+      <obj_property name="ElementShortName">w_tdata[639:0]</obj_property>
+      <obj_property name="ObjectShortName">w_tdata[639:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/w_tvalid" type="logic">
+      <obj_property name="ElementShortName">w_tvalid</obj_property>
+      <obj_property name="ObjectShortName">w_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/w_tready" type="logic">
+      <obj_property name="ElementShortName">w_tready</obj_property>
+      <obj_property name="ObjectShortName">w_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/w0" type="array">
+      <obj_property name="ElementShortName">w0[79:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">w0[79:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/w1" type="array">
+      <obj_property name="ElementShortName">w1[79:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">w1[79:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/a_tdata" type="array">
+      <obj_property name="ElementShortName">a_tdata[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a_tdata[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/a_tvalid" type="logic">
+      <obj_property name="ElementShortName">a_tvalid</obj_property>
+      <obj_property name="ObjectShortName">a_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/a_tready" type="logic">
+      <obj_property name="ElementShortName">a_tready</obj_property>
+      <obj_property name="ObjectShortName">a_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/uut/a_addr" type="array">
+      <obj_property name="ElementShortName">a_addr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">a_addr[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/configure" type="array">
+      <obj_property name="ElementShortName">configure[2:0]</obj_property>
+      <obj_property name="ObjectShortName">configure[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/status" type="array">
+      <obj_property name="ElementShortName">status[1:0]</obj_property>
+      <obj_property name="ObjectShortName">status[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/uut/pixel_num" type="array">
+      <obj_property name="ElementShortName">pixel_num[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_num[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/RST" type="logic">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/j" type="array">
+      <obj_property name="ElementShortName">j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/input_size" type="array">
+      <obj_property name="ElementShortName">input_size[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input_size[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/numDSPs" type="array">
+      <obj_property name="ElementShortName">numDSPs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">numDSPs[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/output_size" type="array">
+      <obj_property name="ElementShortName">output_size[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_size[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/bram_buswidth" type="array">
+      <obj_property name="ElementShortName">bram_buswidth[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_buswidth[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/bitwidth" type="array">
+      <obj_property name="ElementShortName">bitwidth[2:0]</obj_property>
+      <obj_property name="ObjectShortName">bitwidth[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/numinputs" type="array">
+      <obj_property name="ElementShortName">numinputs[5:0]</obj_property>
+      <obj_property name="ObjectShortName">numinputs[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/uut/matmul_finished" type="logic">
+      <obj_property name="ElementShortName">matmul_finished</obj_property>
+      <obj_property name="ObjectShortName">matmul_finished</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/uut/activation_condition" type="logic">
+      <obj_property name="ElementShortName">activation_condition</obj_property>
+      <obj_property name="ObjectShortName">activation_condition</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/uut/matmul_active" type="logic">
+      <obj_property name="ElementShortName">matmul_active</obj_property>
+      <obj_property name="ObjectShortName">matmul_active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/uut/p" type="array">
+      <obj_property name="ElementShortName">p[479:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">p[479:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/uut/acc" type="array">
+      <obj_property name="ElementShortName">acc[479:0][17:0]</obj_property>
+      <obj_property name="ObjectShortName">acc[479:0][17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/layer_tb/uut/z" type="array">
+      <obj_property name="ElementShortName">z[479:0][17:0]</obj_property>
+      <obj_property name="ObjectShortName">z[479:0][17:0]</obj_property>
+   </wvobject>
+</wave_config>

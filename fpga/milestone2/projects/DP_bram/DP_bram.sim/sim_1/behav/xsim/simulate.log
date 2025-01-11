@@ -34,4 +34,11 @@ blk_mem_gen_v8_4_4 collision detected at time: 12085000, Instance: axi_bram_bloc
 blk_mem_gen_v8_4_4 collision detected at time: 13385000, Instance: axi_bram_block_wrapper_tb.uut.axi_bram_block_i.DP_bram_10.inst.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
 blk_mem_gen_v8_4_4 collision detected at time: 14685000, Instance: axi_bram_block_wrapper_tb.uut.axi_bram_block_i.DP_bram_11.inst.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
 blk_mem_gen_v8_4_4 collision detected at time: 15985000, Instance: axi_bram_block_wrapper_tb.uut.axi_bram_block_i.DP_bram_12.inst.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
-blk_mem_gen_v8_4_4 collision detected at time: 17285000, Instance: axi_bram_block_wrapper_tb.uu
+blk_mem_gen_v8_4_4 collision detected at time: 17285000, Instance: axi_bram_block_wrapper_tb.uut.axi_bram_block_i.DP_bram_13.inst.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 18585000, Instance: axi_bram_block_wrapper_tb.uut.axi_bram_block_i.DP_bram_14.inst.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 19885000, Instance: axi_bram_block_wrapper_tb.uut.axi_bram_block_i.DP_bram_15.inst.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 21185000, Instance: axi_bram_block_wrapper_tb.uut.axi_bram_block_i.DP_bram_16.inst.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 22485000, Instance: axi_bram_block_wrapper_tb.uut.axi_bram_block_i.DP_bram_17.inst.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 23785000, Instance: axi_bram_block_wrapper_tb.uut.axi_bram_block_i.DP_bram_18.inst.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 25085000, Instance: axi_bram_block_wrapper_tb.uut.axi_bram_block_i.DP_bram_19.inst.bram.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 0, B  read address: 0
+$finish called at time : 29755 ns : File "C:/git_repos/mnist_neuralnet/fpga/milestone2/source/axi_bram_block_wrapper/tb/axi_bram_block_wrapper_tb.v" Line 235

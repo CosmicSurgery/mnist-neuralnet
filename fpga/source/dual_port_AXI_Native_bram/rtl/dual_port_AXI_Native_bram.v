@@ -77,7 +77,7 @@ wire [31:0] BRAM_PORTB_din;
 wire [31:0] BRAM_PORTB_dout;
 wire BRAM_PORTB_en;
 wire BRAM_PORTB_rst;
-wire BRAM_PORTB_we;
+wire [3:0] BRAM_PORTB_we;
 
 axi_bram_ctrl_0 BRAM_CONTROLLER (
   .s_axi_aclk(s_axi_aclk),        // input wire s_axi_aclk
